@@ -1,0 +1,81 @@
+name: Amendment
+description: Suggest an edit to an existing entry
+title: '[ADDITION] <title>'
+labels: ['Suggested Amendment', 'Awaiting Review']
+assignees:
+  - lissy93
+body:
+  # Title
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: >-
+        The name of the project this ticket refers to. Should match how it is written on the list
+      placeholder: e.g. KeePass
+    validations:
+      required: true
+
+  # Amendments description
+  - type: textarea
+    id: amendments
+    attributes:
+      label: Amendments
+      description: |
+        Please describe what amendments should be made.
+        Where required, link to relevant info from reputable sources to help with fact checking. 
+      placeholder: 
+    validations:
+      required: true
+
+  # Association disclosure
+  - type: input
+    id: association
+    attributes:
+      label: Association Disclosure
+      description: >-
+        For transparency, please state if you currently/ previously have had any association with
+        this project.
+      placeholder:
+    validations:
+      required: false
+
+  # Can user submit PR
+  - type: dropdown
+    id: canImplement
+    attributes:
+      label: Would you like to submit a PR?
+      description: Is this amendment something that you are willing to submit a pull request for?
+      options:
+        - 'No.'
+        - 'Maybe?'
+        - 'Yes!'
+    validations:
+      required: false
+
+  # Confirmation checkboxes
+  - type: checkboxes
+    id: idiot-check
+    attributes:
+      label: Please tick the boxes
+      description: Before submitting, please ensure that
+      options:
+        - label: You have filled out this form accurately, and to the best of your knowledge
+          required: true
+        - label: You have indicated weather or not you are associated with the project the amendment refers to
+          required: true
+        - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
+          required: true
+        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/master/.github/CODE_OF_CONDUCT.md)
+          required: true
+  
+  # Final message
+  - type: markdown
+    attributes:
+      value: |-
+        ## Thanks 🙏
+        <img align="left" width="160" src="https://i.ibb.co/S5vCnhL/gh-thanks.gif" alt="🐙" />
+        Thank you for your suggested amendment! You should expect a reply within 48 hours.<br>
+        ⭐️ Consider dropping the repo a star if you're enjoying Awesome-Privacy.<br>
+    validations:
+      required: false
