@@ -1,0 +1,26 @@
+name: Feedback
+description: Leave feedback, related to this list or it's content
+title: '[FEEDBACK] <title>'
+labels: ['Feedback']
+assignees:
+  - lissy93
+body:
+
+  # Feedback Input
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback
+    validations:
+      required: true
+  
+  # Final message
+  - type: markdown
+    attributes:
+      value: |-
+        ## Thanks 🙏
+        <img align="left" width="160" src="https://i.ibb.co/S5vCnhL/gh-thanks.gif" alt="🐙" />
+        Thank you for your feedback! You should expect a reply within 48 hours.<br>
+        ⭐️ Consider dropping the repo a star if you're enjoying Awesome-Privacy.<br>
+    validations:
+      required: false

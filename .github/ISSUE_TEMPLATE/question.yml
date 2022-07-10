@@ -1,0 +1,40 @@
+name: Question
+description: Ask a question, related to this list or it's content
+title: '[QUESTION] <title>'
+labels: ['Question']
+assignees:
+  - lissy93
+body:
+
+  # Question Input
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+    validations:
+      required: true
+
+  # Confirmation checkboxes
+  - type: checkboxes
+    id: idiot-check
+    attributes:
+      label: Please tick the boxes
+      description: Before submitting, please ensure that
+      options:
+        - label: You have filled out this form accurately, and to the best of your knowledge
+          required: true
+        - label: A similar question has not already [been asked](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
+          required: true
+        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/master/.github/CODE_OF_CONDUCT.md)
+          required: true
+  
+  # Final message
+  - type: markdown
+    attributes:
+      value: |-
+        ## Thanks 🙏
+        <img align="left" width="160" src="https://i.ibb.co/S5vCnhL/gh-thanks.gif" alt="🐙" />
+        Thank you for your question! You should expect a reply within 48 hours.<br>
+        ⭐️ Consider dropping the repo a star if you're enjoying Awesome-Privacy.<br>
+    validations:
+      required: false
