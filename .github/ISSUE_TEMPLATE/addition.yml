@@ -1,0 +1,81 @@
+name: Addition
+description: Suggest a project to be added to the list
+title: '[ADDITION] <title>'
+labels: ['Suggested Addition', 'Awaiting Review']
+assignees:
+  - lissy93
+body:
+  # Software Category
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: >-
+        Specify a category from [this list](https://github.com/Lissy93/awesome-privacy#categories),
+        or suggest a new one
+      placeholder: e.g. Password Managers
+    validations:
+      required: true
+
+  # Software name + description
+  - type: textarea
+    id: intro
+    attributes:
+      label: Software to be added
+      description: >-
+        Please specify the software / service you would like adding,
+        and briefly describe what it is, and why it should be included in the list
+      placeholder: 
+    validations:
+      required: true
+
+  # Software supporting material
+  - type: textarea
+    id: supporting-material
+    attributes:
+      label: Supporting Material
+      description: >-
+        Please include links to any relevant supporting material, like the projects GitHub repo,
+        website / docs, any recent security audits
+      placeholder: 
+    validations:
+      required: true
+
+  # Association disclosure
+  - type: input
+    id: association
+    attributes:
+      label: Association Disclosure
+      description: >-
+        For transparency, please state weather you currently/ previously have had any association with
+        this project in any form. If you have, then please also specify the context of your involvement
+      placeholder:
+    validations:
+      required: false
+
+  # Confirmation checkboxes
+  - type: checkboxes
+    id: idiot-check
+    attributes:
+      label: Please tick the boxes
+      description: Before submitting, please ensure that
+      options:
+        - label: You have filled out this form accurately, and to the best of your knowledge
+          required: true
+        - label: You have indicated weather or not you are associated with the suggested addition
+          required: true
+        - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
+          required: true
+        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/master/.github/CODE_OF_CONDUCT.md)
+          required: true
+  
+  # Final message
+  - type: markdown
+    attributes:
+      value: |-
+        ## Thanks 🙏
+        <img align="left" width="160" src="https://i.ibb.co/S5vCnhL/gh-thanks.gif" alt="🐙" />
+        Thank you for your suggested addition! You should expect a reply within 48 hours.<br>
+        ⭐️ Consider dropping the repo a star if you're enjoying Awesome-Privacy.<br>
+    validations:
+      required: false
