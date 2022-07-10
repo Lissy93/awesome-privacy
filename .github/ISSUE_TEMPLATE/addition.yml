@@ -48,8 +48,21 @@ body:
       label: Association Disclosure
       description: >-
         For transparency, please state weather you currently/ previously have had any association with
-        this project in any form. If you have, then please also specify the context of your involvement
+        this project in any form. \nIf you have, then please also specify the context of your involvement
       placeholder:
+    validations:
+      required: false
+
+  # Can user submit PR
+  - type: dropdown
+    id: canImplement
+    attributes:
+      label: Would you like to submit a PR?
+      description: Is this addition something that you are willing to submit a pull request for?
+      options:
+        - 'No.'
+        - 'Maybe?'
+        - 'Yes!'
     validations:
       required: false
 
