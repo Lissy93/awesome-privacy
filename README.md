@@ -116,9 +116,9 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 **[1Password](https://1password.com)** (proprietary) is a fully-featured cross-platform password manager with sync. Free for self-hosted data (or $3/ month hosted). Be aware that 1Password is not fully open source, but they do regularly publish results of their independent [security audits](https://support.1password.com/security-assessments), and they have a solid reputation for transparently disclosing and fixing vulnerabilities
 
-**Other Open Source PM**: [Buttercup](https://buttercup.pw), [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Clipperz](https://clipperz.is), [Pass](https://www.passwordstore.org), [Encryptr](https://spideroak.com/encryptr), [Padloc](https://padloc.app), [TeamPass](https://teampass.net), [PSONO](https://psono.com), [UPM](http://upm.sourceforge.net), [Gorilla](https://github.com/zdia/gorilla/wiki), [Seahorse](https://gitlab.gnome.org/GNOME/seahorse) (for GNOME), [GNOME Keyring](https://wiki.gnome.org/Projects/GnomeKeyring), [KDE Wallet Manager](https://userbase.kde.org/KDE_Wallet_Manager).
+**Other Open Source PM**: [Buttercup](https://buttercup.pw), [Clipperz](https://clipperz.is), [Pass](https://www.passwordstore.org), [Padloc](https://padloc.app), [TeamPass](https://teampass.net), [PSONO](https://psono.com), [UPM](http://upm.sourceforge.net), [Gorilla](https://github.com/zdia/gorilla/wiki), [Seahorse](https://gitlab.gnome.org/GNOME/seahorse) (for GNOME), [GNOME Keyring](https://wiki.gnome.org/Projects/GnomeKeyring), [KDE Wallet Manager](https://userbase.kde.org/KDE_Wallet_Manager).
 
-If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
+If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Encryptr](https://spideroak.com/encryptr), [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
 
 **See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#passwords)
 
@@ -129,18 +129,17 @@ If you are using a deprecated PM, you should migrate to something actively maint
 | --- | --- |
 **[Aegis](https://getaegis.app)** (Android)  | Free, secure and open source authenticator app for Android. Has a backup/ restore feature and a customisable UI with dark mode
 **[Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro)** (Android) | Free and open-source two factor authentication app for Android. It features encrypted backups, icons, categories and a high level of customisation. It also has a Wear OS companion app
-**[AndOTP](https://github.com/andOTP/andOTP)** (Android) | Another open source, secure authenticator app. AndOTP is well established with a strong user base
 **[Tofu](https://www.tofuauth.com)** (iOS) | An easy-to-use, open-source two-factor authentication app designed specifically for iOS
 **[Authenticator](https://mattrubin.me/authenticator/)** (iOS) | Simple, native, open source 2-FA Client for iOS, which never connects to the internet - built by @mattrubin.me
 **[Raivo OTP](https://github.com/raivo-otp/ios-application)** (iOS) | A native, lightweight and secure one-time-password (OTP) client built for iOS; Raivo OTP! - built by @tijme
 **[WinAuth](https://winauth.github.io/winauth)** (Windows) | Portable, encrypted desktop authenticator app for Microsoft Windows. With useful features, like hotkeys and some additional security tools, WinAuth is a great companion authenticator for desktop power-users. It's open source and well-established (since mid-2010)
-**[Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa)** (Android)  | Free and open source app for two-factor-authentication (2FA), which runs as a web server and can be accessed using a web browser or using an Android app
+**[Authenticator](https://gitlab.gnome.org/World/Authenticator)** (Linux) | Rust-based OTP authenticator. Has native With GNOME Shell integration. Also available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator).
 
 *Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)*
 
 #### Notable Mentions
 
-[WinAuth](https://winauth.github.io/winauth) *(Windows)*, [Authenticator by World](https://gitlab.gnome.org/World/Authenticator) *(GNOME, Linux)*, [OTPClient](https://github.com/paolostivanin/OTPClient) *(Linux)*, [gauth](https://github.com/gbraad/gauth) *(Self-Hosted, Web-based)*
+[OTPClient](https://github.com/paolostivanin/OTPClient) *(Linux)*, [gauth](https://github.com/gbraadnl/gauth) *(Self-Hosted, Web-based)*, [Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa) *(Android)*
 
 For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a plugin for managing TOTP's -  offline and compatible with Windows, Mac and Linux.
 
@@ -185,7 +184,7 @@ Although well-established encryption methods are usually very secure, if the pas
 **[Tor Browser](https://www.torproject.org/)** | Tor provides an extra layer of anonymity, by encrypting each of your requests, then routing it through several nodes, making it near-impossible for you to be tracked by your ISP/ provider. It does make every-day browsing a little slower, and some sites may not work correctly. As with everything there are [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
 #### Notable Mentions
-Mobile Browsers: [Bromite](https://www.bromite.org/) (Android), [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android), [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS), [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS), [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android), [Onion Browser](https://onionbrowser.com/) (iOS), 
+Mobile Browsers: [Bromite](https://www.bromite.org/) (Android), [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android), [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS), [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS), [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android), [Onion Browser](https://onionbrowser.com/) (iOS)
 
 Additional Desktop: [Nyxt](https://nyxt.atlas.engineer/), [WaterFox](https://www.waterfox.net), [Epic Privacy Browser](https://www.epicbrowser.com), [PaleMoon](https://www.palemoon.org), [Iridium](https://iridiumbrowser.de/), [Sea Monkey](https://www.seamonkey-project.org/), [Ungoogled-Chromium](https://github.com/Eloston/ungoogled-chromium), [Basilisk Browser](https://www.basilisk-browser.org/) and [IceCat](https://www.gnu.org/software/gnuzilla/)
 
@@ -209,7 +208,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 **[Startpage](https://www.startpage.com/)** | Dutch search engine that searches on google and shows the results (slightly rearranged). It has several configurations that improve privacy during use (it is not open source)
 
 #### Notable Mentions
-[MetaGear](https://metager.org), [YaCy](https://yacy.net). Alternatively, host your own instance of [Searx](https://asciimoo.github.io/searx/)
+[MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). Alternatively, host your own instance of [Searx](https://asciimoo.github.io/searx/)
 
 12Bytes also maintains a list of [privacy-respecting search engines](https://12bytes.org/articles/tech/alternative-search-engines-that-respect-your-privacy/)
 
@@ -226,12 +225,14 @@ Without using a secure app for instant messaging, all your conversations, meta d
 **[Session](https://getsession.org)** | Session is a fork of Signal, however unlike Signal it does not require a mobile number (or any other personal data) to register, instead each user is identified by a public key. It is also decentralized, with servers being run by the community though [Loki Net](https://loki.network), messages are encrypted and routed through several of these nodes. All communications are E2E encrypted, and there is no meta data.
 **[Silence](https://silence.im/)** | If you're restricted to only sending SMS/MMS, then Silence makes it easy to encrypt messages between 2 devices. This is important since traditional text messaging is inherently insecure. It's easy-to-use, reliable and secure - but has fallen in popularity, now that internet-based messaging is often faster and more flexible
 **[Off-The-Record](https://otr.cypherpunks.ca/)** | Off-the-Record (OTR) Messaging allows you to have private conversations over instant messaging/ [XMPP](https://xmpp.org). It has fallen in popularity in recent years, in favor for simpler, mobile-based messaging apps, but still widely used and secure. It provides: Encryption (so no one else can read your messages), Authentication (assurance that the correspondent is who you think they are), Deniability (After a conversation, it cannot be proved you took part), Perfect Forwards Secrecy (if your keys are compromised, no previous messages can be decrypted). The easiest way to use OTR, is with a [plugin](https://otr.cypherpunks.ca/software.php) for your IM client
-**[OpenPGP](https://www.openpgp.org/)** |  Provides cryptographic privacy and authentication, PGP is used to encrypt messages sent over existing chat networks (such as email or message boards). Slightly harder to use (than IM apps), slower, but still widely used. Using [GnuPG](https://gnupg.org/download/index.html), encrypts messages following the OpenPGP standard, defined by the IETF, proposed in [RFC 4880](https://tools.ietf.org/html/rfc4880) (originally derived from the PGP software, created by Phil Zimmermann, now owned by [Symantec](https://www.symantec.com/products/encryption)). <br>**Note/ Issues with PGP**  PGP is [not easy](https://restoreprivacy.com/let-pgp-die/) to use for beginners, and could lead to human error/ mistakes being made, which would be overall much worse than if an alternate, simpler system was used. Do not use [32-bit key IDs](https://evil32.com/) - they are too short to be secure. There have also been vulnerabilities found in the OpenPGP and S/MIME, defined in [EFAIL](https://efail.de/), so although it still considered secure for general purpose use, it may be better to use an encrypted messaging or email app instea - especially for sensitive communications.
 
 #### Other Notable Mentions
 Other private, encrypted and open source messaging apps include: [Surespot](https://www.surespot.me), [Chat Secure](https://chatsecure.org/) (iOS only) and [Status](https://status.im/). Note that [Tor Messenger](https://blog.torproject.org/category/tags/tor-messenger)s been removed from the list, since development has halted.
 
-[KeyBase](keybase.io/inv/6d7deedbc1)allows encrypted real-time chat, group chats, and public and private file sharing. It also has some nice features around cryptographically proving social identities, and makes PGP signing, encrypting and decrypting messages easy. However, since it was [acquired by Zoom](https://keybase.io/blog/keybase-joins-zoom) in 2020, it has no longer been recieving regular updates.
+[KeyBase](keybase.io/inv/6d7deedbc1) allows encrypted real-time chat, group chats, and public and private file sharing. It also has some nice features around cryptographically proving social identities, and makes PGP signing, encrypting and decrypting messages easy. However, since it was [acquired by Zoom](https://keybase.io/blog/keybase-joins-zoom) in 2020, it has no longer been recieving regular updates.
+
+[OpenPGP](https://www.openpgp.org/) can be used over existing chat networks (such as email or message boards). It provides cryptographic privacy and authentication, PGP is used to encrypt messages.<br>
+**Note/ Issues with PGP**  PGP is [not easy](https://restoreprivacy.com/let-pgp-die/) to use for beginners, and could lead to human error/ mistakes being made, which would be overall much worse than if an alternate, simpler system was used. Do not use [32-bit key IDs](https://evil32.com/) - they are too short to be secure. There have also been vulnerabilities found in the OpenPGP and S/MIME, defined in [EFAIL](https://efail.de/), so although it still considered secure for general purpose use, for general chat, it may be better to use an encrypted messaging or email app instead.
 
 #### Word of Warning
 Many messaging apps claim to be secure, but if they are not open source, then this cannot be verified - and they **should not be trusted**. This applies to [Telegram](https://telegram.org), [Threema](https://threema.ch), [Cypher](https://www.goldenfrog.com/cyphr), [Wickr](https://wickr.com/), [Silent Phone](https://www.silentcircle.com/products-and-solutions/silent-phone/) and [Viber](https://www.viber.com/), to name a few - these apps should not be used to communicate any sensitive data. [Wire](https://wire.com/) has also been removed, due to a [recent acquisition](https://blog.privacytools.io/delisting-wire/)
@@ -269,14 +270,10 @@ The below email providers are private, end-to-end encrypted (E2EE) and reasonabl
 
 See [OpenTechFund - Secure Email](https://github.com/OpenTechFund/secure-email) for more details.
 
-**See also** [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
+**See also** [Comparison or Private Email Providers](https://github.com/Lissy93/email-comparison) and [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
 
 #### Other Notable Mentions
-[HushMail](https://www.hushmail.com/tapfiliate/?tap_a=44784-d2adc0&tap_s=724845-260ce4&program=hushmail-for-small-business), [Soverin](https://soverin.net), [StartMail](https://www.startmail.com), [Posteo](https://posteo.de), [Lavabit](https://lavabit.com). For activists and journalists, see [Disroot](https://disroot.org/en), [Autistici](https://www.autistici.org) and [RiseUp](https://riseup.net/en)
-
-**Beta Mail Providers**
-- **[CriptText](https://www.criptext.com/)** - CriptText is another option - it's encrypted, free and open source, but works a little differently from convectional mail. There is no cloud storage, and all email is instead stored on your devices. This greatly improves security - however you must be signed into the app (either on desktop or mobile) in order to receive mail. If you are not signed in, then mail sent to you will be permanently lost. For mobile users, your device can be offline or in airplane mode for up to 30 days before mail becomes discarded. The client apps are very good, email is synced seamless between devices, and you can enable automated and encrypted backups. Since your email is stored on your device, they are able to work offline - due to this, there is no web client. Encryption is done with the [Signal protocol](https://en.wikipedia.org/wiki/Signal_Protocol) (rather than PGP), and there are a bunch of really neat features that you can use while communicating to other Criptext users.
-Criptext is still in beta, but with an extremely smooth user experience, and no noticeable usability bugs.
+[HushMail](https://www.hushmail.com/tapfiliate/?tap_a=44784-d2adc0&tap_s=724845-260ce4&program=hushmail-for-small-business), [Soverin](https://soverin.net), [StartMail](https://www.startmail.com), [Posteo](https://posteo.de), [Lavabit](https://lavabit.com). For activists and journalists, see [Disroot](https://disroot.org/en), [Autistici](https://www.autistici.org), [CriptText](https://www.criptext.com/) and [RiseUp](https://riseup.net/en)
 
 ### Word of Warning
 - When using an end-to-end encryption technology like OpenPGP, some metadata in the email header will not be encrypted.
@@ -1584,34 +1581,20 @@ If you find something on this list that should no longer be deemed secure or pri
 
 ### License 
 
-[![Attribution 4.0 International](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/Lissy93/awesome-privacy/blob/master/LICENSE.md)
+[![Attribution 4.0 International](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/Lissy93/awesome-privacy/blob/master/LICENSE)
 
-*Licensed under [Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © [Alicia Sykes](https://aliciasykes.com) 2020*
+*Licensed under [Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © [Alicia Sykes](https://aliciasykes.com) 2022*
 
 
 ### Thank you
 
 Thank you for checking out this project - I hope you found it somewhat useful 😊
 
-This list was started by myself - Alicia, with a lot of help + contributions from the community. You can get in contact with me below:
+This list was initialy compiled by Alicia Sykes / [:octocat: @Lissy93](https://github.com/Lissy93), with a lot of help from the community.
 
-[![Alicia Sykes on Twitter](https://img.shields.io/twitter/follow/Lissy_Sykes?style=social&logo=twitter)](https://twitter.com/Lissy_Sykes)
-[![Alicia Sykes on GitHub](https://img.shields.io/github/followers/lissy93?label=Lissy93&style=social)](https://github.com/Lissy93)
-[![Alicia Sykes on Mastodon](https://img.shields.io/mastodon/follow/1032965?domain=https%3A%2F%2Fmastodon.social)](https://mastodon.social/web/accounts/1032965)
-[![Alicia Sykes on Keybase](https://img.shields.io/badge/aliciasykes--lightgrey?style=social&logo=Keybase)](https://keybase.io/aliciasykes)
-[![Alicia Sykes's PGP](https://img.shields.io/badge/PGP--lightgrey?style=social&logo=Let%E2%80%99s%20Encrypt)](https://keybase.io/aliciasykes/pgp_keys.asc)
-[![Alicia Sykes's Website](https://img.shields.io/badge/aliciasykes.com--lightgrey?style=social&logo=Tencent%20QQ)](https://aliciasykes.com)
+Follow me on GitHub for updates and other projects.
 
----
-
-Found this helpful? Consider sharing it with others, to help them also improve their digital security 😇
-
-[![Share on Twitter](https://img.shields.io/badge/Share-Twitter-17a2f3?style=for-the-badge&logo=Twitter)](http://twitter.com/share?text=Improve%20your%20personal%20cyber%20security%2C%20check%20out%20this%20ultimate%20list%20of%20privacy-respecting%20software%20on%20GitHub%0Ahttps%3A%2F%2Fgit.io%2FJv66u%20%F0%9F%94%90%20%E2%9C%A8%20%40Lissy_Sykes)
-[![Share on LinkedIn](https://img.shields.io/badge/Share-LinkedIn-0077b5?style=for-the-badge&logo=LinkedIn)](
-http://www.linkedin.com/shareArticle?mini=true&url=https://git.io/Jv66u&title=The%20Ultimate%20List%20of%20Privacy-Respecting%20Software&summary=Improve%20your%20personal%20cyber%20security%2C%20check%20out%20this%20ultimate%20list%20of%20privacy-respecting%20software%20on%20GitHub%0Ahttps%3A%2F%2Fgit.io%2FJv66u%20%F0%9F%94%90%20%E2%9C%A8&source=https://github.com/Lissy93)
-[![Share on Facebook](https://img.shields.io/badge/Share-Facebook-4267b2?style=for-the-badge&logo=Facebook)](https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/Lissy93/personal-security-checklist&title=The%20Ultimate%20Personal%20Cyber%20Security%20Checklist&summary=%F0%9F%94%92%20A%20curated%20list%20of%20100%2B%20tips%20for%20protecting%20digital%20security%20and%20privacy%20in%202020&source=)
-[![Share on Mastodon](https://img.shields.io/badge/Share-Mastodon-56a7e1?style=for-the-badge&logo=Mastodon)](https://mastodon.social/web/statuses/new?text=Improve%20your%20personal%20cyber%20security%2C%20check%20out%20this%20ultimate%20list%20of%20privacy-respecting%20software%20on%20GitHub%0Ahttps%3A%2F%2Fgit.io%2FJv66u%20by%20%40lissy93%20%20%F0%9F%94%90%20%E2%9C%A8)
-
+If you found this project helpful, consider dropping us a star, and sharing with your network.
 
 
 
