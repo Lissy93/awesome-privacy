@@ -9,8 +9,10 @@
     --shadow-color: #00000033;
 }
 
-/* #fc60a8 */
-/* #9580ff */
+::selection {
+    background: var(--cover-text-color);
+    color: var(--primary);
+}
 
 /*****************************************************/
 /******* OVERIDE DOCSIFY ELEMENTS - COVER-PAGE *******/
