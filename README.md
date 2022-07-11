@@ -98,6 +98,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 #### See Also
 - [Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)
 
+<hr id="essentials" />
 
 ## Password Managers
 
@@ -214,6 +215,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 
 **See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
 
+<hr id="communication" />
 
 ## Encrypted Messaging
 
@@ -368,6 +370,8 @@ Some chat platforms allow for cross-platform group chats, voice and video confer
 
 For Conferences, [OSEM](https://osem.io) is an open source all-in-one conference management tool, providing Registration, Schedules, Live and Recorded Sessions, Paper Submissions, Marketing Pages and Administration.
 
+<hr id="security-tools" />
+
 ## Browser Extensions
 
 The following browser add-ons give you better control over what content is able to be loaded and executed while your browsing.
@@ -487,6 +491,7 @@ A selection of free online tools and utilities, to check, test and protect
 #### Word of Warning
 *Browsers are inherently insecure, be careful when uploading, or entering personal details.*
 
+<hr id="networking" />
 
 ## Virtual Private Networks
 
@@ -754,7 +759,7 @@ The country that your data is hosted in, will be subject to local laws and regul
 #### Word of Warning
 Self-hosting your own mail server is not recommended for everyone, it can be time consuming to setup and maintain and securing it correctly is critical
 
-
+<hr id="productivity" />
 
 ## Digital Notes
 
@@ -938,6 +943,8 @@ There's no need to use a third-party tool. You can boot into a UNIX-based system
 
 Such as the [`dd`](https://en.wikipedia.org/wiki/Dd_%28Unix%29) command, is a tool to convert and copy files, but running `sudo dd if=/dev/zero of=/dev/sdX bs=1M` will quickly overwrite the whole disk with zeros. Or [badblocks](https://linux.die.net/man/8/badblocks) which is intended to search for all bad blocks, but can also be used to write zeros to a disk, by running `sudo badblocks -wsv /dev/sdd`. An effective method of erasing an SSD, it to use [hdparm](https://en.wikipedia.org/wiki/Hdparm) to issue a [secure erase](https://en.wikipedia.org/wiki/Parallel_ATA#HDD_passwords_and_security) command, to your target storage device, for this, see step-by-step instructions via: [wiki.kernel.org](https://ata.wiki.kernel.org/index.php/ATA_Secure_Erase). Finally, `[srm](https://www.systutorials.com/docs/linux/man/1-srm/)` can be use to securely remove files or directories, just run `srm -zsv /path/to/file` for a single pass over.
 
+<hr id="utilities" />
+
 ## Virtual Machines
 
 A VM is a sandboxed operating system, running within your current system. Useful for compartmentalisation and safely testing software, or handling potentially malicious files
@@ -953,6 +960,7 @@ A VM is a sandboxed operating system, running within your current system. Useful
 
 [VMWare](https://www.vmware.com/) is popular in the enterprise world, it is not open source, and although there is a free version, a license is required to access all features. VMWare perfoms very well when running on a server, with hundreds of hosts and users. For Mac users, [Parallels](https://www.parallels.com/uk/) is a popular option which performs really well, but again is not open source. For Windows users, there's [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v), which is a native Windows product, developed by Microsoft.
 
+<hr id="social" />
 
 ## Social Networks
 
@@ -1145,6 +1153,7 @@ See Also: [Cryptocurrencies](#cryptocurrencies), [Virtual Credit Cards](#virtual
 
 See Also: [Personal Finance Security Tips](README.md#personal-finance)
 
+<hr id="operating-systems" />
 
 ## Mobile Operating Systems
 
@@ -1310,6 +1319,7 @@ For Microsoft Windows, Windows Defender provides totally adequate virus protecti
 
 Many anti virus products have a history of introducing vulnerabilities themselves, and several of them seriously degrade the performance of your computer, as well as decrease your privacy. Never use a free anti-virus, and never trust the companies that offer free solutions, even if you pay for the premium package. This includes (but not limited to) Avast, AVG, McAfee and Kasperky. For AV to be effective, it needs intermate access to all areas of your PC, so it is important to go with a trusted vendor, and monitor it's activity closely. Read more about why you shouldn't use [Anti-Spy Tools, on Windows](https://as93.link/gjlj4).
 
+<hr id="home-iot" />
 
 ## Home Automation
 
@@ -1346,6 +1356,7 @@ For a desktop-based assistant, see [Dragonfire](https://github.com/DragonCompute
 #### Word of Warning
 If you are building your own assistant, you may want to consider a hardware-switch for disabling the microphone. Keep tabs on issues and check the code, to ensure you are happy with how it works, from a privacy perspective.
 
+<hr id="bonus" />
 
 ## Bonus #1 - Alternatives to Google
 Moving away from Google, and using multiple alternative apps will mean there is no single source of tracking. Open source and privacy-focused software is best
