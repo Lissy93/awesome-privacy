@@ -1,0 +1,33 @@
+# Action to automatically pull content of master branch into gh-pages
+# whenever master content is modified. Site will then be auto-deployed
+
+name: 🔄 Sync Master to Website
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 5 * * 6' # Every Saturday morning.
+
+jobs:
+  sync-branches:
+    runs-on: ubuntu-latest
+    name: Syncing branches
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Opening pull request
+        id: pull
+        uses: tretuna/sync-branches@1.4.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          FROM_BRANCH: master
+          TO_BRANCH: gh-pages
+          PULL_REQUEST_TITLE: Update docs site
+          PULL_REQUEST_BODY: |
+            Merging {FROM_BRANCH} into {TO_BRANCH} to be deployed to website.
