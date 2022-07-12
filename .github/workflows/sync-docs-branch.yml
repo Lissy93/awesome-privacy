@@ -3,9 +3,9 @@
 
 name: 🔄 Sync Master to Website
 on:
-  push:
-    branches:
-      - master
+#   push:
+#     branches:
+#       - master
   workflow_dispatch: # Manual dispatch
   schedule:
     - cron: '0 5 * * 6' # Every Saturday morning.
@@ -28,6 +28,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           FROM_BRANCH: master
           TO_BRANCH: gh-pages
-          PULL_REQUEST_TITLE: Update docs site
+          PULL_REQUEST_TITLE: '[AUTO] Update docs site'
           PULL_REQUEST_BODY: |
-            Merging {FROM_BRANCH} into {TO_BRANCH} to be deployed to website.
+            Merging master into gh-pages, to be deployed to [awesome-privacy.xyz](https://awesome-privacy.xyz/).
