@@ -878,7 +878,7 @@ Strip out unneeded GET parameters if they reveal any device or referrer informat
 
 ## Video Conference Calls
 
-With the [many, many security issues with Zoom](https://www.tomsguide.com/uk/news/zoom-security-privacy-woes), and other meainstream it becomes clear that a better, more private and secure alternative is required. As with other categories, the "best video calling app" will be different for each of us, depending on the ratio of performance + features to security + privacy required in your situation.
+With the [many, many security issues with Zoom](https://www.tomsguide.com/uk/news/zoom-security-privacy-woes), and other mainstream options, it becomes clear that a better, more private and secure alternative is required. As with other categories, the "best video calling app" will be different for each of us, depending on the ratio of performance + features to security + privacy required in your situation.
 
 | Provider | Description |
 | --- | --- |
