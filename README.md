@@ -76,6 +76,8 @@ corporations, governments, and hackers from logging, storing or selling your per
   - [Windows Defences](#windows-defences)
   - [Mac OS Defences](#mac-os-defences)
   - [Anti-Malware](#anti-malware)
+- **Development**
+  - [Code Hosting](#code-hosting)
 - **Home/ IoT**
   - [Home Automation](#home-automation)
   - [Voice Assistants](#ai-voice-assistants)
@@ -1344,6 +1346,18 @@ For creating dashboard from IoT devices, see [ThingsBoard](https://thingsboard.i
 
 #### Word of Warning
 IoT smart home devices can open you up to many security risks and exploits. It is really important that you configure them correctly, setting strong unique passwords, turn off data sharing, and if possible restrict internet access so devices can only communicate within your local network. See [Smart Home Security Checklist](https://github.com/Lissy93/personal-security-checklist#smart-home) for more tips.
+
+<hr id="development">
+
+## Code Hosting
+
+| Provider | Description |
+| --- | --- |
+[SourceHut](https://sourcehut.org/) | Git and mercurial code hosting, task management, mailing lists, wiki hosting and Alpine-based build pipelines. Can be self-hosted, or used through the managed instance at [sr.ht](https://sr.ht/)
+[CodeBerg](https://codeberg.org/) | A fully-managed instance of Gitea
+[GitLab](https://gitlab.com) | Fully-featured git, CI and project management platform. Managed instance available, but can also be self-hosted
+[Gitea](https://gitea.io/) | Lightweight self-hosted git platform, written in Go
+[Gogs](https://gogs.io/) | Lightweight self-hosted git platform, written in Go
 
 
 ## AI Voice Assistants
