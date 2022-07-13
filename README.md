@@ -180,7 +180,7 @@ Although well-established encryption methods are usually very secure, if the pas
 | Provider | Description |
 | --- | --- |
 **[Librewolf](https://librewolf-community.gitlab.io/)** | Librewolf is an independent “fork” of Firefox, with the primary goals of privacy, security and user freedom. It is the community run successor to LibreFox
-**[Brave Browser](https://brave.com/?ref=ali721)** | Brave Browser, currently one of the most popular private browsers - it provides speed, security, and privacy by blocking trackers with a clean, yet fully-featured UI. It also pays you in [BAT tokens](https://basicattentiontoken.org/) for using it. Brave also has Tor built-in, when you open up a private tab/ window.
+**[Brave Browser](https://brave.com)** | Brave Browser, currently one of the most popular private browsers - it provides speed, security, and privacy by blocking trackers with a clean, yet fully-featured UI. It also pays you in [BAT tokens](https://basicattentiontoken.org/) for using it. Brave also has Tor built-in, when you open up a private tab/ window.
 **[Firefox](https://www.mozilla.org/firefox)** | Significantly more private, and offers some nifty privacy features than Chrome, Internet Explorer and Safari. After installing, there are a couple of small tweaks you will need to make, in order to secure Firefox. For a though config, see [@arkenfox's user.js](https://github.com/arkenfox/user.js/). You can also follow one of these guides by: [Restore Privacy](https://restoreprivacy.com/firefox-privacy/) or [12Bytes](https://12bytes.org/7750)
 **[Tor Browser](https://www.torproject.org/)** | Tor provides an extra layer of anonymity, by encrypting each of your requests, then routing it through several nodes, making it near-impossible for you to be tracked by your ISP/ provider. It does make every-day browsing a little slower, and some sites may not work correctly. As with everything there are [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
@@ -405,7 +405,7 @@ The following browser add-ons give you better control over what content is able 
 **[Web Archives](https://github.com/dessant/web-archives/wiki/Search-engines)** | View archived and cached versions of web pages on 10+ search engines, such as the Wayback Machine, Archive.is, Google etc Useful for checking legitimacy of websites, and viewing change logs <br>**Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/view-page-archive/) \ [Chrome](https://chrome.google.com/webstore/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao) \ [Edge](https://microsoftedge.microsoft.com/addons/detail/apcfghlggldjdjepjnahfdjgdcdekhda) \ [Source](https://github.com/dessant/web-archives)
 **[Flagfox](https://flagfox.wordpress.com/)** | Displays a country flag depicting the location of the current website's server, which can be useful to know at a glance. Click icon for more tools such as site safety checks, whois, validation etc <br>**Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 **[Lightbeam](https://github.com/mozilla/lightbeam-we)** | Visualize in detail the servers you are contacting when you are surfing on the Internet. Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers). **Download**: [Firefox][lightbeam-firefox] \ [Source][lightbeam-source]
-**[Track Me Not](http://trackmenot.io)** | Helps protect web searchers from surveillance and data-profiling, through creating meaningless noise and obfuscation, outlined in their [whitepaper][tmn-whitepaper]. Controversial weather or not this is a good approach **Download**: [Chrome][tmn-chrome] \ [Firefox][tmn-firefox] \ [Source][tmn-source]
+**[Track Me Not](http://trackmenot.io)** | Helps protect web searchers from surveillance and data-profiling, through creating meaningless noise and obfuscation, outlined in their [whitepaper][tmn-whitepaper]. Controversial whether or not this is a good approach **Download**: [Chrome][tmn-chrome] \ [Firefox][tmn-firefox] \ [Source][tmn-source]
 **[AmIUnique Timeline](https://amiunique.org/timeline)** | Enables you to better understand the evolution of browser fingerprints (which is what websites use to uniquely identify and track you). **Download**: [Chrome][amiunique-chrome] \ [Firefox][amiunique-firefox]
 **[Netcraft Extension](https://www.netcraft.com/apps/browser)** | Notifies you when visiting a known or potential phishing site, and detects suspicious JavaScript (including skimmers and miners). Also provides a simple rating for a given sites legitimacy and security. Great for less technical users. Netcraft also has a handy online tool: [Site Report](https://sitereport.netcraft.com/) for checking what any given website is running. **Download**: [Chrome](https://chrome.google.com/webstore/detail/netcraft-anti-phishing-ex/bmejphbfclcpmpohkggcjeibfilpamia) \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero) \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/) \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
 
@@ -482,7 +482,7 @@ A selection of free online tools and utilities, to check, test and protect
 **[Hardenize](https://www.hardenize.com/)** | Scan websites and shows a security overview, relating to factors such as HTTPS, domain info, email data, www protocols and so on
 **[Is Legit?](https://www.islegitsite.com/)** | Checks if a website or business is a scam, before buying something from it
 **[Deseat Me](https://www.deseat.me)** | Tool to help you clean up your online presence - Instantly get a list of all your accounts, delete the ones you are not using
-**[Should I Remove It?](https://www.shouldiremoveit.com)** | Ever been uninstalling programs from your Windows PC and been unsure of what something is? Should I Remove It is a database of Windows software, detailing weather it is essential, harmless or dangerous
+**[Should I Remove It?](https://www.shouldiremoveit.com)** | Ever been uninstalling programs from your Windows PC and been unsure of what something is? Should I Remove It is a database of Windows software, detailing whether it is essential, harmless or dangerous
 **[10 Minute Mail](https://10minemail.com/)** | Generates temporary disposable email address, to avoid giving your real details
 **[MXToolBox Mail Headers](https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx)** | Tool for analyzing email headers, useful for checking the authenticity of messages, as well as knowing what info you are revealing in your outbound messages
 **[Am I FloCed?](https://amifloced.org/)** | Google testing out a new tracking feature called Federated Learning of Cohorts (aka "FLoC"). It currently effects 0.5% of Chrome users, this tool developed by the EFF will detect if you are affected, and provide additional info on how to stay protected
@@ -693,7 +693,7 @@ Flashing custom firmware may void your warrenty. If power is interupted mid-way 
 
 ## Network Analysis
 
-Weather you live in a country behind a firewall, or accessing the internet through a proxy - these tools will help you better understand the extent of blocking, deep packet inspection and what data is being analysed
+Whether you live in a country behind a firewall, or accessing the internet through a proxy - these tools will help you better understand the extent of blocking, deep packet inspection and what data is being analysed
 
 | Provider | Description |
 | --- | --- |
@@ -719,7 +719,7 @@ An IDS is an application that monitors a network or computer system for maliciou
 
 ## Cloud Hosting
 
-Weather you are hosting a website and want to keep your users data safe, or if you are hosting your own file backup, cloud productivity suit or VP - then choosing a provider that respects your privacy and allows you to sign up anonymously, and will keep your files and data safe is be important.
+Whether you are hosting a website and want to keep your users data safe, or if you are hosting your own file backup, cloud productivity suit or VP - then choosing a provider that respects your privacy and allows you to sign up anonymously, and will keep your files and data safe is be important.
 
 | Provider | Description |
 | --- | --- |
