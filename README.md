@@ -290,7 +290,7 @@ Email clients are the programs used to interact with the mail server. For hosted
 
 | Provider | Description |
 | --- | --- |
-**[Mozilla Thunderbird](https://www.thunderbird.net)** (Desktop) | Free and open source email application developed and backed by Mozilla -it's secure, private easy and customizable. The [Enigmail](https://www.enigmail.net) add-on allows for easy encryption/ decryption of PGP messages, and the [TorBirdy](https://trac.torproject.org/projects/tor/wiki/torbirdy) extension routes all traffic through the Tor network.
+**[Mozilla Thunderbird](https://www.thunderbird.net)** (Desktop) | Free and open source email application developed and backed by Mozilla -it's secure, private easy and customizable. ~~The [Enigmail](https://www.enigmail.net) add-on allows for easy encryption/ decryption of PGP messages~~ (as of V 78.2.1 encryption is built in), and the [TorBirdy](https://trac.torproject.org/projects/tor/wiki/torbirdy) extension routes all traffic through the Tor network.
 **[eM Client](https://www.emclient.com/)** (Desktop) | Productivity-based email client, for Windows and MacOS. eM Client has a clean user interface, snappy performance and good compatibility. There is a paid version, with some handy features, including snoozing incoming emails, watching for replies for a specific thread, message translation, send later, and built-in Calendar, Tasks, Contacts and Notes. Note, eM Client is propriety, and not open source
 **[RainLoop](http://www.rainloop.net)** (Web) | Simple, modern, fast web-based mail client
 **[RoundCube](https://roundcube.net)** (Web) | Browser-based multilingual IMAP client with an application-like user interface. It provides full functionality you expect from an email client, including MIME support, address book, folder manipulation, message searching and spell checking
@@ -413,7 +413,10 @@ The following browser add-ons give you better control over what content is able 
 [Extension source viewer](https://addons.mozilla.org/en-US/firefox/addon/crxviewer) is a handy extension for viewing the source code of another browser extension, which is a useful tool for verifying the code does what it says 
 
 #### Word of Warning
-*Be careful when installing unfamiliar browser add-ons, since some can compromise your security and privacy. At the time of writing, the above list were all open source, verified and 'safe' extensions. Having many extensions installed can cause your fingerprint to be more unique, hence making tracking easier. In most situations, only a few of the above extensions will be needed in combination.*
+- _Having many extensions installed raises entropy, causing your fingerprint to be more unique, hence making tracking easier._
+- _Much of the functionality of the above addons can be applied without installing anything, by configuring browser settings yourself. For Firefox this is done in the user.js_
+- _Be careful when installing unfamiliar browser add-ons, since some can compromise your security and privacy. At the time of writing, the above list were all open source, verified and 'safe' extensions._
+- _In most situations, only a few of the above extensions will be needed in combination._
 
 **See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
 
@@ -448,6 +451,7 @@ The following browser add-ons give you better control over what content is able 
 **[AFWall+](https://github.com/ukanth/afwall/)** | Android Firewall+ (AFWall+) is an advanced iptables editor (GUI) for rooted Android devices, which provides very fine-grained control over which Android apps are allowed to access the network
 **[Catch the Man-in-the-Middle](https://play.google.com/store/apps/details?id=me.brax.certchecker)** | Simple tool, that compares SHA-1 fingerprints of the the SSL certificates seen fron your device, and the certificate seen from an external network. If they do not match, this may indicate a man-in-the-middle modifying requests
 **[RethinkDNS + Firewall](https://github.com/celzero/rethink-app)** | An open-source ad-blocker and firewall app for Android 6+ (does not require root)
+**[F-Droid](https://f-droid.org/)** | F-Droid is an installable catalogue of FOSS applications for Android. The client enabled you to browse, install, and keep track of updates on your device
 
 #### Word of Warning
 Too many installed apps will increase your attack surface - only install applications that you need 
@@ -1317,7 +1321,8 @@ For 1-off malware scans on Windows, [MalwareBytes](https://www.malwarebytes.com)
 #### Word of Warning
 For Microsoft Windows, Windows Defender provides totally adequate virus protection in most cases. These tools are intended for single-use in detecting/ removing threats on an infected machine, and are not recommended to be left running in the background, use portable editions where available.
 
-Many anti virus products have a history of introducing vulnerabilities themselves, and several of them seriously degrade the performance of your computer, as well as decrease your privacy. Never use a free anti-virus, and never trust the companies that offer free solutions, even if you pay for the premium package. This includes (but not limited to) Avast, AVG, McAfee and Kasperky. For AV to be effective, it needs intermate access to all areas of your PC, so it is important to go with a trusted vendor, and monitor it's activity closely. Read more about why you shouldn't use [Anti-Spy Tools, on Windows](https://as93.link/gjlj4).
+Many anti virus products have a history of introducing vulnerabilities themselves, and several of them seriously degrade the performance of your computer, as well as decrease your privacy. Never use a free anti-virus, and never trust the companies that offer free solutions, even if you pay for the premium package. This includes (but not limited to) Avast, AVG, McAfee and Kasperky. For AV to be effective, it needs intermate access to all areas of your PC, so it is important to go with a trusted vendor, and monitor it's activity closely. 
+
 
 <hr id="home-iot" />
 
@@ -1641,6 +1646,7 @@ If you found this project helpful, consider dropping us a star, and sharing with
 [amiunique-firefox]: https://addons.mozilla.org/en-US/firefox/addon/amiunique
 
 [//]: # (ANDROID APP LINKS)
+[NetGuard]: https://play.google.com/store/apps/details?id=eu.faircode.netguard
 [Island]: https://play.google.com/store/apps/details?id=com.oasisfeng.island
 [Orbot]: https://play.google.com/store/apps/details?id=org.torproject.android
 [Bouncer]: https://play.google.com/store/apps/details?id=com.samruston.permission
