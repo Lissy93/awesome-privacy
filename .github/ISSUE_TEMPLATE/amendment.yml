@@ -1,6 +1,6 @@
 name: Amendment
 description: Suggest an edit to an existing entry
-title: '[ADDITION] <title>'
+title: '[AMENDMENT] <title>'
 labels: ['Suggested Amendment', 'Awaiting Review']
 assignees:
   - lissy93
