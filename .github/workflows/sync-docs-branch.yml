@@ -1,11 +1,11 @@
-# Action to automatically pull content of master branch into gh-pages
-# whenever master content is modified. Site will then be auto-deployed
+# Action to automatically pull content of main branch into gh-pages
+# whenever main content is modified. Site will then be auto-deployed
 
-name: 🔄 Sync Master to Website
+name: 🔄 Sync main to Website
 on:
 #   push:
 #     branches:
-#       - master
+#       - main
   workflow_dispatch: # Manual dispatch
   schedule:
     - cron: '0 5 * * 6' # Every Saturday morning.
@@ -26,8 +26,8 @@ jobs:
         uses: tretuna/sync-branches@1.4.0
         with:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          FROM_BRANCH: master
+          FROM_BRANCH: main
           TO_BRANCH: gh-pages
           PULL_REQUEST_TITLE: '[AUTO] Update docs site'
           PULL_REQUEST_BODY: |
-            Merging master into gh-pages, to be deployed to [awesome-privacy.xyz](https://awesome-privacy.xyz/).
+            Merging main into gh-pages, to be deployed to [awesome-privacy.xyz](https://awesome-privacy.xyz/).

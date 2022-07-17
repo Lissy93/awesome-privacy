@@ -10,7 +10,7 @@ Large data-hungry corporations dominate the digital world but with little, or no
 Migrating to open-source applications with a strong emphasis on security will help stop
 corporations, governments, and hackers from logging, storing or selling your personal data.
 
-**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#contents)
+**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#contents)
 
 ### Categories
 
@@ -98,7 +98,7 @@ corporations, governments, and hackers from logging, storing or selling your per
   - [Raspberry Pi Security Projects](#bonus-7---raspberry-pi-iot-security-software)
 
 #### See Also
-- [Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)
+- [Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md)
 
 <hr id="essentials" />
 
@@ -108,7 +108,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 | --- | --- |
 **[BitWarden](https://bitwarden.com)**  | Fully-featured, open source password manager with cloud-sync. BitWarden is easy-to-use with a clean UI and client apps for desktop, web and mobile.
 **[KeePass](https://keepass.info)** | Hardened, secure and offline password manager. Does not have cloud-sync baked in, deemed to be [gold standard](https://keepass.info/ratings.html) for secure password managers. KeePass clients: [Strongbox](https://apps.apple.com/us/app/strongbox-keepass-pwsafe/id897283731) *(Mac & iOS)*, [KeePassDX](https://play.google.com/store/apps/details?id=com.kunzisoft.keepass.free) *(Android)*, [KeeWeb](https://keeweb.info) *(Web-based/ self-hosted)*, [KeePassXC](https://keepassxc.org) *(Windows, Mac & Linux)*, see more KeePass clients and extensions at [awesome-keepass](https://github.com/lgg/awesome-keepass) by @lgg. 
-**[LessPass](https://lesspass.com)** *(Self-Hosted)* | LessPass is a little different, since it generates your passwords using a hash of the website name, your username and a single master-passphrase that you reuse. It omits the need for you to ever need to store or sync your passwords. They have apps for all the common platforms and a CLI, but you can also self-host it.
+**[LessPass](https://lesspass.com)** *(Self-Hosted)* | LessPass is a little different, since it generates your passwords using a hash of the website name, your username and a single main-passphrase that you reuse. It omits the need for you to ever need to store or sync your passwords. They have apps for all the common platforms and a CLI, but you can also self-host it.
 **[Padloc](https://padloc.app)** | A modern, open source password manager for individuals and teams. Beautiful, intuitive and dead simple to use. Apps available for all platforms and you can self-host it as well.
 
 #### Notable Mentions
@@ -123,7 +123,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Encryptr](https://spideroak.com/encryptr), [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
 
-**See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#passwords)
+**See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#passwords)
 
 
 ## 2-Factor Authentication
@@ -148,7 +148,7 @@ For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a pl
 
 [Authy](https://authy.com/) (propriety) is a popular option among new users, due to it's ease of use and device sync capabilities. Cloud sync may be useful, but will also increase attack surface. Authy is not open source, and therefore can not recommended
 
-**See also** [2FA Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#2-factor-authentication)
+**See also** [2FA Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#2-factor-authentication)
 
 
 ## File Encryption
@@ -198,7 +198,7 @@ New vulnerabilities are being discovered and patched all the time - use a browse
 
 Even privacy-respecting browsers, often do not have the best privacy options enabled by default. After installing, check the privacy & security settings, and update the configuration to something that you are comfortable with. 12Bytes maintains a comprehensive guide on [Firefox Configuration for Privacy and Performance](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs/)
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search) and recommended [Browser Extensions](#browser-extensions) for privacy & security.
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search) and recommended [Browser Extensions](#browser-extensions) for privacy & security.
 
 ## Search Engines
 
@@ -215,7 +215,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 
 12Bytes also maintains a list of [privacy-respecting search engines](https://12bytes.org/articles/tech/alternative-search-engines-that-respect-your-privacy/)
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search)
 
 <hr id="communication" />
 
@@ -263,7 +263,7 @@ With [Peer-to-Peer](https://en.wikipedia.org/wiki/Peer-to-peer) networks, there 
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.
 
-The below email providers are private, end-to-end encrypted (E2EE) and reasonably secure. This should be used in conjunction with [good email practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
+The below email providers are private, end-to-end encrypted (E2EE) and reasonably secure. This should be used in conjunction with [good email practices](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#emails)
 
 | Provider | Description |
 | --- | --- |
@@ -274,7 +274,7 @@ The below email providers are private, end-to-end encrypted (E2EE) and reasonabl
 
 See [OpenTechFund - Secure Email](https://github.com/OpenTechFund/secure-email) for more details.
 
-**See also** [Comparison or Private Email Providers](https://github.com/Lissy93/email-comparison) and [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
+**See also** [Comparison or Private Email Providers](https://github.com/Lissy93/email-comparison) and [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#emails)
 
 #### Other Notable Mentions
 [HushMail](https://www.hushmail.com/tapfiliate/?tap_a=44784-d2adc0&tap_s=724845-260ce4&program=hushmail-for-small-business), [Soverin](https://soverin.net), [StartMail](https://www.startmail.com), [Posteo](https://posteo.de), [Lavabit](https://lavabit.com). For activists and journalists, see [Disroot](https://disroot.org/en), [Autistici](https://www.autistici.org), [CriptText](https://www.criptext.com/) and [RiseUp](https://riseup.net/en)
@@ -420,7 +420,7 @@ The following browser add-ons give you better control over what content is able 
 - _Be careful when installing unfamiliar browser add-ons, since some can compromise your security and privacy. At the time of writing, the above list were all open source, verified and 'safe' extensions._
 - _In most situations, only a few of the above extensions will be needed in combination._
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search)
 
 
 ## Mobile Apps
@@ -465,7 +465,7 @@ For offensive and defensive security, see The Kali [Nethunter Catalogue](https:/
 
 For *advanced* users, the following tools can be used to closely monitor your devise and networks, in order to detect any unusual activity. [PortDroid] for network analysis, [Packet Capture] to monitor network traffic, [SysLog] for viewing system logs, [Dexplorer] to read .dex or .apk files for your installed apps, and [Check and Test] to check status and details of devices hardware.
 
-**See also** [Mobile Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#mobile-devices)
+**See also** [Mobile Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#mobile-devices)
 
 
 ## Online Tools
@@ -544,7 +544,7 @@ Fun little projects that you can run on a Raspberry Pi, or other low-powered com
 **[Zeek](https://www.zeek.org)** |  Detect if you have a malware-infected computer on your network, and powerful network analysis framework and monitor
 **[Firezone](https://github.com/firezone/firezone)** | Open-source self-hosted VPN and firewall built on WireGuard®.
 
-Don't want to build? See also: [Pre-configured security boxes](https://github.com/Lissy93/personal-security-checklist/blob/masterhttps://github.com/Lissy93/personal-security-checklist/blob/master/6_Privacy_and-Security_Gadgets.md#network-security)
+Don't want to build? See also: [Pre-configured security boxes](https://github.com/Lissy93/personal-security-checklist/blob/mainhttps://github.com/Lissy93/personal-security-checklist/blob/main/6_Privacy_and-Security_Gadgets.md#network-security)
 
 
 ## Mix Networks
@@ -1085,7 +1085,7 @@ Note: Cryptocurrency prices can go down. Storing any wealth in crypto may result
 | --- | --- |
 **[Wasabi Wallet](https://www.wasabiwallet.io/)** (Bitcoin) | An open source, native desktop wallet for Windows, Linux and MacOS. Wasabi implements trustless CoinJoins over the Tor network. Neither an observer nor the participants can determine which output belongs to which input. This makes it difficult for outside parties to trace where a particular coin originated from and where it was sent to, which greatly improves privacy. Since it's trustless, the CoinJoin coordinator cannot breach the privacy of the participants. Wasabi is compatible with cold storage, and hardware wallets, including OpenCard and Trezor.
 **[Trezor](https://trezor.io/)**<br>(All Coins) | Open source, cross-platform, offline, crypto wallet, compatible with 1000+ coins. Your private key is generated on the device, and never leaves it, all transactions are signed by the Trezor, which ensures your wallet is safe from theft. There are native apps for Windows, Linux, MacOS, Android and iOS, but Trezor is also compatible with other wallets, such as Wasabi. You can back the Trezor up, either by writing down the seed, or by duplicating it to another device. It is simple and intuitive to use, but also incredible customisable with a large range of advanced features.
-**[ColdCard](https://coldcardwallet.com/)** (Bitcoin) | An easy-to-use, super secure Bitcoin hardware wallet, which can be used independently as an air-gapped wallet. ColdCard is based on partially signed Bitcoin transactions following the [BIP174](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) standard. Built specifically for Bitcoin, and with a variety of unique security features, ColdCard is secure, trustless, private and easy-to-use. Companion products for the ColdCard include: [BlockClock](http://blockclockmini.com/), [SeedPlate](http://bitcoinseedbackup.com/) and [ColdPower](http://usbcoldpower.com/)
+**[ColdCard](https://coldcardwallet.com/)** (Bitcoin) | An easy-to-use, super secure Bitcoin hardware wallet, which can be used independently as an air-gapped wallet. ColdCard is based on partially signed Bitcoin transactions following the [BIP174](https://github.com/bitcoin/bips/blob/main/bip-0174.mediawiki) standard. Built specifically for Bitcoin, and with a variety of unique security features, ColdCard is secure, trustless, private and easy-to-use. Companion products for the ColdCard include: [BlockClock](http://blockclockmini.com/), [SeedPlate](http://bitcoinseedbackup.com/) and [ColdPower](http://usbcoldpower.com/)
 **[Electrum](https://electrum.org/)** (Bitcoin) | Long-standing Python-based Bitcoin wallet with good security features. Private keys are encrypted and do not touch the internet and balance is checked with a watch-only wallet. Compatible with other wallets, so there is no tie-in, and funds can be recovered with your secret seed. It supports proof-checking to verify transactions using SPV, multi-sig  and add-ons for compatibility with hardware wallets. A decentralized server indexes ledger transactions, meaning it's fast and doesn't require much disk space. The potential security issue here would not be with the wallet, but rather your PC - you must ensure your computer is secure and your wallet has a long, strong passphrase to encrypt it with.
 **[Samourai Wallet](https://samouraiwallet.com/)** (Bitcoin) | An open-source, Bitcoin-only privacy-focused wallet, with some innovative features.<br>Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
 **[Sparrow Wallet](https://sparrowwallet.com/)** (Bitcoin) | Sparrow is a Bitcoin wallet for those who value financial self sovereignty. Sparrow’s emphasis is on security, privacy and usability. Sparrow does not hide information from you - on the contrary it attempts to provide as much detail as possible about your transactions and UTXOs, but in a way that is manageable and usable.                
@@ -1547,7 +1547,7 @@ USB-based projects include:
 - [KeePass Portable](https://keepass.info/download.html) - Portable password manager. For hardware-encrypted password manager, see [HardPass 2.0](https://hackaday.io/project/21227-hardpass02-hardware-passwd-manager-w-smart-card)
 - [VeraCrypt](https://www.veracrypt.fr) - Full drive encryption for USB devices
 
-See more [hardware-based security solutions](https://github.com/Lissy93/personal-security-checklist/blob/master/6_Privacy_and-Security_Gadgets.md)
+See more [hardware-based security solutions](https://github.com/Lissy93/personal-security-checklist/blob/main/6_Privacy_and-Security_Gadgets.md)
 
 
 ## More Awesome Software Lists
@@ -1560,7 +1560,7 @@ This list was focused on privacy-respecting software. Below are other awesome li
 - iOS: [open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps) by @dkhamsing
 - Android: [open-source-android-apps](https://github.com/pcqpcq/open-source-android-apps) by @pcqpcq
 - Server: [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) by 'many'
-- [**More GitHub Awesome Lists →**](https://github.com/Lissy93/personal-security-checklist/blob/master/4_Privacy_And_Security_Links.md#more-awesome-github-lists)
+- [**More GitHub Awesome Lists →**](https://github.com/Lissy93/personal-security-checklist/blob/main/4_Privacy_And_Security_Links.md#more-awesome-github-lists)
 
 ## News & Updates
 
@@ -1574,7 +1574,7 @@ Many corporations put profit before people, collecting data and exploiting priva
 
 However, that's not all you need to do. It is also important to : use strong and unique passwords, 2-factor authentication,
 adopt good networking practices and be mindful of data that are collected when browsing the web. You can see the full
-**[personal security checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)** for more tips to stay safe. 
+**[personal security checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md)** for more tips to stay safe. 
 
 
 ### Important Considerations
@@ -1608,12 +1608,12 @@ If you find something on this list that should no longer be deemed secure or pri
 
 ### Contributing
 
-*Thanks for visiting! If you have suggestions, then you [open an issue](https://github.com/Lissy93/awesome-privacy/issues/new/choose), or [submit a PR](https://github.com/Lissy93/awesome-privacy/pull/new/master), see: [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md). Contributions are welcome, and always much appreciated* ☺️
+*Thanks for visiting! If you have suggestions, then you [open an issue](https://github.com/Lissy93/awesome-privacy/issues/new/choose), or [submit a PR](https://github.com/Lissy93/awesome-privacy/pull/new/main), see: [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md). Contributions are welcome, and always much appreciated* ☺️
 
 
 ### License 
 
-[![Attribution 4.0 International](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/Lissy93/awesome-privacy/blob/master/LICENSE)
+[![Attribution 4.0 International](https://licensebuttons.net/l/by/3.0/88x31.png)](https://github.com/Lissy93/awesome-privacy/blob/main/LICENSE)
 
 *Licensed under [Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), © [Alicia Sykes](https://aliciasykes.com) 2022*
 

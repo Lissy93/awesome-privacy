@@ -25,7 +25,7 @@ body:
           required: true
         - label: A similar question has not already [been asked](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
           required: true
-        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/master/.github/CODE_OF_CONDUCT.md)
+        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
   
   # Final message
