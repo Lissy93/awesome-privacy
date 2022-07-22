@@ -956,7 +956,7 @@ Such as the [`dd`](https://en.wikipedia.org/wiki/Dd_%28Unix%29) command, is a to
 
 ## Virtual Machines
 
-A VM is a sandboxed operating system, running within your current system. Useful for compartmentalisation and safely testing software, or handling potentially malicious files
+A virtual machine (VM) is a sandboxed operating system, running within your current system. Useful for compartmentalisation and safely testing software, or handling potentially malicious files
 
 | Provider | Description |
 | --- | --- |
@@ -1418,7 +1418,7 @@ Moving away from Google, and using multiple alternative apps will mean there is 
 
 Community-maintained media software can help you migrate away from providers that may not respect privacy. The following creative software packages are open source, cross-platform and free.
 
-- Graphics: [GIMP](https://www.gimp.org), [Scribus](https://www.scribus.net), [SwatchBooker](http://www.selapa.net/swatchbooker), [InkScape](https://inkscape.org), [Kirta](https://krita.org)
+- Graphics: [GIMP](https://www.gimp.org), [Scribus](https://www.scribus.net), [SwatchBooker](http://www.selapa.net/swatchbooker), [InkScape](https://inkscape.org), [Krita](https://krita.org)
 - Audio: [Audacity](https://www.audacityteam.org), [Mixxx](https://mixxx.org), [MusicBrainz](https://picard.musicbrainz.org), [Qtractor](https://qtractor.sourceforge.io)
 - Video: [Shortcut](https://www.shotcutapp.com), [OpenShot](https://www.openshot.org), [LightWorks](https://www.lwks.com), [kdenlive](https://kdenlive.org)
 - Video Transcoders: [HandBreak](https://handbrake.fr)
