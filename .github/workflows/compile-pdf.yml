@@ -8,19 +8,19 @@ on:
     - cron: '0 5 * * 6' # Every Saturday morning.
 jobs:
   # Job #1 - Generate an embedded SVG asset, showing all contributors
-  generate-contributors:
+  compile-pdf:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: baileyjm02/markdown-to-pdf@v1
+      - uses: baileyjm02/markdown-to-pdf@v1.2.0
         with:
           input_path: README.md
-          output_dir: .github/assets/awesome-privacy.pdf
+          output_dir: .github/assets
           build_pdf: true
           build_html: false
           table_of_contents: false
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v3
         with:
-          name: docs
-          path: pdfs
+          name: awesome-privacy-pdf
+          path: .github/assets/awesome-privacy.pdf
   
