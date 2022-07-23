@@ -14,10 +14,10 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
       - name: Make PDF 📄
-        uses: baileyjm02/markdown-to-pdf@v1.2.0
+        uses: baileyjm02/markdown-to-pdf@v1.1.0
         with:
-          input_path: README.md
-          output_dir: .github/assets
+          input_dir: .
+          output_dir: .github/assets/
           build_pdf: true
           build_html: false
           table_of_contents: false
@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --local user.email "alicia-gh-bot@mail.as93.net"
           git config --local user.name "liss-bot"
-          git add .github/assets/README.pdf
+          git add .github/assets/*.pdf
           if ! git diff-index --quiet HEAD; then
             git commit -m "Generate PDF file"
           else
