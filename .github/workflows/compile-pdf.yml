@@ -11,16 +11,34 @@ jobs:
   compile-pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: baileyjm02/markdown-to-pdf@v1.2.0
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Make PDF 📄
+        uses: baileyjm02/markdown-to-pdf@v1.2.0
         with:
           input_path: README.md
           output_dir: .github/assets
           build_pdf: true
           build_html: false
           table_of_contents: false
-      - uses: actions/upload-artifact@v3
+      - name: Upload Artifact 📤
+        uses: actions/upload-artifact@v3
         with:
           name: awesome-privacy-pdf
-          path: .github/assets
+          path: .github/assets/README.pdf
+      - name: Commit file ✅
+        run: |
+          git config --local user.email "alicia-gh-bot@mail.as93.net"
+          git config --local user.name "liss-bot"
+          git add .github/assets/README.pdf
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Generate PDF file"
+          else
+            echo "Nothing to do"
+          fi
+      - name: Push changes ➡️
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
   
