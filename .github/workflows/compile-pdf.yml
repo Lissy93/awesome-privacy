@@ -22,5 +22,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: awesome-privacy-pdf
-          path: .github/assets/awesome-privacy.pdf
+          path: .github/assets
   
