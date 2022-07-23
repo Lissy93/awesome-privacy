@@ -1,0 +1,26 @@
+# Generates and saved a PDF document from the main markdown file
+# Easier to read on certain devices, or for users with accesibility needs
+
+name: 📁 Compile PDF Document
+on:
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 5 * * 6' # Every Saturday morning.
+jobs:
+  # Job #1 - Generate an embedded SVG asset, showing all contributors
+  generate-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_path: README.md
+          output_dir: .github/assets/awesome-privacy.pdf
+          build_pdf: true
+          build_html: false
+          table_of_contents: false
+      - uses: actions/upload-artifact@v1
+        with:
+          name: docs
+          path: pdfs
+  
