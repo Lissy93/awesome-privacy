@@ -6,15 +6,18 @@
 
 You can add entries to this list by opening a pull request.
 
-Get started by [editing](https://github.com/Lissy93/awesome-privacy/edit/master/README.md) the readme, commiting changes to your fork, and opening a pull request upstream to this repo. If you are new to GitHub, [this tutorial](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github/) may help you.
+Get started by [editing](https://github.com/Lissy93/awesome-privacy/edit/main/README.md) the readme, committing changes to your fork, and opening a pull request upstream to this repo's main branch.
+If you are new to GitHub, [this tutorial](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github/) may help you.
 
 Your request will be reviewed, then either merged, or have changes requested, or if the [Guidelines](#guidelines) are not met, it may be closed with a comment explaining why.
+
+To make layout or stylistic amendments to the website ([awesome-privacy.xyz](https://awesome-privacy.xyz)), pull requests should be made to the `gh-pages` branch. For more information about the website, see [About --> Website](https://github.com/Lissy93/awesome-privacy/blob/main/.github/ABOUT.md#website)
 
 ---
 
 ### Requirements
 
-Additions will usually need to meet the following requirements. 
+Software additions to this list, will usually need to meet the following requirements. 
 
 - **Privacy Respecting**
   - The project must respect users privacy, not collect more data than necessary, and store info securely 
@@ -28,7 +31,7 @@ Additions will usually need to meet the following requirements.
 - **Transparent**
   - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
 - **Ethical**
-  - Must not limit free speech, discriminate or disregard any human rights
+  - Must not suppress free speech, discriminate or disregard any human rights
 
 _There may be some exceptions, but these would need to be fully justified, reviewed by the community, and drawbacks / anti-features must be listed along-side the software when merged. Usually these entries go within the "Notable Mentions" section instead._
 
@@ -49,11 +52,11 @@ Your pull request must follow these requirements. Failure to do so, might result
 - Your entry should be added at the bottom of the appropriate category, unless otherwise requested
 - If there are other pull requests open, please help review them before submitting yours
 - A pull request must receive multiple approval reviews before it can be merged
+- You must be transparent about your affiliation with a product or service that you are adding. It's totally okay to submit your own projects as additions (providing they meet the requirements), but if you don't declare your association with that project then there becomes a clear conflict of interest
+- You must adhere to the Contributor Covenant Code of Conduct
+- Don't open a Draft / WIP pull request while you work on the guidelines. A pull request should be 100% ready and should adhere to all the above guidelines when you open it
 - Your changes must be correctly spelled, and with good grammar
 - Your changes must be correctly formatted, in valid markdown
 - The addition title must be a link the project, and in bold
 - The addition description must be no less than 50, and no more than 250 characters, keep it clear and to the point
-- You must be transparent about your affiliation with a product or service that you are adding. It's totally okay to submit your own projects as additions (providing they meet the requirements), but if you don't declare your association with that project then there becomes a clear conflict of interest
-- You must adhere to the Contributor Covenant Code of Conduct
-- Don't open a Draft / WIP pull request while you work on the guidelines. A pull request should be 100% ready and should adhere to all the above guidelines when you open it
-
+- The structure of additions is as follows: `[Project Name](https://project-link/) | Brief description`
