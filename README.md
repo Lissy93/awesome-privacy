@@ -1634,6 +1634,8 @@ If you found this project helpful, consider dropping us a star, and sharing with
 
 Add typos color coulour asdf jkl
 
+about appreachieate color colour incorect incorrect
+
 [//]: # (BROWSER EXTENSION LINKS)
 [privacy-badger-chrome]: https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
 [privacy-badger-firefox]: https://addons.mozilla.org/en-GB/firefox/addon/privacy-badger17/
