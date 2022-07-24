@@ -15,6 +15,6 @@ jobs:
           locale: US
           level: info
           reporter: github-pr-review
-          path: README.md
+          path: .
           filter_mode: added
           fail_on_error: false
