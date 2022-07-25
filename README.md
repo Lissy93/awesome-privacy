@@ -424,6 +424,7 @@ The following browser add-ons give you better control over what content is able 
 - _Much of the functionality of the above addons can be applied without installing anything, by configuring browser settings yourself. For Firefox this is done in the user.js_
 - _Be careful when installing unfamiliar browser add-ons, since some can compromise your security and privacy. At the time of writing, the above list were all open source, verified and 'safe' extensions._
 - _In most situations, only a few of the above extensions will be needed in combination._
+- _See the [arkenfox wiki](https://github.com/arkenfox/user.js/wiki/4.1-Extensions) for more information on the obsolescence and purposelessness of many popular extensions, and why you may only need a very limited set._
 
 **See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search)
 
