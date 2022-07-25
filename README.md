@@ -214,7 +214,9 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 **[Startpage](https://www.startpage.com/)** | Dutch search engine that searches on google and shows the results (slightly rearranged). It has several configurations that improve privacy during use (it is not open source)
 
 #### Notable Mentions
-[MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). Alternatively, host your own instance of [Searx](https://asciimoo.github.io/searx/)
+[MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). 
+
+[Searx](https://asciimoo.github.io/searx/) and [SearXNG](https://github.com/searxng/searxng) are two self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used.
 
 12Bytes also maintains a list of [privacy-respecting search engines](https://12bytes.org/articles/tech/alternative-search-engines-that-respect-your-privacy/)
 
