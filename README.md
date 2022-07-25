@@ -785,7 +785,7 @@ Self-hosting your own mail server is not recommended for everyone, it can be tim
 #### Notable Mentions
 If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com) is a utility that encrypts your entire notebook, before it is uploaded to the cloud. 
 
-[Org Mode](https://orgmode.org) is a very comprehensive CLI tool for keeping notes, maintaining todo lists, planning projects, and authoring documents -based on a fast and effective plain-text system, from the command line.
+[Org Mode](https://orgmode.org) is a mode for [GNU Emacs](https://www.gnu.org/software/emacs/) dedicated to working with the Org markup format. Org can be thought of as a more featureful Markdown alternative, with support for keeping notes, maintaining todo lists, planning projects, managing spreadsheets, and authoring documents -all in plaintext.
 
 For a simple plain text note taking app, with strong encryption, see [Protected Text](https://www.protectedtext.com), which works well with the [Safe Notes](https://play.google.com/store/apps/details?id=com.protectedtext.android) Android app. [Laverna](https://laverna.cc/) is a cross-platform secure notes app, where all entries are formatted with markdown.
 
