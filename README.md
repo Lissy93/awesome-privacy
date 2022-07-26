@@ -1425,7 +1425,7 @@ Community-maintained media software can help you migrate away from providers tha
 
 - Graphics: [GIMP](https://www.gimp.org), [Scribus](https://www.scribus.net), [SwatchBooker](http://www.selapa.net/swatchbooker), [InkScape](https://inkscape.org), [Krita](https://krita.org)
 - Audio: [Audacity](https://www.audacityteam.org), [Mixxx](https://mixxx.org), [MusicBrainz](https://picard.musicbrainz.org), [Qtractor](https://qtractor.sourceforge.io)
-- Video: [Shortcut](https://www.shotcutapp.com), [OpenShot](https://www.openshot.org), [LightWorks](https://www.lwks.com), [kdenlive](https://kdenlive.org)
+- Video: [Shortcut](https://www.shotcutapp.com), [OpenShot](https://www.openshot.org), [kdenlive](https://kdenlive.org)
 - Video Transcoders: [HandBreak](https://handbrake.fr)
 - Media Players: [VLC Player](https://www.videolan.org)
 - Media Servers: [Kodi](https://kodi.tv), [Plex](https://www.plex.tv), [Subsonic](http://www.subsonic.org), [Emby](https://emby.media), [Gerbera](https://gerbera.io), [OpenELEC](https://openelec.tv), [OpenFlixr 2](https://www.openflixr.com), [OCMC](https://osmc.tv)
