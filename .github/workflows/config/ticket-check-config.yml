@@ -1,0 +1,33 @@
+# The config used to check that issues + PRs have valid-looking title
+
+checkTemplate: true
+excludeUsers: [ liss-bot ]
+miniTitleLength: 16
+labelToAdd: needs-more-info
+reactions: [ eyes ]
+
+issue:
+  badTitles:
+    - '[ADDITION] <title>'
+    - '[AMENDMENT] <title>'
+    - '[FEEDBACK] <title>'
+    - '[QUESTION] <title>'
+    - '[REMOVAL] <title>'
+  badTitleComment: |
+    Hello @{{ author }} 👋
+    Please update your title to be more descriptive
+  badBodyComment: |
+    Hello @{{ author }} 👋
+    Please be sure to follow the issue template, and provide all requested fields
+
+pullRequest:
+  badTitles:
+    - Update README.md
+  badTitleComment: |
+    Hello @{{ author }} 👋
+    Please be sure to give your pull request a short but descriptive title. For example _"Adds Firefox under Browsers"_.
+    For more info, you should reference the [Contributing Guidelines](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md)
+  badBodyComment: |
+    Hello @{{ author }} 👋
+    Thank you for your submission! So that it can be dealt with efficiently, please ensure that it contains all the required info.
+    Your pull request must conform to the guidelines within the [Contributing Docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md).

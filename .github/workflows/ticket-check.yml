@@ -1,0 +1,15 @@
+# Validates that newly opened issues contain enough info
+name: 🎫 Ticket Compliance
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+jobs:
+  issue-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/needs-more-info@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: .github/workflows/config/ticket-check-config.yml
