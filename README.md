@@ -737,6 +737,7 @@ Whether you are hosting a website and want to keep your users data safe, or if y
 | Provider | Description |
 | --- | --- |
 **[Njalla](https://njal.la)** | Njalla is a privacy and security-focused domain registrar and VPN hosting provider. They own and manage all their own servers, which are based in Sweden. They accept crypto, for anonymous payments, and allow you to sign up with OTR XMPP if you do not want to provide an email address. Both VPS and domain name pricing is reasonable, with packages starting at $15/ month
+**[Servers Guru](https://servers.guru)** | Servers Guru provides affordable and anonymous VPS and cloud servers with dedicated cpu resources. they accept crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from reliable main actors in the industry and provide multiple hosting locations accross europe. Their VPS offers starts at 4.99€/ month
 **[Vindo](https://www.vindohosting.com)** | Provides anonymous shared hosting, semi-managed virtual private servers and domain registration
 **[Private Layer](https://www.privatelayer.com)** | Offers enterprise-grade, high-speed offshore dedicated servers, they own their own data centres, have a solid privacy policy and accept anonymous payment
 
