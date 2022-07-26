@@ -10,7 +10,7 @@ Large data-hungry corporations dominate the digital world but with little, or no
 Migrating to open-source applications with a strong emphasis on security will help stop
 corporations, governments, and hackers from logging, storing or selling your personal data.
 
-**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#contents)
+**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#contents)
 
 ### Categories
 
@@ -98,7 +98,7 @@ corporations, governments, and hackers from logging, storing or selling your per
   - [Raspberry Pi Security Projects](#bonus-7---raspberry-pi-iot-security-software)
 
 #### See Also
-- [Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md)
+- [Personal Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)
 
 <hr id="essentials" />
 
@@ -123,7 +123,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Encryptr](https://spideroak.com/encryptr), [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
 
-**See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#passwords)
+**See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#passwords)
 
 
 ## 2-Factor Authentication
@@ -148,7 +148,7 @@ For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a pl
 
 [Authy](https://authy.com/) (propriety) is a popular option among new users, due to its ease of use and device sync capabilities. Cloud sync may be useful, but will also increase attack surface. Authy is not open source, and therefore can not recommended
 
-**See also** [2FA Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#2-factor-authentication)
+**See also** [2FA Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#2-factor-authentication)
 
 
 ## File Encryption
@@ -201,7 +201,7 @@ New vulnerabilities are being discovered and patched all the time - use a browse
 
 Even privacy-respecting browsers, often do not have the best privacy options enabled by default. After installing, check the privacy & security settings, and update the configuration to something that you are comfortable with. 12Bytes maintains a comprehensive guide on [Firefox Configuration for Privacy and Performance](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs/)
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search) and recommended [Browser Extensions](#browser-extensions) for privacy & security.
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search) and recommended [Browser Extensions](#browser-extensions) for privacy & security.
 
 ## Search Engines
 
@@ -220,7 +220,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 
 12Bytes also maintains a list of [privacy-respecting search engines](https://12bytes.org/articles/tech/alternative-search-engines-that-respect-your-privacy/)
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search)
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
 
 <hr id="communication" />
 
@@ -268,7 +268,7 @@ With [Peer-to-Peer](https://en.wikipedia.org/wiki/Peer-to-peer) networks, there 
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.
 
-The below email providers are private, end-to-end encrypted (E2EE) and reasonably secure. This should be used in conjunction with [good email practices](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#emails)
+The below email providers are private, end-to-end encrypted (E2EE) and reasonably secure. This should be used in conjunction with [good email practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
 
 | Provider | Description |
 | --- | --- |
@@ -279,7 +279,7 @@ The below email providers are private, end-to-end encrypted (E2EE) and reasonabl
 
 See [OpenTechFund - Secure Email](https://github.com/OpenTechFund/secure-email) for more details.
 
-**See also** [Comparison or Private Email Providers](https://github.com/Lissy93/email-comparison) and [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#emails)
+**See also** [Comparison or Private Email Providers](https://github.com/Lissy93/email-comparison) and [Email Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#emails)
 
 #### Other Notable Mentions
 [HushMail](https://www.hushmail.com/tapfiliate/?tap_a=44784-d2adc0&tap_s=724845-260ce4&program=hushmail-for-small-business), [Soverin](https://soverin.net), [StartMail](https://www.startmail.com), [Posteo](https://posteo.de), [Lavabit](https://lavabit.com). For activists and journalists, see [Disroot](https://disroot.org/en), [Autistici](https://www.autistici.org), [CriptText](https://www.criptext.com/) and [RiseUp](https://riseup.net/en)
@@ -425,7 +425,7 @@ The following browser add-ons give you better control over what content is able 
 - _In most situations, only a few of the above extensions will be needed in combination._
 - _See the [arkenfox wiki](https://github.com/arkenfox/user.js/wiki/4.1-Extensions) for more information on the obsolescence and purposelessness of many popular extensions, and why you may only need a very limited set._
 
-**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#browser-and-search)
+**See also** [Browser & Search Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#browser-and-search)
 
 
 ## Mobile Apps
@@ -471,7 +471,7 @@ For offensive and defensive security, see The Kali [Nethunter Catalogue](https:/
 
 For *advanced* users, the following tools can be used to closely monitor your devise and networks, in order to detect any unusual activity. [PortDroid] for network analysis, [Packet Capture] to monitor network traffic, [SysLog] for viewing system logs, [Dexplorer] to read .dex or .apk files for your installed apps, and [Check and Test] to check status and details of devices hardware.
 
-**See also** [Mobile Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md#mobile-devices)
+**See also** [Mobile Security Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#mobile-devices)
 
 
 ## Online Tools
@@ -550,7 +550,7 @@ Fun little projects that you can run on a Raspberry Pi, or other low-powered com
 **[Zeek](https://www.zeek.org)** |  Detect if you have a malware-infected computer on your network, and powerful network analysis framework and monitor
 **[Firezone](https://github.com/firezone/firezone)** | Open-source self-hosted VPN and firewall built on WireGuard®.
 
-Don't want to build? See also: [Pre-configured security boxes](https://github.com/Lissy93/personal-security-checklist/blob/mainhttps://github.com/Lissy93/personal-security-checklist/blob/main/6_Privacy_and-Security_Gadgets.md#network-security)
+Don't want to build? See also: [Pre-configured security boxes](https://github.com/Lissy93/personal-security-checklist/blob/master/6_Privacy_and-Security_Gadgets.md#network-security)
 
 
 ## Mix Networks
@@ -1554,7 +1554,7 @@ USB-based projects include:
 - [KeePass Portable](https://keepass.info/download.html) - Portable password manager. For hardware-encrypted password manager, see [HardPass 2.0](https://hackaday.io/project/21227-hardpass02-hardware-passwd-manager-w-smart-card)
 - [VeraCrypt](https://www.veracrypt.fr) - Full drive encryption for USB devices
 
-See more [hardware-based security solutions](https://github.com/Lissy93/personal-security-checklist/blob/main/6_Privacy_and-Security_Gadgets.md)
+See more [hardware-based security solutions](https://github.com/Lissy93/personal-security-checklist/blob/master/6_Privacy_and-Security_Gadgets.md)
 
 
 ## More Awesome Software Lists
@@ -1567,7 +1567,7 @@ This list was focused on privacy-respecting software. Below are other awesome li
 - iOS: [open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps) by @dkhamsing
 - Android: [open-source-android-apps](https://github.com/pcqpcq/open-source-android-apps) by @pcqpcq
 - Server: [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) by 'many'
-- [**More GitHub Awesome Lists →**](https://github.com/Lissy93/personal-security-checklist/blob/main/4_Privacy_And_Security_Links.md#more-awesome-github-lists)
+- [**More GitHub Awesome Lists →**](https://github.com/Lissy93/personal-security-checklist/blob/master/4_Privacy_And_Security_Links.md#more-awesome-github-lists)
 
 ## News & Updates
 
@@ -1581,7 +1581,7 @@ Many corporations put profit before people, collecting data and exploiting priva
 
 However, that's not all you need to do. It is also important to : use strong and unique passwords, 2-factor authentication,
 adopt good networking practices and be mindful of data that are collected when browsing the web. You can see the full
-**[personal security checklist](https://github.com/Lissy93/personal-security-checklist/blob/main/README.md)** for more tips to stay safe. 
+**[personal security checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md)** for more tips to stay safe. 
 
 
 ### Important Considerations
