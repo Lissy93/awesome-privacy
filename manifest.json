@@ -1,15 +1,15 @@
 {
-    "short_name": "Awesome Privacy",
-    "name": "Awesome Privacy",
-    "description": "Curated list of privacy & security-focused software and services",
-    "icons": [
-      {
-        "src": "awesome-privacy.png",
-        "type": "image/png",
-        "sizes": "512x512"
-      }
-    ],
-    "display": "standalone",
-    "theme_color": "#9580ff",
-    "background_color": "#15171b"
-  }
+  "short_name": "Awesome Privacy",
+  "name": "Awesome Privacy",
+  "description": "Curated list of privacy & security-focused software and services",
+  "icons": [
+    {
+      "src": "img/awesome-privacy-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#9580ff",
+  "background_color": "#15171b"
+}
