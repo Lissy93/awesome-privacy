@@ -6,7 +6,7 @@
 
 ## Intro [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Large data-hungry corporations dominate the digital world but with little, or no respect for your privacy.
+Large data-hungry corporations dominate the digital world with little, or no respect for your privacy.
 Migrating to open-source applications with a strong emphasis on security will help stop
 corporations, governments, and hackers from logging, storing or selling your personal data.
 
