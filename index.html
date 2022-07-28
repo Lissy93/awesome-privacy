@@ -42,7 +42,21 @@
         paths: [
           '/', 'README', '.github/CONTRIBUTING', '.github/CREDITS'
         ],
-      }
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.init(function () { });
+          hook.beforeEach(function (content) {
+            return content.replace("https://awesome.re/badge.svg", "img/awesome_badge.svg")
+              .replace("https://i.ibb.co/80Y5x2T/Awesome-Privacy.png", "img/awesome-privacy-header.png")
+              .replace("https://licensebuttons.net/l/by/3.0/88x31.png", "img/licencense_button.png");
+          });
+          hook.afterEach(function (html, next) { next(html.replace("https://github.githubassets.com/images/icons/emoji/octocat.png", "img/octocat.png")); });
+          hook.doneEach(function () { });
+          hook.mounted(function () { });
+          hook.ready(function () { });
+        }
+      ]
     }
   </script>
   <script src="vendor/docsify.min.js"></script>
