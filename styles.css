@@ -42,13 +42,15 @@
 /*****************************************************/
 
 .cover-main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
 section.cover.show {
+  height: unset;
+  min-height: 100vh;
   background: var(--primary);
   background: linear-gradient(
     135deg,
