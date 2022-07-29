@@ -7,15 +7,6 @@ jobs:
   check-title:
     runs-on: ubuntu-latest
     steps:
-    - name: Check title prefix
-      uses: deepakputhraya/action-pr-title@v1.0.2
-      with:
-        allowed_prefixes: 'Adds,Add,Removes,Remove,Updates,Update,Fixes,Fix,Amends,[AUTO]' # title should start with the given prefix
-        disallowed_prefixes: 'Update README.md' # title should not start with the given prefix
-        prefix_case_sensitive: false # title prefix are case insensitive
-        min_length: 18 # Min length of the title
-        max_length: 60 # Max length of the title
-        github_token: ${{ secrets.BOT_GITHUB_TOKEN || github.token }}
     - name: Check title regex
       uses: morrisoncole/pr-lint-action@v1.6.1
       with:
@@ -28,3 +19,13 @@ jobs:
             Please check the [contributing docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md) before submitting a pull request.
           on-succeeded-regex-dismiss-review-comment: ""
           repo-token: "${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}"
+          
+    - name: Check title prefix
+      uses: deepakputhraya/action-pr-title@v1.0.2
+      with:
+        allowed_prefixes: 'Adds,Add,Removes,Remove,Updates,Update,Fixes,Fix,Amends,[AUTO]' # title should start with the given prefix
+        disallowed_prefixes: 'Update README.md' # title should not start with the given prefix
+        prefix_case_sensitive: false # title prefix are case insensitive
+        min_length: 18 # Min length of the title
+        max_length: 60 # Max length of the title
+        github_token: ${{ secrets.BOT_GITHUB_TOKEN || github.token }}
