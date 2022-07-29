@@ -1427,7 +1427,7 @@ Moving away from Google, and using multiple alternative apps will mean there is 
 Community-maintained media software can help you migrate away from providers that may not respect privacy. The following creative software packages are open source, cross-platform and free.
 
 - Graphics: [GIMP](https://www.gimp.org), [Scribus](https://www.scribus.net), [SwatchBooker](http://www.selapa.net/swatchbooker), [InkScape](https://inkscape.org), [Krita](https://krita.org)
-- Audio: [Audacity](https://www.audacityteam.org), [Mixxx](https://mixxx.org), [MusicBrainz](https://picard.musicbrainz.org), [Qtractor](https://qtractor.sourceforge.io)
+- Audio: [Audacity](https://www.audacityteam.org), [Mixxx](https://mixxx.org), [MusicBrainz](https://picard.musicbrainz.org), [Qtractor](https://qtractor.sourceforge.io), [SpotiFlyer](https://github.com/Shabinder/SpotiFlyer)
 - Video: [Shortcut](https://www.shotcutapp.com), [OpenShot](https://www.openshot.org), [kdenlive](https://kdenlive.org)
 - Video Transcoders: [HandBreak](https://handbrake.fr)
 - Media Players: [VLC Player](https://www.videolan.org)
