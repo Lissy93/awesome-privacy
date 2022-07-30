@@ -10,12 +10,10 @@ jobs:
   codeberg:
     runs-on: ubuntu-latest
     steps:
-      - name: git-sync
-        uses: wei/git-sync@v3
+      - uses: actions/checkout@v2
         with:
-          source_repo: "lissy93/awesome-privacy"
-          source_branch: "main"
-          destination_repo: "git@codeberg.org:alicia/awesome-privacy.git"
-          destination_branch: "main"
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url: "git@codeberg.org:alicia/awesome-privacy.git"
           ssh_private_key: ${{ secrets.CODEBERG_SSH }}
-  
