@@ -164,10 +164,53 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/lilithium-hydride">
+            <img src="https://avatars.githubusercontent.com/u/78992082?v=4" width="80;" alt="lilithium-hydride"/>
+            <br />
+            <sub><b>Lilith</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/liss-bot">
             <img src="https://avatars.githubusercontent.com/u/87835202?v=4" width="80;" alt="liss-bot"/>
             <br />
             <sub><b>Alicia Bot</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kerbless">
+            <img src="https://avatars.githubusercontent.com/u/32358946?v=4" width="80;" alt="kerbless"/>
+            <br />
+            <sub><b>Kerbless</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/A-childs-encyclopedia">
+            <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
+            <br />
+            <sub><b>A-childs-encyclopedia</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/slade991">
+            <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
+            <br />
+            <sub><b>slade991</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ltGuillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltGuillaume"/>
+            <br />
+            <sub><b>Guillaume</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Gusted">
+            <img src="https://avatars.githubusercontent.com/u/25481501?v=4" width="80;" alt="Gusted"/>
+            <br />
+            <sub><b>Gusted</b></sub>
         </a>
     </td>
     <td align="center">
@@ -178,25 +221,39 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/plplmax">
+            <img src="https://avatars.githubusercontent.com/u/50287455?v=4" width="80;" alt="plplmax"/>
+            <br />
+            <sub><b>Maksim Ploski</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/NylaTheWolf">
             <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
             <br />
             <sub><b>NylaTheWolf</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kolaente">
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
             <br />
-            <sub><b>kolaente</b></sub>
+            <sub><b>Kolaente</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/pnxdxt">
+            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnxdxt"/>
+            <br />
+            <sub><b>Pnxdxt</b></sub>
         </a>
     </td></tr>
 </table>
