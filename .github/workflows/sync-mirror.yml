@@ -1,0 +1,21 @@
+# Pushes the contents of the repo to the Codeberg mirror
+name: 🪞 Mirror to Codeberg
+on:
+  push:
+    branches: [ 'main' ]    
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 5 * * 6'
+jobs:
+  codeberg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "lissy93/awesome-privacy"
+          source_branch: "main"
+          destination_repo: "git@codeberg.org:alicia/awesome-privacy.git"
+          destination_branch: "main"
+          ssh_private_key: ${{ secrets.CODEBERG_SSH }}
+  
