@@ -2,27 +2,27 @@
 <!--
 Thank you for contributing to Awesome-Privacy! 🙌
 Before submitting, please read .github/CONTRIBUTING.md, 
-And ensure that your pull request follows the guidelines
+And ensure that your pull request follows the guidelines.
 -->
+
+### Type
+<!-- Delete as appropriate. This is used to auto-apply labels. -->
+
+Addition / Amendment / Removal / Spelling or Grammar / Website Update / Misc
+
+---
 
 ### Changes
-
-<!--
-Briefly outline your changes, and explain what is being added / amended / removed and why
--->
+<!-- Briefly outline your changes, and if necessary explain why -->
 
 ---
 
 ### Supporting Material
-
-<!--
-If submitting and addition, please provide links to any relevant supporting material, such as Git repo, security audit, docs, etc..
--->
+<!-- For additions, provide relevant links. E.g. Git repo, security audit, docs, etc -->
 
 ---
 
 ### Affiliation
-
 <!--
 For transparency, please indicate weather or not you are associated with the software being added / edited.
 If this is a deletion, you should also disclose your affiliation with and other project within the same category.
