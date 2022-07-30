@@ -1,5 +1,5 @@
 # Checks that PR title conform to contributing standards (or at least !== Update README.md)
-name: ⛳ Lint PR Title
+name: ⛳ Lint PR
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
@@ -29,3 +29,24 @@ jobs:
         min_length: 18 # Min length of the title
         max_length: 60 # Max length of the title
         github_token: ${{ secrets.BOT_GITHUB_TOKEN || github.token }}
+        
+        
+    - name: Check body includes tickboxes
+      uses: mtfoley/pr-compliance-action@main
+      with:
+        repo-token: ${{ secrets.BOT_GITHUB_TOKEN || github.token }}
+        ignore-authors: liss-bot
+        ignore-team-members: false
+        base-comment: ''
+        body-regex: "(\\[x]|\\[X]).(?!.*(\\[]|\\[ ])).*"
+        body-fail: true
+        body-auto-close: false
+        body-comment: |
+          You must complete the quality and transparency checklist.
+        protected-branch: ''
+        protected-branch-auto-close: false
+        protected-branch-comment: ''
+        title-check-enable: false
+        title-comment: ''
+        watch-files: ''
+        watch-files-comment: ''
