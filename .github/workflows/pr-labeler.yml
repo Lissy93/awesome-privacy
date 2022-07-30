@@ -11,7 +11,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Apply Labels
-        if: ${{ !github.event.pull_request.body.includes(env.IGNORE_STR) }}
+        if: "${{ !github.event.pull_request.body.includes(env.IGNORE_STR) }}"
         uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: both
