@@ -10,7 +10,9 @@ Large data-hungry corporations dominate the digital world but with little, or no
 Migrating to open-source applications with a strong emphasis on security will help stop
 corporations, governments, and hackers from logging, storing or selling your personal data.
 
-**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#contents)
+**Note**: Remember that [no software is perfect](#disclaimer), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#contents).
+
+A Codeberg mirror is available [here](https://codeberg.org/alicia/awesome-privacy).
 
 ### Categories
 
