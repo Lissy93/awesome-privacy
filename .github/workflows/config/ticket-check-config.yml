@@ -2,7 +2,7 @@
 
 checkTemplate: true
 excludeUsers: [ liss-bot ]
-miniTitleLength: 16
+# miniTitleLength: 16
 labelToAdd: needs-more-info
 reactions: [ eyes ]
 
