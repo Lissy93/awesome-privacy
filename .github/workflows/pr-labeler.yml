@@ -3,15 +3,13 @@ name: 🏷️ PR Labeler
 on:
   pull_request:
     types: [opened, edited]
-env:
-  IGNORE_STR: 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Other'
 jobs:
   label-pr:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
       - name: Apply Labels
-        if: "${{ !github.event.pull_request.body.includes(env.IGNORE_STR) }}"
+        if: ! contains(github.event.pull_request.body, 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Other')
         uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: both
