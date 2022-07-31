@@ -1,13 +1,19 @@
-# Validates that newly opened issues contain enough info
-name: 🎫 Ticket Compliance
+# Checks newly opened issues contain enough info, and follow the required format
+name: 🎫 Issue Validator
 on:
   issues:
     types: [opened]
 jobs:
-  issue-check:
+  check-title:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
-      - uses: wow-actions/needs-more-info@v1.0.5
+      - name: Default
+        if: "endsWith(github.event.issue.title, '<title>')"
+        uses: peter-evans/create-or-update-comment@v2
         with:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: .github/workflows/config/ticket-check-config.yml
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.number }}
+          body: |
+            Hello ${{ github.event.actor }} :wave:
+            Please ensure that your ticket has an appropriate title
