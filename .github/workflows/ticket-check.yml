@@ -13,7 +13,6 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
-            Hello ${{ github.event.actor }} :wave:
             Please ensure that your ticket has an appropriate title
