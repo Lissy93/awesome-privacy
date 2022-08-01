@@ -9,7 +9,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Apply Labels
-        if: "! contains(github.event.pull_request.body, 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Other')"
+        if: "! contains(github.event.pull_request.body, 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Misc')"
         uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: both
