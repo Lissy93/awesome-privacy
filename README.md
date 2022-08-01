@@ -1008,7 +1008,8 @@ The content on many of these smaller sites tends to be more *niche*. To continue
 **[PeerTube](https://joinpeertube.org)** | Free and open-source federated video platform that uses peer-to-peer technology to reduce load on individual servers when viewing videos. You can [self-host](https://docs.joinpeertube.org/#/install-any-os), or [find an instance](https://joinpeertube.org/instances#instances-list), and then watch videos from any PeerTube server
 **[DTube](https://d.tube)** | A decentralized and ad-free video platform with little to no moderation that uses cryptocurrency and blockchain technology to pay its users.
 **[BitTube](https://bittube.tv)** | A peer-to-peer, decentralized, censorship-free, ad-free video sharing and live streaming platform based on IPFS and blockchain technology
-**[BitChute](https://www.bitchute.com/)** | A video hosting platform, that was founded in 2017 to allow uploaders to avoid content rules enforced on other platforms, such as YouTube
+**[BitChute](https://www.bitchute.com/)** | A video hosting platform, that was founded in 2017 to allow uploaders to avoid content rules enforced on other platforms, such as YouTube|
+**[LBRY](https://www.lbry/)** | A video hosting platform, that was founded in 2015 to allow uploaders to avoid content rules enforced on other platforms, such as YouTube, videos are hosteds on LBRY blockchain a Bitcoin Fork|
 
 #### Word of Warning
 Without moderation, some of these platforms accommodate video creators whose content may not be appropriate for all audiences
