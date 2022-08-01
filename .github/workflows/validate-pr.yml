@@ -3,7 +3,10 @@ name: ⛳ Validate PR
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
-    
+
+permissions:
+  pull-requests: write
+
 env:
   BASE_MSG: >+
     Thanks for contributing to Awesome-Privacy! Your pull request will be reviewed shortly.
@@ -13,8 +16,6 @@ env:
 
 jobs:
   validate:
-    permissions:
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
     - name: Validate Title is not Default
