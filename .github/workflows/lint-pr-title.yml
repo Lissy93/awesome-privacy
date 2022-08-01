@@ -5,6 +5,7 @@ on:
     types: [opened, edited, synchronize, reopened]
 jobs:
   check-title:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
     - name: Check title regex
