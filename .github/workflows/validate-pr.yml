@@ -13,7 +13,8 @@ env:
 
 jobs:
   validate:
-    permissions: write-all
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
     - name: Validate Title is not Default
