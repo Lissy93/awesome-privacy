@@ -18,7 +18,7 @@ Addition / Amendment / Removal / Spelling or Grammar / Website Update / Misc
 ---
 
 ### Supporting Material
-<!-- For additions, provide relevant links. E.g. Git repo, security audit, docs, etc -->
+<!-- For new entries, provide relevant links. E.g. Git repo, security audit, docs, etc -->
 
 ---
 
