@@ -5,6 +5,13 @@
 <table>
 <tr>
     <td align="center">
+        <a href="https://github.com/Keloran">
+            <img src="https://avatars.githubusercontent.com/u/200350?v=4" width="80;" alt="Keloran"/>
+            <br />
+            <sub><b>Max Hooton</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/peng1can">
             <img src="https://avatars.githubusercontent.com/u/225854?v=4" width="80;" alt="peng1can"/>
             <br />
@@ -38,15 +45,22 @@
             <br />
             <sub><b>Stephen Rigney</b></sub>
         </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/digibucc">
+            <img src="https://avatars.githubusercontent.com/u/6216652?v=4" width="80;" alt="digibucc"/>
+            <br />
+            <sub><b>digibucc</b></sub>
+        </a>
     </td>
     <td align="center">
         <a href="https://github.com/AdamXweb">
-            <img src="https://avatars.githubusercontent.com/u/6800453?u=45aa0c5c9733a003717eb73840081fdfd5e43b71&v=4" width="80;" alt="AdamXweb"/>
+            <img src="https://avatars.githubusercontent.com/u/6800453?u=98926c2361662df840d2b105873c680e56890052&v=4" width="80;" alt="AdamXweb"/>
             <br />
             <sub><b>Adam Kostarelas</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/bmcgonag">
             <img src="https://avatars.githubusercontent.com/u/7346620?u=2a0f9284f3e12ac1cc15288c254d1ec68a5081e8&v=4" width="80;" alt="bmcgonag"/>
@@ -69,12 +83,13 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mDafox">
-            <img src="https://avatars.githubusercontent.com/u/21359974?v=4" width="80;" alt="mDafox"/>
+        <a href="https://github.com/devosm">
+            <img src="https://avatars.githubusercontent.com/u/21359974?v=4" width="80;" alt="devosm"/>
             <br />
             <sub><b>Manu Devos</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Byolock">
             <img src="https://avatars.githubusercontent.com/u/25748003?v=4" width="80;" alt="Byolock"/>
@@ -88,8 +103,7 @@
             <br />
             <sub><b>Mickael Asseline</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/hugalafutro">
             <img src="https://avatars.githubusercontent.com/u/30209689?v=4" width="80;" alt="hugalafutro"/>
@@ -105,13 +119,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/KierenConnell">
-            <img src="https://avatars.githubusercontent.com/u/46445781?u=5502f8fb780938e2825735d7bbb9236642d212c0&v=4" width="80;" alt="KierenConnell"/>
-            <br />
-            <sub><b>Kieren Connell</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/ratty222">
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
             <br />
@@ -124,15 +131,15 @@
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jtfinley72">
             <img src="https://avatars.githubusercontent.com/u/96497997?v=4" width="80;" alt="jtfinley72"/>
             <br />
             <sub><b>Jtfinley72</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/CynegeticIO">
             <img src="https://avatars.githubusercontent.com/u/103884082?u=8cc7ce0f78edf630fc8a6ea560a62c6ed249ca41&v=4" width="80;" alt="CynegeticIO"/>
@@ -196,7 +203,7 @@
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
-            <sub><b>slade991</b></sub>
+            <sub><b>Slade991</b></sub>
         </a>
     </td>
     <td align="center">
