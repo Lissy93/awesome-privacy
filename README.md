@@ -218,7 +218,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 #### Notable Mentions
 [MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). 
 
-[Searx](https://asciimoo.github.io/searx/) and [SearXNG](https://github.com/searxng/searxng) are two self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used.
+[Searx](https://searx.github.io/searx/) and [SearXNG](https://github.com/searxng/searxng) are two self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used.
 
 12Bytes also maintains a list of [privacy-respecting search engines](https://12bytes.org/articles/tech/alternative-search-engines-that-respect-your-privacy/)
 
@@ -1416,7 +1416,7 @@ Moving away from Google, and using multiple alternative apps will mean there is 
 - Pay (Virtual Cards): [Privacy.com](https://privacy.com/join/VW7WC), [Revolut](https://revolut.ngih.net/Q9jdx) (disposable virtual credit cards)
 - Photos: [PhotoPrism](https://photoprism.app/) (Self-Hosted)
 - Play Store: [F-Droid](https://f-droid.org), [APK Mirror](https://www.apkmirror.com)
-- Search: [DuckDuckGo](https://duckduckgo.com), [Searx](https://searx.me) (self-hosted), [Qwant](https://www.qwant.com)
+- Search: [DuckDuckGo](https://duckduckgo.com), [Searx](https://searx.github.io/searx/) (self-hosted), [Qwant](https://www.qwant.com)
 - Sync: [SeaFile](https://www.seafile.com), [Syncthing](https://syncthing.net), [NextCloud](https://nextcloud.com), [Duplicacy](https://duplicacy.com)
 - Translate: [Apertium](https://www.apertium.org)
 - Weather: [Geometric Weather](https://play.google.com/store/apps/details?id=wangdaye.com.geometricweather) (Android), [Open Weather Map](https://openweathermap.org) (Web)
@@ -1458,7 +1458,7 @@ Community-maintained media software can help you migrate away from providers tha
 - Office Suits: [CryptPad](https://cryptpad.fr), [LibreOffice](https://www.libreoffice.org), [onlyoffice](https://github.com/ONLYOFFICE), [NextCloud](https://nextcloud.com)
 - Paste Bins: [Snibox](https://snibox.github.io), [PrivateBin](https://github.com/PrivateBin/PrivateBin), [0bin](https://github.com/sametmax/0bin), [Stikked](https://github.com/claudehohl/Stikked)
 - Photo Managers: [PhotoPrism](https://photoprism.app/)
-- Search Engine: [Searx](https://asciimoo.github.io/searx)
+- Search Engine: [Searx](https://searx.github.io/searx/)
 - Social Networks: [Mastodon](https://mastodon.social), [Pixelfed](https://pixelfed.org), [diaspora](https://diasporafoundation.org)
 - Ticketing: [Zammad](https://github.com/zammad/zammad), [osTicket](https://github.com/osTicket/osTicket), [Helpy](https://github.com/helpyio/helpy)
 - URL Shortners: [Shlink](https://shlink.io), [Polr](https://polrproject.org), [Istu](https://github.com/ldidry/lstu), [Linkr](https://github.com/LINKIWI/linkr)
