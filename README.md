@@ -787,7 +787,7 @@ Self-hosting your own mail server is not recommended for everyone, it can be tim
 **[Joplin](https://joplinapp.org)** | Cross-platform desktop and mobile note-taking and todo app. Easy organisation into notebooks and sections, revision history and a simple UI. Allows for easy import and export of notes to or from other services. Supports synchronisation with cloud services, implemented with E2EE - however it is only the backed up data that is encrypted
 **[Notable](https://notable.md)** | Markdown-based note editor for desktop, with a simple, yet feature-rich UI. All notes are saved individually as .md files, making them easy to manage. No mobile app, or built-in cloud-sync or encryption
 **[Logseq](https://logseq.com/)** | Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and Org-mode files
-
+**[AFFiNE](https://affine.pro)** | Privacy first, open-source alternative to Notion, monday.com and Miro.
 #### Notable Mentions
 If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com) is a utility that encrypts your entire notebook, before it is uploaded to the cloud. 
 
