@@ -26,6 +26,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Geolim4">
+            <img src="https://avatars.githubusercontent.com/u/1332071?v=4" width="80;" alt="Geolim4"/>
+            <br />
+            <sub><b>Georges.L</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/k-rol">
             <img src="https://avatars.githubusercontent.com/u/4050412?u=1162510eec7b7aeb31d4c7c65d51d4f773d823b0&v=4" width="80;" alt="k-rol"/>
             <br />
@@ -38,15 +45,15 @@
             <br />
             <sub><b>Ulises Gascón</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/BOZG">
             <img src="https://avatars.githubusercontent.com/u/6022344?u=a52f42b946a1e1156f7bb9d7f65e9e28bb2da89f&v=4" width="80;" alt="BOZG"/>
             <br />
             <sub><b>Stephen Rigney</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/digibucc">
             <img src="https://avatars.githubusercontent.com/u/6216652?v=4" width="80;" alt="digibucc"/>
@@ -56,7 +63,7 @@
     </td>
     <td align="center">
         <a href="https://github.com/AdamXweb">
-            <img src="https://avatars.githubusercontent.com/u/6800453?u=98926c2361662df840d2b105873c680e56890052&v=4" width="80;" alt="AdamXweb"/>
+            <img src="https://avatars.githubusercontent.com/u/6800453?u=3be969c9df11fa94351c42da8134ce3eaf33d6f1&v=4" width="80;" alt="AdamXweb"/>
             <br />
             <sub><b>Adam Kostarelas</b></sub>
         </a>
@@ -66,13 +73,6 @@
             <img src="https://avatars.githubusercontent.com/u/7346620?u=2a0f9284f3e12ac1cc15288c254d1ec68a5081e8&v=4" width="80;" alt="bmcgonag"/>
             <br />
             <sub><b>Brian McGonagill</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Robert-Ernst">
-            <img src="https://avatars.githubusercontent.com/u/9050259?u=7253b4063f1ffe3b5a894263c8b2056151802508&v=4" width="80;" alt="Robert-Ernst"/>
-            <br />
-            <sub><b>Robert Ernst</b></sub>
         </a>
     </td>
     <td align="center">
@@ -157,6 +157,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/liss-bot">
+            <img src="https://avatars.githubusercontent.com/u/87835202?v=4" width="80;" alt="liss-bot"/>
+            <br />
+            <sub><b>Alicia Bot</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/KieranRobson">
             <img src="https://avatars.githubusercontent.com/u/32241933?v=4" width="80;" alt="KieranRobson"/>
             <br />
@@ -171,10 +178,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/liss-bot">
-            <img src="https://avatars.githubusercontent.com/u/87835202?v=4" width="80;" alt="liss-bot"/>
+        <a href="https://github.com/A-childs-encyclopedia">
+            <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
-            <sub><b>Alicia Bot</b></sub>
+            <sub><b>A-childs-encyclopedia</b></sub>
         </a>
     </td>
     <td align="center">
@@ -182,13 +189,6 @@
             <img src="https://avatars.githubusercontent.com/u/32358946?v=4" width="80;" alt="kerbless"/>
             <br />
             <sub><b>Kerbless</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/A-childs-encyclopedia">
-            <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
-            <br />
-            <sub><b>A-childs-encyclopedia</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -221,20 +221,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/jamescridland">
+            <img src="https://avatars.githubusercontent.com/u/231941?v=4" width="80;" alt="jamescridland"/>
+            <br />
+            <sub><b>James Cridland</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/plplmax">
             <img src="https://avatars.githubusercontent.com/u/50287455?v=4" width="80;" alt="plplmax"/>
             <br />
             <sub><b>Maksim Ploski</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/NylaTheWolf">
             <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
             <br />
             <sub><b>NylaTheWolf</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
