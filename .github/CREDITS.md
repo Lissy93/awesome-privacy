@@ -112,6 +112,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Hue899">
+            <img src="https://avatars.githubusercontent.com/u/67720949?v=4" width="80;" alt="Hue899"/>
+            <br />
+            <sub><b>NKA</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/ratty222">
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
             <br />
@@ -124,18 +131,18 @@
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jtfinley72">
             <img src="https://avatars.githubusercontent.com/u/96497997?v=4" width="80;" alt="jtfinley72"/>
             <br />
             <sub><b>Jtfinley72</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/CY0xZ">
-            <img src="https://avatars.githubusercontent.com/u/103884082?v=4" width="80;" alt="CY0xZ"/>
+            <img src="https://avatars.githubusercontent.com/u/103884082?u=0b3260c6a1af6268492f69264dbb75989afb155f&v=4" width="80;" alt="CY0xZ"/>
             <br />
             <sub><b>CY0xZ</b></sub>
         </a>
