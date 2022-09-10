@@ -55,13 +55,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/digibucc">
-            <img src="https://avatars.githubusercontent.com/u/6216652?v=4" width="80;" alt="digibucc"/>
-            <br />
-            <sub><b>Digibucc</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/AdamXweb">
             <img src="https://avatars.githubusercontent.com/u/6800453?u=3be969c9df11fa94351c42da8134ce3eaf33d6f1&v=4" width="80;" alt="AdamXweb"/>
             <br />
@@ -88,15 +81,15 @@
             <br />
             <sub><b>Byolock</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/PAPAMICA">
             <img src="https://avatars.githubusercontent.com/u/29079741?v=4" width="80;" alt="PAPAMICA"/>
             <br />
             <sub><b>Mickael Asseline</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/hugalafutro">
             <img src="https://avatars.githubusercontent.com/u/30209689?v=4" width="80;" alt="hugalafutro"/>
@@ -113,7 +106,7 @@
     </td>
     <td align="center">
         <a href="https://github.com/Hue899">
-            <img src="https://avatars.githubusercontent.com/u/67720949?v=4" width="80;" alt="Hue899"/>
+            <img src="https://avatars.githubusercontent.com/u/67720949?u=3138b65cb48b5434f4c5a248152a1de66d30b13c&v=4" width="80;" alt="Hue899"/>
             <br />
             <sub><b>NKA</b></sub>
         </a>
@@ -131,15 +124,15 @@
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jtfinley72">
             <img src="https://avatars.githubusercontent.com/u/96497997?v=4" width="80;" alt="jtfinley72"/>
             <br />
             <sub><b>Jtfinley72</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/CY0xZ">
             <img src="https://avatars.githubusercontent.com/u/103884082?u=0b3260c6a1af6268492f69264dbb75989afb155f&v=4" width="80;" alt="CY0xZ"/>
@@ -261,6 +254,13 @@
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jxhn">
+            <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
+            <br />
+            <sub><b>Jxhn</b></sub>
         </a>
     </td>
     <td align="center">
