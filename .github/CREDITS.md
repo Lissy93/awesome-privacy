@@ -119,13 +119,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/undefined">
-            <img src="" width="80;" alt="undefined"/>
-            <br />
-            <sub><b>Undefined</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/jtfinley72">
             <img src="https://avatars.githubusercontent.com/u/96497997?v=4" width="80;" alt="jtfinley72"/>
             <br />
@@ -177,13 +170,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/amilich">
+            <img src="https://avatars.githubusercontent.com/u/1927690?v=4" width="80;" alt="amilich"/>
+            <br />
+            <sub><b>Andrew Milich</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/kerbless">
             <img src="https://avatars.githubusercontent.com/u/32358946?v=4" width="80;" alt="kerbless"/>
             <br />
             <sub><b>Kerbless</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
@@ -218,15 +218,15 @@
             <br />
             <sub><b>James Cridland</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/plplmax">
             <img src="https://avatars.githubusercontent.com/u/50287455?v=4" width="80;" alt="plplmax"/>
             <br />
             <sub><b>Maksim Ploski</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/NylaTheWolf">
             <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
@@ -261,7 +261,8 @@
             <br />
             <sub><b>Kolaente</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/pnxdxt">
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnxdxt"/>
