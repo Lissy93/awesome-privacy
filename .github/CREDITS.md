@@ -170,20 +170,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ltGuillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltGuillaume"/>
+            <br />
+            <sub><b>Guillaume</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
             <sub><b>A-childs-encyclopedia</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/amilich">
             <img src="https://avatars.githubusercontent.com/u/1927690?v=4" width="80;" alt="amilich"/>
             <br />
             <sub><b>Andrew Milich</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kerbless">
             <img src="https://avatars.githubusercontent.com/u/32358946?v=4" width="80;" alt="kerbless"/>
@@ -196,13 +203,6 @@
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
             <sub><b>Slade991</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/ltGuillaume">
-            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltGuillaume"/>
-            <br />
-            <sub><b>Guillaume</b></sub>
         </a>
     </td>
     <td align="center">
