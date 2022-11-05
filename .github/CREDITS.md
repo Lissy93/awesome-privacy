@@ -848,7 +848,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
           <a href="https://github.com/Lissy93/awesome-privacy/stargazers" title="View all Stargazers"><img src="https://reporoster.com/stars/dark/Lissy93/awesome-privacy" alt="View Stargazers" width="450" /></a>
         </td>
         <td>
-          <a href=https://github.com/Lissy93/awesome-privacy/network/members"" title="View all Forks"><img src="https://reporoster.com/forks/dark/lissy93/awesome-privacy" alt="View Forks" width="450" /></a>
+          <a href="https://github.com/Lissy93/awesome-privacy/network/members" title="View all Forks"><img src="https://reporoster.com/forks/dark/lissy93/awesome-privacy" alt="View Forks" width="450" /></a>
         </td>
       </tr>
     </table>
@@ -869,5 +869,24 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
 
 ### You?
 
-Contribute to Awesome-Privacy by submitting a pull request, or opening a ticket.
-For guidelines, see [CONTRIBUTING](/.github/CONTRIBUTING.md)
+Contributions of any type are very welcome!
+
+Ways that you can help out include, submitting a pull request, raising an issue, sharing the repo with your network, starring / forking the project, or sponsoring us on GitHub.
+
+> **Note** <br> If you're adding, editing or removing something from the list, please read through the [Contributing Docs](/.github/CONTRIBUTING.md) before submitting your PR.
+
+
+## Follow for More
+
+If you've enjoyed Awesome-Privacy, you might be interested on some of the other projects that I'm working on.<br>
+Consider following me for updates!
+
+[![Alicia Sykes on Twitter](https://img.shields.io/twitter/follow/Lissy_Sykes?style=social&logo=twitter)](https://twitter.com/Lissy_Sykes)
+[![Alicia Sykes on GitHub](https://img.shields.io/github/followers/lissy93?label=Lissy93&style=social)](https://github.com/Lissy93)
+[![Alicia Sykes on Mastodon](https://img.shields.io/mastodon/follow/1032965?domain=https%3A%2F%2Fmastodon.social)](https://mastodon.social/web/accounts/1032965)
+[![Alicia Sykes on Keybase](https://img.shields.io/badge/AliciaSykes--lightgrey?style=social&logo=Keybase)](https://keybase.io/aliciasykes)
+[![Alicia Sykes's Website](https://img.shields.io/badge/AliciaSykes.com--lightgrey?style=social&logo=Tencent%20QQ)](https://aliciasykes.com)
+[![Alicia Sykes's Blog](https://img.shields.io/badge/Blog--lightgrey?style=social&logo=micro.blog)](https://notes.aliciasykes.com/)
+[![Alicia Sykes's PGP](https://img.shields.io/badge/PGP--lightgrey?style=social&logo=Let%E2%80%99s%20Encrypt)](https://keybase.io/aliciasykes/pgp_keys.asc)
+
+
