@@ -1621,6 +1621,16 @@ This list contains packages that range from entry-level to advanced, a lot of th
 
 If you find something on this list that should no longer be deemed secure or private/ or should have a warning note attached, please raise an issue. In the same way if you know of something that is missing, or would like to make an edit, then pull requests are welcome, and are much appreciated!
 
+### Contributors
+
+This is a community-maintained project, which wouldn't have been possible without help from [all these wonderful people](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CREDITS.md).
+
+Top Contributors:
+
+<a title="Click to view all contributors" href="https://github.com/Lissy93/awesome-privacy/blob/main/.github/CREDITS.md">
+  <img src="https://github.com/Lissy93/awesome-privacy/raw/main/.github/assets/CONTRIBUTORS.svg" alt="Top Contributors" width="600" />
+</a>
+
 ### Contributing
 
 *Thanks for visiting! If you have suggestions, then you [open an issue](https://github.com/Lissy93/awesome-privacy/issues/new/choose), or [submit a PR](https://github.com/Lissy93/awesome-privacy/pull/new/main), see: [`CONTRIBUTING.md`](/.github/CONTRIBUTING.md). Contributions are welcome, and always much appreciated* ☺️
