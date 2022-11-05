@@ -303,17 +303,17 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/matkoniecz">
-            <img src="https://avatars.githubusercontent.com/u/899988?v=4" width="80;" alt="matkoniecz"/>
-            <br />
-            <sub><b>Mateusz Konieczny</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/liss-bot">
             <img src="https://avatars.githubusercontent.com/u/87835202?v=4" width="80;" alt="liss-bot"/>
             <br />
             <sub><b>Alicia Bot</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/matkoniecz">
+            <img src="https://avatars.githubusercontent.com/u/899988?v=4" width="80;" alt="matkoniecz"/>
+            <br />
+            <sub><b>Mateusz Konieczny</b></sub>
         </a>
     </td>
     <td align="center">
@@ -625,20 +625,34 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Kotbenek">
+            <img src="https://avatars.githubusercontent.com/u/64036903?v=4" width="80;" alt="Kotbenek"/>
+            <br />
+            <sub><b>Dominik Piątkowski</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/leon-costa">
             <img src="https://avatars.githubusercontent.com/u/83498565?v=4" width="80;" alt="leon-costa"/>
             <br />
             <sub><b>Leon Costa</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lukecarr">
             <img src="https://avatars.githubusercontent.com/u/24438483?v=4" width="80;" alt="lukecarr"/>
             <br />
             <sub><b>Luke Carr</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/lordpansar">
+            <img src="https://avatars.githubusercontent.com/u/14231148?v=4" width="80;" alt="lordpansar"/>
+            <br />
+            <sub><b>Magnus Sundström</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/mschwrdtnr">
             <img src="https://avatars.githubusercontent.com/u/39745446?v=4" width="80;" alt="mschwrdtnr"/>
@@ -666,7 +680,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Pedro Delfino</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/sjamaan">
             <img src="https://avatars.githubusercontent.com/u/128536?v=4" width="80;" alt="sjamaan"/>
@@ -680,8 +695,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Peter Ye</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/rorymbyrne">
             <img src="https://avatars.githubusercontent.com/u/18581795?v=4" width="80;" alt="rorymbyrne"/>
@@ -709,7 +723,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Thomas Rettig</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/tim-v3">
             <img src="https://avatars.githubusercontent.com/u/103248132?v=4" width="80;" alt="tim-v3"/>
@@ -723,8 +738,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Zeus Almighty</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/apraile">
             <img src="https://avatars.githubusercontent.com/u/9890538?v=4" width="80;" alt="apraile"/>
@@ -752,7 +766,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Ignoramous</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kevodwyer">
             <img src="https://avatars.githubusercontent.com/u/5311499?v=4" width="80;" alt="kevodwyer"/>
@@ -766,13 +781,19 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Notthewave</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/ogoregen">
             <img src="https://avatars.githubusercontent.com/u/37447279?v=4" width="80;" alt="ogoregen"/>
             <br />
             <sub><b>Oğuzhan</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/pabloscloud">
+            <img src="https://avatars.githubusercontent.com/u/93644977?v=4" width="80;" alt="pabloscloud"/>
+            <br />
+            <sub><b>Pabloscloud</b></sub>
         </a>
     </td>
     <td align="center">
@@ -788,7 +809,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Pipboy96</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/theblackmallard">
             <img src="https://avatars.githubusercontent.com/u/42389961?v=4" width="80;" alt="theblackmallard"/>
@@ -809,13 +831,39 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
 
 ### Newest Stargazers & Forkers
 
-| Stargazers | Forkers |
-|---|---|
-| [![Newest Stargazers](https://reporoster.com/stars/dark/Lissy93/awesome-privacy)](https://github.com/Lissy93/awesome-privacy/stargazers) | [![Newest Forkers](https://reporoster.com/forks/dark/lissy93/awesome-privacy)](https://github.com/Lissy93/awesome-privacy/network/members) |
-
-
-<p align="center"><img src="https://api.star-history.com/svg?repos=lissy93/awesome-privacy" width="600"></p>
-
+<table>
+  <tr>
+  <td align="center">
+    <table>
+      <tr>
+        <th>
+          Stargazers
+        </th>
+        <th>
+          Forkers
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://github.com/Lissy93/awesome-privacy/stargazers" title="View all Stargazers"><img src="https://reporoster.com/stars/dark/Lissy93/awesome-privacy" alt="View Stargazers" width="450" /></a>
+        </td>
+        <td>
+          <a href=https://github.com/Lissy93/awesome-privacy/network/members"" title="View all Forks"><img src="https://reporoster.com/forks/dark/lissy93/awesome-privacy" alt="View Forks" width="450" /></a>
+        </td>
+      </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <p align="center">
+        <a href="https://seladb.github.io/StarTrack-js/#/preload?r=lissy93,awesome-privacy">
+          <img src="https://api.star-history.com/svg?repos=lissy93/awesome-privacy" width="600">
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
