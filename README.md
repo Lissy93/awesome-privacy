@@ -359,6 +359,7 @@ If you are using ProtonMail, then the [ProtonMail Bridge](https://protonmail.com
 **[Silent.link](https://silent.link/)** | Anonymous eSIM for sending / receiving SMS, incoming calls and 4G / 5G internet + world-wide roaming. No data is required at sign-up. Affordable pricing, with payments and top-ups accepted in BTC. Requires an eSim-compatible device
 **[Crypton.sh](https://crypton.sh/)** | Physical SIM card in the cloud, for sending + receiving SMS messages. Messages are encrypted using your chosen private key. Includes a web interface, as well as an API for interacting with it from any device. Pricing is around €7.00/month, and payment is accepted in BTC, XMR or credit card
 **[Jmp.chat](https://jmp.chat/)** | Phone number for incoming + outgoing calls and messages, provided by Soprani. Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at $2.99 / month. Only available in the US and Canada, as (as of 2022) the service is still in Beta
+**[MoneroSMS](https://monerosms.com)** | Anonymous SMS service able to activate accounts. Accessible over web, CLI, or email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
 
 ## Team Collaboration Platforms
 
