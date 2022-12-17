@@ -1369,7 +1369,7 @@ IoT smart home devices can open you up to many security risks and exploits. It i
 | Provider | Description |
 | --- | --- |
 [SourceHut](https://sourcehut.org/) | Git and mercurial code hosting, task management, mailing lists, wiki hosting and Alpine-based build pipelines. Can be self-hosted, or used through the managed instance at [sr.ht](https://sr.ht/)
-[CodeBerg](https://codeberg.org/) | A fully-managed instance of Gitea
+[Codeberg](https://codeberg.org/) | A fully-managed instance of [Forgejo](https://forgejo.org)
 [GitLab](https://gitlab.com) | Fully-featured git, CI and project management platform. Managed instance available, but can also be self-hosted
 [Gitea](https://gitea.io/) | Lightweight self-hosted git platform, written in Go
 [Gogs](https://gogs.io/) | Lightweight self-hosted git platform, written in Go
