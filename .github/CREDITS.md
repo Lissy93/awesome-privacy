@@ -307,12 +307,20 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/magical-heyrovsky">
+            <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
+            <br />
+            <sub><b>magical-heyrovsky</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/mrpavan">
             <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
             <br />
             <sub><b>Pavan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/pnxdxt">
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnxdxt"/>
