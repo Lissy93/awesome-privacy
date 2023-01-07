@@ -105,13 +105,6 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/svenniuwe">
-            <img src="https://avatars.githubusercontent.com/u/30127271?u=4902a9bc5b6765db2dbadcc0a098faebc506e4ac&v=4" width="80;" alt="svenniuwe"/>
-            <br />
-            <sub><b>Sven</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/shadowking001">
             <img src="https://avatars.githubusercontent.com/u/43928955?u=a00b44f22e5a82234d9b406ac048def1fbc16e31&v=4" width="80;" alt="shadowking001"/>
             <br />
@@ -199,6 +192,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/samsapti">
+            <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
+            <br />
+            <sub><b>Sam A.</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
@@ -218,6 +218,14 @@
             <br />
             <sub><b>Ash Scott</b></sub>
         </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/GhoulBoii">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
+            <br />
+            <sub><b>GhoulBoi69</b></sub>
+        </a>
     </td>
     <td align="center">
         <a href="https://github.com/Gusted">
@@ -225,8 +233,7 @@
             <br />
             <sub><b>Gusted</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/LuigiImVector">
             <img src="https://avatars.githubusercontent.com/u/59611597?v=4" width="80;" alt="LuigiImVector"/>
@@ -254,7 +261,8 @@
             <br />
             <sub><b>Maksim Ploski</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/NylaTheWolf">
             <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
@@ -268,8 +276,7 @@
             <br />
             <sub><b>Wesley-Ryan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
@@ -297,7 +304,8 @@
             <br />
             <sub><b>Kolaente</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/magical-heyrovsky">
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
@@ -311,8 +319,7 @@
             <br />
             <sub><b>Pavan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/pnxdxt">
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnxdxt"/>
