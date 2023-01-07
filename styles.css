@@ -1,0 +1,296 @@
+
+/*****************************************************/
+/******* CSS VARIABLES FOR COLORS AND SETTINGS *******/
+/*****************************************************/
+:root {
+    --primary: #15171b;
+    --primary-2: #1d1e26;
+    --cover-text-color: #9580ff;
+    --shadow-color: #00000033;
+}
+
+::selection {
+    background: var(--cover-text-color);
+    color: var(--primary);
+}
+
+/*****************************************************/
+/******* OVERIDE DOCSIFY ELEMENTS - COVER-PAGE *******/
+/*****************************************************/
+
+.cover-main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.cover.show {
+    background: var(--primary);
+    background: linear-gradient(
+        135deg,
+        var(--primary) 15%,
+        var(--primary-2) 15%,
+        var(--primary-2) 50%,
+        var(--primary-2) 85%,
+        var(--primary) 85%) !important;
+}
+
+@media (max-width: 820px) {
+    section.cover.show {
+        height: auto !important;
+    }
+}
+
+/***************************************************/
+/******* OVERIDE DOCSIFY ELEMENTS - SIDE BAR *******/
+/***************************************************/
+
+.app-name-link img {
+    max-width: 140px !important;
+}
+
+/******************************************************/
+/******* OVERIDE DOCSIFY ELEMENTS - TOP NAV BAR *******/
+/******************************************************/
+
+nav.app-nav {
+    width: calc(100% - 300px);
+    right: 1rem !important;
+}
+
+nav.app-nav li {
+    padding: 0 !important;
+    display: inline-block !important;
+    margin: 0 0.3rem 1rem 0 !important;
+}
+
+nav.app-nav a {
+    background: none;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    border: 2px solid var(--primary);
+    border-radius: 3px;
+}
+
+nav.app-nav a.active, nav.app-nav a:active, nav.app-nav a:hover  {
+    background: var(--primary) !important;
+    color: var(--cover-text-color);
+}
+
+@media (max-width: 820px) {
+    nav.app-nav { display: none; }
+}
+
+a.github-corner {
+    max-width: 80px;
+}
+
+a.github-corner svg { fill: var(--primary) !important; }
+a.github-corner svg path.octo-body,
+a.github-corner svg path.octo-arm { fill: var(--cover-text-color) !important; }
+
+/********************************************/
+/******* CUSTOM ELEMENTS - COVER-PAGE *******/
+/********************************************/
+
+/* Container, for cover page elements */
+.cover-page {
+    max-width: 1000px !important;
+    margin: 3rem auto !important;
+}
+
+/* Main Image for Cover Page */
+img.cover-image {
+    width: 200px;
+    height: 200px;
+}
+
+/* Main Heading */
+.cover-page h1{
+    font-family: 'Cutive Mono', monospace;
+    color: var(--cover-text-color) !important;
+    font-size: 4rem !important;
+    margin: 1rem auto !important;
+}
+
+/* Sub-Heading */
+.cover-page h2{
+    font-family: 'Cutive Mono', monospace;
+    color: var(--cover-text-color) !important;
+    font-size: 1.8rem !important;
+    margin: 1rem auto !important;
+    font-weight: 400;
+}
+
+/* Container for the Button links, within cover page*/
+.cover-page .cover-link-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Mobile- Container for the Button links, within cover page*/
+@media (max-width: 820px) {
+    .cover-page .cover-link-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        display: none;
+    }
+}
+
+/* Link button (Navigates to main sections) */
+.cover-page .cover-link-container .cover-link {
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--cover-text-color);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+
+/* Main text within Button on cover page*/
+.cover-page .cover-link-container .cover-link .link-title {
+    font-family: 'Cutive Mono', monospace;
+    color: var(--cover-text-color);
+    font-size: 1.2rem;
+    z-index: 1;
+    text-shadow:
+        0 0 1px var(--shadow-color),
+        0 1px 0 var(--shadow-color);
+}
+
+/* Description of button, on cover page */
+.cover-page .cover-link-container .cover-link .link-description {
+    font-family: 'Cutive Mono', monospace;
+    color: var(--cover-text-color);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--cover-text-color);
+    padding-top: 2px;
+    z-index: 1;
+}
+
+/* View on GitHub button*/
+.github-button {
+    font-family: 'Cutive Mono', monospace;
+    color: var(--cover-text-color) !important;
+    font-size: 2rem;
+    margin-top: 1rem;
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid var(--cover-text-color);
+    border-radius: 3px;
+    background: var(--primary);
+    padding: 0.2rem 0;
+}
+
+/* GitHub Star Button */
+.github-star {
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+    width: 120px;
+    opacity: 0.8;
+}
+
+@media (max-width: 820px) {
+    .github-star {
+        left: 0.5rem;
+        width: 85px;
+    }
+}
+
+/* Awesome list button */
+.awesome-list {
+    position: absolute;
+    top: 1.5rem;
+    right: 13rem;
+    width: 120px;
+    opacity: 0.8;
+}
+
+.awesome-list img {
+    width: 8rem;
+}
+
+@media (max-width: 820px) {
+    .awesome-list {
+        left: 0.5rem;
+        top: 3.25rem;
+        width: 85px;
+    }
+}
+
+/* License Text */
+footer.license {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0.2rem;
+}
+@media (max-width: 820px) {
+    footer.license {
+        position: relative;
+    }
+}
+footer.license span {
+    color: var(--cover-text-color);
+    opacity: 0.5;
+    bottom: 0;
+    display: block;
+    cursor: default;
+    margin-top: 2%;
+    transition: all 0.75s ease 0s;
+}
+footer.license span:hover {
+    opacity: 0.95;
+}
+footer.license span a{
+    text-decoration: underline;
+}
+
+/* Animated Action Buttons */
+a.cover-link:link, a.cover-link:visited {
+	text-shadow: 0 0 1px var(--shadow-color), 0 1px 0 var(--shadow-color);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.cover-link:link:after, a.cover-link:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.cover-link:link:hover:after, a.cover-link:visited:hover:after {
+	height: 450%;
+}
+a.cover-link:link, a.cover-link:visited {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.cover-link:after {
+	background: var(--cover-text-color);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(135deg);
+	transform: translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+a.cover-link span {
+    mix-blend-mode: difference;
+}

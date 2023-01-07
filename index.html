@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Privacy 🔐</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Curated list of privacy-respecting software and services">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#060b2b">
+  <meta property="og:title" content="Awesome Privacy">
+  <meta property="og:description" content="Curated list of privacy-respecting software and services">
+  <meta property="og:url" content="https://awesome-privacy.js.org"/>
+  <meta property="og:image" content="banner.png">
+  <meta name="twitter:card" content="banner.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+  
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Awesome Privacy',
+      repo: 'https://github.com/Lissy93/awesome-privacy',
+      // basePath: 'https://awesome-privacy.js.org/',
+      logo: 'awesome-privacy.png',
+      themeColor: '#9580ff',
+      notFoundPage: '_404.html',
+      coverpage: '_coverpage.html',
+      loadNavbar: true,
+      onlyCover: false,
+      executeScript: true,
+      maxLevel: 3,
+      subMaxLevel: 2,
+      auto2top: true,
+      formatUpdated: '{DD}/{MM}/{YYYY} {HH}:{mm}',
+      mergeNavbar: true,
+      search: {
+        depth: 5,
+        paths: [
+        '/', 'README', '.github/CONTRIBUTING', '.github/CREDITS'
+      ],
+      }
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
