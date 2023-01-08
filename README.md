@@ -1049,6 +1049,7 @@ Of course you could also host your blog on your own server, using a standard ope
 **[Tiny RSS](https://tt-rss.org)** | A free and open source web-based news feed (RSS/Atom) reader and aggregator
 **[RSSOwl](http://www.rssowl.org)** | A desktop-based RSS reader, with powerful organisation features
 **[Feedly](https://feedly.com)** | A more premium option. Feedly displays news from your selected sources in an easy-to-digest clean and modern interface. It works with more than just RSS feeds, since it is well integrated with many major news outlets. It does not manipulate the stories you see, and is mostly open source
+**[Feeder](https://gitlab.com/spacecowboy/Feeder)** | An Libre and Open Source RSS feed reader which supports all common feed formats.
 
 #### Notable Mentions
 For iPhone users in the US, [Tonic](https://canopy.cr/tonic) is a great little app that provides you with a selection of personalized new stories and articles daily. It is possible to use [Reddit](https://www.reddit.com) anonymously too - you can use throwaway accounts for posting.
