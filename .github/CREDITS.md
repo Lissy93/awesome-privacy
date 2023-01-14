@@ -271,6 +271,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/tschlotfeldt">
+            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+            <br />
+            <sub><b>Tim Schlotfeldt</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
             <br />
@@ -297,15 +304,15 @@
             <br />
             <sub><b>Jxhn</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/kolaente">
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
             <br />
             <sub><b>Kolaente</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/magical-heyrovsky">
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
