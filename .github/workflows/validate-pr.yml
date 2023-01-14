@@ -1,0 +1,90 @@
+# Checks that PR title conform to contributing standards (or at least !== Update README.md)
+name: ⛳ Validate PR
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+env:
+  BASE_MSG: >+
+    Thanks for contributing to Awesome-Privacy! Your pull request will be reviewed shortly.
+    
+    In the meantime, please be sure that you have read, and complied with the guidelines outlined in the
+    [Contributing Docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md).
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Validate Title is not Default
+      if: "contains(github.event.pull_request.title, 'Update README.md')"
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Hi @${{ github.actor }},
+          Please update your pull request, to include a more descriptive title.
+        
+    - name: Validate Checklist is Completed
+      if: >
+        contains(github.event.pull_request.body, '[ ]') ||
+        !(contains(github.event.pull_request.body, '[X]') || contains(github.event.pull_request.body, '[x]'))
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Hello @${{ github.actor }} 👋
+          ${{ env.BASE_MSG }}
+          ⚠️ It looks like you've not complete the quality and transparency checklist.
+        
+    - name: Validate Affiliation Section is Present
+      if: >
+        !contains(github.event.pull_request.body, 'Affiliation')
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Hello @${{ github.actor }} 👋
+          ${{ env.BASE_MSG }}
+          ⚠️ You must indicate if you are affiliated with any software modified by this PR.
+          If not applicable, you may set this field to N/A.       
+             
+    - name: Validate Category
+      if: >
+        contains(github.event.pull_request.body, 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Misc') ||
+        !(
+          contains(github.event.pull_request.body, 'Addition') ||
+          contains(github.event.pull_request.body, 'Amendment') ||
+          contains(github.event.pull_request.body, 'Removal') ||
+          contains(github.event.pull_request.body, 'Spelling or Grammar') ||
+          contains(github.event.pull_request.body, 'Website Update') ||
+          contains(github.event.pull_request.body, 'Misc')
+        )
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Hello @${{ github.actor }} 👋
+          ${{ env.BASE_MSG }}
+          ⚠️ You must specify a category
+          Either: `Addition`, `Amendment`, `Removal`, `Spelling or Grammar`, `Website Update`, or `Misc`. 
+        
+    - name: Validate Supporting Material is Present
+      if: >
+        !contains(github.event.pull_request.body, 'Supporting Material')
+      uses: peter-evans/create-or-update-comment@v2
+      with:
+        token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body: |
+          Hello @${{ github.actor }} 👋
+          ${{ env.BASE_MSG }}
+          ⚠️ If applicable, please ensure you've provided supporting material.
+          
+          

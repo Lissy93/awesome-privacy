@@ -1,0 +1,25 @@
+# Applies labels based on the pull request category
+name: 🏷️ PR Labeler
+on:
+  pull_request:
+    types: [opened, edited]
+jobs:
+  label-pr:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Apply Labels
+        if: "! contains(github.event.pull_request.body, 'Addition / Amendment / Removal / Spelling or Grammar / Website Update / Misc')"
+        uses: Naturalclar/issue-action@v2.0.2
+        with:
+          title-or-body: both
+          github-token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          parameters: >
+            [
+            {"keywords": ["Addition"], "labels": ["Addition"] },
+            {"keywords": ["Amendment"], "labels": ["Amendment"] },
+            {"keywords": ["Removal"], "labels": ["Removal"] },
+            {"keywords": ["Spelling or Grammar"], "labels": ["Grammar"] },
+            {"keywords": ["Website Update"], "labels": ["Website"] },
+            {"keywords": ["Misc"], "labels": ["Misc"] }
+            ]
