@@ -1169,7 +1169,7 @@ Note that credit card providers heavily track transaction metadata, which build 
 #### Notable Mentions
 Spreadsheets remain a popular choice for managing budgets and financial planning.  [Collabora](https://nextcloud.com/collaboraonline) or [OnlyOffice](https://nextcloud.com/onlyoffice) (on [NextCloud](https://nextcloud.com)), [Libre Office](https://www.libreoffice.org) and [EtherCalc](https://ethercalc.net) are popular open source spread sheet applications. [Mintable](https://github.com/kevinschaich/mintable) allows you to auto-populate your spreadsheets from your financial data, using publicly accessible API - mitigating the requirement for a dedicated budgeting application.
 
-Other notable open source budgeting applications include: [Smart Wallet](https://apps.apple.com/app/smart-wallet/id1378013954) (iOS), [My-Budget](https://rezach.github.io/my-budget) (Desktop), [MoneyManager EX](https://www.moneymanagerex.org), [Skrooge](https://skrooge.org), [kMyMoney](https://kmymoney.org)
+Other notable open source budgeting applications include: [Smart Wallet](https://apps.apple.com/app/smart-wallet/id1378013954) (iOS), [My-Budget](https://rezach.github.io/my-budget) (Desktop), [MoneyManager EX](https://www.moneymanagerex.org), [Skrooge](https://skrooge.org), [kMyMoney](https://kmymoney.org) and [Budget Zen](https://budgetzen.net) (a simple E2E encrypted budget manager)
 
 See Also: [Cryptocurrencies](#cryptocurrencies), [Virtual Credit Cards](#virtual-credit-cards) and [Other Payment Methods](#other-payment-methods)
 
