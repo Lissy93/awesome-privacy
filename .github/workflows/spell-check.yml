@@ -1,0 +1,20 @@
+# Spell check newly added content, when PR opened and, put typo list as comment
+name: ✏️ Spell Check
+on: [pull_request]
+jobs:
+  misspell:
+    name: runner / misspell
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Run Spell Check 📝
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          locale: US
+          level: info
+          reporter: github-pr-review
+          path: .
+          filter_mode: added
+          fail_on_error: false

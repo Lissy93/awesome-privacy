@@ -1,0 +1,40 @@
+# Checks newly opened issues contain enough info, and follow the required format
+name: 🎫 Issue Validator
+on:
+  issues:
+    types: [opened, edited]
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Check Default Title
+        if: "endsWith(github.event.issue.title, '<title>')"
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Please ensure that your ticket has an appropriate title
+      - name: Check Title Contains Categroy
+        if: "!(startsWith(github.event.issue.title, '[') && contains(github.event.issue.title, ']'))"
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Please ensure that your ticket's title is preceded with a category.
+            For example, `[ADDITION]`, `[AMENDMENT]`, `[REMOVAL]` or `[QUESTION]`.
+      - name: Check Quality Checklist
+        if: "contains(github.event.issue.body, '[ ]') || !(contains(github.event.issue.body, '[X]') || contains(github.event.issue.body, '[x]'))"
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Please ensure that you've followed the issue template fully.
+            It's important that you complete the quality & transparency checklist.
+
+
+            
+            

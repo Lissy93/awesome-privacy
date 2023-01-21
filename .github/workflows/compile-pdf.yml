@@ -1,0 +1,44 @@
+# Generates and saved a PDF document from the main markdown file
+# Easier to read on certain devices, or for users with accesibility needs
+
+name: 📁 Compile PDF Document
+on:
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 5 * * 6' # Every Saturday morning.
+jobs:
+  # Job #1 - Generate an embedded SVG asset, showing all contributors
+  compile-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Make PDF 📄
+        uses: baileyjm02/markdown-to-pdf@v1.1.0
+        with:
+          input_dir: .
+          output_dir: .github/assets/
+          build_pdf: true
+          build_html: false
+          table_of_contents: false
+      - name: Upload Artifact 📤
+        uses: actions/upload-artifact@v3
+        with:
+          name: awesome-privacy-pdf
+          path: .github/assets/README.pdf
+      - name: Commit file ✅
+        run: |
+          git config --local user.email "alicia-gh-bot@mail.as93.net"
+          git config --local user.name "liss-bot"
+          git add .github/assets/*.pdf
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Generate PDF file"
+          else
+            echo "Nothing to do"
+          fi
+      - name: Push changes ➡️
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+  
