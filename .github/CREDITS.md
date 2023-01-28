@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/iJasonWade">
+            <img src="https://avatars.githubusercontent.com/u/12824479?v=4" width="80;" alt="iJasonWade"/>
+            <br />
+            <sub><b>Jason Ash</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/PAPAMICA">
             <img src="https://avatars.githubusercontent.com/u/29079741?v=4" width="80;" alt="PAPAMICA"/>
             <br />
