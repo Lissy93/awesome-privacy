@@ -92,7 +92,7 @@
 <tr>
     <td align="center">
         <a href="https://github.com/iJasonWade">
-            <img src="https://avatars.githubusercontent.com/u/12824479?v=4" width="80;" alt="iJasonWade"/>
+            <img src="https://avatars.githubusercontent.com/u/12824479?u=8fa860e47bed4f84c8ff70cb2691d77edbb43d8f&v=4" width="80;" alt="iJasonWade"/>
             <br />
             <sub><b>Jason Ash</b></sub>
         </a>
@@ -192,6 +192,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/AlexOgden">
+            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
+            <br />
+            <sub><b>Alex Ogden</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
             <br />
@@ -206,32 +213,25 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/AlexOgden">
-            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
+        <a href="https://github.com/GhoulBoii">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
             <br />
-            <sub><b>Alex Ogden</b></sub>
+            <sub><b>GhoulBoi69</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/AshboDev">
             <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
             <br />
             <sub><b>Ash Scott</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BrunoBernardino">
             <img src="https://avatars.githubusercontent.com/u/1239616?v=4" width="80;" alt="BrunoBernardino"/>
             <br />
             <sub><b>Bruno Bernardino</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/GhoulBoii">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
-            <br />
-            <sub><b>GhoulBoi69</b></sub>
         </a>
     </td>
     <td align="center">
