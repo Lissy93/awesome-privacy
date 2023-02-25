@@ -105,6 +105,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/DRXAquosus">
+            <img src="https://avatars.githubusercontent.com/u/45409262?v=4" width="80;" alt="DRXAquosus"/>
+            <br />
+            <sub><b>DRXAquosus</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/ratty222">
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
             <br />
@@ -156,8 +163,8 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ltGuillaume">
-            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltGuillaume"/>
+        <a href="https://github.com/ltguillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
             <br />
             <sub><b>Guillaume</b></sub>
         </a>
@@ -285,20 +292,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ZhymabekRoman">
+            <img src="https://avatars.githubusercontent.com/u/61125068?v=4" width="80;" alt="ZhymabekRoman"/>
+            <br />
+            <sub><b>Zhymabek Roman</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Alex</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
