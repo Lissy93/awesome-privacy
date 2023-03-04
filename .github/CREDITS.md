@@ -91,6 +91,13 @@
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/iJasonWade">
+            <img src="https://avatars.githubusercontent.com/u/12824479?u=8fa860e47bed4f84c8ff70cb2691d77edbb43d8f&v=4" width="80;" alt="iJasonWade"/>
+            <br />
+            <sub><b>Jason Ash</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/PAPAMICA">
             <img src="https://avatars.githubusercontent.com/u/29079741?v=4" width="80;" alt="PAPAMICA"/>
             <br />
@@ -98,10 +105,10 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/shadowking001">
-            <img src="https://avatars.githubusercontent.com/u/43928955?u=a00b44f22e5a82234d9b406ac048def1fbc16e31&v=4" width="80;" alt="shadowking001"/>
+        <a href="https://github.com/DRXAquosus">
+            <img src="https://avatars.githubusercontent.com/u/45409262?v=4" width="80;" alt="DRXAquosus"/>
             <br />
-            <sub><b>LawrenceP.</b></sub>
+            <sub><b>DRXAquosus</b></sub>
         </a>
     </td>
     <td align="center">
@@ -156,8 +163,8 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ltGuillaume">
-            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltGuillaume"/>
+        <a href="https://github.com/ltguillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
             <br />
             <sub><b>Guillaume</b></sub>
         </a>
@@ -185,6 +192,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/AlexOgden">
+            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
+            <br />
+            <sub><b>Alex Ogden</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
             <br />
@@ -199,32 +213,25 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/AlexOgden">
-            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
+        <a href="https://github.com/GhoulBoii">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
             <br />
-            <sub><b>Alex Ogden</b></sub>
+            <sub><b>GhoulBoi69</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/AshboDev">
             <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
             <br />
             <sub><b>Ash Scott</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BrunoBernardino">
             <img src="https://avatars.githubusercontent.com/u/1239616?v=4" width="80;" alt="BrunoBernardino"/>
             <br />
             <sub><b>Bruno Bernardino</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/GhoulBoii">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
-            <br />
-            <sub><b>GhoulBoi69</b></sub>
         </a>
     </td>
     <td align="center">
@@ -285,20 +292,27 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ZhymabekRoman">
+            <img src="https://avatars.githubusercontent.com/u/61125068?v=4" width="80;" alt="ZhymabekRoman"/>
+            <br />
+            <sub><b>Zhymabek Roman</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Alex</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -427,7 +441,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
         <a href="https://github.com/pndyjack">
             <img src="https://avatars.githubusercontent.com/u/20967911?v=4" width="80;" alt="pndyjack"/>
             <br />
-            <sub><b>Jaimin</b></sub>
+            <sub><b>Pndyjack</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -467,13 +481,20 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/hypogram">
+            <img src="https://avatars.githubusercontent.com/u/122231081?v=4" width="80;" alt="hypogram"/>
+            <br />
+            <sub><b>Hypogram</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/marjamis">
             <img src="https://avatars.githubusercontent.com/u/10202014?v=4" width="80;" alt="marjamis"/>
             <br />
             <sub><b>Marjamis</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/rusty-snake">
             <img src="https://avatars.githubusercontent.com/u/41237666?v=4" width="80;" alt="rusty-snake"/>
@@ -508,15 +529,15 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Adv4n6</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/andydonzelli">
             <img src="https://avatars.githubusercontent.com/u/6990701?v=4" width="80;" alt="andydonzelli"/>
             <br />
             <sub><b>Andy Donzelli</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/austinhuang0131">
             <img src="https://avatars.githubusercontent.com/u/16656689?v=4" width="80;" alt="austinhuang0131"/>
@@ -551,20 +572,27 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Christian Hemminghaus</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/DaShoe">
             <img src="https://avatars.githubusercontent.com/u/89014564?v=4" width="80;" alt="DaShoe"/>
             <br />
             <sub><b>DaShoe</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/danielgtaylor">
             <img src="https://avatars.githubusercontent.com/u/106826?v=4" width="80;" alt="danielgtaylor"/>
             <br />
             <sub><b>Daniel G. Taylor</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/dim1119">
+            <img src="https://avatars.githubusercontent.com/u/10008788?v=4" width="80;" alt="dim1119"/>
+            <br />
+            <sub><b>Dimitris Lazarakis</b></sub>
         </a>
     </td>
     <td align="center">
@@ -585,9 +613,10 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
         <a href="https://github.com/Z4rak">
             <img src="https://avatars.githubusercontent.com/u/65371336?v=4" width="80;" alt="Z4rak"/>
             <br />
-            <sub><b>Z4rak</b></sub>
+            <sub><b>Felipe</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/fkohrt">
             <img src="https://avatars.githubusercontent.com/u/12914806?v=4" width="80;" alt="fkohrt"/>
@@ -601,8 +630,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Freddy</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/hw4n">
             <img src="https://avatars.githubusercontent.com/u/38372575?v=4" width="80;" alt="hw4n"/>
@@ -630,7 +658,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Gemini Smith</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/monkeywithacupcake">
             <img src="https://avatars.githubusercontent.com/u/7316730?v=4" width="80;" alt="monkeywithacupcake"/>
@@ -644,8 +673,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>John Karahalis</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/edelbluth">
             <img src="https://avatars.githubusercontent.com/u/4939388?v=4" width="80;" alt="edelbluth"/>
@@ -673,7 +701,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Kazuki Koide</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Kotbenek">
             <img src="https://avatars.githubusercontent.com/u/64036903?v=4" width="80;" alt="Kotbenek"/>
@@ -687,8 +716,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Leon Costa</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/lukecarr">
             <img src="https://avatars.githubusercontent.com/u/24438483?v=4" width="80;" alt="lukecarr"/>
@@ -716,7 +744,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Nick Ali</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Oymate">
             <img src="https://avatars.githubusercontent.com/u/50857856?v=4" width="80;" alt="Oymate"/>
@@ -730,8 +759,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Pedro Delfino</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/sjamaan">
             <img src="https://avatars.githubusercontent.com/u/128536?v=4" width="80;" alt="sjamaan"/>
@@ -759,7 +787,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Silvhr</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/spikecodes">
             <img src="https://avatars.githubusercontent.com/u/19519553?v=4" width="80;" alt="spikecodes"/>
@@ -773,8 +802,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Thomas Rettig</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/tim-v3">
             <img src="https://avatars.githubusercontent.com/u/103248132?v=4" width="80;" alt="tim-v3"/>
@@ -802,7 +830,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Eric Lesiuta</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/fireneat">
             <img src="https://avatars.githubusercontent.com/u/95147296?v=4" width="80;" alt="fireneat"/>
@@ -816,8 +845,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Ignoramous</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kevodwyer">
             <img src="https://avatars.githubusercontent.com/u/5311499?v=4" width="80;" alt="kevodwyer"/>
@@ -845,7 +873,8 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Pabloscloud</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/partoneoftwo">
             <img src="https://avatars.githubusercontent.com/u/1677630?v=4" width="80;" alt="partoneoftwo"/>
@@ -859,8 +888,7 @@ _Awesome-Privacy originated from [Personal-Security-Checklist](https://github.co
             <br />
             <sub><b>Pipboy96</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/theblackmallard">
             <img src="https://avatars.githubusercontent.com/u/42389961?v=4" width="80;" alt="theblackmallard"/>
