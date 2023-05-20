@@ -106,9 +106,9 @@
     </td>
     <td align="center">
         <a href="https://github.com/baifengheixi">
-            <img src="https://avatars.githubusercontent.com/u/98794233?v=4" width="80;" alt="baifengheixi"/>
+            <img src="https://avatars.githubusercontent.com/u/98794233?u=73763035da00be68ea05f3a577b96e47784bd748&v=4" width="80;" alt="baifengheixi"/>
             <br />
-            <sub><b>baifengheixi</b></sub>
+            <sub><b>Baifengheixi</b></sub>
         </a>
     </td></tr>
 </table>
@@ -271,6 +271,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/spignelon">
+            <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
+            <br />
+            <sub><b>Ujjawal Saini</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
             <br />
@@ -283,15 +290,15 @@
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Alex</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
@@ -325,13 +332,6 @@
             <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
             <br />
             <sub><b>Pavan</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/pnxdxt">
-            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnxdxt"/>
-            <br />
-            <sub><b>Pnxdxt</b></sub>
         </a>
     </td></tr>
 </table>
