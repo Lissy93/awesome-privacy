@@ -19,6 +19,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/shrippen">
+            <img src="https://avatars.githubusercontent.com/u/2873570?v=4" width="80;" alt="shrippen"/>
+            <br />
+            <sub><b>shrippen</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/davidpaulyoung">
             <img src="https://avatars.githubusercontent.com/u/3418369?v=4" width="80;" alt="davidpaulyoung"/>
             <br />
@@ -38,15 +45,22 @@
             <br />
             <sub><b>Zach Biles</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/UlisesGascon">
             <img src="https://avatars.githubusercontent.com/u/5110813?u=3c41facd8aa26154b9451de237c34b0f78d672a5&v=4" width="80;" alt="UlisesGascon"/>
             <br />
             <sub><b>Ulises Gascón</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/digitalarche">
+            <img src="https://avatars.githubusercontent.com/u/6546135?v=4" width="80;" alt="digitalarche"/>
+            <br />
+            <sub><b>Digital Archeology</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/bmcgonag">
             <img src="https://avatars.githubusercontent.com/u/7346620?u=2a0f9284f3e12ac1cc15288c254d1ec68a5081e8&v=4" width="80;" alt="bmcgonag"/>
@@ -74,10 +88,11 @@
             <br />
             <sub><b>DRXAquosus</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Bastii717">
-            <img src="https://avatars.githubusercontent.com/u/53431819?v=4" width="80;" alt="Bastii717"/>
+            <img src="https://avatars.githubusercontent.com/u/53431819?u=dff9e241e6dbecbc283ee13486a2312cb3dd9784&v=4" width="80;" alt="Bastii717"/>
             <br />
             <sub><b>Bastii717</b></sub>
         </a>
@@ -88,8 +103,7 @@
             <br />
             <sub><b>Michaël</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/ratty222">
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
