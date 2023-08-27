@@ -75,7 +75,7 @@ body:
       options:
         - label: You have filled out this form accurately, and to the best of your knowledge
           required: true
-        - label: You have indicated weather or not you are associated with the suggested addition
+        - label: You have indicated whether or not you are associated with the suggested addition
           required: true
         - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
           required: true
