@@ -71,7 +71,7 @@ body:
     id: idiot-check
     attributes:
       label: Please tick the boxes
-      description: Before submitting, please ensure that:
+      description: 'Before submitting, please ensure that:'
       options:
         - label: You have filled out this form accurately, and to the best of your knowledge
           required: true
