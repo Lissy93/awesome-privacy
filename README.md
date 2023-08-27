@@ -1456,7 +1456,7 @@ Community-maintained media software can help you migrate away from providers tha
 - Groupware: [SoGo](https://github.com/inverse-inc/sogo), [SuiteCRM](https://github.com/salesagility/SuiteCRM)
 - News Letters: [LewsNetter](https://github.com/bborn/lewsnetter), [PHP List](https://www.phplist.com), [Dada Mail](https://github.com/justingit/dada-mail)
 - Office Suites: [CryptPad](https://cryptpad.fr), [LibreOffice](https://www.libreoffice.org), [onlyoffice](https://github.com/ONLYOFFICE), [NextCloud](https://nextcloud.com)
-- Paste Bins: [Snibox](https://snibox.github.io), [PrivateBin](https://github.com/PrivateBin/PrivateBin), [0bin](https://github.com/sametmax/0bin), [Stikked](https://github.com/claudehohl/Stikked)
+- Paste Bins: [Snibox](https://snibox.github.io), [PrivateBin](https://github.com/PrivateBin/PrivateBin), [0bin](https://github.com/sametmax/0bin), [Stikked](https://github.com/claudehohl/Stikked), [Paaster](https://github.com/WardPearce/paaster)
 - Photo Managers: [PhotoPrism](https://photoprism.app/)
 - Search Engine: [Searx](https://searx.github.io/searx/)
 - Social Networks: [Mastodon](https://mastodon.social), [Pixelfed](https://pixelfed.org), [diaspora](https://diasporafoundation.org)
