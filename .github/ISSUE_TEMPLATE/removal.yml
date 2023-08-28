@@ -34,7 +34,7 @@ body:
     attributes:
       label: Association Disclosure
       description: >-
-        For transparency, please state if you currently/ previously have had any association with
+        For transparency, please state if you currently / previously have had any association with
         this project, or another project within a similar industry / category
       placeholder:
     validations:
