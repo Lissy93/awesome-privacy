@@ -23,7 +23,7 @@ body:
       label: Amendments
       description: |
         Please describe what amendments should be made.
-        Where required, link to relevant info from reputable sources to help with fact checking. 
+        When required, link to relevant info from reputable sources to help with fact checking. 
       placeholder: 
     validations:
       required: true
@@ -34,7 +34,7 @@ body:
     attributes:
       label: Association Disclosure
       description: >-
-        For transparency, please state if you currently/ previously have had any association with
+        For transparency, please state if you currently / previously have had any association with
         this project.
       placeholder:
     validations:
@@ -58,13 +58,13 @@ body:
     id: idiot-check
     attributes:
       label: Please tick the boxes
-      description: Before submitting, please ensure that
+      description: "Before submitting, please ensure that:"
       options:
         - label: You have filled out this form accurately, and to the best of your knowledge
           required: true
-        - label: You have indicated weather or not you are associated with the project the amendment refers to
+        - label: You have indicated whether or not you are associated with the project the amendment refers to
           required: true
-        - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
+        - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software / service
           required: true
         - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true

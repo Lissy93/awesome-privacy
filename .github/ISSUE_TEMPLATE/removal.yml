@@ -34,7 +34,7 @@ body:
     attributes:
       label: Association Disclosure
       description: >-
-        For transparency, please state if you currently/ previously have had any association with
+        For transparency, please state if you currently / previously have had any association with
         this project, or another project within a similar industry / category
       placeholder:
     validations:
@@ -58,11 +58,11 @@ body:
     id: idiot-check
     attributes:
       label: Please tick the boxes
-      description: Before submitting, please ensure that
+      description: "Before submitting, please ensure that:"
       options:
         - label: You have filled out this form accurately, and to the best of your knowledge
           required: true
-        - label: You have indicated weather or not you are associated with this project or a competitor
+        - label: You have indicated whether or not you are associated with this project or a competitor
           required: true
         - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
           required: true

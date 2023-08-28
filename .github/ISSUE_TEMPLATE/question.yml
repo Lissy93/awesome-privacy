@@ -1,5 +1,5 @@
 name: Question
-description: Ask a question, related to this list or it's content
+description: Ask a question, related to this list or its content
 title: '[QUESTION] <title>'
 labels: ['Question']
 assignees:
@@ -19,11 +19,11 @@ body:
     id: idiot-check
     attributes:
       label: Please tick the boxes
-      description: Before submitting, please ensure that
+      description: "Before submitting, please ensure that:"
       options:
         - label: You have filled out this form accurately, and to the best of your knowledge
           required: true
-        - label: A similar question has not already [been asked](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
+        - label: A similar question has not already [been asked](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software / service
           required: true
         - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
