@@ -22,7 +22,7 @@
         <a href="https://github.com/shrippen">
             <img src="https://avatars.githubusercontent.com/u/2873570?v=4" width="80;" alt="shrippen"/>
             <br />
-            <sub><b>shrippen</b></sub>
+            <sub><b>Shrippen</b></sub>
         </a>
     </td>
     <td align="center">
@@ -56,7 +56,7 @@
     </td>
     <td align="center">
         <a href="https://github.com/digitalarche">
-            <img src="https://avatars.githubusercontent.com/u/6546135?v=4" width="80;" alt="digitalarche"/>
+            <img src="https://avatars.githubusercontent.com/u/6546135?u=a1a724d38ee1eba2d2d315495d482256312affe8&v=4" width="80;" alt="digitalarche"/>
             <br />
             <sub><b>Digital Archeology</b></sub>
         </a>
@@ -95,13 +95,6 @@
             <img src="https://avatars.githubusercontent.com/u/53431819?u=dff9e241e6dbecbc283ee13486a2312cb3dd9784&v=4" width="80;" alt="Bastii717"/>
             <br />
             <sub><b>Bastii717</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/MikaPST">
-            <img src="https://avatars.githubusercontent.com/u/56961056?u=3da81a03cbe66a03bbb4afbf2751d71b7a94e28f&v=4" width="80;" alt="MikaPST"/>
-            <br />
-            <sub><b>Michaël</b></sub>
         </a>
     </td>
     <td align="center">
@@ -192,6 +185,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/gabrielvicenteYT">
+            <img src="https://avatars.githubusercontent.com/u/68158102?v=4" width="80;" alt="gabrielvicenteYT"/>
+            <br />
+            <sub><b>Coccocoa's Helper</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
             <br />
@@ -204,15 +204,15 @@
             <br />
             <sub><b>Slade991</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/GhoulBoii">
             <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
             <br />
             <sub><b>GhoulBoi69</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/AshboDev">
             <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
@@ -247,15 +247,15 @@
             <br />
             <sub><b>James Cridland</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/EgosOwn">
             <img src="https://avatars.githubusercontent.com/u/47700879?v=4" width="80;" alt="EgosOwn"/>
             <br />
             <sub><b>Kevin F</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/plplmax">
             <img src="https://avatars.githubusercontent.com/u/50287455?v=4" width="80;" alt="plplmax"/>
@@ -285,6 +285,14 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/WardPearce">
+            <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
+            <br />
+            <sub><b>Ward</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
             <br />
@@ -297,8 +305,7 @@
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
@@ -325,20 +332,6 @@
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
             <br />
             <sub><b>Kolaente</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/magical-heyrovsky">
-            <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
-            <br />
-            <sub><b>Magical-heyrovsky</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mrpavan">
-            <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
-            <br />
-            <sub><b>Pavan</b></sub>
         </a>
     </td></tr>
 </table>
