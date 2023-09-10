@@ -29,10 +29,10 @@
   - [P2P 通信](#P2P通信（点对点通信）)
   - [加密电子邮件](#加密电子邮件)
   - [邮箱客户端](#邮箱客户端)
-  - [Anonymous Mail Forwarding](#anonymous-mail-forwarding)
-  - [Email Security Tools](#email-security-tools)
-  - [VOIP Clients](#voip-clients)
-  - [Virtual Phone Numbers](#virtual-phone-numbers)
+  - [匿名邮件转发](#匿名邮件转发)
+  - [邮件安全工具](#邮件安全工具)
+  - [VOIP 客户端](#VOIP 客户端)
+  - [虚拟手机号](#虚拟手机号)
   - [Team Collaboration Platforms](#team-collaboration-platforms)
 - **Security Tools**
   - [Browser Extensions](#browser-extensions)
@@ -275,11 +275,11 @@ PGP 可能对加密单个文件和文件夹、准备文件传输或为敏感数�
 
 | 服务提供者 | 简介 |
 | --- | --- |
-| **[ProtonMail](https://protonmail.com/)**           | ProtonMail 是一个开源的端到端加密匿名电子邮件服务。ProtonMail 具有现代化、易于使用和可自定义的用户界面，以及快速、安全的原生移动应用程序。ProtonMail 具备现代电子邮件服务的所有功能，基于简洁性而不牺牲安全性。它提供免费订阅以及高级选项，可使用自定义域名（起价每月 5 美元）。ProtonMail 在注册时不需要个人身份信息，他们还有一个.onion 服务器，可通过 Tor 访问，并接受匿名付款：比特币和现金（以及常规信用卡和 PayPal）。 |
-| **[Tutanota](https://tutanota.com/)**               | 德国的免费开源电子邮件服务。它具有基本的直观的用户界面、安全的原生移动应用、匿名注册和一个.onion 网站。Tutanota 提供功能齐全的免费订阅，以及用于企业的高级订阅，允许使用自定义域名（每月 12 美元）。Tutanota 与大多数加密邮件提供商不使用 OpenPGP，而是使用标准化的混合方法，包括对称和非对称算法（128 位 AES 和 2048 位 RSA）。这在与使用 PGP 的联系人进行通信时会导致兼容性问题。但它确实允许加密更多的标头数据（正文、附件、主题行和发件人姓名等），而 PGP 邮件提供商无法做到这一点。 |
-| **[Mailfence](https://mailfence.com?src=digitald)** | Mailfence 支持 OpenPGP，因此您可以独立于 Mailfence 服务器手动交换加密密钥，完全掌控加密过程。Mailfence 具有类似 Outlook 的简单用户界面，并附带日历、通讯录和文件功能。所有邮件设置都可以高度自定义，同时仍然清晰易用。注册不是匿名的，因为需要您的姓名和先前的电子邮件地址。有一个功能齐全的免费订阅，或者您可以订阅高级版，并使用自定义域名（每月 2.50 美元，或每月 7.50 美元，适用于 5 个域名），接受比特币、LiteCoin 或信用卡付款。 |
-| **[MailBox.org](https://mailbox.org/)**             | 总部位于柏林的环保、安全电子邮件提供商。没有免费订阅，标准服务费用为 12 欧元/年。您可以使用自己的域名，并选择使用 [Catch-All 邮箱别名](https://kb.mailbox.org/display/MBOKBEN/Using+catch-all+alias+with+own+domain)。他们提供良好的帐户安全性和电子邮件加密，使用 OpenPGP，以及加密存储。没有专用应用程序，但它可以与任何标准的带有 SSL 的邮件客户端很好地配合使用。目前还没有匿名付款选项。 |
-| **[Skiff](https://skiff.com/)**                     | 端到端加密的开源隐私优先电子邮件，还集成了 Web3 功能，如加密钱包和分散存储。Skiff 具有简单直观的用户界面，在 iOS 和 Android 上支持 [移动应用程序](https://skiff.com/download)，注册或创建帐户时不需要个人身份信息。Skiff 提供专业版订阅，提供额外的存储空间、别名、自定义域名等功能，每月收费 8 美元，可使用信用卡或加密钱包付款。 |
+| **[ProtonMail](https://protonmail.com/)**           | ProtonMail 是一个开源的端到端加密匿名电子邮件服务。ProtonMail 具有现代化、易于使用和可自定义的用户界面，以及快速、安全的原生移动应用程序。ProtonMail 具备现代电子邮件服务的所有功能，基于简洁性而不牺牲安全性。它提供免费计划以及高级选项，可使用自定义域名（起价每月 5 美元）。ProtonMail 在注册时不需要个人身份信息，他们还有一个.onion 服务器，可通过 Tor 访问，并接受匿名付款：比特币和现金（以及常规信用卡和 PayPal）。 |
+| **[Tutanota](https://tutanota.com/)**               | 德国的免费开源电子邮件服务。它具有基本的直观的用户界面、安全的原生移动应用、匿名注册和一个.onion 网站。Tutanota 提供功能齐全的免费计划，以及用于企业的高级计划，允许使用自定义域名（每月 12 美元）。Tutanota 与大多数加密邮件提供商不使用 OpenPGP，而是使用标准化的混合方法，包括对称和非对称算法（128 位 AES 和 2048 位 RSA）。这在与使用 PGP 的联系人进行通信时会导致兼容性问题。但它确实允许加密更多的标头数据（正文、附件、主题行和发件人姓名等），而 PGP 邮件提供商无法做到这一点。 |
+| **[Mailfence](https://mailfence.com?src=digitald)** | Mailfence 支持 OpenPGP，因此您可以独立于 Mailfence 服务器手动交换加密密钥，完全掌控加密过程。Mailfence 具有类似 Outlook 的简单用户界面，并附带日历、通讯录和文件功能。所有邮件设置都可以高度自定义，同时仍然清晰易用。注册不是匿名的，因为需要您的姓名和先前的电子邮件地址。有一个功能齐全的免费计划，或者您可以计划高级版，并使用自定义域名（每月 2.50 美元，或每月 7.50 美元，适用于 5 个域名），接受比特币、LiteCoin 或信用卡付款。 |
+| **[MailBox.org](https://mailbox.org/)**             | 总部位于柏林的环保、安全电子邮件提供商。没有免费计划，标准服务费用为 12 欧元/年。您可以使用自己的域名，并选择使用 [Catch-All 邮箱别名](https://kb.mailbox.org/display/MBOKBEN/Using+catch-all+alias+with+own+domain)。他们提供良好的帐户安全性和电子邮件加密，使用 OpenPGP，以及加密存储。没有专用应用程序，但它可以与任何标准的带有 SSL 的邮件客户端很好地配合使用。目前还没有匿名付款选项。 |
+| **[Skiff](https://skiff.com/)**                     | 端到端加密的开源隐私优先电子邮件，还集成了 Web3 功能，如加密钱包和分散存储。Skiff 具有简单直观的用户界面，在 iOS 和 Android 上支持 [移动应用程序](https://skiff.com/download)，注册或创建帐户时不需要个人身份信息。Skiff 提供专业版计划，提供额外的存储空间、别名、自定义域名等功能，每月收费 8 美元，可使用信用卡或加密钱包付款。 |
 
 有关更多详细信息，请参阅 [OpenTechFund - Secure Email](https://github.com/OpenTechFund/secure-email)。
 
@@ -315,47 +315,47 @@ If you do not want to trust an email provider with your messages, you can host y
 #### 警告
 邮件客户端的一个缺点是，许多客户端不支持双重身份验证（2FA），因此保护设备的安全性和加密很重要。
 
-## Anonymous Mail Forwarding
+## 匿名邮件转发
 
-Revealing your real email address online can put you at risk. Email aliasing allows messages to be sent to [anything]@my-domain.com and still land in your primary inbox. This protects your real email address from being revealed. Aliases are generated automatically, the first time they are used. This approach lets you identify which provider leaked your email address, and block an alias with 1-click.
+在网上透露您真实的电子邮件地址可能会使您面临风险。电子邮件别名允许将消息发送到 [anything]@my-domain.com，而这些消息仍然会进入您的主要收件箱。这样可以保护您的真实电子邮件地址不被泄露。别名会在首次使用时自动生成。这种方法可以让您确定是哪个提供商泄露了您的电子邮件地址，并且可以通过一次点击来暂停别名的使用。
 
-| Provider | Description |
+| 提供商                                                       | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **[Anonaddy](https://anonaddy.com)**                         | 一个开源的匿名电子邮件转发服务，允许您创建无限的电子邮件别名。有免费计划。 |
+| **[33Mail](http://33mail.com/Dg0gkEA)**                      | 一个历史悠久的别名服务。除了接收邮件外，33Mail 还允许您匿名回复转发的地址。有免费计划，以及如果您想使用自定义域名的话，还有高级计划（每月 1 美元）。 |
+| **[SimpleLogin](https://simplelogin.io?slref=bridsqrgvrnavso)** | 完全开源的别名服务，拥有许多附加功能。可以自行托管，或者使用托管的版本有免费计划，以及使用自定义域名的托管高级选项（每月 2.99 美元）。 |
+| **[Firefox Private Relay](https://relay.firefox.com)**       | 由 Mozilla 开发和管理的 Firefox 插件，可让您通过一次点击创建电子邮件别名，并将所有消息转发到您的个人电子邮件。Relay 完全免费使用，非常适合经验较少的用户，同时也是 [开源的](https://github.com/mozilla/fx-private-relay)，并且可以自行托管以进行高级用途。 |
+| **[ForwardEmail](https://forwardemail.net)**                 | 简单的开源全能邮件转发服务。易于自行托管（在 [GitHub 上查看](https://github.com/forwardemail/free-email-forwarding)），或者托管版本有免费计划以及高级计划（每月 3 美元）。 |
+| **[ProtonMail](https://protonmail.com/pricing)（专业版或更高版本）** | 如果您已经拥有 ProtonMail 的专业版（8 欧元/月）或 Visionary 版（30 欧元/月），则可以通过 Catch-All Email 功能来实现此功能。 |
+
+或者，您可以自己托管全能邮件服务。[Mailu](https://github.com/Mailu/Mailu) 可以配置为接受通配符，或者对于 Microsoft Exchange，请参阅 [exchange-catchall](https://github.com/Pro/exchange-catchall)。
+
+#### 小提示
+[mailhero.io](https://mailhero.io) 是一个小型服务，它没有内置的加密功能，因此您需要使用 PGP，但它是免费的。
+
+## 邮件安全工具
+
+| 服务提供者 | 简介 |
 | --- | --- |
-**[Anonaddy](https://anonaddy.com)** | An open source anonymous email forwarding service, allowing you to create unlimited email aliases. Has a free plan.
-**[33Mail](http://33mail.com/Dg0gkEA)** | A long-standing aliasing service. As well as receiving, 33Mail also lets you reply to forwarded addresses anonymously. Free plan, as well as Premium plan ($1/ month) if you'd like to use a custom domain 
-**[SimpleLogin](https://simplelogin.io?slref=bridsqrgvrnavso)** | Fully open source (view on [GitHub](https://github.com/simple-login)) allias service with many additional features. Can be self-hosted, or the managed version has a free plan, as well as hosted premium option ($2.99/ month) for using custom domains
-**[Firefox Private Relay](https://relay.firefox.com)** | Developed and managed by Mozilla, Relay is a Firefox addon, that lets you make an email alias with 1 click, and have all messages forwarded onto your personal email. Relay is totally free to use, and very accessible to less experienced users, but also [open source](https://github.com/mozilla/fx-private-relay), and able to me self-hosted for advanced usage
-**[ForwardEmail](https://forwardemail.net)** | Simple open source catch-all email forwarding service. Easy to self-host (see on [GitHub](https://github.com/forwardemail/free-email-forwarding)), or the hosted version has a free plan as well as a ($3/month) premium plan
-**[ProtonMail](https://protonmail.com/pricing) (Professional plan or higher)** | If you already have ProtonMail's Professional (€ 8/month) or Visionary (€ 30/month) package, then an implementation of this feature is available via the Catch-All Email feature.
+|**[Enigmail](https://www.enigmail.net)** | 邮件客户端附加组件，使用 OpenPGP 轻松加密、解密、验证和签署电子邮件。Enigmail 是免费且开源的，与 Interlink Mail ＆ News 和 Postbox 兼容。他们的网站提供详尽的文档和快速入门指南，一旦设置完成，使用起来非常方便。 |
+|**[Email Privacy Tester](https://www.emailprivacytester.com/)** | 快速工具，可以测试您的邮件客户端在您打开邮件之前是否“读取”您的邮件，并检查您的邮件客户端允许发送给发件人的哪些分析数据、已读回执或其他跟踪数据。这个系统是开源的（[在 GitLab 上](https://gitlab.com/mikecardwell/ept3)），可信的，由 [Mike Cardwell](https://www.grepular.com/) 开发，但如果您不想使用真实的电子邮件，可以创建一个与同一提供商的第二个帐户，应该会得到相同的结果。 |
+|**[DKIM Verifier](https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/?collection_id=a5557f08-eafd-7a39-81c6-09127da790f7)** | 验证 DKIM 签名并在电子邮件头中显示结果，以帮助发现伪造的邮件（不来自它们声称的域）。 |
 
-Alternatively you could host your own catch-all email service. [Mailu](https://github.com/Mailu/Mailu) can be configured to accept wildcards, or for Microsoft Exchange see [exchange-catchall](https://github.com/Pro/exchange-catchall)
+#### 小提示
+如果您正在使用 ProtonMail，那么 [ProtonMail Bridge](https://protonmail.com/bridge/thunderbird) 可以让您将电子邮件同步到您自己的桌面邮件客户端。它与 Thunderbird、Microsoft Outlook 和其他客户端配合良好。
 
-#### Notable Mentions
-[mailhero.io](https://mailhero.io) is a smaller service, it does not have built-in encryption, so you will need to use PGP, but it is free.
+## VOIP 客户端
 
-## Email Security Tools
-
-| Provider | Description |
+| 服务提供者 | 简介 |
 | --- | --- |
-**[Enigmail](https://www.enigmail.net)** | Mail client add-on, enabling the use of OpenPGP to easily encrypt, decrypt, verify and sign emails. Free and open source, Enigmail is compatible with Interlink Mail & News and Postbox. Their website contains thorough documentation and quick-start guides, once set up it is extremely convenient to use.
-**[Email Privacy Tester](https://www.emailprivacytester.com/)** | Quick tool, that enables you to test whether your mail client "reads" your emails before you've opened them, and also checks what analytics, read-receipts or other tracking data your mail client allows to be sent back to the sender. The system is open source ([on GitLab](https://gitlab.com/mikecardwell/ept3)), developed by [Mike Cardwell](https://www.grepular.com/) and trusted, but if you do not want to use your real email, creating a second account with the same provider, should yield identical results
-**[DKIM Verifier](https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/?collection_id=a5557f08-eafd-7a39-81c6-09127da790f7)** | Verifies DKIM signatures and shows the result in the e-mail header, in order to help spot spoofed emails (which do not come from the domain that they claim to)
+|**[Mumble](https://github.com/mumble-voip/mumble)** | 开源的、低延迟、高质量的语音聊天软件。您可以托管自己的服务器，或使用托管的实例，它支持 Windows、MacOS 和 Linux 的客户端应用程序，以及 Android 和 iOS 的第三方应用程序。 |
+|**[Linphone](https://www.linphone.org)** | 开源的音频、视频和即时通讯群组，具有端到端加密和内置媒体服务器。基于 [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)，正在发展为 [RCS](https://en.wikipedia.org/wiki/Rich_Communication_Services)。原生应用程序适用于 Android、iOS、Windows、GNU/Linux 和 MacOS。 |
 
-#### Notable Mentions
-If you are using ProtonMail, then the [ProtonMail Bridge](https://protonmail.com/bridge/thunderbird) enables you to sync your emails to your own desktop mail client. It works well with Thunderbird, Microsoft Outlook and others
+#### 小提示
+[SpoofCard](https://www.spoofcard.com/) 可以让您进行匿名电话呼叫和留言，但它不是开源的，并且关于安全性的信息有限（请避免发送任何敏感信息）。
+[MicroSip](https://www.microsip.org/) 是一个基于 PJSIP 堆栈的开源便携式 Windows SIP 软件电话。
 
-## VOIP Clients
-
-| Provider | Description |
-| --- | --- |
-**[Mumble](https://github.com/mumble-voip/mumble)** | Open source, low-latency, high quality voice chat software. You can host your own server, or use a hosted instance, there are client applications for Windows, MacOS and Linux as well as third-party apps for Android and iOS.
-**[Linphone](https://www.linphone.org)** | Open source audio, video and IM groups with E2E encryption and built-in media server. [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol)-based evolving to [RCS](https://en.wikipedia.org/wiki/Rich_Communication_Services). Native apps for Android, iOS, Windows, GNU/Linux and MacOS
-
-#### Notable Mentions
-[SpoofCard](https://www.spoofcard.com) lets you make anonymous phone calls + voicemail, but not open source and limited information on security (avoid sending any secure info).
-[MicroSip](https://www.microsip.org/) is an open source portable SIP softphone for Windows based on PJSIP stack
-
-## Virtual Phone Numbers
+## 虚拟手机号
 
 | Provider | Description |
 | --- | --- |
