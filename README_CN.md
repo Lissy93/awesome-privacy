@@ -293,9 +293,6 @@ PGP 可能对加密单个文件和文件夹、准备文件传输或为敏感数�
 OpenPGP 也不支持前向安全性，这意味着如果您或收件人的私钥被盗，所有使用该私钥加密的先前消息都将被暴露。您应该谨慎保管好您的私钥。
 
 ### 自托管电子邮件
-If you do not want to trust an email provider with your messages, you can host your own mail server. Without experience, this can be notoriously hard to correctly configure, especially when it comes to security. You may also find that cost, performance and features make it a less attractive option. If you do decide to go down this route, [Mail-in-a-box](https://mailinabox.email/), is an easy to deploy, open source mail server. It aims to promote decentralization, innovation, and privacy on the web, as well as have automated, auditable, and idempotent system configuration. Other ready-to-go self-hosted mail options include [Mailu](https://mailu.io/1.7/) and [Mail Cow](https://mailcow.email/), both of which are docker containers.
-
-
 如果您不信任电子邮件提供者，可以自行托管邮件服务器。如果没有经验，正确配置邮件服务器可能会非常困难，尤其是在涉及到安全性方面。您可能会发现成本、性能和功能使其变得不太吸引人。如果您决定选择这个方案，[Mail-in-a-box](https://mailinabox.email/) 是一个易于部署的开源邮件服务器。它旨在促进 Web 上的去中心化、创新和隐私，并具有自动化、可审计和“幂等”系统配置。其他可用的自托管邮件选项包括 [Mailu](https://mailu.io/1.7/) 和 [Mail Cow](https://mailcow.email/)，它们都是 Docker 容器。
 
 ## 邮箱客户端
