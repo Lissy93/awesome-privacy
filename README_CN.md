@@ -24,16 +24,16 @@
   - [文件加密](#文件加密)
   - [私密浏览器](#浏览器)
   - [非跟踪搜索引擎](#搜索引擎)
-- **Communication**   
+- **通信交流**   
   - [加密消息](#加密消息)
   - [P2P 通信](#P2P通信（点对点通信）)
   - [加密电子邮件](#加密电子邮件)
   - [邮箱客户端](#邮箱客户端)
   - [匿名邮件转发](#匿名邮件转发)
   - [邮件安全工具](#邮件安全工具)
-  - [VOIP 客户端](#VOIP客户端)
+  - [VOIP客户端](#VOIP客户端)
   - [虚拟手机号](#虚拟手机号)
-  - [Team Collaboration Platforms](#team-collaboration-platforms)
+  - [团队协作平台](#团队协作平台)
 - **Security Tools**
   - [Browser Extensions](#browser-extensions)
   - [Mobile Apps](#mobile-apps)
@@ -275,11 +275,11 @@ PGP 可能对加密单个文件和文件夹、准备文件传输或为敏感数�
 
 | 服务提供者 | 简介 |
 | --- | --- |
-| **[ProtonMail](https://protonmail.com/)**           | ProtonMail 是一个开源的端到端加密匿名电子邮件服务。ProtonMail 具有现代化、易于使用和可自定义的用户界面，以及快速、安全的原生移动应用程序。ProtonMail 具备现代电子邮件服务的所有功能，基于简洁性而不牺牲安全性。它提供免费计划以及高级选项，可使用自定义域名（起价每月 5 美元）。ProtonMail 在注册时不需要个人身份信息，他们还有一个.onion 服务器，可通过 Tor 访问，并接受匿名付款：比特币和现金（以及常规信用卡和 PayPal）。 |
-| **[Tutanota](https://tutanota.com/)**               | 德国的免费开源电子邮件服务。它具有基本的直观的用户界面、安全的原生移动应用、匿名注册和一个.onion 网站。Tutanota 提供功能齐全的免费计划，以及用于企业的高级计划，允许使用自定义域名（每月 12 美元）。Tutanota 与大多数加密邮件提供商不使用 OpenPGP，而是使用标准化的混合方法，包括对称和非对称算法（128 位 AES 和 2048 位 RSA）。这在与使用 PGP 的联系人进行通信时会导致兼容性问题。但它确实允许加密更多的标头数据（正文、附件、主题行和发件人姓名等），而 PGP 邮件提供商无法做到这一点。 |
-| **[Mailfence](https://mailfence.com?src=digitald)** | Mailfence 支持 OpenPGP，因此您可以独立于 Mailfence 服务器手动交换加密密钥，完全掌控加密过程。Mailfence 具有类似 Outlook 的简单用户界面，并附带日历、通讯录和文件功能。所有邮件设置都可以高度自定义，同时仍然清晰易用。注册不是匿名的，因为需要您的姓名和先前的电子邮件地址。有一个功能齐全的免费计划，或者您可以计划高级版，并使用自定义域名（每月 2.50 美元，或每月 7.50 美元，适用于 5 个域名），接受比特币、LiteCoin 或信用卡付款。 |
-| **[MailBox.org](https://mailbox.org/)**             | 总部位于柏林的环保、安全电子邮件提供商。没有免费计划，标准服务费用为 12 欧元/年。您可以使用自己的域名，并选择使用 [Catch-All 邮箱别名](https://kb.mailbox.org/display/MBOKBEN/Using+catch-all+alias+with+own+domain)。他们提供良好的帐户安全性和电子邮件加密，使用 OpenPGP，以及加密存储。没有专用应用程序，但它可以与任何标准的带有 SSL 的邮件客户端很好地配合使用。目前还没有匿名付款选项。 |
-| **[Skiff](https://skiff.com/)**                     | 端到端加密的开源隐私优先电子邮件，还集成了 Web3 功能，如加密钱包和分散存储。Skiff 具有简单直观的用户界面，在 iOS 和 Android 上支持 [移动应用程序](https://skiff.com/download)，注册或创建帐户时不需要个人身份信息。Skiff 提供专业版计划，提供额外的存储空间、别名、自定义域名等功能，每月收费 8 美元，可使用信用卡或加密钱包付款。 |
+| **[ProtonMail](https://protonmail.com/)**           | ProtonMail 是一个开源的端到端加密匿名电子邮件服务。ProtonMail 具有现代化、易于使用和可自定义的用户界面，以及快速、安全的原生移动应用程序。ProtonMail 具备现代电子邮件服务的所有功能，基于简洁性而不牺牲安全性。它提供免费订阅以及高级选项，可使用自定义域名（起价每月 5 美元）。ProtonMail 在注册时不需要个人身份信息，他们还有一个.onion 服务器，可通过 Tor 访问，并接受匿名付款：比特币和现金（以及常规信用卡和 PayPal）。 |
+| **[Tutanota](https://tutanota.com/)**               | 德国的免费开源电子邮件服务。它具有基本的直观的用户界面、安全的原生移动应用、匿名注册和一个.onion 网站。Tutanota 提供功能齐全的免费订阅，以及用于企业的高级订阅，允许使用自定义域名（每月 12 美元）。Tutanota 与大多数加密邮件提供商不使用 OpenPGP，而是使用标准化的混合方法，包括对称和非对称算法（128 位 AES 和 2048 位 RSA）。这在与使用 PGP 的联系人进行通信时会导致兼容性问题。但它确实允许加密更多的标头数据（正文、附件、主题行和发件人姓名等），而 PGP 邮件提供商无法做到这一点。 |
+| **[Mailfence](https://mailfence.com?src=digitald)** | Mailfence 支持 OpenPGP，因此您可以独立于 Mailfence 服务器手动交换加密密钥，完全掌控加密过程。Mailfence 具有类似 Outlook 的简单用户界面，并附带日历、通讯录和文件功能。所有邮件设置都可以高度自定义，同时仍然清晰易用。注册不是匿名的，因为需要您的姓名和先前的电子邮件地址。有一个功能齐全的免费订阅，或者您可以订阅高级版，并使用自定义域名（每月 2.50 美元，或每月 7.50 美元，适用于 5 个域名），接受比特币、LiteCoin 或信用卡付款。 |
+| **[MailBox.org](https://mailbox.org/)**             | 总部位于柏林的环保、安全电子邮件提供商。没有免费订阅，标准服务费用为 12 欧元/年。您可以使用自己的域名，并选择使用 [Catch-All 邮箱别名](https://kb.mailbox.org/display/MBOKBEN/Using+catch-all+alias+with+own+domain)。他们提供良好的帐户安全性和电子邮件加密，使用 OpenPGP，以及加密存储。没有专用应用程序，但它可以与任何标准的带有 SSL 的邮件客户端很好地配合使用。目前还没有匿名付款选项。 |
+| **[Skiff](https://skiff.com/)**                     | 端到端加密的开源隐私优先电子邮件，还集成了 Web3 功能，如加密钱包和分散存储。Skiff 具有简单直观的用户界面，在 iOS 和 Android 上支持 [移动应用程序](https://skiff.com/download)，注册或创建帐户时不需要个人身份信息。Skiff 提供专业版订阅，提供额外的存储空间、别名、自定义域名等功能，每月收费 8 美元，可使用信用卡或加密钱包付款。 |
 
 有关更多详细信息，请参阅 [OpenTechFund - Secure Email](https://github.com/OpenTechFund/secure-email)。
 
@@ -293,6 +293,7 @@ PGP 可能对加密单个文件和文件夹、准备文件传输或为敏感数�
 OpenPGP 也不支持前向安全性，这意味着如果您或收件人的私钥被盗，所有使用该私钥加密的先前消息都将被暴露。您应该谨慎保管好您的私钥。
 
 ### 自托管电子邮件
+
 如果您不信任电子邮件提供者，可以自行托管邮件服务器。如果没有经验，正确配置邮件服务器可能会非常困难，尤其是在涉及到安全性方面。您可能会发现成本、性能和功能使其变得不太吸引人。如果您决定选择这个方案，[Mail-in-a-box](https://mailinabox.email/) 是一个易于部署的开源邮件服务器。它旨在促进 Web 上的去中心化、创新和隐私，并具有自动化、可审计和“幂等”系统配置。其他可用的自托管邮件选项包括 [Mailu](https://mailu.io/1.7/) 和 [Mail Cow](https://mailcow.email/)，它们都是 Docker 容器。
 
 ## 邮箱客户端
@@ -334,7 +335,7 @@ OpenPGP 也不支持前向安全性，这意味着如果您或收件人的私钥
 
 | 服务提供者 | 简介 |
 | --- | --- |
-|**[Enigmail](https://www.enigmail.net)** | 邮件客户端附加组件，使用 OpenPGP 轻松加密、解密、验证和签署电子邮件。Enigmail 是免费且开源的，与 Interlink Mail ＆ News 和 Postbox 兼容。他们的网站提供详尽的文档和快速入门指南，一旦设置完成，使用起来非常方便。 |
+|**[Enigmail](https://www.enigmail.net)** | 邮件客户端附加组件，使用 OpenPGP 轻松加密、解密、验证和签署电子邮件。Enigmail 是免费且开源的，与 Interlink Mail & News 和 Postbox 兼容。他们的网站提供详尽的文档和快速入门指南，一旦设置完成，使用起来非常方便。 |
 |**[Email Privacy Tester](https://www.emailprivacytester.com/)** | 快速工具，可以测试您的邮件客户端在您打开邮件之前是否“读取”您的邮件，并检查您的邮件客户端允许发送给发件人的哪些分析数据、已读回执或其他跟踪数据。这个系统是开源的（[在 GitLab 上](https://gitlab.com/mikecardwell/ept3)），可信的，由 [Mike Cardwell](https://www.grepular.com/) 开发，但如果您不想使用真实的电子邮件，可以创建一个与同一提供商的第二个帐户，应该会得到相同的结果。 |
 |**[DKIM Verifier](https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/?collection_id=a5557f08-eafd-7a39-81c6-09127da790f7)** | 验证 DKIM 签名并在电子邮件头中显示结果，以帮助发现伪造的邮件（不来自它们声称的域）。 |
 
@@ -354,32 +355,32 @@ OpenPGP 也不支持前向安全性，这意味着如果您或收件人的私钥
 
 ## 虚拟手机号
 
-| Provider | Description |
+| 服务提供者 | 简介 |
 | --- | --- |
-**[Silent.link](https://silent.link/)** | Anonymous eSIM for sending / receiving SMS, incoming calls and 4G / 5G internet + world-wide roaming. No data is required at sign-up. Affordable pricing, with payments and top-ups accepted in BTC. Requires an eSim-compatible device
-**[Crypton.sh](https://crypton.sh/)** | Physical SIM card in the cloud, for sending + receiving SMS messages. Messages are encrypted using your chosen private key. Includes a web interface, as well as an API for interacting with it from any device. Pricing is around € 7.00/month, and payment is accepted in BTC, XMR or credit card
-**[Jmp.chat](https://jmp.chat/)** | Phone number for incoming + outgoing calls and messages, provided by Soprani. Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at $2.99 / month. Only available in the US and Canada, as (as of 2022) the service is still in Beta
-**[MoneroSMS](https://monerosms.com)** | Anonymous SMS service able to activate accounts. Accessible over web, CLI, or email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
+|**[Silent.link](https://silent.link/)** | 匿名的 eSIM，用于发送/接收短信、接听电话和使用 4G/5G 互联网+全球漫游。注册时不需要个人数据。价格实惠，接受比特币付款和充值。需要支持 eSIM 的设备。 |
+|**[Crypton.sh](https://crypton.sh/)** | 云中的物理 SIM 卡，用于发送和接收短信。使用您选择的私钥加密消息。提供 Web 界面和 API，可从任何设备进行交互。价格约为 7.00 欧元/月，接受比特币、门罗币或信用卡付款。 |
+|**[Jmp.chat](https://jmp.chat/)** | 提供由 Soprani 提供的用于呼入和呼出电话和短信的电话号码。适用于 Jabber、Matrix、Snikket、XMPP 或任何 SIP 客户端。定价从每月 2.99 美元起。目前仅在美国和加拿大提供，因为（截至 2022 年）该服务仍处于测试阶段。 |
+|**[MoneroSMS](https://monerosms.com)** | 匿名短信服务，可用于激活账户。可通过 Web、CLI 或电子邮件访问。定价从每月 3.60 美元起。该服务截至 2022 年仍处于测试阶段。 |
 
-## Team Collaboration Platforms
+## 团队协作平台
 
-Now more than ever we are relying on software to help with team collaboration. Unfortunately many popular options, such as [Slack](https://www.wired.co.uk/article/slack-privacy-settings-notifications), [Microsoft Teams](https://www.wired.co.uk/article/microsoft-teams-meeting-data-privacy), [Google for Work](https://www.wired.com/story/google-tracks-you-privacy/) and [Discord](https://cybernews.com/privacy/discord-privacy-tips-that-you-should-use-in-2020/) all come with some serious privacy implications.
+现在，我们越来越依赖软件来帮助团队协作。不幸的是，许多流行的选项，如 [Slack](https://www.wired.co.uk/article/slack-privacy-settings-notifications)、[Microsoft Teams](https://www.wired.co.uk/article/microsoft-teams-meeting-data-privacy)、[Google for Work](https://www.wired.com/story/google-tracks-you-privacy/) 和 [Discord](https://cybernews.com/privacy/discord-privacy-tips-that-you-should-use-in-2020/)，都存在一些严重的隐私问题。
 
-Typical features of team collaboration software includes: instant messaging, closed and open group messaging, voice and video conference calling, file sharing/ file drop, and some level or scheduling functionality.
+团队协作软件的典型功能包括：即时消息、封闭和开放的群组消息、语音和视频会议、文件共享/文件传输以及一定程度的日程安排功能。
 
-| Provider | Description |
+| 服务提供者 | 简介 |
 | --- | --- |
-**[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | Easy-to-deploy, self-hosted team collaboration platform with stable, feature-rich cross-platform client apps. The UI is fast, good looking and intuitive, so very little technical experience is needed for users of the platform. Rocket.Chat's feature set is similar to Slack's, making it a good replacement for any team looking to have greater control over their data
-**[RetroShare](https://retroshare.cc/)** | Secure group communications, with the option to be used over Tor or I2P. Fast intuitive group and 1-to-1 chats with text and rich media using decentralized chat rooms, with a mail feature for delivering messages to offline contacts. A channels feature makes it possible for members of different teams to stay up-to-date with each other, and to share files. Also includes built-in forums, link aggregations, file sharing and voice and video calling. RetroShare is a bit more complex to use than some alternatives, and the UI is quite *retro*, so may not be appropriate for a non-technical team
-**[Element](https://element.io/)** | Privacy-focused messenger using the Matrix protocol. The Element client allows for group chat rooms, media sharing voice and video group calls.
-**Internet Relay Chat** | An IRC-based solution is another option, being decentralized there is no point of failure, and it's easy to self-host. However it's important to keep security in mind while configuring your IRC instance and ensure that channels are properly encrypted - IRC tends to be better for open communications. There's a [variety of clients](https://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients) to choose from - popular options include: [The Longe](https://thelounge.chat/) (Web-based), [HexChat](https://hexchat.github.io/) (Linux), [Pidgin](https://pidgin.im/help/protocols/irc/) (Linux), [WeeChat](https://weechat.org/) (Linux, terminal-based), [IceChat](https://www.icechat.net/) (Windows), [XChat Aqua](https://xchataqua.github.io/) (MacOS), [Palaver](https://palaverapp.com/) (iOS) and [Revolution](https://github.com/MCMrARM/revolution-irc) (Android)
-**[Mattermost](https://mattermost.org/)** | Mattermost has an open source edition, which can be self-hosted. It makes a good Slack alternative, with native desktop, mobile and web apps and a wide variety of [integrations](https://integrations.mattermost.com/)
-**[Dialog](https://dlg.im/en/)** | A corporate secure collaborative messenger. A clean UI and all the basic features, including groups, file sharing, audio/ video calls, searching and chat bots
+|**[Rocket.Chat](https://github.com/RocketChat/Rocket.Chat)** | 易于部署的自托管团队协作平台，配备稳定且功能丰富的跨平台客户端应用程序。用户界面快速、美观且直观，因此用户对该平台的要求很少需要技术经验。Rocket.Chat 的功能集类似于 Slack，使其成为希望更好地控制数据的团队的良好替代品。 |
+|**[RetroShare](https://retroshare.cc/)** | 安全的群组通信，可选择通过 Tor 或 I2P 使用。使用分散式聊天室进行快速直观的群组和一对一聊天，支持文本和富媒体，具有向离线联系人发送消息的邮件功能。频道功能使不同团队的成员能够保持互相更新，并共享文件。还包括内置论坛、链接聚合、文件共享以及语音和视频通话。RetroShare 的使用相对复杂，用户界面相当 "复古"，因此可能不适合非技术团队。 |
+|**[Element](https://element.io/)** | 使用 Matrix 协议的注重隐私的即时通讯工具。Element 客户端支持群组聊天室、媒体共享以及语音和视频群组通话。 |
+|**Internet Relay Chat** | 基于 IRC 的解决方案是另一个选择，由于其分散化的特性，没有单点故障，并且易于自行托管。但是，在配置 IRC 实例时保持安全性非常重要，并确保频道得到适当加密-IRC 更适用于开放式通信。有多种客户端可供选择-流行的选项包括：[The Longe](https://thelounge.chat/)（基于 Web）、[HexChat](https://hexchat.github.io/)（Linux）、[Pidgin](https://pidgin.im/help/protocols/irc/)（Linux）、[WeeChat](https://weechat.org/)（Linux，基于终端）、[IceChat](https://www.icechat.net/)（Windows）、[XChat Aqua](https://xchataqua.github.io/)（MacOS）、[Palaver](https://palaverapp.com/)（iOS）和 [Revolution](https://github.com/MCMrARM/revolution-irc)（Android）。 |
+|**[Mattermost](https://mattermost.org/)** | Mattermost 有一个开源版本，可以自行托管。它是 Slack 的良好替代品，具有原生的桌面、移动和 Web 应用程序，以及各种各样的 [集成](https://integrations.mattermost.com/)。 |
+|**[Dialog](https://dlg.im/en/)** | 一款企业安全的协作信息工具。简洁的用户界面和所有基本功能，包括群组、文件共享、音频/视频通话、搜索和聊天机器人。 |
 
-### Notable Mentions
-Some chat platforms allow for cross-platform group chats, voice and video conferencing, but without the additional collaboration features. For example, [Tox](https://tox.chat/), [Session](https://getsession.org/), [Ricochet](https://ricochet.im/), [Mumble](https://www.mumble.info/) and [Jami](https://jami.net/).
+### 小提示
+有些聊天平台允许进行跨平台的群组聊天、语音和视频会议，但没有额外的协作功能。例如，[Tox](https://tox.chat/)、[Session](https://getsession.org/)、[Ricochet](https://ricochet.im/)、[Mumble](https://www.mumble.info/) 和 [Jami](https://jami.net/)。
 
-For Conferences, [OSEM](https://osem.io) is an open source all-in-one conference management tool, providing Registration, Schedules, Live and Recorded Sessions, Paper Submissions, Marketing Pages and Administration.
+对于会议，[OSEM](https://osem.io) 是一个开源的全能会议管理工具，提供注册、日程安排、直播和录播会议、论文提交、营销页面和管理功能。
 
 <hr id="security-tools" />
 
