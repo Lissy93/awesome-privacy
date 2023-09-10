@@ -302,7 +302,7 @@ OpenPGP 也不支持前向安全性，这意味着如果您或收件人的私钥
 
 | 服务提供者 | 简介 |
 | --- | --- |
-| **[Mozilla Thunderbird](https://www.thunderbird.net)**（桌面） | 由 Mozilla 开发和支持的免费开源电子邮件应用程序，它安全、私密、易用且可自定义。~~Enigmail 附加组件可轻松加密/解密 PGP 消息~~，自版本 78.2.1 起已内置加密功能），而 TorBirdy 扩展可以通过 Tor 网络路由所有流量。分支版本（如 Betterbird）可能添加额外功能。 |
+| **[Mozilla Thunderbird](https://www.thunderbird.net)**（桌面） | 由 Mozilla 开发和支持的免费开源电子邮件应用程序，它安全、私密、易用且可自定义。~~Enigmail 附加组件可轻松加密/解密 PGP 消息~~，自版本 78.2.1 起已内置加密功能，而 TorBirdy 扩展可以通过 Tor 网络路由所有流量。分支版本（如 Betterbird）可能添加额外功能。 |
 | **[eM Client](https://www.emclient.com/)**（桌面）           | 基于提高生产力的电子邮件客户端，适用于 Windows 和 MacOS。eM Client 拥有清晰的用户界面、快速的性能和良好的兼容性。付费版本提供一些实用功能，包括延迟收件箱、跟踪特定主题的回复、消息翻译、定时发送以及内置的日历、任务、联系人和备忘录。请注意，eM Client 是专有软件，不是开源的。 |
 | **[SnappyMail](https://snappymail.eu)**（Web）               | 简洁、现代、快速的基于 Web 的邮件客户端。这是 [RainLoop](http://www.rainloop.net) 的仅支持 IMAP 的分支版本，修复了 [RainLoop 的一个严重漏洞](https://thehackernews.com/2022/04/unpatched-bug-in-rainloop-webmail-could.html)，并添加了几个新的 [功能](https://snappymail.eu/comparison)。 |
 | **[RoundCube](https://roundcube.net)**（Web）                | 基于浏览器的多语言 IMAP 客户端，具有类似应用程序的用户界面。它提供了您对电子邮件客户端的所有期望功能，包括 MIME 支持、通讯录、文件夹操作、消息搜索和拼写检查。 |
