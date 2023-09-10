@@ -31,7 +31,7 @@
   - [邮箱客户端](#邮箱客户端)
   - [匿名邮件转发](#匿名邮件转发)
   - [邮件安全工具](#邮件安全工具)
-  - [VOIP 客户端](#VOIP 客户端)
+  - [VOIP 客户端](#VOIP客户端)
   - [虚拟手机号](#虚拟手机号)
   - [Team Collaboration Platforms](#team-collaboration-platforms)
 - **Security Tools**
@@ -344,7 +344,7 @@ If you do not want to trust an email provider with your messages, you can host y
 #### 小提示
 如果您正在使用 ProtonMail，那么 [ProtonMail Bridge](https://protonmail.com/bridge/thunderbird) 可以让您将电子邮件同步到您自己的桌面邮件客户端。它与 Thunderbird、Microsoft Outlook 和其他客户端配合良好。
 
-## VOIP 客户端
+## VOIP客户端
 
 | 服务提供者 | 简介 |
 | --- | --- |
