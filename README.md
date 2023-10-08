@@ -215,6 +215,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 **[DuckDuckGo](https://duckduckgo.com/)** | DuckDuckGo is a very user-friendly, fast and secure search engine. It's totally private, with no trackers, cookies or ads. It's also highly customisable, with dark-mode, many languages and features. They even have a [.onion](https://3g2upl4pq6kufc4m.onion) URL, for use with Tor and a [no Javascript version](https://duckduckgo.com/html/)
 **[Qwant](https://www.qwant.com/)** | French service that aggregates Bings results, with its own results. Qwant doesn't plant any cookies, nor have any trackers or third-party advertising. It returns non-biased search results, with no promotions. Qwant has a unique, but nice UI.
 **[Startpage](https://www.startpage.com/)** | Dutch search engine that searches on google and shows the results (slightly rearranged). It has several configurations that improve privacy during use (it is not open source)
+**[Mojeek](https://mojeek.com)** | British search engine providing independent and unbiased search results using its own crawler. Has a zero tracking policy (it is not open source)
 
 #### Notable Mentions
 [MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). 
