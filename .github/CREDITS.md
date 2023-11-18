@@ -5,6 +5,13 @@
 <table>
 <tr>
     <td align="center">
+        <a href="https://github.com/tbjers">
+            <img src="https://avatars.githubusercontent.com/u/1117052?v=4" width="80;" alt="tbjers"/>
+            <br />
+            <sub><b>Torgny Bjers</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/emlazzarin">
             <img src="https://avatars.githubusercontent.com/u/1141361?u=714e3487a3f2e0df721b01a0133945f075d3ff68&v=4" width="80;" alt="emlazzarin"/>
             <br />
@@ -38,15 +45,15 @@
             <br />
             <sub><b>Zach Biles</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/UlisesGascon">
             <img src="https://avatars.githubusercontent.com/u/5110813?u=3c41facd8aa26154b9451de237c34b0f78d672a5&v=4" width="80;" alt="UlisesGascon"/>
             <br />
             <sub><b>Ulises Gascón</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/digitalarche">
             <img src="https://avatars.githubusercontent.com/u/6546135?u=a1a724d38ee1eba2d2d315495d482256312affe8&v=4" width="80;" alt="digitalarche"/>
@@ -81,15 +88,15 @@
             <br />
             <sub><b>SuTo</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/DRXAquosus">
             <img src="https://avatars.githubusercontent.com/u/45409262?v=4" width="80;" alt="DRXAquosus"/>
             <br />
             <sub><b>DRXAquosus</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Bastii717">
             <img src="https://avatars.githubusercontent.com/u/53431819?u=dff9e241e6dbecbc283ee13486a2312cb3dd9784&v=4" width="80;" alt="Bastii717"/>
@@ -264,6 +271,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Sean12697">
+            <img src="https://avatars.githubusercontent.com/u/22508776?v=4" width="80;" alt="Sean12697"/>
+            <br />
+            <sub><b>Sean O'Mahoney</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/edent">
             <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
             <br />
@@ -276,15 +290,15 @@
             <br />
             <sub><b>Tim Schlotfeldt</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Upstream8022">
             <img src="https://avatars.githubusercontent.com/u/105393306?v=4" width="80;" alt="Upstream8022"/>
@@ -318,13 +332,6 @@
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/colenh">
-            <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
-            <br />
-            <sub><b>Cole</b></sub>
         </a>
     </td></tr>
 </table>
