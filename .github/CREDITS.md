@@ -6,7 +6,7 @@
 <tr>
     <td align="center">
         <a href="https://github.com/tbjers">
-            <img src="https://avatars.githubusercontent.com/u/1117052?v=4" width="80;" alt="tbjers"/>
+            <img src="https://avatars.githubusercontent.com/u/1117052?u=539d96d5e581b3139c75713ce35b89a36626404c&v=4" width="80;" alt="tbjers"/>
             <br />
             <sub><b>Torgny Bjers</b></sub>
         </a>
@@ -83,20 +83,13 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mrmosssir">
-            <img src="https://avatars.githubusercontent.com/u/13149494?u=335d2aa6da35e44a332c13aaec8502b676f50ac6&v=4" width="80;" alt="mrmosssir"/>
-            <br />
-            <sub><b>SuTo</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/DRXAquosus">
             <img src="https://avatars.githubusercontent.com/u/45409262?v=4" width="80;" alt="DRXAquosus"/>
             <br />
             <sub><b>DRXAquosus</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Bastii717">
             <img src="https://avatars.githubusercontent.com/u/53431819?u=dff9e241e6dbecbc283ee13486a2312cb3dd9784&v=4" width="80;" alt="Bastii717"/>
@@ -228,6 +221,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/goenning">
+            <img src="https://avatars.githubusercontent.com/u/94755?v=4" width="80;" alt="goenning"/>
+            <br />
+            <sub><b>Guilherme Oenning</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Gusted">
             <img src="https://avatars.githubusercontent.com/u/25481501?v=4" width="80;" alt="Gusted"/>
             <br />
@@ -240,15 +240,15 @@
             <br />
             <sub><b>ImVector</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jamescridland">
             <img src="https://avatars.githubusercontent.com/u/231941?v=4" width="80;" alt="jamescridland"/>
             <br />
             <sub><b>James Cridland</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/EgosOwn">
             <img src="https://avatars.githubusercontent.com/u/47700879?v=4" width="80;" alt="EgosOwn"/>
@@ -283,15 +283,15 @@
             <br />
             <sub><b>Terence Eden</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
             <sub><b>Tim Schlotfeldt</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
@@ -325,13 +325,6 @@
             <img src="https://avatars.githubusercontent.com/u/61125068?v=4" width="80;" alt="ZhymabekRoman"/>
             <br />
             <sub><b>Zhymabek Roman</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/baddate">
-            <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
-            <br />
-            <sub><b>Alex</b></sub>
         </a>
     </td></tr>
 </table>
