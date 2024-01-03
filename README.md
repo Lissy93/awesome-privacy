@@ -112,6 +112,7 @@ A Codeberg mirror is available [here](https://codeberg.org/alicia/awesome-privac
 **[KeePass](https://keepass.info)** | Hardened, secure and offline password manager. Does not have cloud-sync baked in, deemed to be [gold standard](https://keepass.info/ratings.html) for secure password managers. KeePass clients: [Strongbox](https://apps.apple.com/us/app/strongbox-keepass-pwsafe/id897283731) *(Mac & iOS)*, [KeePassDX](https://play.google.com/store/apps/details?id=com.kunzisoft.keepass.free) *(Android)*, [KeeWeb](https://keeweb.info) *(Web-based/ self-hosted)*, [KeePassXC](https://keepassxc.org) *(Windows, Mac & Linux)*, see more KeePass clients and extensions at [awesome-keepass](https://github.com/lgg/awesome-keepass) by @lgg. 
 **[LessPass](https://lesspass.com)** *(Self-Hosted)* | LessPass is a little different, since it generates your passwords using a hash of the website name, your username and a single main-passphrase that you reuse. It omits the need for you to ever need to store or sync your passwords. They have apps for all the common platforms and a CLI, but you can also self-host it.
 **[Padloc](https://padloc.app)** | A modern, open source password manager for individuals and teams. Beautiful, intuitive and dead simple to use. Apps available for all platforms and you can self-host it as well.
+**[ProtonPass](https://proton.me/pass)** | From the creators of ProtonMail, ProtonPass is a new addition to their suite of services. They have a full collection of user-friendly native mobile and desktop apps. ProtonPass is one of the few "trustworthy" providers that also offers a free plan.
 
 #### Notable Mentions
 
@@ -123,7 +124,7 @@ A Codeberg mirror is available [here](https://codeberg.org/alicia/awesome-privac
 
 **Other Open Source PM**: [Buttercup](https://buttercup.pw), [Clipperz](https://clipperz.is), [Pass](https://www.passwordstore.org), [Padloc](https://padloc.app), [TeamPass](https://teampass.net), [PSONO](https://psono.com), [UPM](http://upm.sourceforge.net), [Gorilla](https://github.com/zdia/gorilla/wiki), [Seahorse](https://gitlab.gnome.org/GNOME/seahorse) (for GNOME), [GNOME Keyring](https://wiki.gnome.org/Projects/GnomeKeyring), [KDE Wallet Manager](https://userbase.kde.org/KDE_Wallet_Manager).
 
-If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Encryptr](https://spideroak.com/encryptr), [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
+If you are using a deprecated PM, you should migrate to something actively maintained. This includes: [Firefox Lockwise](https://www.mozilla.org/en-US/firefox/lockwise), [Encryptr](https://spideroak.com/personal/encryptr?ref=awesome-privacyr), [Mitro](https://www.mitro.co), [Rattic](https://spideroak.com/encryptr), [JPasswords](http://jpws.sourceforge.net/jpasswords.html), [Passopolis](https://passopolis.com), [KYPS](https://en.wikipedia.org/wiki/KYPS), [Factotum](http://man.9front.org/4/factotum).
 
 **See also** [Password Management Checklist](https://github.com/Lissy93/personal-security-checklist/blob/master/README.md#passwords)
 
@@ -166,7 +167,7 @@ For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a pl
 #### Notable Mentions
 [AES Crypt](https://www.aescrypt.com/) is a light-weight and easy file encryption utility. It includes applications for Windows, Mac OS, BSD and Linux, all of which can be interacted with either through the GUI, CLI or programatically though an API (available for Java, C, C# and Python). Although it is well established, with an overall positive reputation, there have been some [security issues](https://www.reddit.com/r/privacytoolsIO/comments/b7riov/aes_crypt_security_audit_1_serious_issue_found/) raised recently.
 
-[CryptSetup](https://gitlab.com/cryptsetup/cryptsetup) is a convenient layer for use on top of [dm-crypt](https://wiki.archlinux.org/index.php/Dm-crypt). [EncFS](https://www.arg0.net/encfs) is a cross-platform file-based encryption module, for use within user local directories. [geli](https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8) is a disk encryption subsystem included with FreeBSD.
+[CryptSetup](https://gitlab.com/cryptsetup/cryptsetup) is a convenient layer for use on top of [dm-crypt](https://wiki.archlinux.org/index.php/Dm-crypt). [EncFS](https://github.com/vgough/encfs) is a cross-platform file-based encryption module, for use within user local directories. [geli](https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8) is a disk encryption subsystem included with FreeBSD.
 
 PGP may be useful for encrypting individual files and folders, preparing files for transmission, or adding an additional layer of security to sensitive 
 data. With PGP, you can encrypt, decrypt, sign and verify files and folders: see [PGP Tools](#pgp-managers)
@@ -215,6 +216,7 @@ Google frequently modifies and manipulates search, and is in pursuit of eliminat
 **[DuckDuckGo](https://duckduckgo.com/)** | DuckDuckGo is a very user-friendly, fast and secure search engine. It's totally private, with no trackers, cookies or ads. It's also highly customisable, with dark-mode, many languages and features. They even have a [.onion](https://3g2upl4pq6kufc4m.onion) URL, for use with Tor and a [no Javascript version](https://duckduckgo.com/html/)
 **[Qwant](https://www.qwant.com/)** | French service that aggregates Bings results, with its own results. Qwant doesn't plant any cookies, nor have any trackers or third-party advertising. It returns non-biased search results, with no promotions. Qwant has a unique, but nice UI.
 **[Startpage](https://www.startpage.com/)** | Dutch search engine that searches on google and shows the results (slightly rearranged). It has several configurations that improve privacy during use (it is not open source)
+**[Mojeek](https://mojeek.com)** | British search engine providing independent and unbiased search results using its own crawler. Has a zero tracking policy (it is not open source)
 
 #### Notable Mentions
 [MetaGear](https://metager.org), [YaCy](https://yacy.net), [Brave Search](https://search.brave.com/). 
@@ -239,7 +241,7 @@ Without using a secure app for instant messaging, all your conversations, meta d
 **[Matrix](https://matrix.org)** | Matrix is a decentralized open network for secure communications, with E2E encryption with Olm and Megolm. Along with the [Element](https://element.io/) client, it supports VOIP + video calling and IM + group chats. Since Matrix has an open specification and Simple pragmatic RESTful HTTP/JSON API it makes it easy to integrates with existing 3rd party IDs to authenticate and discover users, as well as to build apps on top of it.
 
 #### Other Notable Mentions
-Other private, encrypted and open source messaging apps include: [Surespot](https://www.surespot.me), [Chat Secure](https://chatsecure.org/) (iOS only) and [Status](https://status.im/). Note that [Tor Messenger](https://blog.torproject.org/category/tags/tor-messenger)s been removed from the list, since development has halted.
+Other private, encrypted and open source messaging apps include: [Surespot](https://www.surespot.me), [Chat Secure](https://chatsecure.org/) (iOS only) and [Status](https://status.im/). Note that Tor Messenger has been removed from the list, since development has halted.
 
 [KeyBase](keybase.io/inv/6d7deedbc1) allows encrypted real-time chat, group chats, and public and private file sharing. It also has some nice features around cryptographically proving social identities, and makes PGP signing, encrypting and decrypting messages easy. However, since it was [acquired by Zoom](https://keybase.io/blog/keybase-joins-zoom) in 2020, it has no longer been receiving regular updates.
 
@@ -274,6 +276,7 @@ The below email providers are private, end-to-end encrypted (E2EE) and reasonabl
 
 | Provider | Description |
 | --- | --- |
+**[Forward Email](https://forwardemail.net)** | [100% open-source](https://github.com/forwardemail), privacy-focused, encrypted email service supporting [SMTP](https://forwardemail.net/faq#do-you-support-sending-email-with-smtp), [IMAP](https://forwardemail.net/faq#do-you-support-receiving-email-with-imap), [POP3](https://forwardemail.net/faq#do-you-support-pop3), [email API](https://forwardemail.net/faq#do-you-support-sending-email-with-api), [email webhooks](https://forwardemail.net/en/faq#do-you-support-webhooks), [regex](https://forwardemail.net/faq#do-you-support-regular-expressions-or-regex), unlimited aliases, unlimited domains, [OpenPGP/WKD](https://forwardemail.net/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd), and more.  [Paid plans start at $3/mo for an enhanced set of features](https://forwardemail.net/private-business-email?pricing=true). It uses [individually encrypted SQLite mailboxes](https://forwardemail.net/blog/docs/best-quantum-safe-encrypted-email-service) to store your emails (in addition to encryption at rest).
 **[ProtonMail](https://protonmail.com/)** | An open-source, end-to-end encrypted anonymous email service. ProtonMail has a modern easy-to-use and customizable UI, as well as fast, secure native mobile apps. ProtonMail has all the features that you'd expect from a modern email service and is based on simplicity without sacrificing security. It has a free plan or a premium option for using custom domains (starting at $5/month). ProtonMail requires no personally identifiable information for signup, they have a [.onion](https://protonirockerxow.onion) server, for access via Tor, and they accept anonymous payment: BTC and cash (as well as the normal credit card and PayPal).
 **[Tutanota](https://tutanota.com/)** | Free and open source email service based in Germany. It has a basic intuitive UI, secure native mobile apps, anonymous signup, and a .onion site. Tutonota has a full-featured free plan or a premium subscription for businesses allowing for custom domains ($12/ month).<br>Tutanota [does not use OpenPGP](https://tutanota.com/blog/posts/differences-email-encryption/) like most encrypted mail providers, instead they use a standardized, hybrid method consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and 2048 bit RSA). This causes compatibility issues when communicating with contacts using PGP. But it does allow them to encrypt much more of the header data (body, attachments, subject lines, and sender names etc) which PGP mail providers cannot do
 **[Mailfence](https://mailfence.com?src=digitald)** | Mailfence supports OpenPGP so that you can manually exchange encryption keys independently from the Mailfence servers, putting you in full control. Mailfence has a simple UI, similar to that of Outlook, and it comes with bundled with calendar, address book, and files. All mail settings are highly customizable, yet still clear and easy to use. Sign up is not anonymous, since your name, and prior email address is required. There is a fully-featured free plan, or you can pay for premium, and use a custom domain ($2.50/ month, or $7.50/ month for 5 domains), where Bitcoin, LiteCoin or credit card is accepted
@@ -413,7 +416,7 @@ The following browser add-ons give you better control over what content is able 
 **[Web Archives](https://github.com/dessant/web-archives/wiki/Search-engines)** | View archived and cached versions of web pages on 10+ search engines, such as the Wayback Machine, Archive.is, Google etc Useful for checking legitimacy of websites, and viewing change logs <br>**Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/view-page-archive/) \ [Chrome](https://chrome.google.com/webstore/detail/web-archives/hkligngkgcpcolhcnkgccglchdafcnao) \ [Edge](https://microsoftedge.microsoft.com/addons/detail/apcfghlggldjdjepjnahfdjgdcdekhda) \ [Source](https://github.com/dessant/web-archives)
 **[Flagfox](https://flagfox.wordpress.com/)** | Displays a country flag depicting the location of the current website's server, which can be useful to know at a glance. Click icon for more tools such as site safety checks, whois, validation etc <br>**Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 **[Lightbeam](https://github.com/mozilla/lightbeam-we)** | Visualize in detail the servers you are contacting when you are surfing on the Internet. Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers). **Download**: [Firefox][lightbeam-firefox] \ [Source][lightbeam-source]
-**[Track Me Not](http://trackmenot.io)** | Helps protect web searchers from surveillance and data-profiling, through creating meaningless noise and obfuscation, outlined in their [whitepaper][tmn-whitepaper]. Controversial whether or not this is a good approach **Download**: [Chrome][tmn-chrome] \ [Firefox][tmn-firefox] \ [Source][tmn-source]
+**[Track Me Not](http://trackmenot.io)** | Helps protect web searchers from surveillance and data-profiling, through creating meaningless noise and obfuscation, outlined in their [whitepaper][tmn-whitepaper]. Controversial whether or not this is a good approach **Download**: [Firefox][tmn-firefox] \ [Source][tmn-source]
 **[AmIUnique Timeline](https://amiunique.org/timeline)** | Enables you to better understand the evolution of browser fingerprints (which is what websites use to uniquely identify and track you). **Download**: [Chrome][amiunique-chrome] \ [Firefox][amiunique-firefox]
 **[Netcraft Extension](https://www.netcraft.com/apps/browser)** | Notifies you when visiting a known or potential phishing site, and detects suspicious JavaScript (including skimmers and miners). Also provides a simple rating for a given sites legitimacy and security. Great for less technical users. Netcraft also has a handy online tool: [Site Report](https://sitereport.netcraft.com/) for checking what any given website is running. **Download**: [Chrome](https://chrome.google.com/webstore/detail/netcraft-anti-phishing-ex/bmejphbfclcpmpohkggcjeibfilpamia) \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero) \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/) \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
 
@@ -443,7 +446,6 @@ The following browser add-ons give you better control over what content is able 
 **[XPrivacyLua](https://github.com/M66B/XPrivacyLua/)** | Simple to use privacy manager for Android, that enables you to feed apps fake data when they request intimate permissions. Solves the problem caused by apps malfunctioning when you revoke permissions, and protects your real data by only sharing fake information. Enables you to hide call log, calendar, SMS messages, location, installed apps, photos, clipboard, network data plus more. And prevents access to camera, microphone, telemetry, GPS and other sensors
 **[SuperFreezZ]** | Makes it possible to entirely freeze all background activities on a per-app basis. Intended purpose is to speed up your phone, and prolong battery life, but this app is also a great utility to stop certain apps from collecting data and tracking your actions while running in the background
 **[Haven]** | Allows you to protect yourself, your personal space and your possessions - without compromising on security. Leveraging device sensors to monitor nearby space, Haven was developed by [The Guardian Project](https://guardianproject.info/), in partnership with [Edward Snowden](https://techcrunch.com/2017/12/24/edward-snowden-haven-app/)
-**[XUMI Security]** |  Checks for, and resolves known security vulnerabilities. Useful to ensure that certain apps, or device settings are not putting your security or privacy at risk
 **[Daedalus]** | No root required Android DNS modifier and hosts/DNSMasq resolver, works by creating a VPN tunnel to modify the DNS settings. Useful if you want to change your resolver to a more secure/ private provider, or use DNS over HTTPS
 **[Secure Task]** | Triggers actions, when certain security conditions are met, such as multiple failed login attempts or monitor settings changed. It does require [Tasker], and needs to be set up with ADB, device does not need to be rooted
 **[Cryptomator]** | Encrypts files and folders client-side, before uploading them to cloud storage (such as Google Drive, One Drive or Dropbox), meaning none of your personal documents leave your device in plain text
@@ -600,8 +602,8 @@ Without using a secure, privacy-centric DNS all your web requests can be seen in
 **[AdGuard](https://adguard.com/en/adguard-dns/overview.html)** | Open-source DNS provider, specialising in the blocking of ads, trackers and malicious domains. They have been independently audited and do not keep logs
 **[NextDNS](https://nextdns.io/)** | An ad-blocking, privacy-protecting, censorship-bypassing DNS. Also comes with analytics, and the ability to shield kids from adult content
 
-See also this [Full List of Public DoH Servers](https://github.com/curl/curl/wiki/DNS-over-HTTPS), you can then check the performance of your chosen server with [DNSPerf](https://www.dnsperf.com/). Awesome Self-Hosted also has a [good list](https://awesome.tilde.fun/d/23-list-of-dns-servers
-). To read more about choosing secure DNS servers, see [this article](https://medium.com/@nykolas.z/dns-security-and-privacy-choosing-the-right-provider-61fc6d54b986), and [this article](https://geekwire.co.uk/privacy-and-security-focused-dns-resolver/).
+See also this [Full List of Public DoH Servers](https://github.com/curl/curl/wiki/DNS-over-HTTPS), you can then check the performance of your chosen server with [DNSPerf](https://www.dnsperf.com/).
+). To read more about choosing secure DNS servers, see [this article](https://medium.com/@nykolas.z/dns-security-and-privacy-choosing-the-right-provider-61fc6d54b986.
 
 #### Notable Mentions
 - [Quad9](https://www.quad9.net) is a well-funded, performant DNS with a strong focus on privacy and security and easy set-up, however questions have been raised about the motivation of some of the financial backers.
@@ -743,7 +745,7 @@ Whether you are hosting a website and want to keep your users data safe, or if y
 **[Servers Guru](https://servers.guru)** | Servers Guru provides affordable and anonymous VPS and cloud servers with dedicated cpu resources. They accept crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from reliable main actors in the industry and provide multiple hosting locations across europe. Their VPS offers starts at 4.99€/ month
 
 #### Notable Mentions
-See also: [1984](https://www.1984.is) based in Iceland. [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers. [Orange Website](https://www.orangewebsite.com) specialises in protecting online privacy and free speech, hosted in Iceland. [RackBone](https://rackbone.ch) (previously [DataCell](https://datacell.is)) provides secure and ethical hosting, based in Switzerland. And [Bahnhof](https://www.bahnhof.net) offers high-security and ethical hosting, with their data centres locates in Sweden. Finally [Simafri](https://www.simafri.com/anonymous) has a range of packages, that support Tor out of the box
+See also: [1984](https://www.1984.is) based in Iceland. [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers. [Orange Website](https://www.orangewebsite.com) specialises in protecting online privacy and free speech, hosted in Iceland. [RackBone](https://rackbone.ch) (previously DataCell) provides secure and ethical hosting, based in Switzerland. And [Bahnhof](https://www.bahnhof.net) offers high-security and ethical hosting, with their data centres locates in Sweden. Finally [Simafri](https://www.simafri.com/anonymous) has a range of packages, that support Tor out of the box
 
 #### Word of Warning
 The country that your data is hosted in, will be subject to local laws and regulations. It is therefore important to avoid a jurisdiction that is part of the [5 eyes](https://en.wikipedia.org/wiki/Five_Eyes) (Australia, Canada, New Zealand, US and UK) and [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives) who have legal right to view your data.
@@ -870,7 +872,6 @@ It is not advised to sign into your browser, since it allows for more of your br
 **[XBrowserSync](https://www.xbrowsersync.org)** | Secure, anonymous and free browser and bookmark syncing. Easy to setup, and no sign up is required, you can either use a [community-run sync server](https://www.xbrowsersync.org/#status), or host your own with their [docker image](https://hub.docker.com/r/xbrowsersync/api). Extensions are available for [Chrome](https://chrome.google.com/webstore/detail/xbrowsersync/lcbjdhceifofjlpecfpeimnnphbcjgnc), [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/xbs/) and on [Android](https://play.google.com/store/apps/details?id=com.xBrowserSync.android)
 **[Unmark](https://github.com/cdevroe/unmark)** | A web application which acts as a todo app for bookmarks. You can either self-host it, or use their [managed service](https://unmark.it) which has a free and paid-for tier 
 **[Reminiscence](https://github.com/kanishka-linux/reminiscence)** | A self-hosted bookmark and archive manager. Reminiscence is more geared towards archiving useful web pages either for offline viewing or to preserve a copy. It is a web application, that can be installed with Docker on either a local or remote server, although it has a comprehensive and well-documented REST API, there is currently [no browser extension](https://github.com/kanishka-linux/reminiscence/wiki/Browser-Addons)
-**[Geekmarks](https://geekmarks.dmitryfrank.com)** | An API-driven, quick-to-use bookmark manager with powerful organisation features. Geekmarks is thoroughly documented, but a little more technical than other options, extension is currently only available for [Chromium-based](https://chrome.google.com/webstore/detail/geekmarks-client/nhiodffdihhkdlkfmpmmnanekkbbfkgk) browsers
 **[Shiori](https://github.com/go-shiori/shiori)** | Simple bookmark manager written in Go, intended to be a clone of [Pocket](https://getpocket.com), it has both a simple and clean web interface as well as a CLI. Shiori has easy import/ export, is portable and has webpage archiving features
 
 
@@ -1177,7 +1178,7 @@ See Also: [Personal Finance Security Tips](README.md#personal-finance)
 ## Mobile Operating Systems
 
 If you are an Android user, your device has Google built-in at its core. [Google tracks you](https://digitalcontentnext.org/blog/2018/08/21/google-data-collection-research/),
-collecting a wealth of information, and logging your every move. A [custom ROM](https://www.xda-developers.com/what-is-custom-rom-android/), is an open source, usually Google-free mobile OS that can be [flashed](https://www.xda-developers.com/how-to-install-custom-rom-android/) to your device.
+collecting a wealth of information, and logging your every move. A [custom ROM](https://en.wikipedia.org/wiki/List_of_custom_Android_distributions), is an open source, usually Google-free mobile OS that can be flashed to your device.
 
 | Provider | Description |
 | --- | --- |
@@ -1250,7 +1251,7 @@ After installing your new operating system, or if you have chosen to stick with 
 | --- | --- |
 **[Firejail](https://github.com/netblue30/firejail)** | Firejail is a SUID sandbox program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces and seccomp-bpf. Written in C, virtually no dependencies, runs on any modern Linux system, with no daemon running in the background, no complicated configuration, and it's super lightweight and super secure, since all actions are implemented by the kernel. It includes security profiles for over 800 common Linux applications. FireJail is recommended for running any app that may potential pose some kind of risk, such as torrenting through Transmission, browsing the web, opening downloaded attachments
 **[Gufw](http://gufw.org)** (Linux) | Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple and advanced mode, GUI and CLI options, very easy to use, lightweight/ low-overhead, under active maintenance and backed by a strong community. Installable through most package managers, or compile from [source](https://answers.launchpad.net/gui-ufw)<br>Other popular firewalls are [OpenSnitch](https://github.com/evilsocket/opensnitch) and [Uncomplicated Firewall](https://en.wikipedia.org/wiki/Uncomplicated_Firewall), see more [firewalls](#firewalls)
-**[ClamTk](https://dave-theunsub.github.io/clamtk/)** | ClamTk is basically a graphical front-end for ClamAV, making it an easy to use, light-weight, on-demand virus scanner for Linux systems
+**[ClamTk](https://gitlab.com/dave_m/clamtk/-/wikis/home)** | ClamTk is basically a graphical front-end for ClamAV, making it an easy to use, light-weight, on-demand virus scanner for Linux systems
 **[chkrootkit](http://www.chkrootkit.org)** | Locally checks for signs of a rootkit
 **[Snort](https://www.snort.org)** | open source intrusion prevention system capable of real-time traffic analysis and packet
 **[BleachBit](https://www.bleachbit.org)** | Clears cache and deletes temporary files very effectively. This frees up disk space, improves performance, but most importantly helps to protect privacy
@@ -1394,7 +1395,7 @@ If you are building your own assistant, you may want to consider a hardware-swit
 Moving away from Google, and using multiple alternative apps will mean there is no single source of tracking. Open source and privacy-focused software is best
 
 - Academic: [RefSeek](https://www.refseek.com), [Microsoft Academic](https://academic.microsoft.com), [More Academic Search Engines](https://en.wikipedia.org/wiki/List_of_academic_databases_and_search_engines)
-- Analytics: [Matomo](https://matomo.org), [Privalytics](https://www.privalytics.io), [Plausible](https://plausible.io), [Fathom](https://github.com/usefathom/fathom), [GoatCounter](https://www.goatcounter.com), [ShyNet](https://github.com/milesmcc/shynet), [Pirsch](https://pirsch.io/)
+- Analytics: [Matomo](https://matomo.org), [Privalytics](https://www.privalytics.io), [Plausible](https://plausible.io), [Fathom](https://github.com/usefathom/fathom), [GoatCounter](https://www.goatcounter.com), [ShyNet](https://github.com/milesmcc/shynet), [Pirsch](https://pirsch.io/), [Aptabase](https://aptabase.com/)
 - Assistant: [Mycroft](https://mycroft.ai), [Kalliope](https://kalliope-project.github.io), [Project-Alias](https://github.com/bjoernkarmann/project_alias) (for Google Home/ Alexa)
 - Authenticator: [Aegis](https://getaegis.app) (Android), [Authenticator](https://github.com/mattrubin/authenticator) (ios)
 - Blogging: [Write Freely](https://writefreely.org), [Telegraph](https://telegra.ph), [Mataroa](https://mataroa.blog/), [Bear Blog](https://bearblog.dev/), [Ghost](https://ghost.org) (Self-Hosted)
@@ -1413,7 +1414,7 @@ Moving away from Google, and using multiple alternative apps will mean there is 
 - Notes: [Cryptee](https://crypt.ee), [Joplin](https://joplinapp.org), [Standard Notes](https://standardnotes.com/?s=chelvq36), [Joplin](https://joplinapp.org)
 - Passwords: [BitWarden](https://bitwarden.com), [1Password](https://1password.com), [KeePassXC](https://keepassxc.org), [LessPass](https://lesspass.com)
 - Pay (Currencies): [Monero](https://www.getmonero.org), [ZCash](https://z.cash)
-- Pay (Virtual Cards): [Privacy.com](https://privacy.com/join/VW7WC), [Revolut](https://revolut.ngih.net/Q9jdx) (disposable virtual credit cards)
+- Pay (Virtual Cards): [Privacy.com](https://privacy.com/), [Revolut](https://revolut.ngih.net/Q9jdx) (disposable virtual credit cards)
 - Photos: [PhotoPrism](https://photoprism.app/) (Self-Hosted)
 - Play Store: [F-Droid](https://f-droid.org), [APK Mirror](https://www.apkmirror.com)
 - Search: [DuckDuckGo](https://duckduckgo.com), [Searx](https://searx.github.io/searx/) (self-hosted), [Qwant](https://www.qwant.com)
@@ -1443,7 +1444,7 @@ Community-maintained media software can help you migrate away from providers tha
 
 - Analytics: [Matomo](https://matomo.org), [Privalytics](https://www.privalytics.io), [Plausible](https://plausible.io), [Fathom](https://github.com/usefathom/fathom), [GoatCounter](https://www.goatcounter.com), [ShyNet](https://github.com/milesmcc/shynet)
 - Blogging: [Hexo](https://hexo.io), [Noddity](http://noddity.com), [Plume](https://joinplu.me), [Ghost](https://github.com/TryGhost/Ghost), [Write.as](https://github.com/writeas)
-- Bookmarks: [Shiori](https://github.com/go-shiori/shiori), [Geek Marks](https://geekmarks.dmitryfrank.com), [Ymarks](https://bitbucket.org/ymarks), [xBrowserSync](https://www.xbrowsersync.org), [reminiscence](https://github.com/kanishka-linux/reminiscence), [unmark](https://github.com/cdevroe/unmark)
+- Bookmarks: [Shiori](https://github.com/go-shiori/shiori), [Geek Marks](https://geekmarks.dmitryfrank.com), [Ymarks](https://ymarks.org/), [xBrowserSync](https://www.xbrowsersync.org), [reminiscence](https://github.com/kanishka-linux/reminiscence), [unmark](https://github.com/cdevroe/unmark)
 - Chat Networks: [Gotify](https://gotify.net), [GNU:net](https://gnunet.org), [Centrifugo](https://github.com/centrifugal/centrifugo), [Mumble](https://www.mumble.info), [Tox](https://tox.chat), [Matrix](https://matrix.org) + [Riot](https://riot.im), [Retroshare](https://retroshare.cc)
 - CMS: [Strapi](https://strapi.io) (headless), [ApostropheCMS](https://github.com/apostrophecms/apostrophe), [Plone](https://github.com/plone), [Publify](https://publify.github.io), [Pico](http://picocms.org)
 - Conference: [Jami](https://jami.net), [Jitsu](https://github.com/jitsi), [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) (Academic Institutions), [OpenMeetings](https://openmeetings.apache.org)
@@ -1655,8 +1656,8 @@ If you found this project helpful, consider dropping us a star, and sharing with
 [//]: # (BROWSER EXTENSION LINKS)
 [privacy-badger-chrome]: https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
 [privacy-badger-firefox]: https://addons.mozilla.org/en-GB/firefox/addon/privacy-badger17/
-[https-everywhere-chrome]: https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp?hl=en
-[https-everywhere-firefox]: https://addons.mozilla.org/en-GB/firefox/addon/https-everywhere/
+[https-everywhere-chrome]: https://www.eff.org/https-everywhere
+[https-everywhere-firefox]: https://www.eff.org/files/https-everywhere-latest.xpi
 [ublock-chrome]: https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en-GB
 [ublock-firefox]: https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/
 [script-safe-chrome]: https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf?hl=en-GB
@@ -1676,7 +1677,6 @@ If you found this project helpful, consider dropping us a star, and sharing with
 [self-destructing-cookies-source]: https://github.com/joue-quroi/self-destructing-cookies
 [lightbeam-firefox]: https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/
 [lightbeam-source]: https://github.com/mozilla/lightbeam-we
-[tmn-chrome]: https://chrome.google.com/webstore/detail/trackmenot/cgllkjmdafllcidaehjejjhpfkmanmka
 [tmn-firefox]: https://addons.mozilla.org/en-US/firefox/addon/trackmenot/
 [tmn-whitepaper]: http://trackmenot.io/resources/trackmenot2009.pdf
 [tmn-source]: https://github.com/vtoubiana/TrackMeNot
@@ -1704,7 +1704,6 @@ If you found this project helpful, consider dropping us a star, and sharing with
 [Haven]: https://play.google.com/store/apps/details?id=org.havenapp.main
 [NetGaurd]: https://www.netguard.me/
 [Exodus]: https://exodus-privacy.eu.org/en/page/what/#android-app
-[XUMI Security]: https://xumi.ca/xumi-security/
 [Fing App]: https://www.fing.com/products/fing-app
 [FlutterHole]: https://github.com/sterrenburg/flutterhole
 [1.1.1.1]: https://1.1.1.1/
