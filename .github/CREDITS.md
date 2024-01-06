@@ -15,7 +15,7 @@
         <a href="https://github.com/peng1can">
             <img src="https://avatars.githubusercontent.com/u/225854?v=4" width="80;" alt="peng1can"/>
             <br />
-            <sub><b>peng1can</b></sub>
+            <sub><b>Peng1can</b></sub>
         </a>
     </td>
     <td align="center">
@@ -92,9 +92,16 @@
 <tr>
     <td align="center">
         <a href="https://github.com/helixzz">
-            <img src="https://avatars.githubusercontent.com/u/12218889?v=4" width="80;" alt="helixzz"/>
+            <img src="https://avatars.githubusercontent.com/u/12218889?u=d06d0c103dfbdb99450623064f7da3c5a3675fb6&v=4" width="80;" alt="helixzz"/>
             <br />
             <sub><b>HeliXZz</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/undefined">
+            <img src="" width="80;" alt="undefined"/>
+            <br />
+            <sub><b>undefined</b></sub>
         </a>
     </td>
     <td align="center">
@@ -109,6 +116,13 @@
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
             <br />
             <sub><b>Brent</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/CrazyWolf13">
+            <img src="https://avatars.githubusercontent.com/u/96661824?v=4" width="80;" alt="CrazyWolf13"/>
+            <br />
+            <sub><b>Tobias</b></sub>
         </a>
     </td>
     <td align="center">
@@ -185,17 +199,17 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/AlexOgden">
-            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
+        <a href="https://github.com/GhoulBoii">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
             <br />
-            <sub><b>Alex Ogden</b></sub>
+            <sub><b>GhoulBoi69</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/gabrielvicenteYT">
-            <img src="https://avatars.githubusercontent.com/u/68158102?v=4" width="80;" alt="gabrielvicenteYT"/>
+        <a href="https://github.com/slade991">
+            <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
-            <sub><b>Coccocoa's Helper</b></sub>
+            <sub><b>Slade991</b></sub>
         </a>
     </td>
     <td align="center">
@@ -206,104 +220,18 @@
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/slade991">
-            <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
+        <a href="https://github.com/gabrielvicenteYT">
+            <img src="https://avatars.githubusercontent.com/u/68158102?v=4" width="80;" alt="gabrielvicenteYT"/>
             <br />
-            <sub><b>Slade991</b></sub>
+            <sub><b>Coccocoa's Helper</b></sub>
         </a>
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/GhoulBoii">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
+        <a href="https://github.com/AlexOgden">
+            <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
             <br />
-            <sub><b>GhoulBoi69</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/AshboDev">
-            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
-            <br />
-            <sub><b>Ash Scott</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/BrunoBernardino">
-            <img src="https://avatars.githubusercontent.com/u/1239616?v=4" width="80;" alt="BrunoBernardino"/>
-            <br />
-            <sub><b>Bruno Bernardino</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/goenning">
-            <img src="https://avatars.githubusercontent.com/u/94755?v=4" width="80;" alt="goenning"/>
-            <br />
-            <sub><b>Guilherme Oenning</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Gusted">
-            <img src="https://avatars.githubusercontent.com/u/25481501?v=4" width="80;" alt="Gusted"/>
-            <br />
-            <sub><b>Gusted</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/LuigiImVector">
-            <img src="https://avatars.githubusercontent.com/u/59611597?v=4" width="80;" alt="LuigiImVector"/>
-            <br />
-            <sub><b>ImVector</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/jamescridland">
-            <img src="https://avatars.githubusercontent.com/u/231941?v=4" width="80;" alt="jamescridland"/>
-            <br />
-            <sub><b>James Cridland</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/EgosOwn">
-            <img src="https://avatars.githubusercontent.com/u/47700879?v=4" width="80;" alt="EgosOwn"/>
-            <br />
-            <sub><b>Kevin F</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/plplmax">
-            <img src="https://avatars.githubusercontent.com/u/50287455?v=4" width="80;" alt="plplmax"/>
-            <br />
-            <sub><b>Maksim Ploski</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/NylaTheWolf">
-            <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
-            <br />
-            <sub><b>NylaTheWolf</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Sean12697">
-            <img src="https://avatars.githubusercontent.com/u/22508776?v=4" width="80;" alt="Sean12697"/>
-            <br />
-            <sub><b>Sean O'Mahoney</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/edent">
-            <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
-            <br />
-            <sub><b>Terence Eden</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/tschlotfeldt">
-            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
-            <br />
-            <sub><b>Tim Schlotfeldt</b></sub>
+            <sub><b>Alex Ogden</b></sub>
         </a>
     </td>
     <td align="center">
@@ -339,6 +267,92 @@
             <img src="https://avatars.githubusercontent.com/u/61125068?v=4" width="80;" alt="ZhymabekRoman"/>
             <br />
             <sub><b>Zhymabek Roman</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/baddate">
+            <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
+            <br />
+            <sub><b>Sanmoji</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/colenh">
+            <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
+            <br />
+            <sub><b>Cole</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/jxhn">
+            <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
+            <br />
+            <sub><b>Jxhn</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kolaente">
+            <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
+            <br />
+            <sub><b>kolaente</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/magical-heyrovsky">
+            <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
+            <br />
+            <sub><b>magical-heyrovsky</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/mrpavan">
+            <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
+            <br />
+            <sub><b>Pavan</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/pnodet">
+            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
+            <br />
+            <sub><b>Paul Nodet</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/titanism">
+            <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
+            <br />
+            <sub><b>titanism</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tschlotfeldt">
+            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+            <br />
+            <sub><b>Tim Schlotfeldt</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/edent">
+            <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
+            <br />
+            <sub><b>Terence Eden</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Sean12697">
+            <img src="https://avatars.githubusercontent.com/u/22508776?v=4" width="80;" alt="Sean12697"/>
+            <br />
+            <sub><b>Sean O'Mahoney</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/NylaTheWolf">
+            <img src="https://avatars.githubusercontent.com/u/41797151?v=4" width="80;" alt="NylaTheWolf"/>
+            <br />
+            <sub><b>NylaTheWolf</b></sub>
         </a>
     </td></tr>
 </table>
