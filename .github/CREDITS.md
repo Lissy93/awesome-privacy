@@ -101,7 +101,7 @@
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
-            <sub><b>undefined</b></sub>
+            <sub><b>Undefined</b></sub>
         </a>
     </td>
     <td align="center">
@@ -123,13 +123,6 @@
             <img src="https://avatars.githubusercontent.com/u/96661824?v=4" width="80;" alt="CrazyWolf13"/>
             <br />
             <sub><b>Tobias</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/CrossPatch9000">
-            <img src="https://avatars.githubusercontent.com/u/150388639?u=2de7d52e66299307a2d8f863f81b5f493b068e4c&v=4" width="80;" alt="CrossPatch9000"/>
-            <br />
-            <sub><b>CrossPatch9000</b></sub>
         </a>
     </td></tr>
 </table>
@@ -295,14 +288,14 @@
         <a href="https://github.com/kolaente">
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
             <br />
-            <sub><b>kolaente</b></sub>
+            <sub><b>Kolaente</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/magical-heyrovsky">
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
             <br />
-            <sub><b>magical-heyrovsky</b></sub>
+            <sub><b>Magical-heyrovsky</b></sub>
         </a>
     </td>
     <td align="center">
@@ -324,7 +317,7 @@
         <a href="https://github.com/titanism">
             <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
             <br />
-            <sub><b>titanism</b></sub>
+            <sub><b>Titanism</b></sub>
         </a>
     </td>
     <td align="center">
