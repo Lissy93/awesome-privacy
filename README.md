@@ -648,7 +648,7 @@ A firewall is a program which monitors the incoming and outgoing traffic on your
 **[Uncomplicated Firewall](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)**<br>(Linux) | The ufw (Uncomplicated Firewall) is a GUI application and CLI, that allows you to configure a firewall using [`iptables`](https://linux.die.net/man/8/iptables) much more easily
 **[IPFire](https://www.ipfire.org)** <br>(hardware) | IPFire is a hardened, versatile, state-of-the-art Open Source firewall based on Linux. Easy to install on a raspberry Pi, since it is lightweight and heavily customizable
 **[Shorewall](https://shorewall.org)** <br>(hardware) | An open source firewall tool for Linux that builds upon the [Netfilter](https://www.netfilter.org) system built into the Linux kernel, making it easier to manage more complex configuration schemes with [iptables](https://linux.die.net/man/8/iptables)
-**[OpenSense](https://opnsense.org)** <br>(hardware)  | Enterprise firewall and router for protecting networks, built on the FreeBSD system 
+**[OPNSense](https://opnsense.org)** <br>(hardware)  | Enterprise firewall and router for protecting networks, built on the FreeBSD system 
 
 #### Word of Warning
 There are different [types](https://www.networkstraining.com/different-types-of-firewalls) of firewalls, that are used in different circumstances. This does not omit the need to configure your operating systems defences. Follow these instructions to enable your firewall in [Windows](https://support.microsoft.com/en-us/help/4028544/windows-10-turn-windows-defender-firewall-on-or-off), [Mac OS](https://support.apple.com/en-us/HT201642), [Ubuntu](https://wiki.ubuntu.com/UncomplicatedFirewall) and other [Linux distros](https://www.tecmint.com/start-stop-disable-enable-firewalld-iptables-firewall).
@@ -1474,7 +1474,7 @@ Community-maintained media software can help you migrate away from providers tha
 - Dashboards: [Homer](https://github.com/bastienwirtz/homer), [Heimdall](https://heimdall.site), [SWMP](https://swmp.ml), [Uchiwa](https://uchiwa.io) (for Sensu), [Linux Dash](https://github.com/afaqurk/linux-dash)
 - DNS: [CoreDNS](https://coredns.io), [KnotDNS](https://www.knot-dns.cz), [Bind 9](https://www.isc.org/bind), [PowerDNS](https://www.powerdns.com)
 - Domain Control: [DomainMod](https://domainmod.org), [OctoDNS](https://github.com/github/octodns), [DNSControl](https://stackexchange.github.io/dnscontrol)
-- Firewall: [IPFire](https://www.ipfire.org), [PFSense](https://www.pfsense.org), [OpenSense](https://opnsense.org), [ShoreWall](https://shorewall.org)
+- Firewall: [IPFire](https://www.ipfire.org), [PFSense](https://www.pfsense.org), [OPNSense](https://opnsense.org), [ShoreWall](https://shorewall.org)
 - Log Management: [GoAccess](https://goaccess.io)
 - Monitoring: [Alerta](https://github.com/alerta/alerta), [Cabot](https://github.com/arachnys/cabot), [Cadvisor](https://github.com/google/cadvisor), [CheckMK](https://checkmk.com), [Linux Dash](https://github.com/afaqurk/linux-dash). [NetData](https://www.netdata.cloud), [PS Dash](https://github.com/Jahaja/psdash)
 - Proxy: [ShaddowSocks](https://shadowsocks.org), [Privoxy](https://www.privoxy.org)
