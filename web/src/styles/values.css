@@ -1,0 +1,13 @@
+:root {
+  --accent: #f72b77;
+  --accent-fg: #fff;
+
+  --accent-2: #ffdf60;
+  --accent-3: #5f53f4;
+
+  --foreground: #13151a;
+
+  --curve-sm: 4px;
+  --curve-md: 6px;
+  --curve-lg: 12px;
+}

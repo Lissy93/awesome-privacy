@@ -1,0 +1,161 @@
+categories:
+  - name: Essentials
+    sections:
+    - name: Password Managers
+      services:
+    - name: 2-Factor Authentication
+      services:
+    - name: File Encryption
+      services:
+    - name: Browsers
+      services:
+    - name: Search Engines
+      services:
+    
+  - name: Communication
+    sections:
+    - name: Encrypted Messaging
+      services:
+    - name: P2P Messaging
+      services:
+    - name: Encrypted Email
+      services:
+    - name: Email Clients
+      services:
+    - name: Mail Forwarding
+      services:
+    - name: Email Security Tools
+      services:
+    - name: VOIP Clients
+      services:
+    - name: Virtual Phone Numbers
+      services:
+    - name: Team Collaboration Platforms
+      services:
+
+  - name: Security Tools
+    sections:
+    - name: Browser Extensions
+      services:
+    - name: Mobile Apps
+      services:
+    - name: Online Tools
+      services:
+
+  - name: Networking
+    sections:
+    - name: Virtual Private Networks
+      services:
+    - name: Self-Hosted Network Security
+      services:
+    - name: Mix Networks
+      services:
+    - name: Proxies
+      services:
+    - name: DNS Providers
+      services:
+    - name: DNS Clients
+      services:
+    - name: Firewalls
+      services:
+    - name: Ad Blockers
+      services:
+    - name: Host Block Lists
+      services:
+    - name: Router Firmware
+      services:
+    - name: Network Analysis
+      services:
+    - name: Cloud Hosting
+      services:
+    - name: Domain Registrars
+      services:
+    - name: DNS Hosting
+      services:
+    - name: Pre-Configured Mail-Servers
+      services:
+
+  - name: Productivity
+    sections:
+    - name: Digital Notes
+      services:
+    - name: Cloud Productivity Suites
+      services:
+    - name: Backup and Sync
+      services:
+    - name: Encrypted Cloud Storage
+      services:
+    - name: File Drop
+      services:
+    - name: Browser Sync
+      services:
+    - name: Secure Conference Calls
+      services:
+
+  - name: Utilities
+    sections:
+    - name: Virtual Machines
+      services:
+    - name: PGP Managers
+      services:
+    - name: Metadata Removal
+      services:
+    - name: Data Erasers
+      services:
+
+
+  - name: Social
+    sections:
+    - name: Social Networks
+      services:
+    - name: Video Platforms
+      services:
+    - name: Blogging Platforms
+      services:
+    - name: News Readers
+      services:
+    - name: Proxy Sites
+      services:
+
+
+  - name: Operating Systems
+    sections:
+    - name: Mobile Operating Systems
+      services:
+    - name: Desktop Operating Systems
+      services:
+    - name: Linux Defences
+      services:
+    - name: Windows Defences
+      services:
+    - name: Mac OS Defences
+      services:
+    - name: Anti-Malware
+      services:
+
+  - name: Development
+    sections:
+    - name: Code Hosting
+      services:
+
+  - name: Home Automation
+    sections:
+    - name: Home Automation
+      services:
+    - name: Voice Assistants
+      services:
+
+  - name: Finance
+    sections:
+    - name: Cryptocurrencies
+      services:
+    - name: Crypto Wallets
+      services:
+    - name: Crypto Exchanges
+      services:
+    - name: Virtual Credit Cards
+      services:
+    - name: Other Payment Methods
+      services:
+    - name: Secure Budgeting
+      services:

@@ -1,0 +1,67 @@
+---
+
+import yaml from 'js-yaml';
+
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import Hero from '../../components/Hero.astro';
+import { AwesomePrivacy, Section, Service } from '../../types/Service';
+
+
+export async function getStaticPaths() {
+
+const fetchData = async (): Promise<AwesomePrivacy> => {
+  return await fetch('http://localhost:4321/awesome-privacy.yml')
+    .then((res) => res.text())
+    .then((data) => yaml.load(data))
+    .catch((err) => console.error(err));
+};
+
+
+const slugify = (title: string) => {
+  return title.toLowerCase().replace(/\s/g, '-');
+};
+
+
+const pages = await fetchData().then((data) => {
+
+  const results: { slug: string, title: string, otherSections: Section[], services: Service[] }[] = [];
+  data.categories.forEach((service) => {
+    const sections = service.sections.map((section) => ({
+      slug: `${slugify(service.name)}/${slugify(section.name)}`,
+      title: section.name,
+      services: section.services,
+      otherSections: service.sections,
+    }));
+    results.push(...sections);
+  });
+  return results;
+});
+
+return pages.map(({ slug, title, otherSections, services }) => {
+  return {
+    params: { slug },
+    props: { title, otherSections, services },
+  };
+});
+
+}
+
+---
+
+<Layout title="Awesome Privacy">
+
+  
+</Layout>
+
+<style lang="scss">
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}	
+</style>

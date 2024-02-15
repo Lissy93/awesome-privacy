@@ -1,0 +1,73 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../components/Hero.astro';
+
+
+import yaml from 'js-yaml';
+import type { AwesomePrivacy, Section, Service } from '../types/Service';
+
+interface Props {
+	title: string;
+	sections: Section[];
+}
+
+const { title, sections } = Astro.props;
+
+export async function getStaticPaths() {
+  const fetchData = async (): Promise<AwesomePrivacy> => {
+    return await fetch('http://localhost:4321/awesome-privacy.yml')
+      .then((res) => res.text())
+      .then((data) => yaml.load(data))
+      .catch((err) => console.error(err));
+  };
+
+  const slugify = (title: string) => {
+    return title.toLowerCase().replace(/\s/g, '-');
+  };
+
+	const pages = await fetchData().then((data) => {
+		return data.categories.map((category) => {
+			return {
+				category: slugify(category.name),
+				title: category.name,
+				sections: category.sections,
+			};
+		});
+	});
+
+  return pages.map(({ category, title, sections }) => {
+    return {
+      params: { category },
+      props: { title, sections },
+    };
+  });
+}
+
+
+---
+
+<Layout title="Awesome Privacy">
+	<!-- <Hero /> -->
+	<main>
+		<h1>Title: {title}</h1>
+		<!-- {sections.map((section) => (
+			<section>
+				<h2>{section.name}</h2>
+			</section>
+		))} -->
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 2rem);
+		color: red;
+		font-size: 20px;
+		line-height: 1.6;
+	}	
+</style>
