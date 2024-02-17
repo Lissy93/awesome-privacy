@@ -10,15 +10,18 @@ export interface Service {
   name: string;
   description: string;
   url: string;
-  github: string;
+  github?: string;
+  icon?: string;
   followWith?: string;
 }
 
 export interface Section {
   name: string;
   services: Service[];
-  notableMentions: ShortService[];
-  furtherInfo: string;
+  intro?: string;
+  notableMentions?: ShortService[] | string;
+  furtherInfo?: string;
+  wordOfWarning?: string;
 }
 
 export interface ServiceStats {
