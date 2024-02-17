@@ -1,0 +1,111 @@
+---
+
+import Button from '@components/form/Button.astro';
+import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+import type { Service } from 'src/types/Service';
+
+const { title, services, subHeading, buttonLink } = Astro.props;
+
+---
+
+
+<section>
+  {services ? (
+    <ul>
+    {services.map((service: Service) => (
+      <li>
+        <div class="service-head">
+          <img src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
+            width="24" height="24" alt="icon" loading="lazy" decoding="async" />
+          {subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
+          {service.followWith && <p class="follow-with">({service.followWith})</p> }
+          <a class="service-link" href={service.url}>{formatLink(service.url)}</a>
+        </div>
+        <div class="service-body">
+          <p set:html={parseMarkdown(service.description)}></p>
+        </div>
+      </li>
+    ))}
+    </ul>
+  ) : (
+    <p class="nothing-yet">
+      <strong>⚠️ This section is still a work in progress ⚠️</strong><br />
+      Check back soon, or help us complete it by submiting a pull request on GitHub.
+    </p>
+  )}
+
+  {buttonLink && ( <Button text="View All" url={buttonLink} /> )}
+</section>
+
+
+<style lang="scss">
+
+  section {
+    padding: 1rem 0;
+    position: relative;
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--accent-3);
+    }
+  }
+  
+  .nothing-yet {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem 0;
+    li {
+      margin-bottom: 1rem;
+      .service-head {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        h3, h4 {
+          margin: 0;
+          font-size: 1.6rem;
+        }
+        img {
+          border-radius: 4px;
+        }
+        .follow-with {
+          opacity: 0.7;
+          font-style: italic;
+          margin: 0;
+        }
+        .service-link {
+          max-width: 300px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+  
+      .service-body {
+        margin: 0.5rem 0 2rem;
+        opacity: 0.8;
+        :global(p) {
+          margin: 0;
+          font-size: 1.2rem;
+          :global(a) {
+            color: var(--foregorund);
+          }
+        }
+      }
+    }
+  }
+
+section :global(.button) {
+  width: fit-content;
+  position: absolute;
+  right: 1rem;
+  margin-top: -2.5rem;
+  background: var(--accent-3);
+}
+  
+</style>

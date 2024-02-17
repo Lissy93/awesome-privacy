@@ -1,0 +1,73 @@
+---
+
+import { slugify } from '../../utils/fetch-data';
+
+import type { Section } from '../../types/Service';
+
+interface Props {
+	title: string;
+	sections: Section[];
+  bigTitle?: boolean;
+}
+
+const { title, sections, bigTitle } = Astro.props;
+
+---
+
+{ bigTitle ?
+  <h2>{title}</h2> :
+  <a class="category-title" href={`/${slugify(title)}`}><h3>{title}</h3></a>
+}
+
+<ul>
+  {sections.map((section) => (
+    <li>
+      <a href={`/${slugify(title)}/${slugify(section.name)}`}>
+        <span>{section.name}</span> 
+        <span class="service-count">({section.services ? section.services.length : 0})</span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+
+<style lang="scss">
+
+h2 {
+  font-family: "Lekton", sans-serif;
+  font-size: 2rem;
+  margin: -2rem 0 2rem -2rem;
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent);
+  color: var(--accent-fg);
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+}
+
+.category-title {
+  text-decoration: none;
+  color: var(--foreground);
+  h3 {
+    font-family: "Lekton", sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+}
+
+ul {
+  list-style: circle;
+  padding-left: 1rem;
+  li {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    a {
+      text-decoration: none;
+      color: var(--foreground);
+    }
+    .service-count {
+      color: var(--accent-3);
+    }
+  }
+}
+</style>
