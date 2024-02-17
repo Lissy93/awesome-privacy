@@ -16,15 +16,23 @@ code {
     monospace;
 }
 
-.heading, h1, h2, h3, h4, h5, h6 {
+.heading, h1 {
   font-family: "Libre Franklin", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
 }
 
-.subtitle {
+.subtitle, h2, h3, h4, h5, h6 {
   font-family: "Lekton", sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+html, body, p, a, ul, ol, li, blockquote, pre, code, strong, i {
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  color: var(--accent);
 }
