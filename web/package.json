@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.5.4",
     "astro": "^4.3.6",
     "js-yaml": "^4.1.0",
+    "marked": "^12.0.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
