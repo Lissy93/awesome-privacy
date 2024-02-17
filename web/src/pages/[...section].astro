@@ -1,68 +1,221 @@
 ---
 
-import yaml from 'js-yaml';
 
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Hero from '../components/Hero.astro';
-import { AwesomePrivacy, Section, Service } from '../types/Service';
+import Layout from '@layouts/Layout.astro';
+import Button from '@components/form/Button.astro';
+import Main from '@components/scafold/MainCard.astro';
+import ServiceList from '@components/things/ServiceList.astro';
+import type { AwesomePrivacy, Section, Service, ShortService } from '../types/Service';
+import { fetchData, slugify } from '@utils/fetch-data';
+import { parseMarkdown } from '@utils/parse-markdown';
 
-const { title, otherSections, services } = Astro.props;
+interface Props {
+  slug: string,
+  title: string,
+  services: Service[],
+  intro?: string,
+  notableMentions?: ShortService[] | string,
+  furtherInfo?: string,
+  wordOfWarning?: string,
+  categoryName: string,
+  otherSections: Section[],
+}
+
+const { slug, title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro } = Astro.props;
 
 export async function getStaticPaths() {
 
-const fetchData = async (): Promise<AwesomePrivacy> => {
-  return await fetch('http://localhost:4321/awesome-privacy.yml')
-    .then((res) => res.text())
-    .then((data) => yaml.load(data))
-    .catch((err) => console.error(err));
-};
-
-
-const slugify = (title: string) => {
-  return title.toLowerCase().replace(/\s/g, '-');
-};
-
-
 const pages = await fetchData().then((data) => {
-
-  const results: { slug: string, title: string, otherSections: Section[], services: Service[] }[] = [];
-  data.categories.forEach((service) => {
-    const sections = service.sections.map((section) => ({
-      slug: `${slugify(service.name)}/${slugify(section.name)}`,
+  const results: Array<Props> = [];
+  (data as AwesomePrivacy).categories.forEach((category) => {
+    const sections = category.sections.map((section) => ({
+      slug: `${slugify(category.name)}/${slugify(section.name)}`,
       title: section.name,
       services: section.services,
-      otherSections: service.sections,
+      intro: section.intro,
+      notableMentions: section.notableMentions,
+      furtherInfo: section.furtherInfo,
+      wordOfWarning: section.wordOfWarning,
+      categoryName: category.name,
+      otherSections: category.sections,
     }));
     results.push(...sections);
   });
   return results;
 });
 
-return pages.map(({ slug, title, otherSections, services }) => {
+return pages.map(({ slug, title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro }) => {
   return {
     params: { section: slug },
-    props: { title, otherSections, services },
+    props: { title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro },
   };
 });
-
 }
+
+const makePaginationLinks = () => {
+  const index = otherSections.findIndex(section => section.name === title);
+  const previousSection = index >  0 ? otherSections[index -  1].name : null;
+  const nextSection = index < otherSections.length -  1 ? otherSections[index +  1].name : null;
+  return { previous: previousSection, next: nextSection };
+};
+
+const { previous, next } = makePaginationLinks();
 
 ---
 
 <Layout title="Awesome Privacy">
+  <Main>
 
-  <h1>{title}</h1>
+    <h2>{title}</h2>
+
+    {intro && (
+      <section class="intro">
+        <p set:html={parseMarkdown(intro)}></p>
+      </section>
+    )}
+
+    <ServiceList title={title} services={services} />
+
+    {notableMentions && (
+      <section class="notable-mentions">
+        <h3>Notable Mentions</h3>
+        { Array.isArray(notableMentions) ?
+          <ul>
+            {notableMentions.map((mention) => (
+              <li>
+                <a href={mention.url}>{mention.name}</a> 
+                {mention.description && (
+                  <span>- </span>
+                  <span set:html={parseMarkdown(mention.description)}></span>
+                )}
+              </li>
+            ))}
+          </ul> :
+          <p set:html={parseMarkdown(notableMentions)}></p>
+      }
+      </section>
+    )}
+
+    {furtherInfo && (
+      <section class="further-info">
+        <h3>Notes</h3>
+        <p set:html={parseMarkdown(furtherInfo)}></p>
+      </section>
+    )}
+
+    {wordOfWarning && (
+      <section class="word-of-warning">
+        <h3>Word of Warning</h3>
+        <p set:html={parseMarkdown(wordOfWarning)}></p>
+      </section>
+    )}
+
+    <div class="pagination-navigation">
+      { previous ? (
+        <Button url={`/${slugify(categoryName)}/${slugify(previous)}`}>
+          <span>← Previous</span>
+          <p>{previous}</p>
+        </Button>
+      ) : <p class="nothing"></p>}
+      <a href={`/${slugify(categoryName)}`} class="go-to-category">
+        View all in {categoryName} ({otherSections.length})
+      </a>
+      { next && (
+        <Button url={`/${slugify(categoryName)}/${slugify(next)}`}>
+          <span>Next →</span>
+          <p>{next}</p>
+        </Button>
+      )}
+    </div>
+  </Main>
 </Layout>
 
 <style lang="scss">
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 1000px;
-		max-width: calc(100% - 2rem);
-		
-		font-size: 20px;
-		line-height: 1.6;
-	}	
+
+section {
+  padding-bottom: 1rem;
+  &:not(:last-child) {
+    border-bottom: 2px solid var(--accent-3);
+  }
+}
+
+h2 {
+    font-size: 2rem;
+    margin: -2rem 0 2rem -2rem;
+    box-shadow: 6px 6px 0 var(--foreground);
+    background: var(--accent);
+    color: var(--accent-fg);
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+  }
+
+.pagination-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  :global(.button) {
+    min-width: 120px;
+    width: fit-content;
+    padding: 0.25rem 1rem;
+    text-align: right;
+    &:first-child { text-align: left; }
+    p {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+    
+  }
+  .nothing {
+    width: 120px;
+  }
+  .go-to-category {
+    color: var(--foreground);
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+}
+
+.intro {
+  font-style: italic;
+  opacity: 0.7; 
+}
+
+
+.further-info, .notable-mentions, .word-of-warning {
+  h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  :global(p) {
+    font-size: 0.9rem;
+    opacity: 0.7; 
+    :global(strong) {
+      font-weight: 500;
+    }
+    :global(a) {
+      color: var(--foreground);
+      transition: all 0.15s ease-in-out;
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+  ul {
+    list-style: circle;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    li {
+      margin-bottom: 0.25rem;
+      :global(p) {
+        display: inline;
+      }
+    }
+  }
+}
+
 </style>
