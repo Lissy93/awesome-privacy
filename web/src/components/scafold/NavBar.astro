@@ -1,0 +1,69 @@
+---
+---
+
+<div class="nav">
+  <a href="/"><h1>Awesome Privacy</h1></a>
+  <nav>
+    <a href="#">Categories</a>
+    <a href="#">Contributing</a>
+    <a href="https://digital-defense.io">Security Checklist</a>
+    <a href="https://github.com/lissy93/awesome-privacy">GitHub</a>
+  </nav>
+</div>
+
+<style lang="scss">
+  .nav {
+    background: var(--accent-fg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid var(--foreground);
+    
+    a {
+      text-decoration: none;
+      h1 {
+        margin: 0;
+        font-size: 2.4rem;
+        padding: 0 1rem;
+        color: var(--foreground);
+        font-family: "Lekton", sans-serif;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      a {
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-family: "Lekton", sans-serif;
+        font-weight: bold;
+        color: var(--foreground);
+        border-left: 2px solid var(--foreground);
+        transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+        transition-timing-function: ease-in-out;
+        &:hover {
+          background: var(--accent-3);
+          color: var(--accent-fg);
+          border-bottom: 2px solid var(--foreground);
+          &:nth-child(4n+1) {
+            background-color: var(--accent);
+          }
+          &:nth-child(4n+2) {
+            background-color: var(--accent-2);
+            color: var(--foreground);
+          }
+          &:nth-child(4n+3) {
+            background-color: var(--accent-3);
+          }
+          &:nth-child(4n+4) {
+            background-color: var(--accent-4);
+            color: var(--foreground);
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -45,13 +45,15 @@
   <p class="intro">
     Your guide to finding privacy-respecting alternatives to popular software and services.
   </p>
+  <div class="github-link-wrap">
+    <a href="https://github.com/lissy93/awesome-privacy">View or Edit on GitHub</a>
+  </div>
 </div>
 
 
 <style lang="scss">
 
 	.hero {
-		background: var(--accent-fg);
     color: var(--accent-fg);
     border-radius: var(--curve-sm);
     padding: 2rem 4rem;
@@ -89,11 +91,30 @@
     color: var(--accent-fg);
     background: var(--accent-3);
     border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
     box-shadow: 6px 6px 0 var(--foreground);
     font-family: "Lekton", sans-serif;
     font-weight: 700;
     max-width: 735px;
     margin: 0 auto;
+  }
+  .github-link-wrap {
+    font-family: "Lekton", sans-serif;
+    max-width: 735px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid var(--foreground);
+    box-shadow: 3px 3px 0 var(--foreground);
+    background: var(--accent);
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    a {
+      text-decoration: none;
+      color: var(--accent-fg);;
+      font-size: 1.2rem;
+      font-family: "Lekton", sans-serif;
+      font-weight: bold;
+    }
   }
 	
 </style>
