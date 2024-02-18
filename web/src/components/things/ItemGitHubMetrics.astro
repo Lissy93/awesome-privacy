@@ -1,0 +1,156 @@
+---
+import FontAwesome from "@components/form/FontAwesome.svelte";
+const { github } = Astro.props;
+
+
+const [user, repo] = github.split("/");
+
+
+/**
+ * For a given `user/repo` fetch repository stats from the GitHub API data
+ * If API key is available through env var, use it to increase rate limit
+ * Returns the response data and status code (200 == success)
+ * @param repo 
+ */
+const fetchGitHubData = async (repo: string) => {
+  const apiKey = import.meta.env.GITHUB_API_KEY;
+  const headers = new Headers();
+  if (apiKey) {
+    headers.append("Authorization", `token ${apiKey}`);
+  }
+
+  let data = {};
+  let statusCode = 0;
+
+  const response = await fetch(`https://api.github.com/repos/${repo}`, {
+    headers: headers,
+  }).catch((e) => {
+    console.error(`Network error: ${e.message}`);
+    // Return a placeholder response to handle this gracefully
+    return null;
+  });
+
+  // Check if fetch was successful but caught by the catch block
+  if (!response) {
+    return { data, statusCode: 503 }; // Use an appropriate error status code
+  }
+
+  statusCode = response.status;
+
+  // Only attempt to parse JSON if the response was OK
+  if (response.ok) {
+    data = await response.json();
+  } else {
+    console.error(`HTTP error: Received status code ${response.status}`);
+  }
+
+  return { data, statusCode };
+};
+
+
+/**
+ * Given a license object, return SPDX ID, or a formatted name
+ * @param license 
+ */
+const formatLicense = (license: { spdx_id?: string, name?: string }) => {
+  if (!license) {
+    return "Unknown";
+  }
+  if (license.spdx_id === "NOASSERTION") {
+    return "No License";
+  }
+  return license.spdx_id;
+}
+
+/**
+ * Given a (possibly large) number, return a formatted string
+ * E.g. If greater than thousand, then return in k format
+ * @param num 
+ */
+const formatBigNumber = (num: number) => {
+  if (num > 1000) {
+    return `${(num / 1000).toFixed(1)}k`;
+  }
+  return num;
+}
+
+// Initiate GitHub fetch, and make available to the component
+const stats = await fetchGitHubData(github);
+
+const {
+  stargazers_count, forks_count, open_issues_count, language, license, owner,
+} = stats.data;
+
+
+---
+
+<div class="github-metrics">
+  <!-- <span title={`Built / owned by @${user}`}>
+    <img src={`https://github.com/${user}.png`} alt={user || owner?.login} width="20" height="20" />
+  </span> -->
+  <!-- <span title={`${repo} is open source, with code published on GitHub`}>
+    <FontAwesome iconName="openSource" /> Open Source
+  </span> -->
+  <span title={`GitHub repository:  ${github}`}>
+    <a href={`https://github.com/${github}`}><FontAwesome iconName="github" /> {github}</a>
+  </span>
+  { stats.statusCode === 200 && stats.data && (
+    <span title={`GitHub Star Count: ${stargazers_count}`}>
+      <FontAwesome iconName="stars" /> {formatBigNumber(stargazers_count)}
+    </span>
+    <span title={`GitHub Fork Count: ${forks_count}`}>
+      <FontAwesome iconName="forks" /> {formatBigNumber(forks_count)}
+    </span>
+    <span title={`Open Issues / Bugs: ${open_issues_count}`}>
+      <FontAwesome iconName="issues" /> {formatBigNumber(open_issues_count)}
+    </span>
+    <span title={`Code licensed under ${license?.name}`}>
+      <FontAwesome iconName="license" /> {formatLicense(license)}
+    </span>
+    <span title={`Primary programming language ${language}`}>
+      <FontAwesome iconName="language" /> {language}
+    </span>
+  )}
+</div>
+
+
+<style lang="scss">
+.github-metrics {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+
+    a {
+      color: var(--foreground);
+      text-decoration: none;
+      align-items: center;
+      display: flex;
+      gap: 0.25rem;
+      transition: all 0.2s ease-in-out;
+      color: var(--accent-3);
+      &:hover {
+        color: var(--accent-3);
+        font-weight: 500;
+      }
+    }
+
+    img {
+      border-radius: var(--curve-md);
+    }
+  }
+  :global(svg) {
+    color: var(--foregroung);
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+</style>
