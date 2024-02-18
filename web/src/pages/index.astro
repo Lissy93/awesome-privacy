@@ -9,16 +9,18 @@ import SectionList from '@components/things/SectionList.astro';
 import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
 
-const categories = (await fetchData()).categories;
+const categories = (await fetchData())?.categories || [];
 
 ---
 
 <Layout title="Awesome Privacy" hideNav={true}>
 	<Hero />
 	<main>
-		<h2>Search</h2>
+		<h2>
+			<a href="/search">Search</a>
+		</h2>
 		<Search />
-		<h2 class="browse-title">Browse</h2>
+		<h2 class="browse-title"><a href="/browse">Browse</a></h2>
 		<ul class="categories">
 		{categories.map((category) => (
 			<li class="category">
@@ -27,8 +29,32 @@ const categories = (await fetchData()).categories;
 		))}
 		</ul>
 		<div class="view-all">
-			<Button url="/all" text="View All" />
+			<span>Or, just</span>
+			<Button url="/all" text="View Everything" />
 		</div>
+		<h2>
+			<a href="/about">About</a>
+		</h2>
+		<div class="about-summary">
+			<p>
+				Awesome Privacy is a collection of privacy-respecting services and tools.
+				The aim is to help you escape big tech, and choose software that respects your privacy. 
+			</p>
+			<p>
+				Noticed something that should be added / removed / ammended?
+				We're a community-driven resource, so welcome contributions of any nature.
+				All content and code is <a href="https://github.com/lissy93/awesome-privacy">open source</a>.
+			</p>
+			<p>
+				If you've found Awesome Privacy useful, help us out by sharing it with others,
+				contributing, or consider <a href="https://github.com/sponsors/lissy93">sponsoring me</a> on GitHub.
+			</p>
+		</div>
+		<div class="view-all">
+			<span>Want to learn more?</span>
+			<Button url="/about" text="Keep Reading..." />
+		</div>
+		
 	</main>
 </Layout>
 
@@ -41,15 +67,36 @@ const categories = (await fetchData()).categories;
 		font-size: 20px;
 		line-height: 1.6;
 		.view-all {
-			width: 8rem;
+			text-align: center;
+			width: 16rem;
 			margin: 0 auto;
+			span {
+				opacity: 0.5;
+				font-size: 1rem;
+			}
 		}
 	}
 	h2 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 		color: var(--accent-3);
 		font-family: "Lekton", sans-serif;
 		text-align: center;
+		margin: 3rem 0 1rem 0;
+		a {
+			text-decoration: none;
+			color: var(--accent-3);
+			font-family: "Lekton", sans-serif;
+		}
+	}
+
+	.about-summary {
+		background: var(--accent-fg);
+			border: 2px solid var(--foreground);
+			border-radius: var(--curve-sm);
+			box-shadow: 4px 4px 0 var(--foreground);
+			padding: 1rem;
+			width: 85%;
+			margin: 0 auto;
 	}
 
 	.categories {
