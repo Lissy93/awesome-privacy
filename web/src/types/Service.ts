@@ -13,6 +13,9 @@ export interface Service {
   github?: string;
   icon?: string;
   followWith?: string;
+  securityAudited?: boolean;
+  openSource?: boolean;
+  acceptsCrypto?: boolean;
 }
 
 export interface Section {
