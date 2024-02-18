@@ -11,4 +11,7 @@
   --curve-sm: 4px;
   --curve-md: 6px;
   --curve-lg: 12px;
+
+  --danger: #ff0048;
+  --success: #00ff64;
 }
