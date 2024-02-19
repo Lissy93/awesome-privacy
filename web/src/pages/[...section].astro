@@ -27,6 +27,7 @@ export async function getStaticPaths() {
 
 const pages = await fetchData().then((data) => {
   const results: Array<Props> = [];
+  if (!data || !data.categories) return results;
   (data as AwesomePrivacy).categories.forEach((category) => {
     const sections = category.sections.map((section) => ({
       slug: `${slugify(category.name)}/${slugify(section.name)}`,
@@ -205,10 +206,18 @@ h2 {
       }
     }
   }
-  ul {
+  :global(strong) {
+    font-weight: 500;
+  }
+  :global(h4) {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+  }
+  :global(ul) {
     list-style: circle;
     padding-left: 1rem;
     font-size: 0.9rem;
+    opacity: 0.7;
     li {
       margin-bottom: 0.25rem;
       :global(p) {

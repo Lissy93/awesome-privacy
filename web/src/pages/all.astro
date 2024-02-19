@@ -8,9 +8,9 @@ import ServiceList from '@components/things/ServiceList.astro';
 import type { AwesomePrivacy, Section, Service, ShortService } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { parseMarkdown } from '@utils/parse-markdown';
+import FontAwesome from '@components/form/FontAwesome.svelte';
 
-
-const categories = (await fetchData() as AwesomePrivacy).categories;
+const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
 
 ---
 
@@ -39,6 +39,7 @@ const toggleSidebar = () => {
     <button id="toggle-sidebar">Show Contents</button>
     {categories.map((category) => (
       <h2  id={`${slugify(category.name)}`}>
+        <FontAwesome iconName={slugify(category.name)} />
         <a href={`/${slugify(category.name)}`}>{category.name}</a>
       </h2>
       
@@ -48,7 +49,13 @@ const toggleSidebar = () => {
               <h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
                 <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
               </h3>
-              <ServiceList title={section.name} services={section.services} subHeading={true} buttonLink={`/${slugify(category.name)}/${slugify(section.name)}`} />
+              <ServiceList
+                title={section.name}
+                services={section.services}
+                subHeading={true}
+                buttonLink={`/${slugify(category.name)}/${slugify(section.name)}`}
+                noGitHubMetrics={true}
+              />
             </section>
           ))}
         </article>
@@ -167,9 +174,18 @@ h2 {
   font-size: 3rem;
   text-align: center;
   opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   a {
     color: var(--accent-3);
     text-decoration: none;
+  }
+  :global(svg) {
+    width: 3rem;
+    height: 3rem;
+    color: var(--accent-3);
   }
 }
 
