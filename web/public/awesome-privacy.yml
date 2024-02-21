@@ -5,6 +5,7 @@ categories:
     ###### Password Managers ######
     ###############################
     - name: Password Managers
+      alternativeTo: ['LastPass', '1Password', 'Dashlane', 'Bitwarden', 'Norton Password Manager']
       services:
       - name: Bitwarden
         url: https://bitwarden.com
@@ -99,6 +100,7 @@ categories:
     ###### 2-Factor Authentication ######
     #####################################
     - name: 2-Factor Authentication
+      alternativeTo: ['Google Authenticator', 'Authy', 'Microsoft Authenticator', 'LastPass Authenticator', 'Duo Mobile']
       services:
       - name: Aegis
         url: https://getaegis.app
@@ -192,6 +194,7 @@ categories:
     ###### File Encryption ######
     #############################
     - name: File Encryption
+      alternativeTo: ['VeraCrypt', 'BitLocker', 'FileVault', 'AxCrypt', 'WinRAR']
       services:
       - name: VeraCrypt
         url: https://www.veracrypt.fr
@@ -274,6 +277,7 @@ categories:
     ###### Browsers ######
     ######################
     - name: Browsers
+      alternativeTo: ['Chrome', 'Safari', 'Firefox', 'Edge', 'Opera']
       services:
       - name: LibreWolf
         icon: https://librewolf.net/icon.svg
@@ -345,6 +349,7 @@ categories:
     ###### Search Engines ######
     ############################
     - name: Search Engines
+      alternativeTo: ['Google', 'Bing', 'Yahoo', 'Baidu', 'Yandex']
       services:
       - name: DuckDuckGo
         url: https://duckduckgo.com
@@ -403,6 +408,7 @@ categories:
     ###### Encrypted Messaging ######
     #################################
     - name: Encrypted Messaging
+      alternativeTo: ['whatsapp', 'facebook messenger', 'wechat', 'telegram', 'snapchat', 'viber', 'line', 'discord']
       services:
       - name: Signal
         url: https://signal.org
@@ -564,6 +570,7 @@ categories:
     ###### Encrypted Email ######
     #############################
     - name: Encrypted Email
+      alternativeTo: ['gmail', 'outlook', 'yahoo mail', 'icloud mail', 'aol mail', 'zoho mail']
       intro: >
         Email is not secure - your messages can be easily intercepted and read.
         Corporations scan the content of your mail, to build up a profile of you,
@@ -652,6 +659,7 @@ categories:
     ###### Email Clients ######
     ###########################
     - name: Email Clients
+      alternativeTo:  ['microsoft outlook', 'apple mail', 'thunderbird', 'em client', 'mailbird', 'postbox']
       intro: >
         Email clients are the programs used to interact with the mail server.
         For hosted email, then the web and mobile clients provided by your email
@@ -800,6 +808,7 @@ categories:
     ###### Mail Security Tools ######
     #################################
     - name: Email Security Tools
+      alternativeTo:  ['boomerang', 'mailtrack', 'grammarly for email', 'wisestamp', 'hubspot sales']
       services:
       - name: Enigmail
         url: https://www.enigmail.net
@@ -840,6 +849,7 @@ categories:
     ###### VOIP Clients ######
     ##########################
     - name: VOIP Clients
+      alternativeTo: ['skype', 'zoom', 'google meet', 'microsoft teams', 'cisco webex', 'gotomeeting']
       services:
       - name: Mumble
         url: https://www.mumble.info/
@@ -873,6 +883,7 @@ categories:
     ###### Virtual Phone Numbers ######
     ###################################
     - name: Virtual Phone Numbers
+      alternativeTo: ['google voice', 'grasshopper', 'ringcentral', 'sideline', 'burner']
       services:
       - name: Silent.link
         url: https://silent.link/
@@ -912,6 +923,7 @@ categories:
     ###### Team Collaboration ######
     ################################
     - name: Team Collaboration
+      alternativeTo: ['slack', 'microsoft teams', 'google chat', 'discord', 'asana', 'trello', 'basecamp']
       intro: >
         Now more than ever we are relying on software to help with team collaboration.
         Unfortunately many popular options, such as
@@ -1656,6 +1668,7 @@ categories:
     ###### Virtual Private Networkd ######
     ######################################
     - name: Virtual Private Networks
+      alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
         url: http://mullvad.net/en
@@ -1929,6 +1942,7 @@ categories:
     ###### DNS Providers ######
     ###########################
     - name: DNS Providers
+      alternativeTo: ['google dns', 'cloudflare', 'quad9', 'opendns', 'norton connectsafe']
       intro: |
         Without using a secure, privacy-centric DNS all your web requests can be
         seen in the clear. You should configure your DNS queries to be managed by
@@ -2220,6 +2234,7 @@ categories:
     ###### Ad-Blockers ######
     #########################
     - name: Ad Blockers
+      alternativeTo:  ['adblock', 'adblock plus', 'ublock', 'ghostery', 'privacy badger']
       intro: |
         There are a few different ways to block ads - browser-based ad-blockers,
         router-based / device blockers or VPN ad-blockers.
@@ -2565,6 +2580,7 @@ categories:
     ###### Domain Registrars ######
     ###############################
     - name: Domain Registrars
+      alternativeTo: ['godaddy', 'namecheap', 'tucows', 'bluehost', 'hostgator', 'google domains']
       services:
       - name: Njal.la
         url: https://njal.la
@@ -2632,6 +2648,7 @@ categories:
     ###### Digital Notes #####
     ##########################
     - name: Digital Notes
+      alternativeTo: ['evernote', 'microsoft onenote', 'google keep', 'apple notes', 'simplenote', 'notion']
       services:
 
       - name: Standard Notes
@@ -2749,6 +2766,7 @@ categories:
     ###### Calendar ######
     ######################
     - name: Calendar
+      alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
       services:
 
     ###########################
@@ -2804,6 +2822,7 @@ categories:
     ###### Cloud Suites ######
     ##########################
     - name: Cloud Productivity Suites
+      alternativeTo: ['microsoft office 365', 'google workspace', 'zoho office suite', 'libreoffice online']
       services:
       - name: CryptPad
         url: https://cryptpad.org/
@@ -2870,6 +2889,7 @@ categories:
     ###### Cloud Storage ######
     ###########################
     - name: Encrypted Cloud Storage
+      alternativeTo: ['dropbox', 'google drive', 'microsoft onedrive', 'icloud', 'box']
       intro: |
         Backing up important files is essential, and keeping an off-site copy is recommended.
         But many free providers do not respect your privacy, and are not secure enough for
@@ -2938,6 +2958,7 @@ categories:
     ###### File Drop ######
     #######################
     - name: File Drop
+      alternativeTo: ['wetransfer', 'send anywhere', 'filemail', 'smash']
       services:
       - name: FilePizza
         url: https://file.pizza
@@ -2978,6 +2999,7 @@ categories:
     ###### Browser Sync ######
     ##########################
     - name: Browser Sync
+      alternativeTo: ['google chrome sync', 'firefox sync', 'microsoft edge sync', 'opera sync']
       services:
       - name: Floccus
         url: https://floccus.org
@@ -3041,6 +3063,7 @@ categories:
     ###### Conference Calls ######
     #############################
     - name: Secure Conference Calls
+      alternativeTo: ['zoom', 'microsoft teams', 'google meet', 'skype', 'cisco webex']
       intro: |
         With the [many, many security issues with Zoom](https://www.tomsguide.com/uk/news/zoom-security-privacy-woes),
         and other mainstream options, it becomes clear that a better, more private and secure alternative is required.
@@ -3403,6 +3426,7 @@ categories:
     ###### Mobile OS ######
     ########################
     - name: Mobile Operating Systems
+      alternativeTo: ['android', 'ios']
       intro: |
         If you are an Android user, your device has Google built-in at its core.
         [Google tracks you](https://digitalcontentnext.org/blog/2018/08/21/google-data-collection-research/),
@@ -3472,6 +3496,7 @@ categories:
     ###### Desktop OS ######
     ########################
     - name: Desktop Operating Systems
+      alternativeTo: ['windows', 'macos', 'ubuntu', 'fedora', 'debian', 'arch', 'centos', 'red hat', 'suse']
       intro: |
         Windows and MacOS have many features that violate your privacy.
         Microsoft and Apple are able to collect all your data (including, but not
@@ -3851,6 +3876,7 @@ categories:
     ###### Anti-Malware ######
     ##########################
     - name: Anti-Malware
+      alternativeTo: ['norton antivirus', 'mcafee antivirus', 'kaspersky antivirus', 'bitdefender antivirus', 'avast antivirus']
       intro: |
         Cross-platform, open source malware detection and virus prevention tools
 
@@ -3888,6 +3914,7 @@ categories:
   - name: Development
     sections:
     - name: Code Hosting
+      alternativeTo: ['github', 'gitlab', 'bitbucket', 'sourceforge', 'aws codecommit']
       services:
       - name: SourceHut
         url: https://sourcehut.org
@@ -3917,13 +3944,17 @@ categories:
           Lightweight self-hosted git platform, written in Go.
 
     - name: IDEs
+      alternativeTo: ['visual studio code', 'intellij idea', 'eclipse', 'pycharm', 'atom']
       services:
+
     - name: Terminal Emulators
+      alternativeTo: ['putty', 'iterm2', 'gnome terminal', 'hyper', 'powershell']
       services:
 
   - name: Smart Home & IoT
     sections:
     - name: Voice Assistants
+      alternativeTo: ['alexa', 'google assistant', 'siri', 'cortana', 'bixby']
       intro: |
         Google Assistant, Alexa and Siri don't have the best
         [reputation](https://srlabs.de/bites/smart-spies) when it comes to protecting
@@ -3975,11 +4006,13 @@ categories:
         you are happy with how it works, from a privacy perspective.
 
     - name: Smart Home
+      alternativeTo: ['philips hue', 'nest', 'samsung smartthings', 'ecobee', 'ring']
       services:
 
   - name: Finance
     sections:
     - name: Cryptocurrencies
+      alternativeTo: ['bitcoin', 'ethereum', 'ripple', 'litecoin', 'bitcoin cash']
       services:
       - name: Monero
         url: https://www.getmonero.org
@@ -4025,6 +4058,7 @@ categories:
 
 
     - name: Crypto Wallets
+      alternativeTo: ['coinbase wallet', 'blockchain.com wallet', 'trust wallet', 'exodus', 'ledger live']
       services:
       - name: Wasabi Wallet
         url: https://www.wasabiwallet.io
@@ -4105,6 +4139,7 @@ categories:
 
 
     - name: Crypto Exchanges
+      alternativeTo: ['coinbase', 'binance', 'kraken', 'bitfinex', 'huobi']
       services:
       - name: Bisq
         url: https://bisq.network
@@ -4149,6 +4184,7 @@ categories:
         ~and ID verification is not needed for small-value trades~ but ID verification is required in most countries.
 
     - name: Virtual Credit Cards
+      alternativeTo: ['visa', 'mastercard', 'american express', 'discover', 'capital one']
       intro: |
         Virtual cards generated provide an extra layer of security, improve privacy
         and help protect from fraud. Most providers have additional features,
@@ -4215,6 +4251,7 @@ categories:
 
 
     - name: Secure Budgeting
+      alternativeTo: ['mint', 'you need a budget (ynab)', 'pocketguard', 'quicken', 'goodbudget']
       services:
       - name: Firefly III
         description: |
@@ -4268,6 +4305,7 @@ categories:
   - name: Social
     sections:
     - name: Social Networks
+      alternativeTo: ['facebook', 'twitter', 'instagram', 'linkedin', 'snapchat']
       intro: |
         Over the past decade, social networks have revolutionized the way we communicate
         and bought the world closer together - but it came at the
@@ -4321,6 +4359,7 @@ categories:
         [this guide](https://proprivacy.com/guides/social-media-privacy-guide) for tips on protecting your privacy
 
     - name: Video Platforms
+      alternativeTo: ['youtube', 'tiktok', 'vimeo', 'dailymotion', 'twitch']
       services:
       - name: PeerTube
         description: |
@@ -4359,6 +4398,7 @@ categories:
         Brighteon, D-Tube, PeerTube, and many others.
 
     - name: Blogging Platforms
+      alternativeTo: ['wordpress', 'medium', 'blogger', 'tumblr', 'wix']
       services:
       - name: Write Freely
         description: |
@@ -4417,6 +4457,7 @@ categories:
         [Ghost](https://ghost.org) and configure it to disable all trackers, ads and analytics.
 
     - name: News Readers
+      alternativeTo: ['google news', 'flipboard', 'feedly', 'apple news', 'reddit']
       services:
       - name: Tiny RSS
         description: |
@@ -4492,37 +4533,53 @@ categories:
   - name: Media
     sections:
     - name: Gaming
+      alternativeTo: ['steam', 'epic games store', 'origin', 'ubisoft connect', 'battle.net']
       services:
     - name: Media Servers
+      alternativeTo: ['plex', 'emby', 'kodi', 'jellyfin', 'universal media server']
       services:
     - name: Music Players
+      alternativeTo: ['spotify', 'apple music', 'google play music', 'amazon music', 'pandora']
       services:
     - name: Video Players
+      alternativeTo: ['vlc', 'windows media player', 'quicktime', 'mplayer', 'kmplayer']
       services:
     - name: Photo Viewers
+      alternativeTo: ['google photos', 'windows photo viewer', 'adobe lightroom', 'apple photos', 'irfanview']
       services:
     - name: E-Book Readers
+      alternativeTo: ['kindle', 'google play books', 'apple books', 'adobe digital editions', 'calibre']
       services:
     - name: Podcast Players
+      alternativeTo: ['apple podcasts', 'spotify', 'google podcasts', 'pocket casts', 'overcast']
       services:
     - name: Torrent Downloaders
+      alternativeTo: ['utorrent', 'bittorrent', 'qBittorrent', 'deluge', 'transmission']
       services:
     - name: File Converters
+      alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
       services:
 
   - name: Creativity
     sections:
     - name: Image Editors
+      alternativeTo: ['adobe photoshop', 'gimp', 'paint.net', 'corel paintshop pro', 'affinity photo']
       services:
     - name: Video Editors
+      alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
       services:
     - name: Audio Editors & Recorders
+      alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
       services:
     - name: Casting & Streaming
+      alternativeTo: ['obs studio', 'xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
       services:
     - name: Screenshot Tools
+      alternativeTo: ['snagit', 'greenshot', 'lightshot', 'gyazo', 'sharex']
       services:
     - name: 3D Graphics
+      alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
       services:
     - name: Animation
+      alternativeTo: ['adobe after effects', 'animate cc', 'toon boom harmony', 'moho (anime studio)', 'pencil2d']
       services:
