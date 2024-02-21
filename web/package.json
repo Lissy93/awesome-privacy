@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.4",
+    "@astrojs/partytown": "^2.0.4",
+    "@astrojs/sitemap": "^3.1.0",
     "@astrojs/svelte": "^5.0.3",
     "@awesome.me/kit-c134243295": "^1.0.10",
     "@fortawesome/fontawesome-pro": "^6.5.1",
