@@ -6,6 +6,9 @@
 
 
   export const iconMap: Record<string, IconDefinition> = {
+    // Branding
+    logo: solidIcons.faEyeSlash,
+
     // GitHub Stat Icons
     github: brands.faGithubAlt,
     stars: solidIcons.faStar,

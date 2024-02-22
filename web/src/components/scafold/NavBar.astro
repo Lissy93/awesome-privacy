@@ -1,8 +1,13 @@
 ---
+import FontAwesome from "@components/form/FontAwesome.svelte"
+
 ---
 
 <div class="nav">
-  <a href="/"><h1>Awesome Privacy</h1></a>
+  <a href="/" class="homepage">
+    <FontAwesome iconName="logo" />
+    <h1>Awesome Privacy</h1>
+  </a>
   <nav>
     <a href="/browse">Browse</a>
     <a href="/search">Search</a>
@@ -20,14 +25,29 @@
     gap: 1rem;
     border-bottom: 2px solid var(--foreground);
     
-    a {
+    .homepage {
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0 0.5rem;
       h1 {
         margin: 0;
         font-size: 2.4rem;
         padding: 0 1rem;
         color: var(--foreground);
         font-family: "Lekton", sans-serif;
+      }
+      :global(svg) {
+        width: 2.5rem;
+        height: 2.5rem;
+        color: var(--accent-3);
+        transition: all 0.2s ease-in-out;
+      }
+      &:hover {
+        :global(svg) {
+          color: var(--accent);
+          transform: scale(1.05);
+        }
       }
     }
 

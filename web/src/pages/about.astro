@@ -101,10 +101,15 @@ export const socials = [
   },
 ];
 
+const description = 'Privacy is a fundamental human right; '
+	+ 'without it, we\'re just open books in a world where everyone\'s '
+	+ 'watching. Let\'s take control back.\n'
+	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
+	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
 
 ---
 
-<Layout title="Awesome Privacy">
+<Layout title="About | Awesome Privacy" description={description}>
 	<div class="about-page">
 	<Main>
 		<h2>Objective</h2>
@@ -307,7 +312,7 @@ h3 {
 		font-weight: 300;
 		color: var(--accent-3);
 		text-align: center;
-		max-width: 500px;
+		max-width: 550px;
 		margin: 0 auto;
 	}
 	small {

@@ -11,9 +11,16 @@ import Button from '@components/form/Button.astro';
 
 const categories = (await fetchData())?.categories || [];
 
+const description = 'Privacy is a fundamental human right; '
+	+ 'without it, we\'re just open books in a world where everyone\'s '
+	+ 'watching. Let\'s take control back.\n'
+	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
+	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
+
+
 ---
 
-<Layout title="Awesome Privacy" hideNav={true}>
+<Layout title="Home | Awesome Privacy" hideNav={true} description={description}>
 	<Hero />
 	<main>
 		<h2>
@@ -39,6 +46,10 @@ const categories = (await fetchData())?.categories || [];
 			<p>
 				Awesome Privacy is a collection of privacy-respecting services and tools.
 				The aim is to help you escape big tech, and choose software that respects your privacy. 
+			</p>
+			<p>
+				Why? Because privacy is a fundamental human right; without it, we're just open books
+				in a world where everyone's watching. Let's take control back.
 			</p>
 			<p>
 				Noticed something that should be added / removed / ammended?

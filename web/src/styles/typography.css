@@ -1,4 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/* Fallback to Google Fonts for specific weights and styles */
+@import url('https://fonts.googleapis.com/css2?family=Lekton:wght@700&family=Libre+Franklin:wght@800&family=Rubik:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* Rubik Font Faces */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), url('/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Rubik Italic'), url('/fonts/Rubik/Rubik-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Rubik Medium Italic'), url('/fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Rubik SemiBold'), url('/fonts/Rubik/Rubik-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Rubik SemiBold Italic'), url('/fonts/Rubik/Rubik-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* Libre Franklin Font Faces */
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Libre Franklin Bold'), url('/fonts/Libre_Franklin/LibreFranklin-Bold.ttf') format('truetype');
+}
+
+/* Lekton Font Faces */
+@font-face {
+  font-family: 'Lekton';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lekton Bold'), url('/fonts/Lekton/Lekton-Bold.ttf') format('truetype');
+}
 
 html {
   font-family: system-ui, sans-serif;

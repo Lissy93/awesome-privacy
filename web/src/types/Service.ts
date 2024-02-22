@@ -25,6 +25,7 @@ export interface Section {
   notableMentions?: ShortService[] | string;
   furtherInfo?: string;
   wordOfWarning?: string;
+  alternativeTo?: string[];
 }
 
 export interface ServiceStats {

@@ -6,6 +6,7 @@ import SectionList from '@components/things/SectionList.astro';
 import { fetchData } from '@utils/fetch-data';
 
 const categories = (await fetchData())?.categories;
+
 ---
 
 <Layout title="Browse">

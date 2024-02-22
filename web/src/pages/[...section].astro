@@ -17,11 +17,58 @@ interface Props {
   notableMentions?: ShortService[] | string,
   furtherInfo?: string,
   wordOfWarning?: string,
+  alternativeTo?: string[];
   categoryName: string,
   otherSections: Section[],
 }
 
-const { slug, title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro } = Astro.props;
+const {
+  title, otherSections, services, notableMentions, furtherInfo, wordOfWarning,
+  alternativeTo, categoryName, intro,
+} = Astro.props;
+
+/**
+ * Make a list of keywords, for the <meta keywords> tag
+ */
+const makeKeyWordTag = () => {
+  const keywords = [];
+  keywords.push(`free and open source ${title} software`);
+  keywords.push(`private ${title} comparison`);
+  alternativeTo?.forEach((alt: string) => {
+    keywords.push(`privacy-respecting ${alt} alternative`);
+    keywords.push(`free open source ${alt} alternative`);
+  });
+  services.forEach((serv: Service) => {
+    keywords.push(serv.name);
+  });
+  keywords.push('ad free');
+  keywords.push('open source software');
+  keywords.push('privacy respecting apps');
+  return keywords.join(', ');
+};
+
+/**
+ * Make a page title
+ */
+const makePageTitle = () => {
+  return `${title} | Awesome Privacy`;
+};
+
+/**
+ * Make a string page intro, for the description tag
+ */
+const makeDescriptionTag = () => {
+  let description = `A list of privacy respecting ${title}. `;
+  if (services.length > 0) {
+    const serviceList = services.map((serv: Service) => serv.name);
+    description += `Compare ${serviceList.join(', ')} and more private apps and services. `
+  } else {
+    description += `Find private apps and services. This section is still a work in progress. `;
+  }
+  description += 'All this, and much more at Awesome Privacy, '
+  description += 'the free and open source list of private software alternatives.';
+  return description;
+};
 
 export async function getStaticPaths() {
 
@@ -37,6 +84,7 @@ const pages = await fetchData().then((data) => {
       notableMentions: section.notableMentions,
       furtherInfo: section.furtherInfo,
       wordOfWarning: section.wordOfWarning,
+      alternativeTo: section.alternativeTo,
       categoryName: category.name,
       otherSections: category.sections,
     }));
@@ -45,11 +93,8 @@ const pages = await fetchData().then((data) => {
   return results;
 });
 
-return pages.map(({ slug, title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro }) => {
-  return {
-    params: { section: slug },
-    props: { title, otherSections, services, notableMentions, furtherInfo, wordOfWarning, categoryName, intro },
-  };
+return pages.map((props: Props) => {
+  return {params: { section: props.slug }, props };
 });
 }
 
@@ -64,7 +109,7 @@ const { previous, next } = makePaginationLinks();
 
 ---
 
-<Layout title="Awesome Privacy">
+<Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
   <Main>
 
     <h2>{title}</h2>
