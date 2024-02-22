@@ -1,0 +1,9 @@
+npmScopes:
+  fortawesome:
+    npmAlwaysAuth: true
+    npmRegistryServer: "https://npm.fontawesome.com/"
+    npmAuthToken: ${FONTAWESOME_PACKAGE_TOKEN}
+  awesome:
+    npmAlwaysAuth: true
+    npmRegistryServer: "https://npm.fontawesome.com/"
+    npmAuthToken: ${FONTAWESOME_PACKAGE_TOKEN}
