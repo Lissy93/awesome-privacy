@@ -4,6 +4,7 @@ import Button from '@components/form/Button.astro';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
+import { slugify } from '@utils/fetch-data';
 
 import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
 
@@ -33,7 +34,7 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
   {services ? (
     <ul>
     {services.map((service: Service) => (
-      <li>
+      <li id={slugify(service.name)}>
         <div class="service-head">
           <img 
             width="40"

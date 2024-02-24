@@ -4,8 +4,9 @@ import Layout from '@layouts/Layout.astro';
 import SectionList from '@components/things/SectionList.astro';
 
 import { fetchData } from '@utils/fetch-data';
+import { Category } from '../types/Service';
 
-const categories = (await fetchData())?.categories;
+const categories: Category[] = (await fetchData())?.categories;
 
 ---
 
@@ -13,7 +14,10 @@ const categories = (await fetchData())?.categories;
 
 <div class="head-wrap">
   <h2>Browse</h2>
-  <input type="search" placeholder="Start typing to filter..." />
+  <span>
+    <input id="searchInput" type="search" placeholder="Start typing to filter..." />
+    <p id="press-enter-msg" class="press-enter">Press enter for deep search</p>
+  </span>
 </div>
 
 <ul class="categories">
@@ -33,10 +37,16 @@ const categories = (await fetchData())?.categories;
 <script>
   const filterInput = document.querySelector('input');
   const categories = document.querySelectorAll('.category');
+  const pressEnterMsg = document.getElementById('press-enter-msg');
 
   filterInput?.addEventListener('input', (e) => {
     let resultsCount = 0;
     const filter = e.target.value.toLowerCase();
+    if (filter.length > 0) {
+      pressEnterMsg.style.visibility = 'visible';
+    } else {
+      pressEnterMsg.style.visibility = 'hidden';
+    }
     categories.forEach((category) => {
       const title = category.querySelector('.category-title').textContent.toLowerCase();
       const sections = category.querySelectorAll('.section');
@@ -61,6 +71,33 @@ const categories = (await fetchData())?.categories;
     const noResults = document.querySelector('.no-results');
     noResults.style.display = resultsCount === 0 ? 'block' : 'none';
   });
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput') as HTMLInputElement | null;
+      if (searchInput === null) return;
+      searchInput.addEventListener('keydown', function(event) {
+        console.log('Keydown', event.key);
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          const searchTerm = encodeURIComponent(searchInput.value);
+          window.location.href = `/search/${searchTerm}`;
+        }
+        if (event.key === 'Escape') {
+          searchInput.value = '';
+          searchInput.blur();
+          pressEnterMsg.style.visibility = 'hidden';
+          categories.forEach((category) => {
+            category.style.display = 'inline-flex';
+            const sections = category.querySelectorAll('.section');
+            sections.forEach((section) => {
+              section.style.display = 'block';
+            });
+          });
+        }
+      });
+    });
+  }
 </script>
 
 
@@ -73,6 +110,11 @@ const categories = (await fetchData())?.categories;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  .press-enter {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.5;
+    visibility: hidden;
+  }
   input {
     padding: 0.5rem;
     border: 2px solid var(--foreground);
@@ -116,7 +158,7 @@ const categories = (await fetchData())?.categories;
   margin: 0 auto;
   width: 85vw;
   max-width: 1800px;
-  padding: 2rem 0;
+  padding: 1rem 0 2rem 0;
   .category {
     background: var(--accent-fg);
     border: 2px solid var(--foreground);

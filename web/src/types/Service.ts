@@ -28,11 +28,11 @@ export interface Section {
   alternativeTo?: string[];
 }
 
-export interface ServiceStats {
-  isOpenSource: boolean;
-  author: string;
-  authorUrl: string;
+export interface Category {
+  name: string;
+  sections: Section[];
 }
+
 
 export interface AwesomePrivacy {
   categories: Array<{

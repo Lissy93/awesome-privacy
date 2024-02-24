@@ -34,11 +34,11 @@ const makeKeyWordTag = () => {
   const keywords = [];
   keywords.push(`free and open source ${title} software`);
   keywords.push(`private ${title} comparison`);
-  alternativeTo?.forEach((alt: string) => {
+  (alternativeTo || []).forEach((alt: string) => {
     keywords.push(`privacy-respecting ${alt} alternative`);
     keywords.push(`free open source ${alt} alternative`);
   });
-  services.forEach((serv: Service) => {
+  (services || []).forEach((serv: Service) => {
     keywords.push(serv.name);
   });
   keywords.push('ad free');
@@ -59,7 +59,7 @@ const makePageTitle = () => {
  */
 const makeDescriptionTag = () => {
   let description = `A list of privacy respecting ${title}. `;
-  if (services.length > 0) {
+  if (services && services.length > 0) {
     const serviceList = services.map((serv: Service) => serv.name);
     description += `Compare ${serviceList.join(', ')} and more private apps and services. `
   } else {
@@ -71,31 +71,30 @@ const makeDescriptionTag = () => {
 };
 
 export async function getStaticPaths() {
-
-const pages = await fetchData().then((data) => {
-  const results: Array<Props> = [];
-  if (!data || !data.categories) return results;
-  (data as AwesomePrivacy).categories.forEach((category) => {
-    const sections = category.sections.map((section) => ({
-      slug: `${slugify(category.name)}/${slugify(section.name)}`,
-      title: section.name,
-      services: section.services,
-      intro: section.intro,
-      notableMentions: section.notableMentions,
-      furtherInfo: section.furtherInfo,
-      wordOfWarning: section.wordOfWarning,
-      alternativeTo: section.alternativeTo,
-      categoryName: category.name,
-      otherSections: category.sections,
-    }));
-    results.push(...sections);
+  const pages = await fetchData().then((data) => {
+    const results: Array<Props> = [];
+    if (!data || !data.categories) return results;
+    (data as AwesomePrivacy).categories.forEach((category) => {
+      const sections = category.sections.map((section) => ({
+        slug: `${slugify(category.name)}/${slugify(section.name)}`,
+        title: section.name,
+        services: section.services,
+        intro: section.intro,
+        notableMentions: section.notableMentions,
+        furtherInfo: section.furtherInfo,
+        wordOfWarning: section.wordOfWarning,
+        alternativeTo: section.alternativeTo,
+        categoryName: category.name,
+        otherSections: category.sections,
+      }));
+      results.push(...sections);
+    });
+    return results;
   });
-  return results;
-});
 
-return pages.map((props: Props) => {
-  return {params: { section: props.slug }, props };
-});
+  return pages.map((props: Props) => {
+    return {params: { section: props.slug }, props };
+  });
 }
 
 const makePaginationLinks = () => {

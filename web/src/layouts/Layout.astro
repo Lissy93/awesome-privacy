@@ -1,5 +1,5 @@
 ---
-
+import { ViewTransitions } from 'astro:transitions'
 import NavBar from '@components/scafold/NavBar.astro';
 import Footer from '@components/scafold/Footer.astro';
 
@@ -24,6 +24,9 @@ const {
 <!doctype html>
 <html lang="en">
 	<head>
+
+		<ViewTransitions />
+		
 		<!-- Core info -->
 		<title>{title}</title>
 		<meta name="description" content={description}>
