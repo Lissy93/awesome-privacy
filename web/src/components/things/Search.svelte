@@ -7,6 +7,7 @@
   import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
 
   export let data: Category[];
+  export let previousSearch: string | undefined = undefined;
 
   let fuse: Fuse<any>;
   let searchQuery = '';
@@ -73,7 +74,7 @@
   </label>
   <input
     id="search"
-    placeholder="Start typing..."
+    placeholder={previousSearch || 'Start typing...'}
     autocomplete="off"
     bind:value={searchQuery}
     on:keydown={handleKeyDown}

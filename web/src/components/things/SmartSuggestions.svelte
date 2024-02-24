@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { writable } from "svelte/store"; // Import writable to create a reactive variable
+  import { writable } from "svelte/store";
   import type { Category, Service } from "../../types/Service";
-  import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+  import { formatLink } from '@utils/parse-markdown';
   import { slugify } from '@utils/fetch-data';
 
   interface ServiceResult extends Service {
@@ -14,21 +14,20 @@
 
   let results = writable<ServiceResult[]>([]);
 
+  const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
   onMount(async () => {
 
     const apiEndpoint = `https://awesome-privacy.as93.workers.dev/${searchTerm}`;
     const fetchedServices = await fetch(apiEndpoint)
       .then((response) => response.json())
-      .then((data) => {
-        console.log("SmartSuggestions data", data);
-        return JSON.parse(data);
-      });
+      .then((data) => (JSON.parse(data) || []).map((servName: string) => normalize(servName)));
 
     const tmpResults: ServiceResult[] = [];
     categories.forEach((category) => {
       (category.sections || []).forEach((section) => {
         (section.services || []).forEach((service) => {
-          if (fetchedServices.includes(service.name)) {
+          if (fetchedServices.includes(normalize(service.name))) {
             const path = `/${slugify(category.name)}/${slugify(section.name)}#${slugify(service.name)}`
             tmpResults.push({ ...service, path });
             return;
@@ -116,6 +115,11 @@
             margin: 0;
             font-size: 0.85rem;
             font-weight: 400;
+            max-width: 100px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
         }
         .service-icon {

@@ -1,22 +1,21 @@
 ---
 
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
 import Hero from '@components/Hero.astro';
 import Search from '@components/things/Search.svelte';
 import SectionList from '@components/things/SectionList.astro';
 
 import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
+import type { Category } from 'src/types/Service';
 
-const categories = (await fetchData())?.categories || [];
+const categories = (await fetchData())?.categories || [] as Category[];
 
 const description = 'Privacy is a fundamental human right; '
 	+ 'without it, we\'re just open books in a world where everyone\'s '
 	+ 'watching. Let\'s take control back.\n'
 	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
 	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
-
 
 ---
 
@@ -74,7 +73,7 @@ const description = 'Privacy is a fundamental human right; '
 		margin: auto;
 		padding: 1rem;
 		width: 1100px;
-		max-width: calc(100% - 2rem);
+		max-width: calc(100% - 5rem);
 		font-size: 20px;
 		line-height: 1.6;
 		.view-all {
@@ -97,6 +96,23 @@ const description = 'Privacy is a fundamental human right; '
 			text-decoration: none;
 			color: var(--accent-3);
 			font-family: "Lekton", sans-serif;
+			position: relative;
+			&:after {    
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 3px;
+				left: 50%;
+				position: absolute;
+				background: var(--accent);
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+			&:hover:after { 
+				width: 100%; 
+				left: 0; 
+			}
 		}
 	}
 

@@ -2,7 +2,6 @@
   import Fuse from 'fuse.js';
 
 import Layout from '@layouts/Layout.astro';
-import Buton from '@components/form/Button.astro';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
 import Search from '@components/things/Search.svelte';
@@ -27,14 +26,6 @@ const searchResults = fuse.search(searchTerm || '').map(result => result.item);
 
 const services = searchResults.filter(result => result.type === 'Service');
 
-interface RenderResults {
-  categoryName: string;
-  sections: {
-    sectionName: string;
-    items: Service;
-  }
-};
-
 const putResultsIntoGroups = () => {
   const grouped = services.reduce((acc, item) => {
     const { category: categoryName, sectionName, ...service } = item;
@@ -52,8 +43,9 @@ const putResultsIntoGroups = () => {
     return acc;
   }, {});
 
-  // Convert the grouped object into the desired array structure
-  return Object.values(grouped).map(category => ({
+  // Convert the grouped object into the desired array structure.
+  // And fuck it, let's use `any`
+  return Object.values(grouped).map((category: any) => ({
     categoryName: category.categoryName,
     sections: Object.values(category.sections)
   }));
@@ -66,9 +58,9 @@ const beer = putResultsIntoGroups();
 <Layout title="Search | Awesome Privacy">
   <section>
     <h1>Search</h1>
-    <Search client:visible data={categories} />
+    <Search client:visible data={categories} previousSearch={searchTerm} />
   </section>
-  <SmartSuggestions client:visible searchTerm={searchTerm} categories={categories} />
+  <SmartSuggestions client:visible searchTerm={searchTerm || ''} categories={categories} />
   <section class="result-count">
     <h3>Deep Search</h3>
     <p>Showing {services.length} results for "{searchTerm}" sorted by relevence</p>
@@ -82,11 +74,11 @@ const beer = putResultsIntoGroups();
           </a>
           <span class="section-icon"><FontAwesome iconName={slugify(category.categoryName)} /></span>
           <ul class="section-list">
-            {category.sections.map(section => (
+            {category.sections.map((section: any) => (
               <li class="section-item">
                 <h4>{section.sectionName}</h4>
                 <ul class="service-list">
-                  {section.items.map(item => (
+                  {section.items.map((item: Service) => (
                     <li>
                       <a href={item.url}>{item.name}</a>
                     </li>

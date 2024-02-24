@@ -1,7 +1,4 @@
-import Fuse from 'fuse.js';
-// import { slugify } from '@utils/fetch-data';
-import type { Category, Section, Service, ShortService } from '../types/Service';
-// import { formatLink } from '@utils/parse-markdown';
+import type { Category } from '../types/Service';
 
 export const prepareSearchItems = (categories: Category[]) => {
   const items: any = [];

@@ -13,19 +13,20 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
 ---
 
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const serviceIcons = document.querySelectorAll('.service-icon');
-    const broke = '/broken-image.png'
+  document.addEventListener('DOMContentLoaded', () => {
+  const serviceIcons = document.querySelectorAll<HTMLImageElement>('.service-icon');
+  const broke = '/broken-image.png';
 
-    serviceIcons.forEach(function(icon) {
-      icon.onerror = function() {
-        const serviceUrl = this.getAttribute('data-service-url');
-        const newSrcAttribute = (this.src.includes('on.ho') ? broke : `https://icon.horse/icon/${serviceUrl}`);
-        this.src = this.src !== newSrcAttribute ? newSrcAttribute : broke;
-        this.onerror = null;
-      };
-    });
+  serviceIcons.forEach(function(icon) {
+    icon.onerror = function() {
+      const imgElement = this as HTMLImageElement;
+      const serviceUrl = imgElement.getAttribute('data-service-url');
+      const newSrcAttribute = (imgElement.src.includes('on.ho') ? broke : `https://icon.horse/icon/${serviceUrl}`);
+      imgElement.src = imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
+      imgElement.onerror = null;
+    };
   });
+});
 </script>
 
 

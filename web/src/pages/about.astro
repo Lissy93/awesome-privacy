@@ -3,102 +3,146 @@
 import Layout from '@layouts/Layout.astro';
 import Main from '@components/scafold/MainCard.astro';
 import Icon from '@components/form/Icon.astro';
+import { parseMarkdown } from '@utils/parse-markdown';
 
 const contributorsResource = async () => {
-    const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Failed to fetch contributors');
-    }
-    return await response.json();
-  };
+	const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch contributors');
+	}
+	return await response.json();
+};
 
-  const sponsorsResource = async () => {
-    const url = 'https://github-sponsors.as93.workers.dev/lissy93';
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Failed to fetch sponsors');
-    }
-    return await response.json();
-  };
+const sponsorsResource = async () => {
+	const url = 'https://github-sponsors.as93.workers.dev/lissy93';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch sponsors');
+	}
+	return await response.json();
+};
 
-export const projects = [
-  {
-    title: 'Email Comparison',
-    description: 'Objective comparison of private/secure mail providers',
-    icon: 'https://email-comparison.as93.net/favicon.png',
-    link: 'https://github.com/lissy93/email-comparison',
-  },
-  {
-    title: 'Personal Security Checklist',
-    description: 'Checklist of security tips, for protecting your privacy',
-    icon: 'https://i.ibb.co/Rb6P6h6/shield.png',
-    link: 'https://github.com/Lissy93/personal-security-checklist',
-  },
+const licenseContent = async () => {
+	const url = 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/HEAD/LICENSE';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch license');
+	}
+	return await response.text();
+};
+
+const projectRequrements = `
+For software to be included in this list, it must meet the following requirements: 
+
+- **Privacy Respecting**
+	- The project must respect users privacy, not collect more data than necessary, and store info securely
+	- For hosted services, the project must have a clear privacy policy
+	- The user must remain in full control of their data, and be able to delete it at any time
+- **Secure**
+  - The software must be secure by default, without requiring additional configuration
+  - There should be no current, critical security issues
+  - The handling of past issues must have been prompt, transparent and effective
+- **Open Source**
+	- The full source code should be released under an open source license
+	- Ideally it should be possible for the user to build and run/deploy the software themselves from source
+- **Actively Maintained**
+  - The developers should address dependency updates and security patches in a timely manner
+- **Transparent**
+  - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
+- **Ethical**
+  - Must not suppress free speech, discriminate or disregard any human rights
+- **Relevant**
+	- The software must be relevant, and fit into one of the existing categories
+- **Functional**
+	- Must be fully functional, and not just a concept or idea
+	- A stable (non-alpha/beta) release is required at a minimum
+	- Must be accessible to the general public, and not just a select group of people
+	- If technical knowledge is required to run it, the software must be well documented
+
+_There may be some exceptions, but these would need to be fully justified, reviewed
+by the community, and the drawbacks / anti-features must be clearly listed along-side the software.
+Usually these entries go within the "Notable Mentions" section instead._
+`;
+
+
+const projects = [
 	{
-    title: 'Web-Check',
-    description: 'OSINT tool for analysing any website',
-    icon: 'https://icon.horse/icon/web-check.xyz',
-    link: 'https://github.com/lissy93/web-check',
-  },
+		title: 'Email Comparison',
+		description: 'Objective comparison of private/secure mail providers',
+		icon: 'https://email-comparison.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/email-comparison',
+	},
 	{
-    title: 'Dashy',
-    description: 'Dashboard app, for organising your self-hosted services',
-    icon: 'https://dashy.to/img/dashy.png',
-    link: 'https://github.com/lissy93/dashy',
-  },
-  {
-    title: 'Portainer-Templates',
-    description: 'Compiled repository of 1-click Docker apps for self-hosting',
-    icon: 'https://portainer-templates.as93.net/favicon.png',
-    link: 'https://github.com/lissy93/portainer-templates',
-  },
-  {
-    title: 'AdGuardian',
-    description: 'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
-    icon: 'https://adguardian.as93.net/favicon.png',
-    link: 'https://github.com/lissy93/adguardian-term',
-  },
-  {
-    title: 'Bug-Bounties',
-    description: 'Database of websites which accept responsible vulnerability discolsure',
-    icon: 'https://bug-bounties.as93.net/favicon.png',
-    link: 'https://github.com/lissy93/bug-bounties',
-  },
-  {
-    title: 'Git-In',
-    description: 'Tools and resources to help beginners get into open source',
-    icon: 'https://www.git-in.to/favicon.png',
-    link: 'https://github.com/lissy93/git-in',
-  },
+		title: 'Personal Security Checklist',
+		description: 'Checklist of security tips, for protecting your privacy',
+		icon: 'https://i.ibb.co/Rb6P6h6/shield.png',
+		link: 'https://github.com/Lissy93/personal-security-checklist',
+	},
+	{
+		title: 'Web-Check',
+		description: 'OSINT tool for analysing any website',
+		icon: 'https://icon.horse/icon/web-check.xyz',
+		link: 'https://github.com/lissy93/web-check',
+	},
+	{
+		title: 'Dashy',
+		description: 'Dashboard app, for organising your self-hosted services',
+		icon: 'https://dashy.to/img/dashy.png',
+		link: 'https://github.com/lissy93/dashy',
+	},
+	{
+		title: 'Portainer-Templates',
+		description: 'Compiled repository of 1-click Docker apps for self-hosting',
+		icon: 'https://portainer-templates.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/portainer-templates',
+	},
+	{
+		title: 'AdGuardian',
+		description: 'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
+		icon: 'https://adguardian.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/adguardian-term',
+	},
+	{
+		title: 'Bug-Bounties',
+		description: 'Database of websites which accept responsible vulnerability discolsure',
+		icon: 'https://bug-bounties.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/bug-bounties',
+	},
+	{
+		title: 'Git-In',
+		description: 'Tools and resources to help beginners get into open source',
+		icon: 'https://www.git-in.to/favicon.png',
+		link: 'https://github.com/lissy93/git-in',
+	},
 ];
 
 export const socials = [
-  {
-    title: 'GitHub',
-    icon: 'hub',
-    link: 'https://github.com/lissy93',
-  },
-  {
-    title: 'Twitter',
-    icon: 'twitter',
-    link: 'https://x.com/lissy_sykes',
-  },
-  {
-    title: 'Mastodon',
-    icon: 'mastodon',
-    link: 'https://mastodon.social/@lissy93',
-  },
-  {
-    title: 'Dev',
-    icon: 'dev',
-    link: 'https://dev.to/lissy93',
-  },
-  {
-    title: 'LinkedIn',
-    icon: 'linkedin',
-    link: 'https://linkedin.com/in/aliciasykes',
-  },
+	{
+		title: 'GitHub',
+		icon: 'hub',
+		link: 'https://github.com/lissy93',
+	},
+	{
+		title: 'Twitter',
+		icon: 'twitter',
+		link: 'https://x.com/lissy_sykes',
+	},
+	{
+		title: 'Mastodon',
+		icon: 'mastodon',
+		link: 'https://mastodon.social/@lissy93',
+	},
+	{
+		title: 'Dev',
+		icon: 'dev',
+		link: 'https://dev.to/lissy93',
+	},
+	{
+		title: 'LinkedIn',
+		icon: 'linkedin',
+		link: 'https://linkedin.com/in/aliciasykes',
+	},
 ];
 
 const description = 'Privacy is a fundamental human right; '
@@ -126,6 +170,10 @@ const description = 'Privacy is a fundamental human right; '
 			<br /><br />
 			
 		</p>
+		<hr />
+
+		<h2>Software Requirements</h2>
+		<div class="software-requirements"><p set:html={parseMarkdown(projectRequrements)}></p></div>
 		<hr />
 
 		<h2>Contributing</h2>
@@ -237,12 +285,14 @@ const description = 'Privacy is a fundamental human right; '
 
 		<h2>License</h2>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-			eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-			sunt in culpa qui officia deserunt mollit anim id est laborum.
+			All content on Awesome Privacy is freely available, within the public domain,
+			licensed under Creative Commons Zero v1.0 Universal.
+			The code for the website is licensed under MIT.
+		</p>
+		<p>
+			{licenseContent().then((license) => {
+				return (<pre class="license-content">{license}</pre>)
+			})}
 		</p>
 
 	</Main>
@@ -273,6 +323,26 @@ h3 {
 	font-size: 1.6rem;
 }
 
+.software-requirements {
+	:global(p) {
+		font-size: 1.4rem;
+	}
+	:global(ul) {
+		padding-left: 0.5rem;
+		list-style: none;
+		font-size: 1.1rem;
+		:global(li ul) {
+			padding: 0 0 0.5rem 1rem;
+			list-style: circle;
+		}
+	
+	}
+	:global(ul li:hover strong) {
+		transition: color 0.2s ease-in-out;
+		color: var(--accent-3);
+	}
+}
+
 .user-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -297,6 +367,17 @@ h3 {
 	}
 }
 
+.license-content {
+	max-height: 500px;
+  overflow: scroll;
+  background: #e6e6ee;
+  width: fit-content;
+  border-radius: var(--curve-sm);
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-family: mono;
+}
+
 .author {
 	p {
 		margin: 1rem 0 0 0;
@@ -305,6 +386,9 @@ h3 {
 		padding-left: 1.5rem;
 		list-style: circle;
 		margin-bottom: 0;
+		li {
+			font-size: 1.1rem;
+		}
 	}
 	.about {
 		font-size: 1.4rem;

@@ -2,9 +2,7 @@
 import FontAwesome from "@components/form/FontAwesome.svelte";
 const { github } = Astro.props;
 
-
-const [user, repo] = github.split("/");
-
+// const [user, repo] = github.split("/");
 
 /**
  * For a given `user/repo` fetch repository stats from the GitHub API data
@@ -75,10 +73,10 @@ const formatBigNumber = (num: number) => {
 }
 
 // Initiate GitHub fetch, and make available to the component
-const stats = await fetchGitHubData(github);
+const stats = (await fetchGitHubData(github)) as any;
 
 const {
-  stargazers_count, forks_count, open_issues_count, language, license, owner,
+  stargazers_count, forks_count, open_issues_count, language, license,
 } = stats.data;
 
 
@@ -139,7 +137,7 @@ const {
       color: var(--accent-3);
       &:hover {
         color: var(--accent-3);
-        font-weight: 500;
+        text-decoration: underline;
       }
     }
 

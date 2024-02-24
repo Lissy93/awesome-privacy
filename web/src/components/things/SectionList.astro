@@ -79,7 +79,25 @@ h2 {
     font-weight: bold;
     margin: 0;
     font-size: 1.8rem;
+    position: relative;
+    &:after {    
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 3px;
+      left: 50%;
+      position: absolute;
+      background: var(--accent);
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover:after { 
+      width: 80%; 
+      left: 0; 
+    }
   }
+  
 }
 
 ul {
