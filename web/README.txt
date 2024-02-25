@@ -11,16 +11,18 @@ DEVELOPMENT SETUP
 To get started, you'll need Node and Git installed.
 Then run the following commands:
 
-# 1. Clone the repo
-git clone git@github.com:Lissy93/awesome-privacy.git
-# 2. Navigate into it
-cd awesome-privacy/web
-# 3. Install dependencies
-yarn install
-# 4. Start the development server
-yarn dev
-5. Open browser
-open http://127.0.0.1:4321
+1. Clone the repo
+  git clone git@github.com:Lissy93/awesome-privacy.git
+2. Navigate into it
+  cd awesome-privacy/web
+3. Add secrets to .env
+  mv .env.sample .env
+4. Install dependencies
+  yarn install
+5. Start the development server
+  yarn dev
+Open browser
+  open http://127.0.0.1:4321
 
 ================================================================================
 
@@ -36,12 +38,12 @@ Option 3) Use the included Dockerfile to build and run the application on any se
 TECHNOLOGY
 ----------
 The website is built with Astro, and statically generated at build-time.
-This means that changes to the data will not be reflected until the site is rebuilt.
+This means that changes to the raw data will not be reflected until the site is rebuilt.
 Dynamic elems (search + comments) are built as Svelte islands, and rehydrated at runtime.
 Most the code is written in Typescript. We're not using a CSS library, just plain SASS.
 
-The site also uses:
-- Fuse.js for fuzzy search
+The site also uses these dependencies:
+- fuse.js for fuzzy search
 - js-yaml for parsing YAML
 - marked for markdown rendering
 - fontawesome for iconography
@@ -58,7 +60,7 @@ If you only wish to update content, there's no need to edit the site's source co
 
 SITE STRUCTURE
 --------------
-All views are located in /src/pages.
+All views are located in /src/pages
 The general site structure is as follows:
 
 /

@@ -1,8 +1,6 @@
 <p align="center" id="top"><a href="https://github.com/Lissy93/awesome-privacy"><img src="https://i.ibb.co/80Y5x2T/Awesome-Privacy.png" /></a></p>
-
 <p align="center">🌐 <b><a href="https://awesome-privacy.xyz">awesome-privacy.xyz</a></b></p>
-
-*<p align="center">A curated list of privacy & security-focused apps, software, and providers 🔐</p>*
+<p align="center"><i>A curated list of privacy & security-focused apps, software, and providers</i> 🔐</p>
 
 [⏬ Skip to Content ⏬](#password-managers)
 
@@ -12,12 +10,13 @@ Large data-hungry corporations dominate the digital world but with little, or no
 Migrating to open-source applications with a strong emphasis on privacy and security will help stop
 corporations, governments, and hackers from logging, storing or selling your personal data.
 
-**Note**: Remember that [no software is perfect](#important-considerations), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/HEAD/CHECKLIST.md).
-
-A Codeberg mirror is available [here](https://codeberg.org/alicia/awesome-privacy).
+**Note**: Remember that [no software is perfect](#important-considerations), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/HEAD/CHECKLIST.md)<br>
+**Mirror**: This repo is mirrored to [https://codeberg.org/alicia/awesome-privacy](https://codeberg.org/alicia/awesome-privacy)<br>
+**Repo Admin**: [Website Docs](#the-website) | [Contributing](#contributing) | [Acknowledgment](#acknowledgements) | [License](#license)
 
 <!-- awesome-privacy-start -->
-## Contents
+<details>
+<summary><h2>Contents</h2></summary>
 
 - **Essentials**
 	- [Password Managers](#password-managers) (5)
@@ -115,6 +114,8 @@ A Codeberg mirror is available [here](https://codeberg.org/alicia/awesome-privac
 	- [Screenshot Tools](#screenshot-tools) (0)
 	- [3D Graphics](#3d-graphics) (0)
 	- [Animation](#animation) (0)
+</details>
+
 ## Essentials
 
 ### Password Managers
@@ -3127,7 +3128,8 @@ Then run the following commands to fetch the code, install dependencies and star
 ```shell
 git clone git@github.com:Lissy93/awesome-privacy.git
 cd awesome-privacy/web
-yarn
+cp .env.sample .env
+yarn install
 yarn dev
 # Then open 127.0.0.1:4321 in your browser
 ```
@@ -3534,7 +3536,9 @@ This project exists thanks to all the people who've helped build and maintain it
 
 ## License
 
-> _**[Lissy93/Awesome-Privacy](https://github.com/Lissy93/awesome-privacy)** is licensed under [MIT](https://github.com/Lissy93/awesome-privacy/blob/HEAD/LICENSE) © [Alicia Sykes](https://aliciasykes.com) 2024._<br>
+> _**[Lissy93/Awesome-Privacy/web](https://github.com/Lissy93/awesome-privacy/tree/main/web)** is licensed under [MIT](https://gist.github.com/Lissy93/143d2ee01ccc5c052a17)_<br>
+> _**[awesome-privacy.yml](https://github.com/Lissy93/awesome-privacy/blob/main/awesome-privacy.yml)** is licensed under [CC0-1.0 license](https://github.com/Lissy93/awesome-privacy/blob/HEAD/LICENSE)_<br>
+> _Copyright © Alicia Sykes <[aliciasykes.com](https://aliciasykes.com)> 2024._<br>
 > <sup align="right">For information, see <a href="https://tldrlegal.com/license/mit-license">TLDR Legal > MIT</a></sup>
 
 <details>
@@ -3564,13 +3568,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 </details>
 
-
 <!-- License + Copyright -->
 <p  align="center">
   <i>© <a href="https://aliciasykes.com">Alicia Sykes</a> 2024</i><br>
-  <i>Licensed under <a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a></i><br>
-  <a href="https://github.com/lissy93"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
+  <i>Licensed under <a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a> &
+  <a href="https://github.com/Lissy93/awesome-privacy/blob/HEAD/LICENSE">CC0-1.0</a></i><br>
+  <a href="https://github.com/lissy93"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a>
+  <br><sup>Thanks for visiting :)</sup>
 </p>
 
 <!-- Dinosaurs are Awesome -->
