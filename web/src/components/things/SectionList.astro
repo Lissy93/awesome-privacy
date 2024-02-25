@@ -109,6 +109,24 @@ ul {
     a {
       text-decoration: none;
       color: var(--foreground);
+      position: relative;
+      &:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: var(--accent-3);
+        transition: width 0.15s ease 0s, left 0.15s ease 0s;
+        width: 0;
+      }
+      &:hover:after {
+        text-decoration: underline;
+        width: 80%; 
+        left: 0; 
+      }
     }
     .service-count {
       color: var(--accent-3);
