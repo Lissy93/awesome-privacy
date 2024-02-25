@@ -44,15 +44,17 @@ def makeHref(text):
     return re.sub(r'[^\w\s-]', '', text.lower()).replace(" ", "-")
 
 def makeContents():
-    contents = "## Contents\n\n"
+    contents = "<details>\n"
+    contents += "<summary><h2>Contents</h2></summary>\n"
+
     for category in data.get('categories'):
-        contents += f"- **{category.get('name')}**"
+        contents += f"\n- **{category.get('name')}**"
         for section in category.get('sections'):
             contents += (
                 f"\n\t- [{section.get('name')}](#{makeHref(section.get('name'))}) "
                 f"({len(section.get('services') or [])})"
             )
-        contents += "\n"
+    contents += "\n</details>\n\n"
     return contents
 
 def makeAwesomePrivacy():
