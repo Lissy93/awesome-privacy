@@ -310,7 +310,7 @@ categories:
           you will need to make, in order to secure Firefox. For a though config, see
           [@arkenfox's user.js](https://github.com/arkenfox/user.js/). You can also follow
           one of these guides by: [Restore Privacy](https://restoreprivacy.com/firefox-privacy/)
-          or [12Bytes](https://12bytes.org/7750)
+          or [12Bytes](https://codeberg.org/12bytes/firefox-config-guide)
 
       - name: Tor Browser
         url: https://www.torproject.org/
@@ -1329,6 +1329,13 @@ categories:
         description: |
           A sandbox environment, allowing you to clone selected apps and run them in an isolated
           box, preventing it from accessing your personal data, or device information.
+
+      - name: Insular
+        url: https://gitlab.com/secure-system/Insular
+        github: oasisfeng/island
+        icon: https://gitlab.com/uploads/-/system/project/avatar/18237274/ic_launcher-playstore.png?width=48
+        description: |
+          An actively-maintained fork of the Island project with additional enhancements
 
       - name: Exodus
         url: https://exodus-privacy.eu.org/en/page/what/#android-app
