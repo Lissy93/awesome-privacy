@@ -1,27 +1,11 @@
 # Inserts list of contributors and community members into ./docs/credits.md
-# Also generates an SVG showing all contributors, which is embedded into readme
 name: 📊 Generate Contributor Credits
 on:
   workflow_dispatch: # Manual dispatch
   schedule:
     - cron: '0 5 * * 6' # Every Saturday morning.
 jobs:
-  # Job #1 - Generate an embedded SVG asset, showing all contributors
-  generate-contributors:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: bubkoo/contributors-list@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          svgPath: .github/assets/CONTRIBUTORS.svg
-          affiliation: all
-          includeBots: false
-          excludeUsers: snyk-bot
-          avatarSize: 96
-          userNameHeight: 20
-          svgWidth: 830
-          commitMessage: 'Updates contributor SVG'
-  # Job #2 - Inserts sponsors into credits page
+  # Job #1 - Inserts sponsors into README
   insert-sponsors:
     runs-on: ubuntu-latest
     steps:
@@ -31,8 +15,8 @@ jobs:
         uses: JamesIves/github-sponsors-readme-action@1.0.5
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          file: '.github/CREDITS.md'
-  # Job #3 - Inserts contributors into credits page
+          file: '.github/README.md'
+  # Job #2 - Inserts contributors into README
   insert-credits:
     runs-on: ubuntu-latest
     name: Inserts contributors into credits.md
@@ -43,7 +27,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
       with:
         image_size: 80
-        readme_path: .github/CREDITS.md
+        readme_path: .github/README.md
         columns_per_row: 6
         commit_message: 'Updates contributors list'
         committer_username: liss-bot
