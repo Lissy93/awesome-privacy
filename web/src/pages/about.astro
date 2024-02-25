@@ -1,0 +1,429 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import Main from '@components/scafold/MainCard.astro';
+import Icon from '@components/form/Icon.astro';
+import { parseMarkdown } from '@utils/parse-markdown';
+
+const contributorsResource = async () => {
+	const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch contributors');
+	}
+	return await response.json();
+};
+
+const sponsorsResource = async () => {
+	const url = 'https://github-sponsors.as93.workers.dev/lissy93';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch sponsors');
+	}
+	return await response.json();
+};
+
+const licenseContent = async () => {
+	const url = 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/HEAD/LICENSE';
+	const response = await fetch(url);
+	if (!response.ok) {
+		throw new Error('Failed to fetch license');
+	}
+	return await response.text();
+};
+
+const projectRequrements = `
+For software to be included in this list, it must meet the following requirements: 
+
+- **Privacy Respecting**
+	- The project must respect users privacy, not collect more data than necessary, and store info securely
+	- For hosted services, the project must have a clear privacy policy
+	- The user must remain in full control of their data, and be able to delete it at any time
+- **Secure**
+  - The software must be secure by default, without requiring additional configuration
+  - There should be no current, critical security issues
+  - The handling of past issues must have been prompt, transparent and effective
+- **Open Source**
+	- The full source code should be released under an open source license
+	- Ideally it should be possible for the user to build and run/deploy the software themselves from source
+- **Actively Maintained**
+  - The developers should address dependency updates and security patches in a timely manner
+- **Transparent**
+  - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
+- **Ethical**
+  - Must not suppress free speech, discriminate or disregard any human rights
+- **Relevant**
+	- The software must be relevant, and fit into one of the existing categories
+- **Functional**
+	- Must be fully functional, and not just a concept or idea
+	- A stable (non-alpha/beta) release is required at a minimum
+	- Must be accessible to the general public, and not just a select group of people
+	- If technical knowledge is required to run it, the software must be well documented
+
+_There may be some exceptions, but these would need to be fully justified, reviewed
+by the community, and the drawbacks / anti-features must be clearly listed along-side the software.
+Usually these entries go within the "Notable Mentions" section instead._
+`;
+
+
+const projects = [
+	{
+		title: 'Email Comparison',
+		description: 'Objective comparison of private/secure mail providers',
+		icon: 'https://email-comparison.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/email-comparison',
+	},
+	{
+		title: 'Personal Security Checklist',
+		description: 'Checklist of security tips, for protecting your privacy',
+		icon: 'https://i.ibb.co/Rb6P6h6/shield.png',
+		link: 'https://github.com/Lissy93/personal-security-checklist',
+	},
+	{
+		title: 'Web-Check',
+		description: 'OSINT tool for analysing any website',
+		icon: 'https://icon.horse/icon/web-check.xyz',
+		link: 'https://github.com/lissy93/web-check',
+	},
+	{
+		title: 'Dashy',
+		description: 'Dashboard app, for organising your self-hosted services',
+		icon: 'https://dashy.to/img/dashy.png',
+		link: 'https://github.com/lissy93/dashy',
+	},
+	{
+		title: 'Portainer-Templates',
+		description: 'Compiled repository of 1-click Docker apps for self-hosting',
+		icon: 'https://portainer-templates.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/portainer-templates',
+	},
+	{
+		title: 'AdGuardian',
+		description: 'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
+		icon: 'https://adguardian.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/adguardian-term',
+	},
+	{
+		title: 'Bug-Bounties',
+		description: 'Database of websites which accept responsible vulnerability discolsure',
+		icon: 'https://bug-bounties.as93.net/favicon.png',
+		link: 'https://github.com/lissy93/bug-bounties',
+	},
+	{
+		title: 'Git-In',
+		description: 'Tools and resources to help beginners get into open source',
+		icon: 'https://www.git-in.to/favicon.png',
+		link: 'https://github.com/lissy93/git-in',
+	},
+];
+
+export const socials = [
+	{
+		title: 'GitHub',
+		icon: 'hub',
+		link: 'https://github.com/lissy93',
+	},
+	{
+		title: 'Twitter',
+		icon: 'twitter',
+		link: 'https://x.com/lissy_sykes',
+	},
+	{
+		title: 'Mastodon',
+		icon: 'mastodon',
+		link: 'https://mastodon.social/@lissy93',
+	},
+	{
+		title: 'Dev',
+		icon: 'dev',
+		link: 'https://dev.to/lissy93',
+	},
+	{
+		title: 'LinkedIn',
+		icon: 'linkedin',
+		link: 'https://linkedin.com/in/aliciasykes',
+	},
+];
+
+const description = 'Privacy is a fundamental human right; '
+	+ 'without it, we\'re just open books in a world where everyone\'s '
+	+ 'watching. Let\'s take control back.\n'
+	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
+	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
+
+---
+
+<Layout title="About | Awesome Privacy" description={description}>
+	<div class="about-page">
+	<Main>
+		<h2>Objective</h2>
+		<p>
+			Large data-hungry corporations dominate the digital world but with little,
+			or no respect for your privacy.
+			We believe that privacy is a fundamental human right and that it should be protected.
+			<br /><br />
+			Migrating to open-source applications and those with a strong emphasis on
+			privacy & security will help safegaurd you from corporations,
+			governments, and hackers who log, store or sell your sensetive personal data.
+			<br /><br />
+			Awesome Privacy is a directory of alternative software which respects your privacy.
+			<br /><br />
+			
+		</p>
+		<hr />
+
+		<h2>Software Requirements</h2>
+		<div class="software-requirements"><p set:html={parseMarkdown(projectRequrements)}></p></div>
+		<hr />
+
+		<h2>Contributing</h2>
+		<p>
+			Awesome Privacy (including all data and code) is fully open source,
+			maintained by a core group of volenteers, with a lot of help from the community.
+			<br /><br />
+			We welcome suggestions, additions, edits and removals to the list.<br />
+			It's thanks to contributors like you that this project is possible 💜
+			<br /><br />
+			To get started, head over to our <a href="https://github.com/lissy93/awesome-privacy">GitHub repository</a>.
+			From here, you'll be able to edit <a href="#"><code>awesome-privacy.yml</code></a>
+			where all data is stored, and then submit your changes as a pull request.<br />
+			<br /><br />
+			If you're new to open source, you can find some resources to get you started
+			at <a href="https://git-in.to">git-in.to</a>, but feel free to reach out if you need any help 😊
+		</p>
+		<hr />
+
+		<h2>Credits</h2>
+		<h3>Sponsors</h3>
+		<p>Huge thanks to the following sponsors, for their ongoing support 💖</p>
+		<div class="user-list">
+			{sponsorsResource().then((sponsors) => {
+				return sponsors.map((sponsor: any) => (
+					<a class="user" href={`https://github.com/${sponsor.login}`} target="_blank" rel="noreferrer">
+						<img src={sponsor.avatarUrl} alt={sponsor.login} />
+						<p>{sponsor.name || sponsor.login}</p>
+					</a>
+				));
+			})}
+		</div>
+
+		<h3>Contributors</h3>
+		<p>
+			This project exists thanks to all the people who've helped build and maintain it.<br />
+			Special thanks to the below, top-100 contributors 🌟
+		</p>
+		<div class="user-list">
+			{contributorsResource().then((sponsors) => {
+				return sponsors.map((sponsor: any) => (
+					<a class="user" href={sponsor.html_url} target="_blank" rel="noreferrer">
+						<img src={sponsor.avatar_url} alt={sponsor.login} />
+						<p>{sponsor.login}</p>
+					</a>
+				));
+			})}
+		</div>
+
+		<hr />
+
+		<h2>Author</h2>
+		<article class="author">
+				<p>
+					This project was originally started by
+					me, <a href="https://aliciasykes.com">Alicia Sykes</a>
+					(with a lot of help from the community)
+				</p>
+				<br />
+				<p class="about">
+					I build apps which aim to help people escape big tech, secure their data,
+					and protect their privacy.
+				</p>
+				<br />
+				<div class="pic-and-socials">
+					<a href="https://aliciasykes.com">
+						<img class="pic" width="180" height="240" alt="Alicia Sykes" src="https://i.ibb.co/fq10qhL/DSC-0597.jpg" />
+					</a>
+					<div class="socials">
+						{
+							socials.map((social) => (
+								<a href={social.link}>
+									<Icon icon={social.icon} width={24} height={24} />
+								</a>
+							))
+						}
+					</div>
+				</div>
+				<p class="more-about">
+					I have a particular interest in self-hosting, Linux, security and OSINT.<br />
+					So if this type of stuff interests you, check out these other projects:
+				</p>
+				<ul>
+					{
+						projects.map((project) => (
+							<li>
+								<img width="20" height="20" alt={project.title} src={project.icon} />
+								<a href={project.link} target="_blank" rel="noreferrer">
+									{project.title}
+								</a> - {project.description}
+							</li>
+						))
+					}
+					<li>
+						...and loads more, over at <a href="https://apps.aliciasykes.com/">apps.aliciasykes.com</a>
+						and on <a href="https://github.com/lissy93">github.com/lissy93</a>
+					</li>
+				</ul>
+				<br />
+				<p>
+					If you'd like to support the ongoing work on Awesome Privacy,
+					and other similar projects,
+					consider <a href="https://github.com/sponsors/lissy93">sponsoring me</a> on GitHub 💖
+				</p>
+
+		</article>
+		
+		<hr />
+
+		<h2>License</h2>
+		<p>
+			All content on Awesome Privacy is freely available, within the public domain,
+			licensed under Creative Commons Zero v1.0 Universal.
+			The code for the website is licensed under MIT.
+		</p>
+		<p>
+			{licenseContent().then((license) => {
+				return (<pre class="license-content">{license}</pre>)
+			})}
+		</p>
+
+	</Main>
+	</div>
+</Layout>
+
+<style lang="scss">
+h2 {
+	font-size: 2rem;
+	margin: 2rem 0 1rem 0;
+}
+p {
+	font-size: 1.4rem;
+}
+hr {
+	margin: 2rem 0;
+	border: 0;
+	border-top: 2px solid var(--accent);
+	&:nth-child(6) {
+		border-color: var(--accent-3);
+	}
+	&:nth-child(9) {
+		border-color: var(--accent-2);
+	}
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+.software-requirements {
+	:global(p) {
+		font-size: 1.4rem;
+	}
+	:global(ul) {
+		padding-left: 0.5rem;
+		list-style: none;
+		font-size: 1.1rem;
+		:global(li ul) {
+			padding: 0 0 0.5rem 1rem;
+			list-style: circle;
+		}
+	
+	}
+	:global(ul li:hover strong) {
+		transition: color 0.2s ease-in-out;
+		color: var(--accent-3);
+	}
+}
+
+.user-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 2rem 0;
+	.user {
+		width: 6rem;
+		overflow: hidden;
+		text-align: center;
+		img {
+			width: 5rem;
+			height: 5rem;
+			border-radius: var(--curve-md);
+		}
+		p {
+			font-size: 1rem;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;  
+			overflow: hidden;
+		}
+	}
+}
+
+.license-content {
+	max-height: 500px;
+  overflow: scroll;
+  background: #e6e6ee;
+  width: fit-content;
+  border-radius: var(--curve-sm);
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  font-family: mono;
+}
+
+.author {
+	p {
+		margin: 1rem 0 0 0;
+	}
+	ul {
+		padding-left: 1.5rem;
+		list-style: circle;
+		margin-bottom: 0;
+		li {
+			font-size: 1.1rem;
+		}
+	}
+	.about {
+		font-size: 1.4rem;
+		font-style: italic;
+		font-weight: 300;
+		color: var(--accent-3);
+		text-align: center;
+		max-width: 550px;
+		margin: 0 auto;
+	}
+	small {
+		font-size: 1rem;
+		margin: 1rem 0;
+	}
+	.pic-and-socials {
+		float:right;
+		img {
+			margin: 0.5rem 1rem;
+			border-radius: var(--curve-md);
+			border: 2px solid var(--foreground);
+			box-shadow: 4px 4px 0 var(--foreground);
+		}
+		.socials {
+			display: flex;
+			margin: 0.5rem 1rem;
+			justify-content: space-between;
+			:global(a svg) {
+				color: var(--foreground);
+				transition: color 0.2s ease-in-out;
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+}
+
+</style>

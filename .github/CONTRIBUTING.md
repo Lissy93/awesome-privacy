@@ -4,36 +4,51 @@
 
 ### How to make an Addition
 
-You can add entries to this list by opening a pull request.
+You can add, edit or remove entries by opening a pull request.
 
-Get started by [editing](https://github.com/Lissy93/awesome-privacy/edit/main/README.md) the readme, committing changes to your fork, and opening a pull request upstream to this repo's main branch.
-If you are new to GitHub, [this tutorial](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github/) may help you.
+All data is stored in [`awesome-privacy.yml`](https://github.com/Lissy93/awesome-privacy/blob/main/awesome-privacy.yml).
+If you're adding, editing or removing a listing - **this is the only file you need to edit**.
+
+Get started by forking the repo, [editing](https://github.com/Lissy93/awesome-privacy/edit/main/awesome-privacy.yml) the data, committing changes to your fork, and opening a pull request upstream to this repo's main branch. If you're new to open source, you can find some resources to get you started at [git-in.to](https://git-in.to), but feel free to reach out if you need any help 😊 
 
 Your request will be reviewed, then either merged, or have changes requested, or if the [Guidelines](#guidelines) are not met, it may be closed with a comment explaining why.
 
-To make layout or stylistic amendments to the website ([awesome-privacy.xyz](https://awesome-privacy.xyz)), pull requests should be made to the `gh-pages` branch. For more information about the website, see [About --> Website](https://github.com/Lissy93/awesome-privacy/blob/main/.github/ABOUT.md#website)
+To make layout or stylistic amendments to the website ([awesome-privacy.xyz](https://awesome-privacy.xyz)), see [Website docs](https://github.com/Lissy93/awesome-privacy#the-website) in the readme for build and running instructions.
 
 ---
 
 ### Requirements
 
-Software additions to this list, will usually need to meet the following requirements. 
+For software to be included in this list, it must meet the following requirements: 
 
 - **Privacy Respecting**
-  - The project must respect users privacy, not collect more data than necessary, and store info securely 
+	- The project must respect users privacy, not collect more data than necessary, and store info securely
+	- For hosted services, the project must have a clear privacy policy
+	- The user must remain in full control of their data, and be able to delete it at any time
 - **Secure**
+  - The software must be secure by default, without requiring additional configuration
   - There should be no current, critical security issues
   - The handling of past issues must have been prompt, transparent and effective
 - **Open Source**
-  - The full source code should be released under an open source license
+	- The full source code should be released under an open source license
+	- Ideally it should be possible for the user to build and run/deploy the software themselves from source
 - **Actively Maintained**
   - The developers should address dependency updates and security patches in a timely manner
 - **Transparent**
   - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
 - **Ethical**
   - Must not suppress free speech, discriminate or disregard any human rights
+- **Relevant**
+	- The software must be relevant, and fit into one of the existing categories
+- **Functional**
+	- Must be fully functional, and not just a concept or idea
+	- A stable (non-alpha/beta) release is required at a minimum
+	- Must be accessible to the general public, and not just a select group of people
+	- If technical knowledge is required to run it, the software must be well documented
 
-_There may be some exceptions, but these would need to be fully justified, reviewed by the community, and drawbacks / anti-features must be listed along-side the software when merged. Usually these entries go within the "Notable Mentions" section instead._
+_There may be some exceptions, but these would need to be fully justified, reviewed
+by the community, and the drawbacks / anti-features must be clearly listed along-side the software.
+Usually these entries go within the "Notable Mentions" section instead._
 
 ---
 
@@ -41,6 +56,7 @@ _There may be some exceptions, but these would need to be fully justified, revie
 
 Your pull request must follow these requirements. Failure to do so, might result in it being closed.
 
+- Do not edit the README directly when adding / editing a listing
 - Ensure your PR is not a duplicate, search for existing / previous submissions first
 - You must respond to any comments or requests for changes in a timely manner, 48-hours maximum
 - Write short but descriptive git commit messages, under 50 characters. This must be in the format of `Adds [software-name] to [section-name]`. Your PR will be rejected if you name it `Updates README.md`
@@ -59,4 +75,4 @@ Your pull request must follow these requirements. Failure to do so, might result
 - Your changes must be correctly formatted, in valid markdown
 - The addition title must be a link the project, and in bold
 - The addition description must be no less than 50, and no more than 250 characters, keep it clear and to the point
-- The structure of additions is as follows: `[Project Name](https://project-link/) | Brief description`
+

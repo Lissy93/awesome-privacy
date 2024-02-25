@@ -1,0 +1,277 @@
+---
+
+
+import Layout from '@layouts/Layout.astro';
+import Button from '@components/form/Button.astro';
+import Main from '@components/scafold/MainCard.astro';
+import ServiceList from '@components/things/ServiceList.astro';
+import type { AwesomePrivacy, Section, Service, ShortService } from '../types/Service';
+import { fetchData, slugify } from '@utils/fetch-data';
+import { parseMarkdown } from '@utils/parse-markdown';
+
+interface Props {
+  slug: string,
+  title: string,
+  services: Service[],
+  intro?: string,
+  notableMentions?: ShortService[] | string,
+  furtherInfo?: string,
+  wordOfWarning?: string,
+  alternativeTo?: string[];
+  categoryName: string,
+  otherSections: Section[],
+}
+
+const {
+  title, otherSections, services, notableMentions, furtherInfo, wordOfWarning,
+  alternativeTo, categoryName, intro,
+} = Astro.props;
+
+/**
+ * Make a list of keywords, for the <meta keywords> tag
+ */
+const makeKeyWordTag = () => {
+  const keywords = [];
+  keywords.push(`free and open source ${title} software`);
+  keywords.push(`private ${title} comparison`);
+  (alternativeTo || []).forEach((alt: string) => {
+    keywords.push(`privacy-respecting ${alt} alternative`);
+    keywords.push(`free open source ${alt} alternative`);
+  });
+  (services || []).forEach((serv: Service) => {
+    keywords.push(serv.name);
+  });
+  keywords.push('ad free');
+  keywords.push('open source software');
+  keywords.push('privacy respecting apps');
+  return keywords.join(', ');
+};
+
+/**
+ * Make a page title
+ */
+const makePageTitle = () => {
+  return `${title} | Awesome Privacy`;
+};
+
+/**
+ * Make a string page intro, for the description tag
+ */
+const makeDescriptionTag = () => {
+  let description = `A list of privacy respecting ${title}. `;
+  if (services && services.length > 0) {
+    const serviceList = services.map((serv: Service) => serv.name);
+    description += `Compare ${serviceList.join(', ')} and more private apps and services. `
+  } else {
+    description += `Find private apps and services. This section is still a work in progress. `;
+  }
+  description += 'All this, and much more at Awesome Privacy, '
+  description += 'the free and open source list of private software alternatives.';
+  return description;
+};
+
+export async function getStaticPaths() {
+  const pages = await fetchData().then((data) => {
+    const results: Array<Props> = [];
+    if (!data || !data.categories) return results;
+    (data as AwesomePrivacy).categories.forEach((category) => {
+      const sections = category.sections.map((section) => ({
+        slug: `${slugify(category.name)}/${slugify(section.name)}`,
+        title: section.name,
+        services: section.services,
+        intro: section.intro,
+        notableMentions: section.notableMentions,
+        furtherInfo: section.furtherInfo,
+        wordOfWarning: section.wordOfWarning,
+        alternativeTo: section.alternativeTo,
+        categoryName: category.name,
+        otherSections: category.sections,
+      }));
+      results.push(...sections);
+    });
+    return results;
+  });
+
+  return pages.map((props: Props) => {
+    return {params: { section: props.slug }, props };
+  });
+}
+
+const makePaginationLinks = () => {
+  const index = otherSections.findIndex(section => section.name === title);
+  const previousSection = index >  0 ? otherSections[index -  1].name : null;
+  const nextSection = index < otherSections.length -  1 ? otherSections[index +  1].name : null;
+  return { previous: previousSection, next: nextSection };
+};
+
+const { previous, next } = makePaginationLinks();
+
+---
+
+<Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
+  <Main>
+
+    <h2>{title}</h2>
+
+    {intro && (
+      <section class="intro">
+        <p set:html={parseMarkdown(intro)}></p>
+      </section>
+    )}
+
+    <ServiceList title={title} services={services} />
+
+    {notableMentions && (
+      <section class="notable-mentions">
+        <h3>Notable Mentions</h3>
+        { Array.isArray(notableMentions) ?
+          <ul>
+            {notableMentions.map((mention) => (
+              <li>
+                <a href={mention.url}>{mention.name}</a> 
+                {mention.description && (
+                  <span>- </span>
+                  <span set:html={parseMarkdown(mention.description)}></span>
+                )}
+              </li>
+            ))}
+          </ul> :
+          <p set:html={parseMarkdown(notableMentions)}></p>
+      }
+      </section>
+    )}
+
+    {furtherInfo && (
+      <section class="further-info">
+        <h3>Notes</h3>
+        <p set:html={parseMarkdown(furtherInfo)}></p>
+      </section>
+    )}
+
+    {wordOfWarning && (
+      <section class="word-of-warning">
+        <h3>Word of Warning</h3>
+        <p set:html={parseMarkdown(wordOfWarning)}></p>
+      </section>
+    )}
+
+    <div class="pagination-navigation">
+      { previous ? (
+        <Button url={`/${slugify(categoryName)}/${slugify(previous)}`}>
+          <span>← Previous</span>
+          <p>{previous}</p>
+        </Button>
+      ) : <p class="nothing"></p>}
+      <a href={`/${slugify(categoryName)}`} class="go-to-category">
+        View all in {categoryName} ({otherSections.length})
+      </a>
+      { next && (
+        <Button url={`/${slugify(categoryName)}/${slugify(next)}`}>
+          <span>Next →</span>
+          <p>{next}</p>
+        </Button>
+      )}
+    </div>
+  </Main>
+</Layout>
+
+<style lang="scss">
+
+section {
+  padding-bottom: 1rem;
+  &:not(:last-child) {
+    border-bottom: 2px solid var(--accent-3);
+  }
+}
+
+h2 {
+    font-size: 2rem;
+    margin: -2rem 0 2rem -2rem;
+    box-shadow: 6px 6px 0 var(--foreground);
+    background: var(--accent);
+    color: var(--accent-fg);
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+  }
+
+.pagination-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  :global(.button) {
+    min-width: 120px;
+    width: fit-content;
+    padding: 0.25rem 1rem;
+    text-align: right;
+    &:first-child { text-align: left; }
+    p {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+    
+  }
+  .nothing {
+    width: 120px;
+  }
+  .go-to-category {
+    color: var(--foreground);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.intro {
+  font-style: italic;
+  opacity: 0.7; 
+}
+
+
+.further-info, .notable-mentions, .word-of-warning {
+  h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  :global(p) {
+    font-size: 0.9rem;
+    opacity: 0.7; 
+    :global(strong) {
+      font-weight: 500;
+    }
+    :global(a) {
+      color: var(--foreground);
+      transition: all 0.15s ease-in-out;
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+  :global(strong) {
+    font-weight: 500;
+  }
+  :global(h4) {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+  }
+  :global(ul) {
+    list-style: circle;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    li {
+      margin-bottom: 0.25rem;
+      :global(p) {
+        display: inline;
+      }
+    }
+  }
+}
+
+</style>

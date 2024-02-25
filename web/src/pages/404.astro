@@ -1,0 +1,98 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import Buton from '@components/form/Button.astro';
+
+---
+
+<Layout title="404 | Awesome Privacy">
+
+  <article class="oh-crap">
+    <h2>404</h2>
+    <p class="what-happened">Page not found 😢</p>
+    <p class="why-happened">
+      It seems this page doesn't exist (yet). We're sorry about that.
+    </p>
+    <span class="back-you-go-then"><Buton url="/">Go back home</Buton></span>
+
+    <nav class="other-places">
+      Looking for somewhere else?
+      <ul>
+        <li>
+          <a href="/search">Search</a>
+        </li>
+        <li>
+          <a href="/browse">Browse</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="https://github.com/lissy93/awesome-privacy">Source</a>
+        </li>
+        <li>
+          <a href="https://as93.net">More Apps</a>
+        </li>
+      </ul>
+    </nav>
+  </article>
+
+</Layout>
+
+
+<style lang="scss">
+.oh-crap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 6rem);
+  h2 {
+    font-size: 12rem;
+    margin: 0;
+  }
+  .what-happened {
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+  .why-happened {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.6;
+  }
+  .back-you-go-then :global(a) {
+    font-size: 2rem;
+  }
+
+
+  .other-places {
+    opacity: 0.8;
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      gap: 0.5rem;
+      li {
+        &:not(:last-child) {
+          border-right: 1px solid var(--accent);
+          padding-right: 0.5rem;
+        }
+      }
+      li a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+}
+</style>

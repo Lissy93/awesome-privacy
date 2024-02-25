@@ -1,0 +1,107 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import NavBar from '@components/scafold/NavBar.astro';
+import Footer from '@components/scafold/Footer.astro';
+
+interface Props {
+	title?: string; // Page title
+	description?: string; // Overide description tag
+  keywords?: string; // Overide keywords tag
+	hideNav?: boolean; // Don't show the navbar (just homepage)
+	author?: string; // Author of the content
+}
+
+const {
+	title='Awesome Privacy | The Ultimate List of Private Apps',
+	description='Your guide to finding privacy-respecting alternatives to popular software and services.',
+	keywords='security, privacy, awesome privacy, data collection, free software, open source, privacy tools, privacy respecting software',
+	hideNav=false,
+	author='Alicia Sykes'
+} = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<ViewTransitions />
+		
+		<!-- Core info -->
+		<title>{title}</title>
+		<meta name="description" content={description}>
+		<meta name="keywords" content={keywords}>
+		<meta name="author" content={author}>
+
+		<!-- Page info, viewport, Astro credit -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Icons and colors -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+		<!-- Social media meta tags (Open Graphh + Twitter) -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://awesome-privacy.xyz">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta property="og:image" content="/banner.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="https://awesome-privacy.xyz">
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
+		<meta name="twitter:image" content="/banner.png">
+
+		<!-- Non-tracking hit counter -->
+		<script defer
+			type="text/partytown"
+			data-domain="awesome-privacy.xyz"
+			src="https://no-track.as93.net/js/script.js">
+		</script>
+	</head>
+	<body>
+		{!hideNav && <NavBar /> }
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	@import '../styles/values.css';
+	@import '../styles/typography.css';
+	</style>
+	
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		background: var(--background);
+		background-size: 224px;
+		::selection {
+			background: var(--accent);
+			color: var(--accent-fg);
+		}
+		scroll-behavior: smooth;
+	}
+	body {
+		margin: 0;
+		min-height: 100vh;
+		background: #feecff;
+		background: -webkit-radial-gradient(circle, #feecff 0%, #e1e4fb 100%);
+		background: radial-gradient(circle, #feecff 0%, #e1e4fb 100%);
+	}
+</style>

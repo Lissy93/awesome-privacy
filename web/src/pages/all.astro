@@ -1,0 +1,205 @@
+---
+
+
+import Layout from '@layouts/Layout.astro';
+import ServiceList from '@components/things/ServiceList.astro';
+import type { AwesomePrivacy, Section } from '../types/Service';
+import { fetchData, slugify } from '@utils/fetch-data';
+import FontAwesome from '@components/form/FontAwesome.svelte';
+
+const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
+
+---
+
+<script>
+
+const toggleSidebar = () => {
+  const mainContent = document.querySelector('#content');
+  mainContent && mainContent.classList.toggle('narrow');
+  const sidebar = document.querySelector('.sidebar');
+  sidebar && sidebar.classList.toggle('hidden');
+  const button = document.querySelector('#toggle-sidebar');
+  if (button) {
+    button.textContent = (button.textContent === "Show Contents" ? "Hide Contents" : "Show Contents");
+  }
+};
+
+  const tgt = document.querySelector("#toggle-sidebar");
+  tgt && tgt.addEventListener("click", () => {
+    toggleSidebar();
+  });
+</script>
+
+<Layout title="Awesome Privacy">
+    <main>
+    <div id="content">
+    <button id="toggle-sidebar">Show Contents</button>
+    {categories.map((category) => (
+      <h2  id={`${slugify(category.name)}`}>
+        <FontAwesome iconName={slugify(category.name)} />
+        <a href={`/${slugify(category.name)}`}>{category.name}</a>
+      </h2>
+      
+        <article>
+          {category.sections.map((section: Section) => (
+            <section class="card">
+              <h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
+                <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
+              </h3>
+              <ServiceList
+                title={section.name}
+                services={section.services}
+                subHeading={true}
+                buttonLink={`/${slugify(category.name)}/${slugify(section.name)}`}
+                noGitHubMetrics={true}
+              />
+            </section>
+          ))}
+        </article>
+      
+    ))}
+    </div>
+    <div class="sidebar hidden">
+      <p class="sidebar-title">Contents</p>
+      <ul>
+        {categories.map((category) => (
+          <li class="top-level">
+            <a href={`#${slugify(category.name)}`}>{category.name}</a>  
+          </li>
+          <li>
+            <ul>
+              {category.sections.map((section: Section) => (
+                <li>
+                  <a href={`#${slugify(category.name)}-${slugify(section.name)}`}>{section.name}</a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </main>
+  
+</Layout>
+
+<style lang="scss">
+
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 1000px;
+  max-width: calc(100% - 5rem);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.narrow {
+  width: 70%;
+}
+
+.hidden {
+  display: none;
+}
+
+#toggle-sidebar {
+  // float: right;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sidebar {
+  width: 25%;
+  height: 87vh;
+  overflow: scroll;
+  position: fixed;
+  right: 1rem;
+  border-radius: var(--curve-md);
+  .sidebar-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+    background: var(--accent-3);
+    color: var(--accent-fg);
+    border: 2px solid var(--foreground);
+    box-shadow: 6px 6px 0 var(--foreground);
+    border-radius: var(--curve-sm);
+    margin: 0 1rem;
+  }
+  ul {
+    list-style: none;
+    padding-left: 1.6rem;
+    a {
+      text-decoration: none;
+      color: var(--foreground);
+      opacity: 0.6;
+      transition: all 0.18s ease-in-out;
+      &:hover {
+        color: var(--accent);
+        opacity: 1;
+      }
+    }
+    li ul {
+      list-style: circle;
+    }
+    .top-level {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      &:hover a {
+        color: var(--accent-3);
+      }
+    }
+  } 
+}
+
+
+.card {
+  margin: 2rem auto 5rem auto;
+  padding: 0 2rem;
+  border: 2px solid var(--foreground);
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent-fg);
+}
+
+h2 {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  a {
+    color: var(--accent-3);
+    text-decoration: none;
+  }
+  :global(svg) {
+    width: 3rem;
+    height: 3rem;
+    color: var(--accent-3);
+  }
+}
+
+h3 {
+    font-size: 2rem;
+    margin: -2rem 0 2rem -4rem;
+    box-shadow: 6px 6px 0 var(--foreground);
+    background: var(--accent);
+    color: var(--accent-fg);
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+    a {
+      color: var(--accent-fg);
+      font-family: "Lekton", sans-serif;
+      text-decoration: none;
+    }
+  }
+
+
+</style>

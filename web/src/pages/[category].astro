@@ -1,0 +1,102 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import SectionList from '@components/things/SectionList.astro';
+import Main from '@components/scafold/MainCard.astro';
+
+import { fetchData, slugify } from '@utils/fetch-data';
+
+import type { Section } from '../types/Service';
+import Button from '@components/form/Button.astro';
+
+interface Props {
+	title: string;
+	sections: Section[];
+}
+
+const { title, sections } = Astro.props;
+
+const categories = (await fetchData()).categories;
+
+export async function getStaticPaths() {
+	const pages = await fetchData().then((data) => {
+		return data.categories.map((category) => {
+			return {
+				category: slugify(category.name),
+				title: category.name,
+				sections: category.sections,
+			};
+		});
+	});
+
+  return pages.map(({ category, title, sections }) => {
+    return {
+      params: { category },
+      props: { title, sections },
+    };
+  });
+}
+
+const makePaginationLinks = () => {
+  const index = categories.findIndex(category => category.name === title);
+  const previousCategory = index >  0 ? categories[index -  1].name : null;
+  const nextCategory = index < categories.length -  1 ? categories[index +  1].name : null;
+  return { previous: previousCategory, next: nextCategory };
+};
+
+const { previous, next } = makePaginationLinks();
+
+---
+
+<Layout title={`${title} | Awesome Privacy`}>
+	<Main>
+		<SectionList title={title} sections={sections} bigTitle={true} />
+		<div class="pagination-navigation">
+      { previous ? (
+        <Button url={`/${slugify(previous)}`}>
+          <span>← Previous</span>
+          <p>{previous}</p>
+        </Button>
+      ) : <p class="nothing"></p>}
+      { next && (
+        <Button url={`/${slugify(next)}`}>
+          <span>Next →</span>
+          <p>{next}</p>
+        </Button>
+      )}
+    </div>
+	</Main>
+</Layout>
+
+<style lang="scss">
+.pagination-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  :global(.button) {
+    min-width: 120px;
+    width: fit-content;
+    padding: 0.25rem 1rem;
+    text-align: right;
+    &:first-child { text-align: left; }
+    p {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+    
+  }
+  .nothing {
+    width: 120px;
+  }
+  .go-to-category {
+    color: var(--foreground);
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+}
+</style>

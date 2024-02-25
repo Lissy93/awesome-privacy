@@ -1,0 +1,192 @@
+---
+  import Fuse from 'fuse.js';
+
+import Layout from '@layouts/Layout.astro';
+import { fetchData, slugify } from '@utils/fetch-data';
+import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
+import Search from '@components/things/Search.svelte';
+import SmartSuggestions from '@components/things/SmartSuggestions.svelte';
+import FontAwesome from '@components/form/FontAwesome.svelte';
+
+import type { Service } from '../../types/Service';
+
+export const prerender = false;
+
+let fuse: Fuse<any>;
+
+const categories = (await fetchData())?.categories;
+
+const items = prepareSearchItems(categories);
+
+fuse = new Fuse(items, searchOptions);
+
+const searchTerm = Astro.params.searchTerm;
+
+const searchResults = fuse.search(searchTerm || '').map(result => result.item);
+
+const services = searchResults.filter(result => result.type === 'Service');
+
+const putResultsIntoGroups = () => {
+  const grouped = services.reduce((acc, item) => {
+    const { category: categoryName, sectionName, ...service } = item;
+
+    if (!acc[categoryName]) {
+      acc[categoryName] = { categoryName, sections: {} };
+    }
+
+    if (!acc[categoryName].sections[sectionName]) {
+      acc[categoryName].sections[sectionName] = { sectionName, items: [] };
+    }
+
+    acc[categoryName].sections[sectionName].items.push(service);
+
+    return acc;
+  }, {});
+
+  // Convert the grouped object into the desired array structure.
+  // And fuck it, let's use `any`
+  return Object.values(grouped).map((category: any) => ({
+    categoryName: category.categoryName,
+    sections: Object.values(category.sections)
+  }));
+};
+
+const beer = putResultsIntoGroups();
+
+---
+
+<Layout title="Search | Awesome Privacy">
+  <section>
+    <h1>Search</h1>
+    <Search client:visible data={categories} previousSearch={searchTerm} />
+  </section>
+  <SmartSuggestions client:visible searchTerm={searchTerm || ''} categories={categories} />
+  <section class="result-count">
+    <h3>Deep Search</h3>
+    <p>Showing {services.length} results for "{searchTerm}" sorted by relevence</p>
+  </section>
+  <div class="results">
+    {
+      beer.map((category: any) => (
+        <div class="category">
+          <a class="category-title" href={`/${slugify(category.categoryName)}`}>
+            <h3>{category.categoryName}</h3>
+          </a>
+          <span class="section-icon"><FontAwesome iconName={slugify(category.categoryName)} /></span>
+          <ul class="section-list">
+            {category.sections.map((section: any) => (
+              <li class="section-item">
+                <h4>{section.sectionName}</h4>
+                <ul class="service-list">
+                  {section.items.map((item: Service) => (
+                    <li>
+                      <a href={item.url}>{item.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+</div>
+</Layout>
+
+
+<style lang="scss">
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+
+  h1 {
+    font-size: 3rem;
+		color: var(--accent-3);
+		font-family: "Lekton", sans-serif;
+		text-align: center;
+		margin: 1rem 0;
+  }
+}
+
+.result-count {
+  padding: 0;
+  width: 80vw;
+  max-width: 900px;
+  margin: 1rem auto 0 auto;
+  h3 {
+    margin: 0;
+    color: var(--accent-3);
+    font-size: 1.6rem;
+  }
+  p {
+    margin: 0;
+    opacity: 0.6;
+  }
+}
+
+.results {
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 1100px;
+  columns: 6 300px;
+  column-gap: 1rem;
+  .category {
+    padding: 1rem;
+    box-shadow: 4px 4px 0 var(--foreground);
+    background: var(--accent-fg);
+    border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
+    display: inline-flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 1rem;
+    position: relative;
+    .category-title {
+      text-decoration: none;
+      color: var(--foreground);
+      z-index: 2;
+      position: relative;
+      h3 {
+        font-family: "Lekton", sans-serif;
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.8rem;
+      }
+    }
+    .section-icon {
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+      width: fit-content;
+      :global(svg) {
+        width: 2rem;
+        height: 2rem;
+        opacity: 0.5;
+        text-shadow: 3px 3px 0 black;
+        color: var(--accent-3);
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .section-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      h4 {
+        margin: 1rem 0 0 0;
+      }
+      .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+</style>

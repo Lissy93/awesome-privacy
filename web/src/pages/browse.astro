@@ -1,0 +1,203 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import SectionList from '@components/things/SectionList.astro';
+
+import { fetchData } from '@utils/fetch-data';
+import type { Category } from '../types/Service';
+
+const categories: Category[] = (await fetchData())?.categories;
+
+---
+
+<Layout title="Browse">
+
+<div class="head-wrap">
+  <h2>Browse</h2>
+  <span>
+    <input id="searchInput" type="search" placeholder="Start typing to filter..." />
+    <p id="press-enter-msg" class="press-enter">Press enter for deep search</p>
+  </span>
+</div>
+
+<ul class="categories">
+  {categories.map((category) => (
+    <li class="category">
+      <SectionList title={category.name} sections={category.sections} />
+    </li>
+  ))}
+</ul>
+
+<div class="no-results">
+  <p class="zilch">Nothing found 😢</p>
+  <p>Try a <a href="/search">deep search</a> instead</p>
+</div>
+</Layout>
+
+<script>
+// Time for some good ol' fashioned vanilla JS...
+// I reccomend you not to look at this code for too long, it's not pretty.
+const filterInput = document.querySelector('input');
+const categories = document.querySelectorAll<HTMLElement>('.category');
+const pressEnterMsg = document.getElementById('press-enter-msg') as HTMLElement | null;
+const noResults = document.querySelector('.no-results') as HTMLElement | null;
+
+if (!pressEnterMsg || !noResults) {
+  throw new Error('No pressEnterMsg or noResults');
+};
+
+filterInput?.addEventListener('input', (e) => {
+  let resultsCount = 0;
+  const filter = (e.target as HTMLInputElement).value.toLowerCase();
+  if (filter.length > 0) {
+    pressEnterMsg.style.visibility = 'visible';
+  } else {
+    pressEnterMsg.style.visibility = 'hidden';
+  }
+  categories.forEach((category) => {
+    const titleElement = category.querySelector('.category-title');
+    const title = titleElement ? titleElement.textContent?.toLowerCase() : '';
+    const sections = category.querySelectorAll<HTMLElement>('.section');
+    let count = 0;
+    sections.forEach((section) => {
+      const sectionTitle = section.textContent?.toLowerCase();
+      if (sectionTitle?.includes(filter)) {
+        section.style.display = 'block';
+        count++;
+        resultsCount++;
+      } else {
+        section.style.display = 'none';
+      }
+    });
+    if (title && title.includes(filter)) {
+      category.style.display = 'inline-flex';
+      resultsCount++;
+    } else if (count === 0) {
+      category.style.display = 'none';
+    }
+  });
+  noResults.style.display = resultsCount === 0 ? 'block' : 'none';
+});
+
+if (typeof window !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement | null;
+    if (searchInput === null) return;
+    searchInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const searchTerm = encodeURIComponent(searchInput.value);
+        window.location.href = `/search/${searchTerm}`;
+      }
+      if (event.key === 'Escape') {
+        searchInput.value = '';
+        searchInput.blur();
+        pressEnterMsg.style.visibility = 'hidden';
+        categories.forEach((category) => {
+          category.style.display = 'inline-flex';
+          const sections = category.querySelectorAll<HTMLElement>('.section');
+          sections.forEach((section) => {
+            section.style.display = 'block';
+          });
+        });
+      }
+    });
+  });
+}
+</script>
+
+
+<style lang="scss">
+
+.head-wrap {
+  margin: 1rem auto;
+  width: 85vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .press-enter {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.5;
+    visibility: hidden;
+  }
+  input {
+    padding: 0.5rem;
+    border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
+    font-size: 1.2rem;
+    box-shadow: 3px 3px 0 var(--foreground);
+    color: var(--accent-3);
+    &:focus {
+      outline: none;
+      box-shadow: 4px 4px 0 var(--foreground);
+    }
+  }
+  h2 {
+    font-family: "Lekton", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0;
+    color: var(--accent-3);
+  }
+}
+
+.no-results {
+  text-align: center;
+  width: 85vw;
+  margin: 2rem auto 4rem auto;
+  display: none;
+  .zilch {
+    font-size: 2rem;
+    color: var(--accent-3);
+    opacity: 0.5;
+    font-weight: bold;
+  }
+  p {
+    margin: 0.25rem;
+  }
+}
+
+.categories {
+  columns: 6 300px;
+  column-gap: 1rem;
+  margin: 0 auto;
+  width: 85vw;
+  max-width: 1800px;
+  padding: 1rem 0 2rem 0;
+  .category {
+    background: var(--accent-fg);
+    border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
+    box-shadow: 4px 4px 0 var(--foreground);
+    padding: 1rem;
+    width: 85%;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 1rem;
+    .category-title {
+      text-decoration: none;
+      color: var(--foreground);
+    }
+    h3 {
+      font-family: "Lekton", sans-serif;
+      font-weight: bold;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .sections {
+      padding-left: 1rem;
+      .section {
+        a {
+          text-decoration: none;
+          color: var(--foreground);
+        }
+        .service-count {
+          color: var(--accent-3);
+        }
+      }
+    }
+  }
+}
+
+</style>

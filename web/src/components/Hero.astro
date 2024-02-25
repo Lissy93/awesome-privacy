@@ -1,0 +1,145 @@
+---
+import FontAwesome from "@components/form/FontAwesome.svelte"
+---
+
+<div class="hero">
+  <h1>Awesome Privacy</h1>
+  <p class="intro">
+    Your guide to finding privacy-respecting alternatives to popular software and services.
+  </p>
+  <div class="github-link-wrap">
+    <a href="https://github.com/lissy93/awesome-privacy">
+      <FontAwesome iconName="github" />
+      View on GitHub
+    </a>
+  </div>
+</div>
+
+<nav class="top-right">
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/search">Search</a>
+    </li>
+    <li>
+      <a href="/browse">Browse</a>
+    </li>
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="https://github.com/lissy93/awesome-privacy">Source</a>
+    </li>
+    <li>
+      <a href="https://as93.net">More Apps</a>
+    </li>
+  </ul>
+</nav>
+
+
+<style lang="scss">
+
+	.hero {
+    color: var(--accent-fg);
+    border-radius: var(--curve-sm);
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+	}
+	svg {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		opacity: 0.6;
+    display: none;
+	}
+	h1 {
+    margin: 0;
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    color: var(--accent-3);
+    -webkit-text-fill-color: var(--accent-3);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--foreground);
+    text-shadow: 3px 3px 0 var(--foreground);
+	}
+  .intro {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    color: var(--accent-fg);
+    background: var(--accent-3);
+    border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
+    box-shadow: 6px 6px 0 var(--foreground);
+    font-family: "Lekton", sans-serif;
+    font-weight: 700;
+    max-width: 735px;
+    margin: 0 auto;
+  }
+  .github-link-wrap {
+    font-family: "Lekton", sans-serif;
+    max-width: 735px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid var(--foreground);
+    box-shadow: 3px 3px 0 var(--foreground);
+    background: var(--accent);
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    a {
+      text-decoration: none;
+      color: var(--accent-fg);;
+      font-size: 1.2rem;
+      font-family: "Lekton", sans-serif;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      :global(svg) {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--accent-fg);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .top-right {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    opacity: 0.8;
+    display: none;
+    &:hover {
+      opacity: 1;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      gap: 0.5rem;
+      li {
+        &:not(:last-child) {
+          border-right: 1px solid var(--accent);
+          padding-right: 0.5rem;
+        }
+      }
+      li a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+	
+</style>

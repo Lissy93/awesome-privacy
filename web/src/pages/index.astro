@@ -1,0 +1,168 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import Search from '@components/things/Search.svelte';
+import SectionList from '@components/things/SectionList.astro';
+
+import { fetchData } from '@utils/fetch-data';
+import Button from '@components/form/Button.astro';
+import type { Category } from 'src/types/Service';
+
+const categories = (await fetchData())?.categories || [] as Category[];
+
+const description = 'Privacy is a fundamental human right; '
+	+ 'without it, we\'re just open books in a world where everyone\'s '
+	+ 'watching. Let\'s take control back.\n'
+	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
+	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
+
+---
+
+<Layout title="Home | Awesome Privacy" hideNav={true} description={description}>
+	<Hero />
+	<main>
+		<h2>
+			<a href="/search">Search</a>
+		</h2>
+		<Search client:visible data={categories} />
+		<h2 class="browse-title"><a href="/browse">Browse</a></h2>
+		<ul class="categories">
+		{categories.map((category) => (
+			<li class="category">
+				<SectionList title={category.name} sections={category.sections} />
+			</li>
+		))}
+		</ul>
+		<div class="view-all">
+			<span>Or, just</span>
+			<Button url="/all" text="View Everything" />
+		</div>
+		<h2>
+			<a href="/about">About</a>
+		</h2>
+		<div class="about-summary">
+			<p>
+				Awesome Privacy is a collection of privacy-respecting services and tools.
+				The aim is to help you escape big tech, and choose software that respects your privacy. 
+			</p>
+			<p>
+				Why? Because privacy is a fundamental human right; without it, we're just open books
+				in a world where everyone's watching. Let's take control back.
+			</p>
+			<p>
+				Noticed something that should be added / removed / ammended?
+				We're a community-driven resource, so welcome contributions of any nature.
+				All content and code is <a href="https://github.com/lissy93/awesome-privacy">open source</a>.
+			</p>
+			<p>
+				If you've found Awesome Privacy useful, help us out by sharing it with others,
+				contributing, or consider <a href="https://github.com/sponsors/lissy93">sponsoring me</a> on GitHub.
+			</p>
+		</div>
+		<div class="view-all">
+			<span>Want to learn more?</span>
+			<Button url="/about" text="Keep Reading..." />
+		</div>
+		
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1100px;
+		max-width: calc(100% - 5rem);
+		font-size: 20px;
+		line-height: 1.6;
+		.view-all {
+			text-align: center;
+			width: 16rem;
+			margin: 0 auto;
+			span {
+				opacity: 0.5;
+				font-size: 1rem;
+			}
+		}
+	}
+	h2 {
+		font-size: 3rem;
+		color: var(--accent-3);
+		font-family: "Lekton", sans-serif;
+		text-align: center;
+		margin: 3rem 0 1rem 0;
+		a {
+			text-decoration: none;
+			color: var(--accent-3);
+			font-family: "Lekton", sans-serif;
+			position: relative;
+			&:after {    
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 3px;
+				left: 50%;
+				position: absolute;
+				background: var(--accent);
+				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				width: 0;
+			}
+			&:hover:after { 
+				width: 100%; 
+				left: 0; 
+			}
+		}
+	}
+
+	.about-summary {
+		background: var(--accent-fg);
+			border: 2px solid var(--foreground);
+			border-radius: var(--curve-sm);
+			box-shadow: 4px 4px 0 var(--foreground);
+			padding: 1rem;
+			width: 85%;
+			margin: 0 auto;
+	}
+
+	.categories {
+		columns: 6 300px;
+		column-gap: 1rem;
+		.category {
+			background: var(--accent-fg);
+			border: 2px solid var(--foreground);
+			border-radius: var(--curve-sm);
+			box-shadow: 4px 4px 0 var(--foreground);
+			padding: 1rem;
+			width: 85%;
+			display: inline-flex;
+			flex-direction: column;
+			margin: 1rem;
+			.category-title {
+				text-decoration: none;
+				color: var(--foreground);
+			}
+			h3 {
+				font-family: "Lekton", sans-serif;
+				font-weight: bold;
+				margin: 0;
+				font-size: 1.8rem;
+			}
+			.sections {
+				padding-left: 1rem;
+				.section {
+					a {
+						text-decoration: none;
+						color: var(--foreground);
+					}
+					.service-count {
+						color: var(--accent-3);
+					}
+				}
+			}
+		}
+	}
+
+
+</style>
