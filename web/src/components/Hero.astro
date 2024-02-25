@@ -48,6 +48,9 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @media(max-width: 768px) {
+      padding: 2rem 1rem;
+    }
 	}
 	svg {
 		position: absolute;
@@ -71,6 +74,9 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--foreground);
     text-shadow: 3px 3px 0 var(--foreground);
+    @media(max-width: 768px) {
+      font-size: 4rem;
+    }
 	}
   .intro {
     text-align: center;

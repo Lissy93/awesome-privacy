@@ -76,6 +76,9 @@ const description = 'Privacy is a fundamental human right; '
 		max-width: calc(100% - 5rem);
 		font-size: 20px;
 		line-height: 1.6;
+		@media(max-width: 768px) {
+			padding:  0;
+		}
 		.view-all {
 			text-align: center;
 			width: 16rem;
@@ -129,6 +132,7 @@ const description = 'Privacy is a fundamental human right; '
 	.categories {
 		columns: 6 300px;
 		column-gap: 1rem;
+		padding: 0;
 		.category {
 			background: var(--accent-fg);
 			border: 2px solid var(--foreground);
@@ -139,6 +143,10 @@ const description = 'Privacy is a fundamental human right; '
 			display: inline-flex;
 			flex-direction: column;
 			margin: 1rem;
+			@media(max-width: 768px) {
+				margin: 1rem 0;
+				width: 90%;
+			}
 			.category-title {
 				text-decoration: none;
 				color: var(--foreground);
