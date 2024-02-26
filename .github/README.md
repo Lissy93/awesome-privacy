@@ -430,10 +430,10 @@ ProtonMail requires no personally identifiable information for signup, they have
 a [.onion](https://protonirockerxow.onion) server, for access via Tor, and they
 accept anonymous payment: BTC and cash (as well as the normal credit card and PayPal).
  	- [![GitHub: ProtonMail/WebClients](https://img.shields.io/github/stars/ProtonMail/WebClients?style=flat&logo=github&label=WebClients&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/ProtonMail/WebClients)
-- **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tutanota](https://tutanota.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
-secure native mobile apps, anonymous signup, and a .onion site. Tutonota has a
+- **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
+secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
 full-featured free plan or a premium subscription for businesses allowing for
-custom domains ($12/ month). Tutonota [does not use OpenPGP](https://tutanota.com/blog/posts/differences-email-encryption/)
+custom domains ($12/ month). Tuta [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
 like most encrypted mail providers, instead they use a standardized, hybrid method
 consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
 2048 bit RSA). This causes compatibility issues when communicating with contacts
