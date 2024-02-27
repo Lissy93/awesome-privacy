@@ -199,7 +199,7 @@ and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ie
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> [OTPClient](https://github.com/paolostivanin/OTPClient) *(Linux)*, [gauth](https://github.com/gbraadnl/gauth) *(Self-Hosted, Web-based)*, [Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa) *(Android)*<br> For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a plugin for managing TOTP's -  offline and compatible with Windows, Mac and Linux.<br> [Authy](https://authy.com/) (proprietary) is a popular option among new users, due to its ease of use and device sync capabilities. Cloud sync may be useful, but will also increase attack surface. Authy is not open source, and therefore can not recommended
+> [OTPClient](https://github.com/paolostivanin/OTPClient) *(Linux)*, [gauth](https://github.com/gbraadnl/gauth) *(Self-Hosted, Web-based)*, [Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa) *(Android)*<br> For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp) is a plugin for managing TOTP's -  offline and compatible with Windows, Mac and Linux.
 > </details>
 
 <details>
