@@ -1,0 +1,282 @@
+---
+import type { GitHubStatsResponse } from '@utils/fetch-repo-info'
+import { formatDate, timeAgo } from '@utils/dates-n-stuff'; 
+
+import FontAwesome from "@components/form/FontAwesome.svelte"
+
+interface Props {
+  gitHubData: GitHubStatsResponse;
+  repo: string;
+}
+
+const { gitHubData, repo } = Astro.props;
+
+
+function generateChartData(languages: Record<string, number>): string {
+
+  const colorMap: { [key: string]: string } = {
+    'TypeScript': '#2b7489', 
+    'Objective-C++': '#6866fb', 
+    'Jupyter Notebook': '#DA5B0B', 
+    'Dart': '#00B4AB', 
+    'Shell': '#89e051',  
+    'Elixir': '#6e4a7e', 
+    'Kotlin': '#F18E33', 
+    'Objective-C': '#438eff', 
+    'Ruby': '#701516', 
+    'Go': '#375eab', 
+    'PHP': '#4F5D95', 
+    'Java': '#b07219', 
+    'Scala': '#DC322F', 
+    'Makefile': '#427819', 
+    'Perl': '#0298c3', 
+    'Lua': '#000080', 
+    'Vue': '#2c3e50', 
+    'HTML': '#e44b23', 
+    'Swift': '#ffac45', 
+    'C': '#555555',
+    'C#': '#097c01',
+    'Clojure': '#db5855', 
+    'Rust': '#dea584', 
+    'Assembly': '#6E4C13', 
+    'Arduino': '#bd79d1', 
+    'C Sharp': '#178600', 
+    'CSS': '#563d7c', 
+    'TeX': '#3D6117', 
+    'OCaml': '#3be133', 
+    'Pascal': '#b0ce4e', 
+    'F#': '#b845fc', 
+    'JavaScript': '#f1e05a', 
+    'VimL': '#199f4b', 
+    'R': '#198ce7', 
+    'Erlang': '#B83998', 
+    'Scheme': '#1e4aec', 
+    'Python': '#3572A5', 
+    'Common Lisp': '#3fb68b', 
+    'Groovy': '#e69f56', 
+    'Julia': '#a270ba', 
+    'cpp': '#f34b7d', 
+  };
+
+  // Arrays to hold the data, labels, and colors
+  const data: number[] = [];
+  const labels: string[] = [];
+  const colors: string[] = [];
+  
+  // Default colors to use if the language is not in the colorMap
+  const defaultColors = ['#ffdf60', '#5f53f4', '#28dffd', '#f45397'];
+  let defaultColorIndex = 0;
+
+  // Populate the data, labels, and colors arrays
+  for (const [language, lines] of Object.entries(languages)) {
+    data.push(lines);
+    labels.push(language);
+    
+    // Assign a color from the colorMap if available; otherwise, use a default color
+    if (colorMap[language]) {
+      colors.push(colorMap[language]);
+    } else {
+      colors.push(defaultColors[defaultColorIndex % defaultColors.length]);
+      defaultColorIndex++;
+    }
+  }
+
+  // Construct the chart data object as a string
+  const chartData = JSON.stringify({
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: data,
+        backgroundColor: colors,
+        borderWidth: 0,
+        label: 'Language Usage',
+      }],
+      labels: labels,
+    },
+    options: {
+      cutoutPercentage: 80,
+      legend: {
+        display: true,
+      },
+      plugins: {
+        datalabels: {
+          display: false,
+        },
+      },
+      aspectRatio: 1,
+      maintainAspectRatio: false,
+    },
+  });
+
+  // Encode the chart data for use in a URL
+  return encodeURIComponent(chartData);
+}
+
+const formatBigNumber = (num: number): string => {
+  if (!num) return 'None';
+  return num.toLocaleString();
+};
+
+
+
+
+const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubData.languages)}`;
+
+
+---
+
+<div class="gh-info-wrap">
+
+  <div class="left">
+    <h4>Author</h4>
+    <p>
+      <img src={gitHubData.info.ownerAvatar} width="20" height="20" />
+      <a href={`https://github.com/${gitHubData.info.ownerUsername}`}>
+        {gitHubData.info.ownerUsername}
+      </a>
+    </p>
+    <h4>Description</h4>
+    <p>
+      {gitHubData.info.description}
+    </p>
+    <span class="tags">
+      {gitHubData.info.topics.map((topic) => (
+        <span class="tag">#{topic}</span>
+      ))}
+    </span>
+    <h4>Homepage</h4>
+    <a href={gitHubData.info.homepage}>{gitHubData.info.homepage}</a>
+    <h4>License</h4>
+    <p>{gitHubData.info.license}</p>
+    <h4>Created</h4>
+    <p title={timeAgo(gitHubData.info.createdAt)}>{formatDate(gitHubData.info.createdAt)}</p>
+    <h4>Last Updated</h4>
+    <p title={timeAgo(gitHubData.info.updatedAt)}>{formatDate(gitHubData.info.updatedAt)}</p>
+    { gitHubData.versions.length > 0 && (
+      <h4>Latest version</h4>
+      <p title={gitHubData.versions[0].commit}>
+        {gitHubData.versions[0].name}
+        <a href={gitHubData.versions[0].zipball}><FontAwesome iconName="download" /></a>
+      </p>
+    )}
+    <h4>Primary Language</h4>
+    <p>{gitHubData.info.language}</p>
+    <h4>Size</h4>
+    <p>{formatBigNumber(gitHubData.info.size)} KB</p>
+    <h4>Stars</h4>
+    <p>{formatBigNumber(gitHubData.info.scarCount)}</p>
+    <h4>Forks</h4>
+    <p>{formatBigNumber(gitHubData.info.forksCount)}</p>
+    <h4>Watchers</h4>
+    <p>{formatBigNumber(gitHubData.info.watchersCount)}</p>
+
+  </div>
+  <div class="right">
+    <h4>Language Usage</h4>
+    <img class="languages-img" width="600" src={languageChart} alt="Language Usage" />
+    <h4>Star History</h4>
+    <img class="languages-img" width="600" src={`https://api.star-history.com/svg?repos=${repo}&type=Date`} alt="Star History" />
+  </div>
+  <div class="long-list-data">
+    <div class="left list-wrap">
+      <h4>Top Contributors</h4>
+      <ul>
+        {gitHubData.contributors.map((contributor) => (
+          <li>
+            <img src={contributor.avatar} width="20" height="20" />
+            <a href={`https://github.com/${contributor.username}`}>@{contributor.username}</a> ({contributor.contributions})
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="right list-wrap">
+      <h4>Recent Commits</h4>
+      <ul>
+        {gitHubData.commits.map((commit) => (
+          <li>
+            <img src={commit.authorAvatar} width="20" height="20" />
+            <a href={`https://github.com/${commit.authorUsername}`}>{commit.authorName}</a>
+            <span class="date" title={timeAgo(commit.authorDate)}>({formatDate(commit.authorDate)})</span>
+            <p class="commit-msg">{commit.message}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .gh-info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .left, .right {
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .long-list-data {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .list-wrap {
+        .date {
+          font-size: 0.8rem;
+          opacity: 0.6;
+        }
+        .commit-msg {
+          font-size: 0.8rem;
+          opacity: 0.8;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;  
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    :global(svg) {
+      width: 1rem;
+    }
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    .tag {
+      margin: 0.1rem;
+      background: #5f53f440;
+      border-radius: var(--curve-sm);
+      padding: 0.05rem 0.2rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    list-style: circle;
+    max-height: 400px;
+    overflow: auto;
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+  .languages-img {
+    width: 100%;
+    border-radius: var(--curve-sm);
+  }
+</style>
