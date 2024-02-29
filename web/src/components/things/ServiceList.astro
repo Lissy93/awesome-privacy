@@ -8,7 +8,23 @@ import { slugify } from '@utils/fetch-data';
 
 import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
 
-const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
+interface Props {
+  services: Service[];
+  subHeading?: boolean;
+  buttonLink?: string;
+  noGitHubMetrics?: boolean;
+  sectionName: string;
+  categoryName: string;
+}
+
+const {
+  services,
+  subHeading,
+  buttonLink,
+  noGitHubMetrics,
+  sectionName,
+  categoryName,
+} = Astro.props;
 
 ---
 
@@ -36,6 +52,9 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
     <ul>
     {services.map((service: Service) => (
       <li id={slugify(service.name)}>
+        <div class="actions">
+        
+          </div>
         <div class="service-head">
           <img 
             width="40"
@@ -89,6 +108,9 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
                 </a>
               </span>
             ) }
+            <div class="view-service">
+              <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>View {service.name} Report</a>
+            </div>
           </div>
         </div>
       </li>
@@ -101,7 +123,7 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
     </p>
   )}
 
-  {buttonLink && ( <Button text="View More..." url={buttonLink} /> )}
+  {buttonLink && ( <Button className="view-all" text="View More..." url={buttonLink} /> )}
 </section>
 
 
@@ -217,7 +239,18 @@ const { services, subHeading, buttonLink, noGitHubMetrics } = Astro.props;
     }
   }
 
-section :global(.button) {
+.view-service {
+  a {
+  padding: 0.25rem 0.6rem;
+  color: var(--accent-3);
+  width: fit-content;
+  position: absolute;
+  right: 1rem;
+  transform: scale(0.8);
+  }
+}
+
+section :global(.view-all) {
   width: fit-content;
   position: absolute;
   right: 1rem;

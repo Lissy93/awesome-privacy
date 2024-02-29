@@ -13,5 +13,5 @@ export const fetchData = async (): Promise<AwesomePrivacy> => {
 }
 
 export const slugify = (title: string) => {
-  return title.toLowerCase().replace(/\s/g, '-');
+  return (title || '').toLowerCase().replace(/\s/g, '-');
 };

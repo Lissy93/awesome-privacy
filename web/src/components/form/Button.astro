@@ -1,10 +1,14 @@
 ---
 
-const { text, url } = Astro.props;
+const {
+  text,
+  url,
+  className,
+} = Astro.props;
 
 ---
 
-<div class="button">
+<div class={`button ${className || ''}`}>
   <a href={url}>{text}<slot /></a>
 </div>
 

@@ -82,7 +82,7 @@ const projects = [
 	{
 		title: 'Web-Check',
 		description: 'OSINT tool for analysing any website',
-		icon: 'https://icon.horse/icon/web-check.xyz',
+		icon: 'https://web-check.as93.net/web-check.png',
 		link: 'https://github.com/lissy93/web-check',
 	},
 	{
@@ -156,7 +156,7 @@ const description = 'Privacy is a fundamental human right; '
 <Layout title="About | Awesome Privacy" description={description}>
 	<div class="about-page">
 	<Main>
-		<h2>Objective</h2>
+		<h2 id="objective">Objective</h2>
 		<p>
 			Large data-hungry corporations dominate the digital world but with little,
 			or no respect for your privacy.
@@ -172,11 +172,11 @@ const description = 'Privacy is a fundamental human right; '
 		</p>
 		<hr />
 
-		<h2>Software Requirements</h2>
+		<h2 id="creteria">Software Requirements</h2>
 		<div class="software-requirements"><p set:html={parseMarkdown(projectRequrements)}></p></div>
 		<hr />
 
-		<h2>Contributing</h2>
+		<h2 id="contributing">Contributing</h2>
 		<p>
 			Awesome Privacy (including all data and code) is fully open source,
 			maintained by a core group of volenteers, with a lot of help from the community.
@@ -193,8 +193,8 @@ const description = 'Privacy is a fundamental human right; '
 		</p>
 		<hr />
 
-		<h2>Credits</h2>
-		<h3>Sponsors</h3>
+		<h2 id="acknowledgements">Acknowledgements</h2>
+		<h3 id="sponsors">Sponsors</h3>
 		<p>Huge thanks to the following sponsors, for their ongoing support 💖</p>
 		<div class="user-list">
 			{sponsorsResource().then((sponsors) => {
@@ -207,7 +207,7 @@ const description = 'Privacy is a fundamental human right; '
 			})}
 		</div>
 
-		<h3>Contributors</h3>
+		<h3 id="contributors">Contributors</h3>
 		<p>
 			This project exists thanks to all the people who've helped build and maintain it.<br />
 			Special thanks to the below, top-100 contributors 🌟
@@ -225,7 +225,7 @@ const description = 'Privacy is a fundamental human right; '
 
 		<hr />
 
-		<h2>Author</h2>
+		<h2 id="author">Author</h2>
 		<article class="author">
 				<p>
 					This project was originally started by
@@ -283,7 +283,7 @@ const description = 'Privacy is a fundamental human right; '
 		
 		<hr />
 
-		<h2>License</h2>
+		<h2 id="license">License</h2>
 		<p>
 			All content on Awesome Privacy is freely available, within the public domain,
 			licensed under Creative Commons Zero v1.0 Universal.
@@ -376,6 +376,8 @@ h3 {
   padding: 0.5rem;
   font-size: 0.7rem;
   font-family: mono;
+	max-width: 100vw;
+	white-space: pre-line;
 }
 
 .author {

@@ -18,6 +18,17 @@
     owner: solidIcons.faUser,
     language: solidIcons.faFileCode,
 
+    download: solidIcons.faDownload,
+    faceGood: solidIcons.faSmile,
+    faceMeh: solidIcons.faMeh,
+    faceBad: solidIcons.faFrown,
+
+    // Website Detailed Stats
+    blacklistFound: solidIcons.faDoNotEnter,
+    blacklistNotFound: solidIcons.faShieldCheck,
+    redirectFound: solidIcons.faDiamondTurnRight,
+    redirectNotFound: solidIcons.faSquareCheck,
+
     // Meta info icons
     openSource: brands.faOsi,
     closedSource: solidIcons.faHexagonExclamation,

@@ -16,6 +16,7 @@ export interface Service {
   securityAudited?: boolean;
   openSource?: boolean;
   acceptsCrypto?: boolean;
+  tosdrId?: string;
 }
 
 export interface Section {

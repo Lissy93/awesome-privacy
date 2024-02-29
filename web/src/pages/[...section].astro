@@ -119,7 +119,7 @@ const { previous, next } = makePaginationLinks();
       </section>
     )}
 
-    <ServiceList title={title} services={services} />
+    <ServiceList services={services} sectionName={title} categoryName={categoryName} />
 
     {notableMentions && (
       <section class="notable-mentions">

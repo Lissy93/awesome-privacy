@@ -23,7 +23,7 @@
     if (!cat) return '/'
     if (!sec) return `/${slugify(cat)}`
     if (!itm) return `/${slugify(cat)}/${slugify(sec)}`
-    return `/${slugify(cat)}/${slugify(sec)}#${slugify(itm)}`;
+    return `/${slugify(cat)}/${slugify(sec)}/${slugify(itm)}`;
   };
 
   const makeResultText = (cat?: string, sec?: string, itm?: string) => {

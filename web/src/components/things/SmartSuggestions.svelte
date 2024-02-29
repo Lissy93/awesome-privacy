@@ -28,7 +28,7 @@
       (category.sections || []).forEach((section) => {
         (section.services || []).forEach((service) => {
           if (fetchedServices.includes(normalize(service.name))) {
-            const path = `/${slugify(category.name)}/${slugify(section.name)}#${slugify(service.name)}`
+            const path = `/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`
             tmpResults.push({ ...service, path });
             return;
           }

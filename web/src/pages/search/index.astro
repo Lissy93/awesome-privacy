@@ -13,6 +13,7 @@ const categories = (await fetchData())?.categories;
   <section>
     <h1>Search</h1>
     <Search client:visible data={categories} />
+    <p class="sitemap-link">Or, view all pages in the <a href="/sitemap">Sitemap</a></p>
   </section>
 </Layout>
 
@@ -39,6 +40,16 @@ section {
 		font-family: "Lekton", sans-serif;
 		text-align: center;
 		margin: 1rem 0;
+  }
+  .sitemap-link {
+    opacity: 0.6;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 2rem auto;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 </style>

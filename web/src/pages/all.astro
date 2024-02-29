@@ -47,11 +47,12 @@ const toggleSidebar = () => {
                 <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
               </h3>
               <ServiceList
-                title={section.name}
                 services={section.services}
                 subHeading={true}
                 buttonLink={`/${slugify(category.name)}/${slugify(section.name)}`}
                 noGitHubMetrics={true}
+                sectionName={section.name}
+                categoryName={category.name}
               />
             </section>
           ))}

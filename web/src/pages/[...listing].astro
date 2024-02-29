@@ -1,0 +1,352 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import Button from '@components/form/Button.astro';
+import Main from '@components/scafold/MainCard.astro';
+import ServiceList from '@components/things/ServiceList.astro';
+import Comments from '@components/things/Comments.svelte';
+import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
+import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro';
+import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
+import type { AwesomePrivacy, Section, Service } from '../types/Service';
+import { fetchData, slugify } from '@utils/fetch-data';
+import { fetchGitHubStats } from '@utils/fetch-repo-info';
+import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
+import { fetchWebsiteInfo } from '@utils/fetch-website-info';
+import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+
+interface Props extends Service {
+  slug: string;
+  parentSection: Section;
+  categoryName: string;
+}
+
+const {
+  name,
+  description,
+  url,
+  github,
+  tosdrId,
+  icon,
+  followWith,
+  securityAudited,
+  openSource,
+  acceptsCrypto,
+  parentSection,
+  categoryName,
+} = Astro.props;
+
+
+/**
+ * Make a list of keywords, for the <meta keywords> tag
+ */
+const makeKeyWordTag = () => {
+  const keywords = [];
+  // keywords.push(`free and open source ${title} software`);
+  // keywords.push(`private ${title} comparison`);
+  // (alternativeTo || []).forEach((alt: string) => {
+  //   keywords.push(`privacy-respecting ${alt} alternative`);
+  //   keywords.push(`free open source ${alt} alternative`);
+  // });
+  // (services || []).forEach((serv: Service) => {
+  //   keywords.push(serv.name);
+  // });
+  // keywords.push('ad free');
+  // keywords.push('open source software');
+  // keywords.push('privacy respecting apps');
+  return keywords.join(', ');
+};
+
+/**
+ * Make a page title
+ */
+const makePageTitle = () => {
+  return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
+};
+
+/**
+ * Make a string page intro, for the description tag
+ */
+const makeDescriptionTag = () => {
+  let description = `A list of privacy respecting ${name}. `;
+  // if (services && services.length > 0) {
+  //   const serviceList = services.map((serv: Service) => serv.name);
+  //   description += `Compare ${serviceList.join(', ')} and more private apps and services. `
+  // } else {
+  //   description += `Find private apps and services. This section is still a work in progress. `;
+  // }
+  // description += 'All this, and much more at Awesome Privacy, '
+  // description += 'the free and open source list of private software alternatives.';
+  return description;
+};
+
+// Return a list of Services, except for the currtent one
+const filterServices = () => {
+  return parentSection.services.filter((service: Service) => service.name !== name);
+};
+
+export async function getStaticPaths() {
+  const pages = await fetchData().then((data) => {
+    const results: Array<Props> = [];
+    if (!data || !data.categories) return results;
+    (data as AwesomePrivacy).categories.forEach((category) => {
+      category.sections.forEach((section) => {
+        const services = (section.services || []).map((service) => {
+          return {
+            slug: `${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`,
+            parentSection: section,
+            categoryName: category.name,
+            ...service,
+          };
+        });
+        results.push(...services);
+      });
+      
+    });
+    return results;
+  });
+
+  return pages.map((props: Props) => {
+    return {params: { listing: props.slug }, props };
+  });
+}
+
+// const makePaginationLinks = () => {
+//   const index = otherSections.findIndex(section => section.name === title);
+//   const previousSection = index >  0 ? otherSections[index -  1].name : null;
+//   const nextSection = index < otherSections.length -  1 ? otherSections[index +  1].name : null;
+//   return { previous: previousSection, next: nextSection };
+// };
+
+// const { previous, next } = makePaginationLinks();
+
+
+// Fetch detailed data about the services GitHub repo, privacy policy and website
+const githubData = github ? await fetchGitHubStats(github) : null;
+const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
+const websiteData = (url && !url.includes('github.com')) ? await fetchWebsiteInfo(url) : null;
+
+---
+
+<Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
+  <main>
+    <section>
+      <div class="service-head">
+        <h2>{name}</h2>
+        <span class="url-wrap">
+          <a class="service-url" href={url}>{formatLink(url)}</a>
+          <span class="follow-with">{followWith}</span>
+        </span>
+      </div>
+      <div class="breadcrumbs">
+        <span>
+          <a href="/">Awesome Privacy</a>
+          ➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
+          ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}>{parentSection.name}</a>
+          ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}>{name}</a>
+        </span>
+      </div>     
+      <div class="intro">
+        <img 
+          width="60"
+          height="60"
+          loading="lazy"
+          decoding="async"
+          class="service-icon"
+          alt={`${name} Icon`}
+          data-service-url={formatLink(url)}
+          src={icon || `https://icon.horse/icon/${formatLink(url)}`}
+        />
+        <p class="description" set:html={parseMarkdown(description)}></p>
+      </div>
+    </section>
+    { privacyData && (
+      <section>
+        <h3>{name} Privacy Policy</h3>
+        <PrivacyPolicyDetails privacyData={privacyData} />
+      </section>
+    )}
+    { github && githubData && (
+      <section class="github-wrap">
+        <h3>{name} Source Code</h3>
+        <GitHubDetailedInfo gitHubData={githubData} repo={github} />
+      </section>
+    )}
+
+    { websiteData && (
+      <section>
+        <h3>{name} Website</h3>
+        <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
+      </section>
+    )}
+    <section>
+      <h3>{name} Reviews</h3>
+      <Comments client:visible />
+    </section>
+    <section>
+      <h3>More {parentSection.name}</h3>
+      <ServiceList
+        services={filterServices()}
+        subHeading={true}
+        noGitHubMetrics={true}
+        buttonLink={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+        categoryName={categoryName}
+        sectionName={parentSection.name}
+      />
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 1000px;
+  max-width: calc(100% - 5rem);
+  position: relative;
+}	
+
+section {
+  margin: 1rem 0 4rem 0;
+  padding: 1rem;
+  min-height: 8rem;
+  position: relative;
+  border: 2px solid var(--foreground);
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent-fg);
+
+}
+
+h3 {
+    font-size: 2rem;
+    margin: -2rem 0 1rem -2rem;
+    box-shadow: 6px 6px 0 var(--foreground);
+    background: var(--accent);
+    color: var(--accent-fg);
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+  }
+
+.service-head {
+  h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .url-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    a {
+      font-size: 1.2rem;
+    }
+    .follow-with {
+      font-style: italic;
+      opacity: 0.6;
+    }
+  }
+  
+}
+
+.breadcrumbs {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  a {
+    color: var(--foreground);
+    transition: all 0.15s ease-in-out;
+    
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.intro {
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.7; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  :global(.button) {
+    min-width: 120px;
+    width: fit-content;
+    padding: 0.25rem 1rem;
+    text-align: right;
+    &:first-child { text-align: left; }
+    p {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+    
+  }
+  .nothing {
+    width: 120px;
+  }
+  .go-to-category {
+    color: var(--foreground);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+
+
+.further-info, .notable-mentions, .word-of-warning {
+  h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  :global(p) {
+    font-size: 0.9rem;
+    opacity: 0.7; 
+    :global(strong) {
+      font-weight: 500;
+    }
+    :global(a) {
+      color: var(--foreground);
+      transition: all 0.15s ease-in-out;
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+  :global(strong) {
+    font-weight: 500;
+  }
+  :global(h4) {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0 0;
+  }
+  :global(ul) {
+    list-style: circle;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    li {
+      margin-bottom: 0.25rem;
+      :global(p) {
+        display: inline;
+      }
+    }
+  }
+}
+
+</style>
