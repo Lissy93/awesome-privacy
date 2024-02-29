@@ -1,0 +1,148 @@
+---
+import type { PrivacyPolicyResponse } from '@utils/fetch-privacy-policy';
+
+import { formatDate, timeAgo } from '@utils/dates-n-stuff';
+import FontAwesome from "@components/form/FontAwesome.svelte"
+
+
+interface Props {
+  privacyData: PrivacyPolicyResponse;
+}
+
+const { privacyData } = Astro.props;
+
+const priv = privacyData.parameters;
+
+const getIconName = (clasification: string) => {
+  if (clasification === 'good') return 'faceGood';
+  if (clasification === 'neutral') return 'faceMeh';
+  if (clasification === 'bad') return 'faceBad';
+  return '';
+}
+
+---
+
+<div class="privacy-policy-wrapper">
+  <div class="left">
+    <h4>Privacy Policy Summary</h4>
+    <ul>
+      {priv.points.map((point) => (
+        <li class={`clasification ${point.case.classification}`}>
+          <FontAwesome iconName={getIconName(point.case.classification)} />
+          {point.title}
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="right">
+    <h4>Score</h4>
+    <div class={`rating rating-${priv.rating}`}>
+      <p>{priv.rating}</p>
+    </div>
+    <h4>Documents</h4>
+    <ul>
+      {priv.documents.map((document) => (
+        <li class="list-item">
+          <a href={document.url} target="_blank">{document.name}</a>
+          <div class="date-block">
+            Created {formatDate(document.created_at)},
+            Last modified {timeAgo(document.updated_at)}
+          </div>
+        </li>
+      ))}
+    </ul>
+    <h4>Domains Covered by Policy</h4>
+    <ul>
+      {priv.urls.map((url) => (
+        <li>{url}</li>
+      ))}
+    </ul>
+    <h4>About the Data</h4>
+    <p>This data is kindly provided by <a href="https://tosdr.org/">tosdr.org</a></p>
+    <p>View the full report at: <a href={`https://tosdr.org/en/service/${priv.id}`}>tosdr.org/en/service/{priv.id}</a></p>
+  </div>
+</div>
+
+
+<style lang="scss">
+
+.privacy-policy-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  .left, .right {
+    width: calc(50% - 1rem);
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+  }
+}
+
+h4 {
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    :global(svg) {
+      width: 1rem;
+    }
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+  li {
+    :global(svg) {
+      width: 1rem;
+    }
+    &.clasification {
+      &.good :global(svg) { color: #35b969; }
+      &.neutral :global(svg) { color: #ecd40f; }
+      &.bad :global(svg) { color: #e3154f; }
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    list-style: circle;
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    img {
+      border-radius: var(--curve-sm);
+    }
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+      .date-block {
+        
+        font-size: 0.8rem;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .rating {
+    font-size: 4rem;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--curve-lg);
+    border: 4px solid;
+    margin: 0 auto;
+    font-weight: bold;
+
+    &.rating-A { --rating-color: #35b969; }
+    &.rating-B { --rating-color: #6bb935; }
+    &.rating-C { --rating-color: #c7cc22; }
+    &.rating-D { --rating-color: #e1bb23; }
+    &.rating-E { --rating-color: #df8b1e; }
+    &.rating-F { --rating-color: #df541e; }
+    &.rating-G { --rating-color: #df1e1e; }
+    color: var(--rating-color);
+    border-color: var(--rating-color);
+  }
+</style>
