@@ -27,6 +27,7 @@ categories:
         url: https://bitwarden.com
         followWith: Self-Hosted
         github: bitwarden/server
+        tosdrId: 1348
         description: |
           Fully-featured, open source password manager with cloud-sync. Bitwarden is
           easy-to-use with a clean UI and client apps for desktop, web and mobile. See
@@ -68,6 +69,7 @@ categories:
       - name: ProtonPass
         url: https://proton.me/pass
         openSource: true
+        tosdrId: 491
         description: |
           From the creators of ProtonMail, ProtonPass is a new addition to their suite of
           services. They have a full collection of user-friendly native mobile and desktop
@@ -122,6 +124,7 @@ categories:
         url: https://getaegis.app
         followWith: Android
         github: beemdevelopment/Aegis
+        tosdrId: 4076
         icon: https://raw.githubusercontent.com/beemdevelopment/Aegis/master/metadata/en-US/images/icon.png
         description: |
           Free, secure and open source authenticator app for Android. Has a backup/
@@ -142,6 +145,7 @@ categories:
         followWith: iOS
         icon: https://www.tofuauth.com/images/icon.svg
         github: iKenndac/Tofu
+        tosdrId: 5414
         description: |
           An easy-to-use, open-source two-factor authentication app designed specifically
           for iOS
@@ -224,6 +228,7 @@ categories:
         url: https://cryptomator.org
         icon: https://avatars.githubusercontent.com/u/11850518
         github: cryptomator/cryptomator
+        tosdrId: 4403
         description: |
           Open source client-side encryption for cloud files - Cryptomator is geared
           towards using alongside cloud-backup solutions, and hence preserves individual
@@ -296,6 +301,7 @@ categories:
         icon: https://librewolf.net/icon.svg
         url: https://librewolf.net
         openSource: true
+        tosdrId: 6389
         description: |
           LibreWolf is an independent fork of Firefox that aims to provide better default
           settings to improve on privacy, security and user freedom. Mozilla telemetry is
@@ -307,6 +313,7 @@ categories:
         url: https://brave.com
         icon: https://brave.com/static-assets/images/brave-logo-sans-text.svg
         github: brave/brave-browser
+        tosdrId: 1487
         description: |
           Brave Browser, currently one of the most popular private browsers - it provides
           speed, security, and privacy by blocking trackers with a clean, yet fully-featured
@@ -317,6 +324,7 @@ categories:
         url: https://www.mozilla.org/firefox
         icon: https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg
         openSource: true
+        tosdrId: 188
         description: |
           Significantly more private, and offers some nifty privacy features than Chrome,
           Internet Explorer and Safari. After installing, there are a couple of small tweaks
@@ -329,6 +337,7 @@ categories:
         url: https://www.torproject.org/
         icon: https://www.torproject.org/static/images/favicon/favicon.ico
         openSource: true
+        tosdrId: 2845
         description: |
           Tor provides an extra layer of anonymity, by encrypting each of your requests, then
           routing it through several nodes, making it near-impossible for you to be tracked by
@@ -339,6 +348,7 @@ categories:
         url: https://www.bromite.org/
         icon: https://www.bromite.org/bromite.png
         github: bromite/bromite
+        tosdrId: 9174
         description: |
           Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
           adblock and additional settings for hardening.
@@ -368,6 +378,7 @@ categories:
         url: https://duckduckgo.com
         icon: https://duckduckgo.com/favicon.png
         openSource: true
+        tosdrId: 222
         description: |
           DuckDuckGo is a very user-friendly, fast and secure search engine. It's totally
           private, with no trackers, cookies or ads. It's also highly customisable, with
@@ -377,6 +388,7 @@ categories:
       - name: Qwant
         url: https://www.qwant.com
         icon: https://avatars.githubusercontent.com/u/1692504
+        tosdrId: 527
         description: |
           French service that aggregates Bings results, with its own results. Qwant doesn't
           plant any cookies, nor have any trackers or third-party advertising. It returns
@@ -385,6 +397,7 @@ categories:
       - name: Startpage
         url: https://www.startpage.com
         icon: https://www.startpage.com/favicon.ico
+        tosdrId: 418
         openSource: false
         description: |
           Dutch search engine that searches on google and shows the results (slightly
@@ -395,6 +408,7 @@ categories:
         url: https://mojeek.com
         icon: https://www.mojeek.com/favicon.png
         openSource: false
+        tosdrId: 2432
         description: |
           British search engine providing independent and unbiased search results using
           its own crawler. Has a zero tracking policy (it is not open source)
@@ -427,6 +441,7 @@ categories:
         url: https://signal.org
         openSource: true
         github: signalapp/Signal-Server
+        tosdrId: 528
         icon: https://signal.org/assets/images/favicon/android-chrome-192x192.png
         description: |
           Probably one of the most popular, secure private messaging apps that combines
@@ -441,6 +456,7 @@ categories:
         url: https://getsession.org
         icon: https://getsession.org/favicon.ico
         openSource: true
+        tosdrId: 3015
         github: oxen-io/lokinet
         description: |
           Session is a fork of Signal, however unlike Signal it does not require a mobile
@@ -469,6 +485,7 @@ categories:
         url: https://matrix.org
         icon: https://matrix.org/assets/favicon.ico
         openSource: true
+        tosdrId: 2455
         github: matrix-org/dendrite
         description: |
           Matrix is a decentralized open network for secure communications, with E2E
@@ -526,6 +543,7 @@ categories:
       - name: Oxen
         url: https://oxen.io/
         github: oxen-io/lokinet
+        tosdrId: 6622
         icon: https://oxen.io/favicon.ico
         description: |
           Oxen (previously Loki) is an open source set of tools that allow users to transact
@@ -538,6 +556,7 @@ categories:
         url: https://briarproject.org
         icon: https://briarproject.org/img/briar_logo_circle.png
         openSource: true
+        tosdrId: 2559
         description: |
           Tor-based Android app for P2P encrypted messaging and forums. Where content is
           stored securely on your device (not in the cloud). It also allows you to connect
@@ -598,6 +617,7 @@ categories:
         icon: https://proton.me/favicons/android-chrome-192x192.png
         openSource: false
         github: ProtonMail/WebClients
+        tosdrId: 491
         description: |
           An open-source, end-to-end encrypted anonymous email service. ProtonMail has a
           modern easy-to-use and customizable UI, as well as fast, secure native mobile
@@ -610,6 +630,7 @@ categories:
       - name: Tuta
         icon: https://tuta.com/resources/favicon/logo-favicon.svg
         github: tutao/tutanota
+        tosdrId: 157
         url: https://tuta.com
         description: |
           Free and open source email service based in Germany. It has a basic intuitive UI,
@@ -632,6 +653,7 @@ categories:
         url: https://mailfence.com?src=digitald
         icon: https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png
         openSource: false
+        tosdrId: 1694
         description: |
           Mailfence supports OpenPGP so that you can manually exchange encryption keys
           independently from the Mailfence servers, putting you in full control. Mailfence
@@ -645,6 +667,7 @@ categories:
         url: https://mailbox.org
         icon: https://i.ibb.co/zJtHBTZ/mailfence.png
         openSource: false
+        tosdrId: 1517
         description: |
           A Berlin-based, eco-friendly secure mail provider. There is no free plan, the
           standard service costs €12/year. You can use your own domain, with the option of
@@ -687,6 +710,7 @@ categories:
         url: https://www.thunderbird.net
         icon: https://www.thunderbird.net/media/img/thunderbird/ios-icon-180.png
         openSource: true
+        tosdrId: 3365
         description: |
           Free and open source email application developed and backed by Mozilla -it's secure,
           private easy and customizable. As of V 78.2.1 encryption is built in, and the
@@ -697,6 +721,7 @@ categories:
       - name: eM Client
         url: https://www.emclient.com
         icon: https://www.emclient.com/favicon.ico
+        tosdrId: 432
         description: |
           Productivity-based email client, for Windows and MacOS. eM Client has a clean user
           interface, snappy performance and good compatibility. There is a paid version, with
@@ -737,6 +762,7 @@ categories:
         url: https://k9mail.app
         icon: https://k9mail.app/assets/img/k9-logo.svg
         github: thunderbird/thunderbird-android
+        tosdrId: 3624
         description: |
           K-9 (or Thunderbird for Android) is open source,
           very well supported and trusted - k9 has been around for nearly
@@ -765,6 +791,7 @@ categories:
         url: https://addy.io
         icon: https://addy.io/apple-touch-icon.png
         github: anonaddy/anonaddy
+        tosdrId: 2220
         description: |
           An open source anonymous email forwarding service, allowing you to create unlimited
           email aliases. Has a free plan.
@@ -773,6 +800,7 @@ categories:
         url: http://33mail.com
         icon: https://33mail.com/favicon.ico
         openSource: false
+        tosdrId: 8301
         description: |
           A long-standing aliasing service. As well as receiving, 33Mail also lets you reply
           to forwarded addresses anonymously. Free plan, as well as Premium plan ($1/ month)
@@ -782,6 +810,7 @@ categories:
         url: https://simplelogin.io
         openSource: true
         icon: https://simplelogin.io/favicon.ico
+        tosdrId: 2552
         description: |
           Fully open source (view on [GitHub](https://github.com/simple-login)) alias service
           with many additional features. Can be self-hosted, or the managed version has a free
@@ -792,6 +821,7 @@ categories:
         icon: https://relay.firefox.com/favicon.svg
         openSource: true
         github: mozilla/fx-private-relay
+        tosdrId: 4158
         description: |
           Developed and managed by Mozilla, Relay is a Firefox addon, that lets you make an
           email alias with 1 click, and have all messages forwarded onto your personal email.
@@ -812,7 +842,7 @@ categories:
         followWith: Professional plan or higher
         url: https://protonmail.com/pricing
         icon: https://proton.me/favicons/android-chrome-192x192.png
-        tosdrId: '491'
+        tosdrId: 491
         openSource: true
         description: |
           If you already have ProtonMail's Professional (€8/month) or Visionary (€30/month) package,
@@ -837,6 +867,7 @@ categories:
         url: https://www.emailprivacytester.com/
         openSource: true
         github: mikecardwell/email-privacy-tester
+        tosdrId: 9837
         description: |
           Quick tool, that enables you to test whether your mail client "reads" your emails
           before you've opened them, and also checks what analytics, read-receipts or other
@@ -868,6 +899,7 @@ categories:
       - name: Mumble
         url: https://www.mumble.info/
         github: mumble-voip/mumble
+        tosdrId: 3640
         icon: https://www.mumble.info/css/apple-touch-icon.png
         description: |
           Open source, low-latency, high quality voice chat software. You can host your
@@ -953,6 +985,7 @@ categories:
       - name: Rocket.Chat
         url: https://rocket.chat
         github: RocketChat/Rocket.Chat
+        tosdrId: 6533
         icon: https://play-lh.googleusercontent.com/wGn6UxVJUVWBOEAR_864Y_TG42iCsr8Ls3xmLoT4oOimSo6lk2_2gfBATqNDNmArKzQ
         openSource: true
         description: |
@@ -980,6 +1013,7 @@ categories:
       - name: Element
         url: https://element.io/
         github: element-hq/element-web
+        tosdrId: 2498
         icon: https://element.io/images/favicon.png
         description: |
           Privacy-focused messenger using the Matrix protocol. The Element client allows
@@ -1001,6 +1035,7 @@ categories:
       - name: Mattermost
         url: https://mattermost.org/
         github: mattermost/mattermost
+        tosdrId: 2994
         icon: https://avatars.githubusercontent.com/u/9828093
         description: |
           Mattermost has an open source edition, which can be self-hosted. It makes a good
@@ -1032,6 +1067,7 @@ categories:
         url: https://privacybadger.org/
         icon: https://i.ibb.co/8Y1ds5X/privacy-badger.png
         github: EFForg/privacybadger
+        tosdrId: 682
         openSource: true
         description: |
           Blocks invisible trackers, in order to stop advertisers and other third-parties
@@ -1041,6 +1077,7 @@ categories:
 
       - name: uBlock Origin
         url: https://ublockorigin.com
+        tosdrId: 682
         github: gorhill/uBlock
         icon: https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg
         description: |
@@ -1092,6 +1129,7 @@ categories:
         url: https://gitlab.com/KevinRoebert/ClearUrls
         icon: https://addons.mozilla.org/user-media/addon_icons/839/839767-64.png
         openSource: true
+        tosdrId: 7192
         github: ClearURLs/Addon
         description: |
           This extension will automatically remove tracking elements from the GET parameters of URLs to
@@ -1149,6 +1187,7 @@ categories:
         url: https://duckduckgo.com/app
         github: duckduckgo/duckduckgo-privacy-extension
         openSource: true
+        tosdrId: 222
         icon: https://avatars.githubusercontent.com/u/342708
         description: |
           Simple extension by DuckDuckGo, which grades the security of each site. **Download**:
@@ -1203,6 +1242,7 @@ categories:
       - name: PrivacySpy
         url: https://privacyspy.org
         github: politiwatch/privacyspy
+        tosdrId: 4346
         icon: https://privacyspy.org/static/img/favicon-32x32.png
         description: |
           The companion extension for PrivacySpy.org - an open project that rates, annotates, and archives privacy policies.
@@ -1243,6 +1283,7 @@ categories:
       - name: Flagfox
         url: https://flagfox.wordpress.com/
         icon: https://flagfox.files.wordpress.com/2014/02/flagfoxlogowithname1.png
+        tosdrId: 6150
         description: |
           Displays a country flag depicting the location of the current website's server, which can be useful to know at a glance.
           Click icon for more tools such as site safety checks, whois, validation etc **Download**:
@@ -1271,6 +1312,7 @@ categories:
       - name: AmIUnique Timeline
         url: https://amiunique.org/timeline
         icon: https://amiunique.org/favicon.ico
+        tosdrId: 4202
         description: >
           Enables you to better understand the evolution of browser fingerprints (which is what
           websites use to uniquely identify and track you). **Download**: [Chrome](https://chrome.google.com/webstore/detail/amiunique/pigjfndpomdldkmoaiiigpbncemhjeca)
@@ -1292,6 +1334,7 @@ categories:
       - name: HTTPS Everywhere
         url: https://eff.org/https-everywhere
         github: EFForg/https-everywhere
+        tosdrId: 682
         description: |
           **NOTE** On modern browsers, this is [no longer needed](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere)
           Forces sites to load in HTTPS, in order to encrypt your communications with websites,
@@ -1355,6 +1398,7 @@ categories:
       - name: Exodus
         url: https://exodus-privacy.eu.org/en/page/what/#android-app
         icon: https://exodus-privacy.eu.org/media/logo/exodus.png
+        tosdrId: 3843
         description: |
           Shows which trackers, each of your installed apps is using, so that you can better
           understand how your data is being collected. Uses data from the Exodus database of scanned APKs.
@@ -1391,6 +1435,7 @@ categories:
         url: https://guardianproject.github.io/haven/
         icon: https://play-lh.googleusercontent.com/PdE-P3oTwa6fFKqQrSuYS1S7Aa_bIq-GECLhj8kvTzXdSc6S_hUtW2hUx0aCP-3h0pQ=w240-h480
         github: guardianproject/haven
+        tosdrId: 682
         description: |
           Allows you to protect yourself, your personal space and your possessions - without
           compromising on security. Leveraging device sensors to monitor nearby space, Haven was
@@ -1408,6 +1453,7 @@ categories:
         url: https://cryptomator.org/android/
         icon: https://avatars.githubusercontent.com/u/11850518?s=200&v=4
         github: cryptomator/android
+        tosdrId: 4403
         description: |
           Encrypts files and folders client-side, before uploading them to cloud storage (such as Google
           Drive, One Drive or Dropbox), meaning none of your personal documents leave your device in plain text.
@@ -1415,6 +1461,7 @@ categories:
       - name: 1.1.1.1
         url: https://1.1.1.1/
         icon: https://1.1.1.1/favicon.ico
+        tosdrId: 893
         description: |
           Lets you use CloudFlares fast and secure 1.1.1.1 DNS, with DNS over HTTPS, and also has the option
           to enable CloudFlares WARP+ VPN.
@@ -1438,6 +1485,7 @@ categories:
         url: https://blokada.org/
         icon: https://blokada.org/favicon.png
         github: blokadaorg/blokada
+        tosdrId: 8557
         description: |
           This application blocks ads and trackers, doesn't require root and works for all the apps on your
           Android phone. Check out how it works here.
@@ -1510,6 +1558,7 @@ categories:
       - name: RethinkDNS + Firewall
         url: https://rethinkdns.com/app
         github: celzero/rethink-app
+        tosdrId: 4691
         icon: https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png
         description: |
           An open-source ad-blocker and firewall app for Android 6+ (does not require root).
@@ -1517,6 +1566,7 @@ categories:
       - name: F-Droid
         url: https://f-droid.org/
         openSource: true
+        tosdrId: 2182
         icon: https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png
         description: |
           F-Droid is an installable catalogue of FOSS applications for Android. The client enables you
@@ -1556,6 +1606,7 @@ categories:
         - name: Have i been pwned
           url: https://haveibeenpwned.com
           icon: https://haveibeenpwned.com/favicon.ico
+          tosdrId: 3435
           description: |
             Checks if your credentials (Email address or Password) have been compromised in a data breach.
             See also Firefox Monitor.
@@ -1564,6 +1615,7 @@ categories:
           url: https://reports.exodus-privacy.eu.org
           icon: https://i.ibb.co/Vvq8XrM/Exodus.png
           github: Exodus-Privacy/website
+          tosdrId: 3843
           description: |
             Checks how many, and which trackers any Android app has. Useful to understand how data is being
             collected before you install a certain APK, it also shows which permissions the app asks for.
@@ -1571,6 +1623,7 @@ categories:
         - name: Am I Unique?
           url: https://amiunique.org/fingerprint
           icon: https://amiunique.org/favicon.ico
+          tosdrId: 4202
           description: |
             Show how identifiable you are on the Internet by generating a fingerprint based on device information.
             This is how many websites track you (even without cookies enabled), so the aim is to not be unique.
@@ -1595,6 +1648,7 @@ categories:
         - name: Browser Leak Test
           url: https://browserleaks.com
           icon: https://browserleaks.com/favicon.ico
+          tosdrId: 7967
           description: |
             Shows which of personal identity data is being leaked through your browser, so you can better protect yourself
             against fingerprinting.
@@ -1602,6 +1656,7 @@ categories:
         - name: IP Leak Test
           url: https://ipleak.net
           icon: https://ipleak.net/favicon.ico
+          tosdrId: 7968
           description: |
             Shows your IP address, and other associated details (location, ISP, WebRTC check, DNS, and lots more).
 
@@ -1628,6 +1683,7 @@ categories:
         - name: Virus Total
           url: https://www.virustotal.com
           icon: https://www.virustotal.com/gui/images/manifest/icon-192x192.png
+          tosdrId: 1886
           description: |
             Analyses a potentially-suspicious web resources (by URL, IP, domain or file hash) to detect types of malware
             (*note: files are scanned publicly*).
@@ -1655,6 +1711,7 @@ categories:
         - name: 10 Minute Mail
           url: https://10minemail.com/
           icon: https://10minemail.com/favicon.ico
+          tosdrId: 838
           description: |
             Generates temporary disposable email address, to avoid giving your real details.
 
@@ -1697,6 +1754,7 @@ categories:
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
+        tosdrId: 641
         description: |
           Mullvad is one of the best for privacy, they have a totally anonymous sign up process,
           you don't need to provide any details at all, you can choose to pay anonymously too
@@ -1705,6 +1763,7 @@ categories:
       - name: Azire
         url: https://www.azirevpn.com/
         icon: https://www.azirevpn.com/assets/img/apple-icon-57x57.png
+        tosdrId: 6639
         openSource: false
         description: |
           Azire is a Swedish VPN provider, who owns their own hardware with physically removed
@@ -1717,6 +1776,7 @@ categories:
         github: ivpn/desktop-app
         openSource: true
         securityAudited: true
+        tosdrId: 2748
         icon: https://avatars.githubusercontent.com/u/38857113
         description: |
           Independently Security Audited VPN with anonymous signup, no logs, no cloud or customer
@@ -1728,6 +1788,7 @@ categories:
         icon: https://protonvpn.com/favicons/apple-touch-icon.png
         github: ProtonVPN/android-app
         securityAudited: true
+        tosdrId: 1745
         description: |
           From the creators of ProtonMail, ProtonVPN has a solid reputation. They have a full suite
           of user-friendly native mobile and desktop apps. ProtonVPN is one of the few "trustworthy"
@@ -1736,6 +1797,7 @@ categories:
       - name: OVPN
         url: https://www.ovpn.com
         icon: https://www.ovpn.com/favicon.ico
+        tosdrId: 2981
         securityAudited: false
         description: |
           A court-proven VPN service with support for Wireguard and OpenVPN support, and optional
@@ -1788,6 +1850,7 @@ categories:
       - name: Pi-Hole
         url: https://pi-hole.net
         github: pi-hole/pi-hole
+        tosdrId: 9079
         icon: https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/cropped-Vortex-R-192x192.png
         description: |
           Network-level advertisement and Internet tracker blocking application which acts as a DNS
@@ -1835,6 +1898,7 @@ categories:
         url: https://www.pfsense.org
         icon: https://www.pfsense.org/img/apple-touch-icon.png
         github: pfsense/pfsense
+        tosdrId: 6291
         description: |
           Widely used, open source firewall/router.
 
@@ -1862,6 +1926,7 @@ categories:
         url: https://www.torproject.org
         icon: https://www.torproject.org/static/images/favicon/favicon.ico
         github: torproject/tor
+        tosdrId: 2845
         description: |
           Tor provides robust anonymity, allowing you to defend against surveillance, circumvent
           censorship and reduce tracking. It blocks trackers, resists fingerprinting and implements
@@ -1974,6 +2039,7 @@ categories:
         url: https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1
         icon: https://developers.cloudflare.com/assets/icon-512x512-fe4c8fe4.png
         securityAudited: true
+        tosdrId: 893
         description: |
           One of the most performant options, Cloudflare's DNS supports DoH and DoT, and has a Tor
           implementation, providing world-class protection. They have native cross-platform apps,
@@ -1982,6 +2048,7 @@ categories:
       - name: AdGuard
         url: https://adguard.com/en/adguard-dns/overview.html
         icon: https://cdn.adguard.info/website/adguard-dns.io/favicon.svg
+        tosdrId: 2776
         description: |
           Open-source DNS provider, specialising in the blocking of ads, trackers and malicious domains.
           They have been independently audited and do not keep logs.
@@ -1989,6 +2056,7 @@ categories:
       - name: NextDNS
         url: https://nextdns.io
         icon: https://nextdns.io/favicon.ico
+        tosdrId: 1959
         description: |
           An ad-blocking, privacy-protecting, censorship-bypassing DNS. Also comes with analytics, and
           the ability to shield kids from adult content.
@@ -2058,6 +2126,7 @@ categories:
         url: https://nlnetlabs.nl/projects/unbound
         icon: https://nlnetlabs.nl/extra/favicons/favicon-196x196.png
         github: NLnetLabs/unbound
+        tosdrId: 2519
         followWith: Desktop [Linux, Mac, OpenWrt & Windows]
         description: |
           Validating, recursive, caching DNS resolve with support for DNS-over-TLS. Designed to be fast,
@@ -2079,6 +2148,7 @@ categories:
         github: celzero/rethink-app
         icon: https://rethinkdns.com/ico/app_icon.svg
         followWith: Android
+        tosdrId: 4691
         description: |
           Free and open source DNS changer with support for DNS-over-HTTPS, DNS-over-Tor, and DNSCrypt v3
           with Anonymized Relays. (Note, since this uses Android's VPN API, it is not possible to run a
@@ -2149,6 +2219,7 @@ categories:
         followWith: Android
         github: celzero/rethink-app
         icon: https://rethinkdns.com/ico/app_icon.svg
+        tosdrId: 4691
         description: |
           An open-source ad-blocker and firewall app for Android 6+ (does not require root).
 
@@ -2173,6 +2244,7 @@ categories:
         github: objective-see/LuLu
         icon: https://objective-see.org/images/LL/icon.png
         url: https://objective-see.com/products/lulu.html
+        tosdrId: 3069
         description: |
           Free, open source macOS firewall. It aims to block unknown outgoing connections, unless explicitly approved by the user.
 
@@ -2180,6 +2252,7 @@ categories:
         followWith: MacOS
         url: https://obdev.at/products/littlesnitch/index.html
         icon: https://obdev.at/Images/product-icons/littlesnitch_340.png
+        tosdrId: 4121
         openSource: false
         description: |
           A very polished application firewall, allowing you to easily manage internet connections on a per-app basis.
@@ -2316,6 +2389,7 @@ categories:
         url: https://blokada.org/
         github: blokadaorg/blokada
         followWith: Android/ iOS
+        tosdrId: 8557
         description: |
           Open source mobile ad-blocker that acts like a firewall. Since it's device-wide, once connected all apps will
           have ads/ trackers blocked, and the blacklist can be edited. The app is free, but there is a premium option,
@@ -2325,6 +2399,7 @@ categories:
         url: https://rethinkdns.com/app
         github: celzero/rethink-app
         followWith: Android
+        tosdrId: 4691
         icon: https://rethinkdns.com/ico/app_icon.svg
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
@@ -2420,6 +2495,7 @@ categories:
           url: https://openwrt.org
           icon: https://openwrt.org/_media/favicon.ico
           github: openwrt/openwrt
+          tosdrId: 1603
           description: |
             Plenty of scope for customization and a ton of supported addons. Stateful firewall, NAT, and dynamically-configured
             port forwarding protocols (UPnP, NAT-PMP + upnpd, etc), Load balancing, IP tunneling, IPv4 & IPv6 support.
@@ -2463,6 +2539,7 @@ categories:
         icon: https://ooni.org/images/favicon.png
         github: ooni/probe
         followWith: Android, iOS, Linux
+        tosdrId: 6241
         description: |
           Open Observatory of Network Interference - A free tool and global observation network, for detecting censorship,
           surveillance and traffic manipulation on the internet. Developed by The Tor Project, and available for Android,
@@ -2563,6 +2640,7 @@ categories:
         url: https://njal.la
         icon: https://njal.la/favicon.ico
         acceptsCrypto: true
+        tosdrId: 3688
         description: |
           Njalla is a privacy and security-focused domain registrar and VPN hosting provider. They own and manage all their
           own servers, which are based in Sweden. They accept crypto, for anonymous payments, and allow you to sign up with
@@ -2579,6 +2657,7 @@ categories:
       - name: Servers Guru
         url: https://servers.guru
         acceptsCrypto: true
+        tosdrId: 8079
         description: |
           Servers Guru provides affordable and anonymous VPS and cloud servers with dedicated cpu resources. They accept
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
@@ -2608,6 +2687,7 @@ categories:
         url: https://njal.la
         icon: https://njal.la/favicon.ico
         acceptsCrypto: true
+        tosdrId: 3688
         description: |
           Privacy-aware domain service with anonymous sign-up and accepts cryptocurrency.
 
@@ -2679,6 +2759,7 @@ categories:
         openSource: true
         securityAudited: true
         icon: https://standardnotes.com/favicon.ico
+        tosdrId: 2116
         description: |
           S.Notes is a free, open-source, and completely encrypted private notes app. It has a simple UI,
           yet packs in a lot of features, thanks to the Extensions Store, allowing for: To-Do lists, Spreadsheets,
@@ -2714,6 +2795,7 @@ categories:
         followWith: Windows, MacOS, Linux, Android, iOS
         icon: https://joplinapp.org/images/favicon.png
         securityAudited: true
+        tosdrId: 9477
         description: |
           Cross-platform desktop and mobile note-taking and todo app. Easy organisation into notebooks and
           sections, revision history and a simple UI. Allows for easy import and export of notes to or from
@@ -2739,6 +2821,7 @@ categories:
         icon: https://obsidian.md/favicon.svg
         openSource: false
         securityAudited: true
+        tosdrId: 3870
         description: |
           A powerful knowledge base that works on top of local plain-text Markdown files. It has a strong
           community, and a lot of plugins and themes. Generally privacy-respecting, but no
@@ -2758,6 +2841,7 @@ categories:
         openSource: false
         github: cryptee/web-client
         securityAudited: false
+        tosdrId: 5047
         followWith: Web, Windows, Mac OS, Linux, Android, iOS
         icon: https://raw.githubusercontent.com/cryptee/web-client/v3/source/assets/logo-b.svg
         description: |
@@ -2800,6 +2884,7 @@ categories:
         followWith: Windows, Mac, Linux, Android, iOS, Outlook, CLI
         github: haiwen/seafile
         icon: https://www.seafile.com/media/img/favicon.png?t=3
+        tosdrId: 4322
         description: |
           An open source cloud storage and sync solution. Files are grouped into Libraries, which can be individually encrypted,
           shared of synced. Docker image available for easy deployment, and native clients for Windows, Mac, Linux, Android and iOS.
@@ -2817,6 +2902,7 @@ categories:
         url: https://nextcloud.com
         icon: https://nextcloud.com/c/uploads/2022/03/favicon.png
         followWith: Web, Windows, Mac, Linux, Android, iOS
+        tosdrId: 707
         description: |
           Feature-rich productivity platform, that can be used to backup and selectively sync encrypted files and folders between
           1 or more clients. A key benefit the wide range of plug-ins in the NextCloud App Store, maintained by the community.
@@ -2850,6 +2936,7 @@ categories:
         github: xwiki-labs/cryptpad
         icon: https://cryptpad.fr/customize/CryptPad_logo.svg
         followWith: Web
+        tosdrId: 2584
         description: |
           A zero knowledge cloud productivity suite. Provides Rich Text, Presentations, Spreadsheets, Kanban, Paint a code
           editor and file drive. All notes and user content, are encrypted by default, and can only be accessed with specific
@@ -2861,6 +2948,7 @@ categories:
         icon: https://nextcloud.com/c/uploads/2022/03/favicon.png
         followWith: Web, Windows, Mac OS, Linux, Android, iOS
         github: nextcloud/server
+        tosdrId: 707
         description: |
           A complete self-hosted productivity platform, with a strong community and growing app store. NextCloud is similar to
           (but arguably more complete than) Google Drive, Office 365 and Dropbox. Clear UI and stable native apps across all
@@ -2871,6 +2959,7 @@ categories:
         url: https://disroot.org
         icon: https://disroot.org/user/themes/disroot/images/favicon.png
         followWith: Web
+        tosdrId: 1826
         description: |
           A platform providing online services based on principles of freedom, privacy, federation and decentralization. It is
           an implementation of NextCloud, with strong encryption configured - it is widely used by journalists, activists and
@@ -2900,6 +2989,7 @@ categories:
         icon: https://skiff.com/favicon.ico
         github: skiff-org/skiff-apps
         followWith: Web, iOS, Android
+        tosdrId: 8470
         description: |
           Skiff Pages is an end-to-end encrypted, privacy-first collaborative document, note-taking, and wiki product. Skiff
           Pages has a modern, easy-to-use UI and supports rich text documents with embedded content. Skiff also supports end-to-end
@@ -2923,18 +3013,21 @@ categories:
       services:
       - name: Tresorit
         url: https://tresorit.com
+        tosdrId: 1696
         description: |
           End-to-end encrypted zero knowledge file storage, syncing and sharing provider, based in Switzerland.
           The app is cross-platform, user-friendly client and with all expected features. £6.49/month for 500 GB.
 
       - name: IceDrive
         url: https://icedrive.net
+        tosdrId: 3118
         description: |
           Very affordable encrypted storage provider, with cross-platform apps. Starts as £1.50/month for 150 GB
           or £3.33/month for 1 TB.
 
       - name: Sync.com
         url: https://www.sync.com
+        tosdrId: 698
         description: |
           Secure file sync, sharing, collaboration and backup for individuals, small businesses and sole practitioners.
           Starts at $8/month for 2 TB.
@@ -2955,6 +3048,7 @@ categories:
       - name: Internxt
         url: https://internxt.com/
         icon: https://internxt.com/favicon.ico
+        tosdrId: 4176
         description: |
           Store your files in total privacy. Internxt Drive is a zero-knowledge cloud storage service based on best-in-class
           privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB FREE and Paid plans starting from
@@ -2962,6 +3056,7 @@ categories:
 
       - name: FileN
         url: https://filen.io/
+        tosdrId: 6820
         description: |
           Zero knowledge end-to-end encrypted affordable cloud storage made in Germany. Open-source mobile and desktop apps.
           10GB FREE with paid plans starting at €0.92/month for 100GB.
@@ -3040,6 +3135,7 @@ categories:
       - name: Unmark
         url: https://unmark.it
         github: cdevroe/unmark
+        tosdrId: 9301
         description: |
           A web application which acts as a todo app for bookmarks. You can either self-host it, or use their managed
           service which has a free and paid-for tier.
@@ -3109,6 +3205,7 @@ categories:
         github: jitsi/jitsi-meet
         icon: https://jitsi.org/wp-content/uploads/2020/04/Jitsi-favicon-196-50x50.png
         followWith: Web, Windows, MacOS, Linux, Android, iOS
+        tosdrId: 2201
         description: |
           Encrypted, free and open source video calling app, which does not require creating an account/ providing any personal
           details. Available as a web app, and native app for Windows, MacOS, Linux, Android and iOS. You can use the public
@@ -3160,6 +3257,7 @@ categories:
         github: utmapp/UTM
         icon: https://mac.getutm.app/images/logo.png
         followWith: Mac
+        tosdrId: 8038
         description: |
           Open source, feature rich, powerful type 2 hypervisor for Mac, can emulate x86-64 OSes on Apple Silicon Macs.
           There's also an [iOS](https://getutm.app/) version (so you can run Windows on your iPhone!)
@@ -3211,6 +3309,7 @@ categories:
         icon: https://www.gpg4win.org/favicon.png
         github: gpg/gpg4win
         followWith: Windows
+        tosdrId: 8276
         description: |
           Kleopatra ported to Windows.
 
@@ -3229,6 +3328,7 @@ categories:
         securityAudited: true
         github: open-keychain/open-keychain
         followWith: Android
+        tosdrId: 7378
         description: |
           Android app for managing keys, and encrypting messages.
           Works both stand-alone, and as integrated into other apps, including k9-Mail.
@@ -3267,6 +3367,7 @@ categories:
         followWith: Email
         securityAudited: true
         github: mailvelope/mailvelope
+        tosdrId: 6210
         description: |
           Mailvelope is an addon for email applications, that makes using PGP very easy for beginners. You can use the hosted
           version for free, or opt to host your own instance.
@@ -3468,6 +3569,7 @@ categories:
         url: https://calyxos.org
         icon: https://calyxos.org/assets/images/favicon/apple-touch-icon.png
         github: CalyxOS/calyxos
+        tosdrId: 2558
         description: |
           CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users. 
           Plus, proactive security recommendations and automatic updates take the guesswork out of keeping your personal data personal. Also currently 
@@ -3477,6 +3579,7 @@ categories:
         url: https://divestos.org
         icon: https://divestos.org/images/favicon.png
         github: Divested-Mobile/DivestOS-Build
+        tosdrId: 2550
         description: |
           DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of 
           discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. Project is developed and maintained 
@@ -3486,6 +3589,7 @@ categories:
         url: https://www.lineageos.org
         icon: https://www.lineageos.org/images/logo.png
         github: LineageOS/android
+        tosdrId: 7188
         description: |
           A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained, 
           supports a wide range of devices, and comes bundled with Privacy Guard.
@@ -3533,6 +3637,7 @@ categories:
       - name: Qubes OS
         url: https://www.qubes-os.org/
         followWith: containerized apps
+        tosdrId: 2258
         description: |
           Open-source security-oriented operating system for single-user desktop computing. It uses virtualisation,
           to run each application in its own compartment to avoid data being leaked. It features Split GPG, U2F Proxy,
@@ -3560,6 +3665,7 @@ categories:
       - name: Parrot
         url: https://parrotlinux.org/
         followWith: security
+        tosdrId: 8267
         description: |
           Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
           It is fully-featured yet light-weight, very open. There are 3 editions: General Purpose, Security and Forensic.
@@ -3780,6 +3886,7 @@ categories:
 
       - name: NetLimiter
         url: https://www.netlimiter.com
+        tosdrId: 9043
         description: |
           Internet traffic control and monitoring tool.
 
@@ -3875,6 +3982,7 @@ categories:
         url: https://objective-see.com/products/lulu.html
         icon: https://objective-see.org/images/logoApple.ico
         github: objective-see/LuLu
+        tosdrId: 3069
         description: |
           Free, open source macOS firewall. It aims to block unknown outgoing connections, unless explicitly approved by the user.
 
@@ -3911,6 +4019,7 @@ categories:
       - name: VirusTotal
         url: https://www.virustotal.com
         icon: https://www.virustotal.com/gui/images/manifest/icon-192x192.png
+        tosdrId: 1886
         description: |
           Web-based malware scanner, that inspects files and URLs with over 70 antivirus scanners, URL/domain services, and other tools to extract signals and determine the legitimacy.
 
@@ -3940,17 +4049,20 @@ categories:
       - name: SourceHut
         url: https://sourcehut.org
         icon: https://sr.ht/static/logo.svg
+        tosdrId: 1607
         description: |
           Git and mercurial code hosting, task management, mailing lists, wiki hosting and Alpine-based build pipelines. Can be self-hosted, or used through the managed instance at sr.ht.
 
       - name: Codeberg
         url: https://codeberg.org
         icon: https://codeberg.org/assets/img/favicon.svg
+        tosdrId: 3370
         description: |
           A fully-managed instance of Forgejo.
 
       - name: GitLab
         url: https://gitlab.com
+        tosdrId: 514
         description: |
           Fully-featured git, CI and project management platform. Managed instance available, but can also be self-hosted.
 
@@ -3987,6 +4099,7 @@ categories:
         human voice interface while also protecting your privacy and security
       services:
       - name: Mycroft
+        tosdrId: 1824
         description: |
           An open source privacy-respecting AI platform, compatible with a wide range of
           devices including Raspberry Pi, desktop computers, or dedicated Mycroft hardware.
@@ -4038,12 +4151,14 @@ categories:
       - name: Monero
         url: https://www.getmonero.org
         github: monero-project/monero
+        tosdrId: 8279
         description: |
           One of the most private cryptocurrencies, since no meta data is available (not even the transaction amount). It uses complex on-chain cryptographic methods such as Ring signatures, RingCT, Kovri, and Stealth addresses all of which help protect the privacy of users.
 
       - name: ZCash
         url: https://z.cash
         github: zcash/zcash
+        tosdrId: 8258
         description: |
           Uses zero-knowledge proofs to protect privacy cryptographic technique, that allows two users to transact without ever revealing their true identity or address. The Zcash blockchain uses two types of addresses and transactions, Z transactions and addresses are private and T transactions and addresses are transparent like Bitcoin.
       furtherInfo: |
@@ -4110,6 +4225,7 @@ categories:
           Long-standing Python-based Bitcoin wallet with good security features. Private keys are encrypted and do not touch the internet and balance is checked with a watch-only wallet. Compatible with other wallets, so there is no tie-in, and funds can be recovered with your secret seed. It supports proof-checking to verify transactions using SPV, multi-sig, and add-ons for compatibility with hardware wallets. A decentralized server indexes ledger transactions, meaning it's fast and doesn't require much disk space. The potential security issue here would not be with the wallet, but rather your PC - you must ensure your computer is secure and your wallet has a long, strong passphrase to encrypt it with.
         followWith: Bitcoin
         github: spesmilo/electrum
+        tosdrId: 2761
 
       - name: Samourai Wallet
         url: https://samouraiwallet.com/
@@ -4171,6 +4287,7 @@ categories:
 
       - name: LocalBitcoins
         url: https://localbitcoins.com/
+        tosdrId: 3645
         description: |
           Person-to-person exchange, find people local to your area, and trade
           directly with them, to avoid going through any central organization.
@@ -4219,6 +4336,7 @@ categories:
       services:
       - name: Privacy.com
         url: https://privacy.com
+        tosdrId: 3262
         description: |
           Privacy.com has a good reputation, and is the largest virtual card provider
           in the US. Unlike other providers, it is free for personal use (up to 12 cards
@@ -4227,6 +4345,7 @@ categories:
 
       - name: Revolut Premium
         url: https://revolut.ngih.net
+        tosdrId: 2310
         description: |
           Revolut is more of a digital bank account, and identity checks are required
           to sign up. Virtual cards are only available on Premium/ Metal accounts, which
@@ -4234,6 +4353,7 @@ categories:
 
       - name: MySudo
         url: https://mysudo.com
+        tosdrId: 1351
         description: |
           Much more than just virtual cards, MySudo is a platform for creating
           compartmentalised identities, each with their own virtual cards, virtual phone
@@ -4353,6 +4473,7 @@ categories:
           discussion forum, or long-form chat room.
         url: https://www.discourse.org
         github: discourse/discourse
+        tosdrId: 1340
 
       - name: Mastodon
         description: |
@@ -4360,6 +4481,7 @@ categories:
           without algorithmic timeline manipulations. It operates across independent servers.
         url: https://mastodon.social
         github: mastodon/mastodon
+        tosdrId: 639
 
       - name: Minds
         description: |
@@ -4391,12 +4513,14 @@ categories:
           load during video streaming. Supports self-hosting or joining existing instances,
           enabling video viewing from any PeerTube server.
         url: https://joinpeertube.org
+        tosdrId: 1596
 
       - name: DTube
         description: |
           A decentralized, ad-free video platform emphasizing minimal moderation. It rewards
           users with cryptocurrency, leveraging blockchain technology.
         url: https://d.tube
+        tosdrId: 2798
 
       - name: BitChute
         description: |
@@ -4404,6 +4528,7 @@ categories:
           uploaders to evade the content restrictions found on other sites like YouTube.
         url: https://www.bitchute.com
         icon: https://www.bitchute.com/static/1.1.10/images/favicon-16x16.png
+        tosdrId: 513
 
       wordOfWarning: |
         Without moderation, some of these platforms accommodate video creators
@@ -4501,6 +4626,7 @@ categories:
           modern interface. Beyond RSS, it integrates with various news outlets, ensuring a tailored
           news feed without manipulated content. Parts of the service are open source.
         url: https://feedly.com
+        tosdrId: 405
 
     - name: Proxy Sites
       intro: |
@@ -4525,6 +4651,7 @@ categories:
           JavaScript. Supports import/export of subscriptions and feed customization.
         url: https://invidious.io
         followWith: YouTube
+        tosdrId: 1471
 
       - name: Libreddit
         description: |
@@ -4544,12 +4671,14 @@ categories:
       - name: NewPipe
         url: https://newpipe.schabi.org
         description: An open source, privacy-respecting YouTube client for Android.
+        # tosdrId: 2568
       - name: FreeTube 
         url: https://freetubeapp.io
         description: |
           An open source YouTube client for Windows, MacOS and Linux, providing
           a more private experience, with a native-feel desktop app.
           It is built upon the [Invidious](https://invidious.io/) API.
+        # tosdrId: 3996
       wordOfWarning: |
         When proxies are involved - only use reputable services, and **never** enter any personal information
 
