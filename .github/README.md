@@ -651,7 +651,7 @@ so may not be appropriate for a non-technical team.
 - **[<img src='https://element.io/images/favicon.png' width='16' height='16' alt='icon' /> Element](https://element.io/)** - Privacy-focused messenger using the Matrix protocol. The Element client allows
 for group chat rooms, media sharing voice and video group calls.
  	- [![GitHub: element-hq/element-web](https://img.shields.io/github/stars/element-hq/element-web?style=flat&logo=github&label=element-web&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/element-hq/element-web)
-- **[<img src='https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png' width='16' height='16' alt='icon' /> Internet Relay Chat](None)** - An IRC-based solution is another option, being decentralized there is no point
+- **[<img src='https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png' width='16' height='16' alt='icon' /> Internet Relay Chat](https://en.wikipedia.org/wiki/IRC)** - An IRC-based solution is another option, being decentralized there is no point
 of failure, and it's easy to self-host. However it's important to keep security
 in mind while configuring your IRC instance and ensure that channels are properly
 encrypted - IRC tends to be better for open communications. There's a variety of
@@ -2665,11 +2665,11 @@ is a free plan for up to 3 identities, and premium plans start at $0.99/month.
 
 ### Other Payment Methods
 
-- **[<img src='https://i.ibb.co/GWcPjYs/cash.png' width='16' height='16' alt='icon' /> Cash](None)** - Actual physical cash is still the most private option, with no chance of leaving
+- **[<img src='https://i.ibb.co/GWcPjYs/cash.png' width='16' height='16' alt='icon' /> Cash]()** - Actual physical cash is still the most private option, with no chance of leaving
 any transactional records.
- - **[<img src='https://i.ibb.co/dKBV5Xq/gift-card.png' width='16' height='16' alt='icon' /> Gift Cards](None)** - Gift cards can be purchased for cash in many convenience stores, and redeemed
+ - **[<img src='https://i.ibb.co/dKBV5Xq/gift-card.png' width='16' height='16' alt='icon' /> Gift Cards]()** - Gift cards can be purchased for cash in many convenience stores, and redeemed
 online for goods or services. Try to avoid CCTV as best as possible.
- - **[<img src='https://i.ibb.co/hm1gPsG/pre-paid.png' width='16' height='16' alt='icon' /> Pre-paid Cards](None)** - Similarly to gift cards, buying a pre-paid card for cash can enable you to
+ - **[<img src='https://i.ibb.co/hm1gPsG/pre-paid.png' width='16' height='16' alt='icon' /> Pre-paid Cards]()** - Similarly to gift cards, buying a pre-paid card for cash can enable you to
 purchase goods and services in stores that only accept card payments.
  
 <details>
