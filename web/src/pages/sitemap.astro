@@ -1,0 +1,148 @@
+---
+
+
+import Layout from '@layouts/Layout.astro';
+import type { AwesomePrivacy } from '../types/Service';
+import { fetchData, slugify } from '@utils/fetch-data';
+
+const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
+
+---
+
+<Layout title="All Links | Awesome Privacy">
+    <main>
+      <h2>Sitemap</h2>
+      <p>
+        Below is a full listing of all pages on this site.<br>
+        <small>As reflected in our <a href="/sitemap-index.xml">sitemap.xml</a></small>
+      </p>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/search">Search</a>
+        </li>
+        <li>
+          <a href="/browse">Categories</a>
+          <ul>
+            {categories.map((category) => (
+              <li>
+                <a href={`/${slugify(category.name)}`}>{category.name}</a>
+                <ul>
+                  {category.sections.map((section) => (
+                    <li>
+                      <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
+                      <ul>
+                        {(section.services || []).map((service) => (
+                          <li title={service.description || ''}>
+                            <a href={`/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`}>
+                              {service.name}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}  
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li>
+          <a href="/all">View Summary of All</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+          <ul>
+            <li><a href="/about#objective">Objective</a></li>
+            <li><a href="/about#criteria">Listing Criteria</a></li>
+            <li><a href="/about#contributing">Contributing</a></li>
+            <li>
+              <a href="/about#acknowledgements">Acknowledgements</a>
+              <ul>
+                <li><a href="/about#contributors">Contributors</a></li>
+                <li><a href="/about#sponsors">Sponsors</a></li>
+              </ul>
+            </li>
+            <li><a href="/about#author">Author</a></li>
+            <li><a href="/about#license">License</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/map">Sitemap</a>
+        </li>
+      </ul>
+      
+  </main>
+  
+</Layout>
+
+<style lang="scss">
+
+main {
+  padding: 1rem;
+  width: 1000px;
+  max-width: calc(100% - 5rem);
+  margin: 4rem auto 5rem auto;
+  padding: 0 2rem;
+  border: 2px solid var(--foreground);
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent-fg);
+  p {
+    font-size: 1.3rem;
+    margin: 0;
+    small {
+      font-size: 0.8rem;
+      opacity: 0.5;
+      transition: all 0.2s ease-in-out;
+      &:hover { opacity: 0.8; }
+    }
+  }
+  ul {
+    padding-left: 1.2rem;
+    list-style: none;
+    border-left: 3px solid #5f53f482;
+    border-radius: 4px;;
+    li {
+      font-weight: 600;
+        ul li {
+          font-weight: 500;
+          ul li {
+            font-weight: 400;
+            ul li {
+              font-weight: 300;
+            }
+          }
+        }
+      &::before {
+        content: "━ ";
+        color: #5f53f482;
+        margin-left: -1.2rem;
+      }
+      a {
+        transition: all ease-in-out 0.2s;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+h2 {
+  margin: 0;
+  gap: 1rem;
+  font-size: 2rem;
+    margin: -2rem 0 2rem -4rem;
+    box-shadow: 6px 6px 0 var(--foreground);
+    background: var(--accent);
+    color: var(--accent-fg);
+    width: fit-content;
+    padding: 0.25rem 0.5rem;
+}
+
+
+
+</style>
