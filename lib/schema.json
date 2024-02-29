@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "services": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "string" },
+                      "description": { "type": "string" },
+                      "url": { "type": "string" },
+                      "github": { "type": "string", "nullable": true },
+                      "icon": { "type": "string", "nullable": true },
+                      "followWith": { "type": "string", "nullable": true },
+                      "securityAudited": { "type": "boolean", "nullable": true },
+                      "openSource": { "type": "boolean", "nullable": true },
+                      "acceptsCrypto": { "type": "boolean", "nullable": true },
+                      "tosdrId": { "type": "number", "nullable": true }
+                    },
+                    "required": ["name", "description", "url"],
+                    "additionalProperties": false
+                  }
+                },
+                "intro": { "type": "string", "nullable": true },
+                "notableMentions": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "description": { "type": "string" },
+                          "url": { "type": "string" }
+                        },
+                        "required": ["name", "url"],
+                        "additionalProperties": false
+                      }
+                    },
+                    { "type": "string" }
+                  ],
+                  "nullable": true
+                },
+                "furtherInfo": { "type": "string", "nullable": true },
+                "wordOfWarning": { "type": "string", "nullable": true },
+                "alternativeTo": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "nullable": true
+                }
+              },
+              "required": ["name", "services"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["name", "sections"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["categories"],
+  "additionalProperties": false
+}
