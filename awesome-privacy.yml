@@ -1,3 +1,19 @@
+#################################################################################
+# Welcome to Awesome Privacy!                                                   #
+# This file contains all data for all listed categories, sections and services  #
+# It's used to generate both the README.md and the website, awesome-privacy.xyz #
+#                                                                               #
+# EDITING                                                                       #
+# Please read the CONTRIBUTING.md before submitting any changes to this file    #
+#                                                                               #
+# USAGE COMMANDS                                                                #
+# `make validate` - Check this file is valid YAML and fits the schema           #
+# `make generate` - Generate + insert content into the README.md                #
+#                                                                               #
+#################################################################################
+# Licensed under CC0-1.0 (C) Alicia Sykes <https://aliciasykes.com> 2019 - 2024 #
+#################################################################################
+
 categories:
   - name: Essentials
     sections:
@@ -796,6 +812,7 @@ categories:
         followWith: Professional plan or higher
         url: https://protonmail.com/pricing
         icon: https://proton.me/favicons/android-chrome-192x192.png
+        tosdrId: '491'
         openSource: true
         description: |
           If you already have ProtonMail's Professional (€8/month) or Visionary (€30/month) package,
@@ -971,6 +988,7 @@ categories:
       - name: Internet Relay Chat
         icon: https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png
         openSource: true
+        url: https://en.wikipedia.org/wiki/IRC
         description: |
           An IRC-based solution is another option, being decentralized there is no point
           of failure, and it's easy to self-host. However it's important to keep security
@@ -1109,7 +1127,7 @@ categories:
       - name: LocalCDN
         url: https://www.localcdn.org/
         icon: https://codeberg.org/repo-avatars/5014-6cc14ee9c85003bda3adb1d71762c306
-        openSoure: true
+        openSource: true
         description: |
           Emulates remote frameworks (e.g. jQuery, Bootstrap, Angular) and delivers them as local resource.
           Prevents unnecessary 3rd party requests to tracking CDNs **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/localcdn-fork-of-decentraleyes/)
@@ -2654,7 +2672,6 @@ categories:
     - name: Digital Notes
       alternativeTo: ['evernote', 'microsoft onenote', 'google keep', 'apple notes', 'simplenote', 'notion']
       services:
-
       - name: Standard Notes
         url: https://standardnotes.com
         github: standardnotes/app
@@ -2771,7 +2788,7 @@ categories:
     ######################
     - name: Calendar
       alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
-      services:
+      services: []
 
     ###########################
     ###### Backup & Sync ######
@@ -3949,11 +3966,11 @@ categories:
 
     - name: IDEs
       alternativeTo: ['visual studio code', 'intellij idea', 'eclipse', 'pycharm', 'atom']
-      services:
+      services: []
 
     - name: Terminal Emulators
       alternativeTo: ['putty', 'iterm2', 'gnome terminal', 'hyper', 'powershell']
-      services:
+      services: []
 
   - name: Smart Home & IoT
     sections:
@@ -4011,7 +4028,7 @@ categories:
 
     - name: Smart Home
       alternativeTo: ['philips hue', 'nest', 'samsung smartthings', 'ecobee', 'ring']
-      services:
+      services: []
 
   - name: Finance
     sections:
@@ -4228,16 +4245,19 @@ categories:
       services:
       - name: Cash
         icon: https://i.ibb.co/GWcPjYs/cash.png
+        url: ''
         description: |
           Actual physical cash is still the most private option, with no chance of leaving
           any transactional records.
       - name: Gift Cards
         icon: https://i.ibb.co/dKBV5Xq/gift-card.png
+        url: ''
         description: |
           Gift cards can be purchased for cash in many convenience stores, and redeemed
           online for goods or services. Try to avoid CCTV as best as possible.
       - name: Pre-paid Cards
         icon: https://i.ibb.co/hm1gPsG/pre-paid.png
+        url: ''
         description: |
           Similarly to gift cards, buying a pre-paid card for cash can enable you to
           purchase goods and services in stores that only accept card payments.
@@ -4538,52 +4558,52 @@ categories:
     sections:
     - name: Gaming
       alternativeTo: ['steam', 'epic games store', 'origin', 'ubisoft connect', 'battle.net']
-      services:
+      services: []
     - name: Media Servers
       alternativeTo: ['plex', 'emby', 'kodi', 'jellyfin', 'universal media server']
-      services:
+      services: []
     - name: Music Players
       alternativeTo: ['spotify', 'apple music', 'google play music', 'amazon music', 'pandora']
-      services:
+      services: []
     - name: Video Players
       alternativeTo: ['vlc', 'windows media player', 'quicktime', 'mplayer', 'kmplayer']
-      services:
+      services: []
     - name: Photo Viewers
       alternativeTo: ['google photos', 'windows photo viewer', 'adobe lightroom', 'apple photos', 'irfanview']
-      services:
+      services: []
     - name: E-Book Readers
       alternativeTo: ['kindle', 'google play books', 'apple books', 'adobe digital editions', 'calibre']
-      services:
+      services: []
     - name: Podcast Players
       alternativeTo: ['apple podcasts', 'spotify', 'google podcasts', 'pocket casts', 'overcast']
-      services:
+      services: []
     - name: Torrent Downloaders
       alternativeTo: ['utorrent', 'bittorrent', 'qBittorrent', 'deluge', 'transmission']
-      services:
+      services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services:
+      services: []
 
   - name: Creativity
     sections:
     - name: Image Editors
       alternativeTo: ['adobe photoshop', 'gimp', 'paint.net', 'corel paintshop pro', 'affinity photo']
-      services:
+      services: []
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
-      services:
+      services: []
     - name: Audio Editors & Recorders
       alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
-      services:
+      services: []
     - name: Casting & Streaming
       alternativeTo: ['obs studio', 'xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
-      services:
+      services: []
     - name: Screenshot Tools
       alternativeTo: ['snagit', 'greenshot', 'lightshot', 'gyazo', 'sharex']
-      services:
+      services: []
     - name: 3D Graphics
       alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
-      services:
+      services: []
     - name: Animation
       alternativeTo: ['adobe after effects', 'animate cc', 'toon boom harmony', 'moho (anime studio)', 'pencil2d']
-      services:
+      services: []
