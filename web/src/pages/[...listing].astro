@@ -1,8 +1,6 @@
 ---
 
 import Layout from '@layouts/Layout.astro';
-import Button from '@components/form/Button.astro';
-import Main from '@components/scafold/MainCard.astro';
 import ServiceList from '@components/things/ServiceList.astro';
 import Comments from '@components/things/Comments.svelte';
 import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
@@ -29,9 +27,9 @@ const {
   tosdrId,
   icon,
   followWith,
-  securityAudited,
-  openSource,
-  acceptsCrypto,
+  // securityAudited,
+  // openSource,
+  // acceptsCrypto,
   parentSection,
   categoryName,
 } = Astro.props;
@@ -42,18 +40,18 @@ const {
  */
 const makeKeyWordTag = () => {
   const keywords: string[] = [];
-  // keywords.push(`free and open source ${title} software`);
-  // keywords.push(`private ${title} comparison`);
-  // (alternativeTo || []).forEach((alt: string) => {
-  //   keywords.push(`privacy-respecting ${alt} alternative`);
-  //   keywords.push(`free open source ${alt} alternative`);
-  // });
-  // (services || []).forEach((serv: Service) => {
-  //   keywords.push(serv.name);
-  // });
-  // keywords.push('ad free');
-  // keywords.push('open source software');
-  // keywords.push('privacy respecting apps');
+  keywords.push(`free and open source ${parentSection.name} software`);
+  keywords.push(`private ${parentSection.name} comparison`);
+  (parentSection.alternativeTo || []).forEach((alt: string) => {
+    keywords.push(`privacy-respecting ${alt} alternative`);
+    keywords.push(`free open source ${alt} alternative`);
+  });
+  (parentSection.services || []).forEach((serv: Service) => {
+    keywords.push(serv.name);
+  });
+  keywords.push('ad free');
+  keywords.push('open source software');
+  keywords.push('privacy respecting apps');
   return keywords.join(', ');
 };
 
@@ -68,16 +66,10 @@ const makePageTitle = () => {
  * Make a string page intro, for the description tag
  */
 const makeDescriptionTag = () => {
-  let description = `A list of privacy respecting ${name}. `;
-  // if (services && services.length > 0) {
-  //   const serviceList = services.map((serv: Service) => serv.name);
-  //   description += `Compare ${serviceList.join(', ')} and more private apps and services. `
-  // } else {
-  //   description += `Find private apps and services. This section is still a work in progress. `;
-  // }
-  // description += 'All this, and much more at Awesome Privacy, '
-  // description += 'the free and open source list of private software alternatives.';
-  return description;
+  return  `Compare ${name} and other ${parentSection.name} at Awesome Privacy\n`
+    + description
+    + '\nAll this, and much more at Awesome Privacy, '
+    + 'the free and open source list of private software alternatives.';
 };
 
 // Return a list of Services, except for the currtent one
