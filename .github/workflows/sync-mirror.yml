@@ -1,8 +1,6 @@
 # Pushes the contents of the repo to the Codeberg mirror
 name: 🪞 Mirror to Codeberg
 on:
-  push:
-    branches: [ 'main' ]    
   workflow_dispatch: # Manual dispatch
   schedule:
     - cron: '0 5 * * 6'
