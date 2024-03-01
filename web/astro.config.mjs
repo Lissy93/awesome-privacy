@@ -25,13 +25,13 @@ const integrations = [svelte(), partytown(), sitemap()];
 
 // Set the appropriate adapter, based on the deploy target
 const adapter = {
-  vercel: vercelAdapter(),
-  netlify: netlifyAdapter(),
-  cloudflare: cloudflareAdapter(),
+  vercel: vercelAdapter,
+  netlify: netlifyAdapter,
+  cloudflare: cloudflareAdapter,
   node: nodeAdapter({
     mode: 'standalone',
   }),
-}[deployTarget];
+}[deployTarget]();
 
 // Export Astro configuration
 export default defineConfig({ output, integrations, site, adapter });
