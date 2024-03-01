@@ -1,23 +1,23 @@
 
 #########################################################################
 # Welcome to Awesome Privacy!                                           #
-# This file contains all the commands for the project (in lib and web)	#
-#																																				#
-# lib commands:																													#
-# make install_lib_deps - Install Python dependencies for lib/					#
-# make validate - Validates awesome-privacy.yml against the schema			#
-# make gen_readme - Generate README.md from awesome-privacy.yml					#
-#																																				#
-# web commands:																													#
-# make install_web_deps - Install NPM dependencies for the website			#
-# make build_web - Build the static website (outputs to web/dist/)			#
-# make start_web - Starts a webserver to serve the static website				#
-#																																				#
-# For further documentation, please reference the GitHub repository.		#
-# https://github.com/lissy93/awesome-privacy or awesome-privacy.xyz			#
-#                                                                      	#
+# This file contains all the commands for the project (in lib and web)  #
+#                                                                       #
+# lib commands:                                                         #
+# make install_lib_deps - Install Python dependencies for lib/          #
+# make validate - Validates awesome-privacy.yml against the schema      #
+# make gen_readme - Generate README.md from awesome-privacy.yml         #
+#                                                                       #
+# web commands:                                                         #
+# make install_web_deps - Install NPM dependencies for the website      #
+# make build_web - Build the static website (outputs to web/dist/)      #
+# make start_web - Starts a webserver to serve the static website       #
+#                                                                       #
+# For further documentation, please reference the GitHub repository.    #
+# https://github.com/lissy93/awesome-privacy or awesome-privacy.xyz     #
+#                                                                       #
 #########################################################################
-# Licensed under CC0-1.0 (C) Alicia Sykes <https://aliciasykes.com>			#
+# Licensed under CC0-1.0 (C) Alicia Sykes <https://aliciasykes.com>     #
 #########################################################################
 
 # Targets
