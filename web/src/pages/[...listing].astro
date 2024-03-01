@@ -12,6 +12,8 @@ import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+import FontAwesome from '@components/form/FontAwesome.svelte';
+import Button from '@components/form/Button.astro';
 
 interface Props extends Service {
   slug: string;
@@ -27,9 +29,9 @@ const {
   tosdrId,
   icon,
   followWith,
-  // securityAudited,
-  // openSource,
-  // acceptsCrypto,
+  securityAudited,
+  openSource,
+  acceptsCrypto,
   parentSection,
   categoryName,
 } = Astro.props;
@@ -103,14 +105,15 @@ export async function getStaticPaths() {
   });
 }
 
-// const makePaginationLinks = () => {
-//   const index = otherSections.findIndex(section => section.name === title);
-//   const previousSection = index >  0 ? otherSections[index -  1].name : null;
-//   const nextSection = index < otherSections.length -  1 ? otherSections[index +  1].name : null;
-//   return { previous: previousSection, next: nextSection };
-// };
+const makePaginationLinks = () => {
+  const allServices = parentSection.services || [];
+  const index = allServices.findIndex(item => item.name === name);
+  const previousItem = index >  0 ? allServices[index -  1].name : null;
+  const nextItem = index < allServices.length -  1 ? allServices[index +  1].name : null;
+  return { previous: previousItem, next: nextItem };
+};
 
-// const { previous, next } = makePaginationLinks();
+const { previous, next } = makePaginationLinks();
 
 
 const ignoredSites = ['github.gom', 'wikipedia.'];
@@ -151,7 +154,63 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
           data-service-url={formatLink(url)}
           src={icon || `https://icon.horse/icon/${formatLink(url)}`}
         />
+        <div>
         <p class="description" set:html={parseMarkdown(description)}></p>
+        <ul>
+          { url && (
+          <li>
+            <b>Homepage:</b>
+            <a href={url}>{formatLink(url)}</a>
+          </li>
+          )}
+          { github && (
+          <li>
+            <b>GitHub:</b>
+            <a href={`https://github.com/${github}`}>github.com/{github}</a>
+          </li>
+          )}
+          { tosdrId && (
+          <li>
+            <b>ToS;DR:</b>
+            <a href={`https://tosdr.org/en/service/${tosdrId}`}>{`tosdr.org/en/service/${tosdrId}`}</a>
+          </li>
+          )}
+          { url && (
+          <li>
+            <b>Web info:</b>
+            <a href={`https://web-check.xyz/results/${formatLink(url)}`}>{`web-check.xyz/results/${formatLink(url)}`}</a>
+          </li>
+          )}
+        </ul>
+        </div>
+      </div>
+      <div class="highlights">
+        { securityAudited && (
+          <span class="meta-item great" title={`${name} has been security audited by an accredited auditor, with results published publicly`}>
+            <FontAwesome iconName="securityAudited" /> Security Audited
+          </span>
+        )}
+        { acceptsCrypto && (
+          <span class="meta-item great" title={`${name} accepts anonymous payment methods`}>
+            <FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
+          </span>
+        )}
+        { securityAudited === false && (
+          <span class="meta-item warning" title={`${name} has not been audited`}>
+            <FontAwesome iconName="notSecurityAudited" /> No Security Audit
+          </span>
+        )}
+        { (openSource === false) && (
+          <span class="warning">
+            <FontAwesome iconName="closedSource" />
+            Not Open Source
+          </span>
+        )}
+        { openSource || (github && openSource !== false) ? (
+          <span class="meta-item great" title={`${name} is open source`}>
+            <FontAwesome iconName="openSource" /> Open Source
+          </span>
+        ) : null }
       </div>
     </section>
     { privacyData && (
@@ -188,6 +247,24 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
         sectionName={parentSection.name}
       />
     </section>
+
+    <div class="pagination-navigation">
+      { previous ? (
+        <Button url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(previous)}`}>
+          <span>← Previous</span>
+          <p>{previous}</p>
+        </Button>
+      ) : <p class="nothing"></p>}
+      <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`} class="go-to-category">
+        View {parentSection.name} ({(parentSection.services || []).length})
+      </a>
+      { next && (
+        <Button url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(next)}`}>
+          <span>Next →</span>
+          <p>{next}</p>
+        </Button>
+      )}
+    </div>
   </main>
 </Layout>
 
@@ -261,10 +338,29 @@ h3 {
 .intro {
   font-size: 1.2rem;
   font-style: italic;
-  opacity: 0.7; 
+  opacity: 0.9; 
   display: flex;
-  align-items: center;
   gap: 0.5rem;
+  .service-icon {
+    border-radius: var(--curve-md);
+    margin-top: 1rem;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  ul {
+    padding-left: 1rem;
+    list-style: circle;
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0;
+    b {
+      font-size: 1rem;
+      font-weight: 400;
+      min-width: 85px;
+      display: inline-block;
+    }
+  }
 }
 
 .pagination-navigation {
@@ -339,6 +435,53 @@ h3 {
       :global(p) {
         display: inline;
       }
+    }
+  }
+}
+
+.highlights {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+
+  .meta-item, .warning {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    gap: 0.25rem;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    :global(svg) {
+      color: var(--foreground);
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    a {
+      text-decoration: none;
+      color: var(--foreground);
+      display: flex;
+      gap: 0.25rem;
+      &:hover {
+        color: var(--accent-3);
+        :global(svg) {
+          color: var(--accent-3);
+        }
+      }
+    }
+  }
+  .warning {
+    color: var(--danger);
+    :global(svg) {
+      color: var(--danger);
+    }
+  }
+  .great {
+    color: #007930; // var(--success);
+    :global(svg) {
+      color: #007930; // var(--success);
     }
   }
 }

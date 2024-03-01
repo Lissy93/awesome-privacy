@@ -1,6 +1,6 @@
 
 export const fetchTosdrPrivacy = async (serviceId: string): Promise<PrivacyPolicyResponse | null> => {
-  const endpoint = `https://api.tosdr.org/service/v2?id=${serviceId}`;
+  const endpoint = `https://privacy-policies.as93.workers.dev/${serviceId}`;
   try {
     return await fetch(endpoint).then((res) => res.json());
   } catch (error) {

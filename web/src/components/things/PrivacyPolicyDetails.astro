@@ -28,7 +28,7 @@ const getIconName = (clasification: string) => {
   {(priv.points && priv.points.length) > 0 && (
     <div class="left">
       <h4>Privacy Policy Summary</h4>
-      <ul>
+      <ul class="no-point">
         {priv.points.map((point) => (
           <li class={`clasification ${point.case.classification}`}>
             <FontAwesome iconName={getIconName(point.case.classification)} />
@@ -70,8 +70,11 @@ const getIconName = (clasification: string) => {
     )}
     {priv.points && priv.points.length > 0 && (
       <h4>About the Data</h4>
-      <p>This data is kindly provided by <a href="https://tosdr.org/">tosdr.org</a></p>
-      <p>View the full report at: <a href={`https://tosdr.org/en/service/${priv.id}`}>tosdr.org/en/service/{priv.id}</a></p>
+      <p class="about-tosdr">
+        This data is kindly provided by <a href="https://tosdr.org/">tosdr.org</a>.
+        Read full report at: <a href={`https://tosdr.org/en/service/${priv.id}`}>#{priv.id}</a>
+      
+        </p>
     )}
   </div>
 </div>
@@ -111,6 +114,7 @@ h4 {
   li {
     :global(svg) {
       width: 1rem;
+      margin-right: 0.2rem;
     }
     &.clasification {
       &.good :global(svg) { color: #35b969; }
@@ -137,6 +141,10 @@ h4 {
         opacity: 0.7;
       }
     }
+    &.no-point {
+      list-style: none;
+      padding-left: 0.25rem;
+    }
   }
 
   .rating {
@@ -157,5 +165,11 @@ h4 {
     &.rating-G { --rating-color: #df1e1e; }
     color: var(--rating-color);
     border-color: var(--rating-color);
+  }
+
+  .about-tosdr {
+    display: inline;
+    font-size: 0.8rem;
+    opacity: 0.7;
   }
 </style>
