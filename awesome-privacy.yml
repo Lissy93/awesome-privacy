@@ -179,7 +179,7 @@ categories:
           great companion authenticator for desktop power-users. It's open source and
           well-established (since mid-2010)
 
-      - name: Authenticator
+      - name: Authenticator GNOME
         url: https://gitlab.gnome.org/World/Authenticator
         icon: https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48
         openSource: true
@@ -4344,7 +4344,7 @@ categories:
           for $10/month, with 1% cashback and 36 cards/month.
 
       - name: Revolut Premium
-        url: https://revolut.ngih.net
+        url: https://www.revolut.com/
         tosdrId: 2310
         description: |
           Revolut is more of a digital bank account, and identity checks are required
@@ -4527,7 +4527,7 @@ categories:
           Established in 2017, BitChute is a video hosting service that offers a platform for
           uploaders to evade the content restrictions found on other sites like YouTube.
         url: https://www.bitchute.com
-        icon: https://www.bitchute.com/static/1.1.10/images/favicon-16x16.png
+        icon: https://i.ibb.co/gvxXK0Z/bitchute.png
         tosdrId: 513
 
       wordOfWarning: |
