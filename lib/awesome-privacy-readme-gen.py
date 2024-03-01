@@ -33,11 +33,34 @@ def repoElement(repoUrl):
     if not repoUrl:
         return ""
     return (
-        f"\t- [![GitHub: {repoUrl}](https://img.shields.io/github/stars/{repoUrl}"
+        f"[![GitHub: {repoUrl}](https://img.shields.io/github/stars/{repoUrl}"
         f"?style=flat&logo=github&label={repoUrl.split('/')[1]}"
         "&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)]"
-        f"(https://github.com/{repoUrl})\n"
+        f"(https://github.com/{repoUrl})"
     )
+
+def tosElement(tosdrId):
+    if not tosdrId:
+        return ""
+    return f"[![Privacy Policy](https://shields.tosdr.org/en_{tosdrId}.svg)](https://tosdr.org/en/service/{tosdrId})"
+
+def awesomePrivacyReport(categoryName, sectionName, serviceName):
+  if not serviceName:
+      return ""
+  def slugify(name):
+      return (name or '').lower().replace(' ', '-')
+  return (
+      f"[![{serviceName} on Awesome Privacy]"
+      f"(https://img.shields.io/badge/{serviceName.replace(' ', '_')}-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)]"
+      f"(https://awesome-privacy.xyz/{slugify(categoryName)}/{slugify(sectionName)}/{slugify(serviceName)})"
+  )
+
+def makeStatsCard():
+  return (
+      f"\t- <details><summary>Stats</summary>\n\n"
+      f""
+      f"\n\n</details>"
+  )
 
 def makeHref(text):
     if not text: return "#"
@@ -79,7 +102,15 @@ def makeAwesomePrivacy():
               markdown += (
                   f"- **[{iconElement(app.get('url'), app.get('icon'))} {app.get('name')}]"
                   f"({app.get('url')})** - {app.get('description')} "
-                  f"{repoElement(app.get('github'))}"
+
+                  + ((
+                    f"\t- <details>\n\t\t<summary>Stats</summary>\n\n\t\t"
+                    f"{repoElement(app.get('github'))} "
+                    f"{tosElement(app.get('tosdrId'))} "
+                    f"{awesomePrivacyReport(category.get('name'), section.get('name'), app.get('name'))} \n"
+                    f"\n\t\t</details>\n"
+                  )
+                  if app.get('github') or app.get('tosdrId') else '')
               )
           markdown += "\n"
           # If word of warning exists, append it
