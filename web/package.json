@@ -4,9 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "astro preview",
     "build": "astro check && astro build",
-    "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
@@ -29,6 +28,8 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^9.0.1",
+    "@astrojs/node": "^8.2.1",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.11.19",
     "sass": "^1.70.0"
