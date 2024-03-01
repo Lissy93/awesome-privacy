@@ -24,7 +24,7 @@ body:
       description: |
         Please describe what amendments should be made.
         When required, link to relevant info from reputable sources to help with fact checking. 
-      placeholder: 
+      placeholder: ''
     validations:
       required: true
 
@@ -32,11 +32,11 @@ body:
   - type: input
     id: association
     attributes:
-      label: Association Disclosure
+      label: Affiliation Disclosure
       description: >-
         For transparency, please state if you currently / previously have had any association with
         this project.
-      placeholder:
+      placeholder: ''
     validations:
       required: false
 
@@ -66,7 +66,9 @@ body:
           required: true
         - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software / service
           required: true
-        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
+        - label: You agree to our [Code of Conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: You have read and followed the [Contributing Guide](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md)
           required: true
   
   # Final message

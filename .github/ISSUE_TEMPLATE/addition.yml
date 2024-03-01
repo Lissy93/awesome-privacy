@@ -36,8 +36,8 @@ body:
       label: Supporting Material
       description: >-
         Please include links to any relevant supporting material, like the projects GitHub repo,
-        website / docs, any recent security audits
-      placeholder: 
+        website / docs, privacy policy and any recent security audits
+      placeholder: ''
     validations:
       required: true
 
@@ -45,11 +45,11 @@ body:
   - type: input
     id: association
     attributes:
-      label: Association Disclosure
+      label: Affiliation Disclosure
       description: >-
         For transparency, please state whether you currently / previously have had any association with
         this project in any form. \nIf you have, then please also specify the context of your involvement
-      placeholder:
+      placeholder: ''
     validations:
       required: false
 

@@ -1,0 +1,156 @@
+name: Service Addition
+description: Submit a software/service listing for inclusion on Awesome Privacy
+title: '[ADDITION] <service_name_here>'
+assignees:
+  - lissy93
+  - liss-bot
+body:
+  - type: dropdown
+    id: listing-category
+    attributes:
+      label: Category
+      description: >-
+        Select the parent category this listing should appear under. For an
+        explanation and examples of each category, see the
+        [Browse](https://awesome-privacy.xyz/browse) page
+      options:
+        - Essentials
+        - Communication
+        - Security Tools
+        - Networking
+        - Productivity
+        - Utilities
+        - Operating Systems
+        - Development
+        - Home and IoT
+        - Finance
+        - Social
+        - Media
+        - Creativity
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: >-
+        Before proceeding, please ensure you've read the guidelines outlined in
+        our [Contributing
+        Docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md).
+  - type: input
+    id: service-name
+    attributes:
+      label: Listing Name
+      description: Enter the name of the app, software or service
+    validations:
+      required: true
+  - type: input
+    id: service-url
+    attributes:
+      label: Listing URL
+      description: Enter the fully-qualified domain name of the homepage for this listing
+    validations:
+      required: true
+  - type: input
+    id: service-icon
+    attributes:
+      label: Listing Icon
+      description: >-
+        Paste a URL to square logo for the service.<br>Dimensions must be no
+        less than 64x64, and no more than 512x512 pixels
+    validations:
+      required: true
+  - type: textarea
+    id: service-description
+    attributes:
+      label: Listing Description
+      description: >-
+        Please provide a description for this listing<br>Keep it factual and
+        subjective. Markdown is supported.
+    validations:
+      required: true
+  - type: input
+    id: service-github
+    attributes:
+      label: GitHub repository
+      description: Share a link to where the projects source is located
+    validations:
+      required: true
+  - type: input
+    id: service-tosdr-id
+    attributes:
+      label: ToS;DR ID
+      description: >-
+        Has the Privacy policy been documented by
+        [tosdr.org](https://tosdr.org/)?<br> If so, please include the report
+        reference below (this is a 3 or 4-digit numerical ID)<br>Skip section if
+        not applicable
+  - type: checkboxes
+    id: service-opensource
+    attributes:
+      label: Is Open Source?
+      description: >-
+        Is this service fully open source?<br>Aka, can it be compiled from
+        source by the user, or self-hosted<br>Skip section if not applicable
+      options:
+        - label: Yes, it's open source
+          required: false
+  - type: checkboxes
+    id: service-security-audited
+    attributes:
+      label: Security Audited?
+      description: >-
+        Has this service been independently security audited by an accredited
+        auditer?<br>If so, please also include date of last audit, and a link to
+        the published report in the Additional Info section at the end<br>Skip
+        section if not applicable
+      options:
+        - label: Yes, it's been security audited
+          required: false
+  - type: checkboxes
+    id: service-crypto
+    attributes:
+      label: Accepts Anon Payment?
+      description: >-
+        If this is a hosted and paid for service, does it accept anonymous
+        payment methods, including crypto (e.g. Monero)<br>Skip section if not
+        applicable
+      options:
+        - label: Yes, accept anonymous payment
+          required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Justification and Further Info
+      description: >-
+        In your own words, please explain why you think this service should be
+        added to Awesome Privacy. Provide links/references to backup any claims
+        made<br>If you are associated with this service in **any way**, please
+        disclose your affiliation in the interest of transparency.
+      placeholder: >-
+        This will not be included in the final listing. But it helps maintainers
+        and community reviewers with their research.
+    validations:
+      required: true
+  - type: checkboxes
+    id: service-completion
+    attributes:
+      label: Final Checklist
+      description: 'Nearly '
+      options:
+        - label: >-
+            I confirm that I've read and followed the [Contributing
+            Guide](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md)
+          required: true
+        - label: >-
+            I agree to follow the [Code of
+            Conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I have clearly declared any affiliation I may have with this service
+          required: false
+  - type: markdown
+    attributes:
+      value: Thank you for your submission! You'll hear back from us soon.
+  - type: markdown
+    attributes:
+      value: >-
+        This template was generated with [Issue Forms
+        Creator](https://issue-forms-creator.netlify.app)
