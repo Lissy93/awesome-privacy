@@ -189,7 +189,7 @@ useful features, like hotkeys and some additional security tools, WinAuth is a
 great companion authenticator for desktop power-users. It's open source and
 well-established (since mid-2010)
  	- [![GitHub: winauth/winauth](https://img.shields.io/github/stars/winauth/winauth?style=flat&logo=github&label=winauth&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/winauth/winauth)
-- **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also
+- **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator GNOME](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also
 available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator).
  - **[<img src='https://authenticator.cc/assets/logo/logo.svg' width='16' height='16' alt='icon' /> Authenticator](https://authenticator.cc)** - Authenticator Extension is an in-browser One-Time Password (OTP) client,
 supports both Time-Based One-Time Password (TOTP, specified in [RFC 6238](https://tools.ietf.org/html/rfc6238))
@@ -2651,7 +2651,7 @@ Not all services are available in all countries.
 in the US. Unlike other providers, it is free for personal use (up to 12 cards
 per month) with no fees, apps and support is good. There is a premium plan
 for $10/month, with 1% cashback and 36 cards/month.
- - **[<img src='https://icon.horse/icon/revolut.ngih.net' width='16' height='16' alt='icon' /> Revolut Premium](https://revolut.ngih.net)** - Revolut is more of a digital bank account, and identity checks are required
+ - **[<img src='https://icon.horse/icon/www.revolut.com' width='16' height='16' alt='icon' /> Revolut Premium](https://www.revolut.com/)** - Revolut is more of a digital bank account, and identity checks are required
 to sign up. Virtual cards are only available on Premium/ Metal accounts, which
 start at $7/month.
  - **[<img src='https://icon.horse/icon/mysudo.com' width='16' height='16' alt='icon' /> MySudo](https://mysudo.com)** - Much more than just virtual cards, MySudo is a platform for creating
@@ -2797,7 +2797,7 @@ load during video streaming. Supports self-hosting or joining existing instances
 enabling video viewing from any PeerTube server.
  - **[<img src='https://icon.horse/icon/d.tube' width='16' height='16' alt='icon' /> DTube](https://d.tube)** - A decentralized, ad-free video platform emphasizing minimal moderation. It rewards
 users with cryptocurrency, leveraging blockchain technology.
- - **[<img src='https://www.bitchute.com/static/1.1.10/images/favicon-16x16.png' width='16' height='16' alt='icon' /> BitChute](https://www.bitchute.com)** - Established in 2017, BitChute is a video hosting service that offers a platform for
+ - **[<img src='https://i.ibb.co/gvxXK0Z/bitchute.png' width='16' height='16' alt='icon' /> BitChute](https://www.bitchute.com)** - Established in 2017, BitChute is a video hosting service that offers a platform for
 uploaders to evade the content restrictions found on other sites like YouTube.
  
 <details>
