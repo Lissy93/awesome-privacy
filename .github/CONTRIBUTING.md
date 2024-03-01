@@ -52,6 +52,93 @@ Usually these entries go within the "Notable Mentions" section instead._
 
 ---
 
+### Editing the YAML
+
+All content in both the README and website is generated using the data in [`awesome-privacy.yml`](https://github.com/Lissy93/awesome-privacy/blob/main/awesome-privacy.yml).
+This file may look a bit daunting to start with, but don't worry - it's pretty simple.
+
+#### Top-Level Structure
+
+At a high-level, the file exports an array of categories, each containing a `name` and array of `sections`.
+
+```yaml
+categories:
+  - name: Essentials
+    sections: []
+- name: Communication
+    sections: []
+ - name: Security Tools
+    sections: []
+```
+
+Each category contains a `name` an array of `sections` (like sub-categories)
+
+```yaml
+ - name: Communication
+   sections:
+   - name: Encrypted Messaging
+     services: []
+   - name: P2P Messaging
+     intro: ...
+     services: []
+   - name: Encrypted Email
+     services: []
+   - name: Email Clients
+     services: []
+```
+
+And within each section, we find a list of `services`, each containing a listing. For example:
+
+```yaml
+services:
+- name: Addy
+  url: https://addy.io
+  icon: https://addy.io/apple-touch-icon.png
+  github: anonaddy/anonaddy
+  tosdrId: 2220
+  description: |
+    An open source anonymous email forwarding service, allowing you to create unlimited
+    email aliases which forward to one or more of your private email addresses.
+
+- name: Firefox Private Relay
+  url: https://relay.firefox.com
+  icon: https://relay.firefox.com/favicon.svg
+  openSource: true
+  github: mozilla/fx-private-relay
+  tosdrId: 4158
+  description: |
+    Developed and managed by Mozilla, Relay is a Firefox addon, that lets you make an
+    email alias with 1 click, and have all messages forwarded onto your personal email.
+```
+
+#### Service Fields
+
+Each service (aka an app/website/software) has the following fields:
+
+| Attribute         | Description                                                                                                  | Type    | Required |
+|-------------------|--------------------------------------------------------------------------------------------------------------|---------|----------|
+| `name`            | The name of the listing                                                                                      | `string`| Required |
+| `description`     | A short and subjective description of the listing. Markdown is supported. Split longer descriptions onto multiple lines | `string`| Required |
+| `url`             | The fully qualified domain name of the listing's homepage                                                    | `string`| Required |
+| `icon`            | A path to an icon file for the listing's logo. Must be square, no less than 64x64 and no larger than 512x512 pixels | `string`| Required |
+| `github`          | The GitHub repository hosting the listing's source code. In the format of `[owner]/[repo]`                   | `string`| Optional |
+| `securityAudited` | Has the listing been audited by an accredited security researcher, with the report publicly published?       | `bool`  | Optional |
+| `acceptsCrypto`   | If payment is required/accepted, do they accept anonymous payments using cryptocurrency, such as Monero?     | `bool`  | Optional |
+| `openSource`      | Is the source code in its entirety published somewhere accessible so it can be built-from-source or self-hosted? | `bool`  | Optional |
+| `tosdrId`         | If the privacy policy has been analysed by ToS;DR, include the ID to their report                             | `number`| Optional |
+
+Anything which is marked as `optional`, and which doesn't apply to your service can just be left out.
+
+Keep max line length around 80-100 chars. If the description is long, split it onto multiple lines, using YAML multi-line string (like `: |`).
+
+#### Validating your Entry
+Once you've finished editing the YAML file, you may run `make validate` to run [`validate-awesome-privacy.py`](https://github.com/Lissy93/awesome-privacy/blob/main/lib/validate-awesome-privacy.py), which will ensure your [`awesome-privacy.yml`](https://github.com/Lissy93/awesome-privacy/blob/main/awesome-privacy.yml) is both valid and fits within our defined schema (in [`lib/schema.json`](https://github.com/Lissy93/awesome-privacy/blob/main/lib/schema.json))
+
+#### Need Help?
+Just look at some of the existing entries in the file for inspiration, and if you're still stuck, feel free to reach out for help. We're here to help you get your contribution merged!
+
+---
+
 ### Guidelines
 
 Your pull request must follow these requirements. Failure to do so, might result in it being closed.
