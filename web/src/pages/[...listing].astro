@@ -121,10 +121,12 @@ export async function getStaticPaths() {
 // const { previous, next } = makePaginationLinks();
 
 
+const ignoredSites = ['github.gom', 'wikipedia.'];
+
 // Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
-const websiteData = (url && !url.includes('github.com')) ? await fetchWebsiteInfo(url) : null;
+const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
 
 ---
 

@@ -67,13 +67,16 @@ const {
             src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
           />
 
-          {subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
+          <a class="service-title" href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
+            {subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
+          </a>
           {service.followWith && <p class="follow-with">({service.followWith})</p> }
           <a class="service-link" href={service.url}>{formatLink(service.url)}</a>
         </div>
         <div class="service-body">
           <p set:html={parseMarkdown(service.description)}></p>
           <div class="service-stats">
+            <div class="left">
             { service.securityAudited && (
               <span class="meta-item great" title={`${service.name} has been security audited by an accredited auditor, with results published publicly`}>
                 <FontAwesome iconName="securityAudited" /> Security Audited
@@ -108,6 +111,7 @@ const {
                 </a>
               </span>
             ) }
+            </div>
             <div class="view-service">
               <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>View {service.name} Report</a>
             </div>
@@ -156,10 +160,15 @@ const {
         align-items: center;
         gap: 0.5rem;
         flex-wrap: wrap;
-        h3, h4 {
-          margin: 0;
-          font-size: 1.6rem;
+        .service-title {
+          text-decoration: none;
+          color: var(--foreground);
+          h3, h4 {
+            margin: 0;
+            font-size: 1.6rem;
+          }
         }
+        
         .service-icon {
           width: 2.5rem;
           height: 2.5rem;
@@ -193,10 +202,37 @@ const {
           }
         }
         .service-stats {
+          .left {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+          }
           display: flex;
           gap: 1rem;
           flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
         }
+        .view-service {
+          transition: all 0.2s ease-in-out;
+          opacity: 0.8;
+          a {
+            padding: 0.25rem 0.6rem;
+            width: fit-content;
+            right: 1rem;
+            font-size: 0.9rem;
+            background: var(--accent-3);
+            color: var(--accent-fg);
+            text-decoration: none;
+            border-radius: var(--curve-md);
+          }
+          &:hover {
+            opacity: 1;
+            transform: scale(1.05);
+          }
+        }
+
         .meta-item, .warning {
           display: flex;
           align-items: center;
@@ -239,16 +275,7 @@ const {
     }
   }
 
-.view-service {
-  a {
-  padding: 0.25rem 0.6rem;
-  color: var(--accent-3);
-  width: fit-content;
-  position: absolute;
-  right: 1rem;
-  transform: scale(0.8);
-  }
-}
+
 
 section :global(.view-all) {
   width: fit-content;

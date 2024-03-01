@@ -23,43 +23,55 @@ const getIconName = (clasification: string) => {
 ---
 
 <div class="privacy-policy-wrapper">
-  <div class="left">
-    <h4>Privacy Policy Summary</h4>
-    <ul>
-      {priv.points.map((point) => (
-        <li class={`clasification ${point.case.classification}`}>
-          <FontAwesome iconName={getIconName(point.case.classification)} />
-          {point.title}
-        </li>
-      ))}
-    </ul>
-  </div>
-  <div class="right">
-    <h4>Score</h4>
-    <div class={`rating rating-${priv.rating}`}>
-      <p>{priv.rating}</p>
+  
+  {(priv.points && priv.points.length) > 0 && (
+    <div class="left">
+      <h4>Privacy Policy Summary</h4>
+      <ul>
+        {priv.points.map((point) => (
+          <li class={`clasification ${point.case.classification}`}>
+            <FontAwesome iconName={getIconName(point.case.classification)} />
+            {point.title}
+          </li>
+        ))}
+      </ul>
     </div>
-    <h4>Documents</h4>
-    <ul>
-      {priv.documents.map((document) => (
-        <li class="list-item">
-          <a href={document.url} target="_blank">{document.name}</a>
-          <div class="date-block">
-            Created {formatDate(document.created_at)},
-            Last modified {timeAgo(document.updated_at)}
-          </div>
-        </li>
-      ))}
-    </ul>
-    <h4>Domains Covered by Policy</h4>
-    <ul>
-      {priv.urls.map((url) => (
-        <li>{url}</li>
-      ))}
-    </ul>
-    <h4>About the Data</h4>
-    <p>This data is kindly provided by <a href="https://tosdr.org/">tosdr.org</a></p>
-    <p>View the full report at: <a href={`https://tosdr.org/en/service/${priv.id}`}>tosdr.org/en/service/{priv.id}</a></p>
+  )}
+  
+  <div class="right">
+    { priv.rating && (
+      <h4>Score</h4>
+      <div class={`rating rating-${priv.rating}`}>
+        <p>{priv.rating}</p>
+      </div>
+    )}
+    {priv.documents && priv.documents.length > 0 && (
+      <h4>Documents</h4>
+      <ul>
+        {priv.documents.map((document) => (
+          <li class="list-item">
+            <a href={document.url} target="_blank">{document.name}</a>
+            <div class="date-block">
+              Created {formatDate(document.created_at)},
+              Last modified {timeAgo(document.updated_at)}
+            </div>
+          </li>
+        ))}
+      </ul>
+    )}
+    {priv.urls && priv.urls.length > 1 && (
+      <h4>Domains Covered by Policy</h4>
+      <ul>
+        {priv.urls.map((url) => (
+          <li>{url}</li>
+        ))}
+      </ul>
+    )}
+    {priv.points && priv.points.length > 0 && (
+      <h4>About the Data</h4>
+      <p>This data is kindly provided by <a href="https://tosdr.org/">tosdr.org</a></p>
+      <p>View the full report at: <a href={`https://tosdr.org/en/service/${priv.id}`}>tosdr.org/en/service/{priv.id}</a></p>
+    )}
   </div>
 </div>
 
