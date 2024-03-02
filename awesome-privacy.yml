@@ -2739,6 +2739,14 @@ categories:
           A full-stack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker. Very
           complete, with everything you will need, customizable and very easy to deploy with docker.
 
+      - name: mailcow
+        url: https://mailcow.email/
+        icon: https://mailcow.email/images/cow_mailcow.svg
+        github: mailcow/mailcow-dockerized
+        followWith: Docker
+        description: |
+          A mail server with everything you need (SMTP, IMAP, webmail, NextCloud support..) using Docker.
+
       wordOfWarning: |
         Self-hosting your own mail server is not recommended for everyone, it can
         be time consuming to setup and maintain and securing it correctly is critical
