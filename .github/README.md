@@ -54,7 +54,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Cloud Hosting](#cloud-hosting) (3)
 	- [Domain Registrars](#domain-registrars) (2)
 	- [DNS Hosting](#dns-hosting) (1)
-	- [Mail Servers](#mail-servers) (2)
+	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
 	- [Calendar](#calendar) (0)
@@ -2437,6 +2437,13 @@ complete, with everything you will need, customizable and very easy to deploy wi
 		<summary>Stats</summary>
 
 		[![GitHub: tomav/docker-mailserver](https://img.shields.io/github/stars/tomav/docker-mailserver?style=flat&logo=github&label=docker-mailserver&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/tomav/docker-mailserver)  [![Docker Mailserver on Awesome Privacy](https://img.shields.io/badge/Docker_Mailserver-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/networking/mail-servers/docker-mailserver) 
+
+		</details>
+- **[<img src='https://mailcow.email/images/cow_mailcow.svg' width='16' height='16' alt='icon' /> mailcow](https://mailcow.email/)** - A mail server with everything you need (SMTP, IMAP, webmail, NextCloud support..) using Docker.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: mailcow/mailcow-dockerized](https://img.shields.io/github/stars/mailcow/mailcow-dockerized?style=flat&logo=github&label=mailcow-dockerized&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/mailcow/mailcow-dockerized)  [![mailcow on Awesome Privacy](https://img.shields.io/badge/mailcow-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/networking/mail-servers/mailcow) 
 
 		</details>
 
