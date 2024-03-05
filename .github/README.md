@@ -316,7 +316,9 @@ It features small explicit keys, no config options, and UNIX-style composability
 > - [AES Crypt](https://www.aescrypt.com/) - A light-weight and easy file encryption utility. It includes applications for Windows, Mac OS, BSD and Linux, all of which can be interacted with either through the GUI, CLI or programatically though an API (available for Java, C, C# and Python). Although it is well established, with an overall positive reputation, there have been some [security issues](https://www.reddit.com/r/privacytoolsIO/comments/b7riov/aes_crypt_security_audit_1_serious_issue_found/) raised recently.
 > - [CryptSetup](https://gitlab.com/cryptsetup/cryptsetup) - is a convenient layer for use on top of [dm-crypt](https://wiki.archlinux.org/index.php/Dm-crypt). [EncFS](https://github.com/vgough/encfs) is a cross-platform file-based encryption module, for use within user local directories. [geli](https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8) is a disk encryption subsystem included with FreeBSD.
 > - [BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview) - is popular among Microsoft Windows and enterprise users, and provides fast, efficient and (if correctly configured) reasonably secure full drive encryption. However it is not open source, has poor compatibility with other operating systems, and has some very dodgy [defaults](https://www.diskcryptor.org/why-not-bitlocker/), which could lead to your system being compromised. Similarly, Apple's [FileVault](https://support.apple.com/en-us/HT204837) on MacOS is easy and secure, but again, the source code is proprietary.
-> - [DiskCryptor](https://www.diskcryptor.org/) - Windows-only, open source, file and volume encryption solution, that makes a good alternative to BitLocker.</details>
+> - [DiskCryptor](https://www.diskcryptor.org/) - Windows-only, open source, file and volume encryption solution,
+that makes a good alternative to BitLocker.
+</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -328,7 +330,8 @@ It features small explicit keys, no config options, and UNIX-style composability
 settings to improve on privacy, security and user freedom. Mozilla telemetry is
 disabled, ties with Google (Safe Browsing) are severed, the content blocker
 [uBlock Origin](https://github.com/gorhill/uBlock) is included and privacy
-defaults are guided by research like the [Arkenfox project](https://github.com/arkenfox/user.js/).
+defaults are guided by research like the
+[Arkenfox project](https://github.com/arkenfox/user.js/).
  	- <details>
 		<summary>Stats</summary>
 
@@ -360,7 +363,8 @@ or [12Bytes](https://codeberg.org/12bytes/firefox-config-guide)
 - **[<img src='https://www.torproject.org/static/images/favicon/favicon.ico' width='16' height='16' alt='icon' /> Tor Browser](https://www.torproject.org/)** - Tor provides an extra layer of anonymity, by encrypting each of your requests, then
 routing it through several nodes, making it near-impossible for you to be tracked by
 your ISP/ provider. It does make every-day browsing a little slower, and some sites
-may not work correctly. As with everything there are [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
+may not work correctly. As with everything there are
+[trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
  	- <details>
 		<summary>Stats</summary>
 
@@ -379,7 +383,7 @@ adblock and additional settings for hardening.
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
 
-> New vulnerabilities are being discovered and patched all the time - use a browser that is being actively maintained, in order to receive these security-critical updates.<br> Even privacy-respecting browsers, often do not have the best privacy options enabled by default. After installing, check the privacy & security settings, and update the configuration to something that you are comfortable with. 12Bytes maintains a comprehensive guide on [Firefox Configuration for Privacy and Performance](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs/)
+> New vulnerabilities are being discovered and patched all the time - use a browser that is being actively maintained, in order to receive these security-critical updates.<br> Even privacy-respecting browsers, often do not have the best privacy options enabled by default. After installing, check the privacy & security settings, and update the configuration to something that you are comfortable with. 12Bytes maintains a comprehensive guide on [Firefox Configuration for Privacy and Performance](https://codeberg.org/12bytes/firefox-config-guide)
 
 
 </details>
@@ -455,7 +459,8 @@ strong encryption (see [Signal Protocol](https://en.wikipedia.org/wiki/Signal_Pr
 with a simple UI and plenty of features. It's widely used across the world, and
 easy-to-use, functioning similar to WhatsApp - with instant messaging, read-receipts,
 support for media attachments and allows for high-quality voice and video calls.
-It's cross-platform, open-source and totally free. Signal is [recommended](https://twitter.com/Snowden/status/661313394906161152)
+It's cross-platform, open-source and totally free. Signal is
+[recommended](https://twitter.com/Snowden/status/661313394906161152)
 by Edward Snowden, and is a perfect solution for most users.
  	- <details>
 		<summary>Stats</summary>
@@ -602,7 +607,8 @@ accept anonymous payment: BTC and cash (as well as the normal credit card and Pa
 - **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
 secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
 full-featured free plan or a premium subscription for businesses allowing for
-custom domains ($12/ month). Tuta [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
+custom domains ($12/ month). Tuta
+[does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
 like most encrypted mail providers, instead they use a standardized, hybrid method
 consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
 2048 bit RSA). This causes compatibility issues when communicating with contacts
@@ -651,9 +657,12 @@ mail client with SSL. There's also currently no anonymous payment option.
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
 
-> - When using an end-to-end encryption technology like OpenPGP, some metadata in the email header will not be encrypted.
-- OpenPGP also does not support Forward secrecy, which means if either your or the recipient's private key is ever stolen,
-all previous messages encrypted with it will be exposed. You should take great care to keep your private keys safe.
+> - When using an end-to-end encryption technology like OpenPGP, some metadata
+in the email header will not be encrypted.
+- OpenPGP also does not support Forward secrecy, which means if either
+your or the recipient's private key is ever stolen, all previous messages
+encrypted with it will be exposed. You should take great care to keep your
+private keys safe.
 
 
 </details>
@@ -755,8 +764,8 @@ OpenKeychain along side it, in order to encrypt/ decrypt emails using OpenPGP.
 
 Revealing your real email address online can put you at risk. Email aliasing allows messages to be sent to [anything]@my-domain.com and still land in your primary inbox. This protects your real email address from being revealed. Aliases are generated automatically, the first time they are used. This approach lets you identify which provider leaked your email address, and block an alias with 1-click.
 
-- **[<img src='https://addy.io/apple-touch-icon.png' width='16' height='16' alt='icon' /> Addy](https://addy.io)** - An open source anonymous email forwarding service, allowing you to create unlimited
-email aliases. Has a free plan.
+- **[<img src='https://addy.io/apple-touch-icon.png' width='16' height='16' alt='icon' /> Addy](https://addy.io)** - An open source anonymous email forwarding service, allowing you to
+create unlimited email aliases. Has a free plan.
  	- <details>
 		<summary>Stats</summary>
 
@@ -2574,25 +2583,30 @@ month for 10GB, additional plans go up-to 2TB.
 
 ### Backup and Sync
 
-- **[<img src='https://www.seafile.com/media/img/favicon.png?t=3' width='16' height='16' alt='icon' /> SeaFile](https://www.seafile.com)** - An open source cloud storage and sync solution. Files are grouped into Libraries, which can be individually encrypted,
-shared of synced. Docker image available for easy deployment, and native clients for Windows, Mac, Linux, Android and iOS.
+- **[<img src='https://www.seafile.com/media/img/favicon.png?t=3' width='16' height='16' alt='icon' /> SeaFile](https://www.seafile.com)** - An open source cloud storage and sync solution.
+Files are grouped into Libraries, which can be individually encrypted,
+shared of synced. Docker image available for easy deployment, and native
+clients for Windows, Mac, Linux, Android and iOS.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: haiwen/seafile](https://img.shields.io/github/stars/haiwen/seafile?style=flat&logo=github&label=seafile&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/haiwen/seafile) [![Privacy Policy](https://shields.tosdr.org/en_4322.svg)](https://tosdr.org/en/service/4322) [![SeaFile on Awesome Privacy](https://img.shields.io/badge/SeaFile-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/backup-and-sync/seafile) 
 
 		</details>
-- **[<img src='https://syncthing.net/img/favicons/apple-touch-icon-152x152.png' width='16' height='16' alt='icon' /> Syncthing](https://syncthing.net)** - Continuous file synchronization between 2 or more clients. It is simple, yet powerful, and fully-encrypted and private.
-Syncthing can be deployed with Docker, and there are native clients for Windows, Mac, Linux, BSD and Android.
+- **[<img src='https://syncthing.net/img/favicons/apple-touch-icon-152x152.png' width='16' height='16' alt='icon' /> Syncthing](https://syncthing.net)** - Continuous file synchronization between 2 or more clients. It is simple,
+yet powerful, and fully-encrypted and private.
+Syncthing can be deployed with Docker, and there are native clients
+for Windows, Mac, Linux, BSD and Android.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: syncthing/syncthing](https://img.shields.io/github/stars/syncthing/syncthing?style=flat&logo=github&label=syncthing&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/syncthing/syncthing)  [![Syncthing on Awesome Privacy](https://img.shields.io/badge/Syncthing-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/backup-and-sync/syncthing) 
 
 		</details>
-- **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - Feature-rich productivity platform, that can be used to backup and selectively sync encrypted files and folders between
-1 or more clients. A key benefit the wide range of plug-ins in the NextCloud App Store, maintained by the community.
-NextCloud was a hard fork off OwnCloud.
+- **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - Feature-rich productivity platform, that can be used to backup and
+selectively sync encrypted files and folders between 1 or more clients.
+A key benefit the wide range of plug-ins in the NextCloud App Store,
+maintained by the community. NextCloud was a hard fork off OwnCloud.
  	- <details>
 		<summary>Stats</summary>
 
@@ -2619,7 +2633,8 @@ For hosted solutions - use a strong password, keep your credentials safe and ena
 > Both of offer an encrypted and efficient sync between 2 or more locations,
 > using the [rsync](https://linux.die.net/man/1/rsync) algorithm.
 > 
-> [SpiderOak](https://spideroak.com), [Tresorit](https://tresorit.com) and [Resilio](https://www.resilio.com/individuals)
+> [SpiderOak](https://spideroak.com), [Tresorit](https://tresorit.com) and
+> [Resilio](https://www.resilio.com/individuals)
 > are good enterprise solutions, all with solid encryption baked-in
 > 
 > [FileRun](https://filerun.com) and [Pydio](https://pydio.com)
@@ -2632,55 +2647,66 @@ For hosted solutions - use a strong password, keep your credentials safe and ena
 
 ### Cloud Productivity Suites
 
-- **[<img src='https://cryptpad.fr/customize/CryptPad_logo.svg' width='16' height='16' alt='icon' /> CryptPad](https://cryptpad.org/)** - A zero knowledge cloud productivity suite. Provides Rich Text, Presentations, Spreadsheets, Kanban, Paint a code
-editor and file drive. All notes and user content, are encrypted by default, and can only be accessed with specific
-URL. The main disadvantage, is a lack of Android, iOS and desktop apps - CryptPad is entirely web-based. You can use
-their web service, or you can host your own instance. Price for hosted: free for 50mb or $5/ month for premium.
+- **[<img src='https://cryptpad.fr/customize/CryptPad_logo.svg' width='16' height='16' alt='icon' /> CryptPad](https://cryptpad.org/)** - A zero knowledge cloud productivity suite. Provides Rich Text,
+Presentations, Spreadsheets, Kanban, Paint a code editor and file drive.
+All notes and user content, are encrypted by default, and can only be
+accessed with specific URL. The main disadvantage, is a lack of Android,
+iOS and desktop apps - CryptPad is entirely web-based. You can use their
+web service, or you can host your own instance. Price for hosted: free
+for 50mb or $5/ month for premium.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: xwiki-labs/cryptpad](https://img.shields.io/github/stars/xwiki-labs/cryptpad?style=flat&logo=github&label=cryptpad&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/xwiki-labs/cryptpad) [![Privacy Policy](https://shields.tosdr.org/en_2584.svg)](https://tosdr.org/en/service/2584) [![CryptPad on Awesome Privacy](https://img.shields.io/badge/CryptPad-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/cryptpad) 
 
 		</details>
-- **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - A complete self-hosted productivity platform, with a strong community and growing app store. NextCloud is similar to
-(but arguably more complete than) Google Drive, Office 365 and Dropbox. Clear UI and stable native apps across all
-platforms, and also supports file sync. Supports encrypted files, but you need to configure this yourself. Fully open
-source.
+- **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - A complete self-hosted productivity platform, with a strong community
+and growing app store. NextCloud is similar to (but arguably more complete
+than) Google Drive, Office 365 and Dropbox. Clear UI and stable native
+apps across all platforms, and also supports file sync. Supports encrypted
+files, but you need to configure this yourself. Fully open source.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: nextcloud/server](https://img.shields.io/github/stars/nextcloud/server?style=flat&logo=github&label=server&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/nextcloud/server) [![Privacy Policy](https://shields.tosdr.org/en_707.svg)](https://tosdr.org/en/service/707) [![NextCloud on Awesome Privacy](https://img.shields.io/badge/NextCloud-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/nextcloud) 
 
 		</details>
-- **[<img src='https://disroot.org/user/themes/disroot/images/favicon.png' width='16' height='16' alt='icon' /> Disroot](https://disroot.org)** - A platform providing online services based on principles of freedom, privacy, federation and decentralization. It is
-an implementation of NextCloud, with strong encryption configured - it is widely used by journalists, activists and
-whistle-blowers. It is free to use, but there have been reported reliability issues of the cloud services.
+- **[<img src='https://disroot.org/user/themes/disroot/images/favicon.png' width='16' height='16' alt='icon' /> Disroot](https://disroot.org)** - A platform providing online services based on principles of freedom,
+privacy, federation and decentralization. It is an implementation of
+NextCloud, with strong encryption configured - it is widely used by
+journalists, activists and whistle-blowers. It is free to use, but
+there have been reported reliability issues of the cloud services.
  	- <details>
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1826.svg)](https://tosdr.org/en/service/1826) [![Disroot on Awesome Privacy](https://img.shields.io/badge/Disroot-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/disroot) 
 
 		</details>
-- **[<img src='https://sandstorm.io/favicon.ico' width='16' height='16' alt='icon' /> Sandstorm](https://sandstorm.io)** - An open source platform for self-hosting web apps. Once you've set it up, you can install items from the Sandstorm
-App Market with -click, similar to NextCloud in terms of flexibility.
+- **[<img src='https://sandstorm.io/favicon.ico' width='16' height='16' alt='icon' /> Sandstorm](https://sandstorm.io)** - An open source platform for self-hosting web apps. Once you've set it up,
+you can install items from the Sandstorm App Market with -click,
+similar to NextCloud in terms of flexibility.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: sandstorm-io/sandstorm](https://img.shields.io/github/stars/sandstorm-io/sandstorm?style=flat&logo=github&label=sandstorm&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/sandstorm-io/sandstorm)  [![Sandstorm on Awesome Privacy](https://img.shields.io/badge/Sandstorm-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/sandstorm) 
 
 		</details>
-- **[<img src='https://vikunja.io/favicon.ico' width='16' height='16' alt='icon' /> Vikunja](https://vikunja.io)** - Vikunja is an open-source to-do application. It is suitable for a wide variety of projects, supporting List, Gantt,
-Table and Kanban views to visualize all tasks in different contexts. For collaboration, it has sharing support via
-private teams or public links. It can be self-hosted or used as a managed service for a small fee.
+- **[<img src='https://vikunja.io/favicon.ico' width='16' height='16' alt='icon' /> Vikunja](https://vikunja.io)** - Vikunja is an open-source to-do application. It is suitable for a wide
+variety of projects, supporting List, Gantt, Table and Kanban views to
+visualize all tasks in different contexts. For collaboration, it has
+sharing support via private teams or public links. It can be self-hosted
+or used as a managed service for a small fee.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: go-vikunja/vikunja](https://img.shields.io/github/stars/go-vikunja/vikunja?style=flat&logo=github&label=vikunja&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/go-vikunja/vikunja)  [![Vikunja on Awesome Privacy](https://img.shields.io/badge/Vikunja-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/vikunja) 
 
 		</details>
-- **[<img src='https://skiff.com/favicon.ico' width='16' height='16' alt='icon' /> Skiff Pages](https://skiff.com/pages)** - Skiff Pages is an end-to-end encrypted, privacy-first collaborative document, note-taking, and wiki product. Skiff
-Pages has a modern, easy-to-use UI and supports rich text documents with embedded content. Skiff also supports end-to-end
-encrypted file upload and sharing (Skiff Drive), as well as workspaces for multiple users to collaborate.
+- **[<img src='https://skiff.com/favicon.ico' width='16' height='16' alt='icon' /> Skiff Pages](https://skiff.com/pages)** - Skiff Pages is an end-to-end encrypted, privacy-first collaborative
+document, note-taking, and wiki product. Skiff Pages has a modern,
+easy-to-use UI and supports rich text documents with embedded content.
+Skiff also supports end-to-end encrypted file upload and sharing
+(Skiff Drive), as well as workspaces for multiple users to collaborate.
  	- <details>
 		<summary>Stats</summary>
 
@@ -3723,14 +3749,21 @@ you are happy with how it works, from a privacy perspective.
 
 ### Cryptocurrencies
 
-- **[<img src='https://icon.horse/icon/www.getmonero.org' width='16' height='16' alt='icon' /> Monero](https://www.getmonero.org)** - One of the most private cryptocurrencies, since no meta data is available (not even the transaction amount). It uses complex on-chain cryptographic methods such as Ring signatures, RingCT, Kovri, and Stealth addresses all of which help protect the privacy of users.
+- **[<img src='https://icon.horse/icon/www.getmonero.org' width='16' height='16' alt='icon' /> Monero](https://www.getmonero.org)** - One of the most private cryptocurrencies, since no meta data is available
+(not even the transaction amount). It uses complex on-chain cryptographic
+methods such as Ring signatures, RingCT, Kovri, and Stealth addresses all
+of which help protect the privacy of users.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: monero-project/monero](https://img.shields.io/github/stars/monero-project/monero?style=flat&logo=github&label=monero&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/monero-project/monero) [![Privacy Policy](https://shields.tosdr.org/en_8279.svg)](https://tosdr.org/en/service/8279) [![Monero on Awesome Privacy](https://img.shields.io/badge/Monero-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/finance/cryptocurrencies/monero) 
 
 		</details>
-- **[<img src='https://icon.horse/icon/z.cash' width='16' height='16' alt='icon' /> ZCash](https://z.cash)** - Uses zero-knowledge proofs to protect privacy cryptographic technique, that allows two users to transact without ever revealing their true identity or address. The Zcash blockchain uses two types of addresses and transactions, Z transactions and addresses are private and T transactions and addresses are transparent like Bitcoin.
+- **[<img src='https://icon.horse/icon/z.cash' width='16' height='16' alt='icon' /> ZCash](https://z.cash)** - Uses zero-knowledge proofs to protect privacy cryptographic technique,
+that allows two users to transact without ever revealing their true identity
+or address. The Zcash blockchain uses two types of addresses and transactions,
+Z transactions and addresses are private and T transactions and addresses
+are transparent like Bitcoin.
  	- <details>
 		<summary>Stats</summary>
 
