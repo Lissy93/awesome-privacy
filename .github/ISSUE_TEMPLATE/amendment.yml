@@ -24,7 +24,6 @@ body:
       description: |
         Please describe what amendments should be made.
         When required, link to relevant info from reputable sources to help with fact checking. 
-      placeholder: ''
     validations:
       required: true
 
@@ -36,7 +35,6 @@ body:
       description: >-
         For transparency, please state if you currently / previously have had any association with
         this project.
-      placeholder: ''
     validations:
       required: false
 

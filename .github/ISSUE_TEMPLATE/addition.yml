@@ -37,7 +37,6 @@ body:
       description: >-
         Please include links to any relevant supporting material, like the projects GitHub repo,
         website / docs, privacy policy and any recent security audits
-      placeholder: ''
     validations:
       required: true
 
@@ -49,7 +48,6 @@ body:
       description: >-
         For transparency, please state whether you currently / previously have had any association with
         this project in any form. \nIf you have, then please also specify the context of your involvement
-      placeholder: ''
     validations:
       required: false
 
