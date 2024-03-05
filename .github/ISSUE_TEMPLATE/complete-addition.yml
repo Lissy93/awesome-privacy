@@ -1,6 +1,9 @@
-name: Service Addition
-description: Submit a software/service listing for inclusion on Awesome Privacy
-title: '[ADDITION] <service_name_here>'
+name: Complete Addition
+description: |
+  Submit a software/service listing for inclusion on Awesome Privacy
+  Choose this template to provide all details for a new listing which
+  meets all the requirements
+title: '[ADDITION] <service_name_here> (Complete)'
 assignees:
   - lissy93
   - liss-bot
@@ -34,7 +37,12 @@ body:
       value: >-
         Before proceeding, please ensure you've read the guidelines outlined in
         our [Contributing
-        Docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md).
+        Docs](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md),
+        and that you're addition meets the
+        [requirements](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md#requirements).<br>
+        If you're unsure, submit a
+        [Suggested Addition](https://github.com/Lissy93/awesome-privacy/issues/new?assignees=lissy93&labels=Suggested+Addition%2CAwaiting+Review&projects=&template=addition.yml&title=%5BADDITION%5D+%3Ctitle%3E)
+        instead.
   - type: input
     id: service-name
     attributes:

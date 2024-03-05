@@ -7,7 +7,7 @@ assignees:
 body:
   # Title
   - type: input
-    id: title
+    id: service-title
     attributes:
       label: Title
       description: >-
@@ -16,7 +16,7 @@ body:
     validations:
       required: true
 
-  # Amendments description
+  # Removal description
   - type: textarea
     id: removal-reason
     attributes:
@@ -24,9 +24,20 @@ body:
       description: |
         Describe why this project should be removed.
         Please backup your argument with relevant and accurate info, and link to references from reputable sources. 
-      placeholder: 
     validations:
       required: true
+
+  # Optional, removal data (auto-filled from awesome-privacy.xyz)
+  - type: textarea
+    id: removal-data
+    attributes:
+      label: Removal Data
+      render: yaml
+      placeholder: |
+        You do not need to fill this section in, if you're manually submitting this removal request.
+        For users submitting via awesome-privacy.xyz this will be auto-filled.
+    validations:
+      required: false
 
   # Association disclosure
   - type: input
@@ -34,9 +45,8 @@ body:
     attributes:
       label: Association Disclosure
       description: >-
-        For transparency, please state if you currently / previously have had any association with
-        this project, or another project within a similar industry / category
-      placeholder:
+        For transparency, please state if you currently / previously have had any affiliation with
+        either this project, or another project within a similar industry / category
     validations:
       required: false
 
@@ -66,7 +76,9 @@ body:
           required: true
         - label: A similar submission has not already [been opened](https://github.com/Lissy93/awesome-privacy/issues?q=is%3Aissue) for this software/ service
           required: true
-        - label: You agree to the [code of conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
+        - label: You have read our [Contributing Guide](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md) and software requirements
+          required: true
+        - label: You agree to the [Code of Conduct](https://github.com/Lissy93/awesome-privacy/blob/main/.github/CODE_OF_CONDUCT.md)
           required: true
   
   # Final message
@@ -77,5 +89,4 @@ body:
         <img align="left" width="160" src="https://i.ibb.co/S5vCnhL/gh-thanks.gif" alt="🐙" />
         Thank you for your suggested removal! You should expect a reply within 48 hours.<br>
         ⭐️ Consider dropping the repo a star if you're enjoying Awesome-Privacy.<br>
-    validations:
-      required: false
+

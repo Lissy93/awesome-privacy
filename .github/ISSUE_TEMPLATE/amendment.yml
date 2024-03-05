@@ -7,7 +7,7 @@ assignees:
 body:
   # Title
   - type: input
-    id: title
+    id: service-title
     attributes:
       label: Title
       description: >-
@@ -26,6 +26,18 @@ body:
         When required, link to relevant info from reputable sources to help with fact checking. 
     validations:
       required: true
+
+  # Optional, amendment data (auto-filled from awesome-privacy.xyz)
+  - type: textarea
+    id: amendment-data
+    attributes:
+      label: Amendment Data
+      render: yaml
+      placeholder: |
+        You do not need to fill this section in if you're manually submitting this removal request.
+        For users submitting via awesome-privacy.xyz this will be auto-filled.
+    validations:
+      required: false
 
   # Association disclosure
   - type: input
