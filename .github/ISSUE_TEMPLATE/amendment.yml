@@ -34,7 +34,7 @@ body:
       label: Amendment Data
       render: yaml
       placeholder: |
-        You do not need to fill this section in if you're manually submitting this removal request.
+        You do not need to fill this section in if you're manually submitting this amendment request.
         For users submitting via awesome-privacy.xyz this will be auto-filled.
     validations:
       required: false
