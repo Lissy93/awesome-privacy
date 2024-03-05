@@ -23,6 +23,10 @@
     faceMeh: solidIcons.faMeh,
     faceBad: solidIcons.faFrown,
 
+    // Service actions
+    delete: solidIcons.faTrash,
+    edit: solidIcons.faPenToSquare,
+
     // Website Detailed Stats
     blacklistFound: solidIcons.faDoNotEnter,
     blacklistNotFound: solidIcons.faShieldCheck,

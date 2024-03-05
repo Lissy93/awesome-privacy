@@ -32,6 +32,41 @@ const licenseContent = async () => {
 	return await response.text();
 };
 
+const aboutOurData = `
+All data is stored in 
+[\`awesome-privacy.yml\`](https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml).
+
+This file is then pulled into the website at build-time, and also used to generate
+the repositories README file.
+We use this method in the interest of transparency and data integrity,
+as Git makes it possible to maintain a full log of what was changed, when, by who and why.
+
+### Augmention
+The data is augmented with some extra info, to add additional context to each service.
+The aim of this is to give you a broader picture of each service, to help you make a more informed decision.
+Currently, this extra data is pulled from:
+
+- **GitHub API** - To fetch info about each project's repository
+	- Including author & contributors, creation & last updated date, languages, license and star count
+- **Web Check** - To fetch info about each project's website
+	- Including SSL chain, WHOIS, server location, blacklist check and a screenshot
+- **ToS;DR** - To fetch a summerized version of each services Privacy Policy
+	- Including policy and terms of service links, postives + negatives and privacy score
+- **User Reviews** - User-submitted comments + feedback on a given service
+	- Implemented using self-hosted instance of Remark42
+- **Portainer Templates** - To fetch info about each project's Docker image (if it's self-hosted)
+	- Including supported architectures, run command, pull count, last updated and config options
+
+### API
+We also have a free, no-auth, CORS-enabled RESR API,
+which you can use to access Awesome Privacy's data programmatically,
+or to build your own apps on top of it.
+
+The [Swagger Spec](#) outlines all endpoints, usage and examples.
+
+The host is: \`https://api.awesome-privacy.xyz\`
+`;
+
 const projectRequrements = `
 For software to be included in this list, it must meet the following requirements: 
 
@@ -43,13 +78,16 @@ For software to be included in this list, it must meet the following requirement
   - The software must be secure by default, without requiring additional configuration
   - There should be no current, critical security issues
   - The handling of past issues must have been prompt, transparent and effective
+  - Ideally hosted services should have been security audited, with the report published publicly
 - **Open Source**
 	- The full source code should be released under an open source license
 	- Ideally it should be possible for the user to build and run/deploy the software themselves from source
 - **Actively Maintained**
   - The developers should address dependency updates and security patches in a timely manner
+  - Ideally the source should have been updated within the last 12 months 
 - **Transparent**
   - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
+  - For hosted solutions, the privacy policy should clearly state what data is collected, how it's used and how long it's stored
 - **Ethical**
   - Must not suppress free speech, discriminate or disregard any human rights
 - **Relevant**
@@ -174,6 +212,10 @@ const description = 'Privacy is a fundamental human right; '
 
 		<h2 id="creteria">Software Requirements</h2>
 		<div class="software-requirements"><p set:html={parseMarkdown(projectRequrements)}></p></div>
+		<hr />
+
+		<h2 id="our-data">Our Data</h2>
+		<div class="about-the-data"><p set:html={parseMarkdown(aboutOurData)}></p></div>
 		<hr />
 
 		<h2 id="contributing">Contributing</h2>
@@ -305,7 +347,7 @@ h2 {
 	margin: 2rem 0 1rem 0;
 }
 p {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 hr {
 	margin: 2rem 0;
@@ -323,14 +365,15 @@ h3 {
 	font-size: 1.6rem;
 }
 
-.software-requirements {
+.software-requirements, .about-the-data {
 	:global(p) {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
+		margin: 0 0 0.5rem 0;
 	}
 	:global(ul) {
 		padding-left: 0.5rem;
 		list-style: none;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		:global(li ul) {
 			padding: 0 0 0.5rem 1rem;
 			list-style: circle;
@@ -340,6 +383,20 @@ h3 {
 	:global(ul li:hover strong) {
 		transition: color 0.2s ease-in-out;
 		color: var(--accent-3);
+	}
+	:global(h3) {
+		font-size: 1.6rem;
+		margin-bottom: 0;
+	}
+	:global(strong) {
+		font-weight: 500;
+	}
+	:global(code) {
+		font-family: 'Courier New', Courier, monospace;
+		background: #acabb782;
+    padding: 0.2rem 0.4rem;
+    border-radius: var(--curve-sm);
+    font-size: 0.9rem;
 	}
 }
 
@@ -401,6 +458,7 @@ h3 {
 		max-width: 550px;
 		margin: 0 auto;
 	}
+	
 	small {
 		font-size: 1rem;
 		margin: 1rem 0;

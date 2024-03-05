@@ -39,11 +39,7 @@ else if (risk < 50) riskText = 'risky';
 else if (risk < 75) riskText = 'dangerous';
 else if (risk >= 75) riskText = 'very dangerous';
 
-
-const clientSideKey = 'cd02a8520c90410bbc32440950bd3b7e';
-const screenshotOptions = 'format=png&width=960&height=540&ttl=2419200&response_type=image&no_cookie_banners=true&no_ads=true';
-const screenshotEndpoint = 'https://api.apiflash.com/v1';
-const screenshotUrl = `${screenshotEndpoint}/urltoimage?access_key=${clientSideKey}&url=${encodeURIComponent(url)}&${screenshotOptions}`;
+const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
 
 ---
 

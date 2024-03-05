@@ -90,7 +90,7 @@ const {
     <FontAwesome iconName="openSource" /> Open Source
   </span> -->
   <span title={`GitHub repository:  ${github}`}>
-    <a href={`https://github.com/${github}`}><FontAwesome iconName="github" /> {github}</a>
+    <a href={`https://github.com/${github}`} target="_blank"><FontAwesome iconName="github" /> {github}</a>
   </span>
   { stats.statusCode === 200 && stats.data && (
     <span title={`GitHub Star Count: ${stargazers_count}`}>

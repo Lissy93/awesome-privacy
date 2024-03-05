@@ -4,6 +4,7 @@ import Button from '@components/form/Button.astro';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
+import DeleteListing from '@components/things/DeleteListing.svelte';
 import { slugify } from '@utils/fetch-data';
 
 import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
@@ -52,9 +53,7 @@ const {
     <ul>
     {services.map((service: Service) => (
       <li id={slugify(service.name)}>
-        <div class="actions">
-        
-          </div>
+        <DeleteListing client:load categoryName={categoryName} sectionName={sectionName} serviceName={service.name} />
         <div class="service-head">
           <img 
             width="40"
@@ -106,7 +105,7 @@ const {
             { service.github && !noGitHubMetrics && <GitHubMetrics github={service.github} /> }
             { service.github && noGitHubMetrics && (
               <span class="meta-item" title={`View ${service.name} on GitHub`}>
-                <a href={`https://github.com/${service.github}`}>
+                <a href={`https://github.com/${service.github}`} target="_blank">
                   <FontAwesome iconName="github" /> {service.github}
                 </a>
               </span>
@@ -155,6 +154,7 @@ const {
     margin: 0 0 3rem 0;
     li {
       margin-bottom: 1rem;
+      position: relative;
       .service-head {
         display: flex;
         align-items: center;
@@ -166,6 +166,24 @@ const {
           h3, h4 {
             margin: 0;
             font-size: 1.6rem;
+          }
+
+          position: relative;
+          &:after {    
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 50%;
+            position: absolute;
+            background: var(--accent-3);
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+          &:hover:after { 
+            width: 100%; 
+            left: 0; 
           }
         }
         
@@ -275,14 +293,16 @@ const {
     }
   }
 
+  section :global(.view-all) {
+    width: fit-content;
+    position: absolute;
+    right: 1rem;
+    margin-top: -2.5rem;
+    background: var(--accent-3);
+  }
 
-
-section :global(.view-all) {
-  width: fit-content;
-  position: absolute;
-  right: 1rem;
-  margin-top: -2.5rem;
-  background: var(--accent-3);
-}
+  li:hover :global(.actions) {
+    opacity: 0.5;
+  }
   
 </style>

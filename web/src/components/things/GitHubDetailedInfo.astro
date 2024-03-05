@@ -13,7 +13,6 @@ const { gitHubData, repo } = Astro.props;
 
 
 function generateChartData(languages: Record<string, number>): string {
-
   const colorMap: { [key: string]: string } = {
     'TypeScript': '#2b7489', 
     'Objective-C++': '#6866fb', 
@@ -21,26 +20,26 @@ function generateChartData(languages: Record<string, number>): string {
     'Dart': '#00B4AB', 
     'Shell': '#89e051',  
     'Elixir': '#6e4a7e', 
-    'Kotlin': '#F18E33', 
+    'Kotlin': '#7F52FF', 
     'Objective-C': '#438eff', 
-    'Ruby': '#701516', 
-    'Go': '#375eab', 
+    'Ruby': '#CC342D', 
+    'Go': '#00ADD8', 
     'PHP': '#4F5D95', 
     'Java': '#b07219', 
     'Scala': '#DC322F', 
     'Makefile': '#427819', 
-    'Perl': '#0298c3', 
-    'Lua': '#000080', 
-    'Vue': '#2c3e50', 
-    'HTML': '#e44b23', 
-    'Swift': '#ffac45', 
-    'C': '#555555',
+    'Perl': '#39457E', 
+    'Lua': '#2C2D72', 
+    'Vue': '#4FC08D', 
+    'HTML': '#E34F26', 
+    'Swift': '#F05138', 
+    'C': '#A8B9CC',
     'C#': '#097c01',
     'Clojure': '#db5855', 
     'Rust': '#dea584', 
     'Assembly': '#6E4C13', 
     'Arduino': '#bd79d1', 
-    'C Sharp': '#178600', 
+    'C Sharp': '#512BD4', 
     'CSS': '#563d7c', 
     'TeX': '#3D6117', 
     'OCaml': '#3be133', 
@@ -55,7 +54,9 @@ function generateChartData(languages: Record<string, number>): string {
     'Common Lisp': '#3fb68b', 
     'Groovy': '#e69f56', 
     'Julia': '#a270ba', 
-    'cpp': '#f34b7d', 
+    'cpp': '#00599C',
+    'C++': '#00599C',
+    'Dockerfile': '#2496ED',
   };
 
   // Arrays to hold the data, labels, and colors
@@ -131,7 +132,7 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
     <h4>Author</h4>
     <p>
       <img src={gitHubData.info.ownerAvatar} width="20" height="20" />
-      <a href={`https://github.com/${gitHubData.info.ownerUsername}`}>
+      <a target="_blank" href={`https://github.com/${gitHubData.info.ownerUsername}`}>
         {gitHubData.info.ownerUsername}
       </a>
     </p>
@@ -184,7 +185,9 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
         {gitHubData.contributors.map((contributor) => (
           <li>
             <img src={contributor.avatar} width="20" height="20" />
-            <a href={`https://github.com/${contributor.username}`}>@{contributor.username}</a> ({contributor.contributions})
+            <a href={`https://github.com/${contributor.username}`} target="_blank">
+              @{contributor.username}
+              </a> ({contributor.contributions})
           </li>
         ))}
       </ul>
@@ -195,7 +198,9 @@ const languageChart = `https://quickchart.io/chart?c=${generateChartData(gitHubD
         {gitHubData.commits.map((commit) => (
           <li>
             <img src={commit.authorAvatar} width="20" height="20" />
-            <a href={`https://github.com/${commit.authorUsername}`}>{commit.authorName}</a>
+            <a href={`https://github.com/${commit.authorUsername}`} target="_blank">
+              {commit.authorName}
+            </a>
             <span class="date" title={timeAgo(commit.authorDate)}>({formatDate(commit.authorDate)})</span>
             <p class="commit-msg">{commit.message}</p>
           </li>

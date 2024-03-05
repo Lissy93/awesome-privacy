@@ -6,6 +6,7 @@ import Comments from '@components/things/Comments.svelte';
 import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
 import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro';
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
+import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { fetchGitHubStats } from '@utils/fetch-repo-info';
@@ -123,6 +124,10 @@ const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
 
+const getApiEndpoint = () => {
+  return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
+}
+
 ---
 
 <Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
@@ -171,7 +176,7 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
           )}
           { tosdrId && (
           <li>
-            <b>ToS;DR:</b>
+            <b>Privacy:</b>
             <a href={`https://tosdr.org/en/service/${tosdrId}`}>{`tosdr.org/en/service/${tosdrId}`}</a>
           </li>
           )}
@@ -247,6 +252,29 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
         sectionName={parentSection.name}
       />
     </section>
+    <section>
+      <h3>About the Data: {name}</h3>
+      <DataActions client:load categoryName={categoryName} sectionName={parentSection.name} serviceName={name} />
+      <h4>API</h4>
+      <p>
+        You can access {name}'s data programmatically via our API.
+        Simply make a <code>GET</code> request to:
+      </p>
+      <pre><a href={getApiEndpoint()}><code>{getApiEndpoint()}</code></a></pre>
+      <p>
+        The REST API is free, no-auth and CORS-enabled.
+        To learn more, view the  <a href="/api/docs">Swagger Docs</a> or read the <a href="/about#our-api">API Usage Guide</a>.
+      </p>
+
+      <h4>About the Data</h4>
+      <p>
+        Beyond the user-submitted YAML you see above, we also augment each listing with
+        additional data dynamically fetched from several sources.
+        To learn more about where the rest of data included in this page comes from,
+        and how it is computed,
+        see the <a href="/about#our-data">About the Data</a> section of our About page.
+      </p>
+    </section>
 
     <div class="pagination-navigation">
       { previous ? (
@@ -276,6 +304,11 @@ main {
   width: 1000px;
   max-width: calc(100% - 5rem);
   position: relative;
+  @media(max-width: 768px) {
+    max-width: 95%;
+    padding: 0.5rem;
+    margin: 0 auto;
+  }
 }	
 
 section {
@@ -289,6 +322,10 @@ section {
 
 }
 
+p {
+  margin: 0.25rem 0 0.5rem 0;
+}
+
 h3 {
     font-size: 2rem;
     margin: -2rem 0 1rem -2rem;
@@ -297,12 +334,18 @@ h3 {
     color: var(--accent-fg);
     width: fit-content;
     padding: 0.25rem 0.5rem;
+    @media(max-width: 768px) {
+      margin: -2rem auto 2rem auto;
+    }
   }
 
 .service-head {
   h2 {
     font-size: 3rem;
     margin: 0;
+    @media(max-width: 768px) {
+      text-align: center;
+    }
   }
   .url-wrap {
     display: flex;
@@ -314,6 +357,9 @@ h3 {
     .follow-with {
       font-style: italic;
       opacity: 0.6;
+    }
+    @media(max-width: 768px) {
+      flex-direction: column;
     }
   }
   
@@ -333,6 +379,14 @@ h3 {
       color: var(--accent);
     }
   }
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .intro {
@@ -341,12 +395,15 @@ h3 {
   opacity: 0.9; 
   display: flex;
   gap: 0.5rem;
+  @media(max-width: 768px) {
+    flex-direction: column; 
+  }
   .service-icon {
     border-radius: var(--curve-md);
     margin-top: 1rem;
-  }
-  h4 {
-    margin-bottom: 0;
+    @media(max-width: 768px) {
+      margin: 1rem auto 0 auto;
+    }
   }
   ul {
     padding-left: 1rem;
@@ -359,6 +416,10 @@ h3 {
       font-weight: 400;
       min-width: 85px;
       display: inline-block;
+      @media(max-width: 768px) {
+        width: auto;
+        display: block;
+      }
     }
   }
 }
@@ -434,6 +495,23 @@ h3 {
       margin-bottom: 0.25rem;
       :global(p) {
         display: inline;
+      }
+    }
+  }
+}
+
+pre {
+  a {
+    text-decoration: none;
+    color: var(--foreground);
+    code {
+      background: #acabb782;
+      padding: 0.2rem 0.4rem;
+      border-radius: var(--curve-sm);
+      font-family: Courier New;
+      font-size: 0.9rem;
+      @media(max-width: 768px) {
+        white-space: break-spaces;
       }
     }
   }
