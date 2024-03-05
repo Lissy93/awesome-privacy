@@ -188,7 +188,7 @@ categories:
           Rust-based OTP authenticator. Has native With GNOME Shell integration. Also
           available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator).
 
-      - name: Authenticator
+      - name: Authenticator CC
         url: https://authenticator.cc
         icon: https://authenticator.cc/assets/logo/logo.svg
         github: Authenticator-Extension/Authenticator
