@@ -242,13 +242,13 @@ well-established (since mid-2010)
 		</details>
 - **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator GNOME](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also
 available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator).
- - **[<img src='https://authenticator.cc/assets/logo/logo.svg' width='16' height='16' alt='icon' /> Authenticator](https://authenticator.cc)** - Authenticator Extension is an in-browser One-Time Password (OTP) client,
+ - **[<img src='https://authenticator.cc/assets/logo/logo.svg' width='16' height='16' alt='icon' /> Authenticator CC](https://authenticator.cc)** - Authenticator Extension is an in-browser One-Time Password (OTP) client,
 supports both Time-Based One-Time Password (TOTP, specified in [RFC 6238](https://tools.ietf.org/html/rfc6238))
 and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ietf.org/html/rfc4226)).
  	- <details>
 		<summary>Stats</summary>
 
-		[![GitHub: Authenticator-Extension/Authenticator](https://img.shields.io/github/stars/Authenticator-Extension/Authenticator?style=flat&logo=github&label=Authenticator&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/Authenticator-Extension/Authenticator)  [![Authenticator on Awesome Privacy](https://img.shields.io/badge/Authenticator-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator) 
+		[![GitHub: Authenticator-Extension/Authenticator](https://img.shields.io/github/stars/Authenticator-Extension/Authenticator?style=flat&logo=github&label=Authenticator&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/Authenticator-Extension/Authenticator)  [![Authenticator CC on Awesome Privacy](https://img.shields.io/badge/Authenticator_CC-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-cc) 
 
 		</details>
 
