@@ -289,7 +289,9 @@ categories:
 
       - name: DiskCryptor
         url: https://www.diskcryptor.org/
-        description: Windows-only, open source, file and volume encryption solution, that makes a good alternative to BitLocker.
+        description: |
+          Windows-only, open source, file and volume encryption solution,
+          that makes a good alternative to BitLocker.
 
     ######################
     ###### Browsers ######
@@ -307,7 +309,8 @@ categories:
           settings to improve on privacy, security and user freedom. Mozilla telemetry is
           disabled, ties with Google (Safe Browsing) are severed, the content blocker
           [uBlock Origin](https://github.com/gorhill/uBlock) is included and privacy
-          defaults are guided by research like the [Arkenfox project](https://github.com/arkenfox/user.js/).
+          defaults are guided by research like the
+          [Arkenfox project](https://github.com/arkenfox/user.js/).
 
       - name: Brave Browser
         url: https://brave.com
@@ -342,7 +345,8 @@ categories:
           Tor provides an extra layer of anonymity, by encrypting each of your requests, then
           routing it through several nodes, making it near-impossible for you to be tracked by
           your ISP/ provider. It does make every-day browsing a little slower, and some sites
-          may not work correctly. As with everything there are [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
+          may not work correctly. As with everything there are
+          [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
       - name: Bromite
         url: https://www.bromite.org/
@@ -366,7 +370,7 @@ categories:
         Even privacy-respecting browsers, often do not have the best privacy options enabled by default.
         After installing, check the privacy & security settings, and update the configuration to
         something that you are comfortable with. 12Bytes maintains a comprehensive guide on
-        [Firefox Configuration for Privacy and Performance](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs/)
+        [Firefox Configuration for Privacy and Performance](https://codeberg.org/12bytes/firefox-config-guide)
     
     ############################
     ###### Search Engines ######
@@ -449,7 +453,8 @@ categories:
           with a simple UI and plenty of features. It's widely used across the world, and
           easy-to-use, functioning similar to WhatsApp - with instant messaging, read-receipts,
           support for media attachments and allows for high-quality voice and video calls.
-          It's cross-platform, open-source and totally free. Signal is [recommended](https://twitter.com/Snowden/status/661313394906161152)
+          It's cross-platform, open-source and totally free. Signal is
+          [recommended](https://twitter.com/Snowden/status/661313394906161152)
           by Edward Snowden, and is a perfect solution for most users.
 
       - name: Session
@@ -610,7 +615,8 @@ categories:
         Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)),
         the government also has full access to your emails (if not end-to-end encrypted) -
         this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.<br><br>
-        For a more details comparison of email providers, see [email-comparison.as93.net](https://email-comparison.as93.net/)
+        For a more details comparison of email providers, see
+        [email-comparison.as93.net](https://email-comparison.as93.net/)
       services:
       - name: ProtonMail
         url: https://protonmail.com
@@ -636,7 +642,8 @@ categories:
           Free and open source email service based in Germany. It has a basic intuitive UI,
           secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
           full-featured free plan or a premium subscription for businesses allowing for
-          custom domains ($12/ month). Tuta [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
+          custom domains ($12/ month). Tuta
+          [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
           like most encrypted mail providers, instead they use a standardized, hybrid method
           consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
           2048 bit RSA). This causes compatibility issues when communicating with contacts
@@ -687,9 +694,12 @@ categories:
       - name: Disroot
         url: https://disroot.org/en
       wordOfWarning: |
-        - When using an end-to-end encryption technology like OpenPGP, some metadata in the email header will not be encrypted.
-        - OpenPGP also does not support Forward secrecy, which means if either your or the recipient's private key is ever stolen,
-        all previous messages encrypted with it will be exposed. You should take great care to keep your private keys safe.
+        - When using an end-to-end encryption technology like OpenPGP, some metadata
+        in the email header will not be encrypted.
+        - OpenPGP also does not support Forward secrecy, which means if either
+        your or the recipient's private key is ever stolen, all previous messages
+        encrypted with it will be exposed. You should take great care to keep your
+        private keys safe.
 
     ###########################
     ###### Email Clients ######
@@ -793,8 +803,8 @@ categories:
         github: anonaddy/anonaddy
         tosdrId: 2220
         description: |
-          An open source anonymous email forwarding service, allowing you to create unlimited
-          email aliases. Has a free plan.
+          An open source anonymous email forwarding service, allowing you to
+          create unlimited email aliases. Has a free plan.
 
       - name: 33Mail
         url: http://33mail.com
@@ -2894,8 +2904,10 @@ categories:
         icon: https://www.seafile.com/media/img/favicon.png?t=3
         tosdrId: 4322
         description: |
-          An open source cloud storage and sync solution. Files are grouped into Libraries, which can be individually encrypted,
-          shared of synced. Docker image available for easy deployment, and native clients for Windows, Mac, Linux, Android and iOS.
+          An open source cloud storage and sync solution.
+          Files are grouped into Libraries, which can be individually encrypted,
+          shared of synced. Docker image available for easy deployment, and native
+          clients for Windows, Mac, Linux, Android and iOS.
 
       - name: Syncthing
         url: https://syncthing.net
@@ -2903,8 +2915,10 @@ categories:
         github: syncthing/syncthing
         followWith: Windows, Mac, Linux, BSD, Android
         description: |
-          Continuous file synchronization between 2 or more clients. It is simple, yet powerful, and fully-encrypted and private.
-          Syncthing can be deployed with Docker, and there are native clients for Windows, Mac, Linux, BSD and Android.
+          Continuous file synchronization between 2 or more clients. It is simple,
+          yet powerful, and fully-encrypted and private.
+          Syncthing can be deployed with Docker, and there are native clients
+          for Windows, Mac, Linux, BSD and Android.
 
       - name: NextCloud
         url: https://nextcloud.com
@@ -2912,9 +2926,10 @@ categories:
         followWith: Web, Windows, Mac, Linux, Android, iOS
         tosdrId: 707
         description: |
-          Feature-rich productivity platform, that can be used to backup and selectively sync encrypted files and folders between
-          1 or more clients. A key benefit the wide range of plug-ins in the NextCloud App Store, maintained by the community.
-          NextCloud was a hard fork off OwnCloud.
+          Feature-rich productivity platform, that can be used to backup and
+          selectively sync encrypted files and folders between 1 or more clients.
+          A key benefit the wide range of plug-ins in the NextCloud App Store,
+          maintained by the community. NextCloud was a hard fork off OwnCloud.
 
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
@@ -2922,7 +2937,8 @@ categories:
         Both of offer an encrypted and efficient sync between 2 or more locations,
         using the [rsync](https://linux.die.net/man/1/rsync) algorithm.
 
-        [SpiderOak](https://spideroak.com), [Tresorit](https://tresorit.com) and [Resilio](https://www.resilio.com/individuals)
+        [SpiderOak](https://spideroak.com), [Tresorit](https://tresorit.com) and
+        [Resilio](https://www.resilio.com/individuals)
         are good enterprise solutions, all with solid encryption baked-in
 
         [FileRun](https://filerun.com) and [Pydio](https://pydio.com)
@@ -2946,10 +2962,13 @@ categories:
         followWith: Web
         tosdrId: 2584
         description: |
-          A zero knowledge cloud productivity suite. Provides Rich Text, Presentations, Spreadsheets, Kanban, Paint a code
-          editor and file drive. All notes and user content, are encrypted by default, and can only be accessed with specific
-          URL. The main disadvantage, is a lack of Android, iOS and desktop apps - CryptPad is entirely web-based. You can use
-          their web service, or you can host your own instance. Price for hosted: free for 50mb or $5/ month for premium.
+          A zero knowledge cloud productivity suite. Provides Rich Text,
+          Presentations, Spreadsheets, Kanban, Paint a code editor and file drive.
+          All notes and user content, are encrypted by default, and can only be
+          accessed with specific URL. The main disadvantage, is a lack of Android,
+          iOS and desktop apps - CryptPad is entirely web-based. You can use their
+          web service, or you can host your own instance. Price for hosted: free
+          for 50mb or $5/ month for premium.
 
       - name: NextCloud
         url: https://nextcloud.com
@@ -2958,10 +2977,11 @@ categories:
         github: nextcloud/server
         tosdrId: 707
         description: |
-          A complete self-hosted productivity platform, with a strong community and growing app store. NextCloud is similar to
-          (but arguably more complete than) Google Drive, Office 365 and Dropbox. Clear UI and stable native apps across all
-          platforms, and also supports file sync. Supports encrypted files, but you need to configure this yourself. Fully open
-          source.
+          A complete self-hosted productivity platform, with a strong community
+          and growing app store. NextCloud is similar to (but arguably more complete
+          than) Google Drive, Office 365 and Dropbox. Clear UI and stable native
+          apps across all platforms, and also supports file sync. Supports encrypted
+          files, but you need to configure this yourself. Fully open source.
 
       - name: Disroot
         url: https://disroot.org
@@ -2969,9 +2989,11 @@ categories:
         followWith: Web
         tosdrId: 1826
         description: |
-          A platform providing online services based on principles of freedom, privacy, federation and decentralization. It is
-          an implementation of NextCloud, with strong encryption configured - it is widely used by journalists, activists and
-          whistle-blowers. It is free to use, but there have been reported reliability issues of the cloud services.
+          A platform providing online services based on principles of freedom,
+          privacy, federation and decentralization. It is an implementation of
+          NextCloud, with strong encryption configured - it is widely used by
+          journalists, activists and whistle-blowers. It is free to use, but
+          there have been reported reliability issues of the cloud services.
 
       - name: Sandstorm
         url: https://sandstorm.io
@@ -2979,8 +3001,9 @@ categories:
         github: sandstorm-io/sandstorm
         followWith: Web
         description: |
-          An open source platform for self-hosting web apps. Once you've set it up, you can install items from the Sandstorm
-          App Market with -click, similar to NextCloud in terms of flexibility.
+          An open source platform for self-hosting web apps. Once you've set it up,
+          you can install items from the Sandstorm App Market with -click,
+          similar to NextCloud in terms of flexibility.
 
       - name: Vikunja
         url: https://vikunja.io
@@ -2988,9 +3011,11 @@ categories:
         github: go-vikunja/vikunja
         followWith: Web, Android Linux
         description: |
-          Vikunja is an open-source to-do application. It is suitable for a wide variety of projects, supporting List, Gantt,
-          Table and Kanban views to visualize all tasks in different contexts. For collaboration, it has sharing support via
-          private teams or public links. It can be self-hosted or used as a managed service for a small fee.
+          Vikunja is an open-source to-do application. It is suitable for a wide
+          variety of projects, supporting List, Gantt, Table and Kanban views to
+          visualize all tasks in different contexts. For collaboration, it has
+          sharing support via private teams or public links. It can be self-hosted
+          or used as a managed service for a small fee.
 
       - name: Skiff Pages
         url: https://skiff.com/pages
@@ -2999,9 +3024,11 @@ categories:
         followWith: Web, iOS, Android
         tosdrId: 8470
         description: |
-          Skiff Pages is an end-to-end encrypted, privacy-first collaborative document, note-taking, and wiki product. Skiff
-          Pages has a modern, easy-to-use UI and supports rich text documents with embedded content. Skiff also supports end-to-end
-          encrypted file upload and sharing (Skiff Drive), as well as workspaces for multiple users to collaborate.
+          Skiff Pages is an end-to-end encrypted, privacy-first collaborative
+          document, note-taking, and wiki product. Skiff Pages has a modern,
+          easy-to-use UI and supports rich text documents with embedded content.
+          Skiff also supports end-to-end encrypted file upload and sharing
+          (Skiff Drive), as well as workspaces for multiple users to collaborate.
 
 
     ###########################
@@ -4161,14 +4188,21 @@ categories:
         github: monero-project/monero
         tosdrId: 8279
         description: |
-          One of the most private cryptocurrencies, since no meta data is available (not even the transaction amount). It uses complex on-chain cryptographic methods such as Ring signatures, RingCT, Kovri, and Stealth addresses all of which help protect the privacy of users.
+          One of the most private cryptocurrencies, since no meta data is available
+          (not even the transaction amount). It uses complex on-chain cryptographic
+          methods such as Ring signatures, RingCT, Kovri, and Stealth addresses all
+          of which help protect the privacy of users.
 
       - name: ZCash
         url: https://z.cash
         github: zcash/zcash
         tosdrId: 8258
         description: |
-          Uses zero-knowledge proofs to protect privacy cryptographic technique, that allows two users to transact without ever revealing their true identity or address. The Zcash blockchain uses two types of addresses and transactions, Z transactions and addresses are private and T transactions and addresses are transparent like Bitcoin.
+          Uses zero-knowledge proofs to protect privacy cryptographic technique,
+          that allows two users to transact without ever revealing their true identity
+          or address. The Zcash blockchain uses two types of addresses and transactions,
+          Z transactions and addresses are private and T transactions and addresses
+          are transparent like Bitcoin.
       furtherInfo: |
         It is still possible to use currencies that have a public ledger 'privately',
         but you will need to take great care not to cause any transactions to be
