@@ -3,12 +3,25 @@
 # This file contains all data for all listed categories, sections and services  #
 # It's used to generate both the README.md and the website, awesome-privacy.xyz #
 #                                                                               #
-# EDITING                                                                       #
-# Please read the CONTRIBUTING.md before submitting any changes to this file    #
-#                                                                               #
 # USAGE COMMANDS                                                                #
 # `make validate` - Check this file is valid YAML and fits the schema           #
 # `make generate` - Generate + insert content into the README.md                #
+#                                                                               #
+# EDITING                                                                       #
+# Please read the CONTRIBUTING.md before submitting any changes to this file    #
+#                                                                               #
+# ADDING SERVICE                                                                #
+# If you're adding a new listing, the following fields are accepted:            #
+#  - name: string (required) - The name of the service                          #
+#  - description: string (required) - A brief description of the service        #
+#  - url: string (required) - The URL of the service                            #
+#  - github: string - The GitHub repository of the service (user/repo-name)     #
+#  - icon: string - The URL of the service's icon                               #
+#  - followWith: string - Some categories need a prefix (e.g. platform)         #
+#  - securityAudited: boolean - Has the service has been publicly audited       #
+#  - openSource: boolean - Whether the service is fully open source             #
+#  - acceptsCrypto: boolean - Whether the service accepts anonymous payment     #
+#  - tosdrId: string - The ID of the service on ToS;DR  (find at tosdr.org)     #
 #                                                                               #
 #################################################################################
 # Licensed under CC0-1.0 (C) Alicia Sykes <https://aliciasykes.com> 2019 - 2024 #
@@ -1407,7 +1420,7 @@ categories:
 
       - name: Exodus
         url: https://exodus-privacy.eu.org/en/page/what/#android-app
-        icon: https://exodus-privacy.eu.org/media/logo/exodus.png
+        icon: https://exodus-privacy.eu.org/img/favicons/apple-touch-icon.png
         tosdrId: 3843
         description: |
           Shows which trackers, each of your installed apps is using, so that you can better
@@ -1615,7 +1628,7 @@ categories:
       services:
         - name: Have i been pwned
           url: https://haveibeenpwned.com
-          icon: https://haveibeenpwned.com/favicon.ico
+          icon: https://i.ibb.co/XxmfTyw/haveibeenpwnd.png
           tosdrId: 3435
           description: |
             Checks if your credentials (Email address or Password) have been compromised in a data breach.
@@ -1720,7 +1733,7 @@ categories:
 
         - name: 10 Minute Mail
           url: https://10minemail.com/
-          icon: https://10minemail.com/favicon.ico
+          icon: https://10minemail.com/blog/content/images/size/w256h256/2021/05/10min_mobile_icon@2x.png
           tosdrId: 838
           description: |
             Generates temporary disposable email address, to avoid giving your real details.
@@ -3872,55 +3885,79 @@ categories:
         url: https://github.com/crazy-max/WindowsSpyBlocker
         github: crazy-max/WindowsSpyBlocker
         description: |
-          Capture and interprets network traffic based on a set of rules, and depending on the interactions certain assignments are blocked.
+          Capture and interprets network traffic based on a set of rules, and
+          depending on the interactions certain assignments are blocked.
           Open source, written in Go and delivered as a single executable.
 
       - name: HardenTools
         url: https://github.com/securitywithoutborders/hardentools
         github: securitywithoutborders/hardentools
         description: |
-          A utility that disables a number of risky Windows features. These "features" are exposed by the OS and primary consumer applications,
-          and very commonly abused by attackers, to execute malicious code on a victim's computer. So this tool just reduces the attack surface by disabling the low-hanging fruit.
+          A utility that disables a number of risky Windows features. These "features"
+          are exposed by the OS and primary consumer applications,
+          and very commonly abused by attackers, to execute malicious code on a
+          victim's computer. So this tool just reduces the attack surface by
+          disabling the low-hanging fruit.
 
       - name: ShutUp10
         url: https://www.oo-software.com/en/shutup10
+        icon: https://www.oo-software.com/oocontent/themes/oo2017/images/icons/front/oosu10.png
         description: |
-          A portable app that lets you disable core Windows features (such as Cortana, Edge) and control which data is passed to Microsoft.
+          A portable app that lets you disable core Windows features (such as Cortana,
+          Edge) and control which data is passed to Microsoft.
           (Note: Free, but not open source).
 
       - name: WPD
-        url: https://wpd.app/
+        url: https://wpd.app
+        icon: https://wpd.app/assets/favicon/apple-touch-icon.png
         description: |
-          Portable app with a GUI, that makes it really easy to safely block key telemetry features, from sending data to Microsoft and other third parties
-          (It uses the Windows API to interact with key features of Local Group Police, Services, Tasks Scheduler, etc).
+          Portable app with a GUI, that makes it really easy to safely block key
+          telemetry features, from sending data to Microsoft and other third parties
+          (It uses the Windows API to interact with key features of Local Group
+          Police, Services, Tasks Scheduler, etc).
 
       - name: GhostPress
         url: https://schiffer.tech/ghostpress.html
+        icon: https://schiffer.tech/img/logos/gp.png
         description: |
-          Anti low-level keylogger: Provides full system-wide key press protection, and target window screenshot protection.
+          Anti low-level keylogger: Provides full system-wide key press protection,
+          and target window screenshot protection.
 
       - name: KeyScrambler
         url: https://www.qfxsoftware.com
+        icon: https://www.qfxsoftware.com/wp-content/uploads/2018/11/cropped-KS_icon-32x32-px.jpg
         description: |
-          Provides protection against software keyloggers. Encrypts keypresses at driver level, and decrypts at application level, to protect against common keyloggers.
+          Provides protection against software keyloggers. Encrypts keypresses at
+          driver level, and decrypts at application level, to protect against
+          common keyloggers.
 
       - name: SafeKeys V3.0
         url: http://www.aplin.com.au
+        icon: https://www.aplin.com.au/wp-content/themes/aplin/images/favicon.ico
         description: |
-          Portable virtual keyboard. Useful for protecting from keyloggers when using a public computer, as it can run of a USB with no administrative permissions.
+          Portable virtual keyboard. Useful for protecting from keyloggers when
+          using a public computer, as it can run of a USB with no administrative
+          permissions.
 
       - name: RKill
-        url: https://www.bleepingcomputer.com/download/rkill/
+        url: https://www.bleepingcomputer.com/download/rkill
+        icon: https://www.bleepstatic.com/download/product-logos//2012/05/18/icon1337347931.png
         description: |
-          Useful utility, that attempts to terminate known malware processes, so that your normal security software can then run and clean your computer of infections.
+          Useful utility, that attempts to terminate known malware processes,
+          so that your normal security software can then run and clean your
+          computer of infections.
 
       - name: IIS Crypto
         url: https://www.nartac.com/Products/IISCrypto
+        icon: https://www.nartac.com/favicon.png
         description: |
-          A utility for configuring encryption protocols, cyphers, hashing methods, and key exchanges for Windows components. Useful for sysadmins on Windows Server.
+          A utility for configuring encryption protocols, cyphers, hashing methods,
+          and key exchanges for Windows components. Useful for sysadmins on Windows
+          Server.
 
       - name: NetLimiter
         url: https://www.netlimiter.com
+        icon: https://www.netlimiter.com/favicon.ico
         tosdrId: 9043
         description: |
           Internet traffic control and monitoring tool.
@@ -3934,31 +3971,40 @@ categories:
       - name: SigCheck
         url: https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck
         description: |
-          A CLI utility that shows file version number, timestamp information, and digital signature details.
+          A CLI utility that shows file version number, timestamp information,
+          and digital signature details.
 
       - name: BleachBit
         url: https://www.bleachbit.org
+        icon: https://www.bleachbit.org/sites/default/files/zen_classic_logo_0.png
         description: |
-          Clears cache and deletes temporary files very effectively. This frees up disk space, improves performance, but most importantly helps to protect privacy.
+          Clears cache and deletes temporary files very effectively.
+          This frees up disk space, improves performance, but most importantly
+          helps to protect privacy.
 
       - name: Windows Secure Baseline
         url: https://github.com/nsacyber/Windows-Secure-Host-Baseline
         github: nsacyber/Windows-Secure-Host-Baseline
         description: |
-          Group Policy objects, compliance checks, and configuration tools that provide an automated and flexible approach for securely deploying and maintaining the latest releases of Windows 10.
+          Group Policy objects, compliance checks, and configuration tools that
+          provide an automated and flexible approach for securely deploying and
+          maintaining the latest releases of Windows 10.
 
       - name: USBFix
-        url: https://www.usb-antivirus.com/
+        url: https://www.usb-antivirus.com
+        icon: https://www.usb-antivirus.com/wp-content/uploads/2015/12/logo-usbfix-80x80.png.webp
         description: |
           Detects infected USB removable devices.
 
       - name: GMER
         url: http://www.gmer.net
+        icon: http://www2.gmer.net/favicon.ico
         description: |
           Rootkit detection and removal utility.
 
       - name: ScreenWings
         url: https://schiffer.tech/screenwings.html
+        icon: https://schiffer.tech/img/logos/sw.png
         description: |
           Blocks malicious background applications from taking screenshots.
 
