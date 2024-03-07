@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import yaml from 'js-yaml';
 
-import type { AwesomePrivacy, Service } from '../../types/Service';
+import type { AwesomePrivacy, Service, Category } from '../../types/Service';
 
 interface LineNumberRange {
   start: number;
@@ -25,13 +25,15 @@ const awesomePrivacyYamlPath = 'https://raw.githubusercontent.com/Lissy93/awesom
  * Given a service object and an array of string lines from the raw YAML
  * Find the starting and ending line number for that service
  */
-const calculateServiceRange = (service: Service, yamlLines: string[]): LineNumberRange | null => {
+const calculateServiceRange = (service: Service, category: Category, yamlLines: string[]): LineNumberRange | null => {
   const lookFor = `- name: ${service.name}`;
-  const start = yamlLines.findIndex(line => line.includes(lookFor)) + 1;
+  const categoryStart = yamlLines.findIndex(line => line.includes(category.name));
+  const start = yamlLines.slice(categoryStart).findIndex(line => line.includes(lookFor)) + categoryStart + 1;
   if (start === -1) return null;
   const detectEnd = (line: string) => {
     return line.trim().length === 0
     || line.startsWith('  - ')
+    || line.includes('- name:')
     || line.includes('notableMentions:')
     || line.includes('furtherInfo:')
     || line.includes('wordOfWarning:')
@@ -61,7 +63,7 @@ const makeResults = (yamlObject: AwesomePrivacy, yamlLines: string[]): LineNumbe
       organizedData[category.name][section.name] = {};
       section.services.forEach((service) => {
         organizedData[category.name][section.name][service.name] = {
-          lineNumbers: calculateServiceRange(service, yamlLines),
+          lineNumbers: calculateServiceRange(service, category, yamlLines),
           yaml: convertJsonIntoYaml(service),
         };
       });

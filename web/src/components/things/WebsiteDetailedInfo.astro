@@ -26,7 +26,7 @@ const categoryLabels: {[key: string]: string} = {
 };
 
 const siteCategories = Object.entries(websiteInfo.site_category)
-    .filter(([key, value]) => value)
+    .filter(([_key, value]) => value)
     .map(([key]) => categoryLabels[key]);
 
 const securityChecks = analyzeSecurityChecks(websiteInfo.security_checks);
@@ -311,6 +311,10 @@ h4 {
     width: 180px;
     float: right;
     font-size: 1rem;
+    transform: scale(0.8);
+    opacity: 0.85;
+    transition: all 0.2s ease-in-out;
+    &:hover { transform: scale(0.85); opacity: 1; }
     :global(.button) {
       background: var(--accent-3);
     }

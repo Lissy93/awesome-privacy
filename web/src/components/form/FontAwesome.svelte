@@ -26,6 +26,7 @@
     // Service actions
     delete: solidIcons.faTrash,
     edit: solidIcons.faPenToSquare,
+    add: solidIcons.faPlusHexagon,
 
     // Website Detailed Stats
     blacklistFound: solidIcons.faDoNotEnter,

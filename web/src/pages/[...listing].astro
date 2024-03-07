@@ -183,7 +183,7 @@ const getApiEndpoint = () => {
           { url && (
           <li>
             <b>Web info:</b>
-            <a href={`https://web-check.xyz/results/${formatLink(url)}`}>{`web-check.xyz/results/${formatLink(url)}`}</a>
+            <a href={`https://web-check.xyz/results/${formatLink(url)}`}>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
           </li>
           )}
         </ul>

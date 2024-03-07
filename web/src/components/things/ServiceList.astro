@@ -49,7 +49,7 @@ const {
 
 
 <section>
-  {services ? (
+  {services && services.length > 0 ? (
     <ul>
     {services.map((service: Service) => (
       <li id={slugify(service.name)}>
@@ -126,7 +126,9 @@ const {
     </p>
   )}
 
-  {buttonLink && ( <Button className="view-all" text="View More..." url={buttonLink} /> )}
+  {buttonLink && (
+    <Button title={`View all ${categoryName}`} className="view-all" text="View More..." url={buttonLink} />
+  )}
 </section>
 
 

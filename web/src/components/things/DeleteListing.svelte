@@ -1,7 +1,7 @@
 
 <script lang="ts">
   import FontAwesome from '@components/form/FontAwesome.svelte';
-  import { fetchSrcData, makeRemovalRequest, makeEditRequest } from '@utils/data-src-delete-n-edit';
+  import { fetchSrcData, makeRemovalRequest } from '@utils/data-src-delete-n-edit';
   import { onMount } from 'svelte';
 
 
@@ -9,18 +9,26 @@
   export let sectionName: string;
   export let serviceName: string;
 
+  const apYaml = 'https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml';
+
   let yamlContent = '';
+  let editLink = apYaml;
 
   onMount(async () => {
     const results = await fetchSrcData(categoryName, sectionName, serviceName);
     yamlContent = results.yamlContent;
+
+    const lineNumbers = results.lineNumbers || null;
+    const numberRange = lineNumbers ? `#L${lineNumbers.start}-L${lineNumbers.end}` : '';
+    const yamlLink = 'https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml';
+    editLink = `${yamlLink}${numberRange}`;
   });
 
 </script>
 
 <div class="actions">
   <a title="Edit" target="_blank"
-    href={makeEditRequest(categoryName, sectionName, serviceName, yamlContent)}>
+    href={editLink}>
     <FontAwesome iconName="edit" />
   </a>
   <a title="Delete" target="_blank"
