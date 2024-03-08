@@ -1,0 +1,178 @@
+---
+import type { TemplateResponse } from '@utils/fetch-docker-instructions';
+import { formatDate, timeAgo } from '@utils/dates-n-stuff'; 
+
+interface Props {
+  docker: TemplateResponse;
+}
+
+const { docker } = Astro.props;
+
+const formatBigNumber = (num: number): string => {
+  if (!num) return 'None';
+  return num.toLocaleString();
+};
+
+---
+
+<div class="docker-info-wrap">
+
+  <div class="left">
+    { docker.template && (
+      <h4>Container Info</h4>
+      <p class="dockerhub-title">
+        <img src={docker.template.logo} width="16" />
+        {docker.template.name}
+      </p>
+      <p class="dockerhub-description">{docker.template.description}</p>
+      <span class="tags">
+        {(docker.template.categories || []).map((category: string) => (
+          <span class="tag">#{category}</span>
+        ))}
+      </span>
+    )}
+
+    {docker.dockerHubData && Object.keys(docker.dockerHubData).length > 0 && (
+      <h4>DockerHub Metrics</h4>
+      <ul class="table">
+        <li>
+          <span class="lbl">Pull Count</span>
+          <span class="val">{formatBigNumber(docker.dockerHubData.pull_count)}</span>
+        </li>
+        <li>
+          <span class="lbl">Stars</span>
+          <span class="val">{formatBigNumber(docker.dockerHubData.star_count)}</span>
+        </li>
+        <li>
+          <span class="lbl">Date Created</span>
+          <span class="val">{formatDate(docker.dockerHubData.date_registered)}</span>
+        </li>
+        <li>
+          <span class="lbl">Last Updated</span>
+          <span class="val">{timeAgo(docker.dockerHubData.last_updated)}</span>
+        </li>
+      </ul>
+    )}
+
+    <h4>View on DockerHub</h4>
+    {docker.dockerHubData && Object.keys(docker.dockerHubData).length > 0 && (
+      <a href={`https://hub.docker.com/r/${docker.dockerHubData.user}/${docker.dockerHubData.name}`} target="_blank">
+        {docker.dockerHubData.user}/{docker.dockerHubData.name}  
+      </a>
+    )}
+    
+    {!docker.dockerHubData && docker.template &&
+      (
+        <a href={`https://hub.docker.com/r/${docker.template.image}`} target="_blank">
+          {docker.template.image}  
+        </a>
+      )
+    }
+    
+  </div>
+  <div class="right">
+    {docker.usage && (
+      <h4>Run Command</h4>
+      <pre>{docker.usage.dockerRunCommand}</pre>
+    )}
+    
+  </div>
+</div>
+
+<style lang="scss">
+  .docker-info-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .left, .right {
+      width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .long-list-data {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .left {
+    .dockerhub-title, .dockerhub-description {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+      border-left: 2px solid var(--accent-3);
+      padding-left: 0.5rem;
+    }
+    .dockerhub-title {
+      font-weight: 500;
+    }
+    .dockerhub-description {
+      font-style: italic;
+      -webkit-line-clamp: 3;
+    }
+    .table {
+      max-width: 15rem;
+      padding-left: 0;
+      li {
+        display: flex;
+        justify-content: space-between;
+        .lbl {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    :global(svg) {
+      width: 1rem;
+    }
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    .tag {
+      margin: 0.1rem;
+      background: #5f53f440;
+      border-radius: var(--curve-sm);
+      padding: 0.05rem 0.2rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  }
+  ul {
+    padding-left: 1rem;
+    list-style: circle;
+    max-height: 400px;
+    overflow: auto;
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+
+  pre {
+      font-family: 'Courier New', Courier, monospace;
+      background: #cecbf780;
+      padding: 0.6rem 1rem;
+      border-radius: var(--curve-sm);
+      font-size: 0.8rem;
+      overflow-x: auto;
+    }
+</style>

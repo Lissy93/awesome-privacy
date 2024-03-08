@@ -6,12 +6,14 @@ import Comments from '@components/things/Comments.svelte';
 import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
 import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro';
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
+import DockerDetailedInfo from '@components/things/DockerDetailedInfo.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
+import { fetchDockerData } from '@utils/fetch-docker-instructions';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import Button from '@components/form/Button.astro';
@@ -122,7 +124,10 @@ const ignoredSites = ['github.gom', 'wikipedia.'];
 // Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
+const dockerData = await fetchDockerData(name);
 const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
+
+console.log(dockerData);
 
 const getApiEndpoint = () => {
   return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
@@ -237,10 +242,18 @@ const getApiEndpoint = () => {
         <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
       </section>
     )}
+    { dockerData && dockerData.found && (
+    <section>
+      <h3>{name} Docker</h3>
+      <DockerDetailedInfo docker={dockerData} />
+    </section>
+    )}
+
     <section>
       <h3>{name} Reviews</h3>
       <Comments client:visible />
     </section>
+
     <section>
       <h3>More {parentSection.name}</h3>
       <ServiceList
