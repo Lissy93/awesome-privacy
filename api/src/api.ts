@@ -9,33 +9,19 @@ import {
   renderRemoteIndex,
 } from './utils';
 
+import index from '../public/index.html'
+
 /* Create new Hono app */
-const app = new Hono<{}, {}>({ strict: false });
+const app = new Hono({ strict: false });
 
+/* Serve the index page (which contains the Swagger Docs) */
 app.get("/", async (ctx) => {
-  console.log('ctx.env', ctx.env);
-
-  if (ctx.env?.ASSETS) {
-    let response: Response | undefined;
-    try {  
-      response = await ctx.env.ASSETS.fetch(
-        ctx.request.url,
-        ctx.request.clone()
-      );
-      response =
-        response && response.status >= 200 && response.status < 400
-          ? new Response(response.body, response)
-          : undefined;
-    } catch {}
-    if (!response) {
-      return renderRemoteIndex(ctx);
-    }
+  if (index) {
+    return ctx.html(index)
   } else {
     return renderRemoteIndex(ctx);
   }
-  
 });
-
 
 /* Returns an array all service objects */
 app.get('/services', async (c) => {
