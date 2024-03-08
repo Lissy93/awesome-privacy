@@ -25,7 +25,7 @@ export const findBySlug = <T extends { name: string }>(collection: T[], slug: st
 
 
 export const renderRemoteIndex = async (ctx) => {
-  const indexHtmlUrl = 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/api/index.html';
+  const indexHtmlUrl = 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/api/public/index.html';
   const response = await fetch(indexHtmlUrl);
   if (response.ok) {
     const htmlContent = await response.text();
