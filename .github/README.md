@@ -1286,7 +1286,7 @@ box, preventing it from accessing your personal data, or device information.
 		[![GitHub: oasisfeng/island](https://img.shields.io/github/stars/oasisfeng/island?style=flat&logo=github&label=island&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/oasisfeng/island)  [![Insular on Awesome Privacy](https://img.shields.io/badge/Insular-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/security-tools/mobile-apps/insular) 
 
 		</details>
-- **[<img src='https://exodus-privacy.eu.org/media/logo/exodus.png' width='16' height='16' alt='icon' /> Exodus](https://exodus-privacy.eu.org/en/page/what/#android-app)** - Shows which trackers, each of your installed apps is using, so that you can better
+- **[<img src='https://exodus-privacy.eu.org/img/favicons/apple-touch-icon.png' width='16' height='16' alt='icon' /> Exodus](https://exodus-privacy.eu.org/en/page/what/#android-app)** - Shows which trackers, each of your installed apps is using, so that you can better
 understand how your data is being collected. Uses data from the Exodus database of scanned APKs.
  	- <details>
 		<summary>Stats</summary>
@@ -1457,7 +1457,7 @@ Only install from official sources.
 
 A selection of free online tools and utilities, to check, test and protect your security
 
-- **[<img src='https://haveibeenpwned.com/favicon.ico' width='16' height='16' alt='icon' /> Have i been pwned](https://haveibeenpwned.com)** - Checks if your credentials (Email address or Password) have been compromised in a data breach.
+- **[<img src='https://i.ibb.co/XxmfTyw/haveibeenpwnd.png' width='16' height='16' alt='icon' /> Have i been pwned](https://haveibeenpwned.com)** - Checks if your credentials (Email address or Password) have been compromised in a data breach.
 See also Firefox Monitor.
  	- <details>
 		<summary>Stats</summary>
@@ -1526,7 +1526,7 @@ and so on.
  - **[<img src='https://www.islegitsite.com/apple-touch-icon.png' width='16' height='16' alt='icon' /> Is Legit?](https://www.islegitsite.com/)** - Checks if a website or business is a scam, before buying something from it.
  - **[<img src='https://www.shouldiremoveit.com/favicon.ico' width='16' height='16' alt='icon' /> Should I Remove It?](https://www.shouldiremoveit.com)** - Ever been uninstalling programs from your Windows PC and been unsure of what something is? Should I Remove It is a
 database of Windows software, detailing whether it is essential, harmless or dangerous.
- - **[<img src='https://10minemail.com/favicon.ico' width='16' height='16' alt='icon' /> 10 Minute Mail](https://10minemail.com/)** - Generates temporary disposable email address, to avoid giving your real details.
+ - **[<img src='https://10minemail.com/blog/content/images/size/w256h256/2021/05/10min_mobile_icon@2x.png' width='16' height='16' alt='icon' /> 10 Minute Mail](https://10minemail.com/)** - Generates temporary disposable email address, to avoid giving your real details.
  	- <details>
 		<summary>Stats</summary>
 
@@ -3448,7 +3448,8 @@ importantly helps to protect privacy.
 
 ### Windows Defences
 
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Windows Spy Blocker](https://github.com/crazy-max/WindowsSpyBlocker)** - Capture and interprets network traffic based on a set of rules, and depending on the interactions certain assignments are blocked.
+- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Windows Spy Blocker](https://github.com/crazy-max/WindowsSpyBlocker)** - Capture and interprets network traffic based on a set of rules, and
+depending on the interactions certain assignments are blocked.
 Open source, written in Go and delivered as a single executable.
  	- <details>
 		<summary>Stats</summary>
@@ -3456,24 +3457,39 @@ Open source, written in Go and delivered as a single executable.
 		[![GitHub: crazy-max/WindowsSpyBlocker](https://img.shields.io/github/stars/crazy-max/WindowsSpyBlocker?style=flat&logo=github&label=WindowsSpyBlocker&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/crazy-max/WindowsSpyBlocker)  [![Windows Spy Blocker on Awesome Privacy](https://img.shields.io/badge/Windows_Spy_Blocker-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/operating-systems/windows-defences/windows-spy-blocker) 
 
 		</details>
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> HardenTools](https://github.com/securitywithoutborders/hardentools)** - A utility that disables a number of risky Windows features. These "features" are exposed by the OS and primary consumer applications,
-and very commonly abused by attackers, to execute malicious code on a victim's computer. So this tool just reduces the attack surface by disabling the low-hanging fruit.
+- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> HardenTools](https://github.com/securitywithoutborders/hardentools)** - A utility that disables a number of risky Windows features. These "features"
+are exposed by the OS and primary consumer applications,
+and very commonly abused by attackers, to execute malicious code on a
+victim's computer. So this tool just reduces the attack surface by
+disabling the low-hanging fruit.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: securitywithoutborders/hardentools](https://img.shields.io/github/stars/securitywithoutborders/hardentools?style=flat&logo=github&label=hardentools&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/securitywithoutborders/hardentools)  [![HardenTools on Awesome Privacy](https://img.shields.io/badge/HardenTools-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/operating-systems/windows-defences/hardentools) 
 
 		</details>
-- **[<img src='https://icon.horse/icon/www.oo-software.com' width='16' height='16' alt='icon' /> ShutUp10](https://www.oo-software.com/en/shutup10)** - A portable app that lets you disable core Windows features (such as Cortana, Edge) and control which data is passed to Microsoft.
+- **[<img src='https://www.oo-software.com/oocontent/themes/oo2017/images/icons/front/oosu10.png' width='16' height='16' alt='icon' /> ShutUp10](https://www.oo-software.com/en/shutup10)** - A portable app that lets you disable core Windows features (such as Cortana,
+Edge) and control which data is passed to Microsoft.
 (Note: Free, but not open source).
- - **[<img src='https://icon.horse/icon/wpd.app' width='16' height='16' alt='icon' /> WPD](https://wpd.app/)** - Portable app with a GUI, that makes it really easy to safely block key telemetry features, from sending data to Microsoft and other third parties
-(It uses the Windows API to interact with key features of Local Group Police, Services, Tasks Scheduler, etc).
- - **[<img src='https://icon.horse/icon/schiffer.tech' width='16' height='16' alt='icon' /> GhostPress](https://schiffer.tech/ghostpress.html)** - Anti low-level keylogger: Provides full system-wide key press protection, and target window screenshot protection.
- - **[<img src='https://icon.horse/icon/www.qfxsoftware.com' width='16' height='16' alt='icon' /> KeyScrambler](https://www.qfxsoftware.com)** - Provides protection against software keyloggers. Encrypts keypresses at driver level, and decrypts at application level, to protect against common keyloggers.
- - **[<img src='https://icon.horse/icon/www.aplin.com.au' width='16' height='16' alt='icon' /> SafeKeys V3.0](http://www.aplin.com.au)** - Portable virtual keyboard. Useful for protecting from keyloggers when using a public computer, as it can run of a USB with no administrative permissions.
- - **[<img src='https://icon.horse/icon/www.bleepingcomputer.com' width='16' height='16' alt='icon' /> RKill](https://www.bleepingcomputer.com/download/rkill/)** - Useful utility, that attempts to terminate known malware processes, so that your normal security software can then run and clean your computer of infections.
- - **[<img src='https://icon.horse/icon/www.nartac.com' width='16' height='16' alt='icon' /> IIS Crypto](https://www.nartac.com/Products/IISCrypto)** - A utility for configuring encryption protocols, cyphers, hashing methods, and key exchanges for Windows components. Useful for sysadmins on Windows Server.
- - **[<img src='https://icon.horse/icon/www.netlimiter.com' width='16' height='16' alt='icon' /> NetLimiter](https://www.netlimiter.com)** - Internet traffic control and monitoring tool.
+ - **[<img src='https://wpd.app/assets/favicon/apple-touch-icon.png' width='16' height='16' alt='icon' /> WPD](https://wpd.app)** - Portable app with a GUI, that makes it really easy to safely block key
+telemetry features, from sending data to Microsoft and other third parties
+(It uses the Windows API to interact with key features of Local Group
+Police, Services, Tasks Scheduler, etc).
+ - **[<img src='https://schiffer.tech/img/logos/gp.png' width='16' height='16' alt='icon' /> GhostPress](https://schiffer.tech/ghostpress.html)** - Anti low-level keylogger: Provides full system-wide key press protection,
+and target window screenshot protection.
+ - **[<img src='https://www.qfxsoftware.com/wp-content/uploads/2018/11/cropped-KS_icon-32x32-px.jpg' width='16' height='16' alt='icon' /> KeyScrambler](https://www.qfxsoftware.com)** - Provides protection against software keyloggers. Encrypts keypresses at
+driver level, and decrypts at application level, to protect against
+common keyloggers.
+ - **[<img src='https://www.aplin.com.au/wp-content/themes/aplin/images/favicon.ico' width='16' height='16' alt='icon' /> SafeKeys V3.0](http://www.aplin.com.au)** - Portable virtual keyboard. Useful for protecting from keyloggers when
+using a public computer, as it can run of a USB with no administrative
+permissions.
+ - **[<img src='https://www.bleepstatic.com/download/product-logos//2012/05/18/icon1337347931.png' width='16' height='16' alt='icon' /> RKill](https://www.bleepingcomputer.com/download/rkill)** - Useful utility, that attempts to terminate known malware processes,
+so that your normal security software can then run and clean your
+computer of infections.
+ - **[<img src='https://www.nartac.com/favicon.png' width='16' height='16' alt='icon' /> IIS Crypto](https://www.nartac.com/Products/IISCrypto)** - A utility for configuring encryption protocols, cyphers, hashing methods,
+and key exchanges for Windows components. Useful for sysadmins on Windows
+Server.
+ - **[<img src='https://www.netlimiter.com/favicon.ico' width='16' height='16' alt='icon' /> NetLimiter](https://www.netlimiter.com)** - Internet traffic control and monitoring tool.
  	- <details>
 		<summary>Stats</summary>
 
@@ -3487,18 +3503,23 @@ and very commonly abused by attackers, to execute malicious code on a victim's c
 		[![GitHub: linuz/Sticky-Keys-Slayer](https://img.shields.io/github/stars/linuz/Sticky-Keys-Slayer?style=flat&logo=github&label=Sticky-Keys-Slayer&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/linuz/Sticky-Keys-Slayer)  [![Sticky-Keys-Slayer on Awesome Privacy](https://img.shields.io/badge/Sticky-Keys-Slayer-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/operating-systems/windows-defences/sticky-keys-slayer) 
 
 		</details>
-- **[<img src='https://icon.horse/icon/docs.microsoft.com' width='16' height='16' alt='icon' /> SigCheck](https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck)** - A CLI utility that shows file version number, timestamp information, and digital signature details.
- - **[<img src='https://icon.horse/icon/www.bleachbit.org' width='16' height='16' alt='icon' /> BleachBit](https://www.bleachbit.org)** - Clears cache and deletes temporary files very effectively. This frees up disk space, improves performance, but most importantly helps to protect privacy.
- - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Windows Secure Baseline](https://github.com/nsacyber/Windows-Secure-Host-Baseline)** - Group Policy objects, compliance checks, and configuration tools that provide an automated and flexible approach for securely deploying and maintaining the latest releases of Windows 10.
+- **[<img src='https://icon.horse/icon/docs.microsoft.com' width='16' height='16' alt='icon' /> SigCheck](https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck)** - A CLI utility that shows file version number, timestamp information,
+and digital signature details.
+ - **[<img src='https://www.bleachbit.org/sites/default/files/zen_classic_logo_0.png' width='16' height='16' alt='icon' /> BleachBit](https://www.bleachbit.org)** - Clears cache and deletes temporary files very effectively.
+This frees up disk space, improves performance, but most importantly
+helps to protect privacy.
+ - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Windows Secure Baseline](https://github.com/nsacyber/Windows-Secure-Host-Baseline)** - Group Policy objects, compliance checks, and configuration tools that
+provide an automated and flexible approach for securely deploying and
+maintaining the latest releases of Windows 10.
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: nsacyber/Windows-Secure-Host-Baseline](https://img.shields.io/github/stars/nsacyber/Windows-Secure-Host-Baseline?style=flat&logo=github&label=Windows-Secure-Host-Baseline&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)](https://github.com/nsacyber/Windows-Secure-Host-Baseline)  [![Windows Secure Baseline on Awesome Privacy](https://img.shields.io/badge/Windows_Secure_Baseline-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)](https://awesome-privacy.xyz/operating-systems/windows-defences/windows-secure-baseline) 
 
 		</details>
-- **[<img src='https://icon.horse/icon/www.usb-antivirus.com' width='16' height='16' alt='icon' /> USBFix](https://www.usb-antivirus.com/)** - Detects infected USB removable devices.
- - **[<img src='https://icon.horse/icon/www.gmer.net' width='16' height='16' alt='icon' /> GMER](http://www.gmer.net)** - Rootkit detection and removal utility.
- - **[<img src='https://icon.horse/icon/schiffer.tech' width='16' height='16' alt='icon' /> ScreenWings](https://schiffer.tech/screenwings.html)** - Blocks malicious background applications from taking screenshots.
+- **[<img src='https://www.usb-antivirus.com/wp-content/uploads/2015/12/logo-usbfix-80x80.png.webp' width='16' height='16' alt='icon' /> USBFix](https://www.usb-antivirus.com)** - Detects infected USB removable devices.
+ - **[<img src='http://www2.gmer.net/favicon.ico' width='16' height='16' alt='icon' /> GMER](http://www.gmer.net)** - Rootkit detection and removal utility.
+ - **[<img src='https://schiffer.tech/img/logos/sw.png' width='16' height='16' alt='icon' /> ScreenWings](https://schiffer.tech/screenwings.html)** - Blocks malicious background applications from taking screenshots.
  - **[<img src='https://icon.horse/icon/schiffer.tech' width='16' height='16' alt='icon' /> CamWings](https://schiffer.tech/camwings.html)** - Blocks unauthorized webcam access.
  - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> SpyDish](https://github.com/mirinsoft/spydish)** - Open source GUI app built upon PowerShell, allowing you to perform a quick and easy privacy check, on Windows 10 systems.
  	- <details>
