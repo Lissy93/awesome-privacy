@@ -1,0 +1,166 @@
+openapi: 3.0.0
+info:
+  title: Awesome Privacy API
+  description: API for accessing information on privacy-focused services.
+  version: 1.0.0
+servers:
+  - url: https://api.awesome-privacy.xyz
+paths:
+  /services:
+    get:
+      summary: Returns an array of all service objects
+      responses:
+        '200':
+          description: A list of services
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+  /categories:
+    get:
+      summary: Returns an array of all categories IDs
+      responses:
+        '200':
+          description: A list of category slugs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+  /search/{searchTerm}:
+    get:
+      summary: Returns an array of listings matching the given search term
+      parameters:
+        - in: path
+          name: searchTerm
+          required: true
+          schema:
+            type: string
+          description: The term to search for
+      responses:
+        '200':
+          description: A list of services matching the search term
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+        '404':
+          description: Search term not specified
+  /{category}:
+    get:
+      summary: Returns an array of all section IDs within a given category
+      parameters:
+        - in: path
+          name: category
+          required: true
+          schema:
+            type: string
+          description: The slug of the category
+      responses:
+        '200':
+          description: A list of section slugs within the given category
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '404':
+          description: Category not found
+  /{category}/{section}:
+    get:
+      summary: Returns an array of all service objects within a given section
+      parameters:
+        - in: path
+          name: category
+          required: true
+          schema:
+            type: string
+          description: The slug of the category
+        - in: path
+          name: section
+          required: true
+          schema:
+            type: string
+          description: The slug of the section
+      responses:
+        '200':
+          description: A list of services within the specified section
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Service'
+        '404':
+          description: Category or section not found
+  /{category}/{section}/{service}:
+    get:
+      summary: Returns a single service object for a given category, section, and service
+      parameters:
+        - in: path
+          name: category
+          required: true
+          schema:
+            type: string
+          description: The slug of the category
+        - in: path
+          name: section
+          required: true
+          schema:
+            type: string
+          description: The slug of the section
+        - in: path
+          name: service
+          required: true
+          schema:
+            type: string
+          description: The slug of the service
+      responses:
+        '200':
+          description: A single service object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Service'
+        '404':
+          description: Category, section, or service not found
+components:
+  schemas:
+    ShortService:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        url:
+          type: string
+      required:
+        - name
+        - description
+        - url
+    Service:
+      allOf:
+        - $ref: '#/components/schemas/ShortService'
+        - type: object
+          properties:
+            github:
+              type: string
+            icon:
+              type: string
+            followWith:
+              type: string
+            securityAudited:
+              type: boolean
+            openSource:
+              type: boolean
+            acceptsCrypto:
+              type: boolean
+            tosdrId:
+              type: number

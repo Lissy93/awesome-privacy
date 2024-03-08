@@ -1,0 +1,80 @@
+
+# Logs
+logs
+_.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+
+# Runtime data
+pids
+_.pid
+_.seed
+\*.pid.lock
+
+# Coverage directory used by tools like istanbul
+lib-cov
+coverage
+\*.lcov
+.nyc_output
+
+# Dependencies, and compiled adons
+build/Release
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript and other dep cache
+\*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+.yarn-integrity
+
+# Secrets
+.env
+.env.*
+
+.parcel-cache
+.next
+out
+dist
+.cache/
+.temp
+.cache
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.\*
+
+# wrangler project
+.dev.vars
+.wrangler

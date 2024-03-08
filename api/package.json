@@ -1,0 +1,24 @@
+{
+	"name": "cloudflare-workers-openapi",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev"
+	},
+	"dependencies": {
+		"@cloudflare/itty-router-openapi": "^1.0.1",
+		"@hono/node-server": "^1.8.2",
+		"fuse.js": "^7.0.0",
+		"hono": "^4.0.10",
+		"js-yaml": "^4.1.0"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20240222.0",
+		"@types/js-yaml": "^4.0.9",
+		"@types/node": "^20.5.7",
+		"@types/service-worker-mock": "^2.0.1",
+		"wrangler": "^3.0.0"
+	}
+}

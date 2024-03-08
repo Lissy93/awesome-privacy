@@ -1,0 +1,9 @@
+
+name = "awesome-privacy-api"
+compatibility_date = "2024-03-04"
+main = "src/index.ts"
+# node_compat = true
+
+[site]
+bucket = "./public"  # Path to your static files
+
