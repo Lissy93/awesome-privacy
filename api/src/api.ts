@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { cors } from 'hono/cors';
 import Fuse from 'fuse.js';
 
 import {
@@ -13,6 +14,9 @@ import index from '../public/index.html'
 
 /* Create new Hono app */
 const app = new Hono({ strict: false });
+
+/* Enable CORS for all routes */
+app.use('*', cors());
 
 /* Serve the index page (which contains the Swagger Docs) */
 app.get("/", async (ctx) => {
