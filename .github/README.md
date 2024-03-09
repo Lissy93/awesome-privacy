@@ -4899,7 +4899,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/bgadrian">
-            <img src="https://avatars.githubusercontent.com/u/830001?v=4" width="80;" alt="bgadrian"/>
+            <img src="https://avatars.githubusercontent.com/u/830001?u=69f115baad2fcd8c14eb05bdbf5cd80f4649a95a&v=4" width="80;" alt="bgadrian"/>
             <br />
             <sub><b>B.G.Adrian</b></sub>
         </a>
@@ -4956,7 +4956,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/InDieTasten">
-            <img src="https://avatars.githubusercontent.com/u/7047377?v=4" width="80;" alt="InDieTasten"/>
+            <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
             <br />
             <sub><b>InDieTasten</b></sub>
         </a>
@@ -4984,6 +4984,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/mryesiller">
+            <img src="https://avatars.githubusercontent.com/u/24632172?v=4" width="80;" alt="mryesiller"/>
+            <br />
+            <sub><b>Göksel Yeşiller</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -4996,15 +5003,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Bastii717</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/frankdez93">
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/ratty222">
             <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
@@ -5037,7 +5044,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         <a href="https://github.com/mezza93">
             <img src="https://avatars.githubusercontent.com/u/153599966?v=4" width="80;" alt="mezza93"/>
             <br />
-            <sub><b>mezza93</b></sub>
+            <sub><b>Mezza93</b></sub>
         </a>
     </td></tr>
 </table>
@@ -5243,6 +5250,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/rastiqdev">
+            <img src="https://avatars.githubusercontent.com/u/62338646?v=4" width="80;" alt="rastiqdev"/>
+            <br />
+            <sub><b>RASTIQ</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/rollsicecream">
             <img src="https://avatars.githubusercontent.com/u/153316540?v=4" width="80;" alt="rollsicecream"/>
             <br />
@@ -5254,13 +5268,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
             <sub><b>Tim Schlotfeldt</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/edent">
-            <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
-            <br />
-            <sub><b>Terence Eden</b></sub>
         </a>
     </td></tr>
 </table>
