@@ -18,6 +18,7 @@ interface DockerTemplatePort {
 
 interface DockerTemplateEnvironmentVariable {
   name: string;
+  label?: string;
   default?: string;
   description?: string;
 }
@@ -56,6 +57,11 @@ interface DockerHubData {
   last_updated: string;
   date_registered: string;
   build_status: string;
+  permissions: {
+    read: boolean;
+    write: boolean;
+    admin: boolean;
+  };
 }
 
 interface DockerUsage {

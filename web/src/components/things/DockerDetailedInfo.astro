@@ -54,7 +54,10 @@ const formatBigNumber = (num: number): string => {
       </ul>
     )}
 
-    <h4>View on DockerHub</h4>
+    {docker.dockerHubData && (
+      <h4>View on DockerHub</h4>
+    )}
+    
     {docker.dockerHubData && Object.keys(docker.dockerHubData).length > 0 && (
       <a href={`https://hub.docker.com/r/${docker.dockerHubData.user}/${docker.dockerHubData.name}`} target="_blank">
         {docker.dockerHubData.user}/{docker.dockerHubData.name}  
@@ -71,9 +74,62 @@ const formatBigNumber = (num: number): string => {
     
   </div>
   <div class="right">
-    {docker.usage && (
+    {docker.usage && docker.usage.dockerRunCommand && (
       <h4>Run Command</h4>
       <pre>{docker.usage.dockerRunCommand}</pre>
+    )}
+    {docker.usage && docker.usage.dockerComposeFile && (
+      <h4>Compose File</h4>
+      <pre>{docker.usage.dockerComposeFile}</pre>
+    )}
+
+    {docker.template && docker.template.env && (
+      <h4>Environment Variables</h4>
+      <ul class="table">
+        <li class="header">
+          <span class="lbl">Var Name</span>
+          <span class="val">Default</span>
+        </li>
+        {docker.template.env.map((env) => (
+          <li>
+            <span class="lbl">{env.name || env.label}</span>
+            <span class="val">{env.default || 'null'}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {docker.template && docker.template.ports && (
+      <h4>Port List</h4>
+      <ul>
+        {docker.template.ports.map((port) => (
+          <li>{port}</li>
+        ))}
+      </ul>
+    )}
+
+    {docker.template && docker.template.volumes && (
+      <h4>Volume Mounting</h4>
+      <ul class="table">
+        {docker.template.volumes.map((volume) => (
+          <li>
+            <span class="lbl">{volume.bind}</span>
+            <span class="val">{volume.container || '(any)'}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {docker.dockerHubData && docker.dockerHubData.permissions && (
+      <h4>Permissions</h4>
+      <ul class="table">
+        {Object.keys(docker.dockerHubData.permissions).map((perm) => (
+          <li>
+            <span class="lbl">{perm}</span>
+            <span class="val">{perm ? '✅ Yes' : '❎ No'}</span>
+          </li>
+        ))}
+      </ul>
     )}
     
   </div>
@@ -89,12 +145,6 @@ const formatBigNumber = (num: number): string => {
       @media (max-width: 768px) {
         width: 100%;
       }
-    }
-    .long-list-data {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
     }
   }
 
@@ -116,15 +166,20 @@ const formatBigNumber = (num: number): string => {
       font-style: italic;
       -webkit-line-clamp: 3;
     }
-    .table {
-      max-width: 15rem;
-      padding-left: 0;
-      li {
-        display: flex;
-        justify-content: space-between;
-        .lbl {
-          font-weight: 500;
-        }
+  }
+
+  .table {
+    max-width: 15rem;
+    padding-left: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      .lbl {
+        font-weight: 500;
+      }
+      &.header {
+        border-bottom: 2px solid var(--accent);
+        .lbl { font-weight: 400; }
       }
     }
   }
