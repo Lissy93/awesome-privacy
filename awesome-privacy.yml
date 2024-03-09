@@ -34,7 +34,7 @@ categories:
     ###### Password Managers ######
     ###############################
     - name: Password Managers
-      alternativeTo: ['LastPass', '1Password', 'Dashlane', 'Bitwarden', 'Norton Password Manager']
+      alternativeTo: ['LastPass', '1Password', 'Dashlane', 'NordPass', 'RoboForm']
       services:
       - name: Bitwarden
         url: https://bitwarden.com
