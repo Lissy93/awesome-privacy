@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /search/*
+Allow: /search/$
+Allow: /sitemap
+
+Sitemap: https://awesome-privacy.xyz/sitemap-index.xml
