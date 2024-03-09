@@ -55,6 +55,21 @@
     social: solidIcons.faShareNodes,
     media: solidIcons.faPhotoFilmMusic,
     creativity: solidIcons.faPaintbrushPencil,
+
+    // Social Media Share Icons
+    mastodon: brands.faMastodon,
+    twitter: brands.faXTwitter,
+    reddit: brands.faReddit,
+    linkedin: brands.faLinkedin,
+    pinterest: brands.faPinterest,
+    telegram: brands.faTelegram,
+    whatsapp: brands.faWhatsapp,
+    signal: brands.faSignalMessenger,
+    pocket: brands.faGetPocket,
+
+    email: solidIcons.faEnvelope,
+    copy: solidIcons.faCopy,
+    print: solidIcons.faPrint,
   };
 
   export let iconName: string;

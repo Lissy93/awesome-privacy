@@ -58,15 +58,17 @@ const makePageTitle = () => {
  * Make a string page intro, for the description tag
  */
 const makeDescriptionTag = () => {
-  let description = `A list of privacy respecting ${title}. `;
+  let description = `Privacy respecting ${title}. `;
   if (services && services.length > 0) {
     const serviceList = services.map((serv: Service) => serv.name);
-    description += `Compare ${serviceList.join(', ')} and more private apps and services. `
+    description += `Compare ${serviceList.join(' vs ')} and more private, open source apps and services now. `
   } else {
     description += `Find private apps and services. This section is still a work in progress. `;
   }
-  description += 'All this, and much more at Awesome Privacy, '
-  description += 'the free and open source list of private software alternatives.';
+  if (alternativeTo && alternativeTo.length > 0) {
+    description += `The best secure encrypted alternatives to ${alternativeTo.join(', ')} in 2024. `;
+  }
+  description += 'All this, and many more free and awesome tools and software.'
   return description;
 };
 
@@ -118,8 +120,27 @@ const { previous, next } = makePaginationLinks();
         <p set:html={parseMarkdown(intro)}></p>
       </section>
     )}
-
+    
     <ServiceList services={services} sectionName={title} categoryName={categoryName} />
+
+    <details class="about-this-page">
+      <summary>Objective of this page</summary>
+      <p>
+        Find the best free, open source, E2E encrypted and private alternative to
+        {(alternativeTo || []).map((alt) => (<span>{alt}, </span>))} now.
+      </p>
+      <p>
+        Compare {(services || []).map((serv) => (<span>{serv.name} vs </span>))}
+      </p>
+      <p>
+        Discover the best {title} tools for Android, iPhone, Linux, PC and Chrome to download now.
+        And choose secure, self-hosted, peer-to-peer and independant alternatives in 2024
+      </p>
+      <p>
+        <b>Stop the invasion of privacy from big tech, improve data security stay safe.</b>
+      </p>
+    </details>
+
 
     {notableMentions && (
       <section class="notable-mentions">
@@ -273,5 +294,13 @@ h2 {
     }
   }
 }
+.about-this-page {
+  summary {
+    display: none;
+  }
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
 
 </style>

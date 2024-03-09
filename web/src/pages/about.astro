@@ -3,6 +3,7 @@
 import Layout from '@layouts/Layout.astro';
 import Main from '@components/scafold/MainCard.astro';
 import Icon from '@components/form/Icon.astro';
+import SocialShare from '@components/form/Social.astro';
 import { parseMarkdown } from '@utils/parse-markdown';
 
 const contributorsResource = async () => {
@@ -62,9 +63,9 @@ We also have a free, no-auth, CORS-enabled RESR API,
 which you can use to access Awesome Privacy's data programmatically,
 or to build your own apps on top of it.
 
-The [Swagger Spec](#) outlines all endpoints, usage and examples.
+The [Swagger Spec](api) outlines all endpoints, usage and examples.
 
-The host is: \`https://api.awesome-privacy.xyz\`
+Use our public instance, at: \`https://api.awesome-privacy.xyz\` or [self-host your own](https://github.com/Lissy93/awesome-privacy/tree/main/api)
 `;
 
 const projectRequrements = `
@@ -160,26 +161,31 @@ export const socials = [
 		title: 'GitHub',
 		icon: 'hub',
 		link: 'https://github.com/lissy93',
+		color: '#EA4AAA',
 	},
 	{
 		title: 'Twitter',
 		icon: 'twitter',
 		link: 'https://x.com/lissy_sykes',
+		color: '#1D9BF0',
 	},
 	{
 		title: 'Mastodon',
 		icon: 'mastodon',
 		link: 'https://mastodon.social/@lissy93',
+		color: '#6364FF',
 	},
 	{
 		title: 'Dev',
 		icon: 'dev',
 		link: 'https://dev.to/lissy93',
+		color: '#cece04',
 	},
 	{
 		title: 'LinkedIn',
 		icon: 'linkedin',
 		link: 'https://linkedin.com/in/aliciasykes',
+		color: '#0A66C2',
 	},
 ];
 
@@ -228,7 +234,7 @@ const description = 'Privacy is a fundamental human right; '
 			<br /><br />
 			To get started, head over to our <a href="https://github.com/lissy93/awesome-privacy">GitHub repository</a>.
 			From here, you'll be able to edit <a href="#"><code>awesome-privacy.yml</code></a>
-			where all data is stored, and then submit your changes as a pull request.<br />
+			where all data is stored, and then submit your changes as a pull request.
 			<br /><br />
 			If you're new to open source, you can find some resources to get you started
 			at <a href="https://git-in.to">git-in.to</a>, but feel free to reach out if you need any help 😊
@@ -267,6 +273,22 @@ const description = 'Privacy is a fundamental human right; '
 
 		<hr />
 
+		<h2 id="support-us">Help us out</h2>
+		<p>
+			Awesome Privacy is a free, open source and community-maintained resource.<br />
+			There's a few ways you can support us:
+			<ul class="help-list">
+				<li>Visiting, forking, or starring or our <a href="https://github.com/lissy93/awesome-privacy">GitHub repository</a></li>
+				<li>Help us keep our info up-to-date, but submitting an addition, removal or ammendment</li>
+				<li>Leave feedback on services that you've used, to help others make a more informed decission</li>
+				<li>Consider <a href="https://github.com/sponsors/Lissy93">sponsoring us on GitHub</a>, if you're able 💖</li>
+				<li>Share Awesome Privacy with your network</li>
+			</ul>
+			<SocialShare />
+		</p>
+
+		<hr />
+
 		<h2 id="author">Author</h2>
 		<article class="author">
 				<p>
@@ -287,7 +309,7 @@ const description = 'Privacy is a fundamental human right; '
 					<div class="socials">
 						{
 							socials.map((social) => (
-								<a href={social.link}>
+								<a href={social.link} style={`--color: ${social.color}`} target="_blank">
 									<Icon icon={social.icon} width={24} height={24} />
 								</a>
 							))
@@ -437,6 +459,12 @@ h3 {
 	white-space: pre-line;
 }
 
+.help-list {
+	padding-left: 1rem;
+	list-style: circle;
+	font-size: 1.1rem;
+}
+
 .author {
 	p {
 		margin: 1rem 0 0 0;
@@ -479,7 +507,7 @@ h3 {
 				color: var(--foreground);
 				transition: color 0.2s ease-in-out;
 				&:hover {
-					color: var(--accent);
+					color: var(--color);
 				}
 			}
 		}

@@ -19,6 +19,7 @@ const categories: Category[] = (await fetchData())?.categories;
     <p id="press-enter-msg" class="press-enter">Press enter for deep search</p>
   </span>
 </div>
+<p class="sitemap-link">Or, <a href="/sitemap">view all pages</a></p>
 
 <ul class="categories">
   {categories.map((category) => (
@@ -110,7 +111,7 @@ if (typeof window !== 'undefined') {
 <style lang="scss">
 
 .head-wrap {
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
   width: 85vw;
   display: flex;
   align-items: center;
@@ -138,6 +139,14 @@ if (typeof window !== 'undefined') {
     font-weight: bold;
     font-size: 3rem;
     margin: 0;
+    color: var(--accent-3);
+  }
+}
+
+.sitemap-link {
+  margin: 0 auto;
+  width: 85vw;
+  a {
     color: var(--accent-3);
   }
 }

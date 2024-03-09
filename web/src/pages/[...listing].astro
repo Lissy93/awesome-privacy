@@ -7,6 +7,7 @@ import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
 import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro';
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
 import DockerDetailedInfo from '@components/things/DockerDetailedInfo.astro';
+import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
@@ -15,6 +16,7 @@ import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
 import { fetchDockerData } from '@utils/fetch-docker-instructions';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+import { site } from '@utils/config';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import Button from '@components/form/Button.astro';
 
@@ -45,18 +47,20 @@ const {
  */
 const makeKeyWordTag = () => {
   const keywords: string[] = [];
-  keywords.push(`free and open source ${parentSection.name} software`);
-  keywords.push(`private ${parentSection.name} comparison`);
+  keywords.push(`open source ${parentSection.name}`);
+  keywords.push(`${parentSection.name} comparison`);
   (parentSection.alternativeTo || []).forEach((alt: string) => {
-    keywords.push(`privacy-respecting ${alt} alternative`);
-    keywords.push(`free open source ${alt} alternative`);
+    keywords.push(`${alt} alternative`);
   });
   (parentSection.services || []).forEach((serv: Service) => {
-    keywords.push(serv.name);
+    keywords.push(`${serv.name} vs`);
   });
+  keywords.push('private');
   keywords.push('ad free');
+  keywords.push('encrypted');
   keywords.push('open source software');
   keywords.push('privacy respecting apps');
+  keywords.push('free tools');
   return keywords.join(', ');
 };
 
@@ -71,10 +75,16 @@ const makePageTitle = () => {
  * Make a string page intro, for the description tag
  */
 const makeDescriptionTag = () => {
-  return  `Compare ${name} and other ${parentSection.name} at Awesome Privacy\n`
-    + description
-    + '\nAll this, and much more at Awesome Privacy, '
-    + 'the free and open source list of private software alternatives.';
+  let description = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
+  if (parentSection.services) {
+    const serviceList = parentSection.services.map((serv: Service) => serv.name);
+    description += `Compare ${serviceList.join(' vs ')} more apps. `
+  }
+  if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
+    description += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')} in 2024. `;
+  }
+  description += 'All this, and many more free and awesome tools and software.'
+  return description;
 };
 
 // Return a list of Services, except for the currtent one
@@ -126,8 +136,6 @@ const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
-
-console.log(dockerData);
 
 const getApiEndpoint = () => {
   return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
@@ -276,7 +284,7 @@ const getApiEndpoint = () => {
       <pre><a href={getApiEndpoint()}><code>{getApiEndpoint()}</code></a></pre>
       <p>
         The REST API is free, no-auth and CORS-enabled.
-        To learn more, view the  <a href="/api/docs">Swagger Docs</a> or read the <a href="/about#our-api">API Usage Guide</a>.
+        To learn more, view the  <a href="/api">Swagger Docs</a> or read the <a href="/about#api">API Usage Guide</a>.
       </p>
 
       <h4>About the Data</h4>
@@ -286,6 +294,24 @@ const getApiEndpoint = () => {
         To learn more about where the rest of data included in this page comes from,
         and how it is computed,
         see the <a href="/about#our-data">About the Data</a> section of our About page.
+      </p>
+    </section>
+
+    <section>
+      <h3>Share {name}</h3>
+      <p>
+        Help your friends compare {parentSection.name}, and pick privacy-respecting software and services.<br />
+        Share {name} and Awesome Privacy with your network!
+        <div>
+          <SocialShare
+            url={`${site}/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)} `}
+            title={`Checkout ${name}! \n`}
+            description={
+            `Compare #${name} and other privacy-respecting ${parentSection.name} at `
+            + `Awesome-Privacy.xyz, the free and open source list of private software alternatives. `
+            + `#privacy #opensource #awesomeprivacy by @Lissy_Sykes`}
+          />
+        </div>
       </p>
     </section>
 

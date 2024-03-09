@@ -16,9 +16,19 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
         Below is a full listing of all pages on this site.<br>
         <small>As reflected in our <a href="/sitemap-index.xml">sitemap.xml</a></small>
       </p>
+      <span class="search-controlls">
+        <input id="searchInput" type="search" placeholder="Start typing to filter..." />
+        <p id="press-enter-msg" class="press-enter">Press enter for deep search</p>
+      </span>
       <ul>
         <li>
           <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/edit">Edit</a>
+        </li>
+        <li>
+          <a href="/api">API</a>
         </li>
         <li>
           <a href="/search">Search</a>
@@ -73,10 +83,47 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
           <a href="/map">Sitemap</a>
         </li>
       </ul>
-      
   </main>
   
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Select elements for events (search field, each result, and message str)
+    const filterInput = document.querySelector<HTMLInputElement>('input');
+    const pages = document.querySelectorAll<HTMLElement>('li');
+    const pressEnterMsg = document.getElementById('press-enter-msg');
+    if (!pressEnterMsg) throw new Error('pressEnterMsg element not found');
+
+    // Instant search/filter functionality
+    filterInput?.addEventListener('input', (e: Event) => {
+      const filter = (e.target as HTMLInputElement).value.toLowerCase();
+      pressEnterMsg.style.visibility = filter.length > 0 ? 'visible' : 'hidden';
+      Array.from(pages).reduce((count, page) => {
+        const match = page.textContent?.toLowerCase().includes(filter) || false;
+        page.style.display = match ? 'block' : 'none';
+        return count + (match ? 1 : 0);
+      }, 0);
+    });
+    // Handle keypress events, so Esc clears search, and Entr runs deep search
+    document.addEventListener('keydown', (event: KeyboardEvent) => {
+      if (!filterInput) return;
+      switch (event.key) {
+        case 'Enter':
+          event.preventDefault();
+          const searchTerm = encodeURIComponent(filterInput.value);
+          window.location.href = `/search/${searchTerm}`;
+          break;
+        case 'Escape':
+          filterInput.value = '';
+          filterInput.blur();
+          pressEnterMsg.style.visibility = 'hidden';
+          pages.forEach(page => page.style.display = 'block');
+          break;
+      }
+    });
+  });
+</script>
 
 <style lang="scss">
 
@@ -89,6 +136,7 @@ main {
   border: 2px solid var(--foreground);
   box-shadow: 6px 6px 0 var(--foreground);
   background: var(--accent-fg);
+  position: relative;
   p {
     font-size: 1.3rem;
     margin: 0;
@@ -135,12 +183,46 @@ h2 {
   margin: 0;
   gap: 1rem;
   font-size: 2rem;
-    margin: -2rem 0 2rem -4rem;
-    box-shadow: 6px 6px 0 var(--foreground);
-    background: var(--accent);
-    color: var(--accent-fg);
-    width: fit-content;
-    padding: 0.25rem 0.5rem;
+  margin: -2rem 0 2rem -4rem;
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent);
+  color: var(--accent-fg);
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  @media (max-width: 768px) {
+    margin: -2rem auto 1rem auto;
+  }
+}
+
+.search-controlls {
+  float: right;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  @media (max-width: 768px) {
+    position: relative;
+    float: none;
+    top: 0;
+    right: 0;
+  }
+  .press-enter {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.5;
+    visibility: hidden;
+    font-size: 1rem;
+  }
+  input {
+    padding: 0.25rem;
+    border: 2px solid var(--foreground);
+    border-radius: var(--curve-sm);
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 var(--foreground);
+    color: var(--accent-3);
+    &:focus {
+      outline: none;
+      box-shadow: 4px 4px 0 var(--foreground);
+    }
+  }
 }
 
 

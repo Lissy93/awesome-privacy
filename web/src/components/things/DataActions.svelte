@@ -54,7 +54,7 @@
   title="awesome-privacy.yml"
   src={getIframeSrc()}></iframe>
 
-<h4>Edit/Delete Request</h4>
+<h4>Modify Data</h4>
 <div class="button-wrap">
   <a class="button-link" target="_blank"
     href={makeRemovalRequest(categoryName, sectionName, serviceName, yamlContent)}>
