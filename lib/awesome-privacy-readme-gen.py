@@ -35,7 +35,7 @@ def repoElement(repoUrl):
     return (
         f"[![GitHub: {repoUrl}](https://img.shields.io/github/stars/{repoUrl}"
         f"?style=flat&logo=github&label={repoUrl.split('/')[1]}"
-        "&labelColor=%230d1117&color=%23302982&cacheSeconds=3600)]"
+        "&color=%235f53f4&cacheSeconds=3600)]"
         f"(https://github.com/{repoUrl})"
     )
 
@@ -44,6 +44,16 @@ def tosElement(tosdrId):
         return ""
     return f"[![Privacy Policy](https://shields.tosdr.org/en_{tosdrId}.svg)](https://tosdr.org/en/service/{tosdrId})"
 
+def statsElement(isOpenSource, isSecurityAudited, isAcceptsCrypto):
+    statsStr = ""
+    if isOpenSource == True:
+      statsStr += "📦 Open Source "
+    if isSecurityAudited == True:
+      statsStr += "🛡️ Security Audited "
+    if isAcceptsCrypto == True:
+      statsStr += "💰 Accepts Anonymous Payment "
+    return statsStr
+
 def awesomePrivacyReport(categoryName, sectionName, serviceName):
   if not serviceName:
       return ""
@@ -51,7 +61,7 @@ def awesomePrivacyReport(categoryName, sectionName, serviceName):
       return (name or '').lower().replace(' ', '-')
   return (
       f"[![{serviceName} on Awesome Privacy]"
-      f"(https://img.shields.io/badge/{serviceName.replace(' ', '_')}-FC60A8?style=flat&logo=awesomelists&label=Awesome%20Privacy)]"
+      f"(https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label={serviceName.replace(' ', '_')})]"
       f"(https://awesome-privacy.xyz/{slugify(categoryName)}/{slugify(sectionName)}/{slugify(serviceName)})"
   )
 
@@ -67,8 +77,8 @@ def makeHref(text):
     return re.sub(r'[^\w\s-]', '', text.lower()).replace(" ", "-")
 
 def makeContents():
-    contents = "<details>\n"
-    contents += "<summary><h2>Contents</h2></summary>\n"
+    contents = "<blockquote><details>\n"
+    contents += "<summary>📋 <b>Contents</b></summary>\n"
 
     for category in data.get('categories'):
         contents += f"\n- **{category.get('name')}**"
@@ -77,7 +87,7 @@ def makeContents():
                 f"\n\t- [{section.get('name')}](#{makeHref(section.get('name'))}) "
                 f"({len(section.get('services') or [])})"
             )
-    contents += "\n</details>\n\n"
+    contents += "\n</details></blockquote>\n\n"
     return contents
 
 def makeAwesomePrivacy():
@@ -102,12 +112,12 @@ def makeAwesomePrivacy():
               markdown += (
                   f"- **[{iconElement(app.get('url'), app.get('icon'))} {app.get('name')}]"
                   f"({app.get('url')})** - {app.get('description')} "
-
                   + ((
                     f"\t- <details>\n\t\t<summary>Stats</summary>\n\n\t\t"
                     f"{repoElement(app.get('github'))} "
                     f"{tosElement(app.get('tosdrId'))} "
                     f"{awesomePrivacyReport(category.get('name'), section.get('name'), app.get('name'))} \n"
+                    f"{statsElement(app.get('openSource'), app.get('securityAudited'), app.get('acceptsCrypto'))} \n"
                     f"\n\t\t</details>\n"
                   )
                   if app.get('github') or app.get('tosdrId') else '')
