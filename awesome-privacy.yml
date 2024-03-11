@@ -4807,6 +4807,7 @@ categories:
       alternativeTo: ['adobe photoshop', 'paint.net', 'corel paintshop pro', 'affinity photo']
       services:
       - name: Gimp
+        followWith: Windows, Mac OS, Linux
         description: |
           A free, open source, cross-platform image editor. GIMP is a powerful tool for
           photo retouching, image composition, and image authoring. It is highly customizable,
@@ -4816,6 +4817,7 @@ categories:
         icon: https://www.gimp.org/images/frontpage/wilber-big.png
         openSource: true
       - name: InkScape
+        followWith: Windows, Mac OS, Linux
         description: |
           A free, open source, professional vector graphics editor. It is a powerful tool
           for creating illustrations, icons, logos, diagrams, maps, and web graphics.
@@ -4824,6 +4826,35 @@ categories:
         icon: https://media.inkscape.org/static/images/inkscape-logo.svg
         openSource: true
         tosdrId: 6568
+      - name: Paint.NET
+        followWith: Windows
+        description: |
+          A more advanced take on Microsoft Paint. Suitable for basic image editing,
+          with support for basic layers, unlimited undo/redo, and extendable via plugins
+        url: https://www.getpaint.net
+        github: paintdotnet/release
+        icon: https://i.ibb.co/PmNGFmh/Paint-NET.png
+        openSource: true
+      - name: PixlrX
+        followWith: Web
+        url: https://pixlr.com/express
+        description: |
+          A free web-based image editor, with a modern UI
+          Also offers premium/paid features, such as AI generation, touchup and editing
+        icon: https://pixlr.com/apple-touch-icon.png
+        tosdrId: 3240
+        openSource: false
+        securityAudited: false
+        acceptsCrypto: false
+      - name: RawTherapee
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A powerful raw photo processing system and editor, for non-destructive editing
+          of raw digital photos
+        url: https://rawtherapee.com
+        github: Beep6581/RawTherapee
+        icon: https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png
+        openSource: true
 
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
