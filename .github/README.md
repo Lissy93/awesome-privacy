@@ -109,7 +109,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Torrent Downloaders](#torrent-downloaders) (0)
 	- [File Converters](#file-converters) (0)
 - **Creativity**
-	- [Image Editors](#image-editors) (0)
+	- [Image Editors](#image-editors) (5)
 	- [Video Editors](#video-editors) (0)
 	- [Audio Editors & Recorders](#audio-editors--recorders) (0)
 	- [Casting & Streaming](#casting--streaming) (0)
@@ -4710,7 +4710,53 @@ It is built upon the [Invidious](https://invidious.io/) API.
 
 ### Image Editors
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://www.gimp.org/images/frontpage/wilber-big.png' width='16' height='16' alt='icon' /> Gimp](https://www.gimp.org)** - A free, open source, cross-platform image editor. GIMP is a powerful tool for
+photo retouching, image composition, and image authoring. It is highly customizable,
+and supports a wide range of file formats.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: GNOME/gimp](https://img.shields.io/github/stars/GNOME/gimp?style=flat&logo=github&label=gimp&color=%235f53f4&cacheSeconds=3600)](https://github.com/GNOME/gimp)  [![Gimp on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Gimp)](https://awesome-privacy.xyz/creativity/image-editors/gimp) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://media.inkscape.org/static/images/inkscape-logo.svg' width='16' height='16' alt='icon' /> InkScape](https://inkscape.org)** - A free, open source, professional vector graphics editor. It is a powerful tool
+for creating illustrations, icons, logos, diagrams, maps, and web graphics.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: inkscape/inkscape](https://img.shields.io/github/stars/inkscape/inkscape?style=flat&logo=github&label=inkscape&color=%235f53f4&cacheSeconds=3600)](https://github.com/inkscape/inkscape) [![Privacy Policy](https://shields.tosdr.org/en_6568.svg)](https://tosdr.org/en/service/6568) [![InkScape on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=InkScape)](https://awesome-privacy.xyz/creativity/image-editors/inkscape) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://i.ibb.co/PmNGFmh/Paint-NET.png' width='16' height='16' alt='icon' /> Paint.NET](https://www.getpaint.net)** - A more advanced take on Microsoft Paint. Suitable for basic image editing,
+with support for basic layers, unlimited undo/redo, and extendable via plugins
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: paintdotnet/release](https://img.shields.io/github/stars/paintdotnet/release?style=flat&logo=github&label=release&color=%235f53f4&cacheSeconds=3600)](https://github.com/paintdotnet/release)  [![Paint.NET on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Paint.NET)](https://awesome-privacy.xyz/creativity/image-editors/paint.net) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://pixlr.com/apple-touch-icon.png' width='16' height='16' alt='icon' /> PixlrX](https://pixlr.com/express)** - A free web-based image editor, with a modern UI
+Also offers premium/paid features, such as AI generation, touchup and editing
+ 	- <details>
+		<summary>Stats</summary>
+
+		 [![Privacy Policy](https://shields.tosdr.org/en_3240.svg)](https://tosdr.org/en/service/3240) [![PixlrX on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PixlrX)](https://awesome-privacy.xyz/creativity/image-editors/pixlrx) 
+ 
+
+		</details>
+- **[<img src='https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png' width='16' height='16' alt='icon' /> RawTherapee](https://rawtherapee.com)** - A powerful raw photo processing system and editor, for non-destructive editing
+of raw digital photos
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: Beep6581/RawTherapee](https://img.shields.io/github/stars/Beep6581/RawTherapee?style=flat&logo=github&label=RawTherapee&color=%235f53f4&cacheSeconds=3600)](https://github.com/Beep6581/RawTherapee)  [![RawTherapee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RawTherapee)](https://awesome-privacy.xyz/creativity/image-editors/rawtherapee) 
+📦 Open Source  
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
