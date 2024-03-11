@@ -4804,8 +4804,18 @@ categories:
   - name: Creativity
     sections:
     - name: Image Editors
-      alternativeTo: ['adobe photoshop', 'gimp', 'paint.net', 'corel paintshop pro', 'affinity photo']
-      services: []
+      alternativeTo: ['adobe photoshop', 'paint.net', 'corel paintshop pro', 'affinity photo']
+      services:
+      - name: Gimp
+        description: |
+          A free, open source, cross-platform image editor. GIMP is a powerful tool for
+          photo retouching, image composition, and image authoring. It is highly customizable,
+          and supports a wide range of file formats.
+        url: https://www.gimp.org
+        github: GNOME/gimp
+        icon: https://www.gimp.org/images/frontpage/wilber-big.png
+        openSource: true
+        
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
       services: []
