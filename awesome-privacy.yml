@@ -4815,7 +4815,16 @@ categories:
         github: GNOME/gimp
         icon: https://www.gimp.org/images/frontpage/wilber-big.png
         openSource: true
-        
+      - name: InkScape
+        description: |
+          A free, open source, professional vector graphics editor. It is a powerful tool
+          for creating illustrations, icons, logos, diagrams, maps, and web graphics.
+        url: https://inkscape.org
+        github: inkscape/inkscape
+        icon: https://media.inkscape.org/static/images/inkscape-logo.svg
+        openSource: true
+        tosdrId: 6568
+
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
       services: []
