@@ -4855,6 +4855,17 @@ categories:
         github: Beep6581/RawTherapee
         icon: https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png
         openSource: true
+      - name: Krita
+        followWith: Windows, Mac OS, Linux
+        icon: https://i.ibb.co/TqtRH52/Krita.png
+        openSource: true
+        description: |
+          Digital painting application.
+          Free and open source (backed by KDE), with cross-platform support,
+          Krita is popular among both professional and amateur artists
+          due to it's comprehensive feature set, and intuitive UI
+        url: https://krita.org/en
+        github: KDE/krita
 
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
