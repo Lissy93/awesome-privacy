@@ -1,14 +1,6 @@
 ---
-
-
 import Layout from '@layouts/Layout.astro';
 import AddNewService from '@components/things/AddNewService.svelte';
-import type { AwesomePrivacy, Section } from '../types/Service';
-import { fetchData, slugify } from '@utils/fetch-data';
-import FontAwesome from '@components/form/FontAwesome.svelte';
-
-const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
-
 ---
 
 <Layout title="Awesome Privacy">
