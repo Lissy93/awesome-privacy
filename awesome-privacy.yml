@@ -4866,10 +4866,41 @@ categories:
           due to it's comprehensive feature set, and intuitive UI
         url: https://krita.org/en
         github: KDE/krita
+      - name: DarkTable
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A photography workflow application (similar to Adbobe Lightroom)
+          Includes a  non-destructive raw developer for raw images and managing digital negatives.
+        url: https://www.darktable.org
+        github: darktable-org/darktable
+        icon: https://i.ibb.co/09PfHbG/darktable.png
+        openSource: true
 
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
-      services: []
+      services: 
+      - name: Shotcut
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A free, open source, cross-platform video editor, using FFmpeg
+          Shotcut supports a wide range of formats, and has a comprehensive feature set,
+          including 4K & 8k resolution, webcam + audio capture, batch opperations and
+          [much more](https://shotcut.org/features/)
+        url: https://shotcut.org
+        github: mltframework/shotcut
+        icon: https://www.shotcut.org/assets/img/media/shotcut-logo-512x512.png
+        openSource: true
+      - name: OpenShot
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A free, simple, cross-platform video editor.
+          Great for trimming/slicing, video effects, adding titles, scene animations
+          and [more](https://www.openshot.org/features/)
+        url: https://www.openshot.org
+        github: OpenShot/openshot-qt
+        icon: https://www.openshot.org/static/img/favicon.png
+        openSource: true
+
     - name: Audio Editors & Recorders
       alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
       services: []
