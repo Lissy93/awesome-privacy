@@ -4900,6 +4900,36 @@ categories:
         github: OpenShot/openshot-qt
         icon: https://www.openshot.org/static/img/favicon.png
         openSource: true
+      - name: Kdenlive
+        followWith: Windows, Mac OS, Linux
+        description: |
+          KDE Non-Linear Video Editor, is an editor based on the MLT Framework, KDE and Qt,
+          written using C++ and using FFmpeg
+        url: https://kdenlive.org
+        github: kdenlive/kdenlive
+        icon: https://seeklogo.com/images/K/kdenlive-logo-CAAD792F3F-seeklogo.com.png
+        openSource: true
+      - name: FlowBlade
+        followWith: Linux
+        description: |
+          A multitrack non-linear video editor with a simple interface
+        url: https://jliljebl.github.io/flowblade
+        github: jliljebl/flowblade
+        icon: https://i.ibb.co/WkBKN6r/flowblade.png
+        openSource: true
+      - name: Cinelerra GG Infinity
+        followWith: Linux
+        description: |
+          Simple video editor, for applying transitions, effects and text as well
+          as splicing video clips
+        url: https://www.cinelerra-gg.org
+        github: cinelerra-gg/cinelerra-gg
+      - name: VitCutter
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A simple Python-based cross-platform tool for cutting and splicing videos
+        url: https://sourceforge.net/projects/vidcutter/
+        github: ozmartian/vidcutter
 
     - name: Audio Editors & Recorders
       alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
