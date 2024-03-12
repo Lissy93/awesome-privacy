@@ -109,12 +109,12 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Torrent Downloaders](#torrent-downloaders) (0)
 	- [File Converters](#file-converters) (0)
 - **Creativity**
-	- [Image Editors](#image-editors) (7)
-	- [Video Editors](#video-editors) (6)
-	- [Audio Editors & Recorders](#audio-editors--recorders) (0)
-	- [Casting & Streaming](#casting--streaming) (0)
+	- [Image Editors](#image-editors) (8)
+	- [Video Editors](#video-editors) (7)
+	- [Audio Editors & Recorders](#audio-editors--recorders) (1)
+	- [Casting & Streaming](#casting--streaming) (1)
 	- [Screenshot Tools](#screenshot-tools) (0)
-	- [3D Graphics](#3d-graphics) (0)
+	- [3D Graphics](#3d-graphics) (2)
 	- [Animation](#animation) (0)
 </details></blockquote>
 
@@ -4738,8 +4738,8 @@ with support for basic layers, unlimited undo/redo, and extendable via plugins
 📦 Open Source  
 
 		</details>
-- **[<img src='https://pixlr.com/apple-touch-icon.png' width='16' height='16' alt='icon' /> PixlrX](https://pixlr.com/express)** - A free web-based image editor, with a modern UI
-Also offers premium/paid features, such as AI generation, touchup and editing
+- **[<img src='https://pixlr.com/apple-touch-icon.png' width='16' height='16' alt='icon' /> PixlrX](https://pixlr.com/express)** - A free web-based image editor, with a modern UI.
+Also offers premium/paid features, such as AI-powered generation, touchup and editing
  	- <details>
 		<summary>Stats</summary>
 
@@ -4754,6 +4754,15 @@ of raw digital photos
 
 		[![GitHub: Beep6581/RawTherapee](https://img.shields.io/github/stars/Beep6581/RawTherapee?style=flat&logo=github&label=RawTherapee&color=%235f53f4&cacheSeconds=3600)](https://github.com/Beep6581/RawTherapee)  [![RawTherapee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RawTherapee)](https://awesome-privacy.xyz/creativity/image-editors/rawtherapee) 
 📦 Open Source  
+
+		</details>
+- **[<img src='https://www.photopea.com/promo/icon512.png' width='16' height='16' alt='icon' /> PhotoPea](https://photopea.com)** - A free online image editor, for both  raster and vector graphics,
+with a very wide range of supported formats
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: photopea/photopea](https://img.shields.io/github/stars/photopea/photopea?style=flat&logo=github&label=photopea&color=%235f53f4&cacheSeconds=3600)](https://github.com/photopea/photopea) [![Privacy Policy](https://shields.tosdr.org/en_4105.svg)](https://tosdr.org/en/service/4105) [![PhotoPea on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PhotoPea)](https://awesome-privacy.xyz/creativity/image-editors/photopea) 
+📦 Open Source 💰 Accepts Anonymous Payment  
 
 		</details>
 - **[<img src='https://i.ibb.co/TqtRH52/Krita.png' width='16' height='16' alt='icon' /> Krita](https://krita.org/en)** - Digital painting application.
@@ -4830,12 +4839,24 @@ as splicing video clips
  
 
 		</details>
-- **[<img src='https://icon.horse/icon/sourceforge.net' width='16' height='16' alt='icon' /> VitCutter](https://sourceforge.net/projects/vidcutter/)** - A simple Python-based cross-platform tool for cutting and splicing videos
+- **[<img src='https://a.fsdn.com/allura/p/vidcutter/icon?1624427151' width='16' height='16' alt='icon' /> VitCutter](https://sourceforge.net/projects/vidcutter/)** - A simple Python-based cross-platform tool for cutting and splicing videos
  	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: ozmartian/vidcutter](https://img.shields.io/github/stars/ozmartian/vidcutter?style=flat&logo=github&label=vidcutter&color=%235f53f4&cacheSeconds=3600)](https://github.com/ozmartian/vidcutter)  [![VitCutter on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VitCutter)](https://awesome-privacy.xyz/creativity/video-editors/vitcutter) 
  
+
+		</details>
+- **[<img src='https://natrongithub.github.io/img/Natron_icon.svg' width='16' height='16' alt='icon' /> Natron](https://natrongithub.github.io)** - Free & open desktop node-graph based video compositing software.
+Similar in functionalities to Adobe After Effects.
+Features flexible rotoscoping, 2D & planner tracking, keying tools,
+curve & dope-shift editor, GPU & network rendering, and is
+easily extendable via community plugins, or by writing Python scripts
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: NatronGitHub/Natron](https://img.shields.io/github/stars/NatronGitHub/Natron?style=flat&logo=github&label=Natron&color=%235f53f4&cacheSeconds=3600)](https://github.com/NatronGitHub/Natron)  [![Natron on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Natron)](https://awesome-privacy.xyz/creativity/video-editors/natron) 
+📦 Open Source  
 
 		</details>
 
@@ -4845,14 +4866,41 @@ as splicing video clips
 
 ### Audio Editors & Recorders
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg' width='16' height='16' alt='icon' /> Audacity](https://www.audacityteam.org)** - An easy-to-use, multi-track audio editor and recorder for desktops,
+great free alternative to Adobe Audition.
+Features recording from real and virtual devices,
+import/export to a wide range of formats, high-quality processing
+advanced multi-track editing, noise reduction, pitch correction, 
+audio restoration and much more.
+It's easily extendable via community plugins, and 
+also supports cusotm macros and many scripting options
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: audacity/audacity](https://img.shields.io/github/stars/audacity/audacity?style=flat&logo=github&label=audacity&color=%235f53f4&cacheSeconds=3600)](https://github.com/audacity/audacity) [![Privacy Policy](https://shields.tosdr.org/en_4516.svg)](https://tosdr.org/en/service/4516) [![Audacity on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Audacity)](https://awesome-privacy.xyz/creativity/audio-editors-&-recorders/audacity) 
+📦 Open Source  
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
 
 ### Casting & Streaming
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://obsproject.com/assets/images/new_icon_small-r.png' width='16' height='16' alt='icon' /> OBS Studio](https://obsproject.com)** - Powerful desktop software for live streaming and screen recording.
+Free and open source software for video recording and live streaming.
+Features real-time video/audio capturing, scene composition, encoding,
+recording, and broadcasting. It supports a wide range of formats,
+and is easily extendable via community plugins
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: obsproject/obs-studio](https://img.shields.io/github/stars/obsproject/obs-studio?style=flat&logo=github&label=obs-studio&color=%235f53f4&cacheSeconds=3600)](https://github.com/obsproject/obs-studio) [![Privacy Policy](https://shields.tosdr.org/en_4227.svg)](https://tosdr.org/en/service/4227) [![OBS Studio on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OBS_Studio)](https://awesome-privacy.xyz/creativity/casting-&-streaming/obs-studio) 
+📦 Open Source  
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
@@ -4866,7 +4914,28 @@ as splicing video clips
 
 ### 3D Graphics
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://www.blender.org/wp-content/themes/bthree/assets/icons/apple-touch-icon.png' width='16' height='16' alt='icon' /> Blender](https://www.blender.org)** - Free desktop 3D creation suite, with a wide range of tools for
+modeling, sculpting, texturing, rigging, animation, rendering, compositing,
+motion tracking, and video editing. It's easily extendable via community plugins
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: blender/blender](https://img.shields.io/github/stars/blender/blender?style=flat&logo=github&label=blender&color=%235f53f4&cacheSeconds=3600)](https://github.com/blender/blender) [![Privacy Policy](https://shields.tosdr.org/en_8114.svg)](https://tosdr.org/en/service/8114) [![Blender on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Blender)](https://awesome-privacy.xyz/creativity/3d-graphics/blender) 
+📦 Open Source 🛡️ Security Audited  
+
+		</details>
+- **[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wings3d.png/120px-Wings3d.png' width='16' height='16' alt='icon' /> Wings3D](https://wings3d.com)** - A simple and easy-to-use subdivision 3D modeler
+with AutoUV facility for unfolding a models surface for painting/texturing.
+Unlike Blender, it has no built-in animation capabilites, and it's feature set
+is more limited, but it's a good choice for beginners.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: dgud/wings](https://img.shields.io/github/stars/dgud/wings?style=flat&logo=github&label=wings&color=%235f53f4&cacheSeconds=3600)](https://github.com/dgud/wings)  [![Wings3D on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Wings3D)](https://awesome-privacy.xyz/creativity/3d-graphics/wings3d) 
+ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
