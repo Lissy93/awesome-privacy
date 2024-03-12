@@ -22,7 +22,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (5)
-	- [2-Factor Authentication](#2-factor-authentication) (8)
+	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (4)
@@ -195,6 +195,15 @@ free plan.
 
 ### 2-Factor Authentication
 
+- **[<img src='https://avatars.githubusercontent.com/u/18189374' width='16' height='16' alt='icon' /> 2FAS](https://2fas.com/)** - Free, secure and open source authenticator app for both iOS and Android.
+Supports creating encrypted backups and syncing between devices without the need for an account.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: twofas/2fas-server](https://img.shields.io/github/stars/twofas/2fas-server?style=flat&logo=github&label=2fas-server&color=%235f53f4&cacheSeconds=3600)](https://github.com/twofas/2fas-server) [![Privacy Policy](https://shields.tosdr.org/en_8201.svg)](https://tosdr.org/en/service/8201) [![2FAS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=2FAS)](https://awesome-privacy.xyz/essentials/2-factor-authentication/2fas) 
+ 
+
+		</details>
 - **[<img src='https://raw.githubusercontent.com/beemdevelopment/Aegis/master/metadata/en-US/images/icon.png' width='16' height='16' alt='icon' /> Aegis](https://getaegis.app)** - Free, secure and open source authenticator app for Android. Has a backup/
 restore feature and a customisable UI with dark mode
  	- <details>
