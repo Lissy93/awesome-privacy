@@ -4989,6 +4989,19 @@ but feel free to reach out if you need any help 😊
 
 ---
 
+## The API
+
+We also have a free, no-auth, CORS-enabled RESR API, which you can use to access
+Awesome Privacy's data programmatically, or to build your own apps on top of it.
+
+To get started, try our [Swagger Explorer](https://awesome-privacy.xyz/api),
+which outlines all endpoints, usage and examples.
+
+You can either use our public instance, at: [`https://api.awesome-privacy.xyz`](https://api.awesome-privacy.xyz)
+or self-host your own, with the source of the [`api/`](https://github.com/Lissy93/awesome-privacy/tree/main/api) directory.
+
+---
+
 ## Acknowledgements
 
 ### Sponsors
