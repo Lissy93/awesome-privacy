@@ -4839,8 +4839,8 @@ categories:
         followWith: Web
         url: https://pixlr.com/express
         description: |
-          A free web-based image editor, with a modern UI
-          Also offers premium/paid features, such as AI generation, touchup and editing
+          A free web-based image editor, with a modern UI.
+          Also offers premium/paid features, such as AI-powered generation, touchup and editing
         icon: https://pixlr.com/apple-touch-icon.png
         tosdrId: 3240
         openSource: false
@@ -4855,6 +4855,18 @@ categories:
         github: Beep6581/RawTherapee
         icon: https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png
         openSource: true
+      - name: PhotoPea
+        followWith: Web
+        description: |
+          A free online image editor, for both  raster and vector graphics,
+          with a very wide range of supported formats
+        url: https://photopea.com
+        icon: https://www.photopea.com/promo/icon512.png
+        github: photopea/photopea
+        openSource: true
+        securityAudited: false
+        acceptsCrypto: true
+        tosdrId: 4105
       - name: Krita
         followWith: Windows, Mac OS, Linux
         icon: https://i.ibb.co/TqtRH52/Krita.png
@@ -4930,7 +4942,19 @@ categories:
           A simple Python-based cross-platform tool for cutting and splicing videos
         url: https://sourceforge.net/projects/vidcutter/
         github: ozmartian/vidcutter
-
+        icon: https://a.fsdn.com/allura/p/vidcutter/icon?1624427151
+      - name: Natron
+        followWith: Windows, Mac OS, Linux
+        description: |
+          Free & open desktop node-graph based video compositing software.
+          Similar in functionalities to Adobe After Effects.
+          Features flexible rotoscoping, 2D & planner tracking, keying tools,
+          curve & dope-shift editor, GPU & network rendering, and is
+          easily extendable via community plugins, or by writing Python scripts
+        url: https://natrongithub.github.io
+        github: NatronGitHub/Natron
+        icon: https://natrongithub.github.io/img/Natron_icon.svg
+        openSource: true
     - name: Audio Editors & Recorders
       alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
       services: []
