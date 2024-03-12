@@ -136,7 +136,8 @@ categories:
       - name: 2FAS
         url: https://2fas.com/
         followWith: Android & iOS
-        github: twofas
+        github: twofas/2fas-server
+        tosdrId: 8201
         icon: https://avatars.githubusercontent.com/u/18189374
         description: |
           Free, secure and open source authenticator app for both iOS and Android.
