@@ -109,8 +109,8 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Torrent Downloaders](#torrent-downloaders) (0)
 	- [File Converters](#file-converters) (0)
 - **Creativity**
-	- [Image Editors](#image-editors) (5)
-	- [Video Editors](#video-editors) (0)
+	- [Image Editors](#image-editors) (7)
+	- [Video Editors](#video-editors) (6)
 	- [Audio Editors & Recorders](#audio-editors--recorders) (0)
 	- [Casting & Streaming](#casting--streaming) (0)
 	- [Screenshot Tools](#screenshot-tools) (0)
@@ -4756,6 +4756,26 @@ of raw digital photos
 📦 Open Source  
 
 		</details>
+- **[<img src='https://i.ibb.co/TqtRH52/Krita.png' width='16' height='16' alt='icon' /> Krita](https://krita.org/en)** - Digital painting application.
+Free and open source (backed by KDE), with cross-platform support,
+Krita is popular among both professional and amateur artists
+due to it's comprehensive feature set, and intuitive UI
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: KDE/krita](https://img.shields.io/github/stars/KDE/krita?style=flat&logo=github&label=krita&color=%235f53f4&cacheSeconds=3600)](https://github.com/KDE/krita)  [![Krita on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Krita)](https://awesome-privacy.xyz/creativity/image-editors/krita) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://i.ibb.co/09PfHbG/darktable.png' width='16' height='16' alt='icon' /> DarkTable](https://www.darktable.org)** - A photography workflow application (similar to Adbobe Lightroom)
+Includes a  non-destructive raw developer for raw images and managing digital negatives.
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: darktable-org/darktable](https://img.shields.io/github/stars/darktable-org/darktable?style=flat&logo=github&label=darktable&color=%235f53f4&cacheSeconds=3600)](https://github.com/darktable-org/darktable)  [![DarkTable on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DarkTable)](https://awesome-privacy.xyz/creativity/image-editors/darktable) 
+📦 Open Source  
+
+		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -4763,7 +4783,62 @@ of raw digital photos
 
 ### Video Editors
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://www.shotcut.org/assets/img/media/shotcut-logo-512x512.png' width='16' height='16' alt='icon' /> Shotcut](https://shotcut.org)** - A free, open source, cross-platform video editor, using FFmpeg
+Shotcut supports a wide range of formats, and has a comprehensive feature set,
+including 4K & 8k resolution, webcam + audio capture, batch opperations and
+[much more](https://shotcut.org/features/)
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: mltframework/shotcut](https://img.shields.io/github/stars/mltframework/shotcut?style=flat&logo=github&label=shotcut&color=%235f53f4&cacheSeconds=3600)](https://github.com/mltframework/shotcut)  [![Shotcut on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Shotcut)](https://awesome-privacy.xyz/creativity/video-editors/shotcut) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://www.openshot.org/static/img/favicon.png' width='16' height='16' alt='icon' /> OpenShot](https://www.openshot.org)** - A free, simple, cross-platform video editor.
+Great for trimming/slicing, video effects, adding titles, scene animations
+and [more](https://www.openshot.org/features/)
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: OpenShot/openshot-qt](https://img.shields.io/github/stars/OpenShot/openshot-qt?style=flat&logo=github&label=openshot-qt&color=%235f53f4&cacheSeconds=3600)](https://github.com/OpenShot/openshot-qt)  [![OpenShot on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OpenShot)](https://awesome-privacy.xyz/creativity/video-editors/openshot) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://seeklogo.com/images/K/kdenlive-logo-CAAD792F3F-seeklogo.com.png' width='16' height='16' alt='icon' /> Kdenlive](https://kdenlive.org)** - KDE Non-Linear Video Editor, is an editor based on the MLT Framework, KDE and Qt,
+written using C++ and using FFmpeg
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: kdenlive/kdenlive](https://img.shields.io/github/stars/kdenlive/kdenlive?style=flat&logo=github&label=kdenlive&color=%235f53f4&cacheSeconds=3600)](https://github.com/kdenlive/kdenlive)  [![Kdenlive on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Kdenlive)](https://awesome-privacy.xyz/creativity/video-editors/kdenlive) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://i.ibb.co/WkBKN6r/flowblade.png' width='16' height='16' alt='icon' /> FlowBlade](https://jliljebl.github.io/flowblade)** - A multitrack non-linear video editor with a simple interface
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: jliljebl/flowblade](https://img.shields.io/github/stars/jliljebl/flowblade?style=flat&logo=github&label=flowblade&color=%235f53f4&cacheSeconds=3600)](https://github.com/jliljebl/flowblade)  [![FlowBlade on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FlowBlade)](https://awesome-privacy.xyz/creativity/video-editors/flowblade) 
+📦 Open Source  
+
+		</details>
+- **[<img src='https://icon.horse/icon/www.cinelerra-gg.org' width='16' height='16' alt='icon' /> Cinelerra GG Infinity](https://www.cinelerra-gg.org)** - Simple video editor, for applying transitions, effects and text as well
+as splicing video clips
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: cinelerra-gg/cinelerra-gg](https://img.shields.io/github/stars/cinelerra-gg/cinelerra-gg?style=flat&logo=github&label=cinelerra-gg&color=%235f53f4&cacheSeconds=3600)](https://github.com/cinelerra-gg/cinelerra-gg)  [![Cinelerra GG Infinity on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cinelerra_GG_Infinity)](https://awesome-privacy.xyz/creativity/video-editors/cinelerra-gg-infinity) 
+ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/sourceforge.net' width='16' height='16' alt='icon' /> VitCutter](https://sourceforge.net/projects/vidcutter/)** - A simple Python-based cross-platform tool for cutting and splicing videos
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: ozmartian/vidcutter](https://img.shields.io/github/stars/ozmartian/vidcutter?style=flat&logo=github&label=vidcutter&color=%235f53f4&cacheSeconds=3600)](https://github.com/ozmartian/vidcutter)  [![VitCutter on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VitCutter)](https://awesome-privacy.xyz/creativity/video-editors/vitcutter) 
+ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
