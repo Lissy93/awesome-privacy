@@ -4956,11 +4956,40 @@ categories:
         icon: https://natrongithub.github.io/img/Natron_icon.svg
         openSource: true
     - name: Audio Editors & Recorders
-      alternativeTo: ['audacity', 'adobe audition', 'garageband', 'fl studio', 'ableton live']
-      services: []
+      alternativeTo: ['adobe audition', 'garageband', 'fl studio', 'ableton live']
+      services:
+      - name: Audacity
+        followWith: Windows, Mac OS, Linux
+        description: |
+          An easy-to-use, multi-track audio editor and recorder for desktops,
+          great free alternative to Adobe Audition.
+          Features recording from real and virtual devices,
+          import/export to a wide range of formats, high-quality processing
+          advanced multi-track editing, noise reduction, pitch correction, 
+          audio restoration and much more.
+          It's easily extendable via community plugins, and 
+          also supports cusotm macros and many scripting options
+        url: https://www.audacityteam.org
+        github: audacity/audacity
+        icon: https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg
+        openSource: true
+        tosdrId: 4516
     - name: Casting & Streaming
-      alternativeTo: ['obs studio', 'xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
-      services: []
+      alternativeTo: ['xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
+      services:
+      - name: OBS Studio
+        followWith: Windows, Mac OS, Linux
+        description: |
+          Powerful desktop software for live streaming and screen recording.
+          Free and open source software for video recording and live streaming.
+          Features real-time video/audio capturing, scene composition, encoding,
+          recording, and broadcasting. It supports a wide range of formats,
+          and is easily extendable via community plugins
+        url: https://obsproject.com
+        github: obsproject/obs-studio
+        icon: https://obsproject.com/assets/images/new_icon_small-r.png
+        openSource: true
+        tosdrId: 4227
     - name: Screenshot Tools
       alternativeTo: ['snagit', 'greenshot', 'lightshot', 'gyazo', 'sharex']
       services: []
