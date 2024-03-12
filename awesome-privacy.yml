@@ -4995,7 +4995,29 @@ categories:
       services: []
     - name: 3D Graphics
       alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
-      services: []
+      services:
+      - name: Blender
+        followWith: Windows, Mac OS, Linux
+        description: |
+          Free desktop 3D creation suite, with a wide range of tools for
+          modeling, sculpting, texturing, rigging, animation, rendering, compositing,
+          motion tracking, and video editing. It's easily extendable via community plugins
+        url: https://www.blender.org
+        github: blender/blender
+        icon: https://www.blender.org/wp-content/themes/bthree/assets/icons/apple-touch-icon.png
+        openSource: true
+        securityAudited: true
+        tosdrId: 8114
+      - name: Wings3D
+        followWith: Windows, Mac OS, Linux
+        description: |
+          A simple and easy-to-use subdivision 3D modeler
+          with AutoUV facility for unfolding a models surface for painting/texturing.
+          Unlike Blender, it has no built-in animation capabilites, and it's feature set
+          is more limited, but it's a good choice for beginners.
+        url: https://wings3d.com
+        github: dgud/wings
+        icon: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wings3d.png/120px-Wings3d.png
     - name: Animation
       alternativeTo: ['adobe after effects', 'animate cc', 'toon boom harmony', 'moho (anime studio)', 'pencil2d']
       services: []
