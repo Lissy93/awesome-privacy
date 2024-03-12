@@ -1,5 +1,6 @@
 
-AWESOME PRIVACY API SOURCE
+============================================================================
+                         AWESOME PRIVACY API SOURCE
 ============================================================================
 
 ABOUT
@@ -32,13 +33,13 @@ DEVELOPMENT
 -----------
 1. Run `yarn dev` to start a local instance of the API + Swagger interface
 2. Open `http://localhost:9000` in your browser or with a HTTP client
-3. Make any desired changes in `src/` - the server will automatically reload
+3. Make any desired changes in `src/` - the server will auto reload
 
 ============================================================================
 
 DEPLOYMENT
 ----------
-1. Sign up for Cloudflare Workers (https://workers.dev) - free tier is fine
+1. Sign up for Cloudflare Workers (https://workers.dev), free tier is fine
 2. Follow the steps in "Getting Started" to setup the project locally
 3. Run `wrangler login` to login to your Cloudflare account in wrangler
 4. Run `wrangler deploy` to publish the API to Cloudflare Workers
