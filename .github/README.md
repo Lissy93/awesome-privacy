@@ -178,7 +178,7 @@ free plan.
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> - [Password Safe](https://www.pwsafe.org/) - An offline, open source password manager designed by [Bruce Schneier](https://www.schneier.com/academic/passsafe/), with native applications for Windows, Linux, MacOS, Android and iOS, and support for YubiKey. The UI is a little dated, and there is no official browser extension, making is slightly less convenient to use compared with other options
+> - [Password Safe](https://www.pwsafe.org) - An offline, open source password manager designed by [Bruce Schneier](https://www.schneier.com/academic/passsafe/), with native applications for Windows, Linux, MacOS, Android and iOS, and support for YubiKey. The UI is a little dated, and there is no official browser extension, making is slightly less convenient to use compared with other options
 > - [PassBolt](https://www.passbolt.com) - A good option for teams. It is free, open source, self-hosted, extensible and OpenPGP based. It is specifically good for development and DevOps usage, with integrations for the terminal, browser and chat, and can be easily extended for custom usage, and deployed quickly with Docker
 > - [1Password](https://1password.com) - (proprietary) A fully-featured cross-platform password manager with sync. Free for self-hosted data (or $3/ month hosted). Be aware that 1Password is not fully open source, but they do regularly publish results of their independent [security audits](https://support.1password.com/security-assessments), and they have a solid reputation for transparently disclosing and fixing vulnerabilities     
 </details>
