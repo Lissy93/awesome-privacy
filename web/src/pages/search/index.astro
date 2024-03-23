@@ -13,7 +13,9 @@ const categories = (await fetchData())?.categories;
   <section>
     <h1>Search</h1>
     <Search client:visible data={categories} />
-    <p class="sitemap-link">Or, view all pages in the <a href="/sitemap">Sitemap</a></p>
+    <p class="sitemap-link">
+      Browse <a href="/all">all listings</a>, or see all pages in the <a href="/sitemap">Sitemap</a>
+    </p>
   </section>
 </Layout>
 

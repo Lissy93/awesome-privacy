@@ -42,7 +42,7 @@ export const makeAdditionRequest = (formData: {
   const additionalInfoText: string = `\n${userInfo}`
     + `\n\n**YAML Content for Addition**\n\n\`\`\`yaml\n${yamlText || '# nothing yet'}\n\`\`\`\n`
     + `\n\n<sup>This ticket was submitted via `
-    + `<a href="https://awesome-privacy.xyz/edit">awesome-privacy.xyz/edit</a></sup>`;
+    + `<a href="https://awesome-privacy.xyz/submit">awesome-privacy.xyz/submit</a></sup>`;
 
   const issueTitle = `[ADDITION] ${formData.serviceName} (Complete)`;
   const queryParams = new URLSearchParams({

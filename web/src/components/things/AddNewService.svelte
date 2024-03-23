@@ -127,7 +127,10 @@
   <div class="form-row">
     <label for="service-github">GitHub Repository</label>
     <input type="text" bind:value={$serviceGithub} id="service-github" required autocomplete="off">
-    <p>Share a link to where the project's source is located</p>
+    <p>
+      Share a link to where the project's source is located.<br />
+      Use the format [user]/[repo] e.g, lissy93/dashy
+    </p>
   </div>
 
   <!-- ToS;DR ID -->

@@ -176,6 +176,15 @@ const { previous, next } = makePaginationLinks();
       </section>
     )}
 
+    {services.length > 0 && (<section class="submit-alternative">
+      <h3>Submit New Entry</h3>
+      <p>
+        Are we missing anything?
+        You can help us improve this page, by <a href="/submit">submitting a new entry</a>
+      </p>
+    </section>
+    )}
+
     <div class="pagination-navigation">
       { previous ? (
         <Button url={`/${slugify(categoryName)}/${slugify(previous)}`}>
@@ -255,7 +264,7 @@ h2 {
 }
 
 
-.further-info, .notable-mentions, .word-of-warning {
+.further-info, .notable-mentions, .word-of-warning, .submit-alternative {
   h3 {
     font-size: 1.4rem;
     margin: 1rem 0;

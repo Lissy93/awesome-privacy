@@ -64,7 +64,7 @@
     href={makeEditRequest(categoryName, sectionName, serviceName, yamlContent)}>
     <FontAwesome iconName="edit" /> Submit Edit to {serviceName}
   </a>
-  <a class="button-link" href="/edit">
+  <a class="button-link" href="/submit">
     <FontAwesome iconName="add" /> Add alternative
   </a>
 </div>
