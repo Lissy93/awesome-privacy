@@ -197,6 +197,12 @@ const getApiEndpoint = () => {
             <a href={`https://tosdr.org/en/service/${tosdrId}`}>{`tosdr.org/en/service/${tosdrId}`}</a>
           </li>
           )}
+          { iosApp && (
+          <li>
+            <b>iOS App:</b>
+            <a href={iosApp}>{formatLink(iosApp)}</a>
+          </li>
+          )}
           { url && (
           <li>
             <b>Web info:</b>
