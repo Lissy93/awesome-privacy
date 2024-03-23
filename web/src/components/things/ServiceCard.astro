@@ -1,0 +1,187 @@
+---
+
+import Button from '@components/form/Button.astro';
+import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+import type { Service } from 'src/types/Service';
+import FontAwesome from '@components/form/FontAwesome.svelte';
+import DeleteListing from '@components/things/DeleteListing.svelte';
+import { slugify } from '@utils/fetch-data';
+
+import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
+
+interface Props {
+  service: Service;
+  categoryName: string;
+  sectionName: string;
+}
+
+const {
+  service,
+  sectionName,
+  categoryName,
+} = Astro.props;
+
+---
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const serviceIcons = document.querySelectorAll<HTMLImageElement>('.service-icon');
+  const broke = '/broken-image.png';
+
+  serviceIcons.forEach(function(icon) {
+    icon.onerror = function() {
+      const imgElement = this as HTMLImageElement;
+      const serviceUrl = imgElement.getAttribute('data-service-url');
+      const newSrcAttribute = (imgElement.src.includes('on.ho') ? broke : `https://icon.horse/icon/${serviceUrl}`);
+      imgElement.src = imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
+      imgElement.onerror = null;
+    };
+  });
+});
+</script>
+
+
+
+<div class="service" id={slugify(service.name)}>
+    <!-- <DeleteListing client:load categoryName={categoryName} sectionName={sectionName} serviceName={service.name} /> -->
+    <div class="service-head">
+      <a class="service-title" href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
+        <h4>{service.name}</h4>
+      </a>
+      {service.followWith && <p class="follow-with">({service.followWith})</p> }
+    </div>
+
+    <div class="service-body">
+      <img 
+        width="40"
+        height="40"
+        loading="lazy"
+        decoding="async"
+        class="service-icon"
+        alt={`${service.name} Icon`}
+        data-service-url={formatLink(service.url)}
+        src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
+      />
+      <div class="service-body">
+        <p set:html={service.description}></p>
+      </div>
+    </div>
+
+    <div class="service-links">
+      <a class="link" href={service.url}>
+        <FontAwesome iconName="website"/> <span>{formatLink(service.url)}</span>
+      </a>
+      {service.github &&
+        <a class="link" href={`https://github.com/${service.github}`}>
+          <FontAwesome iconName="sourceCode"/> GitHub
+        </a>
+      }
+      <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
+        <FontAwesome iconName="viewReport" /> View Report
+      </a>
+
+    </div>
+  </div>
+
+
+<style lang="scss">
+.service {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid var(--foreground);
+  box-shadow: 6px 6px 0 var(--foreground);
+  background: var(--accent-fg);
+  border-radius: var(--curve-sm);
+
+  .service-head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    h4 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: var(--foreground);
+    }
+    p {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+    a {
+      text-decoration: none;
+    }
+    h4 {
+      text-decoration: none;
+      position: relative;
+      &:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        background: var(--accent-3);
+        transition: width 0.2s ease 0s, left 0.2s ease 0s;
+        width: 0;
+      }
+      &:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+    }
+  }
+
+  .service-body {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    img {
+      border-radius: var(--curve-sm);
+    }
+    :global(p) {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .service-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    a {
+      color: var(--accent-3);
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      opacity: 0.7;
+      text-decoration: none;
+      max-width: 50%;
+      min-width: 25%;
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+      :global(svg) {
+        width: 1rem;
+        height: 1rem;
+      }
+      span {
+        max-width: calc(100% - 1rem);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+  
+</style>

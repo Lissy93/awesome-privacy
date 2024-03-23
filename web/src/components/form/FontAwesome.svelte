@@ -70,6 +70,11 @@
     email: solidIcons.faEnvelope,
     copy: solidIcons.faCopy,
     print: solidIcons.faPrint,
+
+    // Service link types
+    website: solidIcons.faGlobe,
+    sourceCode: solidIcons.faCodeBranch,
+    viewReport: solidIcons.faShieldHalved,
   };
 
   export let iconName: string;

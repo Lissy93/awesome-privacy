@@ -2,8 +2,8 @@
 
 
 import Layout from '@layouts/Layout.astro';
-import ServiceList from '@components/things/ServiceList.astro';
-import type { AwesomePrivacy, Section } from '../types/Service';
+import ServiceCard from '@components/things/ServiceCard.astro';
+import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 
@@ -14,10 +14,10 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
 <script>
 
 const toggleSidebar = () => {
-  const mainContent = document.querySelector('#content');
-  mainContent && mainContent.classList.toggle('narrow');
+  const intro = document.querySelector('#welcome-to-all');
   const sidebar = document.querySelector('.sidebar');
   sidebar && sidebar.classList.toggle('hidden');
+  intro && intro.classList.toggle('hidden');
   const button = document.querySelector('#toggle-sidebar');
   if (button) {
     button.textContent = (button.textContent === "Show Contents" ? "Hide Contents" : "Show Contents");
@@ -34,31 +34,24 @@ const toggleSidebar = () => {
     <main>
     <div id="content">
     <button id="toggle-sidebar">Show Contents</button>
-    {categories.map((category) => (
-      <h2  id={`${slugify(category.name)}`}>
-        <FontAwesome iconName={slugify(category.name)} />
-        <a href={`/${slugify(category.name)}`}>{category.name}</a>
-      </h2>
-      
-        <article>
-          {category.sections.map((section: Section) => (
-            <section class="card">
-              <h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
-                <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
-              </h3>
-              <ServiceList
-                services={section.services}
-                subHeading={true}
-                buttonLink={`/${slugify(category.name)}/${slugify(section.name)}`}
-                noGitHubMetrics={true}
-                sectionName={section.name}
-                categoryName={category.name}
-              />
-            </section>
-          ))}
-        </article>
-      
-    ))}
+    <div id="welcome-to-all" class="hidden">
+      <p>
+        Welcome to <a href="/">Awesome Privacy</a>!
+        Here you'll find a summerized collection of all verified services we have listed.
+        <br /><br />
+        Click a section or category heading, to view more listings and privacy tips in that group,
+        or a service title to view it's complete privacy report
+        <br /><br />
+        Looking for something specific? Try the <a href="/search">Search</a> page, or take a
+        scroll through the <a href="/sitemap">Sitemap</a>
+        <br /><br />
+        If you want to make an edit, removal or submit an addition, then either click
+        the Edit button within any sub-page, or visit our <a href="/about">About</a> page
+        <br /><br />
+        This project, all it's data as well as source code is freely availible
+        on <a href="https://github.com/lissy93/awesome-privacy">GitHub</a>,
+        licensed under MIT, (C) <a href="https://aliciasykes.com">Alicia Sykes</a> 2024
+      </p>
     </div>
     <div class="sidebar hidden">
       <p class="sidebar-title">Contents</p>
@@ -79,6 +72,37 @@ const toggleSidebar = () => {
         ))}
       </ul>
     </div>
+    {categories.map((category) => (
+      <h2  id={`${slugify(category.name)}`}>
+        <FontAwesome iconName={slugify(category.name)} />
+        <a href={`/${slugify(category.name)}`}>{category.name}</a>
+      </h2>
+      
+        <article>
+          {category.sections.map((section: Section) => (
+            <h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
+              <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
+            </h3>
+            <section class="section">
+              { section.services.map((service: Service) => (
+                <ServiceCard service={service} sectionName={section.name} categoryName={category.name}/>
+              ))}
+            </section>
+            <div>
+              {!section || !section.services || section.services.length === 0 ? (
+                <div class="nothing-yet">
+                  <p>
+                    <strong>⚠️ This section is still a work in progress ⚠️</strong><br />
+                    Check back soon, or help us complete it by submiting a pull request on GitHub.
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          ))}
+        </article>
+      
+    ))}
+    </div>
   </main>
   
 </Layout>
@@ -86,21 +110,34 @@ const toggleSidebar = () => {
 <style lang="scss">
 
 main {
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   padding: 1rem;
-  width: 1000px;
+  width: 1200px;
   max-width: calc(100% - 5rem);
 
   display: flex;
   justify-content: space-between;
 }
 
-.narrow {
-  width: 70%;
-}
+// .narrow {
+//   width: 70%;
+// }
 
 .hidden {
   display: none;
+}
+
+#content {
+  margin: 0 auto;
+}
+
+#welcome-to-all {
+  text-align: justify;
+  width: 600px;
+  margin: 0 auto;
+  background: #ffffff4d;
+  padding: 1rem;
+  border-radius: var(--curve-sm);
 }
 
 #toggle-sidebar {
@@ -114,31 +151,26 @@ main {
   }
 }
 
+
 .sidebar {
-  width: 25%;
-  height: 87vh;
-  overflow: scroll;
-  position: fixed;
-  right: 1rem;
   border-radius: var(--curve-md);
   .sidebar-title {
-    text-align: center;
     font-size: 1.6rem;
-    margin: 0;
     background: var(--accent-3);
     color: var(--accent-fg);
     border: 2px solid var(--foreground);
     box-shadow: 6px 6px 0 var(--foreground);
     border-radius: var(--curve-sm);
-    margin: 0 1rem;
+    margin: 1rem auto;
+    text-align: center;
   }
   ul {
     list-style: none;
     padding-left: 1.6rem;
+    column-width: 16rem;
     a {
       text-decoration: none;
       color: var(--foreground);
-      opacity: 0.6;
       transition: all 0.18s ease-in-out;
       &:hover {
         color: var(--accent);
@@ -158,6 +190,13 @@ main {
   } 
 }
 
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .card {
   margin: 2rem auto 5rem auto;
@@ -168,7 +207,7 @@ main {
 }
 
 h2 {
-  margin: 0;
+  margin: 2rem auto 0 auto;
   font-size: 3rem;
   text-align: center;
   opacity: 0.6;
@@ -189,7 +228,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
-    margin: -2rem 0 2rem -4rem;
+    margin: 2rem 0 1rem 0;
     box-shadow: 6px 6px 0 var(--foreground);
     background: var(--accent);
     color: var(--accent-fg);
@@ -199,6 +238,26 @@ h3 {
       color: var(--accent-fg);
       font-family: "Lekton", sans-serif;
       text-decoration: none;
+    }
+  }
+
+  .nothing-yet {
+    width: 80vw;
+    margin: 0 auto;
+    background: var(--accent-fg);
+    border: 2px solid var(--foreground);
+    box-shadow: 6px 6px 0 var(--foreground);
+    border-radius: var(--curve-sm);
+
+    display: flex;
+    width: 80vw;
+    max-width: 28rem;
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 3rem;
     }
   }
 

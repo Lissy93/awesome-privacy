@@ -57,11 +57,11 @@ const convertJsonIntoYaml = (service: Service): string => {
  */
 const makeResults = (yamlObject: AwesomePrivacy, yamlLines: string[]): LineNumberData => {
   const organizedData: LineNumberData = {};
-  yamlObject.categories.forEach((category) => {
+  (yamlObject.categories || []).forEach((category) => {
     organizedData[category.name] = {};
-    category.sections.forEach((section) => {
+    (category.sections || []).forEach((section) => {
       organizedData[category.name][section.name] = {};
-      section.services.forEach((service) => {
+      (section.services || []).forEach((service) => {
         organizedData[category.name][section.name][service.name] = {
           lineNumbers: calculateServiceRange(service, category, yamlLines),
           yaml: convertJsonIntoYaml(service),
