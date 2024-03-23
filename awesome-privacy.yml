@@ -41,6 +41,7 @@ categories:
         followWith: Self-Hosted
         github: bitwarden/server
         tosdrId: 1348
+        iosApp: https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744
         description: |
           Fully-featured, open source password manager with cloud-sync. Bitwarden is
           easy-to-use with a clean UI and client apps for desktop, web and mobile. See
@@ -74,6 +75,7 @@ categories:
       - name: Padloc
         url: https://padloc.app
         github: padloc/padloc
+        iosApp: https://apps.apple.com/us/app/padloc/id1478877043
         description: |
           A modern, open source password manager for individuals and teams. Beautiful,
           intuitive and dead simple to use. Apps available for all platforms and you can
@@ -90,7 +92,9 @@ categories:
           free plan.
       notableMentions:
       - name: Password Safe
-        url: https://www.pwsafe.org/
+        url: https://www.pwsafe.org
+        tosdrId: 3342
+        iosApp: https://apps.apple.com/us/app/proton-pass-password-manager/id6443490629
         description: >
           An offline, open source password manager designed by
           [Bruce Schneier](https://www.schneier.com/academic/passsafe/), with native
@@ -99,6 +103,7 @@ categories:
           making is slightly less convenient to use compared with other options
       - name: PassBolt
         url: https://www.passbolt.com
+        iosApp: https://apps.apple.com/us/app/passbolt-password-manager/id1569629432
         description: >
           A good option for teams. It is free, open source, self-hosted, extensible
           and OpenPGP based. It is specifically good for development and DevOps usage,
@@ -106,6 +111,8 @@ categories:
           extended for custom usage, and deployed quickly with Docker
       - name: 1Password
         url: https://1password.com
+        tosdrId: 1572
+        iosApp: https://apps.apple.com/us/app/1password-password-manager/id1511601750
         description: >
           (proprietary) A fully-featured cross-platform password manager with sync.
           Free for self-hosted data (or $3/ month hosted). Be aware that 1Password
@@ -138,6 +145,7 @@ categories:
         followWith: Android & iOS
         github: twofas/2fas-server
         tosdrId: 8201
+        iosApp: https://apps.apple.com/us/app/2fa-authenticator-2fas/id1217793794
         icon: https://avatars.githubusercontent.com/u/18189374
         description: |
           Free, secure and open source authenticator app for both iOS and Android.
@@ -168,6 +176,7 @@ categories:
         followWith: iOS
         icon: https://www.tofuauth.com/images/icon.svg
         github: iKenndac/Tofu
+        iosApp: https://apps.apple.com/us/app/tofu-authenticator/id1082229305
         tosdrId: 5414
         description: |
           An easy-to-use, open-source two-factor authentication app designed specifically
@@ -177,6 +186,7 @@ categories:
         url: https://mattrubin.me/authenticator
         github: mattrubin/Authenticator
         icon: https://i.ibb.co/dLqS8ZH/Screenshot-from-2024-02-19-20-47-48.png
+        iosApp: https://apps.apple.com/us/app/authenticator/id766157276
         followWith: iOS
         description: |
           Simple, native, open source 2-FA Client for iOS, which never connects to the
@@ -187,6 +197,7 @@ categories:
         icon: https://raivo-otp.com/img/app-icon.png
         github: raivo-otp/ios-application
         followWith: iOS
+        iosApp: https://apps.apple.com/us/app/raivo-authenticator/id1459042137
         description: |
           A native, lightweight and secure one-time-password (OTP) client built for iOS;
           Raivo OTP! - built by @tijme
@@ -252,6 +263,7 @@ categories:
         icon: https://avatars.githubusercontent.com/u/11850518
         github: cryptomator/cryptomator
         tosdrId: 4403
+        iosApp: https://apps.apple.com/us/app/cryptomator/id1560822163
         description: |
           Open source client-side encryption for cloud files - Cryptomator is geared
           towards using alongside cloud-backup solutions, and hence preserves individual
@@ -406,6 +418,7 @@ categories:
         icon: https://duckduckgo.com/favicon.png
         openSource: true
         tosdrId: 222
+        iosApp: https://apps.apple.com/us/app/duckduckgo-private-browser/id663592361
         description: |
           DuckDuckGo is a very user-friendly, fast and secure search engine. It's totally
           private, with no trackers, cookies or ads. It's also highly customisable, with
@@ -415,6 +428,7 @@ categories:
       - name: Qwant
         url: https://www.qwant.com
         icon: https://avatars.githubusercontent.com/u/1692504
+        iosApp: https://apps.apple.com/us/app/qwant-private-search/id924470452
         tosdrId: 527
         description: |
           French service that aggregates Bings results, with its own results. Qwant doesn't
@@ -436,6 +450,7 @@ categories:
         icon: https://www.mojeek.com/favicon.png
         openSource: false
         tosdrId: 2432
+        iosApp: https://apps.apple.com/gb/app/mojeek/id1505807785
         description: |
           British search engine providing independent and unbiased search results using
           its own crawler. Has a zero tracking policy (it is not open source)
