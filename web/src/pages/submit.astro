@@ -5,7 +5,7 @@ import AddNewService from '@components/things/AddNewService.svelte';
 import { fetchGitHubStats } from '@utils/fetch-repo-info'
 import { formatDate } from '@utils/dates-n-stuff';
 
-const commits = (await fetchGitHubStats('lissy93/awesome-privacy')).commits;
+const commits = (await fetchGitHubStats('lissy93/awesome-privacy') || {}).commits;
 
 ---
 
