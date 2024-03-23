@@ -1,13 +1,9 @@
 ---
 
-import Button from '@components/form/Button.astro';
-import { parseMarkdown, formatLink } from '@utils/parse-markdown';
+import { formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
-import DeleteListing from '@components/things/DeleteListing.svelte';
 import { slugify } from '@utils/fetch-data';
-
-import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
 
 interface Props {
   service: Service;
@@ -77,7 +73,7 @@ const {
         </a>
       }
       <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
-        <FontAwesome iconName="viewReport" /> View Report
+        <FontAwesome iconName="viewReport" /> View Report ➔
       </a>
 
     </div>
@@ -146,6 +142,8 @@ const {
       -webkit-box-orient: vertical;  
       overflow: hidden;
       margin: 0.5rem 0;
+      width: calc(100% - 2rem);
+      overflow-x: hidden;
     }
   }
 

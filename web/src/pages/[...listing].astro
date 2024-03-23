@@ -7,6 +7,7 @@ import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
 import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro';
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
 import DockerDetailedInfo from '@components/things/DockerDetailedInfo.astro';
+import IosAppDetailedInfo from '@components/things/IosAppDetailedInfo.astro';
 import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
@@ -15,6 +16,7 @@ import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
 import { fetchDockerData } from '@utils/fetch-docker-instructions';
+import { fetchIosInfo } from '@utils/fetch-ios-info';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import { site } from '@utils/config';
 import FontAwesome from '@components/form/FontAwesome.svelte';
@@ -32,6 +34,7 @@ const {
   url,
   github,
   tosdrId,
+  iosApp,
   icon,
   followWith,
   securityAudited,
@@ -134,6 +137,7 @@ const ignoredSites = ['github.gom', 'wikipedia.'];
 // Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
+const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
 
@@ -243,11 +247,16 @@ const getApiEndpoint = () => {
         <GitHubDetailedInfo gitHubData={githubData} repo={github} />
       </section>
     )}
-
     { websiteData && (
       <section>
         <h3>{name} Website</h3>
         <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
+      </section>
+    )}
+    { iosData && (
+      <section>
+        <h3>{name} iOS App</h3>
+        <IosAppDetailedInfo url={url} iosData={iosData} />
       </section>
     )}
     { dockerData && dockerData.found && (

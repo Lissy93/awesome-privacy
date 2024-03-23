@@ -1,0 +1,249 @@
+---
+
+import type { IoSApiResponse } from '@utils/fetch-ios-info';
+import { formatDate, timeAgo } from '@utils/dates-n-stuff'; 
+import FontAwesome from "@components/form/FontAwesome.svelte"
+
+
+interface Props {
+  iosData: IoSApiResponse;
+  url: string;
+};
+
+const { iosData, url } = Astro.props;
+
+const bytesToMb = (bytes: number) => (bytes / 1024 / 1024).toFixed(2);
+
+const makeRatingPercentage = (rating: number) => (rating / 5) * 100;
+
+const roundRatings = (rating: number) => Math.round(rating * 100) / 100;
+
+const putCommaInNumber = (num: number) => num.toLocaleString();
+
+---
+
+<div class="website-info-wrapper">
+  <div class="left">
+    <h4>App Info</h4>
+    <p class="website-title">
+      <img src={iosData.artworkUrl60} width="16" />
+      {iosData.trackName}
+    </p>
+    <p class="website-description">{iosData.description}</p>
+
+    <h4>Rating</h4>
+    <div class="star-rating">
+      <div class="back-stars">
+        <FontAwesome iconName="ratingStar" />
+        <FontAwesome iconName="ratingStar" />
+        <FontAwesome iconName="ratingStar" />
+        <FontAwesome iconName="ratingStar" />
+        <FontAwesome iconName="ratingStar" />
+        <div class="front-stars" style={`width: ${makeRatingPercentage(iosData.averageUserRating)}%`}>
+          <FontAwesome iconName="ratingStar" />
+          <FontAwesome iconName="ratingStar" />
+          <FontAwesome iconName="ratingStar" />
+          <FontAwesome iconName="ratingStar" />
+          <FontAwesome iconName="ratingStar" />
+        </div>
+      </div>
+    </div>
+    <p class="rating-description">
+      Rated {roundRatings(iosData.averageUserRating)} out of 5 stars by {putCommaInNumber(iosData.userRatingCount)} users
+    </p>
+
+    <h4>Version Info</h4>
+    <ul class="list-table">
+      <li title={iosData.releaseNotes}>
+        <span class="lbl">Current Version</span>
+        <span class="val">{iosData.version}</span>
+      </li>
+      <li>
+        <span class="lbl">Last Updated</span>
+        <span class="val">{formatDate(iosData.currentVersionReleaseDate)}</span>
+      </li>
+      <li>
+        <span class="lbl">First Released</span>
+        <span class="val">{formatDate(iosData.releaseDate)}</span>
+      </li>
+      <li>
+        <span class="lbl">Minimum iOS Version</span>
+        <span class="val">{iosData.minimumOsVersion}</span>
+      </li>
+      <li>
+        <span class="lbl">Device Models Supported</span>
+        <span class="val">{iosData.supportedDevices.length}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+
+    <h4>App Details</h4>
+    <ul class="list-table">
+      <li>
+        <span class="lbl">IPA Size</span>
+        <span class="val">{bytesToMb(iosData.fileSizeBytes)} Mb</span>
+      </li>
+      <li>
+        <span class="lbl">Price</span>
+        <span class="val">{iosData.formattedPrice} ({iosData.currency})</span>
+      </li>
+      <li>
+        <span class="lbl">Age Advisory</span>
+        <span class="val">{iosData.contentAdvisoryRating}</span>
+      </li>
+      <li>
+        <span class="lbl">Supported Languages</span>
+        <span class="val" title={iosData.languageCodesISO2A.join(', ')}>{iosData.languageCodesISO2A.length}</span>
+      </li>
+      <li>
+        <span class="lbl">Developer</span>
+        <span class="val"><a href={iosData.artistViewUrl}>{iosData.sellerName}</a></span>
+      </li>
+      <li>
+        <span class="lbl">Bundle ID</span>
+        <span class="val">{iosData.bundleId}</span>
+      </li>
+    </ul>
+
+    <h4>Screenshots</h4>
+    <ul class="screenshots">
+      {iosData.screenshotUrls.map((url) => (
+        <li>
+          <img src={url} width="100" />
+        </li>
+      ))}
+    </ul>
+    
+  </div>
+</div>
+
+
+<style lang="scss">
+.website-info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  .left, .right {
+    width: calc(50% - 1rem);
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+  }
+}
+
+h4 {
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+}
+p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  :global(svg) {
+    width: 1rem;
+  }
+  img {
+    border-radius: var(--curve-sm);
+  }
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  img {
+    border-radius: var(--curve-sm);
+  }
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  &.list-table {
+    font-size: 0.9rem;
+    padding-left: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.1rem 0;
+      .lbl {
+        font-weight: 400;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #5f53f440;
+      }
+    }
+  }
+}
+
+.website-title, .website-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  border-left: 2px solid var(--accent-3);
+  padding-left: 0.5rem;
+}
+.website-title {
+  font-weight: 500;
+}
+.website-description {
+  font-style: italic;
+  -webkit-line-clamp: 3;
+}
+.explainer {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  :global(svg) {
+    font-size: 2rem;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .back-stars {
+    display: flex;
+    :global(svg) {
+      color: #ddddd8;
+    }
+    .front-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      display: flex;
+      :global(svg) {
+        color: #e8e800;
+      }
+    }
+  }
+}
+
+.rating-description {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.screenshots {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+</style>

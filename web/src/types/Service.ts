@@ -17,6 +17,7 @@ export interface Service {
   openSource?: boolean;
   acceptsCrypto?: boolean;
   tosdrId?: string;
+  iosApp?: string;
 }
 
 export interface Section {

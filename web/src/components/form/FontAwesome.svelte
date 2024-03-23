@@ -75,6 +75,9 @@
     website: solidIcons.faGlobe,
     sourceCode: solidIcons.faCodeBranch,
     viewReport: solidIcons.faShieldHalved,
+
+    //Misc
+    ratingStar: solidIcons.faStar,
   };
 
   export let iconName: string;
