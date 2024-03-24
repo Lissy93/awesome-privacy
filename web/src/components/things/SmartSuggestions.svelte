@@ -94,8 +94,8 @@
       background: var(--accent-fg);
       padding: 1rem;
       border-radius: var(--curve-sm);
-      border: 1px solid var(--foreground);
-      box-shadow: 3px 3px 0 var(--foreground);
+      border: 1px solid var(--box-outline);
+      box-shadow: 3px 3px 0 var(--box-outline);
       color: var(--foreground);
       text-decoration: none;
 

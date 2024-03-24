@@ -2,7 +2,7 @@
   <script async lang="javascript">
   var remark_config = {
     host: 'https://comments.as93.net', site_id: 'awesome-privacy.xyz',
-    components: ['embed'], show_rss_subsription: true, theme: 'light',
+    components: ['embed'], show_rss_subsription: true, theme: 'dark',
   };
   !(function (e, n) {
     for (var o = 0; o < e.length; o++) {

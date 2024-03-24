@@ -23,14 +23,14 @@ const { href, title, body } = Astro.props;
 	.link-card {
     color: var(--foreground);
     background: var(--background);
-    border: 2px solid var(--foreground);
-    box-shadow: 6px 6px 0 var(--foreground);
+    border: 2px solid var(--box-outline);
+    box-shadow: 6px 6px 0 var(--box-outline);
     font-family: "Lekton", sans-serif;
     font-weight: 700;
 		transition: all ease-in-out 0.1s;
 		list-style: none;
 		&:hover {
-			box-shadow: 8px 8px 0 var(--foreground);
+			box-shadow: 8px 8px 0 var(--box-outline);
 			background: var(--accent);
 			color: var(--background);
 		

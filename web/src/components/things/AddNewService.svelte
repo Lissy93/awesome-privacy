@@ -11,6 +11,10 @@
   const serviceDescription = writable('');
   const serviceGithub = writable('');
   const serviceTosdrId = writable('');
+  const serviceIosApp = writable('');
+  const serviceAndroidApp = writable('');
+  const serviceDiscordInvite = writable('');
+  const serviceSubreddit = writable('');
   const serviceOpenSource = writable(false);
   const serviceSecurityAudited = writable(false);
   const serviceCrypto = writable(false);
@@ -23,6 +27,10 @@
         description: $serviceDescription,
         github: $serviceGithub,
         tosdrId: $serviceTosdrId,
+        iosApp: $serviceIosApp,
+        androidApp: $serviceAndroidApp,
+        discordInvite: $serviceDiscordInvite,
+        subreddit: $serviceSubreddit,
         openSource: $serviceOpenSource,
         securityAudited: $serviceSecurityAudited,
         acceptsCrypto: $serviceCrypto,
@@ -36,6 +44,10 @@
       serviceDescription: $serviceDescription,
       serviceGithub: $serviceGithub,
       serviceTosdrId: $serviceTosdrId,
+      serviceIosApp: $serviceIosApp,
+      serviceAndroidApp: $serviceAndroidApp,
+      serviceDiscordInvite: $serviceDiscordInvite,
+      serviceSubreddit: $serviceSubreddit,
       serviceOpenSource: $serviceOpenSource,
       serviceSecurityAudited: $serviceSecurityAudited,
       serviceCrypto: $serviceCrypto,
@@ -56,6 +68,10 @@
           serviceSecurityAudited: $serviceSecurityAudited,
           serviceCrypto: $serviceCrypto,
           additionalInfo: $additionalInfo,
+          serviceIosApp: $serviceIosApp,
+          serviceAndroidApp: $serviceAndroidApp,
+          serviceDiscordInvite: $serviceDiscordInvite,
+          serviceSubreddit: $serviceSubreddit,
       };
       const issueCreationUrl = makeAdditionRequest(formData, yamlText);
       window.open(issueCreationUrl, '_blank');
@@ -70,6 +86,12 @@
 </p>
 
 <form on:submit|preventDefault={handleSubmit}>
+
+  <h3>Basics</h3>
+  <p class="sub-title-description">
+    All fields here are required.
+  </p>
+
   <!-- Category Dropdown -->
   <div class="form-row">
     <label for="listing-category">Category</label>
@@ -123,6 +145,16 @@
     <p>Please provide a description for this listing. Keep it factual and objective. Markdown is supported.</p>
   </div>
 
+  <!-- Section 2 -->
+  <h3>Third-Party Referencing</h3>
+  <p class="sub-title-description">
+    In order to create a comprehensive listing, we combine the data inputted above with other sources,
+    to give additional context and help users make informed decisions.
+    Metrics from these services are fetched automatically at build-time from our API.
+    <br />
+    All fields are optional, but the more information you provide, the better!
+  </p>
+
   <!-- GitHub Repository -->
   <div class="form-row">
     <label for="service-github">GitHub Repository</label>
@@ -143,6 +175,53 @@
       Skip section if not applicable.
     </p>
   </div>
+
+  <!-- Apple App Store URL -->
+  <div class="form-row">
+    <label for="service-tosdr-id">iOS App</label>
+    <input type="url" bind:value={$serviceIosApp} id="service-ios-app" autocomplete="off">
+    <p>
+      Paste the link to the mobile app on the Apple App Store.<br />
+      E.g. https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744
+    </p>
+  </div>
+
+  <!-- Google Play App Store URL -->
+  <div class="form-row">
+    <label for="service-tosdr-id">Android App</label>
+    <input type="url" bind:value={$serviceAndroidApp} id="service-android-app" autocomplete="off">
+    <p>
+      Paste the link to the mobile app on the Google Play Store.<br />
+      E.g. https://play.google.com/store/apps/details?id=com.x8bit.bitwarden
+    </p>
+  </div>
+
+  <!-- Discord Server Invite Code -->
+  <div class="form-row">
+    <label for="service-tosdr-id">Discord Invite</label>
+    <input type="text" bind:value={$serviceDiscordInvite} id="service-discord-invite" autocomplete="off">
+    <p>
+      Paste the invite code to the Discord server for this service.<br />
+      E.g. If the invite URL is https://discord.com/invite/4JMAauFZBq the code is 4JMAauFZBq
+    </p>
+  </div>
+
+  <!-- Reddit sub name -->
+  <div class="form-row">
+    <label for="service-tosdr-id">Subreddit</label>
+    <input type="text" bind:value={$serviceSubreddit} id="service-subreddit" autocomplete="off">
+    <p>
+      If the service has a subreddit, please provide the name here.<br />
+      Don't include `r/` in the name, nor the full URL - just the sub name.
+    </p>
+  </div>
+
+  <!-- Section 3 - Checklist and details -->
+  <h3>Privacy Checklist</h3>
+  <p class="sub-title-description">
+    Finally, check the boxes that apply to the service you are submitting,
+    and then provide any additional information to back this up in the text area below.
+  </p>
 
     <!-- Open Source Checkbox -->
   <div class="form-row">
@@ -236,15 +315,17 @@
     }
   }
 
-  input, textarea {
+  input, textarea, select {
     width: 100%;
     border: 1px solid var(--accent-3);
     border-radius: var(--curve-md);
     font-size: 1.2rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
+    background: var(--background-form);
+    color: var(--foreground);
     &:focus {
       outline: none;
-      border: 2px solid var(--accent);
+      border: 1px solid var(--accent);
     }
   }
   input {
@@ -260,6 +341,7 @@
     &[type="checkbox"] {
       width: 2rem;
       height: 2rem;
+      background: var(--background-form);
     }
   }
   textarea {
@@ -278,8 +360,8 @@
     background: var(--accent-3);
     color: var(--accent-fg);
     padding: 0.5rem 2rem;
-    border: 1px solid var(--foreground);
-    box-shadow: 3px 3px 0 var(--foreground);
+    border: 1px solid var(--box-outline);
+    box-shadow: 3px 3px 0 var(--box-outline);
     border-radius: var(--curve-lg);
     font-size: 1.8rem;
     font-family: "Lekton", sans-serif;
@@ -291,10 +373,16 @@
     }
   }
 
+  .sub-title-description {
+    margin-top: 0;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
   .output-yaml {
     pre {
       font-family: 'Courier New', Courier, monospace;
-      background: #cecbf780;
+      background: var(--background-form);
       padding: 0.2rem 0.4rem;
       border-radius: var(--curve-sm);
       font-size: 0.9rem;

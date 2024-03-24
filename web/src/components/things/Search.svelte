@@ -139,10 +139,12 @@
   input {
     padding: 0.5rem 1rem;
     font-size: 1.8rem;
-    border: 2px solid var(--foreground);
+    border: 2px solid var(--box-outline);
     border-radius: var(--curve-lg);
-    box-shadow: 3px 3px 0 var(--foreground);
+    box-shadow: 3px 3px 0 var(--box-outline);
     z-index: 4;
+    background: var(--accent-fg);
+    color: var(--foreground);
     &:focus {
       outline: none;
       border-color: var(--accent);
@@ -153,16 +155,16 @@
   .suggestions {
     ul {
       position: absolute;
-      background: white;
+      background: var(--background-form);
       z-index: 3;
       width: 100%;
 
       list-style: none;
       padding: 0;
       margin: 0;
-      border: 2px solid var(--foreground);
+      border: 2px solid var(--box-outline);
       border-radius: 0 0 var(--curve-lg) var(--curve-lg);
-      box-shadow: 3px 3px 0 var(--foreground);
+      box-shadow: 3px 3px 0 var(--box-outline);
       transform: translateY(-0.5rem);
       max-height: 500px;
       overflow-y: scroll;

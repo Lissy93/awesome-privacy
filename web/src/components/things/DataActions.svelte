@@ -21,10 +21,9 @@
   const getIframeSrc = () => {
     const host = 'https://github-embed.as93.net';
     const target = encodeURIComponent(getGitHubSrcFile());
-    const opts = 'style=color-brewer&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on';
+    const opts = 'style=felipec&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on';
     return `${host}/iframe.html?target=${target}&${opts}`;
   };
-
 
   onMount(async () => {
     const results = await fetchSrcData(categoryName, sectionName, serviceName);
@@ -92,8 +91,8 @@
   }
   .button-link {
     background: var(--accent-3);
-    border: 1px solid var(--foreground);
-    box-shadow: 3px 3px 0 var(--foreground);
+    border: 1px solid var(--box-outline);
+    box-shadow: 3px 3px 0 var(--box-outline);
     color: var(--accent-fg);
     text-decoration: none;
     border-radius: 18px;

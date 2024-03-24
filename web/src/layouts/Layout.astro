@@ -77,20 +77,8 @@ const {
 	
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+
 	html {
-		background: var(--background);
-		background-size: 224px;
 		::selection {
 			background: var(--accent);
 			color: var(--accent-fg);
@@ -100,8 +88,9 @@ const {
 	body {
 		margin: 0;
 		min-height: 100vh;
-		background: #feecff;
-		background: -webkit-radial-gradient(circle, #feecff 0%, #e1e4fb 100%);
-		background: radial-gradient(circle, #feecff 0%, #e1e4fb 100%);
+		color: var(--foreground);
+		background: var(--background);
+		/* background: -webkit-radial-gradient(circle, var(--bg-gradient-comp-1) 0%, var(--bg-gradient-comp-2) 100%);
+		background: radial-gradient(circle, var(--bg-gradient-comp-1) 0%, var(--bg-gradient-comp-2) 100%); */
 	}
 </style>

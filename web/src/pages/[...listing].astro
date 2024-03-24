@@ -8,6 +8,8 @@ import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro'
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
 import DockerDetailedInfo from '@components/things/DockerDetailedInfo.astro';
 import IosAppDetailedInfo from '@components/things/IosAppDetailedInfo.astro';
+import DiscordDetailedInfo from '@components/things/DiscordDetailedInfo.astro';
+import RedditDetailedInfo from '@components/things/RedditDetailedInfo.astro';
 import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
@@ -17,6 +19,8 @@ import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
 import { fetchDockerData } from '@utils/fetch-docker-instructions';
 import { fetchIosInfo } from '@utils/fetch-ios-info';
+import { fetchDiscordInfo } from '@utils/fetch-discord-info';
+import { fetchRedditInfo } from '@utils/fetch-reddit-info';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import { site } from '@utils/config';
 import FontAwesome from '@components/form/FontAwesome.svelte';
@@ -34,6 +38,8 @@ const {
   url,
   github,
   tosdrId,
+  discordInvite,
+  subreddit,
   iosApp,
   icon,
   followWith,
@@ -138,8 +144,22 @@ const ignoredSites = ['github.gom', 'wikipedia.'];
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
+const discordData = discordInvite ? await fetchDiscordInfo(discordInvite) : null;
+const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
+
+const findPrivacyPolicyLink = () => {
+  if (!privacyData) return null;
+  const docs = privacyData.parameters.documents;
+  if (docs) {
+    const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
+    if (privacyPolicy) return privacyPolicy.url;
+  }
+  return `https://tosdr.org/en/service/${tosdrId}`;
+};
+
+const privacyPolicyLink = findPrivacyPolicyLink();
 
 const getApiEndpoint = () => {
   return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
@@ -194,13 +214,31 @@ const getApiEndpoint = () => {
           { tosdrId && (
           <li>
             <b>Privacy:</b>
-            <a href={`https://tosdr.org/en/service/${tosdrId}`}>{`tosdr.org/en/service/${tosdrId}`}</a>
+            <a href={privacyPolicyLink}>{formatLink(privacyPolicyLink || '')}</a>
           </li>
           )}
           { iosApp && (
           <li>
             <b>iOS App:</b>
             <a href={iosApp}>{formatLink(iosApp)}</a>
+          </li>
+          )}
+          <!-- { androidApp && (
+          <li>
+            <b>Android App:</b>
+            <a href={androidApp}>{formatLink(androidApp)}</a>
+          </li>
+          )} -->
+          { discordInvite && (
+          <li>
+            <b>Discord Invite:</b>
+            <a href={`https://discord.com/invite/${discordInvite}`}>{discordInvite}</a>
+          </li>
+          )}
+          { subreddit && (
+          <li>
+            <b>Subreddit:</b>
+            <a href={`https://reddit.com/r/${subreddit}`}>r/{subreddit}</a>
           </li>
           )}
           { url && (
@@ -241,7 +279,7 @@ const getApiEndpoint = () => {
         ) : null }
       </div>
     </section>
-    { privacyData && (
+    { privacyData && privacyData.parameters.points.length > 0 && (
       <section>
         <h3>{name} Privacy Policy</h3>
         <PrivacyPolicyDetails privacyData={privacyData} />
@@ -269,6 +307,15 @@ const getApiEndpoint = () => {
     <section>
       <h3>{name} Docker</h3>
       <DockerDetailedInfo docker={dockerData} />
+    </section>
+    )}
+    { (discordData || redditData) && (
+    <section>
+      <h3>{name} Socials</h3>
+      <div class="social-wrap">
+      { discordData && <DiscordDetailedInfo discordData={discordData} /> }
+      { redditData && <RedditDetailedInfo redditData={redditData} /> }
+      </div>
     </section>
     )}
 
@@ -370,8 +417,8 @@ section {
   padding: 1rem;
   min-height: 8rem;
   position: relative;
-  border: 2px solid var(--foreground);
-  box-shadow: 6px 6px 0 var(--foreground);
+  border: 2px solid var(--box-outline);
+  box-shadow: 6px 6px 0 var(--box-outline);
   background: var(--accent-fg);
 
 }
@@ -383,7 +430,7 @@ p {
 h3 {
     font-size: 2rem;
     margin: -2rem 0 1rem -2rem;
-    box-shadow: 6px 6px 0 var(--foreground);
+    box-shadow: 6px 6px 0 var(--box-outline);
     background: var(--accent);
     color: var(--accent-fg);
     width: fit-content;
@@ -569,6 +616,13 @@ pre {
       }
     }
   }
+}
+
+.social-wrap {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .highlights {

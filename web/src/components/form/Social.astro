@@ -97,10 +97,11 @@ const socialMedias = {
     padding: 0;
     margin: 0;
     opacity: 0.8;
-    border: 1px solid var(--foreground);
-    box-shadow: 2px 2px 0 var(--foreground);
+    border: 1px solid var(--box-outline);
+    box-shadow: 2px 2px 0 var(--box-outline);
     border-radius: var(--curve-sm);
     transition: all 0.2s ease-in-out;
+    background: var(--background-form);
     a {
       display: flex;
       color: var(--foreground);
@@ -112,7 +113,7 @@ const socialMedias = {
       }
     }
     &:hover {
-      box-shadow: 3px 3px 0 var(--foreground);
+      box-shadow: 3px 3px 0 var(--box-outline);
       border-radius: var(--curve-md);
       opacity: 1;
       a {
