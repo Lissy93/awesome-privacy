@@ -624,7 +624,7 @@ categories:
           P2P encrypted chat network with cross-platform GNU client apps. Jami supports
           audio and video calls, screen sharing, conference hosting and instant messaging.
 
-      - name: Tox + qTox client
+      - name: Tox & qTox client
         url: https://tox.chat
         icon: https://tox.chat/theme/img/favicon.ico
         openSource: true
@@ -1603,7 +1603,7 @@ categories:
           and the certificate seen from an external network. If they do not match, this may indicate a
           man-in-the-middle modifying requests.
 
-      - name: RethinkDNS + Firewall
+      - name: RethinkDNS & Firewall
         url: https://rethinkdns.com/app
         github: celzero/rethink-app
         tosdrId: 4691
@@ -2191,7 +2191,7 @@ categories:
           Non-root, small-sized DNS changer utilizing DNS-over-HTTPS and DNS-over-TLS. (Note, since this
           uses Android's VPN API, it is not possible to run a VPN while using Nebulo.)
 
-      - name: RethinkDNS + Firewall
+      - name: RethinkDNS & Firewall
         url: https://rethinkdns.com/app
         github: celzero/rethink-app
         icon: https://rethinkdns.com/ico/app_icon.svg
@@ -2262,7 +2262,7 @@ categories:
           Android Firewall+ (AFWall+) is an advanced iptables editor (GUI) for rooted Android devices,
           which provides very fine-grained control over which Android apps are allowed to access the network.
 
-      - name: RethinkDNS + Firewall
+      - name: RethinkDNS & Firewall
         url: https://rethinkdns.com/app
         followWith: Android
         github: celzero/rethink-app
@@ -2443,7 +2443,7 @@ categories:
           have ads/ trackers blocked, and the blacklist can be edited. The app is free, but there is a premium option,
           which has a built-in VPN.
 
-      - name: RethinkDNS + Firewall
+      - name: RethinkDNS & Firewall
         url: https://rethinkdns.com/app
         github: celzero/rethink-app
         followWith: Android
