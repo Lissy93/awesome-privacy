@@ -18,6 +18,9 @@ export interface Service {
   acceptsCrypto?: boolean;
   tosdrId?: string;
   iosApp?: string;
+  androidApp?: string;
+  discordInvite?: string;
+  subreddit?: string;
 }
 
 export interface Section {
