@@ -1,0 +1,164 @@
+---
+
+import type { RedditData } from '@utils/fetch-reddit-info';
+import { timestampToDate, timeAgo } from '@utils/dates-n-stuff'; 
+import FontAwesome from "@components/form/FontAwesome.svelte"
+
+
+interface Props {
+  redditData: RedditData;
+};
+
+const { redditData } = Astro.props;
+
+
+---
+
+<div class="reddit-info-wrapper">
+    <h3>Reddit</h3>
+    
+    <p class="website-title">
+      <img src={redditData.info.icon} width="16" />
+      {redditData.info.title || redditData.info.name}
+    </p>
+    <p class="website-description">{redditData.info.description}</p>
+    {redditData.info.banner && (<img class="banner" width="300" src={redditData.info.banner} alt="Banner" />)}
+    <ul class="list-table">
+      {redditData.info.dateCreated && (
+      <li>
+        <span class="lbl">Created at</span>
+        <span class="val">{timestampToDate(redditData.info.dateCreated * 1000)}</span>
+      </li>
+      )}
+      <li>
+        <span class="lbl">Members</span>
+        <span class="val">{redditData.info.subscribers}</span>
+      </li>
+      <li>
+        <span class="lbl">Join</span>
+        <span class="val"><a href={`https://reddit.com/${redditData.info.name}`}>{redditData.info.name}</a></span>
+      </li>
+    </ul>
+
+    <h4>Posts</h4>
+    <ul class="posts">
+      {redditData.posts.map((post) => (
+        <li title={post.body}>
+          ○ <a href={post.url} target="_blank">{post.title}</a>
+          <span class="votes">(▲ {post.upVotes} ▼ {post.downVotes})</span>
+        </li>
+      ))}
+    </ul>
+</div>
+
+
+<style lang="scss">
+.reddit-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.banner {
+  margin: 0.5rem auto;
+  border-radius: var(--curve-md);
+  width: 100%;
+}
+
+h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.6rem;
+}
+
+h4 {
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+}
+p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  :global(svg) {
+    width: 1rem;
+  }
+  img {
+    border-radius: var(--curve-sm);
+  }
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  img {
+    border-radius: var(--curve-sm);
+  }
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  &.list-table {
+    font-size: 0.9rem;
+    padding-left: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.1rem 0;
+      .lbl {
+        font-weight: 400;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid #5f53f440;
+      }
+    }
+  }
+}
+
+.posts {
+  list-style: circle;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  li {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    a {
+      max-width: 80%;
+    }
+    .votes {
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+  }
+}
+
+.website-title, .website-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  border-left: 2px solid var(--accent-3);
+  padding-left: 0.5rem;
+}
+.website-title {
+  font-weight: 500;
+}
+.website-description {
+  font-style: italic;
+  -webkit-line-clamp: 3;
+}
+.explainer {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+
+</style>
