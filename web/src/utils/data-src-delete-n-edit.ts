@@ -32,6 +32,10 @@ export const makeAdditionRequest = (formData: {
   serviceDescription: string;
   serviceGithub: string;
   serviceTosdrId: string;
+  serviceIosApp: string,
+  serviceAndroidApp: string,
+  serviceDiscordInvite: string,
+  serviceSubreddit: string,
   serviceOpenSource: boolean;
   serviceSecurityAudited: boolean;
   serviceCrypto: boolean;
