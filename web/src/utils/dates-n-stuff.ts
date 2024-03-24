@@ -6,6 +6,15 @@ export const formatDate = (date: string): string => {
   });
 }
 
+export const timestampToDate = (timestamp: number): string => {
+  return new Date(timestamp).toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: '2-digit'
+  });
+
+}
+
 export const timeAgo = (dateStr: string): string => {
   const seconds = Math.floor((new Date().getTime() - new Date(dateStr).getTime()) / 1000);
   const intervals = {
