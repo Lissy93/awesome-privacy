@@ -28,7 +28,11 @@
                       "securityAudited": { "type": "boolean", "nullable": true },
                       "openSource": { "type": "boolean", "nullable": true },
                       "acceptsCrypto": { "type": "boolean", "nullable": true },
-                      "tosdrId": { "type": "number", "nullable": true }
+                      "tosdrId": { "type": "number", "nullable": true },
+                      "iosApp": { "type": "string", "nullable": true },
+                      "androidApp": { "type": "string", "nullable": true },
+                      "discordInvite": { "type": "string", "nullable": true },
+                      "subreddit": { "type": "string", "nullable": true }
                     },
                     "required": ["name", "description", "url"],
                     "additionalProperties": false
