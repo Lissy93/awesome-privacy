@@ -1,12 +1,12 @@
 :root {
   --accent: #f45397;
-  --accent-fg: #fff;
+  --accent-fg: #1e1f21;
 
   --accent-2: #ffdf60;
   --accent-3: #5f53f4;
   --accent-4: #28dffd;
 
-  --foreground: #13151a;
+  --foreground: #fff;
 
   --curve-sm: 4px;
   --curve-md: 6px;
@@ -16,4 +16,11 @@
   --success: #00ff64;
 
   --transparent-accent: #5f53f482;
+
+  --background: #151517;
+  --bg-gradient-comp-1: #151517;
+  --bg-gradient-comp-2: #151517;
+  --background-form: #19191c;
+
+  --box-outline: #000;
 }
