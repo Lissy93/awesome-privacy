@@ -51,6 +51,7 @@ const { previous, next } = makePaginationLinks();
 <Layout title={`${title} | Awesome Privacy`}>
 	<Main>
 		<SectionList title={title} sections={sections} bigTitle={true} />
+    <a href={`/all#${slugify(title)}`}>Browse All</a>
 		<div class="pagination-navigation">
       { previous ? (
         <Button url={`/${slugify(previous)}`}>
