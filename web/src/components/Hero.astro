@@ -1,6 +1,11 @@
 ---
 import FontAwesome from "@components/form/FontAwesome.svelte"
+import ThemeSwitcher from "@components/form/ThemeSwitcher.svelte"
 ---
+
+<div class="theme-switcher">
+<ThemeSwitcher client:load />
+</div>
 
 <div class="hero">
   <h1>Awesome Privacy</h1>
@@ -117,6 +122,12 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
         margin-right: 0.5rem;
       }
     }
+  }
+
+  .theme-switcher {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
 
   .top-right {
