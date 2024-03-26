@@ -4,6 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Hero from '@components/Hero.astro';
 import Search from '@components/things/Search.svelte';
 import SectionList from '@components/things/SectionList.astro';
+import SavedServices from '@components/things/SavedServices.svelte';
 
 import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
@@ -38,6 +39,10 @@ const description = 'Privacy is a fundamental human right; '
 			<span>Or, just</span>
 			<Button url="/all" text="View Everything" />
 		</div>
+
+		<h2><a href="/inventory">Saved Items</a></h2>
+		<SavedServices allData={categories} client:load />
+
 		<h2>
 			<a href="/about">About</a>
 		</h2>

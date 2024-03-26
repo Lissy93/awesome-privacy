@@ -1,0 +1,101 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import SavedServices from '@components/things/SavedServices.svelte';
+import GetSharableLink from '@components/things/GetSharableLink.svelte';
+
+import { fetchData } from '@utils/fetch-data';
+import Button from '@components/form/Button.astro';
+import EditableTitle from '@components/form/EditableTitle.svelte';
+import type { Category } from '../../types/Service';
+
+const categories = (await fetchData())?.categories || [] as Category[];
+
+export const prerender = false;
+
+const inventoryId = Astro.params.inventoryId || 'Inventory';
+let cheekyLilError = '';
+
+function makeTitle(input: string): string {
+  return (input.includes('_') ? input : `mystry_${input}`)
+    .split('_')[1]
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (match) => match.toUpperCase());
+}
+
+const serviceList = await fetch(`https://awesome-privacy-share-api.as93.net/${inventoryId}`).then((res) => res.json()) || [];
+
+if (serviceList.error) {
+  cheekyLilError = serviceList.error;
+}
+
+---
+
+<Layout title="Saved Services">
+  <main>
+    <h2>{makeTitle(inventoryId)}</h2>
+    {cheekyLilError && (
+      <div class="error">
+        <p class="oh-deary-me">An error occoured</p>
+        <p class="what-the-fuck-happened">{cheekyLilError}</p>
+        <p class="what-next">
+          We're sorry about that.<br />
+          Try going <a href="/">back home</a>,
+          or <a href="https://github.com/Lissy93/awesome-privacy/issues/new/choose">raising a ticket</a> on
+          GitHub.
+        </p>
+      </div>
+    )}
+    <SavedServices allData={categories} serviceList={serviceList} client:load />
+    <div class="buttons">
+      <p>Not found what you're looking for?</p>
+      <Button url="/all">Browse Services</Button>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+    width: 1200px;
+    max-width: calc(100% - 5rem);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: calc(100vh - 12rem);
+    font-size: 1.25rem;
+    h2 {
+      font-family: "Lekton", sans-serif;
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 0;
+      color: var(--accent-3);
+    }
+    .buttons {
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .error {
+      text-align: center;
+      font-size: 1.4rem;
+      .oh-deary-me {
+        font-size: 1.8rem;
+        margin: 0.2rem auto;
+      }
+      .what-the-fuck-happened {
+        color: var(--danger);
+        margin: 0.2rem auto;
+      }
+      .what-next {
+        font-size: 1rem;
+        margin-top: 3rem;
+        opacity: 0.6;
+        a {
+          color: var(--foreground);
+        }
+      }
+    }
+  }
+</style>

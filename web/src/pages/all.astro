@@ -94,6 +94,8 @@ const toggleSidebar = () => {
                   <p>
                     <strong>⚠️ This section is still a work in progress ⚠️</strong><br />
                     Check back soon, or help us complete it by submiting a pull request on GitHub.
+                    <br />
+                    <span class="quick-submit">Or submit an entry <a href="/submit">here</a></span>
                   </p>
                 </div>
               ) : null}
@@ -118,10 +120,6 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
-// .narrow {
-//   width: 70%;
-// }
 
 .hidden {
   display: none;
@@ -243,22 +241,25 @@ h3 {
   }
 
   .nothing-yet {
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     background: var(--accent-fg);
     border: 2px solid var(--box-outline);
     box-shadow: 6px 6px 0 var(--box-outline);
     border-radius: var(--curve-sm);
-
     display: flex;
-    width: 80vw;
-    max-width: 28rem;
+
     p {
       font-size: 1.2rem;
       opacity: 0.8;
       font-style: italic;
       text-align: center;
-      margin-bottom: 3rem;
+      margin: 4rem auto;
+    }
+    .quick-submit {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
     }
   }
 

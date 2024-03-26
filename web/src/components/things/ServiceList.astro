@@ -8,6 +8,7 @@ import DeleteListing from '@components/things/DeleteListing.svelte';
 import { slugify } from '@utils/fetch-data';
 
 import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
+import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props {
   services: Service[];
@@ -54,6 +55,13 @@ const {
     {services.map((service: Service) => (
       <li id={slugify(service.name)}>
         <DeleteListing client:load categoryName={categoryName} sectionName={sectionName} serviceName={service.name} />
+        <div class="save-listing">
+          <SaveListing client:visible
+            categoryName={categoryName}
+            sectionName={sectionName}
+            serviceName={service.name}
+          />
+        </div>
         <div class="service-head">
           <img 
             width="40"
@@ -157,6 +165,11 @@ const {
     li {
       margin-bottom: 1rem;
       position: relative;
+      .save-listing {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
       .service-head {
         display: flex;
         align-items: center;
@@ -304,7 +317,13 @@ const {
   }
 
   li:hover :global(.actions) {
-    opacity: 0.5;
+    opacity: 0.6;
+    :global(a):hover {
+      opacity: 1;
+    }
+  }
+  :global(.actions a):hover {
+    opacity: 1;
   }
   
 </style>

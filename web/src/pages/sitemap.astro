@@ -25,13 +25,19 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
           <a href="/">Home</a>
         </li>
         <li>
+          <a href="/search">Search</a>
+        </li>
+        <li>
+          <a href="/all">View All</a>
+        </li>
+        <li>
+          <a href="/inventory">My Inventory</a>
+        </li>
+        <li>
           <a href="/submit">Submit Listing</a>
         </li>
         <li>
           <a href="/api">API</a>
-        </li>
-        <li>
-          <a href="/search">Search</a>
         </li>
         <li>
           <a href="/browse">Categories</a>
@@ -58,9 +64,6 @@ const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
               </li>
             ))}
           </ul>
-        </li>
-        <li>
-          <a href="/all">View Summary of All</a>
         </li>
         <li>
           <a href="/about">About</a>

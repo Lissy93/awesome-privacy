@@ -1,6 +1,8 @@
 User-agent: *
 Disallow: /search/*
+Disallow: /inventory/*
 Allow: /search/$
+Allow: /inventory/$
 Allow: /sitemap
 
 Sitemap: https://awesome-privacy.xyz/sitemap-index.xml

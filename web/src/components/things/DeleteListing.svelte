@@ -40,7 +40,7 @@
 <style lang="scss">
 .actions {
   position: absolute;
-  right: 1rem;
+  right: 3.5rem;
   top: 1rem;
   width: 2.8rem;
   gap: 1rem;
@@ -53,6 +53,7 @@
     transition: all 0.2s ease-in-out;
     &:hover {
       color: var(--accent-3);
+      opacity: 1;
     }
   }
   

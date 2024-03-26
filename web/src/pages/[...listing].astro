@@ -25,6 +25,7 @@ import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import { site } from '@utils/config';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import Button from '@components/form/Button.astro';
+import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props extends Service {
   slug: string;
@@ -184,7 +185,15 @@ const getApiEndpoint = () => {
           ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}>{parentSection.name}</a>
           ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}>{name}</a>
         </span>
-      </div>     
+      </div>
+      <div class="save-listing">
+        <SaveListing client:visible
+          categoryName={categoryName}
+          sectionName={parentSection.name}
+          serviceName={name}
+          showLabel={true}
+        />
+      </div>
       <div class="intro">
         <img 
           width="60"
@@ -483,6 +492,12 @@ h3 {
   @media(max-width: 768px) {
     display: none;
   }
+}
+
+.save-listing {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
 }
 
 h4 {

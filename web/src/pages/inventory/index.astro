@@ -1,0 +1,61 @@
+---
+
+import Layout from '@layouts/Layout.astro';
+import SavedServices from '@components/things/SavedServices.svelte';
+import GetSharableLink from '@components/things/GetSharableLink.svelte';
+
+import { fetchData } from '@utils/fetch-data';
+import Button from '@components/form/Button.astro';
+import EditableTitle from '@components/form/EditableTitle.svelte';
+import type { Category } from '../../types/Service';
+
+const categories = (await fetchData())?.categories || [] as Category[];
+
+---
+
+<Layout title="Saved Services">
+  <main>
+    <div class="top-row">
+      <!-- <h2>Inventory</h2> -->
+      <EditableTitle client:load />
+      <GetSharableLink client:load />
+    </div>
+    <SavedServices allData={categories} client:load />
+    <div class="buttons">
+      <p>Not found what you're looking for?</p>
+      <Button url="/all">Browse Services</Button>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+    width: 1200px;
+    max-width: calc(100% - 5rem);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: calc(100vh - 12rem);
+    font-size: 1.25rem;
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-family: "Lekton", sans-serif;
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 0;
+      color: var(--accent-3);
+    }
+    .buttons {
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
