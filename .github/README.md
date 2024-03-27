@@ -84,7 +84,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Terminal Emulators](#terminal-emulators) (0)
 - **Smart Home & IoT**
 	- [Voice Assistants](#voice-assistants) (2)
-	- [Smart Home](#smart-home) (0)
+	- [Smart Home](#smart-home) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
 	- [Crypto Wallets](#crypto-wallets) (9)
@@ -4006,7 +4006,18 @@ you are happy with how it works, from a privacy perspective.
 
 ### Smart Home
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://avatars.githubusercontent.com/u/7365162?s=200&v=4' width='16' height='16' alt='icon' /> Gladys Assistant](https://gladysassistant.com/)** - An open source privacy-respecting Home Assistant, compatible with a wide range of
+devices including Raspberry Pi, desktop computers, or NAS systems.
+Actively developed, with good french community and various integrations 
+(Zigbee, Philips, Camera, Tuya, MQTT, Telegram, ...).
+ 	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: gladysassistant/gladys](https://img.shields.io/github/stars/gladysassistant/gladys?style=flat&logo=github&label=gladys&color=%235f53f4&cacheSeconds=3600)](https://github.com/gladysassistant/gladys)  [![Gladys Assistant on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Gladys_Assistant)](https://awesome-privacy.xyz/smart-home-&-iot/smart-home/gladys-assistant) 
+ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
