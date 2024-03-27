@@ -309,7 +309,7 @@ const getApiEndpoint = () => {
         <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
       </section>
     )}
-    { androidData && (
+    { (androidData && !androidData.error) && (
       <section>
         <h3>{name} Android App</h3>
         <AndroidAppDetailedInfo androidData={androidData} />

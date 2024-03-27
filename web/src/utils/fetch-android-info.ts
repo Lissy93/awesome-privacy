@@ -26,6 +26,7 @@ interface Tracker {
 }
 
 export interface AndroidInfo {
+  error?: string;
   handle: string;
   app_name: string;
   uaid: string;
