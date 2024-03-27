@@ -33,17 +33,32 @@
   }
 </script>
 
+<div class="wrapper-or-something">
 <button
   class={`save-container ${isSaved ? 'saved' : ''} ${showLabel ? 'label-button' : ''}`}
   title={`Save ${serviceName}`}
   on:click={toggleSave}>
   {#if showLabel }
-    <span>Save</span>
+    <span>
+      {isSaved ? 'Saved' : 'Save'}
+    </span>
   {/if}
   <FontAwesome iconName="saveListing"/>
 </button>
 
+{#if showLabel && isSaved }
+<div class="done-msg">
+  You can view all saved items in your <a href="/inventory">Inventory</a>
+</div>
+{/if}
+</div>
+
 <style lang="scss">
+  .wrapper-or-something {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.25rem;
+  }
   .save-container {
     cursor: pointer;
     background: none;
@@ -89,5 +104,11 @@
         box-shadow: 4px 4px 0 var(--box-outline);
       }
     }
+  }
+
+  .done-msg {
+    max-width: 165px;
+    font-size: 0.8rem;
+    opacity: 0.6;
   }
 </style>

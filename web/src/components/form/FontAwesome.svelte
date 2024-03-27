@@ -78,7 +78,8 @@
 
     //Misc
     ratingStar: solidIcons.faStar,
-    saveListing: solidIcons.faBookmark
+    saveListing: solidIcons.faBookmark,
+    noTrackers: solidIcons.faShieldCheck,
   };
 
   export let iconName: string;

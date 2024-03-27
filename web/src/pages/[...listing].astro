@@ -8,6 +8,7 @@ import PrivacyPolicyDetails from '@components/things/PrivacyPolicyDetails.astro'
 import WebsiteDetailedInfo from '@components/things/WebsiteDetailedInfo.astro';
 import DockerDetailedInfo from '@components/things/DockerDetailedInfo.astro';
 import IosAppDetailedInfo from '@components/things/IosAppDetailedInfo.astro';
+import AndroidAppDetailedInfo from '@components/things/AndroidDetailedInfo.astro';
 import DiscordDetailedInfo from '@components/things/DiscordDetailedInfo.astro';
 import RedditDetailedInfo from '@components/things/RedditDetailedInfo.astro';
 import SocialShare from '@components/form/Social.astro';
@@ -19,6 +20,7 @@ import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
 import { fetchDockerData } from '@utils/fetch-docker-instructions';
 import { fetchIosInfo } from '@utils/fetch-ios-info';
+import { fetchAndroidInfo } from '@utils/fetch-android-info';
 import { fetchDiscordInfo } from '@utils/fetch-discord-info';
 import { fetchRedditInfo } from '@utils/fetch-reddit-info';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
@@ -42,6 +44,7 @@ const {
   discordInvite,
   subreddit,
   iosApp,
+  androidApp,
   icon,
   followWith,
   securityAudited,
@@ -138,13 +141,13 @@ const makePaginationLinks = () => {
 
 const { previous, next } = makePaginationLinks();
 
-
 const ignoredSites = ['github.gom', 'wikipedia.'];
 
 // Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
+const androidData = androidApp ? await fetchAndroidInfo(androidApp) : null;
 const discordData = discordInvite ? await fetchDiscordInfo(discordInvite) : null;
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
@@ -232,12 +235,12 @@ const getApiEndpoint = () => {
             <a href={iosApp}>{formatLink(iosApp)}</a>
           </li>
           )}
-          <!-- { androidApp && (
+          { androidApp && (
           <li>
             <b>Android App:</b>
-            <a href={androidApp}>{formatLink(androidApp)}</a>
+            <a href={`https://play.google.com/store/apps/details?id=${androidApp}`}>{`https://play.google.com/store/apps/details?id=${androidApp}`}</a>
           </li>
-          )} -->
+          )}
           { discordInvite && (
           <li>
             <b>Discord Invite:</b>
@@ -304,6 +307,12 @@ const getApiEndpoint = () => {
       <section>
         <h3>{name} Website</h3>
         <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
+      </section>
+    )}
+    { androidData && (
+      <section>
+        <h3>{name} Android App</h3>
+        <AndroidAppDetailedInfo androidData={androidData} />
       </section>
     )}
     { iosData && (
