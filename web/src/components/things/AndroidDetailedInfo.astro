@@ -63,14 +63,14 @@ function permissionToReadable(permission: string): string {
     </ul>
 
     <h4>Trackers</h4>
-    {androidData.trackers.length === 0 && (
+    {(androidData.trackers || []).length === 0 && (
       <p class="all-good">
         <FontAwesome iconName="noTrackers" />
         No trackers found
       </p>
     )}
     <ul class="list">
-      {androidData.trackers.map((track) => (
+      {(androidData.trackers || []).map((track) => (
         <li title={track.code_signature}>{track.name}</li>
       ))}
     </ul>
@@ -78,14 +78,14 @@ function permissionToReadable(permission: string): string {
 
   <div class="right">
     <h4>Permissions</h4>
-    {androidData.permissions.length === 0 && (
+    {(androidData.permissions || []).length === 0 && (
       <p class="all-good">
         <FontAwesome iconName="noTrackers" />
         No permissions required
       </p>
     )}
     <ul class="list">
-      {androidData.permissions.map((perm) => (
+      {(androidData.permissions || []).map((perm) => (
         <li title={perm}>{permissionToReadable(perm)}</li>
       ))}
     </ul>
