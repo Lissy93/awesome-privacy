@@ -4247,7 +4247,16 @@ categories:
 
     - name: Smart Home
       alternativeTo: ['philips hue', 'nest', 'samsung smartthings', 'ecobee', 'ring']
-      services: []
+      services:
+      - name: Gladys Assistant
+        description: |
+          An open source privacy-respecting Home Assistant, compatible with a wide range of
+          devices including Raspberry Pi, desktop computers, or NAS systems.
+          Actively developed, with good french community and various integrations 
+          (Zigbee, Philips, Camera, Tuya, MQTT, Telegram, ...).
+        url: https://gladysassistant.com/
+        github: gladysassistant/gladys
+        icon: https://avatars.githubusercontent.com/u/7365162?s=200&v=4
 
   - name: Finance
     sections:
