@@ -47,6 +47,7 @@ const {
   androidApp,
   icon,
   followWith,
+  links,
   securityAudited,
   openSource,
   acceptsCrypto,
@@ -82,6 +83,15 @@ const makeKeyWordTag = () => {
  */
 const makePageTitle = () => {
   return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
+};
+
+const makeBreadcrumbs = () => {
+  return [
+    { name: 'Home', item: '/' },
+    { name: categoryName, item: slugify(categoryName) },
+    { name: parentSection.name, item: `${slugify(categoryName)}/${slugify(parentSection.name)}` },
+    { name: name, item: `${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}` },
+  ];
 };
 
 /**
@@ -171,7 +181,12 @@ const getApiEndpoint = () => {
 
 ---
 
-<Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
+<Layout
+  title={makePageTitle()}
+  keywords={makeKeyWordTag()}
+  description={makeDescriptionTag()}
+  breadcrumbs={makeBreadcrumbs()}
+>
   <main>
     <section>
       <div class="service-head">
@@ -258,6 +273,14 @@ const getApiEndpoint = () => {
             <b>Web info:</b>
             <a href={`https://web-check.xyz/results/${formatLink(url)}`}>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
           </li>
+          )}
+          { links && links.length > 0 && (
+            links.map((link) => (
+              <li>
+                <b>{link.title}</b>
+                <a href={link.url}>{link.url}</a>
+              </li>
+            ))
           )}
         </ul>
         </div>
@@ -420,7 +443,7 @@ const getApiEndpoint = () => {
 main {
   margin: 2rem auto;
   padding: 1rem;
-  width: 1000px;
+  width: 1200px;
   max-width: calc(100% - 5rem);
   position: relative;
   @media(max-width: 768px) {
@@ -539,7 +562,7 @@ h4 {
     b {
       font-size: 1rem;
       font-weight: 400;
-      min-width: 85px;
+      min-width: 100px;
       display: inline-block;
       @media(max-width: 768px) {
         width: auto;

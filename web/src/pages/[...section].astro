@@ -54,6 +54,14 @@ const makePageTitle = () => {
   return `${title} | Awesome Privacy`;
 };
 
+const makeBreadcrumbs = () => {
+  return [
+    { name: 'Home', item: '/' },
+    { name: categoryName, item: slugify(categoryName) },
+    { name: title, item: `${slugify(categoryName)}/${slugify(title)}` },
+  ];
+};
+
 /**
  * Make a string page intro, for the description tag
  */
@@ -70,6 +78,27 @@ const makeDescriptionTag = () => {
   }
   description += 'All this, and many more free and awesome tools and software.'
   return description;
+};
+
+const makeCarasolData = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      services.map((service, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://awesomeprivacy.com/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`,
+        "item": {
+          "@type": "Service",
+          "name": service.name,
+          "description": service.description,
+          "image": service.icon,
+          "url": `https://awesomeprivacy.com/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`
+        }
+      })),
+    ]
+  }
 };
 
 export async function getStaticPaths() {
@@ -110,8 +139,22 @@ const { previous, next } = makePaginationLinks();
 
 ---
 
-<Layout title={makePageTitle()} keywords={makeKeyWordTag()} description={makeDescriptionTag()} >
+<Layout
+  title={makePageTitle()}
+  keywords={makeKeyWordTag()}
+  description={makeDescriptionTag()}
+  breadcrumbs={makeBreadcrumbs()}
+  customSchemaJson={makeCarasolData()}
+>
   <Main>
+
+    <div class="breadcrumbs">
+      <span>
+        <a href="/">Awesome Privacy</a>
+        ➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
+        ➔ <a href={`/${slugify(categoryName)}/${slugify(title)}`}>{title}</a>
+      </span>
+    </div>
 
     <h2>{title}</h2>
 
@@ -311,5 +354,23 @@ h2 {
   opacity: 0.7;
 }
 
+.breadcrumbs {
+  opacity: 0.5;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  a {
+    color: var(--foreground);
+    transition: all 0.15s ease-in-out;
+    
+    &:hover {
+      color: var(--accent);
+    }
+  }
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
 
 </style>

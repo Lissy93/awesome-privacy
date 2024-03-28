@@ -12,6 +12,10 @@ export interface Service {
   url: string;
   github?: string;
   icon?: string;
+  links?: Array<{
+    title: string;
+    url: string;
+  }>;
   followWith?: string;
   securityAudited?: boolean;
   openSource?: boolean;

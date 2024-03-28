@@ -36,76 +36,64 @@ const categories: Category[] = (await fetchData())?.categories;
 </Layout>
 
 <script>
-// Time for some good ol' fashioned vanilla JS...
-// I reccomend you not to look at this code for too long, it's not pretty.
-const filterInput = document.querySelector('input');
-const categories = document.querySelectorAll<HTMLElement>('.category');
-const pressEnterMsg = document.getElementById('press-enter-msg') as HTMLElement | null;
-const noResults = document.querySelector('.no-results') as HTMLElement | null;
-
-if (!pressEnterMsg || !noResults) {
-  throw new Error('No pressEnterMsg or noResults');
-};
-
-filterInput?.addEventListener('input', (e) => {
-  let resultsCount = 0;
-  const filter = (e.target as HTMLInputElement).value.toLowerCase();
-  if (filter.length > 0) {
-    pressEnterMsg.style.visibility = 'visible';
-  } else {
-    pressEnterMsg.style.visibility = 'hidden';
-  }
-  categories.forEach((category) => {
-    const titleElement = category.querySelector('.category-title');
-    const title = titleElement ? titleElement.textContent?.toLowerCase() : '';
-    const sections = category.querySelectorAll<HTMLElement>('.section');
-    let count = 0;
-    sections.forEach((section) => {
-      const sectionTitle = section.textContent?.toLowerCase();
-      if (sectionTitle?.includes(filter)) {
-        section.style.display = 'block';
-        count++;
-        resultsCount++;
-      } else {
-        section.style.display = 'none';
-      }
-    });
-    if (title && title.includes(filter)) {
-      category.style.display = 'inline-flex';
-      resultsCount++;
-    } else if (count === 0) {
-      category.style.display = 'none';
-    }
-  });
-  noResults.style.display = resultsCount === 0 ? 'block' : 'none';
-});
-
-if (typeof window !== 'undefined') {
+  // Time for some good ol' fashioned vanilla JS...
+  // I reccomend you not to look at this code for too long, it's not pretty.
   document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput') as HTMLInputElement | null;
-    if (searchInput === null) return;
-    searchInput.addEventListener('keydown', function(event) {
+    const searchInput = document.getElementById('searchInput');
+    const categories = document.querySelectorAll('.category');
+    const pressEnterMsg = document.getElementById('press-enter-msg');
+    const noResults = document.querySelector('.no-results');
+
+    if (!pressEnterMsg || !noResults || !searchInput) {
+      console.error('Essential element missing!');
+      return;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      let resultsCount = 0;
+      const filter = e.target.value.trim().toLowerCase();
+      pressEnterMsg.style.visibility = filter ? 'visible' : 'hidden';
+
+      categories.forEach((category) => {
+        const titleElement = category.querySelector('.category-title');
+        const title = titleElement ? titleElement.textContent?.toLowerCase() : '';
+        const sections = category.querySelectorAll('.section');
+        let sectionCount = 0;
+
+        sections.forEach((section) => {
+          const sectionTitle = section.textContent?.toLowerCase();
+          if (sectionTitle?.includes(filter)) {
+            section.style.display = 'block';
+            sectionCount++;
+          } else {
+            section.style.display = 'none';
+          }
+        });
+
+        category.style.display = title.includes(filter) || sectionCount > 0 ? 'inline-flex' : 'none';
+        resultsCount += title.includes(filter) ? 1 : sectionCount;
+      });
+
+      noResults.style.display = resultsCount === 0 ? 'block' : 'none';
+    });
+
+    searchInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
         event.preventDefault();
-        const searchTerm = encodeURIComponent(searchInput.value);
-        window.location.href = `/search/${searchTerm}`;
+        window.location.href = `/search/${encodeURIComponent(searchInput.value.trim())}`;
       }
       if (event.key === 'Escape') {
         searchInput.value = '';
         searchInput.blur();
         pressEnterMsg.style.visibility = 'hidden';
-        categories.forEach((category) => {
-          category.style.display = 'inline-flex';
-          const sections = category.querySelectorAll<HTMLElement>('.section');
-          sections.forEach((section) => {
-            section.style.display = 'block';
-          });
-        });
+        // Reset display styles
+        categories.forEach(category => category.style.display = 'inline-flex');
+        document.querySelectorAll('.section').forEach(section => section.style.display = 'block');
       }
     });
   });
-}
 </script>
+
 
 
 <style lang="scss">

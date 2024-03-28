@@ -168,7 +168,7 @@
       transform: translateY(-0.5rem);
       max-height: 500px;
       overflow-y: scroll;
-
+      background: var(--background-form);
       li.result-row {
         padding: 0.5rem 1rem;
         margin: 0.5rem 0;

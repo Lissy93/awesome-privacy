@@ -1,5 +1,6 @@
 ---
 import FontAwesome from "@components/form/FontAwesome.svelte"
+import ThemeSwitcher from "@components/form/ThemeSwitcher.svelte"
 
 ---
 
@@ -13,6 +14,9 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
     <a href="/search">Search</a>
     <a href="/about">About</a>
     <a href="https://github.com/lissy93/awesome-privacy">GitHub</a>
+    <div class="theme-switcher">
+      <ThemeSwitcher client:load />
+    </div>
   </nav>
 </div>
 
@@ -62,7 +66,6 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
         font-family: "Lekton", sans-serif;
         font-weight: bold;
         color: var(--foreground);
-        border-left: 2px solid var(--accent-3);
         transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
         transition-timing-function: ease-in-out;
         &:hover {
@@ -84,6 +87,10 @@ import FontAwesome from "@components/form/FontAwesome.svelte"
             color: var(--foreground);
           }
         }
+      }
+      .theme-switcher {
+        transform: scale(0.7);
+        margin: 0.2rem auto;
       }
     }
     .homepage, nav {

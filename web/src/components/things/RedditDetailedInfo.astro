@@ -11,35 +11,35 @@ interface Props {
 
 const { redditData } = Astro.props;
 
-
 ---
 
 <div class="reddit-info-wrapper">
-    <h3>Reddit</h3>
-    
-    <p class="website-title">
-      <img src={redditData.info.icon} width="16" />
-      {redditData.info.title || redditData.info.name}
-    </p>
-    <p class="website-description">{redditData.info.description}</p>
-    {redditData.info.banner && (<img class="banner" width="300" src={redditData.info.banner} alt="Banner" />)}
-    <ul class="list-table">
-      {redditData.info.dateCreated && (
-      <li>
-        <span class="lbl">Created at</span>
-        <span class="val">{timestampToDate(redditData.info.dateCreated * 1000)}</span>
-      </li>
-      )}
-      <li>
-        <span class="lbl">Members</span>
-        <span class="val">{redditData.info.subscribers}</span>
-      </li>
-      <li>
-        <span class="lbl">Join</span>
-        <span class="val"><a href={`https://reddit.com/${redditData.info.name}`}>{redditData.info.name}</a></span>
-      </li>
-    </ul>
-
+    <div class="left">
+      <h3>Reddit</h3>
+      <p class="website-title">
+        <img src={redditData.info.icon} width="16" />
+        {redditData.info.title || redditData.info.name}
+      </p>
+      <p class="website-description">{redditData.info.description}</p>
+      {redditData.info.banner && (<img class="banner" width="300" src={redditData.info.banner} alt="Banner" />)}
+      <ul class="list-table">
+        {redditData.info.dateCreated && (
+        <li>
+          <span class="lbl">Created at</span>
+          <span class="val">{timestampToDate(redditData.info.dateCreated * 1000)}</span>
+        </li>
+        )}
+        <li>
+          <span class="lbl">Members</span>
+          <span class="val">{redditData.info.subscribers}</span>
+        </li>
+        <li>
+          <span class="lbl">Join</span>
+          <span class="val"><a href={`https://reddit.com/${redditData.info.name}`}>{redditData.info.name}</a></span>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
     <h4>Posts</h4>
     <ul class="posts">
       {redditData.posts.map((post) => (
@@ -49,14 +49,22 @@ const { redditData } = Astro.props;
         </li>
       ))}
     </ul>
+  </div>
 </div>
 
 
 <style lang="scss">
 .reddit-info-wrapper {
   display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  .left, .right {
+    width: calc(50% - 1rem);
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+  }
 }
 
 .banner {

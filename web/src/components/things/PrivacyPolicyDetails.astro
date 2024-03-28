@@ -20,6 +20,18 @@ const getIconName = (clasification: string) => {
   return '';
 }
 
+// If two or more objects in privacyPolicy.points have the same title, remove the duplicates
+const removeDuplicates = () => {
+  const seen = new Set();
+  return priv.points = priv.points.filter((point) => {
+    if (seen.has(point.title)) {
+      return false;
+    }
+    seen.add(point.title);
+    return true;
+  });
+}
+
 ---
 
 {priv && (
@@ -29,7 +41,7 @@ const getIconName = (clasification: string) => {
     <div class="left">
       <h4>Privacy Policy Summary</h4>
       <ul class="no-point">
-        {priv.points.map((point) => (
+        {removeDuplicates().map((point) => (
           <li class={`clasification ${point.case.classification}`}>
             <FontAwesome iconName={getIconName(point.case.classification)} />
             {point.title}
