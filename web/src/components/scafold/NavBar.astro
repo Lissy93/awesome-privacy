@@ -91,6 +91,9 @@ import ThemeSwitcher from "@components/form/ThemeSwitcher.svelte"
       .theme-switcher {
         transform: scale(0.7);
         margin: 0.2rem auto;
+        @media(max-width: 768px) {
+          display: none;
+        }
       }
     }
     .homepage, nav {

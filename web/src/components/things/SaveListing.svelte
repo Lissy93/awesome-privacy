@@ -110,5 +110,8 @@
     max-width: 165px;
     font-size: 0.8rem;
     opacity: 0.6;
+    @media(max-width: 768px) {
+      display: none;
+    }
   }
 </style>
