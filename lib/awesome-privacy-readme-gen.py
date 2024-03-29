@@ -54,11 +54,18 @@ def statsElement(isOpenSource, isSecurityAudited, isAcceptsCrypto):
       statsStr += "💰 Accepts Anonymous Payment "
     return statsStr
 
+def slugify(title):
+    if not title:
+        return ''
+    title = title.lower()
+    title = re.sub(r'\s+', '-', title)
+    title = re.sub(r'\+|&', 'and', title)
+    title = title.replace('?', '')
+    return title
+
 def awesomePrivacyReport(categoryName, sectionName, serviceName):
   if not serviceName:
       return ""
-  def slugify(name):
-      return (name or '').lower().replace(' ', '-')
   return (
       f"[![{serviceName} on Awesome Privacy]"
       f"(https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label={serviceName.replace(' ', '_')})]"
@@ -111,7 +118,9 @@ def makeAwesomePrivacy():
           for app in section.get('services') or []:
               markdown += (
                   f"- **[{iconElement(app.get('url'), app.get('icon'))} {app.get('name')}]"
-                  f"({app.get('url')})** - {app.get('description')} "
+                  f"({app.get('url')})** - {app.get('description')}"
+                  f"[…](https://awesome-privacy.xyz/"
+                  f"{slugify(category.get('name'))}/{slugify(section.get('name'))}/{slugify(app.get('name'))} \"View full {app.get('name')} report\") \n"
                   + ((
                     f"\t- <details>\n\t\t<summary>Stats</summary>\n\n\t\t"
                     f"{repoElement(app.get('github'))} "
