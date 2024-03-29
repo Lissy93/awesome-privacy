@@ -11,7 +11,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 > ⚠️ **Note**: Remember that [no software is perfect](#important-considerations), and it is important to follow good [security practices](https://github.com/Lissy93/personal-security-checklist/blob/HEAD/CHECKLIST.md)<br>
 >
-> 🪞 **Mirror**: This repo is mirrored to [https://codeberg.org/alicia/awesome-privacy](codeberg.org/alicia/awesome-privacy)<br>
+> 🪞 **Mirror**: This repo is mirrored to [codeberg.org/alicia/awesome-privacy](https://codeberg.org/alicia/awesome-privacy)<br>
 >
 > 💼 **Repo Admin**: [Website Docs](#the-website) | [API Docs](#the-api) | [Contributing](#contributing) | [Acknowledgment](#acknowledgements) | [License](#license)
 
