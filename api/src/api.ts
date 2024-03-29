@@ -56,7 +56,6 @@ app.get('/search/:searchTerm', async (c) => {
   return c.json(mappedResults);
 });
 
-
 /* Returns an array of all section IDs within a given category */
 app.get('/:category', async (c) => {
   const { categories } = await fetchAwesomePrivacyData();
