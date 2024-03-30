@@ -5083,6 +5083,7 @@ categories:
         github: NatronGitHub/Natron
         icon: https://natrongithub.github.io/img/Natron_icon.svg
         openSource: true
+    
     - name: Audio Editors & Recorders
       alternativeTo: ['adobe audition', 'garageband', 'fl studio', 'ableton live']
       services:
@@ -5102,6 +5103,7 @@ categories:
         icon: https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg
         openSource: true
         tosdrId: 4516
+    
     - name: Casting & Streaming
       alternativeTo: ['xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
       services:
@@ -5118,9 +5120,11 @@ categories:
         icon: https://obsproject.com/assets/images/new_icon_small-r.png
         openSource: true
         tosdrId: 4227
+    
     - name: Screenshot Tools
       alternativeTo: ['snagit', 'greenshot', 'lightshot', 'gyazo', 'sharex']
       services: []
+    
     - name: 3D Graphics
       alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
       services:
@@ -5146,6 +5150,15 @@ categories:
         url: https://wings3d.com
         github: dgud/wings
         icon: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wings3d.png/120px-Wings3d.png
+    
     - name: Animation
       alternativeTo: ['adobe after effects', 'animate cc', 'toon boom harmony', 'moho (anime studio)', 'pencil2d']
-      services: []
+      services:
+      - name: Aseprite
+        url: https://www.aseprite.org/
+        icon: https://upload.wikimedia.org/wikipedia/commons/2/24/Logo_Aseprite.png
+        description: An animated sprite editor & pixel art tool for Windows, macOS and Linux.
+        github: https://github.com/aseprite/aseprite
+        openSource: true
+
+
