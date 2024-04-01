@@ -19,6 +19,32 @@
   const serviceSecurityAudited = writable(false);
   const serviceCrypto = writable(false);
   const additionalInfo = writable('');
+
+  let codeBlock: any;
+  let interactiveActivated = false;
+
+  $: yamlText, updateHighlighting();
+
+  function updateHighlighting() {
+    if (codeBlock) {
+      codeBlock.textContent = yamlText
+      codeBlock.dataset.highlighted && delete codeBlock.dataset.highlighted;
+      if (window && (window as any).hljs) {
+        (window as any).hljs.highlightElement(codeBlock);
+        interactiveActivated = true;
+      }
+    }
+  }
+
+  const filterEmptyValues = (obj: Record<string, any>) => {
+    const filteredObj: Record<string, any> = {};
+    Object.keys(obj).forEach(key => {
+      if (obj[key] || ['name', 'url', 'icon', 'description'].includes(key)) {
+        filteredObj[key] = obj[key];
+      }
+    });
+    return filteredObj;
+  }
   
   $: yamlText = yaml.dump([{
         name: $serviceName,
@@ -34,7 +60,7 @@
         openSource: $serviceOpenSource,
         securityAudited: $serviceSecurityAudited,
         acceptsCrypto: $serviceCrypto,
-    }]);
+    }].map(obj => filterEmptyValues(obj)));
 
   $: issueUrl = makeAdditionRequest({
       listingCategory: $listingCategory,
@@ -56,27 +82,15 @@
 
   // Form submission handler
   function handleSubmit() {
-      const formData = {
-          listingCategory: $listingCategory,
-          serviceName: $serviceName,
-          serviceUrl: $serviceUrl,
-          serviceIcon: $serviceIcon,
-          serviceDescription: $serviceDescription,
-          serviceGithub: $serviceGithub,
-          serviceTosdrId: $serviceTosdrId,
-          serviceOpenSource: $serviceOpenSource,
-          serviceSecurityAudited: $serviceSecurityAudited,
-          serviceCrypto: $serviceCrypto,
-          additionalInfo: $additionalInfo,
-          serviceIosApp: $serviceIosApp,
-          serviceAndroidApp: $serviceAndroidApp,
-          serviceDiscordInvite: $serviceDiscordInvite,
-          serviceSubreddit: $serviceSubreddit,
-      };
-      const issueCreationUrl = makeAdditionRequest(formData, yamlText);
-      window.open(issueCreationUrl, '_blank');
+    window.open(issueUrl, '_blank');
   }
 </script>
+
+<svelte:head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/an-old-hope.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
+</svelte:head>
 
 <p>
   Before completing this form, you must ensure that the service you are adding aligns
@@ -278,7 +292,10 @@
     within <a href="github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml">awesome-privacy.yml</a>
     upon approval.
   </p>
-  <pre>{@html yamlText}</pre>
+  {#if !interactiveActivated || !codeBlock}
+    <pre><code class="language-yaml">{@html yamlText}</code></pre>
+  {/if}
+  <pre><code bind:this={codeBlock} class="language-yaml"></code></pre>
   <p>Your submission will need to be reviewed by a maintainer and the community before it can be merged.</p>
 </div>
 
