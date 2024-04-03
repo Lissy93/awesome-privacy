@@ -49,27 +49,27 @@ Currently, this extra data is pulled from:
 
 - **Privacy Policy** - To fetch a summerized version of each services Privacy Policy
 	- Including policy and terms of service links, postives + negatives and privacy score
-	- Via [ToS;DR](https://tosdr.org/)
+	- <small>Via [ToS;DR](https://tosdr.org/)</small>
 - **GitHub** - To fetch info about each project's source code
 	- Including author & contributors, creation & last updated date, languages, license and star count
-	- Via the [GitHub API](https://developer.github.com/v3/)
+	- <small>Via the [GitHub API](https://developer.github.com/v3/)</small>
 - **Android App** - To fetch privacy info about each project's Android app
 	- Including permissions, trackers, privacy score and metdata
-	- Via [Exodus Privacy](https://exodus-privacy.eu.org/)
+	- <small>Via [Exodus Privacy](https://exodus-privacy.eu.org/)</small>
 - **iOS App** - To fetch info about each project's iOS app
 	- Including app size, rating, publish/update date, author and screenshots
-	- Via [Apple App Store](https://developer.apple.com/documentation/appstoreconnectapi/app_store)
+	- <small>Via [Apple App Store](https://developer.apple.com/documentation/appstoreconnectapi/app_store)</small>
 - **Docker** - To fetch info about each project's Docker image (if it's self-hosted)
 	- Including supported architectures, run command, pull count, last updated and config options
-	- Via [Portainer-Templates](https://portainer-templates.as93.net/) and the [Docker Hub](https://hub.docker.com/) API
+	- <small>Via [Portainer-Templates](https://portainer-templates.as93.net/) and the [Docker Hub](https://hub.docker.com/) API</small>
 - **Website** - To fetch privacy info about each project's website
 	- Including SSL chain, WHOIS, server location, blacklist check and a screenshot
-	- Via [Web-Check](https://web-check.xyz/)
+	- <small>Via [Web-Check](https://web-check.xyz/)</small>
 - **Socials** - To fetch info about each project's social media presence
 	- Including follower count, post frequency, engagement and a screenshot
-	- Via the Reddit, Discord and Twitter APIs
+	- <small>Via the Reddit, Discord and Twitter APIs</small>
 - **User Reviews** - User-submitted comments + feedback on a given service
-	- Implemented using self-hosted instance of Remark42
+	- <small>Implemented using self-hosted instance of Remark42</small>
 
 ### API
 We also have a free, no-auth, CORS-enabled RESR API,
@@ -421,6 +421,13 @@ h3 {
 	}
 	:global(strong) {
 		font-weight: 500;
+	}
+	:global(small) {
+		font-size: 0.8rem;
+		opacity: 0.7;
+		:global(a) {
+			color: var(--accent-3);
+		}
 	}
 	:global(code) {
 		font-family: 'Courier New', Courier, monospace;

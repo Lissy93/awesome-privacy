@@ -84,7 +84,7 @@ const { previous, next } = makePaginationLinks();
       </span>
     </div>
 		<SectionList title={title} sections={sections} bigTitle={true} />
-    <a href={`/all#${slugify(title)}`}>Browse All</a>
+    Or, <a href={`/all#${slugify(title)}`}>Browse All {title}</a>
 		<div class="pagination-navigation">
       { previous ? (
         <Button url={`/${slugify(previous)}`}>
