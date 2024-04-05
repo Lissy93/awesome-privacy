@@ -115,7 +115,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Casting & Streaming](#casting--streaming) (1)
 	- [Screenshot Tools](#screenshot-tools) (0)
 	- [3D Graphics](#3d-graphics) (2)
-	- [Animation](#animation) (0)
+	- [Animation](#animation) (1)
 </details></blockquote>
 
 ## Essentials
@@ -5345,7 +5345,15 @@ is more limited, but it's a good choice for beginners.
 
 ### Animation
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Logo_Aseprite.png' width='16' height='16' alt='icon' /> Aseprite](https://www.aseprite.org/)** - An animated sprite editor & pixel art tool for Windows, macOS and Linux.[…](https://awesome-privacy.xyz/creativity/animation/aseprite "View full Aseprite report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: https://github.com/aseprite/aseprite](https://img.shields.io/github/stars/https://github.com/aseprite/aseprite?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/aseprite/aseprite)  [![Aseprite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Aseprite)](https://awesome-privacy.xyz/creativity/animation/aseprite) 
+📦 Open Source  
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
