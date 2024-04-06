@@ -5499,7 +5499,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/Admonstrator">
-            <img src="https://avatars.githubusercontent.com/u/69824?v=4" width="80;" alt="Admonstrator"/>
+            <img src="https://avatars.githubusercontent.com/u/69824?u=1e226d7a36cdd661c3e4cd486fea140d045b7d57&v=4" width="80;" alt="Admonstrator"/>
             <br />
             <sub><b>Aaron Viehl</b></sub>
         </a>
@@ -5513,7 +5513,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/tbjers">
-            <img src="https://avatars.githubusercontent.com/u/1117052?u=539d96d5e581b3139c75713ce35b89a36626404c&v=4" width="80;" alt="tbjers"/>
+            <img src="https://avatars.githubusercontent.com/u/1117052?v=4" width="80;" alt="tbjers"/>
             <br />
             <sub><b>Torgny Bjers</b></sub>
         </a>
@@ -5620,13 +5620,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/ratty222">
-            <img src="https://avatars.githubusercontent.com/u/92832598?u=137b65530cbd5f5af9c24cde51baa6cc77cc934b&v=4" width="80;" alt="ratty222"/>
-            <br />
-            <sub><b>Brent</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/NixyJuppie">
             <img src="https://avatars.githubusercontent.com/u/138570196?u=b102c222487905728b858704962d32759df29ebe&v=4" width="80;" alt="NixyJuppie"/>
             <br />
@@ -5638,13 +5631,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/151435968?u=e1dcb307fd0efdc45cddbe9490a7b956e4da6835&v=4" width="80;" alt="nrvo"/>
             <br />
             <sub><b>Nrvo</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mezza93">
-            <img src="https://avatars.githubusercontent.com/u/153599966?v=4" width="80;" alt="mezza93"/>
-            <br />
-            <sub><b>Mezza93</b></sub>
         </a>
     </td></tr>
 </table>
