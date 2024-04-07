@@ -126,7 +126,7 @@ def makeAwesomePrivacy():
                     f"{repoElement(app.get('github'))} "
                     f"{tosElement(app.get('tosdrId'))} "
                     f"{awesomePrivacyReport(category.get('name'), section.get('name'), app.get('name'))} \n"
-                    f"{statsElement(app.get('openSource'), app.get('securityAudited'), app.get('acceptsCrypto'))} \n"
+                    f"{statsElement(app.get('openSource'), app.get('securityAudited'), app.get('acceptsCrypto'))}˙ \n"
                     f"\n\t\t</details>\n"
                   )
                   if app.get('github') or app.get('tosdrId') else '')
