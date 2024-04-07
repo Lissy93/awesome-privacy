@@ -313,11 +313,11 @@ a.cover-link span {
     border-radius: 10px;
     font-size: 1.6rem;
     font-family: 'Cutive Mono', monospace;
-    border: 3px solid #ff0078;
+    border: 3px solid #9580ff;
     opacity: 0.8;
     text-decoration: none;
 }
 .new-version .link {
-    color: #ff0078 !important;
+    color: #9580ff !important;
     font-weight: bold;
 }
