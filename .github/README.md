@@ -132,7 +132,7 @@ Bitwarden clients](https://bitwarden.com/download/).
 		<summary>Stats</summary>
 
 		[![GitHub: bitwarden/server](https://img.shields.io/github/stars/bitwarden/server?style=flat&logo=github&label=server&color=%235f53f4&cacheSeconds=3600)](https://github.com/bitwarden/server) [![Privacy Policy](https://shields.tosdr.org/en_1348.svg)](https://tosdr.org/en/service/1348) [![Bitwarden on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bitwarden)](https://awesome-privacy.xyz/essentials/password-managers/bitwarden) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/keepass.info' width='16' height='16' alt='icon' /> KeePass](https://keepass.info)** - Hardened, secure and offline password manager. Does not have cloud-sync baked
@@ -153,7 +153,7 @@ have apps for all the common platforms and a CLI, but you can also self-host it.
 		<summary>Stats</summary>
 
 		[![GitHub: lesspass/lesspass](https://img.shields.io/github/stars/lesspass/lesspass?style=flat&logo=github&label=lesspass&color=%235f53f4&cacheSeconds=3600)](https://github.com/lesspass/lesspass)  [![LessPass on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LessPass)](https://awesome-privacy.xyz/essentials/password-managers/lesspass) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/padloc.app' width='16' height='16' alt='icon' /> Padloc](https://padloc.app)** - A modern, open source password manager for individuals and teams. Beautiful,
@@ -164,7 +164,7 @@ self-host it as well.
 		<summary>Stats</summary>
 
 		[![GitHub: padloc/padloc](https://img.shields.io/github/stars/padloc/padloc?style=flat&logo=github&label=padloc&color=%235f53f4&cacheSeconds=3600)](https://github.com/padloc/padloc)  [![Padloc on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Padloc)](https://awesome-privacy.xyz/essentials/password-managers/padloc) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/proton.me' width='16' height='16' alt='icon' /> ProtonPass](https://proton.me/pass)** - From the creators of ProtonMail, ProtonPass is a new addition to their suite of
@@ -176,7 +176,7 @@ free plan.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![ProtonPass on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ProtonPass)](https://awesome-privacy.xyz/essentials/password-managers/protonpass) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -207,7 +207,7 @@ Supports creating encrypted backups and syncing between devices without the need
 		<summary>Stats</summary>
 
 		[![GitHub: twofas/2fas-server](https://img.shields.io/github/stars/twofas/2fas-server?style=flat&logo=github&label=2fas-server&color=%235f53f4&cacheSeconds=3600)](https://github.com/twofas/2fas-server) [![Privacy Policy](https://shields.tosdr.org/en_8201.svg)](https://tosdr.org/en/service/8201) [![2FAS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=2FAS)](https://awesome-privacy.xyz/essentials/2-factor-authentication/2fas) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/beemdevelopment/Aegis/master/metadata/en-US/images/icon.png' width='16' height='16' alt='icon' /> Aegis](https://getaegis.app)** - Free, secure and open source authenticator app for Android. Has a backup/
@@ -217,7 +217,7 @@ restore feature and a customisable UI with dark mode
 		<summary>Stats</summary>
 
 		[![GitHub: beemdevelopment/Aegis](https://img.shields.io/github/stars/beemdevelopment/Aegis?style=flat&logo=github&label=Aegis&color=%235f53f4&cacheSeconds=3600)](https://github.com/beemdevelopment/Aegis) [![Privacy Policy](https://shields.tosdr.org/en_4076.svg)](https://tosdr.org/en/service/4076) [![Aegis on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Aegis)](https://awesome-privacy.xyz/essentials/2-factor-authentication/aegis) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://authenticatorpro.jmh.me/img/icon.svg' width='16' height='16' alt='icon' /> Authenticator Pro](https://authenticatorpro.jmh.me/)** - Free and open-source two factor authentication app for Android. It features
@@ -228,7 +228,7 @@ also has a Wear OS companion app
 		<summary>Stats</summary>
 
 		[![GitHub: jamie-mh/AuthenticatorPro](https://img.shields.io/github/stars/jamie-mh/AuthenticatorPro?style=flat&logo=github&label=AuthenticatorPro&color=%235f53f4&cacheSeconds=3600)](https://github.com/jamie-mh/AuthenticatorPro)  [![Authenticator Pro on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_Pro)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-pro) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.tofuauth.com/images/icon.svg' width='16' height='16' alt='icon' /> Tofu](https://www.tofuauth.com)** - An easy-to-use, open-source two-factor authentication app designed specifically
@@ -238,7 +238,7 @@ for iOS
 		<summary>Stats</summary>
 
 		[![GitHub: iKenndac/Tofu](https://img.shields.io/github/stars/iKenndac/Tofu?style=flat&logo=github&label=Tofu&color=%235f53f4&cacheSeconds=3600)](https://github.com/iKenndac/Tofu) [![Privacy Policy](https://shields.tosdr.org/en_5414.svg)](https://tosdr.org/en/service/5414) [![Tofu on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tofu)](https://awesome-privacy.xyz/essentials/2-factor-authentication/tofu) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/dLqS8ZH/Screenshot-from-2024-02-19-20-47-48.png' width='16' height='16' alt='icon' /> Authenticator](https://mattrubin.me/authenticator)** - Simple, native, open source 2-FA Client for iOS, which never connects to the
@@ -248,7 +248,7 @@ internet - built by @mattrubin.me
 		<summary>Stats</summary>
 
 		[![GitHub: mattrubin/Authenticator](https://img.shields.io/github/stars/mattrubin/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/mattrubin/Authenticator)  [![Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raivo-otp.com/img/app-icon.png' width='16' height='16' alt='icon' /> Raivo OTP](https://raivo-otp.com/)** - A native, lightweight and secure one-time-password (OTP) client built for iOS;
@@ -258,7 +258,7 @@ Raivo OTP! - built by @tijme
 		<summary>Stats</summary>
 
 		[![GitHub: raivo-otp/ios-application](https://img.shields.io/github/stars/raivo-otp/ios-application?style=flat&logo=github&label=ios-application&color=%235f53f4&cacheSeconds=3600)](https://github.com/raivo-otp/ios-application)  [![Raivo OTP on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Raivo_OTP)](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://winauth.github.io/winauth/favicon.ico' width='16' height='16' alt='icon' /> WinAuth](https://winauth.github.io/winauth)** - Portable, encrypted desktop authenticator app for Microsoft Windows. With
@@ -270,7 +270,7 @@ well-established (since mid-2010)
 		<summary>Stats</summary>
 
 		[![GitHub: winauth/winauth](https://img.shields.io/github/stars/winauth/winauth?style=flat&logo=github&label=winauth&color=%235f53f4&cacheSeconds=3600)](https://github.com/winauth/winauth)  [![WinAuth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=WinAuth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/winauth) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator GNOME](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also
@@ -284,7 +284,7 @@ and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ie
 		<summary>Stats</summary>
 
 		[![GitHub: Authenticator-Extension/Authenticator](https://img.shields.io/github/stars/Authenticator-Extension/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/Authenticator-Extension/Authenticator)  [![Authenticator CC on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_CC)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-cc) 
- 
+˙ 
 
 		</details>
 
@@ -316,7 +316,7 @@ edition. VeraCrypt is the successor of (the now deprecated) TrueCrypt.
 		<summary>Stats</summary>
 
 		[![GitHub: veracrypt/VeraCrypt](https://img.shields.io/github/stars/veracrypt/VeraCrypt?style=flat&logo=github&label=VeraCrypt&color=%235f53f4&cacheSeconds=3600)](https://github.com/veracrypt/VeraCrypt)  [![VeraCrypt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VeraCrypt)](https://awesome-privacy.xyz/essentials/file-encryption/veracrypt) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/11850518' width='16' height='16' alt='icon' /> Cryptomator](https://cryptomator.org)** - Open source client-side encryption for cloud files - Cryptomator is geared
@@ -330,7 +330,7 @@ mobile apps.
 		<summary>Stats</summary>
 
 		[![GitHub: cryptomator/cryptomator](https://img.shields.io/github/stars/cryptomator/cryptomator?style=flat&logo=github&label=cryptomator&color=%235f53f4&cacheSeconds=3600)](https://github.com/cryptomator/cryptomator) [![Privacy Policy](https://shields.tosdr.org/en_4403.svg)](https://tosdr.org/en/service/4403) [![Cryptomator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cryptomator)](https://awesome-privacy.xyz/essentials/file-encryption/cryptomator) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/H7hHddf/logo-white.png' width='16' height='16' alt='icon' /> age](https://age-encryption.org)** - `age` is a simple, modern and secure CLI file encryption tool and Go library.
@@ -340,7 +340,7 @@ It features small explicit keys, no config options, and UNIX-style composability
 		<summary>Stats</summary>
 
 		[![GitHub: FiloSottile/age](https://img.shields.io/github/stars/FiloSottile/age?style=flat&logo=github&label=age&color=%235f53f4&cacheSeconds=3600)](https://github.com/FiloSottile/age)  [![age on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=age)](https://awesome-privacy.xyz/essentials/file-encryption/age) 
- 
+˙ 
 
 		</details>
 
@@ -379,7 +379,7 @@ defaults are guided by research like the
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_6389.svg)](https://tosdr.org/en/service/6389) [![LibreWolf on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LibreWolf)](https://awesome-privacy.xyz/essentials/browsers/librewolf) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://brave.com/static-assets/images/brave-logo-sans-text.svg' width='16' height='16' alt='icon' /> Brave Browser](https://brave.com)** - Brave Browser, currently one of the most popular private browsers - it provides
@@ -391,7 +391,7 @@ Brave also has Tor built-in, when you open up a private tab/ window.
 		<summary>Stats</summary>
 
 		[![GitHub: brave/brave-browser](https://img.shields.io/github/stars/brave/brave-browser?style=flat&logo=github&label=brave-browser&color=%235f53f4&cacheSeconds=3600)](https://github.com/brave/brave-browser) [![Privacy Policy](https://shields.tosdr.org/en_1487.svg)](https://tosdr.org/en/service/1487) [![Brave Browser on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Brave_Browser)](https://awesome-privacy.xyz/essentials/browsers/brave-browser) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg' width='16' height='16' alt='icon' /> Firefox](https://www.mozilla.org/firefox)** - Significantly more private, and offers some nifty privacy features than Chrome,
@@ -405,7 +405,7 @@ or [12Bytes](https://codeberg.org/12bytes/firefox-config-guide)
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_188.svg)](https://tosdr.org/en/service/188) [![Firefox on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firefox)](https://awesome-privacy.xyz/essentials/browsers/firefox) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.torproject.org/static/images/favicon/favicon.ico' width='16' height='16' alt='icon' /> Tor Browser](https://www.torproject.org/)** - Tor provides an extra layer of anonymity, by encrypting each of your requests, then
@@ -418,7 +418,7 @@ may not work correctly. As with everything there are
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2845.svg)](https://tosdr.org/en/service/2845) [![Tor Browser on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tor_Browser)](https://awesome-privacy.xyz/essentials/browsers/tor-browser) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.bromite.org/bromite.png' width='16' height='16' alt='icon' /> Bromite](https://www.bromite.org/)** - Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
@@ -428,7 +428,7 @@ adblock and additional settings for hardening.
 		<summary>Stats</summary>
 
 		[![GitHub: bromite/bromite](https://img.shields.io/github/stars/bromite/bromite?style=flat&logo=github&label=bromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/bromite/bromite) [![Privacy Policy](https://shields.tosdr.org/en_9174.svg)](https://tosdr.org/en/service/9174) [![Bromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bromite)](https://awesome-privacy.xyz/essentials/browsers/bromite) 
- 
+˙ 
 
 		</details>
 
@@ -461,7 +461,7 @@ URL, for use with Tor and a [no Javascript version](https://duckduckgo.com/html/
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_222.svg)](https://tosdr.org/en/service/222) [![DuckDuckGo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DuckDuckGo)](https://awesome-privacy.xyz/essentials/search-engines/duckduckgo) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/1692504' width='16' height='16' alt='icon' /> Qwant](https://www.qwant.com)** - French service that aggregates Bings results, with its own results. Qwant doesn't
@@ -472,7 +472,7 @@ non-biased search results, with no promotions. Qwant has a unique, but nice UI.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_527.svg)](https://tosdr.org/en/service/527) [![Qwant on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Qwant)](https://awesome-privacy.xyz/essentials/search-engines/qwant) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.startpage.com/favicon.ico' width='16' height='16' alt='icon' /> Startpage](https://www.startpage.com)** - Dutch search engine that searches on google and shows the results (slightly
@@ -483,7 +483,7 @@ rearranged). It has several configurations that improve privacy during use
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_418.svg)](https://tosdr.org/en/service/418) [![Startpage on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Startpage)](https://awesome-privacy.xyz/essentials/search-engines/startpage) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.mojeek.com/favicon.png' width='16' height='16' alt='icon' /> Mojeek](https://mojeek.com)** - British search engine providing independent and unbiased search results using
@@ -493,7 +493,7 @@ its own crawler. Has a zero tracking policy (it is not open source)
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2432.svg)](https://tosdr.org/en/service/2432) [![Mojeek on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mojeek)](https://awesome-privacy.xyz/essentials/search-engines/mojeek) 
- 
+˙ 
 
 		</details>
 
@@ -527,7 +527,7 @@ by Edward Snowden, and is a perfect solution for most users.
 		<summary>Stats</summary>
 
 		[![GitHub: signalapp/Signal-Server](https://img.shields.io/github/stars/signalapp/Signal-Server?style=flat&logo=github&label=Signal-Server&color=%235f53f4&cacheSeconds=3600)](https://github.com/signalapp/Signal-Server) [![Privacy Policy](https://shields.tosdr.org/en_528.svg)](https://tosdr.org/en/service/528) [![Signal on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Signal)](https://awesome-privacy.xyz/communication/encrypted-messaging/signal) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://getsession.org/favicon.ico' width='16' height='16' alt='icon' /> Session](https://getsession.org)** - Session is a fork of Signal, however unlike Signal it does not require a mobile
@@ -541,7 +541,7 @@ meta data.
 		<summary>Stats</summary>
 
 		[![GitHub: oxen-io/lokinet](https://img.shields.io/github/stars/oxen-io/lokinet?style=flat&logo=github&label=lokinet&color=%235f53f4&cacheSeconds=3600)](https://github.com/oxen-io/lokinet) [![Privacy Policy](https://shields.tosdr.org/en_3015.svg)](https://tosdr.org/en/service/3015) [![Session on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Session)](https://awesome-privacy.xyz/communication/encrypted-messaging/session) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://xmpp.org/favicon.ico' width='16' height='16' alt='icon' /> XMPP](https://xmpp.org)** - XMPP, also known as Jabber, is an open standard for decentralized messaging that
@@ -557,7 +557,7 @@ you can visit [JoinJabber](https://joinjabber.org).
 		<summary>Stats</summary>
 
 		[![GitHub: xsf/xmpp.org](https://img.shields.io/github/stars/xsf/xmpp.org?style=flat&logo=github&label=xmpp.org&color=%235f53f4&cacheSeconds=3600)](https://github.com/xsf/xmpp.org)  [![XMPP on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=XMPP)](https://awesome-privacy.xyz/communication/encrypted-messaging/xmpp) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://matrix.org/assets/favicon.ico' width='16' height='16' alt='icon' /> Matrix](https://matrix.org)** - Matrix is a decentralized open network for secure communications, with E2E
@@ -571,7 +571,7 @@ well as to build apps on top of it.
 		<summary>Stats</summary>
 
 		[![GitHub: matrix-org/dendrite](https://img.shields.io/github/stars/matrix-org/dendrite?style=flat&logo=github&label=dendrite&color=%235f53f4&cacheSeconds=3600)](https://github.com/matrix-org/dendrite) [![Privacy Policy](https://shields.tosdr.org/en_2455.svg)](https://tosdr.org/en/service/2455) [![Matrix on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Matrix)](https://awesome-privacy.xyz/communication/encrypted-messaging/matrix) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -609,7 +609,7 @@ secure messages, media and metadata.
 		<summary>Stats</summary>
 
 		[![GitHub: oxen-io/lokinet](https://img.shields.io/github/stars/oxen-io/lokinet?style=flat&logo=github&label=lokinet&color=%235f53f4&cacheSeconds=3600)](https://github.com/oxen-io/lokinet) [![Privacy Policy](https://shields.tosdr.org/en_6622.svg)](https://tosdr.org/en/service/6622) [![Oxen on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Oxen)](https://awesome-privacy.xyz/communication/p2p-messaging/oxen) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://briarproject.org/img/briar_logo_circle.png' width='16' height='16' alt='icon' /> Briar](https://briarproject.org)** - Tor-based Android app for P2P encrypted messaging and forums. Where content is
@@ -620,7 +620,7 @@ directly with nearby contacts, without internet access (using Bluetooth or WiFi)
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2559.svg)](https://tosdr.org/en/service/2559) [![Briar on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Briar)](https://awesome-privacy.xyz/communication/p2p-messaging/briar) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.ricochetrefresh.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Ricochet Refresh](https://www.ricochetrefresh.net)** - Desktop instant messenger, that uses the Tor network to rendezvous with your
@@ -632,7 +632,7 @@ to use.
 		<summary>Stats</summary>
 
 		[![GitHub: blueprint-freespeech/ricochet-refresh](https://img.shields.io/github/stars/blueprint-freespeech/ricochet-refresh?style=flat&logo=github&label=ricochet-refresh&color=%235f53f4&cacheSeconds=3600)](https://github.com/blueprint-freespeech/ricochet-refresh)  [![Ricochet Refresh on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Ricochet_Refresh)](https://awesome-privacy.xyz/communication/p2p-messaging/ricochet-refresh) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://jami.net/assets/images/favicon/apple-touch-icon-57x57.png' width='16' height='16' alt='icon' /> Jami](https://jami.net)** - P2P encrypted chat network with cross-platform GNU client apps. Jami supports
@@ -642,7 +642,7 @@ audio and video calls, screen sharing, conference hosting and instant messaging.
 		<summary>Stats</summary>
 
 		[![GitHub: savoirfairelinux/jami-project](https://img.shields.io/github/stars/savoirfairelinux/jami-project?style=flat&logo=github&label=jami-project&color=%235f53f4&cacheSeconds=3600)](https://github.com/savoirfairelinux/jami-project)  [![Jami on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Jami)](https://awesome-privacy.xyz/communication/p2p-messaging/jami) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://tox.chat/theme/img/favicon.ico' width='16' height='16' alt='icon' /> Tox & qTox client](https://tox.chat)** - Open source, encrypted, distributed chat network, with clients for desktop and
@@ -680,7 +680,7 @@ accept anonymous payment: BTC and cash (as well as the normal credit card and Pa
 		<summary>Stats</summary>
 
 		[![GitHub: ProtonMail/WebClients](https://img.shields.io/github/stars/ProtonMail/WebClients?style=flat&logo=github&label=WebClients&color=%235f53f4&cacheSeconds=3600)](https://github.com/ProtonMail/WebClients) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![ProtonMail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ProtonMail)](https://awesome-privacy.xyz/communication/encrypted-email/protonmail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
@@ -698,7 +698,7 @@ attachments, subject lines, and sender names etc) which PGP mail providers canno
 		<summary>Stats</summary>
 
 		[![GitHub: tutao/tutanota](https://img.shields.io/github/stars/tutao/tutanota?style=flat&logo=github&label=tutanota&color=%235f53f4&cacheSeconds=3600)](https://github.com/tutao/tutanota) [![Privacy Policy](https://shields.tosdr.org/en_157.svg)](https://tosdr.org/en/service/157) [![Tuta on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tuta)](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
@@ -707,7 +707,7 @@ attachments, subject lines, and sender names etc) which PGP mail providers canno
 		<summary>Stats</summary>
 
 		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![Forward Email on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Forward_Email)](https://awesome-privacy.xyz/communication/encrypted-email/forward-email) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Mailfence](https://mailfence.com?src=digitald)** - Mailfence supports OpenPGP so that you can manually exchange encryption keys
@@ -723,7 +723,7 @@ domains), where Bitcoin, LiteCoin or credit card is accepted.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1694.svg)](https://tosdr.org/en/service/1694) [![Mailfence on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mailfence)](https://awesome-privacy.xyz/communication/encrypted-email/mailfence) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/zJtHBTZ/mailfence.png' width='16' height='16' alt='icon' /> MailBox.org](https://mailbox.org)** - A Berlin-based, eco-friendly secure mail provider. There is no free plan, the
@@ -737,7 +737,7 @@ mail client with SSL. There's also currently no anonymous payment option.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1517.svg)](https://tosdr.org/en/service/1517) [![MailBox.org on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MailBox.org)](https://awesome-privacy.xyz/communication/encrypted-email/mailbox.org) 
- 
+˙ 
 
 		</details>
 
@@ -782,7 +782,7 @@ all traffic through the Tor network. Forks, such as
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3365.svg)](https://tosdr.org/en/service/3365) [![Mozilla Thunderbird on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mozilla_Thunderbird)](https://awesome-privacy.xyz/communication/email-clients/mozilla-thunderbird) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.emclient.com/favicon.ico' width='16' height='16' alt='icon' /> eM Client](https://www.emclient.com)** - Productivity-based email client, for Windows and MacOS. eM Client has a clean user
@@ -795,7 +795,7 @@ Contacts and Notes. Note, eM Client is proprietary, and not open source.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_432.svg)](https://tosdr.org/en/service/432) [![eM Client on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=eM_Client)](https://awesome-privacy.xyz/communication/email-clients/em-client) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://snappymail.eu/static/img/logo-256x256.png' width='16' height='16' alt='icon' /> SnappyMail](https://snappymail.eu)** - Simple, modern, fast web-based mail client. This is an IMAP-only fork of
@@ -807,7 +807,7 @@ and adds several new [features](https://snappymail.eu/comparison).
 		<summary>Stats</summary>
 
 		[![GitHub: the-djmaze/snappymail](https://img.shields.io/github/stars/the-djmaze/snappymail?style=flat&logo=github&label=snappymail&color=%235f53f4&cacheSeconds=3600)](https://github.com/the-djmaze/snappymail)  [![SnappyMail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SnappyMail)](https://awesome-privacy.xyz/communication/email-clients/snappymail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://roundcube.net/images/roundcube_logo_icon.svg' width='16' height='16' alt='icon' /> RoundCube](https://roundcube.net)** - Browser-based multilingual IMAP client with an application-like user interface. It
@@ -818,7 +818,7 @@ address book, folder manipulation, message searching and spell checking.
 		<summary>Stats</summary>
 
 		[![GitHub: roundcube/roundcubemail](https://img.shields.io/github/stars/roundcube/roundcubemail?style=flat&logo=github&label=roundcubemail&color=%235f53f4&cacheSeconds=3600)](https://github.com/roundcube/roundcubemail)  [![RoundCube on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RoundCube)](https://awesome-privacy.xyz/communication/email-clients/roundcube) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/M66B/FairEmail/master/app/src/main/ic_launcher-web.png' width='16' height='16' alt='icon' /> FairEmail](https://email.faircode.eu)** - Open source, fully-featured and easy mail client for Android. Supports unlimited
@@ -830,7 +830,7 @@ data usage.
 		<summary>Stats</summary>
 
 		[![GitHub: M66B/FairEmail](https://img.shields.io/github/stars/M66B/FairEmail?style=flat&logo=github&label=FairEmail&color=%235f53f4&cacheSeconds=3600)](https://github.com/M66B/FairEmail)  [![FairEmail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FairEmail)](https://awesome-privacy.xyz/communication/email-clients/fairemail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://k9mail.app/assets/img/k9-logo.svg' width='16' height='16' alt='icon' /> K-9 Mail](https://k9mail.app)** - K-9 (or Thunderbird for Android) is open source,
@@ -843,7 +843,7 @@ OpenKeychain along side it, in order to encrypt/ decrypt emails using OpenPGP.
 		<summary>Stats</summary>
 
 		[![GitHub: thunderbird/thunderbird-android](https://img.shields.io/github/stars/thunderbird/thunderbird-android?style=flat&logo=github&label=thunderbird-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/thunderbird/thunderbird-android) [![Privacy Policy](https://shields.tosdr.org/en_3624.svg)](https://tosdr.org/en/service/3624) [![K-9 Mail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=K-9_Mail)](https://awesome-privacy.xyz/communication/email-clients/k-9-mail) 
- 
+˙ 
 
 		</details>
 
@@ -870,7 +870,7 @@ create unlimited email aliases. Has a free plan.
 		<summary>Stats</summary>
 
 		[![GitHub: anonaddy/anonaddy](https://img.shields.io/github/stars/anonaddy/anonaddy?style=flat&logo=github&label=anonaddy&color=%235f53f4&cacheSeconds=3600)](https://github.com/anonaddy/anonaddy) [![Privacy Policy](https://shields.tosdr.org/en_2220.svg)](https://tosdr.org/en/service/2220) [![Addy on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Addy)](https://awesome-privacy.xyz/communication/mail-forwarding/addy) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://33mail.com/favicon.ico' width='16' height='16' alt='icon' /> 33Mail](http://33mail.com)** - A long-standing aliasing service. As well as receiving, 33Mail also lets you reply
@@ -881,7 +881,7 @@ if you'd like to use a custom domain. Note that 33Mail usese Google Analytics.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_8301.svg)](https://tosdr.org/en/service/8301) [![33Mail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=33Mail)](https://awesome-privacy.xyz/communication/mail-forwarding/33mail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://simplelogin.io/favicon.ico' width='16' height='16' alt='icon' /> SimpleLogin](https://simplelogin.io)** - Fully open source (view on [GitHub](https://github.com/simple-login)) alias service
@@ -892,7 +892,7 @@ plan, as well as hosted premium option ($2.99/ month) for using custom domains.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2552.svg)](https://tosdr.org/en/service/2552) [![SimpleLogin on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SimpleLogin)](https://awesome-privacy.xyz/communication/mail-forwarding/simplelogin) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://relay.firefox.com/favicon.svg' width='16' height='16' alt='icon' /> Firefox Private Relay](https://relay.firefox.com)** - Developed and managed by Mozilla, Relay is a Firefox addon, that lets you make an
@@ -905,7 +905,7 @@ for advanced usage.
 		<summary>Stats</summary>
 
 		[![GitHub: mozilla/fx-private-relay](https://img.shields.io/github/stars/mozilla/fx-private-relay?style=flat&logo=github&label=fx-private-relay&color=%235f53f4&cacheSeconds=3600)](https://github.com/mozilla/fx-private-relay) [![Privacy Policy](https://shields.tosdr.org/en_4158.svg)](https://tosdr.org/en/service/4158) [![Firefox Private Relay on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firefox_Private_Relay)](https://awesome-privacy.xyz/communication/mail-forwarding/firefox-private-relay) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ForwardEmail](https://forwardemail.net)** - Simple open source catch-all email forwarding service. Easy to self-host (see on
@@ -916,7 +916,7 @@ has a free plan as well as a ($3/month) premium plan.
 		<summary>Stats</summary>
 
 		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![ForwardEmail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ForwardEmail)](https://awesome-privacy.xyz/communication/mail-forwarding/forwardemail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com/pricing)** - If you already have ProtonMail's Professional (€8/month) or Visionary (€30/month) package,
@@ -926,7 +926,7 @@ then an implementation of this feature is available via the Catch-All Email feat
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![ProtonMail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ProtonMail)](https://awesome-privacy.xyz/communication/mail-forwarding/protonmail) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -953,7 +953,7 @@ identical results.
 		<summary>Stats</summary>
 
 		[![GitHub: mikecardwell/email-privacy-tester](https://img.shields.io/github/stars/mikecardwell/email-privacy-tester?style=flat&logo=github&label=email-privacy-tester&color=%235f53f4&cacheSeconds=3600)](https://github.com/mikecardwell/email-privacy-tester) [![Privacy Policy](https://shields.tosdr.org/en_9837.svg)](https://tosdr.org/en/service/9837) [![Email Privacy Tester on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Email_Privacy_Tester)](https://awesome-privacy.xyz/communication/email-security-tools/email-privacy-tester) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://addons.thunderbird.net/user-media/addon_icons/438/438634-64.png' width='16' height='16' alt='icon' /> DKIM Verifier](https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/?collection_id=a5557f08-eafd-7a39-81c6-09127da790f7)** - Verifies DKIM signatures and shows the result in the e-mail header, in order to help
@@ -963,7 +963,7 @@ spot spoofed emails (which do not come from the domain that they claim to).
 		<summary>Stats</summary>
 
 		[![GitHub: lieser/dkim_verifier](https://img.shields.io/github/stars/lieser/dkim_verifier?style=flat&logo=github&label=dkim_verifier&color=%235f53f4&cacheSeconds=3600)](https://github.com/lieser/dkim_verifier)  [![DKIM Verifier on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DKIM_Verifier)](https://awesome-privacy.xyz/communication/email-security-tools/dkim-verifier) 
- 
+˙ 
 
 		</details>
 
@@ -987,7 +987,7 @@ MacOS and Linux as well as third-party apps for Android and iOS.
 		<summary>Stats</summary>
 
 		[![GitHub: mumble-voip/mumble](https://img.shields.io/github/stars/mumble-voip/mumble?style=flat&logo=github&label=mumble&color=%235f53f4&cacheSeconds=3600)](https://github.com/mumble-voip/mumble) [![Privacy Policy](https://shields.tosdr.org/en_3640.svg)](https://tosdr.org/en/service/3640) [![Mumble on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mumble)](https://awesome-privacy.xyz/communication/voip-clients/mumble) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://f-droid.org/repo/org.linphone/en-US/icon_G0LG_yfcg9OhsnG4KMctTmcSa71iC8v2lFsDerfB_9s=.png' width='16' height='16' alt='icon' /> Linphone](https://www.linphone.org)** - Open source audio, video and IM groups with E2E encryption and built-in media
@@ -999,7 +999,7 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 		<summary>Stats</summary>
 
 		[![GitHub: BelledonneCommunications/linphone-desktop](https://img.shields.io/github/stars/BelledonneCommunications/linphone-desktop?style=flat&logo=github&label=linphone-desktop&color=%235f53f4&cacheSeconds=3600)](https://github.com/BelledonneCommunications/linphone-desktop)  [![Linphone on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Linphone)](https://awesome-privacy.xyz/communication/voip-clients/linphone) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -1028,7 +1028,7 @@ and payment is accepted in BTC, XMR or credit card.
 		<summary>Stats</summary>
 
 		[![GitHub: rinzlerch/user-encryption-wrapper](https://img.shields.io/github/stars/rinzlerch/user-encryption-wrapper?style=flat&logo=github&label=user-encryption-wrapper&color=%235f53f4&cacheSeconds=3600)](https://github.com/rinzlerch/user-encryption-wrapper)  [![Crypton.sh on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Crypton.sh)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/crypton.sh) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://jmp.chat/static/jmp.svg' width='16' height='16' alt='icon' /> Jmp.chat](https://jmp.chat/)** - Phone number for incoming + outgoing calls and messages, provided by Soprani.
@@ -1058,7 +1058,7 @@ looking to have greater control over their data.
 		<summary>Stats</summary>
 
 		[![GitHub: RocketChat/Rocket.Chat](https://img.shields.io/github/stars/RocketChat/Rocket.Chat?style=flat&logo=github&label=Rocket.Chat&color=%235f53f4&cacheSeconds=3600)](https://github.com/RocketChat/Rocket.Chat) [![Privacy Policy](https://shields.tosdr.org/en_6533.svg)](https://tosdr.org/en/service/6533) [![Rocket.Chat on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Rocket.Chat)](https://awesome-privacy.xyz/communication/team-collaboration/rocket.chat) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://retroshare.cc/img/retroshare-symbol.png' width='16' height='16' alt='icon' /> RetroShare](https://retroshare.cc/)** - Secure group communications, with the option to be used over Tor or I2P. Fast
@@ -1074,7 +1074,7 @@ so may not be appropriate for a non-technical team.
 		<summary>Stats</summary>
 
 		[![GitHub: RetroShare/RetroShare](https://img.shields.io/github/stars/RetroShare/RetroShare?style=flat&logo=github&label=RetroShare&color=%235f53f4&cacheSeconds=3600)](https://github.com/RetroShare/RetroShare)  [![RetroShare on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RetroShare)](https://awesome-privacy.xyz/communication/team-collaboration/retroshare) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://element.io/images/favicon.png' width='16' height='16' alt='icon' /> Element](https://element.io/)** - Privacy-focused messenger using the Matrix protocol. The Element client allows
@@ -1084,7 +1084,7 @@ for group chat rooms, media sharing voice and video group calls.
 		<summary>Stats</summary>
 
 		[![GitHub: element-hq/element-web](https://img.shields.io/github/stars/element-hq/element-web?style=flat&logo=github&label=element-web&color=%235f53f4&cacheSeconds=3600)](https://github.com/element-hq/element-web) [![Privacy Policy](https://shields.tosdr.org/en_2498.svg)](https://tosdr.org/en/service/2498) [![Element on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Element)](https://awesome-privacy.xyz/communication/team-collaboration/element) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.dlf.pt/dfpng/middlepng/60-606143_internet-relay-chat-irc-logo-hd-png-download.png' width='16' height='16' alt='icon' /> Internet Relay Chat](https://en.wikipedia.org/wiki/IRC)** - An IRC-based solution is another option, being decentralized there is no point
@@ -1103,7 +1103,7 @@ integrations.
 		<summary>Stats</summary>
 
 		[![GitHub: mattermost/mattermost](https://img.shields.io/github/stars/mattermost/mattermost?style=flat&logo=github&label=mattermost&color=%235f53f4&cacheSeconds=3600)](https://github.com/mattermost/mattermost) [![Privacy Policy](https://shields.tosdr.org/en_2994.svg)](https://tosdr.org/en/service/2994) [![Mattermost on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mattermost)](https://awesome-privacy.xyz/communication/team-collaboration/mattermost) 
- 
+˙ 
 
 		</details>
 
@@ -1132,7 +1132,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: EFForg/privacybadger](https://img.shields.io/github/stars/EFForg/privacybadger?style=flat&logo=github&label=privacybadger&color=%235f53f4&cacheSeconds=3600)](https://github.com/EFForg/privacybadger) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![Privacy Badger on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy_Badger)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-badger) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg' width='16' height='16' alt='icon' /> uBlock Origin](https://ublockorigin.com)** - Block ads, trackers and malware sites. **Download**:
@@ -1143,7 +1143,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: gorhill/uBlock](https://img.shields.io/github/stars/gorhill/uBlock?style=flat&logo=github&label=uBlock&color=%235f53f4&cacheSeconds=3600)](https://github.com/gorhill/uBlock) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![uBlock Origin on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=uBlock_Origin)](https://awesome-privacy.xyz/security-tools/browser-extensions/ublock-origin) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/c5co_NoLmEt48VC_yVp0JgKcgd83yiq_CdekGaOlBBfD5WII5mjxngERgikcQd4P56uoX9epiknU5ktXadPqj2EEVsE' width='16' height='16' alt='icon' /> ScriptSafe](https://www.andryou.com/scriptsafe)** - Allows you to block the execution of certain scripts. **Download**:
@@ -1154,7 +1154,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: andryou/scriptsafe](https://img.shields.io/github/stars/andryou/scriptsafe?style=flat&logo=github&label=scriptsafe&color=%235f53f4&cacheSeconds=3600)](https://github.com/andryou/scriptsafe)  [![ScriptSafe on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ScriptSafe)](https://awesome-privacy.xyz/security-tools/browser-extensions/scriptsafe) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/782/782160-64.png' width='16' height='16' alt='icon' /> Firefox Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)** - Firefox Multi-Account Containers lets you keep parts of your online life separated into
@@ -1166,7 +1166,7 @@ you to use the web with multiple identities or accounts simultaneously. **Downlo
 		<summary>Stats</summary>
 
 		[![GitHub: mozilla/multi-account-containers](https://img.shields.io/github/stars/mozilla/multi-account-containers?style=flat&logo=github&label=multi-account-containers&color=%235f53f4&cacheSeconds=3600)](https://github.com/mozilla/multi-account-containers)  [![Firefox Multi-Account Containers on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firefox_Multi-Account_Containers)](https://awesome-privacy.xyz/security-tools/browser-extensions/firefox-multi-account-containers) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/n4XZC3SfmhMnrIwR1256Cmx5d51OaJImxBtJqaTQnNuWD7xqAgGI2LmAXQk6O1CffLzFNSiTqIO-ZxMCJIGTuKcG=s60' width='16' height='16' alt='icon' /> WebRTC-Leak-Prevent](https://diafygi.github.io/webrtc-ips)** - Provides user control over WebRTC privacy settings in Chromium, in order to prevent WebRTC leaks.
@@ -1178,7 +1178,7 @@ Test for WebRTC leaks, with [browserleaks.com/webrtc](https://browserleaks.com/w
 		<summary>Stats</summary>
 
 		[![GitHub: aghorler/WebRTC-Leak-Prevent](https://img.shields.io/github/stars/aghorler/WebRTC-Leak-Prevent?style=flat&logo=github&label=WebRTC-Leak-Prevent&color=%235f53f4&cacheSeconds=3600)](https://github.com/aghorler/WebRTC-Leak-Prevent)  [![WebRTC-Leak-Prevent on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=WebRTC-Leak-Prevent)](https://awesome-privacy.xyz/security-tools/browser-extensions/webrtc-leak-prevent) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://cdn.webextension.org/icons/canvas-fingerprint-blocker128.png' width='16' height='16' alt='icon' /> Canvas Fingerprint Blocker](https://add0n.com/canvas-fingerprint-blocker.html)** - Block fingerprint without removing access to HTML5 Canvas element. Canvas fingerprinting is
@@ -1191,7 +1191,7 @@ to generate a true unique key **Download**: [Chrome](https://chrome.google.com/w
 		<summary>Stats</summary>
 
 		[![GitHub: joue-quroi/canvas-fingerprint-blocker](https://img.shields.io/github/stars/joue-quroi/canvas-fingerprint-blocker?style=flat&logo=github&label=canvas-fingerprint-blocker&color=%235f53f4&cacheSeconds=3600)](https://github.com/joue-quroi/canvas-fingerprint-blocker)  [![Canvas Fingerprint Blocker on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Canvas_Fingerprint_Blocker)](https://awesome-privacy.xyz/security-tools/browser-extensions/canvas-fingerprint-blocker) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/839/839767-64.png' width='16' height='16' alt='icon' /> ClearURLs](https://gitlab.com/KevinRoebert/ClearUrls)** - This extension will automatically remove tracking elements from the GET parameters of URLs to
@@ -1202,7 +1202,7 @@ help protect some privacy **Download**: [Chrome](https://chrome.google.com/webst
 		<summary>Stats</summary>
 
 		[![GitHub: ClearURLs/Addon](https://img.shields.io/github/stars/ClearURLs/Addon?style=flat&logo=github&label=Addon&color=%235f53f4&cacheSeconds=3600)](https://github.com/ClearURLs/Addon) [![Privacy Policy](https://shields.tosdr.org/en_7192.svg)](https://tosdr.org/en/service/7192) [![ClearURLs on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ClearURLs)](https://awesome-privacy.xyz/security-tools/browser-extensions/clearurls) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.mike-gualtieri.com/favicon.ico' width='16' height='16' alt='icon' /> CSS Exfil Protection](https://www.mike-gualtieri.com/css-exfil-vulnerability-tester)** - Sanitizes and blocks any CSS rules which may be designed to steal data, in order to guard against
@@ -1213,7 +1213,7 @@ Exfil attacks **Download**: [Chrome](https://chrome.google.com/webstore/detail/c
 		<summary>Stats</summary>
 
 		[![GitHub: mlgualtieri/CSS-Exfil-Protection](https://img.shields.io/github/stars/mlgualtieri/CSS-Exfil-Protection?style=flat&logo=github&label=CSS-Exfil-Protection&color=%235f53f4&cacheSeconds=3600)](https://github.com/mlgualtieri/CSS-Exfil-Protection)  [![CSS Exfil Protection on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=CSS_Exfil_Protection)](https://awesome-privacy.xyz/security-tools/browser-extensions/css-exfil-protection) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/865/865865-64.png?modified=1520892249' width='16' height='16' alt='icon' /> First Party Isolation](https://github.com/mozfreddyb/webext-firstpartyisolation)** - Enables the First Party isolation preference (Clicking the Fishbowl icon temporarily disables it)
@@ -1223,7 +1223,7 @@ Exfil attacks **Download**: [Chrome](https://chrome.google.com/webstore/detail/c
 		<summary>Stats</summary>
 
 		[![GitHub: mozfreddyb/webext-firstpartyisolation](https://img.shields.io/github/stars/mozfreddyb/webext-firstpartyisolation?style=flat&logo=github&label=webext-firstpartyisolation&color=%235f53f4&cacheSeconds=3600)](https://github.com/mozfreddyb/webext-firstpartyisolation)  [![First Party Isolation on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=First_Party_Isolation)](https://awesome-privacy.xyz/security-tools/browser-extensions/first-party-isolation) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/1012/1012731-64.png?modified=e97aa3af' width='16' height='16' alt='icon' /> Privacy-Oriented Origin Policy](https://claustromaniac.github.io/poop)** - Prevent Firefox from sending Origin headers when they are least likely to be necessary, to protect
@@ -1234,7 +1234,7 @@ your privacy **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/ad
 		<summary>Stats</summary>
 
 		[![GitHub: claustromaniac/poop](https://img.shields.io/github/stars/claustromaniac/poop?style=flat&logo=github&label=poop&color=%235f53f4&cacheSeconds=3600)](https://github.com/claustromaniac/poop)  [![Privacy-Oriented Origin Policy on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy-Oriented_Origin_Policy)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-oriented-origin-policy) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://codeberg.org/repo-avatars/5014-6cc14ee9c85003bda3adb1d71762c306' width='16' height='16' alt='icon' /> LocalCDN](https://www.localcdn.org/)** - Emulates remote frameworks (e.g. jQuery, Bootstrap, Angular) and delivers them as local resource.
@@ -1256,7 +1256,7 @@ Improves privacy and load times. Works out-of-the-box and plays nicely with regu
 		<summary>Stats</summary>
 
 		[![GitHub: duckduckgo/duckduckgo-privacy-extension](https://img.shields.io/github/stars/duckduckgo/duckduckgo-privacy-extension?style=flat&logo=github&label=duckduckgo-privacy-extension&color=%235f53f4&cacheSeconds=3600)](https://github.com/duckduckgo/duckduckgo-privacy-extension) [![Privacy Policy](https://shields.tosdr.org/en_222.svg)](https://tosdr.org/en/service/222) [![Privacy Essentials on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy_Essentials)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-essentials) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/1T06gbX/self-destructing-cookies128.png' width='16' height='16' alt='icon' /> Self-Destructing Cookies](https://add0n.com/self-destructing-cookies.html)** - Prevents websites from tracking you by storing unique cookies (note Fingerprinting is often also used for tracking).
@@ -1270,7 +1270,7 @@ It removes all related cookies whenever you end a session. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: joue-quroi/self-destructing-cookies](https://img.shields.io/github/stars/joue-quroi/self-destructing-cookies?style=flat&logo=github&label=self-destructing-cookies&color=%235f53f4&cacheSeconds=3600)](https://github.com/joue-quroi/self-destructing-cookies)  [![Self-Destructing Cookies on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Self-Destructing_Cookies)](https://awesome-privacy.xyz/security-tools/browser-extensions/self-destructing-cookies) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/pC5a_u12RlaLQhJ-5Jz87rtju2s0tCksUfZHvr3JYzAaiYZJfJapmuftodT7wuAedFOHtgxR2BGh_GmKijgiK5bJyA' width='16' height='16' alt='icon' /> Privacy Redirect](https://github.com/SimonBrazell/privacy-redirect)** - A simple web extension that redirects Twitter, YouTube, Instagram & Google Maps requests to privacy friendly alternatives
@@ -1280,7 +1280,7 @@ It removes all related cookies whenever you end a session. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: SimonBrazell/privacy-redirect](https://img.shields.io/github/stars/SimonBrazell/privacy-redirect?style=flat&logo=github&label=privacy-redirect&color=%235f53f4&cacheSeconds=3600)](https://github.com/SimonBrazell/privacy-redirect)  [![Privacy Redirect on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy_Redirect)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-redirect) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/a2Vje7WEAiLb8NwUY43hyzhTXrQllBc4qP3ymqZdoBEaT8ME98dMzRpFNx0fI5w998jIUaJozj5KeNLTiJBEwe4O' width='16' height='16' alt='icon' /> Site Bleacher](https://github.com/wooque/site-bleacher)** - Remove automatically cookies, local storages, IndexedDBs and service workers **Download**:
@@ -1292,7 +1292,7 @@ It removes all related cookies whenever you end a session. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: wooque/site-bleacher](https://img.shields.io/github/stars/wooque/site-bleacher?style=flat&logo=github&label=site-bleacher&color=%235f53f4&cacheSeconds=3600)](https://github.com/wooque/site-bleacher)  [![Site Bleacher on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Bleacher)](https://awesome-privacy.xyz/security-tools/browser-extensions/site-bleacher) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/hyb1SGK/useragent-switcher128.png' width='16' height='16' alt='icon' /> User Agent Switcher](https://add0n.com/useragent-switcher.html)** - Spoofs browser's User-Agent string, making it appear that you are on a different device, browser and version to
@@ -1309,7 +1309,7 @@ depending on your user agent. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: ray-lothian/UserAgent-Switcher](https://img.shields.io/github/stars/ray-lothian/UserAgent-Switcher?style=flat&logo=github&label=UserAgent-Switcher&color=%235f53f4&cacheSeconds=3600)](https://github.com/ray-lothian/UserAgent-Switcher)  [![User Agent Switcher on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=User_Agent_Switcher)](https://awesome-privacy.xyz/security-tools/browser-extensions/user-agent-switcher) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://privacyspy.org/static/img/favicon-32x32.png' width='16' height='16' alt='icon' /> PrivacySpy](https://privacyspy.org)** - The companion extension for PrivacySpy.org - an open project that rates, annotates, and archives privacy policies.
@@ -1321,7 +1321,7 @@ The extension shows a score for the privacy policy of the current website. **Dow
 		<summary>Stats</summary>
 
 		[![GitHub: politiwatch/privacyspy](https://img.shields.io/github/stars/politiwatch/privacyspy?style=flat&logo=github&label=privacyspy&color=%235f53f4&cacheSeconds=3600)](https://github.com/politiwatch/privacyspy) [![Privacy Policy](https://shields.tosdr.org/en_4346.svg)](https://tosdr.org/en/service/4346) [![PrivacySpy on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PrivacySpy)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacyspy) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/1018/1018256-64.png?modified=9b273331' width='16' height='16' alt='icon' /> HTTPZ](https://github.com/claustromaniac/httpz)** - Simplified HTTPS upgrades for Firefox (lightweight alternative to HTTPS-Everywhere) **Download**:
@@ -1331,7 +1331,7 @@ The extension shows a score for the privacy policy of the current website. **Dow
 		<summary>Stats</summary>
 
 		[![GitHub: claustromaniac/httpz](https://img.shields.io/github/stars/claustromaniac/httpz?style=flat&logo=github&label=httpz&color=%235f53f4&cacheSeconds=3600)](https://github.com/claustromaniac/httpz)  [![HTTPZ on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=HTTPZ)](https://awesome-privacy.xyz/security-tools/browser-extensions/httpz) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://addons.mozilla.org/user-media/addon_icons/642/642100-64.png?modified=1597226821' width='16' height='16' alt='icon' /> Skip Redirect](https://github.com/sblask/webextension-skip-redirect)** - Some web pages use intermediary pages before redirecting to a final page. This add-on tries to extract the final url
@@ -1343,7 +1343,7 @@ from the intermediary url and goes there straight away if successful **Download*
 		<summary>Stats</summary>
 
 		[![GitHub: sblask/webextension-skip-redirect](https://img.shields.io/github/stars/sblask/webextension-skip-redirect?style=flat&logo=github&label=webextension-skip-redirect&color=%235f53f4&cacheSeconds=3600)](https://github.com/sblask/webextension-skip-redirect)  [![Skip Redirect on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Skip_Redirect)](https://awesome-privacy.xyz/security-tools/browser-extensions/skip-redirect) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.imgur.com/H9zwf8l.png' width='16' height='16' alt='icon' /> Web Archives](https://github.com/dessant/web-archives)** - View archived and cached versions of web pages on 10+ search engines, such as the Wayback Machine, Archive.is, Google etc
@@ -1357,7 +1357,7 @@ Useful for checking legitimacy of websites, and viewing change logs **Download**
 		<summary>Stats</summary>
 
 		[![GitHub: dessant/web-archives](https://img.shields.io/github/stars/dessant/web-archives?style=flat&logo=github&label=web-archives&color=%235f53f4&cacheSeconds=3600)](https://github.com/dessant/web-archives)  [![Web Archives on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Web_Archives)](https://awesome-privacy.xyz/security-tools/browser-extensions/web-archives) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://flagfox.files.wordpress.com/2014/02/flagfoxlogowithname1.png' width='16' height='16' alt='icon' /> Flagfox](https://flagfox.wordpress.com/)** - Displays a country flag depicting the location of the current website's server, which can be useful to know at a glance.
@@ -1368,7 +1368,7 @@ Click icon for more tools such as site safety checks, whois, validation etc **Do
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_6150.svg)](https://tosdr.org/en/service/6150) [![Flagfox on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Flagfox)](https://awesome-privacy.xyz/security-tools/browser-extensions/flagfox) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://mozilla.github.io/lightbeam/img/lightbeam_logo-only_32x32.png' width='16' height='16' alt='icon' /> Lightbeam](https://mozilla.github.io/lightbeam/)** - Visualize in detail the servers you are contacting when you are surfing on the Internet. Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers). **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/) - [Source](https://github.com/mozilla/lightbeam-we)
@@ -1377,7 +1377,7 @@ Click icon for more tools such as site safety checks, whois, validation etc **Do
 		<summary>Stats</summary>
 
 		[![GitHub: mozilla/lightbeam-we](https://img.shields.io/github/stars/mozilla/lightbeam-we?style=flat&logo=github&label=lightbeam-we&color=%235f53f4&cacheSeconds=3600)](https://github.com/mozilla/lightbeam-we)  [![Lightbeam on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Lightbeam)](https://awesome-privacy.xyz/security-tools/browser-extensions/lightbeam) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://static.wixstatic.com/media/654565_824403a4d02548d783f8ca81f9e6bf48~mv2.png/v1/fill/w_268,h_264,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo_Button_TMN.png' width='16' height='16' alt='icon' /> Track Me Not](http://trackmenot.io)** - Helps protect web searchers from surveillance and data-profiling, through creating meaningless noise and obfuscation, outlined in their [whitepaper](http://trackmenot.io/resources/trackmenot2009.pdf). Controversial whether or not this is a good approach **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/trackmenot/) - [Source](https://github.com/vtoubiana/TrackMeNot)
@@ -1386,7 +1386,7 @@ Click icon for more tools such as site safety checks, whois, validation etc **Do
 		<summary>Stats</summary>
 
 		[![GitHub: vtoubiana/TrackMeNot](https://img.shields.io/github/stars/vtoubiana/TrackMeNot?style=flat&logo=github&label=TrackMeNot&color=%235f53f4&cacheSeconds=3600)](https://github.com/vtoubiana/TrackMeNot)  [![Track Me Not on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Track_Me_Not)](https://awesome-privacy.xyz/security-tools/browser-extensions/track-me-not) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://amiunique.org/favicon.ico' width='16' height='16' alt='icon' /> AmIUnique Timeline](https://amiunique.org/timeline)** - Enables you to better understand the evolution of browser fingerprints (which is what websites use to uniquely identify and track you). **Download**: [Chrome](https://chrome.google.com/webstore/detail/amiunique/pigjfndpomdldkmoaiiigpbncemhjeca) - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/amiunique)
@@ -1395,7 +1395,7 @@ Click icon for more tools such as site safety checks, whois, validation etc **Do
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_4202.svg)](https://tosdr.org/en/service/4202) [![AmIUnique Timeline on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AmIUnique_Timeline)](https://awesome-privacy.xyz/security-tools/browser-extensions/amiunique-timeline) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/c78SvSl7OD2thLmgX5irlo1tvxGVtkziKTKmp7VByjvvrw2czkP2cFbbRASmopQBV9-PpNBD_NOqt8WIC4JVc0WB3A=s60' width='16' height='16' alt='icon' /> Netcraft Extension](https://www.netcraft.com/apps/browser)** - Notifies you when visiting a known or potential phishing site, and detects suspicious JavaScript (including skimmers and miners). Also provides a simple rating for a given site's legitimacy and security. Great for less technical users. Netcraft also has a handy online tool: [Site Report](https://sitereport.netcraft.com/) for checking what any given website is running. **Download**: [Chrome](https://chrome.google.com/webstore/detail/netcraft-anti-phishing-ex/bmejphbfclcpmpohkggcjeibfilpamia) \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero) \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/) \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
@@ -1411,7 +1411,7 @@ Note this functionality is now included by default in most modern browsers. **Do
 		<summary>Stats</summary>
 
 		[![GitHub: EFForg/https-everywhere](https://img.shields.io/github/stars/EFForg/https-everywhere?style=flat&logo=github&label=https-everywhere&color=%235f53f4&cacheSeconds=3600)](https://github.com/EFForg/https-everywhere) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![HTTPS Everywhere on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=HTTPS_Everywhere)](https://awesome-privacy.xyz/security-tools/browser-extensions/https-everywhere) 
- 
+˙ 
 
 		</details>
 
@@ -1446,7 +1446,7 @@ You can also use it alongside Tor Browser to access .onion sites.
 		<summary>Stats</summary>
 
 		[![GitHub: guardianproject/orbot](https://img.shields.io/github/stars/guardianproject/orbot?style=flat&logo=github&label=orbot&color=%235f53f4&cacheSeconds=3600)](https://github.com/guardianproject/orbot)  [![Orbot on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Orbot)](https://awesome-privacy.xyz/security-tools/mobile-apps/orbot) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/XEd1PsXgOSNNpD2hlZMvigIOJ9e5JCL2KhCJ4X984Az5EFw6YiecDebqdsZ12VNU2kPu=w240-h480' width='16' height='16' alt='icon' /> NetGuard](https://netguard.me/)** - A firewall app for Android, which does not require root. NetGuard provides simple
@@ -1457,7 +1457,7 @@ can individually be allowed or denied access to your Wi-Fi and/or mobile connect
 		<summary>Stats</summary>
 
 		[![GitHub: M66B/NetGuard](https://img.shields.io/github/stars/M66B/NetGuard?style=flat&logo=github&label=NetGuard&color=%235f53f4&cacheSeconds=3600)](https://github.com/M66B/NetGuard)  [![NetGuard on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NetGuard)](https://awesome-privacy.xyz/security-tools/mobile-apps/netguard) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/ywvaxXcH90yttClJvgHR5UsfDnGS_YNtFiW6fQJm1p7_6HX9Dbn0v2J9gIzOOKFYQOnA=w240-h480' width='16' height='16' alt='icon' /> Island](https://island.oasisfeng.com/)** - A sandbox environment, allowing you to clone selected apps and run them in an isolated
@@ -1467,7 +1467,7 @@ box, preventing it from accessing your personal data, or device information.
 		<summary>Stats</summary>
 
 		[![GitHub: oasisfeng/island](https://img.shields.io/github/stars/oasisfeng/island?style=flat&logo=github&label=island&color=%235f53f4&cacheSeconds=3600)](https://github.com/oasisfeng/island)  [![Island on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Island)](https://awesome-privacy.xyz/security-tools/mobile-apps/island) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://gitlab.com/uploads/-/system/project/avatar/18237274/ic_launcher-playstore.png?width=48' width='16' height='16' alt='icon' /> Insular](https://gitlab.com/secure-system/Insular)** - An actively-maintained fork of the Island project with additional enhancements
@@ -1476,7 +1476,7 @@ box, preventing it from accessing your personal data, or device information.
 		<summary>Stats</summary>
 
 		[![GitHub: oasisfeng/island](https://img.shields.io/github/stars/oasisfeng/island?style=flat&logo=github&label=island&color=%235f53f4&cacheSeconds=3600)](https://github.com/oasisfeng/island)  [![Insular on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Insular)](https://awesome-privacy.xyz/security-tools/mobile-apps/insular) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://exodus-privacy.eu.org/img/favicons/apple-touch-icon.png' width='16' height='16' alt='icon' /> Exodus](https://exodus-privacy.eu.org/en/page/what/#android-app)** - Shows which trackers, each of your installed apps is using, so that you can better
@@ -1486,7 +1486,7 @@ understand how your data is being collected. Uses data from the Exodus database 
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3843.svg)](https://tosdr.org/en/service/3843) [![Exodus on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Exodus)](https://awesome-privacy.xyz/security-tools/mobile-apps/exodus) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/QbgM-Vgqp32sNMgwC0kD4kJW3YVp7xiPcVIHNcbSQgrkTIDqSfTqSBXKEvoZ9SNSjxw=w240-h480' width='16' height='16' alt='icon' /> Bouncer](https://play.google.com/store/apps/details?id=com.samruston.permission)** - Gives you the ability to grant permissions temporarily, so that you could for example
@@ -1503,7 +1503,7 @@ network data plus more. And prevents access to camera, microphone, telemetry, GP
 		<summary>Stats</summary>
 
 		[![GitHub: M66B/XPrivacyLua](https://img.shields.io/github/stars/M66B/XPrivacyLua?style=flat&logo=github&label=XPrivacyLua&color=%235f53f4&cacheSeconds=3600)](https://github.com/M66B/XPrivacyLua)  [![XPrivacyLua on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=XPrivacyLua)](https://awesome-privacy.xyz/security-tools/mobile-apps/xprivacylua) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://f-droid.org/repo/icons-640/superfreeze.tool.android.1000.png' width='16' height='16' alt='icon' /> SuperFreezZ](https://superfreezz.gitlab.io/)** - Makes it possible to entirely freeze all background activities on a per-app basis.
@@ -1519,7 +1519,7 @@ developed by The Guardian Project, in partnership with Edward Snowden.
 		<summary>Stats</summary>
 
 		[![GitHub: guardianproject/haven](https://img.shields.io/github/stars/guardianproject/haven?style=flat&logo=github&label=haven&color=%235f53f4&cacheSeconds=3600)](https://github.com/guardianproject/haven) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![Haven on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Haven)](https://awesome-privacy.xyz/security-tools/mobile-apps/haven) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/Xb_KbjGC3J8xrj1QmZqYhUq1A6aww5ikFuXfCqJonww-vz38y6xUjHzvH65AGrQU9P4=s48' width='16' height='16' alt='icon' /> Secure Task](https://play.google.com/store/apps/details?id=com.balda.securetask)** - Triggers actions, when certain security conditions are met, such as multiple failed login
@@ -1533,7 +1533,7 @@ Drive, One Drive or Dropbox), meaning none of your personal documents leave your
 		<summary>Stats</summary>
 
 		[![GitHub: cryptomator/android](https://img.shields.io/github/stars/cryptomator/android?style=flat&logo=github&label=android&color=%235f53f4&cacheSeconds=3600)](https://github.com/cryptomator/android) [![Privacy Policy](https://shields.tosdr.org/en_4403.svg)](https://tosdr.org/en/service/4403) [![Cryptomator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cryptomator)](https://awesome-privacy.xyz/security-tools/mobile-apps/cryptomator) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://1.1.1.1/favicon.ico' width='16' height='16' alt='icon' /> 1.1.1.1](https://1.1.1.1/)** - Lets you use CloudFlares fast and secure 1.1.1.1 DNS, with DNS over HTTPS, and also has the option
@@ -1543,7 +1543,7 @@ to enable CloudFlares WARP+ VPN.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_893.svg)](https://tosdr.org/en/service/893) [![1.1.1.1 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=1.1.1.1)](https://awesome-privacy.xyz/security-tools/mobile-apps/1.1.1.1) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/62335928?s=200&v=4' width='16' height='16' alt='icon' /> Fing App](https://www.fing.com/products/fing-app)** - A network scanner to help you monitor and secure your WiFi network. The app is totally free,
@@ -1556,7 +1556,7 @@ systems, which are used to block some sites (not available on Play store).
 		<summary>Stats</summary>
 
 		[![GitHub: nomoresat/DPITunnel-android](https://img.shields.io/github/stars/nomoresat/DPITunnel-android?style=flat&logo=github&label=DPITunnel-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/nomoresat/DPITunnel-android)  [![DPI Tunnel on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DPI_Tunnel)](https://awesome-privacy.xyz/security-tools/mobile-apps/dpi-tunnel) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://blokada.org/favicon.png' width='16' height='16' alt='icon' /> Blokada](https://blokada.org/)** - This application blocks ads and trackers, doesn't require root and works for all the apps on your
@@ -1566,7 +1566,7 @@ Android phone. Check out how it works here.
 		<summary>Stats</summary>
 
 		[![GitHub: blokadaorg/blokada](https://img.shields.io/github/stars/blokadaorg/blokada?style=flat&logo=github&label=blokada&color=%235f53f4&cacheSeconds=3600)](https://github.com/blokadaorg/blokada) [![Privacy Policy](https://shields.tosdr.org/en_8557.svg)](https://tosdr.org/en/service/8557) [![Blokada on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Blokada)](https://awesome-privacy.xyz/security-tools/mobile-apps/blokada) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://f-droid.org/repo/icons-640/de.srlabs.snoopsnitch.50.png' width='16' height='16' alt='icon' /> SnoopSnitch](https://opensource.srlabs.de/projects/snoopsnitch)** - Collects and analyzes mobile radio data to make you aware of your mobile network security and to
@@ -1577,7 +1577,7 @@ Get from [F-Droid](https://f-droid.org/en/packages/de.srlabs.snoopsnitch/)
 		<summary>Stats</summary>
 
 		[![GitHub: srlabs/snoopsnitch](https://img.shields.io/github/stars/srlabs/snoopsnitch?style=flat&logo=github&label=snoopsnitch&color=%235f53f4&cacheSeconds=3600)](https://github.com/srlabs/snoopsnitch)  [![SnoopSnitch on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SnoopSnitch)](https://awesome-privacy.xyz/security-tools/mobile-apps/snoopsnitch) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://trackercontrol.org/images/logo.png' width='16' height='16' alt='icon' /> TrackerControl](https://trackercontrol.org/)** - Monitor and control hidden data collection in mobile apps about user behavior/ tracking.
@@ -1587,7 +1587,7 @@ Get from [F-Droid](https://f-droid.org/en/packages/net.kollnig.missioncontrol.fd
 		<summary>Stats</summary>
 
 		[![GitHub: TrackerControl/tracker-control-android](https://img.shields.io/github/stars/TrackerControl/tracker-control-android?style=flat&logo=github&label=tracker-control-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/TrackerControl/tracker-control-android)  [![TrackerControl on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=TrackerControl)](https://awesome-privacy.xyz/security-tools/mobile-apps/trackercontrol) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://f-droid.org/repo/com.smilla.greentooth/en-US/icon_8WaREJ2f7uFLdL9QGDL4xSqsIRB7wgdwv9BY_ET0WEg=.png' width='16' height='16' alt='icon' /> Greentooth](https://gitlab.com/nbergman/greentooth)** - Auto-disable Bluetooth, then it is not being used. Saves battery, and prevent some security risks.
@@ -1601,7 +1601,7 @@ See also [PluckLock](https://github.com/SyntaxBlitz/PluckLock)
 		<summary>Stats</summary>
 
 		[![GitHub: wesaphzt/privatelock](https://img.shields.io/github/stars/wesaphzt/privatelock?style=flat&logo=github&label=privatelock&color=%235f53f4&cacheSeconds=3600)](https://github.com/wesaphzt/privatelock)  [![PrivateLock on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PrivateLock)](https://awesome-privacy.xyz/security-tools/mobile-apps/privatelock) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://schiffer.tech/img/logo.png' width='16' height='16' alt='icon' /> CamWings](https://schiffer.tech/camwings-mobile.html)** - Prevent background processes gaining unauthorized access to your devices camera. Better still,
@@ -1617,7 +1617,7 @@ Get from [F-Droid](https://f-droid.org/packages/dev.ukanth.ufirewall/)
 		<summary>Stats</summary>
 
 		[![GitHub: ukanth/afwall](https://img.shields.io/github/stars/ukanth/afwall?style=flat&logo=github&label=afwall&color=%235f53f4&cacheSeconds=3600)](https://github.com/ukanth/afwall)  [![AFWall+ on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AFWall+)](https://awesome-privacy.xyz/security-tools/mobile-apps/afwalland) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/hMhLdDNBR_rBIDctJ5yCPbyPy0fi_6FHp9MdgaOIPPedyqgwr6tsZq_AO3W1z4Zb8HJ_=w240-h480' width='16' height='16' alt='icon' /> Catch the Man-in-the-Middle](https://play.google.com/store/apps/details?id=me.brax.certchecker)** - Simple tool, that compares SHA-1 fingerprints of the the SSL certificates seen from your device,
@@ -1630,7 +1630,7 @@ man-in-the-middle modifying requests.
 		<summary>Stats</summary>
 
 		[![GitHub: celzero/rethink-app](https://img.shields.io/github/stars/celzero/rethink-app?style=flat&logo=github&label=rethink-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/celzero/rethink-app) [![Privacy Policy](https://shields.tosdr.org/en_4691.svg)](https://tosdr.org/en/service/4691) [![RethinkDNS & Firewall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RethinkDNS_&_Firewall)](https://awesome-privacy.xyz/security-tools/mobile-apps/rethinkdns-and-firewall) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://f-droid.org/assets/apple-touch-icon_ypJwtCrcixeH_qV6LdcMYk1anFIR9o-_ufR__1wNdJY=.png' width='16' height='16' alt='icon' /> F-Droid](https://f-droid.org/)** - F-Droid is an installable catalogue of FOSS applications for Android. The client enables you
@@ -1640,7 +1640,7 @@ to browse, install, and keep track of updates on your device.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2182.svg)](https://tosdr.org/en/service/2182) [![F-Droid on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=F-Droid)](https://awesome-privacy.xyz/security-tools/mobile-apps/f-droid) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -1691,7 +1691,7 @@ See also Firefox Monitor.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3435.svg)](https://tosdr.org/en/service/3435) [![Have i been pwned on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Have_i_been_pwned)](https://awesome-privacy.xyz/security-tools/online-tools/have-i-been-pwned) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/Vvq8XrM/Exodus.png' width='16' height='16' alt='icon' /> εxodus](https://reports.exodus-privacy.eu.org)** - Checks how many, and which trackers any Android app has. Useful to understand how data is being
@@ -1701,7 +1701,7 @@ collected before you install a certain APK, it also shows which permissions the 
 		<summary>Stats</summary>
 
 		[![GitHub: Exodus-Privacy/website](https://img.shields.io/github/stars/Exodus-Privacy/website?style=flat&logo=github&label=website&color=%235f53f4&cacheSeconds=3600)](https://github.com/Exodus-Privacy/website) [![Privacy Policy](https://shields.tosdr.org/en_3843.svg)](https://tosdr.org/en/service/3843) [![εxodus on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=εxodus)](https://awesome-privacy.xyz/security-tools/online-tools/εxodus) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://amiunique.org/favicon.ico' width='16' height='16' alt='icon' /> Am I Unique?](https://amiunique.org/fingerprint)** - Show how identifiable you are on the Internet by generating a fingerprint based on device information.
@@ -1711,7 +1711,7 @@ This is how many websites track you (even without cookies enabled), so the aim i
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_4202.svg)](https://tosdr.org/en/service/4202) [![Am I Unique? on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Am_I_Unique?)](https://awesome-privacy.xyz/security-tools/online-tools/am-i-unique) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://coveryourtracks.eff.org/static/favicon.ico' width='16' height='16' alt='icon' /> Panopticlick](https://panopticlick.eff.org/)** - Check if your browser safe against tracking. Analyzes how well your browser and add-ons protect you
@@ -1721,7 +1721,7 @@ against online tracking techniques, and if your system is uniquely configured—
 		<summary>Stats</summary>
 
 		[![GitHub: EFForg/cover-your-tracks](https://img.shields.io/github/stars/EFForg/cover-your-tracks?style=flat&logo=github&label=cover-your-tracks&color=%235f53f4&cacheSeconds=3600)](https://github.com/EFForg/cover-your-tracks)  [![Panopticlick on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Panopticlick)](https://awesome-privacy.xyz/security-tools/online-tools/panopticlick) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://phish.ly/images/logo.svg' width='16' height='16' alt='icon' /> Phish.ly](https://phish.ly/)** - Analyzes emails, checking the URLs and creating a SHA256 and MD5 hash of attachments, with a link to VirusTotal.
@@ -1736,7 +1736,7 @@ against fingerprinting.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_7967.svg)](https://tosdr.org/en/service/7967) [![Browser Leak Test on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Browser_Leak_Test)](https://awesome-privacy.xyz/security-tools/online-tools/browser-leak-test) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://ipleak.net/favicon.ico' width='16' height='16' alt='icon' /> IP Leak Test](https://ipleak.net)** - Shows your IP address, and other associated details (location, ISP, WebRTC check, DNS, and lots more).
@@ -1745,7 +1745,7 @@ against fingerprinting.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_7968.svg)](https://tosdr.org/en/service/7968) [![IP Leak Test on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=IP_Leak_Test)](https://awesome-privacy.xyz/security-tools/online-tools/ip-leak-test) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.exifremove.com/favicon.ico' width='16' height='16' alt='icon' /> EXIF Remove](https://www.exifremove.com)** - Displays, and removes Meta and EXIF data from an uploaded photo or document.
@@ -1763,7 +1763,7 @@ link is an affiliate ad.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1886.svg)](https://tosdr.org/en/service/1886) [![Virus Total on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Virus_Total)](https://awesome-privacy.xyz/security-tools/online-tools/virus-total) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.hardenize.com/favicon/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Hardenize](https://www.hardenize.com/)** - Scan websites and shows a security overview, relating to factors such as HTTPS, domain info, email data, www protocols
@@ -1780,7 +1780,7 @@ database of Windows software, detailing whether it is essential, harmless or dan
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_838.svg)](https://tosdr.org/en/service/838) [![10 Minute Mail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=10_Minute_Mail)](https://awesome-privacy.xyz/security-tools/online-tools/10-minute-mail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://mxtoolbox.com/favicon.ico' width='16' height='16' alt='icon' /> MXToolBox Mail Headers](https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx)** - Tool for analyzing email headers, useful for checking the authenticity of messages, as well as knowing what info
@@ -1818,7 +1818,7 @@ you don't need to provide any details at all, you can choose to pay anonymously 
 		<summary>Stats</summary>
 
 		[![GitHub: mullvad/mullvadvpn-app](https://img.shields.io/github/stars/mullvad/mullvadvpn-app?style=flat&logo=github&label=mullvadvpn-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/mullvad/mullvadvpn-app) [![Privacy Policy](https://shields.tosdr.org/en_641.svg)](https://tosdr.org/en/service/641) [![Mullvad on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mullvad)](https://awesome-privacy.xyz/networking/virtual-private-networks/mullvad) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://www.azirevpn.com/assets/img/apple-icon-57x57.png' width='16' height='16' alt='icon' /> Azire](https://www.azirevpn.com/)** - Azire is a Swedish VPN provider, who owns their own hardware with physically removed
@@ -1830,7 +1830,7 @@ source, for more info, see #140.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_6639.svg)](https://tosdr.org/en/service/6639) [![Azire on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Azire)](https://awesome-privacy.xyz/networking/virtual-private-networks/azire) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/38857113' width='16' height='16' alt='icon' /> IVPN](https://www.ivpn.net/)** - Independently Security Audited VPN with anonymous signup, no logs, no cloud or customer
@@ -1841,7 +1841,7 @@ no surveillance ads. Accepts various payment methods including cryptocurrencies.
 		<summary>Stats</summary>
 
 		[![GitHub: ivpn/desktop-app](https://img.shields.io/github/stars/ivpn/desktop-app?style=flat&logo=github&label=desktop-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/ivpn/desktop-app) [![Privacy Policy](https://shields.tosdr.org/en_2748.svg)](https://tosdr.org/en/service/2748) [![IVPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=IVPN)](https://awesome-privacy.xyz/networking/virtual-private-networks/ivpn) 
-📦 Open Source 🛡️ Security Audited  
+📦 Open Source 🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://protonvpn.com/favicons/apple-touch-icon.png' width='16' height='16' alt='icon' /> ProtonVPN](https://protonvpn.com)** - From the creators of ProtonMail, ProtonVPN has a solid reputation. They have a full suite
@@ -1852,7 +1852,7 @@ providers that also offer a free plan.
 		<summary>Stats</summary>
 
 		[![GitHub: ProtonVPN/android-app](https://img.shields.io/github/stars/ProtonVPN/android-app?style=flat&logo=github&label=android-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/ProtonVPN/android-app) [![Privacy Policy](https://shields.tosdr.org/en_1745.svg)](https://tosdr.org/en/service/1745) [![ProtonVPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ProtonVPN)](https://awesome-privacy.xyz/networking/virtual-private-networks/protonvpn) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://www.ovpn.com/favicon.ico' width='16' height='16' alt='icon' /> OVPN](https://www.ovpn.com)** - A court-proven VPN service with support for Wireguard and OpenVPN support, and optional
@@ -1862,7 +1862,7 @@ ad-blocking. Running on dedicated hardware, with no hard drives.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2981.svg)](https://tosdr.org/en/service/2981) [![OVPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OVPN)](https://awesome-privacy.xyz/networking/virtual-private-networks/ovpn) 
- 
+˙ 
 
 		</details>
 
@@ -1913,7 +1913,7 @@ source, easy to install and very widely used.
 		<summary>Stats</summary>
 
 		[![GitHub: pi-hole/pi-hole](https://img.shields.io/github/stars/pi-hole/pi-hole?style=flat&logo=github&label=pi-hole&color=%235f53f4&cacheSeconds=3600)](https://github.com/pi-hole/pi-hole) [![Privacy Policy](https://shields.tosdr.org/en_9079.svg)](https://tosdr.org/en/service/9079) [![Pi-Hole on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pi-Hole)](https://awesome-privacy.xyz/networking/self-hosted-network-security/pi-hole) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://technitium.com/favicon.ico' width='16' height='16' alt='icon' /> Technitium](https://technitium.com/dns)** - Another DNS server for blocking privacy-invasive content at its source. Technitium doesn't
@@ -1927,7 +1927,7 @@ Pi-Hole provides, and has a significantly smaller community behind it.
 		<summary>Stats</summary>
 
 		[![GitHub: TechnitiumSoftware/DnsServer](https://img.shields.io/github/stars/TechnitiumSoftware/DnsServer?style=flat&logo=github&label=DnsServer&color=%235f53f4&cacheSeconds=3600)](https://github.com/TechnitiumSoftware/DnsServer)  [![Technitium on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Technitium)](https://awesome-privacy.xyz/networking/self-hosted-network-security/technitium) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.ipfire.org/static/img/apple-touch-icon-192x192-precomposed.png' width='16' height='16' alt='icon' /> IPFire](https://www.ipfire.org)** - A hardened, versatile, state-of-the-art open source firewall based on Linux. Its ease of
@@ -1937,7 +1937,7 @@ use, high performance and extensibility make it usable for everyone.
 		<summary>Stats</summary>
 
 		[![GitHub: ipfire/ipfire-2.x](https://img.shields.io/github/stars/ipfire/ipfire-2.x?style=flat&logo=github&label=ipfire-2.x&color=%235f53f4&cacheSeconds=3600)](https://github.com/ipfire/ipfire-2.x)  [![IPFire on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=IPFire)](https://awesome-privacy.xyz/networking/self-hosted-network-security/ipfire) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.pivpn.io/images/pivpnlogo.png' width='16' height='16' alt='icon' /> PiVPN](https://pivpn.io)** - A simple way to set up a home VPN on any Debian server. Supports OpenVPN and WireGuard
@@ -1948,7 +1948,7 @@ custom DNS providers - works nicely along-side PiHole.
 		<summary>Stats</summary>
 
 		[![GitHub: pivpn/pivpn](https://img.shields.io/github/stars/pivpn/pivpn?style=flat&logo=github&label=pivpn&color=%235f53f4&cacheSeconds=3600)](https://github.com/pivpn/pivpn)  [![PiVPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PiVPN)](https://awesome-privacy.xyz/networking/self-hosted-network-security/pivpn) 
- 
+˙ 
 
 		</details>
 - **[<img src='http://e2guardian.org/cms/images/banners/logo-guardian.png' width='16' height='16' alt='icon' /> E2guardian](http://e2guardian.org)** - Powerful open source web content filter.
@@ -1957,7 +1957,7 @@ custom DNS providers - works nicely along-side PiHole.
 		<summary>Stats</summary>
 
 		[![GitHub: e2guardian/e2guardian](https://img.shields.io/github/stars/e2guardian/e2guardian?style=flat&logo=github&label=e2guardian&color=%235f53f4&cacheSeconds=3600)](https://github.com/e2guardian/e2guardian)  [![E2guardian on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=E2guardian)](https://awesome-privacy.xyz/networking/self-hosted-network-security/e2guardian) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.pfsense.org/img/apple-touch-icon.png' width='16' height='16' alt='icon' /> PF Sense](https://www.pfsense.org)** - Widely used, open source firewall/router.
@@ -1966,7 +1966,7 @@ custom DNS providers - works nicely along-side PiHole.
 		<summary>Stats</summary>
 
 		[![GitHub: pfsense/pfsense](https://img.shields.io/github/stars/pfsense/pfsense?style=flat&logo=github&label=pfsense&color=%235f53f4&cacheSeconds=3600)](https://github.com/pfsense/pfsense) [![Privacy Policy](https://shields.tosdr.org/en_6291.svg)](https://tosdr.org/en/service/6291) [![PF Sense on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PF_Sense)](https://awesome-privacy.xyz/networking/self-hosted-network-security/pf-sense) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://zeek.org/wp-content/uploads/2019/09/favicon.ico' width='16' height='16' alt='icon' /> Zeek](https://www.zeek.org)** - Detect if you have a malware-infected computer on your network, and powerful network
@@ -1976,7 +1976,7 @@ analysis framework and monitor.
 		<summary>Stats</summary>
 
 		[![GitHub: zeek/zeek](https://img.shields.io/github/stars/zeek/zeek?style=flat&logo=github&label=zeek&color=%235f53f4&cacheSeconds=3600)](https://github.com/zeek/zeek)  [![Zeek on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Zeek)](https://awesome-privacy.xyz/networking/self-hosted-network-security/zeek) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.firezone.dev/favicon.ico' width='16' height='16' alt='icon' /> Firezone](https://www.firezone.dev/)** - Open-source self-hosted VPN and firewall built on WireGuard®.
@@ -1985,7 +1985,7 @@ analysis framework and monitor.
 		<summary>Stats</summary>
 
 		[![GitHub: firezone/firezone](https://img.shields.io/github/stars/firezone/firezone?style=flat&logo=github&label=firezone&color=%235f53f4&cacheSeconds=3600)](https://github.com/firezone/firezone)  [![Firezone on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firezone)](https://awesome-privacy.xyz/networking/self-hosted-network-security/firezone) 
- 
+˙ 
 
 		</details>
 
@@ -2004,7 +2004,7 @@ to OnionLand: hidden services.
 		<summary>Stats</summary>
 
 		[![GitHub: torproject/tor](https://img.shields.io/github/stars/torproject/tor?style=flat&logo=github&label=tor&color=%235f53f4&cacheSeconds=3600)](https://github.com/torproject/tor) [![Privacy Policy](https://shields.tosdr.org/en_2845.svg)](https://tosdr.org/en/service/2845) [![Tor on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tor)](https://awesome-privacy.xyz/networking/mix-networks/tor) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://geti2p.net/_static/favicon.ico' width='16' height='16' alt='icon' /> I2P](https://geti2p.net)** - I2P offers great generic transports, it is well geared towards accessing hidden services,
@@ -2022,7 +2022,7 @@ for casual browsing.
 		<summary>Stats</summary>
 
 		[![GitHub: hyphanet/fred](https://img.shields.io/github/stars/hyphanet/fred?style=flat&logo=github&label=fred&color=%235f53f4&cacheSeconds=3600)](https://github.com/hyphanet/fred)  [![Freenet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Freenet)](https://awesome-privacy.xyz/networking/mix-networks/freenet) 
- 
+˙ 
 
 		</details>
 
@@ -2084,7 +2084,7 @@ cross-platform and easy to deploy, see [GitHub repo](https://github.com/shadowso
 		<summary>Stats</summary>
 
 		[![GitHub: shadowsocks/shadowsocks-rust](https://img.shields.io/github/stars/shadowsocks/shadowsocks-rust?style=flat&logo=github&label=shadowsocks-rust&color=%235f53f4&cacheSeconds=3600)](https://github.com/shadowsocks/shadowsocks-rust)  [![ShadowSocks on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ShadowSocks)](https://awesome-privacy.xyz/networking/proxies/shadowsocks) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.privoxy.org/images/privoxy.png' width='16' height='16' alt='icon' /> Privoxy](https://www.privoxy.org)** - Non-caching web proxy with advanced filtering capabilities for enhancing privacy,
@@ -2129,7 +2129,7 @@ for easy set-up.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_893.svg)](https://tosdr.org/en/service/893) [![CloudFlare on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=CloudFlare)](https://awesome-privacy.xyz/networking/dns-providers/cloudflare) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://cdn.adguard.info/website/adguard-dns.io/favicon.svg' width='16' height='16' alt='icon' /> AdGuard](https://adguard.com/en/adguard-dns/overview.html)** - Open-source DNS provider, specialising in the blocking of ads, trackers and malicious domains.
@@ -2139,7 +2139,7 @@ They have been independently audited and do not keep logs.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2776.svg)](https://tosdr.org/en/service/2776) [![AdGuard on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AdGuard)](https://awesome-privacy.xyz/networking/dns-providers/adguard) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://nextdns.io/favicon.ico' width='16' height='16' alt='icon' /> NextDNS](https://nextdns.io)** - An ad-blocking, privacy-protecting, censorship-bypassing DNS. Also comes with analytics, and
@@ -2149,7 +2149,7 @@ the ability to shield kids from adult content.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1959.svg)](https://tosdr.org/en/service/1959) [![NextDNS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NextDNS)](https://awesome-privacy.xyz/networking/dns-providers/nextdns) 
- 
+˙ 
 
 		</details>
 
@@ -2203,7 +2203,7 @@ and client IP protection through Tor, SOCKS proxies or Anonymized DNS relays.
 		<summary>Stats</summary>
 
 		[![GitHub: DNSCrypt/dnscrypt-proxy](https://img.shields.io/github/stars/DNSCrypt/dnscrypt-proxy?style=flat&logo=github&label=dnscrypt-proxy&color=%235f53f4&cacheSeconds=3600)](https://github.com/DNSCrypt/dnscrypt-proxy)  [![DNScrypt-proxy 2 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DNScrypt-proxy_2)](https://awesome-privacy.xyz/networking/dns-clients/dnscrypt-proxy-2) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://nlnetlabs.nl/extra/favicons/favicon-196x196.png' width='16' height='16' alt='icon' /> Unbound](https://nlnetlabs.nl/projects/unbound)** - Validating, recursive, caching DNS resolve with support for DNS-over-TLS. Designed to be fast,
@@ -2214,7 +2214,7 @@ source, and recently audited. (For an in-depth tutorial, see this article by DNS
 		<summary>Stats</summary>
 
 		[![GitHub: NLnetLabs/unbound](https://img.shields.io/github/stars/NLnetLabs/unbound?style=flat&logo=github&label=unbound&color=%235f53f4&cacheSeconds=3600)](https://github.com/NLnetLabs/unbound) [![Privacy Policy](https://shields.tosdr.org/en_2519.svg)](https://tosdr.org/en/service/2519) [![Unbound on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Unbound)](https://awesome-privacy.xyz/networking/dns-clients/unbound) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/Ch4t4r/Nebulo/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png' width='16' height='16' alt='icon' /> Nebulo](https://nebulo.app)** - Non-root, small-sized DNS changer utilizing DNS-over-HTTPS and DNS-over-TLS. (Note, since this
@@ -2224,7 +2224,7 @@ uses Android's VPN API, it is not possible to run a VPN while using Nebulo.)
 		<summary>Stats</summary>
 
 		[![GitHub: Ch4t4r/Nebulo](https://img.shields.io/github/stars/Ch4t4r/Nebulo?style=flat&logo=github&label=Nebulo&color=%235f53f4&cacheSeconds=3600)](https://github.com/Ch4t4r/Nebulo)  [![Nebulo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Nebulo)](https://awesome-privacy.xyz/networking/dns-clients/nebulo) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://rethinkdns.com/ico/app_icon.svg' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com/app)** - Free and open source DNS changer with support for DNS-over-HTTPS, DNS-over-Tor, and DNSCrypt v3
@@ -2235,7 +2235,7 @@ VPN while using RethinkDNS + Firewall.)
 		<summary>Stats</summary>
 
 		[![GitHub: celzero/rethink-app](https://img.shields.io/github/stars/celzero/rethink-app?style=flat&logo=github&label=rethink-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/celzero/rethink-app) [![Privacy Policy](https://shields.tosdr.org/en_4691.svg)](https://tosdr.org/en/service/4691) [![RethinkDNS & Firewall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RethinkDNS_&_Firewall)](https://awesome-privacy.xyz/networking/dns-clients/rethinkdns-and-firewall) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://github.com/s-s/dnscloak/blob/master/src/images/logo.png?raw=true' width='16' height='16' alt='icon' /> DNS Cloak](https://apps.apple.com/us/app/dnscloak-secure-dns-client/id1452162351)** - Simple all that allows for the use for dnscrypt-proxy 2 on an iPhone.
@@ -2244,7 +2244,7 @@ VPN while using RethinkDNS + Firewall.)
 		<summary>Stats</summary>
 
 		[![GitHub: s-s/dnscloak](https://img.shields.io/github/stars/s-s/dnscloak?style=flat&logo=github&label=dnscloak&color=%235f53f4&cacheSeconds=3600)](https://github.com/s-s/dnscloak)  [![DNS Cloak on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DNS_Cloak)](https://awesome-privacy.xyz/networking/dns-clients/dns-cloak) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://dnsprivacy.org/images/favicon.png' width='16' height='16' alt='icon' /> Stubby](https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby)** - Acts as a local DNS Privacy stub resolver (using DNS-over-TLS). Stubby encrypts DNS queries sent
@@ -2257,7 +2257,7 @@ see example configuration.
 		<summary>Stats</summary>
 
 		[![GitHub: getdnsapi/stubby](https://img.shields.io/github/stars/getdnsapi/stubby?style=flat&logo=github&label=stubby&color=%235f53f4&cacheSeconds=3600)](https://github.com/getdnsapi/stubby)  [![Stubby on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Stubby)](https://awesome-privacy.xyz/networking/dns-clients/stubby) 
- 
+˙ 
 
 		</details>
 
@@ -2280,7 +2280,7 @@ can individually be allowed or denied access to Wi-Fi and/or mobile connection.
 		<summary>Stats</summary>
 
 		[![GitHub: M66B/NetGuard](https://img.shields.io/github/stars/M66B/NetGuard?style=flat&logo=github&label=NetGuard&color=%235f53f4&cacheSeconds=3600)](https://github.com/M66B/NetGuard)  [![NetGuard on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NetGuard)](https://awesome-privacy.xyz/networking/firewalls/netguard) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://play-lh.googleusercontent.com/Eo7y02OP6nsOqTx-MsYORxLsIXltk-_0DQUkNztdPUrr_2ZIoR_RgaDXt3y6qrcdIT4=w240-h480' width='16' height='16' alt='icon' /> NoRoot Firewall](https://play.google.com/store/apps/details?id=app.greyshirts.firewall)** - Notifies you when an app is trying to access the Internet, so all you need to do is just Allow
@@ -2294,7 +2294,7 @@ which provides very fine-grained control over which Android apps are allowed to 
 		<summary>Stats</summary>
 
 		[![GitHub: ukanth/afwall](https://img.shields.io/github/stars/ukanth/afwall?style=flat&logo=github&label=afwall&color=%235f53f4&cacheSeconds=3600)](https://github.com/ukanth/afwall)  [![AFWall+ on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AFWall+)](https://awesome-privacy.xyz/networking/firewalls/afwalland) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://rethinkdns.com/ico/app_icon.svg' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com/app)** - An open-source ad-blocker and firewall app for Android 6+ (does not require root).
@@ -2303,7 +2303,7 @@ which provides very fine-grained control over which Android apps are allowed to 
 		<summary>Stats</summary>
 
 		[![GitHub: celzero/rethink-app](https://img.shields.io/github/stars/celzero/rethink-app?style=flat&logo=github&label=rethink-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/celzero/rethink-app) [![Privacy Policy](https://shields.tosdr.org/en_4691.svg)](https://tosdr.org/en/service/4691) [![RethinkDNS & Firewall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RethinkDNS_&_Firewall)](https://awesome-privacy.xyz/networking/firewalls/rethinkdns-and-firewall) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/lockdownprivacy.com' width='16' height='16' alt='icon' /> Lockdown](https://lockdownprivacy.com)** - Firewall app for iPhone, allowing you to block any connection to any domain.
@@ -2315,7 +2315,7 @@ which provides very fine-grained control over which Android apps are allowed to 
 		<summary>Stats</summary>
 
 		[![GitHub: henrypp/simplewall](https://img.shields.io/github/stars/henrypp/simplewall?style=flat&logo=github&label=simplewall&color=%235f53f4&cacheSeconds=3600)](https://github.com/henrypp/simplewall)  [![SimpleWall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SimpleWall)](https://awesome-privacy.xyz/networking/firewalls/simplewall) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://objective-see.org/images/LL/icon.png' width='16' height='16' alt='icon' /> LuLu](https://objective-see.com/products/lulu.html)** - Free, open source macOS firewall. It aims to block unknown outgoing connections, unless explicitly approved by the user.
@@ -2324,7 +2324,7 @@ which provides very fine-grained control over which Android apps are allowed to 
 		<summary>Stats</summary>
 
 		[![GitHub: objective-see/LuLu](https://img.shields.io/github/stars/objective-see/LuLu?style=flat&logo=github&label=LuLu&color=%235f53f4&cacheSeconds=3600)](https://github.com/objective-see/LuLu) [![Privacy Policy](https://shields.tosdr.org/en_3069.svg)](https://tosdr.org/en/service/3069) [![LuLu on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LuLu)](https://awesome-privacy.xyz/networking/firewalls/lulu) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://obdev.at/Images/product-icons/littlesnitch_340.png' width='16' height='16' alt='icon' /> Little Snitch](https://obdev.at/products/littlesnitch/index.html)** - A very polished application firewall, allowing you to easily manage internet connections on a per-app basis.
@@ -2334,7 +2334,7 @@ which provides very fine-grained control over which Android apps are allowed to 
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_4121.svg)](https://tosdr.org/en/service/4121) [![Little Snitch on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Little_Snitch)](https://awesome-privacy.xyz/networking/firewalls/little-snitch) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/evilsocket/opensnitch/master/ui/opensnitch/res/icon.png' width='16' height='16' alt='icon' /> OpenSnitch](https://github.com/evilsocket/opensnitch)** - Makes internet connections from all apps visible, allowing you to block or manage traffic on a per-app basis.
@@ -2344,7 +2344,7 @@ GNU/Linux port of the Little Snitch application firewall.
 		<summary>Stats</summary>
 
 		[![GitHub: evilsocket/opensnitch](https://img.shields.io/github/stars/evilsocket/opensnitch?style=flat&logo=github&label=opensnitch&color=%235f53f4&cacheSeconds=3600)](https://github.com/evilsocket/opensnitch)  [![OpenSnitch on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OpenSnitch)](https://awesome-privacy.xyz/networking/firewalls/opensnitch) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/costales/gufw/master/data/icons/48x48/apps/gufw.png' width='16' height='16' alt='icon' /> Gufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications.
@@ -2355,7 +2355,7 @@ under active maintenance and backed by a strong community.
 		<summary>Stats</summary>
 
 		[![GitHub: costales/gufw](https://img.shields.io/github/stars/costales/gufw?style=flat&logo=github&label=gufw&color=%235f53f4&cacheSeconds=3600)](https://github.com/costales/gufw)  [![Gufw on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Gufw)](https://awesome-privacy.xyz/networking/firewalls/gufw) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/wiki.ubuntu.com' width='16' height='16' alt='icon' /> Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall)** - The ufw (Uncomplicated Firewall) is a GUI application and CLI, that allows you to configure a firewall
@@ -2368,7 +2368,7 @@ on a raspberry Pi, since it is lightweight and heavily customizable.
 		<summary>Stats</summary>
 
 		[![GitHub: ipfire/ipfire-2.x](https://img.shields.io/github/stars/ipfire/ipfire-2.x?style=flat&logo=github&label=ipfire-2.x&color=%235f53f4&cacheSeconds=3600)](https://github.com/ipfire/ipfire-2.x)  [![IPFire on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=IPFire)](https://awesome-privacy.xyz/networking/firewalls/ipfire) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://shorewall.org/favicon.ico' width='16' height='16' alt='icon' /> Shorewall](https://shorewall.org)** - An open source firewall tool for Linux that builds upon the Netfilter system built into the Linux kernel,
@@ -2416,7 +2416,7 @@ has detailed statistics, and makes it easy to pause/ resume Pi-Hole if needed.
 		<summary>Stats</summary>
 
 		[![GitHub: pi-hole/pi-hole](https://img.shields.io/github/stars/pi-hole/pi-hole?style=flat&logo=github&label=pi-hole&color=%235f53f4&cacheSeconds=3600)](https://github.com/pi-hole/pi-hole)  [![Pi-Hole on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pi-Hole)](https://awesome-privacy.xyz/networking/ad-blockers/pi-hole) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://diversion.ch/files/theme-src/images/favicon/favicon-16x16.png' width='16' height='16' alt='icon' /> Diversion](https://diversion.ch)** - A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
@@ -2429,7 +2429,7 @@ widely-respected host files aimed at stopping ads, malware, and other weird stuf
 		<summary>Stats</summary>
 
 		[![GitHub: julian-klode/dns66](https://img.shields.io/github/stars/julian-klode/dns66?style=flat&logo=github&label=dns66&color=%235f53f4&cacheSeconds=3600)](https://github.com/julian-klode/dns66)  [![DN66 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DN66)](https://awesome-privacy.xyz/networking/ad-blockers/dn66) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png' width='16' height='16' alt='icon' /> BlockParty](https://github.com/krishkumar/BlockParty)** - Native Apple (Swift) apps, for system-wide ad-blocking. Can be customized with custom host lists,
@@ -2439,7 +2439,7 @@ primarily aimed for just ad-blocking.
 		<summary>Stats</summary>
 
 		[![GitHub: krishkumar/BlockParty](https://img.shields.io/github/stars/krishkumar/BlockParty?style=flat&logo=github&label=BlockParty&color=%235f53f4&cacheSeconds=3600)](https://github.com/krishkumar/BlockParty)  [![BlockParty on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=BlockParty)](https://awesome-privacy.xyz/networking/ad-blockers/blockparty) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/hectorm/hblock/master/resources/logo/bitmaps/logo-shield-ffffff-h512.png' width='16' height='16' alt='icon' /> hBlock](https://hblock.molinero.dev)** - A POSIX-compliant shell script, designed for Unix-like systems, that gets a list of domains that serve ads,
@@ -2451,7 +2451,7 @@ tracking and malware associated domains.
 		<summary>Stats</summary>
 
 		[![GitHub: hectorm/hblock](https://img.shields.io/github/stars/hectorm/hblock?style=flat&logo=github&label=hblock&color=%235f53f4&cacheSeconds=3600)](https://github.com/hectorm/hblock)  [![hBlock on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=hBlock)](https://awesome-privacy.xyz/networking/ad-blockers/hblock) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/blokada.org' width='16' height='16' alt='icon' /> Blokada](https://blokada.org/)** - Open source mobile ad-blocker that acts like a firewall. Since it's device-wide, once connected all apps will
@@ -2462,7 +2462,7 @@ which has a built-in VPN.
 		<summary>Stats</summary>
 
 		[![GitHub: blokadaorg/blokada](https://img.shields.io/github/stars/blokadaorg/blokada?style=flat&logo=github&label=blokada&color=%235f53f4&cacheSeconds=3600)](https://github.com/blokadaorg/blokada) [![Privacy Policy](https://shields.tosdr.org/en_8557.svg)](https://tosdr.org/en/service/8557) [![Blokada on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Blokada)](https://awesome-privacy.xyz/networking/ad-blockers/blokada) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://rethinkdns.com/ico/app_icon.svg' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com/app)** - Free and open source ad-blocker and a firewall for Android 6+ (no root required).
@@ -2471,7 +2471,7 @@ which has a built-in VPN.
 		<summary>Stats</summary>
 
 		[![GitHub: celzero/rethink-app](https://img.shields.io/github/stars/celzero/rethink-app?style=flat&logo=github&label=rethink-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/celzero/rethink-app) [![Privacy Policy](https://shields.tosdr.org/en_4691.svg)](https://tosdr.org/en/service/4691) [![RethinkDNS & Firewall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RethinkDNS_&_Firewall)](https://awesome-privacy.xyz/networking/ad-blockers/rethinkdns-and-firewall) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Ad Block Radio](https://github.com/adblockradio/adblockradio)** - Python script that uses machine learning to block adverts in live audio streams, such as Radio, Podcasts,
@@ -2481,7 +2481,7 @@ Audio Books, and music platforms such as Spotify. See live demo.
 		<summary>Stats</summary>
 
 		[![GitHub: adblockradio/adblockradio](https://img.shields.io/github/stars/adblockradio/adblockradio?style=flat&logo=github&label=adblockradio&color=%235f53f4&cacheSeconds=3600)](https://github.com/adblockradio/adblockradio)  [![Ad Block Radio on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Ad_Block_Radio)](https://awesome-privacy.xyz/networking/ad-blockers/ad-block-radio) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/hectorm/hblock/master/resources/logo/bitmaps/logo-shield-ffffff-h512.png' width='16' height='16' alt='icon' /> uBlock Origin](https://github.com/gorhill/uBlock)** - Light-weight, fast browser extension for Firefox and Chromium (Chrome, Edge, Brave Opera etc), that blocks
@@ -2492,7 +2492,7 @@ advanced mode, with a point-and-click firewall which can be configured on a per-
 		<summary>Stats</summary>
 
 		[![GitHub: gorhill/uBlock](https://img.shields.io/github/stars/gorhill/uBlock?style=flat&logo=github&label=uBlock&color=%235f53f4&cacheSeconds=3600)](https://github.com/gorhill/uBlock)  [![uBlock Origin on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=uBlock_Origin)](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin) 
- 
+˙ 
 
 		</details>
 
@@ -2529,7 +2529,7 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 		<summary>Stats</summary>
 
 		[![GitHub: StevenBlack/hosts](https://img.shields.io/github/stars/StevenBlack/hosts?style=flat&logo=github&label=hosts&color=%235f53f4&cacheSeconds=3600)](https://github.com/StevenBlack/hosts)  [![Hosts by StevenBlack on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hosts_by_StevenBlack)](https://awesome-privacy.xyz/networking/host-block-lists/hosts-by-stevenblack) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/878BLq2/GAFAMSPLATTEXTNOGgit.png' width='16' height='16' alt='icon' /> No Google](https://github.com/nickspaargaren/no-google)** - Totally block all direct and indirect content from Google, Amazon, Facebook, Apple and Microsoft (or just some).
@@ -2538,7 +2538,7 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 		<summary>Stats</summary>
 
 		[![GitHub: nickspaargaren/no-google](https://img.shields.io/github/stars/nickspaargaren/no-google?style=flat&logo=github&label=no-google&color=%235f53f4&cacheSeconds=3600)](https://github.com/nickspaargaren/no-google)  [![No Google on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=No_Google)](https://awesome-privacy.xyz/networking/host-block-lists/no-google) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/easylist.to' width='16' height='16' alt='icon' /> EasyList](https://easylist.to)** - Comprehensive list of domains for blocking tracking, social scripts, bad cookies and annoying stuff.
@@ -2547,7 +2547,7 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 		<summary>Stats</summary>
 
 		[![GitHub: easylist/easylist](https://img.shields.io/github/stars/easylist/easylist?style=flat&logo=github&label=easylist&color=%235f53f4&cacheSeconds=3600)](https://github.com/easylist/easylist)  [![EasyList on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=EasyList)](https://awesome-privacy.xyz/networking/host-block-lists/easylist) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://d3pkfiqitivr8j.cloudfront.net/sitefiles/images/favicon.ico' width='16' height='16' alt='icon' /> iBlockList](https://www.iblocklist.com)** - Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
@@ -2559,7 +2559,7 @@ political, illegal, hijacked, bad peers and more.
 		<summary>Stats</summary>
 
 		[![GitHub: EnergizedProtection/block](https://img.shields.io/github/stars/EnergizedProtection/block?style=flat&logo=github&label=block&color=%235f53f4&cacheSeconds=3600)](https://github.com/EnergizedProtection/block)  [![Energized on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Energized)](https://awesome-privacy.xyz/networking/host-block-lists/energized) 
- 
+˙ 
 
 		</details>
 
@@ -2579,7 +2579,7 @@ port forwarding protocols (UPnP, NAT-PMP + upnpd, etc), Load balancing, IP tunne
 		<summary>Stats</summary>
 
 		[![GitHub: openwrt/openwrt](https://img.shields.io/github/stars/openwrt/openwrt?style=flat&logo=github&label=openwrt&color=%235f53f4&cacheSeconds=3600)](https://github.com/openwrt/openwrt) [![Privacy Policy](https://shields.tosdr.org/en_1603.svg)](https://tosdr.org/en/service/1603) [![OpenWRT on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OpenWRT)](https://awesome-privacy.xyz/networking/router-firmware/openwrt) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://dd-wrt.com/favicon.ico' width='16' height='16' alt='icon' /> DD-WRT](https://dd-wrt.com)** - Easy and powerful user interface. Great access control, bandwidth monitoring and quality of service.
@@ -2590,7 +2590,7 @@ and wake-on-lan features.
 		<summary>Stats</summary>
 
 		[![GitHub: mirror/dd-wrt](https://img.shields.io/github/stars/mirror/dd-wrt?style=flat&logo=github&label=dd-wrt&color=%235f53f4&cacheSeconds=3600)](https://github.com/mirror/dd-wrt)  [![DD-WRT on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DD-WRT)](https://awesome-privacy.xyz/networking/router-firmware/dd-wrt) 
- 
+˙ 
 
 		</details>
 
@@ -2633,7 +2633,7 @@ iOS, and Linux.
 		<summary>Stats</summary>
 
 		[![GitHub: ooni/probe](https://img.shields.io/github/stars/ooni/probe?style=flat&logo=github&label=probe&color=%235f53f4&cacheSeconds=3600)](https://github.com/ooni/probe) [![Privacy Policy](https://shields.tosdr.org/en_6241.svg)](https://tosdr.org/en/service/6241) [![OONI on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OONI)](https://awesome-privacy.xyz/networking/network-analysis/ooni) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://ntc.party/uploads/default/original/1X/3bdcdffa0d2f06e15ee4c02f4dd2ada9e771e642.png' width='16' height='16' alt='icon' /> Goodbye DPI](https://ntc.party/c/community-software/goodbyedpi/8)** - Passive Deep Packet Inspection blocker and Active DPI circumvention utility, for Windows.
@@ -2642,7 +2642,7 @@ iOS, and Linux.
 		<summary>Stats</summary>
 
 		[![GitHub: ValdikSS/GoodbyeDPI](https://img.shields.io/github/stars/ValdikSS/GoodbyeDPI?style=flat&logo=github&label=GoodbyeDPI&color=%235f53f4&cacheSeconds=3600)](https://github.com/ValdikSS/GoodbyeDPI)  [![Goodbye DPI on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Goodbye_DPI)](https://awesome-privacy.xyz/networking/network-analysis/goodbye-dpi) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/nomoresat/DPITunnel-android/main/assets/logo.webp' width='16' height='16' alt='icon' /> DPITunnel](https://github.com/zhenyolka/DPITunnel)** - An Android app to bypass deep packet inspection.
@@ -2651,7 +2651,7 @@ iOS, and Linux.
 		<summary>Stats</summary>
 
 		[![GitHub: nomoresat/DPITunnel-android](https://img.shields.io/github/stars/nomoresat/DPITunnel-android?style=flat&logo=github&label=DPITunnel-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/nomoresat/DPITunnel-android)  [![DPITunnel on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DPITunnel)](https://awesome-privacy.xyz/networking/network-analysis/dpitunnel) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://ping.eu/favicon.ico' width='16' height='16' alt='icon' /> Proxy Checker](https://ping.eu/proxy/)** - You can quickly check if a given IP is using a proxy, this can also be done through the command line.
@@ -2674,7 +2674,7 @@ know about an incident as soon as possible, in order to minimize damage.
 		<summary>Stats</summary>
 
 		[![GitHub: zeek/zeek](https://img.shields.io/github/stars/zeek/zeek?style=flat&logo=github&label=zeek&color=%235f53f4&cacheSeconds=3600)](https://github.com/zeek/zeek)  [![Zeek on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Zeek)](https://awesome-privacy.xyz/networking/intrusion-detection/zeek) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/23CNVCk/ossec.png' width='16' height='16' alt='icon' /> OSSEC](https://www.ossec.net/)** - OSSEC is an Open Source host-based intrusion detection system, that performs log analysis, integrity checking,
@@ -2684,7 +2684,7 @@ monitoring, rootkit detection, real-time alerting and active response.
 		<summary>Stats</summary>
 
 		[![GitHub: ossec/ossec-hids](https://img.shields.io/github/stars/ossec/ossec-hids?style=flat&logo=github&label=ossec-hids&color=%235f53f4&cacheSeconds=3600)](https://github.com/ossec/ossec-hids)  [![OSSEC on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OSSEC)](https://awesome-privacy.xyz/networking/intrusion-detection/ossec) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/22322275?v=4' width='16' height='16' alt='icon' /> Kismet](https://www.kismetwireless.net)** - An 802.11 layer2 wireless network detector, sniffer, and intrusion detection system.
@@ -2693,7 +2693,7 @@ monitoring, rootkit detection, real-time alerting and active response.
 		<summary>Stats</summary>
 
 		[![GitHub: kismetwireless/kismet](https://img.shields.io/github/stars/kismetwireless/kismet?style=flat&logo=github&label=kismet&color=%235f53f4&cacheSeconds=3600)](https://github.com/kismetwireless/kismet)  [![Kismet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Kismet)](https://awesome-privacy.xyz/networking/intrusion-detection/kismet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.snaresolutions.com/wp-content/uploads/cropped-Snare-Logo-2022-Icon-Lockup-Original-Color-32x32.png' width='16' height='16' alt='icon' /> Snare](https://www.snaresolutions.com/products/snare-central)** - SNARE (System iNtrusion Analysis and Reporting Environment) is a series of log collection agents that facilitate
@@ -2709,7 +2709,7 @@ complain if some mischievous program is giving it trouble.
 		<summary>Stats</summary>
 
 		[![GitHub: elesiuta/picosnitch](https://img.shields.io/github/stars/elesiuta/picosnitch?style=flat&logo=github&label=picosnitch&color=%235f53f4&cacheSeconds=3600)](https://github.com/elesiuta/picosnitch)  [![picosnitch on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=picosnitch)](https://awesome-privacy.xyz/networking/intrusion-detection/picosnitch) 
- 
+˙ 
 
 		</details>
 
@@ -2734,7 +2734,7 @@ packages starting at $15/ month.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3688.svg)](https://tosdr.org/en/service/3688) [![Njalla on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Njalla)](https://awesome-privacy.xyz/networking/cloud-hosting/njalla) 
-💰 Accepts Anonymous Payment  
+💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.privatelayer.com' width='16' height='16' alt='icon' /> Private Layer](https://www.privatelayer.com)** - Offers enterprise-grade, high-speed offshore dedicated servers, they own their own data centres, have a solid
@@ -2748,7 +2748,7 @@ reputable providers.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_8079.svg)](https://tosdr.org/en/service/8079) [![Servers Guru on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Servers_Guru)](https://awesome-privacy.xyz/networking/cloud-hosting/servers-guru) 
-💰 Accepts Anonymous Payment  
+💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 
@@ -2787,7 +2787,7 @@ who have legal right to view your data.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3688.svg)](https://tosdr.org/en/service/3688) [![Njal.la on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Njal.la)](https://awesome-privacy.xyz/networking/domain-registrars/njal.la) 
-💰 Accepts Anonymous Payment  
+💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 - **[<img src='https://orangewebsite.com/fav.ico' width='16' height='16' alt='icon' /> Orange Website](https://www.orangewebsite.com/domain-registration.php)** - Anonymous domain registration, with low online censorship since they are based outside the
@@ -2807,7 +2807,7 @@ on purely open source software. deSEC is backed and funded by SSE.
 		<summary>Stats</summary>
 
 		[![GitHub: desec-io/desec-stack](https://img.shields.io/github/stars/desec-io/desec-stack?style=flat&logo=github&label=desec-stack&color=%235f53f4&cacheSeconds=3600)](https://github.com/desec-io/desec-stack)  [![deSEC on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=deSEC)](https://awesome-privacy.xyz/networking/dns-hosting/desec) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -2824,7 +2824,7 @@ webmail, to spam filtering and backups.
 		<summary>Stats</summary>
 
 		[![GitHub: mail-in-a-box/mailinabox](https://img.shields.io/github/stars/mail-in-a-box/mailinabox?style=flat&logo=github&label=mailinabox&color=%235f53f4&cacheSeconds=3600)](https://github.com/mail-in-a-box/mailinabox)  [![Mail-in-a-box on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mail-in-a-box)](https://awesome-privacy.xyz/networking/mail-servers/mail-in-a-box) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://docker-mailserver.github.io/docker-mailserver/latest/assets/logo/favicon-32x32.png' width='16' height='16' alt='icon' /> Docker Mailserver](https://docker-mailserver.github.io/docker-mailserver/latest)** - A full-stack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker. Very
@@ -2834,7 +2834,7 @@ complete, with everything you will need, customizable and very easy to deploy wi
 		<summary>Stats</summary>
 
 		[![GitHub: tomav/docker-mailserver](https://img.shields.io/github/stars/tomav/docker-mailserver?style=flat&logo=github&label=docker-mailserver&color=%235f53f4&cacheSeconds=3600)](https://github.com/tomav/docker-mailserver)  [![Docker Mailserver on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Docker_Mailserver)](https://awesome-privacy.xyz/networking/mail-servers/docker-mailserver) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://mailcow.email/images/cow_mailcow.svg' width='16' height='16' alt='icon' /> mailcow](https://mailcow.email/)** - A mail server with everything you need (SMTP, IMAP, webmail, NextCloud support..) using Docker.
@@ -2843,7 +2843,7 @@ complete, with everything you will need, customizable and very easy to deploy wi
 		<summary>Stats</summary>
 
 		[![GitHub: mailcow/mailcow-dockerized](https://img.shields.io/github/stars/mailcow/mailcow-dockerized?style=flat&logo=github&label=mailcow-dockerized&color=%235f53f4&cacheSeconds=3600)](https://github.com/mailcow/mailcow-dockerized)  [![mailcow on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=mailcow)](https://awesome-privacy.xyz/networking/mail-servers/mailcow) 
- 
+˙ 
 
 		</details>
 
@@ -2874,7 +2874,7 @@ Standard Notes is actively developed, and fully open-source.
 		<summary>Stats</summary>
 
 		[![GitHub: standardnotes/app](https://img.shields.io/github/stars/standardnotes/app?style=flat&logo=github&label=app&color=%235f53f4&cacheSeconds=3600)](https://github.com/standardnotes/app) [![Privacy Policy](https://shields.tosdr.org/en_2116.svg)](https://tosdr.org/en/service/2116) [![Standard Notes on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Standard_Notes)](https://awesome-privacy.xyz/productivity/digital-notes/standard-notes) 
-📦 Open Source 🛡️ Security Audited  
+📦 Open Source 🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://turtlapp.com/images/logo.svg' width='16' height='16' alt='icon' /> Turtle](https://turtlapp.com)** - A secure, collaborative notebook. Self-host it yourself, or use their hosted plan (free edition
@@ -2884,7 +2884,7 @@ or $3/ month for premium).
 		<summary>Stats</summary>
 
 		[![GitHub: turtl/desktop](https://img.shields.io/github/stars/turtl/desktop?style=flat&logo=github&label=desktop&color=%235f53f4&cacheSeconds=3600)](https://github.com/turtl/desktop)  [![Turtle on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Turtle)](https://awesome-privacy.xyz/productivity/digital-notes/turtle) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://notable.app/favicon.ico' width='16' height='16' alt='icon' /> Notable](https://notable.md)** - An offline markdown-based note editor for desktop, with a simple, yet feature-rich UI.
@@ -2896,7 +2896,7 @@ it is easy to use your own cloud sync provider, and additional features are prov
 		<summary>Stats</summary>
 
 		[![GitHub: notable/notable](https://img.shields.io/github/stars/notable/notable?style=flat&logo=github&label=notable&color=%235f53f4&cacheSeconds=3600)](https://github.com/notable/notable)  [![Notable on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Notable)](https://awesome-privacy.xyz/productivity/digital-notes/notable) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://joplinapp.org/images/favicon.png' width='16' height='16' alt='icon' /> Joplin](https://joplinapp.org)** - Cross-platform desktop and mobile note-taking and todo app. Easy organisation into notebooks and
@@ -2907,7 +2907,7 @@ other services. Supports synchronisation with cloud services, implemented with E
 		<summary>Stats</summary>
 
 		[![GitHub: laurent22/joplin](https://img.shields.io/github/stars/laurent22/joplin?style=flat&logo=github&label=joplin&color=%235f53f4&cacheSeconds=3600)](https://github.com/laurent22/joplin) [![Privacy Policy](https://shields.tosdr.org/en_9477.svg)](https://tosdr.org/en/service/9477) [![Joplin on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Joplin)](https://awesome-privacy.xyz/productivity/digital-notes/joplin) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://logseq.com/logo-with-border.5bf84f43.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
@@ -2920,7 +2920,7 @@ Includes themes and extensions, backed by a strong community
 		<summary>Stats</summary>
 
 		[![GitHub: logseq/logseq](https://img.shields.io/github/stars/logseq/logseq?style=flat&logo=github&label=logseq&color=%235f53f4&cacheSeconds=3600)](https://github.com/logseq/logseq)  [![Logseq on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Logseq)](https://awesome-privacy.xyz/productivity/digital-notes/logseq) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://obsidian.md/favicon.svg' width='16' height='16' alt='icon' /> Obsidian](https://obsidian.md/)** - A powerful knowledge base that works on top of local plain-text Markdown files. It has a strong
@@ -2931,7 +2931,7 @@ encryption out of the box, and some of the code is obfuscated or not fully open 
 		<summary>Stats</summary>
 
 		[![GitHub: obsidianmd/obsidian-releases](https://img.shields.io/github/stars/obsidianmd/obsidian-releases?style=flat&logo=github&label=obsidian-releases&color=%235f53f4&cacheSeconds=3600)](https://github.com/obsidianmd/obsidian-releases) [![Privacy Policy](https://shields.tosdr.org/en_3870.svg)](https://tosdr.org/en/service/3870) [![Obsidian on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Obsidian)](https://awesome-privacy.xyz/productivity/digital-notes/obsidian) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/affine.pro' width='16' height='16' alt='icon' /> AFFiNE](https://affine.pro)** - Privacy first, open-source alternative to Notion, monday.com and Miro.
@@ -2941,7 +2941,7 @@ It is a knowledge management tool that allows you to create, organize and share 
 		<summary>Stats</summary>
 
 		[![GitHub: toeverything/AFFiNE](https://img.shields.io/github/stars/toeverything/AFFiNE?style=flat&logo=github&label=AFFiNE&color=%235f53f4&cacheSeconds=3600)](https://github.com/toeverything/AFFiNE)  [![AFFiNE on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AFFiNE)](https://awesome-privacy.xyz/productivity/digital-notes/affine) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://raw.githubusercontent.com/cryptee/web-client/v3/source/assets/logo-b.svg' width='16' height='16' alt='icon' /> Cryptee](https://crypt.ee/)** - Private & encrypted rich-text documents. Cryptee has encryption and anonymity at its core,
@@ -2954,7 +2954,7 @@ month for 10GB, additional plans go up-to 2TB.
 		<summary>Stats</summary>
 
 		[![GitHub: cryptee/web-client](https://img.shields.io/github/stars/cryptee/web-client?style=flat&logo=github&label=web-client&color=%235f53f4&cacheSeconds=3600)](https://github.com/cryptee/web-client) [![Privacy Policy](https://shields.tosdr.org/en_5047.svg)](https://tosdr.org/en/service/5047) [![Cryptee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cryptee)](https://awesome-privacy.xyz/productivity/digital-notes/cryptee) 
- 
+˙ 
 
 		</details>
 
@@ -2999,7 +2999,7 @@ clients for Windows, Mac, Linux, Android and iOS.
 		<summary>Stats</summary>
 
 		[![GitHub: haiwen/seafile](https://img.shields.io/github/stars/haiwen/seafile?style=flat&logo=github&label=seafile&color=%235f53f4&cacheSeconds=3600)](https://github.com/haiwen/seafile) [![Privacy Policy](https://shields.tosdr.org/en_4322.svg)](https://tosdr.org/en/service/4322) [![SeaFile on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SeaFile)](https://awesome-privacy.xyz/productivity/backup-and-sync/seafile) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://syncthing.net/img/favicons/apple-touch-icon-152x152.png' width='16' height='16' alt='icon' /> Syncthing](https://syncthing.net)** - Continuous file synchronization between 2 or more clients. It is simple,
@@ -3011,7 +3011,7 @@ for Windows, Mac, Linux, BSD and Android.
 		<summary>Stats</summary>
 
 		[![GitHub: syncthing/syncthing](https://img.shields.io/github/stars/syncthing/syncthing?style=flat&logo=github&label=syncthing&color=%235f53f4&cacheSeconds=3600)](https://github.com/syncthing/syncthing)  [![Syncthing on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Syncthing)](https://awesome-privacy.xyz/productivity/backup-and-sync/syncthing) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - Feature-rich productivity platform, that can be used to backup and
@@ -3023,7 +3023,7 @@ maintained by the community. NextCloud was a hard fork off OwnCloud.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_707.svg)](https://tosdr.org/en/service/707) [![NextCloud on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NextCloud)](https://awesome-privacy.xyz/productivity/backup-and-sync/nextcloud) 
- 
+˙ 
 
 		</details>
 
@@ -3072,7 +3072,7 @@ for 50mb or $5/ month for premium.
 		<summary>Stats</summary>
 
 		[![GitHub: xwiki-labs/cryptpad](https://img.shields.io/github/stars/xwiki-labs/cryptpad?style=flat&logo=github&label=cryptpad&color=%235f53f4&cacheSeconds=3600)](https://github.com/xwiki-labs/cryptpad) [![Privacy Policy](https://shields.tosdr.org/en_2584.svg)](https://tosdr.org/en/service/2584) [![CryptPad on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=CryptPad)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/cryptpad) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='16' height='16' alt='icon' /> NextCloud](https://nextcloud.com)** - A complete self-hosted productivity platform, with a strong community
@@ -3085,7 +3085,7 @@ files, but you need to configure this yourself. Fully open source.
 		<summary>Stats</summary>
 
 		[![GitHub: nextcloud/server](https://img.shields.io/github/stars/nextcloud/server?style=flat&logo=github&label=server&color=%235f53f4&cacheSeconds=3600)](https://github.com/nextcloud/server) [![Privacy Policy](https://shields.tosdr.org/en_707.svg)](https://tosdr.org/en/service/707) [![NextCloud on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NextCloud)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/nextcloud) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://disroot.org/user/themes/disroot/images/favicon.png' width='16' height='16' alt='icon' /> Disroot](https://disroot.org)** - A platform providing online services based on principles of freedom,
@@ -3098,7 +3098,7 @@ there have been reported reliability issues of the cloud services.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1826.svg)](https://tosdr.org/en/service/1826) [![Disroot on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Disroot)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/disroot) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://sandstorm.io/favicon.ico' width='16' height='16' alt='icon' /> Sandstorm](https://sandstorm.io)** - An open source platform for self-hosting web apps. Once you've set it up,
@@ -3109,7 +3109,7 @@ similar to NextCloud in terms of flexibility.
 		<summary>Stats</summary>
 
 		[![GitHub: sandstorm-io/sandstorm](https://img.shields.io/github/stars/sandstorm-io/sandstorm?style=flat&logo=github&label=sandstorm&color=%235f53f4&cacheSeconds=3600)](https://github.com/sandstorm-io/sandstorm)  [![Sandstorm on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Sandstorm)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/sandstorm) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://vikunja.io/favicon.ico' width='16' height='16' alt='icon' /> Vikunja](https://vikunja.io)** - Vikunja is an open-source to-do application. It is suitable for a wide
@@ -3122,7 +3122,7 @@ or used as a managed service for a small fee.
 		<summary>Stats</summary>
 
 		[![GitHub: go-vikunja/vikunja](https://img.shields.io/github/stars/go-vikunja/vikunja?style=flat&logo=github&label=vikunja&color=%235f53f4&cacheSeconds=3600)](https://github.com/go-vikunja/vikunja)  [![Vikunja on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Vikunja)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/vikunja) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://skiff.com/favicon.ico' width='16' height='16' alt='icon' /> Skiff Pages](https://skiff.com/pages)** - Skiff Pages is an end-to-end encrypted, privacy-first collaborative
@@ -3135,7 +3135,7 @@ Skiff also supports end-to-end encrypted file upload and sharing
 		<summary>Stats</summary>
 
 		[![GitHub: skiff-org/skiff-apps](https://img.shields.io/github/stars/skiff-org/skiff-apps?style=flat&logo=github&label=skiff-apps&color=%235f53f4&cacheSeconds=3600)](https://github.com/skiff-org/skiff-apps) [![Privacy Policy](https://shields.tosdr.org/en_8470.svg)](https://tosdr.org/en/service/8470) [![Skiff Pages on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Skiff_Pages)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/skiff-pages) 
- 
+˙ 
 
 		</details>
 
@@ -3160,7 +3160,7 @@ The app is cross-platform, user-friendly client and with all expected features. 
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1696.svg)](https://tosdr.org/en/service/1696) [![Tresorit on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tresorit)](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/tresorit) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/icedrive.net' width='16' height='16' alt='icon' /> IceDrive](https://icedrive.net)** - Very affordable encrypted storage provider, with cross-platform apps. Starts as £1.50/month for 150 GB
@@ -3170,7 +3170,7 @@ or £3.33/month for 1 TB.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3118.svg)](https://tosdr.org/en/service/3118) [![IceDrive on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=IceDrive)](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/icedrive) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.sync.com' width='16' height='16' alt='icon' /> Sync.com](https://www.sync.com)** - Secure file sync, sharing, collaboration and backup for individuals, small businesses and sole practitioners.
@@ -3180,7 +3180,7 @@ Starts at $8/month for 2 TB.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_698.svg)](https://tosdr.org/en/service/698) [![Sync.com on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Sync.com)](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/sync.com) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.pcloud.com' width='16' height='16' alt='icon' /> pCloud](https://www.pcloud.com)** - Secure and simple to use cloud storage, with cross-platform client apps. £3.99/month for 500 GB.
@@ -3198,7 +3198,7 @@ privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB F
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_4176.svg)](https://tosdr.org/en/service/4176) [![Internxt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Internxt)](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/internxt) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/filen.io' width='16' height='16' alt='icon' /> FileN](https://filen.io/)** - Zero knowledge end-to-end encrypted affordable cloud storage made in Germany. Open-source mobile and desktop apps.
@@ -3208,7 +3208,7 @@ privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB F
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_6820.svg)](https://tosdr.org/en/service/6820) [![FileN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FileN)](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/filen) 
- 
+˙ 
 
 		</details>
 
@@ -3236,7 +3236,7 @@ require any software to be installed. Can also be self-hosted.
 		<summary>Stats</summary>
 
 		[![GitHub: kern/filepizza](https://img.shields.io/github/stars/kern/filepizza?style=flat&logo=github&label=filepizza&color=%235f53f4&cacheSeconds=3600)](https://github.com/kern/filepizza)  [![FilePizza on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FilePizza)](https://awesome-privacy.xyz/productivity/file-drop/filepizza) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/filesend.standardnotes.org' width='16' height='16' alt='icon' /> FileSend](https://filesend.standardnotes.org)** - Simple, encrypted file sharing, with a 500mb limit and 5-day retention. Files are secured with client-side AES-256
@@ -3252,7 +3252,7 @@ the process will be terminated.
 		<summary>Stats</summary>
 
 		[![GitHub: micahflee/onionshare](https://img.shields.io/github/stars/micahflee/onionshare?style=flat&logo=github&label=onionshare&color=%235f53f4&cacheSeconds=3600)](https://github.com/micahflee/onionshare)  [![OnionShare on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OnionShare)](https://awesome-privacy.xyz/productivity/file-drop/onionshare) 
- 
+˙ 
 
 		</details>
 
@@ -3280,7 +3280,7 @@ or just a local folder through LoFloccus. Browser extensions available for Chrom
 		<summary>Stats</summary>
 
 		[![GitHub: marcelklehr/floccus](https://img.shields.io/github/stars/marcelklehr/floccus?style=flat&logo=github&label=floccus&color=%235f53f4&cacheSeconds=3600)](https://github.com/marcelklehr/floccus)  [![Floccus on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Floccus)](https://awesome-privacy.xyz/productivity/browser-sync/floccus) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.xbrowsersync.org' width='16' height='16' alt='icon' /> XBrowserSync](https://www.xbrowsersync.org)** - Secure, anonymous and free browser and bookmark syncing. Easy to setup, and no sign up is required, you can
@@ -3291,7 +3291,7 @@ Chrome, Firefox, and on Android.
 		<summary>Stats</summary>
 
 		[![GitHub: xbrowsersync/app](https://img.shields.io/github/stars/xbrowsersync/app?style=flat&logo=github&label=app&color=%235f53f4&cacheSeconds=3600)](https://github.com/xbrowsersync/app)  [![XBrowserSync on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=XBrowserSync)](https://awesome-privacy.xyz/productivity/browser-sync/xbrowsersync) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/unmark.it' width='16' height='16' alt='icon' /> Unmark](https://unmark.it)** - A web application which acts as a todo app for bookmarks. You can either self-host it, or use their managed
@@ -3301,7 +3301,7 @@ service which has a free and paid-for tier.
 		<summary>Stats</summary>
 
 		[![GitHub: cdevroe/unmark](https://img.shields.io/github/stars/cdevroe/unmark?style=flat&logo=github&label=unmark&color=%235f53f4&cacheSeconds=3600)](https://github.com/cdevroe/unmark) [![Privacy Policy](https://shields.tosdr.org/en_9301.svg)](https://tosdr.org/en/service/9301) [![Unmark on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Unmark)](https://awesome-privacy.xyz/productivity/browser-sync/unmark) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Reminiscence](https://github.com/kanishka-linux/reminiscence)** - A self-hosted bookmark and archive manager. Reminiscence is more geared towards archiving useful web pages
@@ -3313,7 +3313,7 @@ currently no browser extension.
 		<summary>Stats</summary>
 
 		[![GitHub: kanishka-linux/reminiscence](https://img.shields.io/github/stars/kanishka-linux/reminiscence?style=flat&logo=github&label=reminiscence&color=%235f53f4&cacheSeconds=3600)](https://github.com/kanishka-linux/reminiscence)  [![Reminiscence on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Reminiscence)](https://awesome-privacy.xyz/productivity/browser-sync/reminiscence) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://avatars.githubusercontent.com/u/41993376?s=200&v=4' width='16' height='16' alt='icon' /> Shiori](https://github.com/go-shiori/shiori)** - Simple bookmark manager written in Go, intended to be a clone of Pocket, it has both a simple and clean web
@@ -3323,7 +3323,7 @@ interface as well as a CLI. Shiori has easy import/ export, is portable and has 
 		<summary>Stats</summary>
 
 		[![GitHub: go-shiori/shiori](https://img.shields.io/github/stars/go-shiori/shiori?style=flat&logo=github&label=shiori&color=%235f53f4&cacheSeconds=3600)](https://github.com/go-shiori/shiori)  [![Shiori on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Shiori)](https://awesome-privacy.xyz/productivity/browser-sync/shiori) 
- 
+˙ 
 
 		</details>
 
@@ -3370,7 +3370,7 @@ Video quality is quite good, but very dependent on network speeds, some of the a
 		<summary>Stats</summary>
 
 		[![GitHub: savoirfairelinux/jami-project](https://img.shields.io/github/stars/savoirfairelinux/jami-project?style=flat&logo=github&label=jami-project&color=%235f53f4&cacheSeconds=3600)](https://github.com/savoirfairelinux/jami-project)  [![Jami on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Jami)](https://awesome-privacy.xyz/productivity/secure-conference-calls/jami) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://jitsi.org/wp-content/uploads/2020/04/Jitsi-favicon-196-50x50.png' width='16' height='16' alt='icon' /> Jitsi](https://jitsi.org)** - Encrypted, free and open source video calling app, which does not require creating an account/ providing any personal
@@ -3381,7 +3381,7 @@ Jitsi instance, self-host your own, or use a community hosted instance.
 		<summary>Stats</summary>
 
 		[![GitHub: jitsi/jitsi-meet](https://img.shields.io/github/stars/jitsi/jitsi-meet?style=flat&logo=github&label=jitsi-meet&color=%235f53f4&cacheSeconds=3600)](https://github.com/jitsi/jitsi-meet) [![Privacy Policy](https://shields.tosdr.org/en_2201.svg)](https://tosdr.org/en/service/2201) [![Jitsi on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Jitsi)](https://awesome-privacy.xyz/productivity/secure-conference-calls/jitsi) 
- 
+˙ 
 
 		</details>
 
@@ -3426,7 +3426,7 @@ There's also an [iOS](https://getutm.app/) version (so you can run Windows on yo
 		<summary>Stats</summary>
 
 		[![GitHub: utmapp/UTM](https://img.shields.io/github/stars/utmapp/UTM?style=flat&logo=github&label=UTM&color=%235f53f4&cacheSeconds=3600)](https://github.com/utmapp/UTM) [![Privacy Policy](https://shields.tosdr.org/en_8038.svg)](https://tosdr.org/en/service/8038) [![UTM on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=UTM)](https://awesome-privacy.xyz/utilities/virtual-machines/utm) 
- 
+˙ 
 
 		</details>
 
@@ -3469,7 +3469,7 @@ keybox and retrieving certificates from LDAP servers.
 		<summary>Stats</summary>
 
 		[![GitHub: gpg/gpg4win](https://img.shields.io/github/stars/gpg/gpg4win?style=flat&logo=github&label=gpg4win&color=%235f53f4&cacheSeconds=3600)](https://github.com/gpg/gpg4win) [![Privacy Policy](https://shields.tosdr.org/en_8276.svg)](https://tosdr.org/en/service/8276) [![GPG4Win on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=GPG4Win)](https://awesome-privacy.xyz/utilities/pgp-managers/gpg4win) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://gpgtools.org/favicon-152.png' width='16' height='16' alt='icon' /> GPG Suite](https://gpgtools.org)** - Successor of MacGPG. Plays nice with MacOS apps, including Finder, Appple Mail, Keychain and Spotlight.
@@ -3485,7 +3485,7 @@ Open source, security audited, transparent permissions, and activley maintained.
 		<summary>Stats</summary>
 
 		[![GitHub: open-keychain/open-keychain](https://img.shields.io/github/stars/open-keychain/open-keychain?style=flat&logo=github&label=open-keychain&color=%235f53f4&cacheSeconds=3600)](https://github.com/open-keychain/open-keychain) [![Privacy Policy](https://shields.tosdr.org/en_7378.svg)](https://tosdr.org/en/service/7378) [![OpenKeychain on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OpenKeychain)](https://awesome-privacy.xyz/utilities/pgp-managers/openkeychain) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://www.pgpeverywhere.com/i/favicon/favicon-16x16.png' width='16' height='16' alt='icon' /> PGP Everywhere](https://www.pgpeverywhere.com)** - iOS app for encrypting/ decrypting text.
@@ -3498,7 +3498,7 @@ Mobile version supported on Android and iOS.
 		<summary>Stats</summary>
 
 		[![GitHub: FlowCrypt/flowcrypt-browser](https://img.shields.io/github/stars/FlowCrypt/flowcrypt-browser?style=flat&logo=github&label=flowcrypt-browser&color=%235f53f4&cacheSeconds=3600)](https://github.com/FlowCrypt/flowcrypt-browser)  [![FlowCrypt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FlowCrypt)](https://awesome-privacy.xyz/utilities/pgp-managers/flowcrypt) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://enigmail.net/favicon.ico' width='16' height='16' alt='icon' /> EnigMail](https://enigmail.net)** - OpenPGP extension for Thunderbird and PostBox, integrates natively within mail app.
@@ -3511,7 +3511,7 @@ Works with Gmail, Yahoo, Outlook, GMX, Posteo, Web.de, FreeNet.de, Mailbox.org a
 		<summary>Stats</summary>
 
 		[![GitHub: mailvelope/mailvelope](https://img.shields.io/github/stars/mailvelope/mailvelope?style=flat&logo=github&label=mailvelope&color=%235f53f4&cacheSeconds=3600)](https://github.com/mailvelope/mailvelope) [![Privacy Policy](https://shields.tosdr.org/en_6210.svg)](https://tosdr.org/en/service/6210) [![Mailvelope on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mailvelope)](https://awesome-privacy.xyz/utilities/pgp-managers/mailvelope) 
-🛡️ Security Audited  
+🛡️ Security Audited ˙ 
 
 		</details>
 
@@ -3540,7 +3540,7 @@ easy, and has great batch process support. Created by @szTheory, and uses ExifTo
 		<summary>Stats</summary>
 
 		[![GitHub: szTheory/exifcleaner](https://img.shields.io/github/stars/szTheory/exifcleaner?style=flat&logo=github&label=exifcleaner&color=%235f53f4&cacheSeconds=3600)](https://github.com/szTheory/exifcleaner)  [![ExifCleaner on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ExifCleaner)](https://awesome-privacy.xyz/utilities/metadata-removal/exifcleaner) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/exiftool.org' width='16' height='16' alt='icon' /> ExifTool](https://exiftool.org)** - Platform-independent open source Perl library & CLI app, for reading, writing and editing meta data. Built by Phill
@@ -3551,7 +3551,7 @@ for Windows, implemented by Bogdan Hrastnik.
 		<summary>Stats</summary>
 
 		[![GitHub: exiftool/exiftool](https://img.shields.io/github/stars/exiftool/exiftool?style=flat&logo=github&label=exiftool&color=%235f53f4&cacheSeconds=3600)](https://github.com/exiftool/exiftool)  [![ExifTool on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ExifTool)](https://awesome-privacy.xyz/utilities/metadata-removal/exiftool) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://imageoptim.com/icon.png' width='16' height='16' alt='icon' /> ImageOptim](https://imageoptim.com/mac)** - Native MacOS app, with drag 'n drop image optimization and meta data removal.
@@ -3560,7 +3560,7 @@ for Windows, implemented by Bogdan Hrastnik.
 		<summary>Stats</summary>
 
 		[![GitHub: ImageOptim/ImageOptim](https://img.shields.io/github/stars/ImageOptim/ImageOptim?style=flat&logo=github&label=ImageOptim&color=%235f53f4&cacheSeconds=3600)](https://github.com/ImageOptim/ImageOptim)  [![ImageOptim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ImageOptim)](https://awesome-privacy.xyz/utilities/metadata-removal/imageoptim) 
- 
+˙ 
 
 		</details>
 
@@ -3604,7 +3604,7 @@ selected patterns.
 		<summary>Stats</summary>
 
 		[![GitHub: gtrant/eraser](https://img.shields.io/github/stars/gtrant/eraser?style=flat&logo=github&label=eraser&color=%235f53f4&cacheSeconds=3600)](https://github.com/gtrant/eraser)  [![Eraser on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Eraser)](https://awesome-privacy.xyz/utilities/data-erasers/eraser) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.summitcn.com' width='16' height='16' alt='icon' /> Hard Disk Scrubber](http://www.summitcn.com/hdscrub.html)** - Easy to use, but with some advanced features, including custom wipe patterns. Data Sanitation Methods: AFSSI-5020,
@@ -3626,7 +3626,7 @@ tool designed for legal compliance.
 		<summary>Stats</summary>
 
 		[![GitHub: martijnvanbrummelen/nwipe](https://img.shields.io/github/stars/martijnvanbrummelen/nwipe?style=flat&logo=github&label=nwipe&color=%235f53f4&cacheSeconds=3600)](https://github.com/martijnvanbrummelen/nwipe)  [![nwipe on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nwipe)](https://awesome-privacy.xyz/utilities/data-erasers/nwipe) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.gnu.org/favicon.ico' width='16' height='16' alt='icon' /> shred](https://www.gnu.org/software/coreutils/manual/html_node/shred-invocation.html)** - A CLI utility that can be used to securely delete files and devices, to make them extremely difficult to recover.
@@ -3685,7 +3685,7 @@ GrapheneOS is a young project, and currently only supports Pixel devices, partia
 		<summary>Stats</summary>
 
 		[![GitHub: GrapheneOS/hardened_malloc](https://img.shields.io/github/stars/GrapheneOS/hardened_malloc?style=flat&logo=github&label=hardened_malloc&color=%235f53f4&cacheSeconds=3600)](https://github.com/GrapheneOS/hardened_malloc)  [![GrapheneOS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=GrapheneOS)](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/grapheneos) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://calyxos.org/assets/images/favicon/apple-touch-icon.png' width='16' height='16' alt='icon' /> CalyxOS](https://calyxos.org)** - CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users. 
@@ -3696,7 +3696,7 @@ only supports Pixel devices and Xiaomi Mi A2 with Fairphone 4, OnePlus 8T, OnePl
 		<summary>Stats</summary>
 
 		[![GitHub: CalyxOS/calyxos](https://img.shields.io/github/stars/CalyxOS/calyxos?style=flat&logo=github&label=calyxos&color=%235f53f4&cacheSeconds=3600)](https://github.com/CalyxOS/calyxos) [![Privacy Policy](https://shields.tosdr.org/en_2558.svg)](https://tosdr.org/en/service/2558) [![CalyxOS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=CalyxOS)](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/calyxos) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://divestos.org/images/favicon.png' width='16' height='16' alt='icon' /> DivestOS](https://divestos.org)** - DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of 
@@ -3707,7 +3707,7 @@ solely by Tad (SkewedZeppelin) since 2014.
 		<summary>Stats</summary>
 
 		[![GitHub: Divested-Mobile/DivestOS-Build](https://img.shields.io/github/stars/Divested-Mobile/DivestOS-Build?style=flat&logo=github&label=DivestOS-Build&color=%235f53f4&cacheSeconds=3600)](https://github.com/Divested-Mobile/DivestOS-Build) [![Privacy Policy](https://shields.tosdr.org/en_2550.svg)](https://tosdr.org/en/service/2550) [![DivestOS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DivestOS)](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/divestos) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.lineageos.org/images/logo.png' width='16' height='16' alt='icon' /> LineageOS](https://www.lineageos.org)** - A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained, 
@@ -3717,7 +3717,7 @@ supports a wide range of devices, and comes bundled with Privacy Guard.
 		<summary>Stats</summary>
 
 		[![GitHub: LineageOS/android](https://img.shields.io/github/stars/LineageOS/android?style=flat&logo=github&label=android&color=%235f53f4&cacheSeconds=3600)](https://github.com/LineageOS/android) [![Privacy Policy](https://shields.tosdr.org/en_7188.svg)](https://tosdr.org/en/service/7188) [![LineageOS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LineageOS)](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/lineageos) 
- 
+˙ 
 
 		</details>
 
@@ -3778,7 +3778,7 @@ when closed. Qubes is recommended by Edward Snowden.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2258.svg)](https://tosdr.org/en/service/2258) [![Qubes OS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Qubes_OS)](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/qubes-os) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.whonix.org' width='16' height='16' alt='icon' /> Whonix](https://www.whonix.org/)** - Whonix is an anonymous operating system, which can run in a VM, inside your current OS. It is the best way to
@@ -3801,7 +3801,7 @@ pen-testing tools, similar to Kali and Black Arch.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_8267.svg)](https://tosdr.org/en/service/8267) [![Parrot on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Parrot)](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/parrot) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.privacy-cd.org' width='16' height='16' alt='icon' /> Discreete Linux](https://www.privacy-cd.org/)** - Aimed at journalists, activists and whistle-blowers, Discreete Linux is similar to Tails, in that it is booted
@@ -3925,7 +3925,7 @@ torrenting through Transmission, browsing the web, opening downloaded attachment
 		<summary>Stats</summary>
 
 		[![GitHub: netblue30/firejail](https://img.shields.io/github/stars/netblue30/firejail?style=flat&logo=github&label=firejail&color=%235f53f4&cacheSeconds=3600)](https://github.com/netblue30/firejail)  [![Firejail on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firejail)](https://awesome-privacy.xyz/operating-systems/linux-defenses/firejail) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/gufw.org' width='16' height='16' alt='icon' /> Gufw](http://gufw.org)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
@@ -3939,7 +3939,7 @@ for Linux systems.
 		<summary>Stats</summary>
 
 		[![GitHub: dave_m/clamtk](https://img.shields.io/github/stars/dave_m/clamtk?style=flat&logo=github&label=clamtk&color=%235f53f4&cacheSeconds=3600)](https://github.com/dave_m/clamtk)  [![ClamTk on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ClamTk)](https://awesome-privacy.xyz/operating-systems/linux-defenses/clamtk) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.chkrootkit.org' width='16' height='16' alt='icon' /> chkrootkit](http://www.chkrootkit.org)** - Locally checks for signs of a rootkit.
@@ -3970,7 +3970,7 @@ Open source, written in Go and delivered as a single executable.
 		<summary>Stats</summary>
 
 		[![GitHub: crazy-max/WindowsSpyBlocker](https://img.shields.io/github/stars/crazy-max/WindowsSpyBlocker?style=flat&logo=github&label=WindowsSpyBlocker&color=%235f53f4&cacheSeconds=3600)](https://github.com/crazy-max/WindowsSpyBlocker)  [![Windows Spy Blocker on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Windows_Spy_Blocker)](https://awesome-privacy.xyz/operating-systems/windows-defences/windows-spy-blocker) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> HardenTools](https://github.com/securitywithoutborders/hardentools)** - A utility that disables a number of risky Windows features. These "features"
@@ -3983,7 +3983,7 @@ disabling the low-hanging fruit.
 		<summary>Stats</summary>
 
 		[![GitHub: securitywithoutborders/hardentools](https://img.shields.io/github/stars/securitywithoutborders/hardentools?style=flat&logo=github&label=hardentools&color=%235f53f4&cacheSeconds=3600)](https://github.com/securitywithoutborders/hardentools)  [![HardenTools on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=HardenTools)](https://awesome-privacy.xyz/operating-systems/windows-defences/hardentools) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.oo-software.com/oocontent/themes/oo2017/images/icons/front/oosu10.png' width='16' height='16' alt='icon' /> ShutUp10](https://www.oo-software.com/en/shutup10)** - A portable app that lets you disable core Windows features (such as Cortana,
@@ -4020,7 +4020,7 @@ Server.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_9043.svg)](https://tosdr.org/en/service/9043) [![NetLimiter on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NetLimiter)](https://awesome-privacy.xyz/operating-systems/windows-defences/netlimiter) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Sticky-Keys-Slayer](https://github.com/linuz/Sticky-Keys-Slayer)** - Scans for accessibility tools backdoors via RDP.
@@ -4029,7 +4029,7 @@ Server.
 		<summary>Stats</summary>
 
 		[![GitHub: linuz/Sticky-Keys-Slayer](https://img.shields.io/github/stars/linuz/Sticky-Keys-Slayer?style=flat&logo=github&label=Sticky-Keys-Slayer&color=%235f53f4&cacheSeconds=3600)](https://github.com/linuz/Sticky-Keys-Slayer)  [![Sticky-Keys-Slayer on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Sticky-Keys-Slayer)](https://awesome-privacy.xyz/operating-systems/windows-defences/sticky-keys-slayer) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/docs.microsoft.com' width='16' height='16' alt='icon' /> SigCheck](https://docs.microsoft.com/en-us/sysinternals/downloads/sigcheck)** - A CLI utility that shows file version number, timestamp information,
@@ -4047,7 +4047,7 @@ maintaining the latest releases of Windows 10.
 		<summary>Stats</summary>
 
 		[![GitHub: nsacyber/Windows-Secure-Host-Baseline](https://img.shields.io/github/stars/nsacyber/Windows-Secure-Host-Baseline?style=flat&logo=github&label=Windows-Secure-Host-Baseline&color=%235f53f4&cacheSeconds=3600)](https://github.com/nsacyber/Windows-Secure-Host-Baseline)  [![Windows Secure Baseline on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Windows_Secure_Baseline)](https://awesome-privacy.xyz/operating-systems/windows-defences/windows-secure-baseline) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.usb-antivirus.com/wp-content/uploads/2015/12/logo-usbfix-80x80.png.webp' width='16' height='16' alt='icon' /> USBFix](https://www.usb-antivirus.com)** - Detects infected USB removable devices.
@@ -4064,7 +4064,7 @@ maintaining the latest releases of Windows 10.
 		<summary>Stats</summary>
 
 		[![GitHub: mirinsoft/spydish](https://img.shields.io/github/stars/mirinsoft/spydish?style=flat&logo=github&label=spydish&color=%235f53f4&cacheSeconds=3600)](https://github.com/mirinsoft/spydish)  [![SpyDish on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SpyDish)](https://awesome-privacy.xyz/operating-systems/windows-defences/spydish) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> SharpApp](https://github.com/mirinsoft/sharpapp)** - Open source GUI app built upon PowerShell, for disabling telemetry functions in Windows 10, uninstalling preinstalled apps, installing software packages and automating Windows tasks with integrated PowerShell scripting.
@@ -4073,7 +4073,7 @@ maintaining the latest releases of Windows 10.
 		<summary>Stats</summary>
 
 		[![GitHub: mirinsoft/sharpapp](https://img.shields.io/github/stars/mirinsoft/sharpapp?style=flat&logo=github&label=sharpapp&color=%235f53f4&cacheSeconds=3600)](https://github.com/mirinsoft/sharpapp)  [![SharpApp on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SharpApp)](https://awesome-privacy.xyz/operating-systems/windows-defences/sharpapp) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Debotnet](https://github.com/Mirinsoft/Debotnet)** - Light-weight, portable app for controlling the many privacy-related settings within Windows 10- with the aim of helping to keep private data, private.
@@ -4082,7 +4082,7 @@ maintaining the latest releases of Windows 10.
 		<summary>Stats</summary>
 
 		[![GitHub: Mirinsoft/Debotnet](https://img.shields.io/github/stars/Mirinsoft/Debotnet?style=flat&logo=github&label=Debotnet&color=%235f53f4&cacheSeconds=3600)](https://github.com/Mirinsoft/Debotnet)  [![Debotnet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Debotnet)](https://awesome-privacy.xyz/operating-systems/windows-defences/debotnet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/privazer.com' width='16' height='16' alt='icon' /> PrivaZer](https://privazer.com/)** - Good alternative to CCleaner, for deleting unnecessary data - logs, cache, history, etc.
@@ -4126,7 +4126,7 @@ From a security and privacy perspective, Linux may be a better option.
 		<summary>Stats</summary>
 
 		[![GitHub: objective-see/LuLu](https://img.shields.io/github/stars/objective-see/LuLu?style=flat&logo=github&label=LuLu&color=%235f53f4&cacheSeconds=3600)](https://github.com/objective-see/LuLu) [![Privacy Policy](https://shields.tosdr.org/en_3069.svg)](https://tosdr.org/en/service/3069) [![LuLu on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LuLu)](https://awesome-privacy.xyz/operating-systems/mac-os-defences/lulu) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/jVmsrYp/stronghold.png' width='16' height='16' alt='icon' /> Stronghold](https://github.com/alichtman/stronghold)** - Easily configure macOS security settings from the terminal.
@@ -4135,7 +4135,7 @@ From a security and privacy perspective, Linux may be a better option.
 		<summary>Stats</summary>
 
 		[![GitHub: alichtman/stronghold](https://img.shields.io/github/stars/alichtman/stronghold?style=flat&logo=github&label=stronghold&color=%235f53f4&cacheSeconds=3600)](https://github.com/alichtman/stronghold)  [![Stronghold on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Stronghold)](https://awesome-privacy.xyz/operating-systems/mac-os-defences/stronghold) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Fortress](https://github.com/essandess/macOS-Fortress)** - Kernel-level, OS-level, and client-level security for macOS. With a Firewall, Blackhole, and Privatizing Proxy for Trackers, Attackers, Malware, Adware, and Spammers; with On-Demand and On-Access Anti-Virus Scanning.
@@ -4144,7 +4144,7 @@ From a security and privacy perspective, Linux may be a better option.
 		<summary>Stats</summary>
 
 		[![GitHub: essandess/macOS-Fortress](https://img.shields.io/github/stars/essandess/macOS-Fortress?style=flat&logo=github&label=macOS-Fortress&color=%235f53f4&cacheSeconds=3600)](https://github.com/essandess/macOS-Fortress)  [![Fortress on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Fortress)](https://awesome-privacy.xyz/operating-systems/mac-os-defences/fortress) 
- 
+˙ 
 
 		</details>
 
@@ -4164,7 +4164,7 @@ Cross-platform, open source malware detection and virus prevention tools
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1886.svg)](https://tosdr.org/en/service/1886) [![VirusTotal on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VirusTotal)](https://awesome-privacy.xyz/operating-systems/anti-malware/virustotal) 
- 
+˙ 
 
 		</details>
 
@@ -4208,7 +4208,7 @@ so it is important to go with a trusted vendor, and monitor its activity closely
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1607.svg)](https://tosdr.org/en/service/1607) [![SourceHut on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SourceHut)](https://awesome-privacy.xyz/development/code-hosting/sourcehut) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://codeberg.org/assets/img/favicon.svg' width='16' height='16' alt='icon' /> Codeberg](https://codeberg.org)** - A fully-managed instance of Forgejo.
@@ -4217,7 +4217,7 @@ so it is important to go with a trusted vendor, and monitor its activity closely
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3370.svg)](https://tosdr.org/en/service/3370) [![Codeberg on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Codeberg)](https://awesome-privacy.xyz/development/code-hosting/codeberg) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/gitlab.com' width='16' height='16' alt='icon' /> GitLab](https://gitlab.com)** - Fully-featured git, CI and project management platform. Managed instance available, but can also be self-hosted.
@@ -4226,7 +4226,7 @@ so it is important to go with a trusted vendor, and monitor its activity closely
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_514.svg)](https://tosdr.org/en/service/514) [![GitLab on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=GitLab)](https://awesome-privacy.xyz/development/code-hosting/gitlab) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/gitea.io' width='16' height='16' alt='icon' /> Gitea](https://gitea.io/)** - Lightweight self-hosted git platform, written in Go.
@@ -4274,7 +4274,7 @@ easy development of new skills.
 		<summary>Stats</summary>
 
 		[![GitHub: MycroftAI/mycroft-core](https://img.shields.io/github/stars/MycroftAI/mycroft-core?style=flat&logo=github&label=mycroft-core&color=%235f53f4&cacheSeconds=3600)](https://github.com/MycroftAI/mycroft-core) [![Privacy Policy](https://shields.tosdr.org/en_1824.svg)](https://tosdr.org/en/service/1824) [![Mycroft on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mycroft)](https://awesome-privacy.xyz/smart-home-and-iot/voice-assistants/mycroft) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/kalliope-project.github.io' width='16' height='16' alt='icon' /> Kalliope](https://kalliope-project.github.io)** - A modular, always-on, voice-controlled personal assistant geared towards home automation.
@@ -4285,7 +4285,7 @@ though the library of pre-built add-ons is not as extensive.
 		<summary>Stats</summary>
 
 		[![GitHub: kalliope-project/kalliope](https://img.shields.io/github/stars/kalliope-project/kalliope?style=flat&logo=github&label=kalliope&color=%235f53f4&cacheSeconds=3600)](https://github.com/kalliope-project/kalliope)  [![Kalliope on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Kalliope)](https://awesome-privacy.xyz/smart-home-and-iot/voice-assistants/kalliope) 
- 
+˙ 
 
 		</details>
 
@@ -4335,7 +4335,7 @@ Actively developed, with good french community and various integrations
 		<summary>Stats</summary>
 
 		[![GitHub: gladysassistant/gladys](https://img.shields.io/github/stars/gladysassistant/gladys?style=flat&logo=github&label=gladys&color=%235f53f4&cacheSeconds=3600)](https://github.com/gladysassistant/gladys)  [![Gladys Assistant on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Gladys_Assistant)](https://awesome-privacy.xyz/smart-home-and-iot/smart-home/gladys-assistant) 
- 
+˙ 
 
 		</details>
 
@@ -4356,7 +4356,7 @@ of which help protect the privacy of users.
 		<summary>Stats</summary>
 
 		[![GitHub: monero-project/monero](https://img.shields.io/github/stars/monero-project/monero?style=flat&logo=github&label=monero&color=%235f53f4&cacheSeconds=3600)](https://github.com/monero-project/monero) [![Privacy Policy](https://shields.tosdr.org/en_8279.svg)](https://tosdr.org/en/service/8279) [![Monero on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Monero)](https://awesome-privacy.xyz/finance/cryptocurrencies/monero) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/z.cash' width='16' height='16' alt='icon' /> ZCash](https://z.cash)** - Uses zero-knowledge proofs to protect privacy cryptographic technique,
@@ -4369,7 +4369,7 @@ are transparent like Bitcoin.
 		<summary>Stats</summary>
 
 		[![GitHub: zcash/zcash](https://img.shields.io/github/stars/zcash/zcash?style=flat&logo=github&label=zcash&color=%235f53f4&cacheSeconds=3600)](https://github.com/zcash/zcash) [![Privacy Policy](https://shields.tosdr.org/en_8258.svg)](https://tosdr.org/en/service/8258) [![ZCash on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ZCash)](https://awesome-privacy.xyz/finance/cryptocurrencies/zcash) 
- 
+˙ 
 
 		</details>
 
@@ -4428,7 +4428,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: zkSNACKs/WalletWasabi](https://img.shields.io/github/stars/zkSNACKs/WalletWasabi?style=flat&logo=github&label=WalletWasabi&color=%235f53f4&cacheSeconds=3600)](https://github.com/zkSNACKs/WalletWasabi)  [![Wasabi Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Wasabi_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/wasabi-wallet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://trezor.io/favicon/apple-touch-icon.png' width='16' height='16' alt='icon' /> Trezor](https://trezor.io)** - Open source, cross-platform, offline, crypto wallet, compatible with 1000+ coins. Your private key is generated on the device, and never leaves it, all transactions are signed by the Trezor, which ensures your wallet is safe from theft. There are native apps for Windows, Linux, MacOS, Android, and iOS, but Trezor is also compatible with other wallets, such as Wasabi. You can back the Trezor up, either by writing down the seed, or by duplicating it to another device. It is simple and intuitive to use, but also incredibly customizable with a large range of advanced features.
@@ -4437,7 +4437,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: trezor/trezor-firmware](https://img.shields.io/github/stars/trezor/trezor-firmware?style=flat&logo=github&label=trezor-firmware&color=%235f53f4&cacheSeconds=3600)](https://github.com/trezor/trezor-firmware)  [![Trezor on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Trezor)](https://awesome-privacy.xyz/finance/crypto-wallets/trezor) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/coldcardwallet.com' width='16' height='16' alt='icon' /> ColdCard](https://coldcardwallet.com/)** - An easy-to-use, super secure Bitcoin hardware wallet, which can be used independently as an air-gapped wallet. ColdCard is based on partially signed Bitcoin transactions following the BIP174 standard. Built specifically for Bitcoin, and with a variety of unique security features, ColdCard is secure, trustless, private, and easy-to-use. Companion products for the ColdCard include: BlockClock, SeedPlate, and ColdPower.
@@ -4446,7 +4446,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: Coldcard/firmware](https://img.shields.io/github/stars/Coldcard/firmware?style=flat&logo=github&label=firmware&color=%235f53f4&cacheSeconds=3600)](https://github.com/Coldcard/firmware)  [![ColdCard on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ColdCard)](https://awesome-privacy.xyz/finance/crypto-wallets/coldcard) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/electrum.org' width='16' height='16' alt='icon' /> Electrum](https://electrum.org/)** - Long-standing Python-based Bitcoin wallet with good security features. Private keys are encrypted and do not touch the internet and balance is checked with a watch-only wallet. Compatible with other wallets, so there is no tie-in, and funds can be recovered with your secret seed. It supports proof-checking to verify transactions using SPV, multi-sig, and add-ons for compatibility with hardware wallets. A decentralized server indexes ledger transactions, meaning it's fast and doesn't require much disk space. The potential security issue here would not be with the wallet, but rather your PC - you must ensure your computer is secure and your wallet has a long, strong passphrase to encrypt it with.
@@ -4455,7 +4455,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: spesmilo/electrum](https://img.shields.io/github/stars/spesmilo/electrum?style=flat&logo=github&label=electrum&color=%235f53f4&cacheSeconds=3600)](https://github.com/spesmilo/electrum) [![Privacy Policy](https://shields.tosdr.org/en_2761.svg)](https://tosdr.org/en/service/2761) [![Electrum on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Electrum)](https://awesome-privacy.xyz/finance/crypto-wallets/electrum) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/samouraiwallet.com' width='16' height='16' alt='icon' /> Samourai Wallet](https://samouraiwallet.com/)** - An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
@@ -4464,7 +4464,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: Samourai-Wallet/samourai-wallet-android](https://img.shields.io/github/stars/Samourai-Wallet/samourai-wallet-android?style=flat&logo=github&label=samourai-wallet-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/Samourai-Wallet/samourai-wallet-android)  [![Samourai Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Samourai_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/sparrowwallet.com' width='16' height='16' alt='icon' /> Sparrow Wallet](https://sparrowwallet.com/)** - Sparrow is a Bitcoin wallet for those who value financial self-sovereignty. Sparrow’s emphasis is on security, privacy, and usability. Sparrow does not hide information from you - on the contrary, it attempts to provide as much detail as possible about your transactions and UTXOs, but in a way that is manageable and usable.
@@ -4473,7 +4473,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: sparrowwallet/sparrow](https://img.shields.io/github/stars/sparrowwallet/sparrow?style=flat&logo=github&label=sparrow&color=%235f53f4&cacheSeconds=3600)](https://github.com/sparrowwallet/sparrow)  [![Sparrow Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Sparrow_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/sparrow-wallet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/atomicwallet.io' width='16' height='16' alt='icon' /> Atomic Wallet](https://atomicwallet.io/)** - Atomic is an open-source desktop and mobile-based wallet, where your private keys are stored on your local device, and do not touch the internet. Atomic has a great feature set, and supports swapping, staking, and lending directly from the app. However, most of Atomic's features require an active internet connection, and Atomic does not support hardware wallets yet. Therefore, it may only be a good choice as a secondary wallet, for storing small amounts of your actively used currency.
@@ -4482,7 +4482,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: Atomicwallet/bip38](https://img.shields.io/github/stars/Atomicwallet/bip38?style=flat&logo=github&label=bip38&color=%235f53f4&cacheSeconds=3600)](https://github.com/Atomicwallet/bip38)  [![Atomic Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Atomic_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/atomic-wallet) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/cryptosteel.com' width='16' height='16' alt='icon' /> CryptoSteel](https://cryptosteel.com/how-it-works)** - A steel plate, with engraved letters which can be permanently screwed - CryptoSteel is a good fire-proof, shock-proof, water-proof, and stainless cryptocurrency backup solution.
@@ -4493,7 +4493,7 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: digitalbitbox/bitbox-wallet-app](https://img.shields.io/github/stars/digitalbitbox/bitbox-wallet-app?style=flat&logo=github&label=bitbox-wallet-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/digitalbitbox/bitbox-wallet-app)  [![BitBox02 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=BitBox02)](https://awesome-privacy.xyz/finance/crypto-wallets/bitbox02) 
- 
+˙ 
 
 		</details>
 
@@ -4538,7 +4538,7 @@ as it gets harder to find people near you selling niche alt-coins.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3645.svg)](https://tosdr.org/en/service/3645) [![LocalBitcoins on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=LocalBitcoins)](https://awesome-privacy.xyz/finance/crypto-exchanges/localbitcoins) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/atomicdex.io' width='16' height='16' alt='icon' /> AtomicDEX](https://atomicdex.io/)** - Person-to-person cryptocurrency exchange with no KYC or registration
@@ -4550,7 +4550,7 @@ Fiat currencies are not supported, but hundreds of alt-coins and major cryptocur
 		<summary>Stats</summary>
 
 		[![GitHub: KomodoPlatform/atomicDEX-Pro](https://img.shields.io/github/stars/KomodoPlatform/atomicDEX-Pro?style=flat&logo=github&label=atomicDEX-Pro&color=%235f53f4&cacheSeconds=3600)](https://github.com/KomodoPlatform/atomicDEX-Pro)  [![AtomicDEX on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AtomicDEX)](https://awesome-privacy.xyz/finance/crypto-exchanges/atomicdex) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/learn.robosats.com' width='16' height='16' alt='icon' /> RoboSats](https://learn.robosats.com)** - RoboSats is an easy way to privately exchange Bitcoin for national currencies.
@@ -4562,7 +4562,7 @@ The deterministically generated avatars help users stick to best privacy practic
 		<summary>Stats</summary>
 
 		[![GitHub: RoboSats/robosats](https://img.shields.io/github/stars/RoboSats/robosats?style=flat&logo=github&label=robosats&color=%235f53f4&cacheSeconds=3600)](https://github.com/RoboSats/robosats)  [![RoboSats on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RoboSats)](https://awesome-privacy.xyz/finance/crypto-exchanges/robosats) 
- 
+˙ 
 
 		</details>
 
@@ -4603,7 +4603,7 @@ for $10/month, with 1% cashback and 36 cards/month.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3262.svg)](https://tosdr.org/en/service/3262) [![Privacy.com on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy.com)](https://awesome-privacy.xyz/finance/virtual-credit-cards/privacy.com) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.revolut.com' width='16' height='16' alt='icon' /> Revolut Premium](https://www.revolut.com/)** - Revolut is more of a digital bank account, and identity checks are required
@@ -4614,7 +4614,7 @@ start at $7/month.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2310.svg)](https://tosdr.org/en/service/2310) [![Revolut Premium on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Revolut_Premium)](https://awesome-privacy.xyz/finance/virtual-credit-cards/revolut-premium) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/mysudo.com' width='16' height='16' alt='icon' /> MySudo](https://mysudo.com)** - Much more than just virtual cards, MySudo is a platform for creating
@@ -4626,7 +4626,7 @@ is a free plan for up to 3 identities, and premium plans start at $0.99/month.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1351.svg)](https://tosdr.org/en/service/1351) [![MySudo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MySudo)](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo) 
- 
+˙ 
 
 		</details>
 
@@ -4682,7 +4682,7 @@ addon, and compatibility with Home Assistant. Ensure your server is securely con
 		<summary>Stats</summary>
 
 		[![GitHub: firefly-iii/firefly-iii](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=flat&logo=github&label=firefly-iii&color=%235f53f4&cacheSeconds=3600)](https://github.com/firefly-iii/firefly-iii)  [![Firefly III on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Firefly_III)](https://awesome-privacy.xyz/finance/secure-budgeting/firefly-iii) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://www.gnucash.org/images/gnc-download.png' width='16' height='16' alt='icon' /> GnuCash](https://www.gnucash.org)** - A full-featured cross-platform accounting application suitable for personal
@@ -4694,7 +4694,7 @@ Android.
 		<summary>Stats</summary>
 
 		[![GitHub: Gnucash/gnucash](https://img.shields.io/github/stars/Gnucash/gnucash?style=flat&logo=github&label=gnucash&color=%235f53f4&cacheSeconds=3600)](https://github.com/Gnucash/gnucash)  [![GnuCash on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=GnuCash)](https://awesome-privacy.xyz/finance/secure-budgeting/gnucash) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/plaintextaccounting.org' width='16' height='16' alt='icon' /> Plain Text Accounting](https://plaintextaccounting.org)** - Utilizes plain text files and scriptable, command-line-friendly software for
@@ -4706,7 +4706,7 @@ approach to accounting.
 		<summary>Stats</summary>
 
 		[![GitHub: plaintextaccounting/plaintextaccounting](https://img.shields.io/github/stars/plaintextaccounting/plaintextaccounting?style=flat&logo=github&label=plaintextaccounting&color=%235f53f4&cacheSeconds=3600)](https://github.com/plaintextaccounting/plaintextaccounting)  [![Plain Text Accounting on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Plain_Text_Accounting)](https://awesome-privacy.xyz/finance/secure-budgeting/plain-text-accounting) 
- 
+˙ 
 
 		</details>
 
@@ -4754,7 +4754,7 @@ source, available for Windows, Mac, and Linux.
 		<summary>Stats</summary>
 
 		[![GitHub: getaether/aether-community-firmware](https://img.shields.io/github/stars/getaether/aether-community-firmware?style=flat&logo=github&label=aether-community-firmware&color=%235f53f4&cacheSeconds=3600)](https://github.com/getaether/aether-community-firmware)  [![Aether on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Aether)](https://awesome-privacy.xyz/social/social-networks/aether) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.discourse.org' width='16' height='16' alt='icon' /> Discourse](https://www.discourse.org)** - A fully open-source, self-hostable discussion platform usable as a mailing list,
@@ -4764,7 +4764,7 @@ discussion forum, or long-form chat room.
 		<summary>Stats</summary>
 
 		[![GitHub: discourse/discourse](https://img.shields.io/github/stars/discourse/discourse?style=flat&logo=github&label=discourse&color=%235f53f4&cacheSeconds=3600)](https://github.com/discourse/discourse) [![Privacy Policy](https://shields.tosdr.org/en_1340.svg)](https://tosdr.org/en/service/1340) [![Discourse on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Discourse)](https://awesome-privacy.xyz/social/social-networks/discourse) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/mastodon.social' width='16' height='16' alt='icon' /> Mastodon](https://mastodon.social)** - An open-source, distributed social media platform functioning similarly to Twitter,
@@ -4774,7 +4774,7 @@ without algorithmic timeline manipulations. It operates across independent serve
 		<summary>Stats</summary>
 
 		[![GitHub: mastodon/mastodon](https://img.shields.io/github/stars/mastodon/mastodon?style=flat&logo=github&label=mastodon&color=%235f53f4&cacheSeconds=3600)](https://github.com/mastodon/mastodon) [![Privacy Policy](https://shields.tosdr.org/en_639.svg)](https://tosdr.org/en/service/639) [![Mastodon on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mastodon)](https://awesome-privacy.xyz/social/social-networks/mastodon) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.minds.com' width='16' height='16' alt='icon' /> Minds](https://www.minds.com)** - A social media platform designed to foster open conversations and community
@@ -4784,7 +4784,7 @@ engagement. Rewards content creation.
 		<summary>Stats</summary>
 
 		[![GitHub: minds/minds](https://img.shields.io/github/stars/minds/minds?style=flat&logo=github&label=minds&color=%235f53f4&cacheSeconds=3600)](https://github.com/minds/minds)  [![Minds on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Minds)](https://awesome-privacy.xyz/social/social-networks/minds) 
- 
+˙ 
 
 		</details>
 
@@ -4823,7 +4823,7 @@ enabling video viewing from any PeerTube server.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1596.svg)](https://tosdr.org/en/service/1596) [![PeerTube on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PeerTube)](https://awesome-privacy.xyz/social/video-platforms/peertube) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/d.tube' width='16' height='16' alt='icon' /> DTube](https://d.tube)** - A decentralized, ad-free video platform emphasizing minimal moderation. It rewards
@@ -4833,7 +4833,7 @@ users with cryptocurrency, leveraging blockchain technology.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2798.svg)](https://tosdr.org/en/service/2798) [![DTube on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DTube)](https://awesome-privacy.xyz/social/video-platforms/dtube) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/gvxXK0Z/bitchute.png' width='16' height='16' alt='icon' /> BitChute](https://www.bitchute.com)** - Established in 2017, BitChute is a video hosting service that offers a platform for
@@ -4843,7 +4843,7 @@ uploaders to evade the content restrictions found on other sites like YouTube.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_513.svg)](https://tosdr.org/en/service/513) [![BitChute on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=BitChute)](https://awesome-privacy.xyz/social/video-platforms/bitchute) 
- 
+˙ 
 
 		</details>
 
@@ -4886,7 +4886,7 @@ visit Write.as.
 		<summary>Stats</summary>
 
 		[![GitHub: writeas/writefreely](https://img.shields.io/github/stars/writeas/writefreely?style=flat&logo=github&label=writefreely&color=%235f53f4&cacheSeconds=3600)](https://github.com/writeas/writefreely)  [![Write Freely on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Write_Freely)](https://awesome-privacy.xyz/social/blogging-platforms/write-freely) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/telegra.ph' width='16' height='16' alt='icon' /> Telegraph](https://telegra.ph)** - A quick, anonymous blogging platform by Telegram. It's designed for simplicity and speed,
@@ -4899,7 +4899,7 @@ eschews complex features for a straightforward writing and publishing experience
 		<summary>Stats</summary>
 
 		[![GitHub: mataroa-blog/mataroa](https://img.shields.io/github/stars/mataroa-blog/mataroa?style=flat&logo=github&label=mataroa&color=%235f53f4&cacheSeconds=3600)](https://github.com/mataroa-blog/mataroa)  [![Mataroa on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mataroa)](https://awesome-privacy.xyz/social/blogging-platforms/mataroa) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/bearblog.dev' width='16' height='16' alt='icon' /> Bear Blog](https://bearblog.dev/)** - A no-nonsense, super-fast blogging platform prioritizing privacy. It strips back
@@ -4909,7 +4909,7 @@ unnecessary features to focus on straightforward blogging. The platform is open 
 		<summary>Stats</summary>
 
 		[![GitHub: HermanMartinus/bearblog](https://img.shields.io/github/stars/HermanMartinus/bearblog?style=flat&logo=github&label=bearblog&color=%235f53f4&cacheSeconds=3600)](https://github.com/HermanMartinus/bearblog)  [![Bear Blog on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bear_Blog)](https://awesome-privacy.xyz/social/blogging-platforms/bear-blog) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/movim.eu' width='16' height='16' alt='icon' /> Movim](https://movim.eu/)** - A web frontend for XMPP, offering decentralized blogging and chatrooms. Movim is open source,
@@ -4919,7 +4919,7 @@ integrating social and communication tools in a unified platform.
 		<summary>Stats</summary>
 
 		[![GitHub: movim/movim](https://img.shields.io/github/stars/movim/movim?style=flat&logo=github&label=movim&color=%235f53f4&cacheSeconds=3600)](https://github.com/movim/movim)  [![Movim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Movim)](https://awesome-privacy.xyz/social/blogging-platforms/movim) 
- 
+˙ 
 
 		</details>
 
@@ -4966,7 +4966,7 @@ news feed without manipulated content. Parts of the service are open source.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_405.svg)](https://tosdr.org/en/service/405) [![Feedly on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Feedly)](https://awesome-privacy.xyz/social/news-readers/feedly) 
- 
+˙ 
 
 		</details>
 
@@ -4994,7 +4994,7 @@ JavaScript. Supports import/export of subscriptions and feed customization.
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_1471.svg)](https://tosdr.org/en/service/1471) [![Invidious on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Invidious)](https://awesome-privacy.xyz/social/proxy-sites/invidious) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/libreddit.spike.codes' width='16' height='16' alt='icon' /> Libreddit](https://libreddit.spike.codes)** - A private, fast Reddit frontend written in Rust. Excludes ads, trackers, and bloat, making it much faster
@@ -5102,7 +5102,7 @@ and supports a wide range of file formats.
 		<summary>Stats</summary>
 
 		[![GitHub: GNOME/gimp](https://img.shields.io/github/stars/GNOME/gimp?style=flat&logo=github&label=gimp&color=%235f53f4&cacheSeconds=3600)](https://github.com/GNOME/gimp)  [![Gimp on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Gimp)](https://awesome-privacy.xyz/creativity/image-editors/gimp) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://media.inkscape.org/static/images/inkscape-logo.svg' width='16' height='16' alt='icon' /> InkScape](https://inkscape.org)** - A free, open source, professional vector graphics editor. It is a powerful tool
@@ -5112,7 +5112,7 @@ for creating illustrations, icons, logos, diagrams, maps, and web graphics.
 		<summary>Stats</summary>
 
 		[![GitHub: inkscape/inkscape](https://img.shields.io/github/stars/inkscape/inkscape?style=flat&logo=github&label=inkscape&color=%235f53f4&cacheSeconds=3600)](https://github.com/inkscape/inkscape) [![Privacy Policy](https://shields.tosdr.org/en_6568.svg)](https://tosdr.org/en/service/6568) [![InkScape on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=InkScape)](https://awesome-privacy.xyz/creativity/image-editors/inkscape) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/PmNGFmh/Paint-NET.png' width='16' height='16' alt='icon' /> Paint.NET](https://www.getpaint.net)** - A more advanced take on Microsoft Paint. Suitable for basic image editing,
@@ -5122,7 +5122,7 @@ with support for basic layers, unlimited undo/redo, and extendable via plugins
 		<summary>Stats</summary>
 
 		[![GitHub: paintdotnet/release](https://img.shields.io/github/stars/paintdotnet/release?style=flat&logo=github&label=release&color=%235f53f4&cacheSeconds=3600)](https://github.com/paintdotnet/release)  [![Paint.NET on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Paint.NET)](https://awesome-privacy.xyz/creativity/image-editors/paint.net) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://pixlr.com/apple-touch-icon.png' width='16' height='16' alt='icon' /> PixlrX](https://pixlr.com/express)** - A free web-based image editor, with a modern UI.
@@ -5132,7 +5132,7 @@ Also offers premium/paid features, such as AI-powered generation, touchup and ed
 		<summary>Stats</summary>
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_3240.svg)](https://tosdr.org/en/service/3240) [![PixlrX on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PixlrX)](https://awesome-privacy.xyz/creativity/image-editors/pixlrx) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png' width='16' height='16' alt='icon' /> RawTherapee](https://rawtherapee.com)** - A powerful raw photo processing system and editor, for non-destructive editing
@@ -5142,7 +5142,7 @@ of raw digital photos
 		<summary>Stats</summary>
 
 		[![GitHub: Beep6581/RawTherapee](https://img.shields.io/github/stars/Beep6581/RawTherapee?style=flat&logo=github&label=RawTherapee&color=%235f53f4&cacheSeconds=3600)](https://github.com/Beep6581/RawTherapee)  [![RawTherapee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RawTherapee)](https://awesome-privacy.xyz/creativity/image-editors/rawtherapee) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.photopea.com/promo/icon512.png' width='16' height='16' alt='icon' /> PhotoPea](https://photopea.com)** - A free online image editor, for both  raster and vector graphics,
@@ -5152,7 +5152,7 @@ with a very wide range of supported formats
 		<summary>Stats</summary>
 
 		[![GitHub: photopea/photopea](https://img.shields.io/github/stars/photopea/photopea?style=flat&logo=github&label=photopea&color=%235f53f4&cacheSeconds=3600)](https://github.com/photopea/photopea) [![Privacy Policy](https://shields.tosdr.org/en_4105.svg)](https://tosdr.org/en/service/4105) [![PhotoPea on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PhotoPea)](https://awesome-privacy.xyz/creativity/image-editors/photopea) 
-📦 Open Source 💰 Accepts Anonymous Payment  
+📦 Open Source 💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/TqtRH52/Krita.png' width='16' height='16' alt='icon' /> Krita](https://krita.org/en)** - Digital painting application.
@@ -5164,7 +5164,7 @@ due to it's comprehensive feature set, and intuitive UI
 		<summary>Stats</summary>
 
 		[![GitHub: KDE/krita](https://img.shields.io/github/stars/KDE/krita?style=flat&logo=github&label=krita&color=%235f53f4&cacheSeconds=3600)](https://github.com/KDE/krita)  [![Krita on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Krita)](https://awesome-privacy.xyz/creativity/image-editors/krita) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/09PfHbG/darktable.png' width='16' height='16' alt='icon' /> DarkTable](https://www.darktable.org)** - A photography workflow application (similar to Adbobe Lightroom)
@@ -5174,7 +5174,7 @@ Includes a  non-destructive raw developer for raw images and managing digital ne
 		<summary>Stats</summary>
 
 		[![GitHub: darktable-org/darktable](https://img.shields.io/github/stars/darktable-org/darktable?style=flat&logo=github&label=darktable&color=%235f53f4&cacheSeconds=3600)](https://github.com/darktable-org/darktable)  [![DarkTable on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DarkTable)](https://awesome-privacy.xyz/creativity/image-editors/darktable) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -5193,7 +5193,7 @@ including 4K & 8k resolution, webcam + audio capture, batch opperations and
 		<summary>Stats</summary>
 
 		[![GitHub: mltframework/shotcut](https://img.shields.io/github/stars/mltframework/shotcut?style=flat&logo=github&label=shotcut&color=%235f53f4&cacheSeconds=3600)](https://github.com/mltframework/shotcut)  [![Shotcut on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Shotcut)](https://awesome-privacy.xyz/creativity/video-editors/shotcut) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://www.openshot.org/static/img/favicon.png' width='16' height='16' alt='icon' /> OpenShot](https://www.openshot.org)** - A free, simple, cross-platform video editor.
@@ -5204,7 +5204,7 @@ and [more](https://www.openshot.org/features/)
 		<summary>Stats</summary>
 
 		[![GitHub: OpenShot/openshot-qt](https://img.shields.io/github/stars/OpenShot/openshot-qt?style=flat&logo=github&label=openshot-qt&color=%235f53f4&cacheSeconds=3600)](https://github.com/OpenShot/openshot-qt)  [![OpenShot on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OpenShot)](https://awesome-privacy.xyz/creativity/video-editors/openshot) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://seeklogo.com/images/K/kdenlive-logo-CAAD792F3F-seeklogo.com.png' width='16' height='16' alt='icon' /> Kdenlive](https://kdenlive.org)** - KDE Non-Linear Video Editor, is an editor based on the MLT Framework, KDE and Qt,
@@ -5214,7 +5214,7 @@ written using C++ and using FFmpeg
 		<summary>Stats</summary>
 
 		[![GitHub: kdenlive/kdenlive](https://img.shields.io/github/stars/kdenlive/kdenlive?style=flat&logo=github&label=kdenlive&color=%235f53f4&cacheSeconds=3600)](https://github.com/kdenlive/kdenlive)  [![Kdenlive on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Kdenlive)](https://awesome-privacy.xyz/creativity/video-editors/kdenlive) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/WkBKN6r/flowblade.png' width='16' height='16' alt='icon' /> FlowBlade](https://jliljebl.github.io/flowblade)** - A multitrack non-linear video editor with a simple interface
@@ -5223,7 +5223,7 @@ written using C++ and using FFmpeg
 		<summary>Stats</summary>
 
 		[![GitHub: jliljebl/flowblade](https://img.shields.io/github/stars/jliljebl/flowblade?style=flat&logo=github&label=flowblade&color=%235f53f4&cacheSeconds=3600)](https://github.com/jliljebl/flowblade)  [![FlowBlade on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FlowBlade)](https://awesome-privacy.xyz/creativity/video-editors/flowblade) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://icon.horse/icon/www.cinelerra-gg.org' width='16' height='16' alt='icon' /> Cinelerra GG Infinity](https://www.cinelerra-gg.org)** - Simple video editor, for applying transitions, effects and text as well
@@ -5233,7 +5233,7 @@ as splicing video clips
 		<summary>Stats</summary>
 
 		[![GitHub: cinelerra-gg/cinelerra-gg](https://img.shields.io/github/stars/cinelerra-gg/cinelerra-gg?style=flat&logo=github&label=cinelerra-gg&color=%235f53f4&cacheSeconds=3600)](https://github.com/cinelerra-gg/cinelerra-gg)  [![Cinelerra GG Infinity on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cinelerra_GG_Infinity)](https://awesome-privacy.xyz/creativity/video-editors/cinelerra-gg-infinity) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://a.fsdn.com/allura/p/vidcutter/icon?1624427151' width='16' height='16' alt='icon' /> VitCutter](https://sourceforge.net/projects/vidcutter/)** - A simple Python-based cross-platform tool for cutting and splicing videos
@@ -5242,7 +5242,7 @@ as splicing video clips
 		<summary>Stats</summary>
 
 		[![GitHub: ozmartian/vidcutter](https://img.shields.io/github/stars/ozmartian/vidcutter?style=flat&logo=github&label=vidcutter&color=%235f53f4&cacheSeconds=3600)](https://github.com/ozmartian/vidcutter)  [![VitCutter on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VitCutter)](https://awesome-privacy.xyz/creativity/video-editors/vitcutter) 
- 
+˙ 
 
 		</details>
 - **[<img src='https://natrongithub.github.io/img/Natron_icon.svg' width='16' height='16' alt='icon' /> Natron](https://natrongithub.github.io)** - Free & open desktop node-graph based video compositing software.
@@ -5255,7 +5255,7 @@ easily extendable via community plugins, or by writing Python scripts
 		<summary>Stats</summary>
 
 		[![GitHub: NatronGitHub/Natron](https://img.shields.io/github/stars/NatronGitHub/Natron?style=flat&logo=github&label=Natron&color=%235f53f4&cacheSeconds=3600)](https://github.com/NatronGitHub/Natron)  [![Natron on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Natron)](https://awesome-privacy.xyz/creativity/video-editors/natron) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -5278,7 +5278,7 @@ also supports cusotm macros and many scripting options
 		<summary>Stats</summary>
 
 		[![GitHub: audacity/audacity](https://img.shields.io/github/stars/audacity/audacity?style=flat&logo=github&label=audacity&color=%235f53f4&cacheSeconds=3600)](https://github.com/audacity/audacity) [![Privacy Policy](https://shields.tosdr.org/en_4516.svg)](https://tosdr.org/en/service/4516) [![Audacity on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Audacity)](https://awesome-privacy.xyz/creativity/audio-editors-and-recorders/audacity) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -5298,7 +5298,7 @@ and is easily extendable via community plugins
 		<summary>Stats</summary>
 
 		[![GitHub: obsproject/obs-studio](https://img.shields.io/github/stars/obsproject/obs-studio?style=flat&logo=github&label=obs-studio&color=%235f53f4&cacheSeconds=3600)](https://github.com/obsproject/obs-studio) [![Privacy Policy](https://shields.tosdr.org/en_4227.svg)](https://tosdr.org/en/service/4227) [![OBS Studio on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=OBS_Studio)](https://awesome-privacy.xyz/creativity/casting-and-streaming/obs-studio) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
@@ -5323,7 +5323,7 @@ motion tracking, and video editing. It's easily extendable via community plugins
 		<summary>Stats</summary>
 
 		[![GitHub: blender/blender](https://img.shields.io/github/stars/blender/blender?style=flat&logo=github&label=blender&color=%235f53f4&cacheSeconds=3600)](https://github.com/blender/blender) [![Privacy Policy](https://shields.tosdr.org/en_8114.svg)](https://tosdr.org/en/service/8114) [![Blender on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Blender)](https://awesome-privacy.xyz/creativity/3d-graphics/blender) 
-📦 Open Source 🛡️ Security Audited  
+📦 Open Source 🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wings3d.png/120px-Wings3d.png' width='16' height='16' alt='icon' /> Wings3D](https://wings3d.com)** - A simple and easy-to-use subdivision 3D modeler
@@ -5335,7 +5335,7 @@ is more limited, but it's a good choice for beginners.
 		<summary>Stats</summary>
 
 		[![GitHub: dgud/wings](https://img.shields.io/github/stars/dgud/wings?style=flat&logo=github&label=wings&color=%235f53f4&cacheSeconds=3600)](https://github.com/dgud/wings)  [![Wings3D on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Wings3D)](https://awesome-privacy.xyz/creativity/3d-graphics/wings3d) 
- 
+˙ 
 
 		</details>
 
@@ -5350,7 +5350,7 @@ is more limited, but it's a good choice for beginners.
 		<summary>Stats</summary>
 
 		[![GitHub: https://github.com/aseprite/aseprite](https://img.shields.io/github/stars/https://github.com/aseprite/aseprite?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/aseprite/aseprite)  [![Aseprite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Aseprite)](https://awesome-privacy.xyz/creativity/animation/aseprite) 
-📦 Open Source  
+📦 Open Source ˙ 
 
 		</details>
 
