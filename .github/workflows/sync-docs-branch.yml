@@ -3,31 +3,31 @@
 
 name: 🔄 Sync main to Website
 on:
-#   push:
-#     branches:
-#       - main
   workflow_dispatch: # Manual dispatch
   schedule:
     - cron: '0 5 * * 6' # Every Saturday morning.
 
 jobs:
-  sync-branches:
+  copy-readme:
     runs-on: ubuntu-latest
-    name: Syncing branches
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set up Node
-        uses: actions/setup-node@v1
+      - name: Check out repo
+        uses: actions/checkout@v3
         with:
-          node-version: 12
-      - name: Opening pull request
-        id: pull
-        uses: tretuna/sync-branches@1.4.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          FROM_BRANCH: main
-          TO_BRANCH: gh-pages
-          PULL_REQUEST_TITLE: '[AUTO] Update docs site'
-          PULL_REQUEST_BODY: |
-            Merging main into gh-pages, to be deployed to [awesome-privacy.xyz](https://awesome-privacy.xyz/).
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config --global user.email "alicia-gh-bot@mail.as93.net"
+          git config --global user.name "Liss-Bot"
+
+      - name: Copy README.md to gh-pages
+        run: |
+          git fetch
+          git checkout gh-pages
+          git checkout main -- .github/README.md
+          mv .github/README.md README.md
+          git add README.md
+          git commit -m "Update README.md from main"
+          git push origin gh-pages
+
