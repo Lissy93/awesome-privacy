@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions'
 import NavBar from '@components/scafold/NavBar.astro';
 import Footer from '@components/scafold/Footer.astro';
+import config from '../site-config';
 
 interface Props {
 	title?: string; // Page title
@@ -17,11 +18,11 @@ interface Props {
 }
 
 const {
-	title='Awesome Privacy | The Ultimate List of Private Apps',
-	description='Your guide to finding privacy-respecting alternatives to popular software and services.',
-	keywords='security, privacy, awesome privacy, data collection, free software, open source, privacy tools, privacy respecting software',
-	hideNav=false,
-	author='Alicia Sykes',
+	title = config.title,
+	description = config.description,
+	keywords = config.keywords,
+	author = config.author,
+	hideNav = false,
 	breadcrumbs,
 	customSchemaJson,
 } = Astro.props;
@@ -88,14 +89,14 @@ const makeSearchLd = () => {
 		<meta property="og:title" content={title}>
 		<meta property="og:description" content={description}>
 		<meta property="og:image" content="https://awesome-privacy.xyz/banner.png">
-		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:card" content="summary">
 		<meta name="twitter:url" content="https://awesome-privacy.xyz">
 		<meta name="twitter:title" content={title}>
 		<meta name="twitter:description" content={description}>
 		<meta name="twitter:image" content="https://awesome-privacy.xyz/banner.png">
+		<link rel="twitter:image" sizes="180x180" href="https://awesome-privacy.xyz/apple-touch-icon.png">
 		<meta name="twitter:site" content="@Lissy_Sykes">
 		<meta name="twitter:creator" content="@Lissy_Sykes">
-
 
 		<!-- Non-tracking hit counter -->
 		<script defer is:inline
@@ -140,8 +141,6 @@ const makeSearchLd = () => {
 		min-height: 100vh;
 		color: var(--foreground);
 		background: var(--background);
-		/* background: -webkit-radial-gradient(circle, var(--bg-gradient-comp-1) 0%, var(--bg-gradient-comp-2) 100%);
-		background: radial-gradient(circle, var(--bg-gradient-comp-1) 0%, var(--bg-gradient-comp-2) 100%); */
 	}
 	
 </style>
