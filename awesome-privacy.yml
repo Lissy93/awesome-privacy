@@ -947,8 +947,7 @@ categories:
         openSource: true
         description: |
           If you already have ProtonMail's Professional (€8/month) or Visionary (€30/month) package,
-          then an implementation of this feature is available via the Catch-All Email feature. If you have
-          Proton Unlimited, you can use SimpleLogin Premium for free.
+          then an implementation of this feature is available via the Catch-All Email feature.
 
     ##################################
     ###### Mail Security Tools ######
