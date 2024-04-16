@@ -914,8 +914,7 @@ categories:
         description: |
           Fully open source (view on [GitHub](https://github.com/simple-login)) alias service
           with many additional features. Can be self-hosted, or the managed version has a free
-          plan, as well as hosted premium option ($2.99/ month) for using custom domains. If you 
-          have Proton Unlimited, you also use SimpleLogin Premium for free.
+          plan, as well as hosted premium option ($2.99/ month) for using custom domains.
 
       - name: Firefox Private Relay
         url: https://relay.firefox.com
