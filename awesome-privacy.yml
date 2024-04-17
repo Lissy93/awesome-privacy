@@ -509,6 +509,7 @@ categories:
         iosApp: https://apps.apple.com/us/app/signal-private-messenger/id874139669
         androidApp: org.thoughtcrime.securesms
         icon: https://signal.org/assets/images/favicon/android-chrome-192x192.png
+        subreddit: signal
         description: |
           Probably one of the most popular, secure private messaging apps that combines
           strong encryption (see [Signal Protocol](https://en.wikipedia.org/wiki/Signal_Protocol))
@@ -2910,6 +2911,9 @@ categories:
         securityAudited: true
         icon: https://standardnotes.com/favicon.ico
         tosdrId: 2116
+        androidApp: com.standardnotes
+        iosApp: https://apps.apple.com/us/app/standard-notes/id1285392450
+        subreddit: StandardNotes
         description: |
           S.Notes is a free, open-source, and completely encrypted private notes app. It has a simple UI,
           yet packs in a lot of features, thanks to the Extensions Store, allowing for: To-Do lists, Spreadsheets,
@@ -2923,6 +2927,7 @@ categories:
         followWith: Linux, MacOS, Windows, Android (iOS and web in development)
         securityAudited: true
         github: turtl/desktop
+        androidApp: com.lyonbros.turtl
         description: |
           A secure, collaborative notebook. Self-host it yourself, or use their hosted plan (free edition
           or $3/ month for premium).
@@ -2933,6 +2938,7 @@ categories:
         github: notable/notable
         icon: https://notable.app/favicon.ico
         securityAudited: false
+        subreddit: Notable
         description: |
           An offline markdown-based note editor for desktop, with a simple, yet feature-rich UI.
           All notes are saved individually as .md files, making them easy to manage.
@@ -2945,7 +2951,10 @@ categories:
         followWith: Windows, MacOS, Linux, Android, iOS
         icon: https://joplinapp.org/images/favicon.png
         securityAudited: true
+        androidApp: net.cozic.joplin
+        iosApp: https://apps.apple.com/gb/app/joplin/id1315599797
         tosdrId: 9477
+        subreddit: JoplinApp
         description: |
           Cross-platform desktop and mobile note-taking and todo app. Easy organisation into notebooks and
           sections, revision history and a simple UI. Allows for easy import and export of notes to or from
@@ -2957,6 +2966,8 @@ categories:
         icon: https://logseq.com/logo-with-border.5bf84f43.png
         securityAudited: false
         github: logseq/logseq
+        iosApp: https://apps.apple.com/us/app/logseq/id1601013908
+        subreddit: Logseq
         description: |
           Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
           Org-mode files.
@@ -2972,6 +2983,9 @@ categories:
         openSource: false
         securityAudited: true
         tosdrId: 3870
+        androidApp: md.obsidian
+        iosApp: https://apps.apple.com/us/app/obsidian-connected-notes/id1557175442
+        subreddit: ObsidianMD
         description: |
           A powerful knowledge base that works on top of local plain-text Markdown files. It has a strong
           community, and a lot of plugins and themes. Generally privacy-respecting, but no
@@ -2982,6 +2996,7 @@ categories:
         github: toeverything/AFFiNE
         followWith: Windows, MacOS, Linux
         securityAudited: false
+        subreddit: AFFiNE
         description: |
           Privacy first, open-source alternative to Notion, monday.com and Miro.
           It is a knowledge management tool that allows you to create, organize and share your knowledge.
@@ -2992,7 +3007,7 @@ categories:
         github: cryptee/web-client
         securityAudited: false
         tosdrId: 5047
-        followWith: Web, Windows, Mac OS, Linux, Android, iOS
+        followWith: Web, Windows, Mac OS, Linux, PWA
         icon: https://raw.githubusercontent.com/cryptee/web-client/v3/source/assets/logo-b.svg
         description: |
           Private & encrypted rich-text documents. Cryptee has encryption and anonymity at its core,
