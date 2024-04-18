@@ -1663,7 +1663,7 @@ Only install from official sources.
 > [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
 > [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
 > [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-> and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
+> and [Fossify](https://github.com/FossifyOrg) -
 > all of which are trusted developers or organisations, who've done amazing work.
 > 
 > For offensive and defensive security, see
