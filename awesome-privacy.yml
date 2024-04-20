@@ -3171,19 +3171,6 @@ categories:
           sharing support via private teams or public links. It can be self-hosted
           or used as a managed service for a small fee.
 
-      - name: Skiff Pages
-        url: https://skiff.com/pages
-        icon: https://skiff.com/favicon.ico
-        github: skiff-org/skiff-apps
-        followWith: Web, iOS, Android
-        tosdrId: 8470
-        description: |
-          Skiff Pages is an end-to-end encrypted, privacy-first collaborative
-          document, note-taking, and wiki product. Skiff Pages has a modern,
-          easy-to-use UI and supports rich text documents with embedded content.
-          Skiff also supports end-to-end encrypted file upload and sharing
-          (Skiff Drive), as well as workspaces for multiple users to collaborate.
-
 
     ###########################
     ###### Cloud Storage ######
