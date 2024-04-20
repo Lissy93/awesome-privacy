@@ -97,6 +97,13 @@ categories:
           services. They have a full collection of user-friendly native mobile and desktop
           apps. ProtonPass is one of the few "trustworthy" providers that also offers a
           free plan.
+
+      - name: Pass
+        url: https://www.passwordstore.org/
+        icon: https://www.zx2c4.com/favicon.ico
+        description: The Standard Unix Password Manager
+        openSource: true
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
