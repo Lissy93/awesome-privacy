@@ -21,11 +21,11 @@ corporations, governments, and hackers from logging, storing or selling your per
 <summary>📋 <b>Contents</b></summary>
 
 - **Essentials**
-	- [Password Managers](#password-managers) (5)
+	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
-	- [Search Engines](#search-engines) (4)
+	- [Search Engines](#search-engines) (5)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
 	- [P2P Messaging](#p2p-messaging) (5)
@@ -61,7 +61,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Digital Notes](#digital-notes) (8)
 	- [Calendar](#calendar) (0)
 	- [Backup and Sync](#backup-and-sync) (3)
-	- [Cloud Productivity Suites](#cloud-productivity-suites) (6)
+	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
 	- [File Drop](#file-drop) (3)
 	- [Browser Sync](#browser-sync) (5)
@@ -179,6 +179,7 @@ free plan.
 📦 Open Source ˙ 
 
 		</details>
+- **[<img src='https://www.zx2c4.com/favicon.ico' width='16' height='16' alt='icon' /> Pass](https://www.passwordstore.org/)** - The Standard Unix Password Manager[…](https://awesome-privacy.xyz/essentials/password-managers/pass "View full Pass report") 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
@@ -484,6 +485,14 @@ rearranged). It has several configurations that improve privacy during use
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_418.svg)](https://tosdr.org/en/service/418) [![Startpage on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Startpage)](https://awesome-privacy.xyz/essentials/search-engines/startpage) 
 ˙ 
+
+		</details>
+- **[<img src='https://i.ibb.co/GH1n4wf/Brave-Search-Icon.png' width='16' height='16' alt='icon' /> Brave Search](https://search.brave.com/)** - Brave Search is a privacy-focused search engine that does not track users or their searches, does not use secret algorithms or user profiling, and is based on its own search index.[…](https://awesome-privacy.xyz/essentials/search-engines/brave-search "View full Brave Search report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: brave/brave-browser](https://img.shields.io/github/stars/brave/brave-browser?style=flat&logo=github&label=brave-browser&color=%235f53f4&cacheSeconds=3600)](https://github.com/brave/brave-browser) [![Privacy Policy](https://shields.tosdr.org/en_1487.svg)](https://tosdr.org/en/service/1487) [![Brave Search on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Brave_Search)](https://awesome-privacy.xyz/essentials/search-engines/brave-search) 
+📦 Open Source 🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://www.mojeek.com/favicon.png' width='16' height='16' alt='icon' /> Mojeek](https://mojeek.com)** - British search engine providing independent and unbiased search results using
@@ -3125,19 +3134,6 @@ or used as a managed service for a small fee.
 ˙ 
 
 		</details>
-- **[<img src='https://skiff.com/favicon.ico' width='16' height='16' alt='icon' /> Skiff Pages](https://skiff.com/pages)** - Skiff Pages is an end-to-end encrypted, privacy-first collaborative
-document, note-taking, and wiki product. Skiff Pages has a modern,
-easy-to-use UI and supports rich text documents with embedded content.
-Skiff also supports end-to-end encrypted file upload and sharing
-(Skiff Drive), as well as workspaces for multiple users to collaborate.
-[…](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/skiff-pages "View full Skiff Pages report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: skiff-org/skiff-apps](https://img.shields.io/github/stars/skiff-org/skiff-apps?style=flat&logo=github&label=skiff-apps&color=%235f53f4&cacheSeconds=3600)](https://github.com/skiff-org/skiff-apps) [![Privacy Policy](https://shields.tosdr.org/en_8470.svg)](https://tosdr.org/en/service/8470) [![Skiff Pages on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Skiff_Pages)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/skiff-pages) 
-˙ 
-
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -3928,7 +3924,7 @@ torrenting through Transmission, browsing the web, opening downloaded attachment
 ˙ 
 
 		</details>
-- **[<img src='https://icon.horse/icon/gufw.org' width='16' height='16' alt='icon' /> Gufw](http://gufw.org)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
+- **[<img src='https://icon.horse/icon/man.archlinux.org' width='16' height='16' alt='icon' /> Gufw](https://man.archlinux.org/man/gufw.8.en)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
 and advanced mode, GUI and CLI options, very easy to use, lightweight/ low-overhead, under active maintenance and backed
 by a strong community. Installable through most package managers, or compile from source.
 […](https://awesome-privacy.xyz/operating-systems/linux-defenses/gufw "View full Gufw report") 
