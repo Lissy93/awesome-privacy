@@ -476,7 +476,7 @@ non-biased search results, with no promotions. Qwant has a unique, but nice UI.
 ˙ 
 
 		</details>
-- **[<img src='https://www.startpage.com/favicon.ico' width='16' height='16' alt='icon' /> Startpage](https://www.startpage.com)** - Dutch search engine that searches on google and shows the results (slightly
+- **[<img src='https://www.startpage.com/favicon.ico' width='16' height='16' alt='icon' /> Startpage](https://www.startpage.com)** - Dutch search engine that searches on Google and shows the results (slightly
 rearranged). It has several configurations that improve privacy during use
 (it is not open source)
 […](https://awesome-privacy.xyz/essentials/search-engines/startpage "View full Startpage report") 
