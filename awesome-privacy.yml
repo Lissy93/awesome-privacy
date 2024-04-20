@@ -3984,7 +3984,7 @@ categories:
           torrenting through Transmission, browsing the web, opening downloaded attachments.
 
       - name: Gufw
-        url: http://gufw.org
+        url: https://man.archlinux.org/man/gufw.8.en
         followWith: Linux
         description: |
           Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
