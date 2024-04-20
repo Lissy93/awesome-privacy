@@ -468,7 +468,7 @@ categories:
         tosdrId: 418
         openSource: false
         description: |
-          Dutch search engine that searches on google and shows the results (slightly
+          Dutch search engine that searches on Google and shows the results (slightly
           rearranged). It has several configurations that improve privacy during use
           (it is not open source)
 
