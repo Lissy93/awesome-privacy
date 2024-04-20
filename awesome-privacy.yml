@@ -472,6 +472,23 @@ categories:
           rearranged). It has several configurations that improve privacy during use
           (it is not open source)
 
+      - name: Brave Search
+        url: https://search.brave.com/
+        icon: https://i.ibb.co/GH1n4wf/Brave-Search-Icon.png
+        description: >-
+          Brave Search is a privacy-focused search engine that does not track users or
+          their searches, does not use secret algorithms or user profiling, and is
+          based on its own search index.
+        github: brave/brave-browser
+        tosdrId: 1487
+        iosApp: https://apps.apple.com/us/app/brave-private-browser-adblock/id1052879175
+        androidApp: com.brave.browser
+        discordInvite: ''
+        subreddit: brave_browser
+        openSource: true
+        securityAudited: true
+        acceptsCrypto: false
+
       - name: Mojeek
         url: https://mojeek.com
         icon: https://www.mojeek.com/favicon.png
