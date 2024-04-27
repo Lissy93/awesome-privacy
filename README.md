@@ -21,11 +21,11 @@ corporations, governments, and hackers from logging, storing or selling your per
 <summary>📋 <b>Contents</b></summary>
 
 - **Essentials**
-	- [Password Managers](#password-managers) (5)
+	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
-	- [Search Engines](#search-engines) (4)
+	- [Search Engines](#search-engines) (5)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
 	- [P2P Messaging](#p2p-messaging) (5)
@@ -61,7 +61,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Digital Notes](#digital-notes) (8)
 	- [Calendar](#calendar) (0)
 	- [Backup and Sync](#backup-and-sync) (3)
-	- [Cloud Productivity Suites](#cloud-productivity-suites) (6)
+	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
 	- [File Drop](#file-drop) (3)
 	- [Browser Sync](#browser-sync) (5)
@@ -179,6 +179,7 @@ free plan.
 📦 Open Source ˙ 
 
 		</details>
+- **[<img src='https://www.zx2c4.com/favicon.ico' width='16' height='16' alt='icon' /> Pass](https://www.passwordstore.org/)** - The Standard Unix Password Manager[…](https://awesome-privacy.xyz/essentials/password-managers/pass "View full Pass report") 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
@@ -475,7 +476,7 @@ non-biased search results, with no promotions. Qwant has a unique, but nice UI.
 ˙ 
 
 		</details>
-- **[<img src='https://www.startpage.com/favicon.ico' width='16' height='16' alt='icon' /> Startpage](https://www.startpage.com)** - Dutch search engine that searches on google and shows the results (slightly
+- **[<img src='https://www.startpage.com/favicon.ico' width='16' height='16' alt='icon' /> Startpage](https://www.startpage.com)** - Dutch search engine that searches on Google and shows the results (slightly
 rearranged). It has several configurations that improve privacy during use
 (it is not open source)
 […](https://awesome-privacy.xyz/essentials/search-engines/startpage "View full Startpage report") 
@@ -484,6 +485,14 @@ rearranged). It has several configurations that improve privacy during use
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_418.svg)](https://tosdr.org/en/service/418) [![Startpage on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Startpage)](https://awesome-privacy.xyz/essentials/search-engines/startpage) 
 ˙ 
+
+		</details>
+- **[<img src='https://i.ibb.co/GH1n4wf/Brave-Search-Icon.png' width='16' height='16' alt='icon' /> Brave Search](https://search.brave.com/)** - Brave Search is a privacy-focused search engine that does not track users or their searches, does not use secret algorithms or user profiling, and is based on its own search index.[…](https://awesome-privacy.xyz/essentials/search-engines/brave-search "View full Brave Search report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: brave/brave-browser](https://img.shields.io/github/stars/brave/brave-browser?style=flat&logo=github&label=brave-browser&color=%235f53f4&cacheSeconds=3600)](https://github.com/brave/brave-browser) [![Privacy Policy](https://shields.tosdr.org/en_1487.svg)](https://tosdr.org/en/service/1487) [![Brave Search on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Brave_Search)](https://awesome-privacy.xyz/essentials/search-engines/brave-search) 
+📦 Open Source 🛡️ Security Audited ˙ 
 
 		</details>
 - **[<img src='https://www.mojeek.com/favicon.png' width='16' height='16' alt='icon' /> Mojeek](https://mojeek.com)** - British search engine providing independent and unbiased search results using
@@ -3125,19 +3134,6 @@ or used as a managed service for a small fee.
 ˙ 
 
 		</details>
-- **[<img src='https://skiff.com/favicon.ico' width='16' height='16' alt='icon' /> Skiff Pages](https://skiff.com/pages)** - Skiff Pages is an end-to-end encrypted, privacy-first collaborative
-document, note-taking, and wiki product. Skiff Pages has a modern,
-easy-to-use UI and supports rich text documents with embedded content.
-Skiff also supports end-to-end encrypted file upload and sharing
-(Skiff Drive), as well as workspaces for multiple users to collaborate.
-[…](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/skiff-pages "View full Skiff Pages report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: skiff-org/skiff-apps](https://img.shields.io/github/stars/skiff-org/skiff-apps?style=flat&logo=github&label=skiff-apps&color=%235f53f4&cacheSeconds=3600)](https://github.com/skiff-org/skiff-apps) [![Privacy Policy](https://shields.tosdr.org/en_8470.svg)](https://tosdr.org/en/service/8470) [![Skiff Pages on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Skiff_Pages)](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/skiff-pages) 
-˙ 
-
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -3928,7 +3924,7 @@ torrenting through Transmission, browsing the web, opening downloaded attachment
 ˙ 
 
 		</details>
-- **[<img src='https://icon.horse/icon/gufw.org' width='16' height='16' alt='icon' /> Gufw](http://gufw.org)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
+- **[<img src='https://icon.horse/icon/man.archlinux.org' width='16' height='16' alt='icon' /> Gufw](https://man.archlinux.org/man/gufw.8.en)** - Open source GUI firewall for Linux, allowing you to block internet access for certain applications. Supports both simple
 and advanced mode, GUI and CLI options, very easy to use, lightweight/ low-overhead, under active maintenance and backed
 by a strong community. Installable through most package managers, or compile from source.
 […](https://awesome-privacy.xyz/operating-systems/linux-defenses/gufw "View full Gufw report") 
@@ -5549,7 +5545,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/digitalarche">
-            <img src="https://avatars.githubusercontent.com/u/6546135?u=d033c9c16e8367987aec3f9ff5922bc67dd1eedf&v=4" width="80;" alt="digitalarche"/>
+            <img src="https://avatars.githubusercontent.com/u/6546135?u=564756d7f44ab2206819eb3148f6d822673f5066&v=4" width="80;" alt="digitalarche"/>
             <br />
             <sub><b>Digital Archeology</b></sub>
         </a>
@@ -5592,9 +5588,16 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/patvdv">
-            <img src="https://avatars.githubusercontent.com/u/12430107?v=4" width="80;" alt="patvdv"/>
+            <img src="https://avatars.githubusercontent.com/u/12430107?u=e8911c2fb91af4d30432f76da8c40927b2830bd7&v=4" width="80;" alt="patvdv"/>
             <br />
             <sub><b>Patrick Van Der Veken</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/plgonzalezrx8">
+            <img src="https://avatars.githubusercontent.com/u/19900049?v=4" width="80;" alt="plgonzalezrx8"/>
+            <br />
+            <sub><b>Pedro Gonzalez</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5605,6 +5608,14 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/allesauseinerhand">
+            <img src="https://avatars.githubusercontent.com/u/32039836?v=4" width="80;" alt="allesauseinerhand"/>
+            <br />
+            <sub><b>allesauseinerhand</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -5613,12 +5624,11 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
-            <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
+            <img src="https://avatars.githubusercontent.com/u/49742151?u=c5eaca5aa6841a80605cf4f7d0e861a9e6339ef3&v=4" width="80;" alt="lamtrinhdev"/>
             <br />
             <sub><b>LamTrinh.Dev</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Bastii717">
             <img src="https://avatars.githubusercontent.com/u/53431819?u=604977bed6ad6875ada890d0d3765a4cacc2fa14&v=4" width="80;" alt="Bastii717"/>
@@ -5646,7 +5656,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Nixy</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/nrvo">
             <img src="https://avatars.githubusercontent.com/u/151435968?u=e1dcb307fd0efdc45cddbe9490a7b956e4da6835&v=4" width="80;" alt="nrvo"/>
@@ -5699,13 +5710,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/lamtrinhdev">
+            <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
+            <br />
+            <sub><b>LamTrinh.Dev</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
             <sub><b>A-childs-encyclopedia</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/amilich">
             <img src="https://avatars.githubusercontent.com/u/1927690?v=4" width="80;" alt="amilich"/>
@@ -5740,15 +5758,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Slade991</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
             <br />
             <sub><b>Sam A.</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/gabrielvicenteYT">
             <img src="https://avatars.githubusercontent.com/u/68158102?v=4" width="80;" alt="gabrielvicenteYT"/>
@@ -5783,15 +5801,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Upstream8022</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
@@ -5826,15 +5844,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
             <br />
             <sub><b>Jxhn</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kolaente">
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
@@ -5868,13 +5886,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/62338646?v=4" width="80;" alt="rastiqdev"/>
             <br />
             <sub><b>RASTIQ</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/rollsicecream">
-            <img src="https://avatars.githubusercontent.com/u/153316540?v=4" width="80;" alt="rollsicecream"/>
-            <br />
-            <sub><b>Rollsicecream</b></sub>
         </a>
     </td></tr>
 </table>
