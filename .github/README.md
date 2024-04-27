@@ -5545,7 +5545,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/digitalarche">
-            <img src="https://avatars.githubusercontent.com/u/6546135?u=d033c9c16e8367987aec3f9ff5922bc67dd1eedf&v=4" width="80;" alt="digitalarche"/>
+            <img src="https://avatars.githubusercontent.com/u/6546135?u=564756d7f44ab2206819eb3148f6d822673f5066&v=4" width="80;" alt="digitalarche"/>
             <br />
             <sub><b>Digital Archeology</b></sub>
         </a>
@@ -5588,9 +5588,16 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/patvdv">
-            <img src="https://avatars.githubusercontent.com/u/12430107?v=4" width="80;" alt="patvdv"/>
+            <img src="https://avatars.githubusercontent.com/u/12430107?u=e8911c2fb91af4d30432f76da8c40927b2830bd7&v=4" width="80;" alt="patvdv"/>
             <br />
             <sub><b>Patrick Van Der Veken</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/plgonzalezrx8">
+            <img src="https://avatars.githubusercontent.com/u/19900049?v=4" width="80;" alt="plgonzalezrx8"/>
+            <br />
+            <sub><b>Pedro Gonzalez</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5601,6 +5608,14 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/allesauseinerhand">
+            <img src="https://avatars.githubusercontent.com/u/32039836?v=4" width="80;" alt="allesauseinerhand"/>
+            <br />
+            <sub><b>allesauseinerhand</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -5609,12 +5624,11 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
-            <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
+            <img src="https://avatars.githubusercontent.com/u/49742151?u=c5eaca5aa6841a80605cf4f7d0e861a9e6339ef3&v=4" width="80;" alt="lamtrinhdev"/>
             <br />
             <sub><b>LamTrinh.Dev</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Bastii717">
             <img src="https://avatars.githubusercontent.com/u/53431819?u=604977bed6ad6875ada890d0d3765a4cacc2fa14&v=4" width="80;" alt="Bastii717"/>
@@ -5642,7 +5656,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Nixy</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/nrvo">
             <img src="https://avatars.githubusercontent.com/u/151435968?u=e1dcb307fd0efdc45cddbe9490a7b956e4da6835&v=4" width="80;" alt="nrvo"/>
@@ -5695,13 +5710,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/lamtrinhdev">
+            <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
+            <br />
+            <sub><b>LamTrinh.Dev</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
             <sub><b>A-childs-encyclopedia</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/amilich">
             <img src="https://avatars.githubusercontent.com/u/1927690?v=4" width="80;" alt="amilich"/>
@@ -5736,15 +5758,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Slade991</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
             <br />
             <sub><b>Sam A.</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/gabrielvicenteYT">
             <img src="https://avatars.githubusercontent.com/u/68158102?v=4" width="80;" alt="gabrielvicenteYT"/>
@@ -5779,15 +5801,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Upstream8022</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
@@ -5822,15 +5844,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
             <br />
             <sub><b>Jxhn</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/kolaente">
             <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
@@ -5864,13 +5886,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/62338646?v=4" width="80;" alt="rastiqdev"/>
             <br />
             <sub><b>RASTIQ</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/rollsicecream">
-            <img src="https://avatars.githubusercontent.com/u/153316540?v=4" width="80;" alt="rollsicecream"/>
-            <br />
-            <sub><b>Rollsicecream</b></sub>
         </a>
     </td></tr>
 </table>
