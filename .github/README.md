@@ -3184,7 +3184,7 @@ Starts at $8/month for 2 TB.
 - **[<img src='https://icon.horse/icon/peergos.org' width='16' height='16' alt='icon' /> Peergos](https://peergos.org/)** - A peer-to-peer end-to-end encrypted global filesystem with fine grained access control. Provides a secure
 and private space online where you can store, share and view your photos, videos, music and documents.
 Also includes a calendar, news feed, task lists, chat and email client. Fully open source and self-hostable
-(or use hosted solution, £5/month for 50 GB).
+(or use hosted solution, from £5/month for 100 GB).
 […](https://awesome-privacy.xyz/productivity/encrypted-cloud-storage/peergos "View full Peergos report") 
 - **[<img src='https://internxt.com/favicon.ico' width='16' height='16' alt='icon' /> Internxt](https://internxt.com/)** - Store your files in total privacy. Internxt Drive is a zero-knowledge cloud storage service based on best-in-class
 privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB FREE and Paid plans starting from
