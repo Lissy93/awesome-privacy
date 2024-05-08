@@ -2064,7 +2064,7 @@ consider [running a Tor relay](https://trac.torproject.org/projects/tor/wiki/Tor
 > - [IPFS](https://ipfs.io)
 > - [ZeroNet](https://zeronet.io)
 > - [Panoramix](https://panoramix-project.eu)
-> - [Nym](https://nymtech.neteu)
+> - [Nym](https://nymtech.net)
 </details>
 
 <details>
