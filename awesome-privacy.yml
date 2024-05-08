@@ -2131,7 +2131,7 @@ categories:
       - name: Panoramix
         url: https://panoramix-project.eu
       - name: Nym
-        url: https://nymtech.neteu
+        url: https://nymtech.net
       wordOfWarning: |
         To provide low-latency browsing, Tor does not mix packets or generate cover traffic.
         If an adversary is powerful enough, theoretically they could either observe the entire network,
