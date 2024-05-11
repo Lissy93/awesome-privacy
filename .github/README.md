@@ -2064,7 +2064,7 @@ consider [running a Tor relay](https://trac.torproject.org/projects/tor/wiki/Tor
 > - [IPFS](https://ipfs.io)
 > - [ZeroNet](https://zeronet.io)
 > - [Panoramix](https://panoramix-project.eu)
-> - [Nym](https://nymtech.neteu)
+> - [Nym](https://nymtech.net)
 </details>
 
 <details>
@@ -5515,27 +5515,20 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/emlazzarin">
-            <img src="https://avatars.githubusercontent.com/u/1141361?u=714e3487a3f2e0df721b01a0133945f075d3ff68&v=4" width="80;" alt="emlazzarin"/>
-            <br />
-            <sub><b>Eddy Lazzarin</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/AnandChowdhary">
             <img src="https://avatars.githubusercontent.com/u/2841780?u=747e554b3a7f12eb20b7910e1c87d817844f714f&v=4" width="80;" alt="AnandChowdhary"/>
             <br />
             <sub><b>Anand Chowdhary</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/shrippen">
             <img src="https://avatars.githubusercontent.com/u/2873570?v=4" width="80;" alt="shrippen"/>
             <br />
             <sub><b>Shrippen</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/bile0026">
             <img src="https://avatars.githubusercontent.com/u/5022496?u=aec96ad173c0ea9baaba93807efa8a848af6595c&v=4" width="80;" alt="bile0026"/>
@@ -5570,15 +5563,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Araguaci</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/bmcgonag">
             <img src="https://avatars.githubusercontent.com/u/7346620?u=2a0f9284f3e12ac1cc15288c254d1ec68a5081e8&v=4" width="80;" alt="bmcgonag"/>
             <br />
             <sub><b>Brian McGonagill</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/vlad-timofeev">
             <img src="https://avatars.githubusercontent.com/u/11474041?u=eee43705b54d2ec9f51fc4fcce5ad18dd17c87e4&v=4" width="80;" alt="vlad-timofeev"/>
@@ -5613,15 +5606,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Göksel Yeşiller</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/allesauseinerhand">
             <img src="https://avatars.githubusercontent.com/u/32039836?v=4" width="80;" alt="allesauseinerhand"/>
             <br />
             <sub><b>Allesauseinerhand</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
             <img src="https://avatars.githubusercontent.com/u/49742151?u=c5eaca5aa6841a80605cf4f7d0e861a9e6339ef3&v=4" width="80;" alt="lamtrinhdev"/>
@@ -5656,8 +5649,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Nixy</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/nrvo">
             <img src="https://avatars.githubusercontent.com/u/151435968?u=e1dcb307fd0efdc45cddbe9490a7b956e4da6835&v=4" width="80;" alt="nrvo"/>
@@ -5782,6 +5774,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/alxwnth">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
+            <br />
+            <sub><b>Alex</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
@@ -5794,15 +5793,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Upstream8022">
             <img src="https://avatars.githubusercontent.com/u/105393306?v=4" width="80;" alt="Upstream8022"/>
             <br />
             <sub><b>Upstream8022</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
@@ -5837,15 +5836,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5879,13 +5878,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/rastiqdev">
-            <img src="https://avatars.githubusercontent.com/u/62338646?v=4" width="80;" alt="rastiqdev"/>
-            <br />
-            <sub><b>RASTIQ</b></sub>
         </a>
     </td></tr>
 </table>
