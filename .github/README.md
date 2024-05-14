@@ -1633,7 +1633,7 @@ Get from [F-Droid](https://f-droid.org/packages/dev.ukanth.ufirewall/)
 and the certificate seen from an external network. If they do not match, this may indicate a
 man-in-the-middle modifying requests.
 […](https://awesome-privacy.xyz/security-tools/mobile-apps/catch-the-man-in-the-middle "View full Catch the Man-in-the-Middle report") 
-- **[<img src='https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com/app)** - An open-source ad-blocker and firewall app for Android 6+ (does not require root).
+- **[<img src='https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com)** - An open-source ad-blocker and firewall app for Android 6+ (does not require root).
 […](https://awesome-privacy.xyz/security-tools/mobile-apps/rethinkdns-and-firewall "View full RethinkDNS & Firewall report") 
 	- <details>
 		<summary>Stats</summary>
