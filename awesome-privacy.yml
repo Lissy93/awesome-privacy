@@ -2387,6 +2387,7 @@ categories:
         followWith: Android
         github: celzero/rethink-app
         icon: https://rethinkdns.com/ico/app_icon.svg
+        androidApp: com.celzero.bravedns
         tosdrId: 4691
         description: |
           An open-source ad-blocker and firewall app for Android 6+ (does not require root).
@@ -2557,6 +2558,8 @@ categories:
         url: https://blokada.org/
         github: blokadaorg/blokada
         followWith: Android/ iOS
+        androidApp: org.blokada.sex
+        iosApp: https://apps.apple.com/us/app/blokada/id1508341781
         tosdrId: 8557
         description: |
           Open source mobile ad-blocker that acts like a firewall. Since it's device-wide, once connected all apps will
@@ -2569,6 +2572,7 @@ categories:
         followWith: Android
         tosdrId: 4691
         icon: https://rethinkdns.com/ico/app_icon.svg
+        androidApp: com.celzero.bravedns
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
 
