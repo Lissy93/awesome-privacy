@@ -1712,7 +1712,7 @@ categories:
           man-in-the-middle modifying requests.
 
       - name: RethinkDNS & Firewall
-        url: https://rethinkdns.com/app
+        url: https://rethinkdns.com
         github: celzero/rethink-app
         tosdrId: 4691
         icon: https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png
@@ -2316,6 +2316,7 @@ categories:
         icon: https://rethinkdns.com/ico/app_icon.svg
         followWith: Android
         tosdrId: 4691
+        androidApp: com.celzero.bravedns
         description: |
           Free and open source DNS changer with support for DNS-over-HTTPS, DNS-over-Tor, and DNSCrypt v3
           with Anonymized Relays. (Note, since this uses Android's VPN API, it is not possible to run a
