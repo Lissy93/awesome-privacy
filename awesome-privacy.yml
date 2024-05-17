@@ -2132,6 +2132,10 @@ categories:
         url: https://panoramix-project.eu
       - name: Nym
         url: https://nymtech.net
+        description: >
+          A new and well-funded, open-source and decentralized implementation of mixnets. Their mixnet can be accessed via their legacy [NymConnect](https://nymtech.net/download/nymconnect)
+          tool or via the new [NymVPN](http://nymvpn.com/en). More info on their [GitHub](https://github.com/nymtech).
+
       wordOfWarning: |
         To provide low-latency browsing, Tor does not mix packets or generate cover traffic.
         If an adversary is powerful enough, theoretically they could either observe the entire network,
