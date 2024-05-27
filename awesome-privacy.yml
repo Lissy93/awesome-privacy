@@ -414,6 +414,13 @@ categories:
         description: |
           Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
           adblock and additional settings for hardening.
+      - name: Cromite
+        url: https://www.cromite.org/
+        icon: https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
+        github: uazo/cromite
+        description: |
+          Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
+
       notableMentions: >
         **Mobile Browsers**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android),
         [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
