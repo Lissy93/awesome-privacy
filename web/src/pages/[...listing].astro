@@ -165,7 +165,7 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
 
 const findPrivacyPolicyLink = () => {
   if (!privacyData) return null;
-  const docs = privacyData.parameters.documents;
+  const docs = privacyData?.parameters?.documents;
   if (docs) {
     const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
     if (privacyPolicy) return privacyPolicy.url;
