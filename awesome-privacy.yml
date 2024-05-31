@@ -213,16 +213,6 @@ categories:
           Simple, native, open source 2-FA Client for iOS, which never connects to the
           internet - built by @mattrubin.me
 
-      - name: Raivo OTP
-        url: https://raivo-otp.com/
-        icon: https://raivo-otp.com/img/app-icon.png
-        github: raivo-otp/ios-application
-        followWith: iOS
-        iosApp: https://apps.apple.com/us/app/raivo-authenticator/id1459042137
-        description: |
-          A native, lightweight and secure one-time-password (OTP) client built for iOS;
-          Raivo OTP! - built by @tijme
-
       - name: WinAuth
         url: https://winauth.github.io/winauth
         github: winauth/winauth
