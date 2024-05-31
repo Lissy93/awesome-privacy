@@ -22,7 +22,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (9)
+	- [2-Factor Authentication](#2-factor-authentication) (8)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (6)
 	- [Search Engines](#search-engines) (5)
@@ -249,16 +249,6 @@ internet - built by @mattrubin.me
 		<summary>Stats</summary>
 
 		[![GitHub: mattrubin/Authenticator](https://img.shields.io/github/stars/mattrubin/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/mattrubin/Authenticator)  [![Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator) 
-˙ 
-
-		</details>
-- **[<img src='https://raivo-otp.com/img/app-icon.png' width='16' height='16' alt='icon' /> Raivo OTP](https://raivo-otp.com/)** - A native, lightweight and secure one-time-password (OTP) client built for iOS;
-Raivo OTP! - built by @tijme
-[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp "View full Raivo OTP report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: raivo-otp/ios-application](https://img.shields.io/github/stars/raivo-otp/ios-application?style=flat&logo=github&label=ios-application&color=%235f53f4&cacheSeconds=3600)](https://github.com/raivo-otp/ios-application)  [![Raivo OTP on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Raivo_OTP)](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp) 
 ˙ 
 
 		</details>
