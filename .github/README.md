@@ -22,9 +22,9 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (9)
+	- [2-Factor Authentication](#2-factor-authentication) (8)
 	- [File Encryption](#file-encryption) (3)
-	- [Browsers](#browsers) (5)
+	- [Browsers](#browsers) (6)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
@@ -252,16 +252,6 @@ internet - built by @mattrubin.me
 ˙ 
 
 		</details>
-- **[<img src='https://raivo-otp.com/img/app-icon.png' width='16' height='16' alt='icon' /> Raivo OTP](https://raivo-otp.com/)** - A native, lightweight and secure one-time-password (OTP) client built for iOS;
-Raivo OTP! - built by @tijme
-[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp "View full Raivo OTP report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: raivo-otp/ios-application](https://img.shields.io/github/stars/raivo-otp/ios-application?style=flat&logo=github&label=ios-application&color=%235f53f4&cacheSeconds=3600)](https://github.com/raivo-otp/ios-application)  [![Raivo OTP on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Raivo_OTP)](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp) 
-˙ 
-
-		</details>
 - **[<img src='https://winauth.github.io/winauth/favicon.ico' width='16' height='16' alt='icon' /> WinAuth](https://winauth.github.io/winauth)** - Portable, encrypted desktop authenticator app for Microsoft Windows. With
 useful features, like hotkeys and some additional security tools, WinAuth is a
 great companion authenticator for desktop power-users. It's open source and
@@ -429,6 +419,15 @@ adblock and additional settings for hardening.
 		<summary>Stats</summary>
 
 		[![GitHub: bromite/bromite](https://img.shields.io/github/stars/bromite/bromite?style=flat&logo=github&label=bromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/bromite/bromite) [![Privacy Policy](https://shields.tosdr.org/en_9174.svg)](https://tosdr.org/en/service/9174) [![Bromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bromite)](https://awesome-privacy.xyz/essentials/browsers/bromite) 
+˙ 
+
+		</details>
+- **[<img src='https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67' width='16' height='16' alt='icon' /> Cromite](https://www.cromite.org/)** - Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
+[…](https://awesome-privacy.xyz/essentials/browsers/cromite "View full Cromite report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: uazo/cromite](https://img.shields.io/github/stars/uazo/cromite?style=flat&logo=github&label=cromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/uazo/cromite)  [![Cromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cromite)](https://awesome-privacy.xyz/essentials/browsers/cromite) 
 ˙ 
 
 		</details>
@@ -5573,8 +5572,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/vlad-timofeev">
-            <img src="https://avatars.githubusercontent.com/u/11474041?u=eee43705b54d2ec9f51fc4fcce5ad18dd17c87e4&v=4" width="80;" alt="vlad-timofeev"/>
+        <a href="https://github.com/vlad-tim">
+            <img src="https://avatars.githubusercontent.com/u/11474041?v=4" width="80;" alt="vlad-tim"/>
             <br />
             <sub><b>Vlad</b></sub>
         </a>
@@ -5760,13 +5759,6 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/alxwnth">
-            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
-            <br />
-            <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
@@ -5779,15 +5771,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Upstream8022">
             <img src="https://avatars.githubusercontent.com/u/105393306?v=4" width="80;" alt="Upstream8022"/>
             <br />
             <sub><b>Upstream8022</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
@@ -5822,15 +5814,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5864,6 +5856,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/poegl">
+            <img src="https://avatars.githubusercontent.com/u/57896970?v=4" width="80;" alt="poegl"/>
+            <br />
+            <sub><b>WP</b></sub>
         </a>
     </td></tr>
 </table>
