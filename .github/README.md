@@ -34,7 +34,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (3)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (4)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (27)
@@ -1022,8 +1022,17 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 ---
 
 ### Virtual Phone Numbers
-- **[<img src='https://www.smspool.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** -  Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. We support over 50+ countries and support over 300+ services.
-[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool.net "View full SMSPool report") 
+
+- **[<img src='https://www.smspool.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+We support over 50+ countries and support over 300+ services.
+[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool "View full SMSPool report") 
+	- <details>
+		<summary>Stats</summary>
+
+		 [![Privacy Policy](https://shields.tosdr.org/en_10033.svg)](https://tosdr.org/en/service/10033) [![SMSPool on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SMSPool)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool) 
+💰 Accepts Anonymous Payment ˙ 
+
+		</details>
 - **[<img src='https://silent.link/static/favicon/apple-icon-114x114.png' width='16' height='16' alt='icon' /> Silent.link](https://silent.link/)** - Anonymous eSIM for sending / receiving SMS, incoming calls and 4G / 5G internet
 + world-wide roaming. No data is required at sign-up. Affordable pricing, with
 payments and top-ups accepted in BTC. Requires an eSim-compatible device.
