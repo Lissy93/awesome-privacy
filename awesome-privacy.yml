@@ -1057,6 +1057,16 @@ categories:
     - name: Virtual Phone Numbers
       alternativeTo: ['google voice', 'grasshopper', 'ringcentral', 'sideline', 'burner']
       services:
+      - name: SMSPool
+        url: https://www.smspool.net
+        icon: https://www.smspool.net/apple-touch-icon.png
+        description: |
+          Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+          We support over 50+ countries and support over 300+ services.
+        androidApp: com.smspool.app
+        iosApp: https://apps.apple.com/app/smspool/id6474617801
+        tosdrId: 10033
+        acceptsCrypto: true
       - name: Silent.link
         url: https://silent.link/
         icon: https://silent.link/static/favicon/apple-icon-114x114.png
