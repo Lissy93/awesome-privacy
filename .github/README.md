@@ -1022,7 +1022,8 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 ---
 
 ### Virtual Phone Numbers
-
+- **[<img src='https://www.smspool.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** -  Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. We support over 50+ countries and support over 300+ services.
+[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool.net "View full SMSPool report") 
 - **[<img src='https://silent.link/static/favicon/apple-icon-114x114.png' width='16' height='16' alt='icon' /> Silent.link](https://silent.link/)** - Anonymous eSIM for sending / receiving SMS, incoming calls and 4G / 5G internet
 + world-wide roaming. No data is required at sign-up. Affordable pricing, with
 payments and top-ups accepted in BTC. Requires an eSim-compatible device.
