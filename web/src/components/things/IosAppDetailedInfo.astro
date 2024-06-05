@@ -18,7 +18,10 @@ const makeRatingPercentage = (rating: number) => (rating / 5) * 100;
 
 const roundRatings = (rating: number) => Math.round(rating * 100) / 100;
 
-const putCommaInNumber = (num: number) => num.toLocaleString();
+const putCommaInNumber = (num: number | any) => {
+  if (!num) return 'Unknown';
+  return typeof num === 'number' ? num.toLocaleString() : num;
+}
 
 ---
 
