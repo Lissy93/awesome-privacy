@@ -5583,7 +5583,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
 <tr>
     <td align="center">
         <a href="https://github.com/vlad-tim">
-            <img src="https://avatars.githubusercontent.com/u/11474041?v=4" width="80;" alt="vlad-tim"/>
+            <img src="https://avatars.githubusercontent.com/u/11474041?u=eee43705b54d2ec9f51fc4fcce5ad18dd17c87e4&v=4" width="80;" alt="vlad-tim"/>
             <br />
             <sub><b>Vlad</b></sub>
         </a>
@@ -5636,13 +5636,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/NixyJuppie">
-            <img src="https://avatars.githubusercontent.com/u/138570196?u=b102c222487905728b858704962d32759df29ebe&v=4" width="80;" alt="NixyJuppie"/>
-            <br />
-            <sub><b>Nixy</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5740,13 +5733,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/smspool">
+            <img src="https://avatars.githubusercontent.com/u/113311275?v=4" width="80;" alt="smspool"/>
+            <br />
+            <sub><b>SMSPool</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
             <sub><b>Slade991</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
@@ -5769,12 +5769,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/alxwnth">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
+            <br />
+            <sub><b>Alex</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
             <sub><b>Tim Schlotfeldt</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
@@ -5782,14 +5790,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <sub><b>Ujjawal Saini</b></sub>
         </a>
     </td>
-    <td align="center">
-        <a href="https://github.com/Upstream8022">
-            <img src="https://avatars.githubusercontent.com/u/105393306?v=4" width="80;" alt="Upstream8022"/>
-            <br />
-            <sub><b>Upstream8022</b></sub>
-        </a>
-    </td></tr>
-<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
@@ -5824,15 +5824,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5866,13 +5866,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/poegl">
-            <img src="https://avatars.githubusercontent.com/u/57896970?v=4" width="80;" alt="poegl"/>
-            <br />
-            <sub><b>WP</b></sub>
         </a>
     </td></tr>
 </table>
