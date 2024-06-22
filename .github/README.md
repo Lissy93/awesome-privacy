@@ -1681,7 +1681,7 @@ Only install from official sources.
 > [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
 > [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
 > [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-> and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
+> and [Fossify](https://github.com/FossifyOrg) -
 > all of which are trusted developers or organisations, who've done amazing work.
 > 
 > For offensive and defensive security, see
@@ -5769,27 +5769,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/alxwnth">
-            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
-            <br />
-            <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
             <sub><b>Tim Schlotfeldt</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
@@ -5824,15 +5817,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5866,6 +5859,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/poegl">
+            <img src="https://avatars.githubusercontent.com/u/57896970?v=4" width="80;" alt="poegl"/>
+            <br />
+            <sub><b>WP</b></sub>
         </a>
     </td></tr>
 </table>
