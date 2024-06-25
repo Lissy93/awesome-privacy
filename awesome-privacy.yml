@@ -243,6 +243,20 @@ categories:
           supports both Time-Based One-Time Password (TOTP, specified in [RFC 6238](https://tools.ietf.org/html/rfc6238))
           and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ietf.org/html/rfc4226)).
 
+      - name: Ente Auth
+        url: https://ente.io/auth/
+        icon: https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico
+        openSource: true
+        github: ente-io/ente
+        tosdrId: 5256
+        iosApp: https://apps.apple.com/us/app/ente-auth/id6444121398
+        androidApp: io.ente.auth
+        description: |
+          Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
+          It can be used with an online account to backup and sync your tokens across your 
+          devices (and access them via a web interface) in a secure, end-to-end encrypted 
+          fashion. It can also be used offline on a single device with no account necessary.
+
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
       notableMentions: >
