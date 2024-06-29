@@ -5781,10 +5781,10 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/tschlotfeldt">
-            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+        <a href="https://github.com/alxwnth">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
             <br />
-            <sub><b>Tim Schlotfeldt</b></sub>
+            <sub><b>Alex</b></sub>
         </a>
     </td>
     <td align="center">
