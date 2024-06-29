@@ -22,7 +22,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (8)
+	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (6)
 	- [Search Engines](#search-engines) (5)
@@ -276,6 +276,18 @@ and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ie
 
 		[![GitHub: Authenticator-Extension/Authenticator](https://img.shields.io/github/stars/Authenticator-Extension/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/Authenticator-Extension/Authenticator)  [![Authenticator CC on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_CC)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-cc) 
 ˙ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico' width='16' height='16' alt='icon' /> Ente Auth](https://ente.io/auth/)** - Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
+It can be used with an online account to backup and sync your tokens across your 
+devices (and access them via a web interface) in a secure, end-to-end encrypted 
+fashion. It can also be used offline on a single device with no account necessary.
+[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth "View full Ente Auth report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: ente-io/ente](https://img.shields.io/github/stars/ente-io/ente?style=flat&logo=github&label=ente&color=%235f53f4&cacheSeconds=3600)](https://github.com/ente-io/ente) [![Privacy Policy](https://shields.tosdr.org/en_5256.svg)](https://tosdr.org/en/service/5256) [![Ente Auth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Ente_Auth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth) 
+📦 Open Source ˙ 
 
 		</details>
 
@@ -1681,7 +1693,7 @@ Only install from official sources.
 > [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
 > [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
 > [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-> and [Fossify](https://github.com/FossifyOrg) -
+> and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
 > all of which are trusted developers or organisations, who've done amazing work.
 > 
 > For offensive and defensive security, see
@@ -5769,10 +5781,10 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/tschlotfeldt">
-            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+        <a href="https://github.com/alxwnth">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
             <br />
-            <sub><b>Tim Schlotfeldt</b></sub>
+            <sub><b>Alex</b></sub>
         </a>
     </td>
     <td align="center">
