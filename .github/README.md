@@ -2940,7 +2940,7 @@ other services. Supports synchronisation with cloud services, implemented with E
 🛡️ Security Audited ˙ 
 
 		</details>
-- **[<img src='https://logseq.com/logo-with-border.5bf84f43.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
+- **[<img src='https://logseq.com/logo-with-border.a30e7bd0.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
 Org-mode files.
 Supports lots of different note modes, including task management,
 PDF annotation, flashcards, whiteboards strong markdown support and more.
