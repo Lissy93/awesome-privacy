@@ -3013,7 +3013,7 @@ categories:
       - name: Logseq
         url: https://logseq.com/
         followWith: Windows, MacOS, Linux, Android, iOS, Web
-        icon: https://logseq.com/logo-with-border.5bf84f43.png
+        icon: https://logseq.com/logo-with-border.a30e7bd0.png
         securityAudited: false
         github: logseq/logseq
         iosApp: https://apps.apple.com/us/app/logseq/id1601013908
