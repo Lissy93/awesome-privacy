@@ -2940,7 +2940,7 @@ other services. Supports synchronisation with cloud services, implemented with E
 🛡️ Security Audited ˙ 
 
 		</details>
-- **[<img src='https://logseq.com/logo-with-border.5bf84f43.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
+- **[<img src='https://logseq.com/logo-with-border.a30e7bd0.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
 Org-mode files.
 Supports lots of different note modes, including task management,
 PDF annotation, flashcards, whiteboards strong markdown support and more.
@@ -5774,27 +5774,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/alxwnth">
-            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
-            <br />
-            <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
@@ -5821,6 +5814,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Sanmonji</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/azzamsa">
+            <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
+            <br />
+            <sub><b>Azzam S.A</b></sub>
         </a>
     </td>
     <td align="center">
