@@ -704,15 +704,17 @@ accept anonymous payment: BTC and cash (as well as the normal credit card and Pa
 
 		</details>
 - **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
-secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
+secure native mobile apps, anonymous signup, and an encrypted calendar. Tuta has a
 full-featured free plan or a premium subscription for businesses allowing for
-custom domains ($12/ month). Tuta
+custom domains ($3/ month). Tuta
 [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
 like most encrypted mail providers, instead they use a standardized, hybrid method
-consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
-2048 bit RSA). This causes compatibility issues when communicating with contacts
+consisting of a symmetrical and an asymmetrical algorithm (with 256 bit AES, and
+RSA 2048 or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
 using PGP. But it does allow them to encrypt much more of the header data (body,
-attachments, subject lines, and sender names etc) which PGP mail providers cannot do.
+attachments, subject lines, and sender names etc) which PGP mail providers cannot do.By implementing Kyber
+into their encryption algorithm Tuta can also provide quantum-safe encryption for emails both at rest and in
+transit.
 […](https://awesome-privacy.xyz/communication/encrypted-email/tuta "View full Tuta report") 
 	- <details>
 		<summary>Stats</summary>
