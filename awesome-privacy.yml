@@ -745,6 +745,7 @@ categories:
           accept anonymous payment: BTC and cash (as well as the normal credit card and PayPal).
       - name: Tuta
         icon: https://tuta.com/resources/favicon/logo-favicon.svg
+        openSource: true
         github: tutao/tutanota
         tosdrId: 157
         url: https://tuta.com
@@ -753,15 +754,17 @@ categories:
         iosApp: https://apps.apple.com/us/app/encrypted-email-tuta/id922429609
         description: |
           Free and open source email service based in Germany. It has a basic intuitive UI,
-          secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
-          full-featured free plan or a premium subscription for businesses allowing for
-          custom domains ($12/ month). Tuta
+          secure native mobile apps and desktop email clients, anonymous signup, and an encrypted calendar. Tuta has a
+          full-featured free plan and premium subscription plans allowing for
+          custom domains (starting at $3/month). Tuta
           [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
-          like most encrypted mail providers, instead they use a standardized, hybrid method
-          consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
-          2048 bit RSA). This causes compatibility issues when communicating with contacts
+          like other encrypted mail providers, instead they use a standardized, hybrid method
+          consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+          or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
           using PGP. But it does allow them to encrypt much more of the header data (body,
-          attachments, subject lines, and sender names etc) which PGP mail providers cannot do.
+          attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
+          to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+          posed by quantum computers.
       - name: Forward Email
         url: https://forwardemail.net
         icon: https://forwardemail.net/img/android-chrome-192x192.png
