@@ -704,21 +704,23 @@ accept anonymous payment: BTC and cash (as well as the normal credit card and Pa
 
 		</details>
 - **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
-secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
-full-featured free plan or a premium subscription for businesses allowing for
-custom domains ($12/ month). Tuta
+secure native mobile apps and desktop email clients, anonymous signup, and an encrypted calendar. Tuta has a
+full-featured free plan and premium subscription plans allowing for
+custom domains (starting at $3/month). Tuta
 [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
-like most encrypted mail providers, instead they use a standardized, hybrid method
-consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
-2048 bit RSA). This causes compatibility issues when communicating with contacts
+like other encrypted mail providers, instead they use a standardized, hybrid method
+consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
 using PGP. But it does allow them to encrypt much more of the header data (body,
-attachments, subject lines, and sender names etc) which PGP mail providers cannot do.
+attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
+to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+posed by quantum computers.
 […](https://awesome-privacy.xyz/communication/encrypted-email/tuta "View full Tuta report") 
 	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: tutao/tutanota](https://img.shields.io/github/stars/tutao/tutanota?style=flat&logo=github&label=tutanota&color=%235f53f4&cacheSeconds=3600)](https://github.com/tutao/tutanota) [![Privacy Policy](https://shields.tosdr.org/en_157.svg)](https://tosdr.org/en/service/157) [![Tuta on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tuta)](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 
-˙ 
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
