@@ -5510,8 +5510,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/koconder">
-            <img src="https://avatars.githubusercontent.com/u/25068?u=582657b23622aaa3dfe68bd028a780f272f456fa&v=4" width="80;" alt="koconder"/>
+        <a href="https://github.com/vincentkoc">
+            <img src="https://avatars.githubusercontent.com/u/25068?v=4" width="80;" alt="vincentkoc"/>
             <br />
             <sub><b>Vincent Koc</b></sub>
         </a>
@@ -5649,7 +5649,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         <a href="https://github.com/st617">
             <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
             <br />
-            <sub><b>st617</b></sub>
+            <sub><b>St617</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5790,27 +5790,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/alxwnth">
-            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
-            <br />
-            <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
             <sub><b>Ujjawal Saini</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
@@ -5845,15 +5838,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Azzam S.A</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5887,6 +5880,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/poegl">
+            <img src="https://avatars.githubusercontent.com/u/57896970?v=4" width="80;" alt="poegl"/>
+            <br />
+            <sub><b>WP</b></sub>
         </a>
     </td></tr>
 </table>
