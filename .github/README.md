@@ -1037,7 +1037,7 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 
 ### Virtual Phone Numbers
 
-- **[<img src='https://www.smspool.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+- **[<img src='https://i.ibb.co/2t4MBFj/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
 We support over 50+ countries and support over 300+ services.
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool "View full SMSPool report") 
 	- <details>
