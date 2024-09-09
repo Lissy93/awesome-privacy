@@ -516,8 +516,6 @@ categories:
         url: https://metager.org
       - name: YaCy
         url: https://yacy.net
-      - name: Brave Search
-        url: https://search.brave.com/
       - name: Searx
         url: https://github.com/searxng/searxng
         description: >
