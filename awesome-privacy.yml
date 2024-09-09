@@ -4498,13 +4498,6 @@ categories:
         github: spesmilo/electrum
         tosdrId: 2761
 
-      - name: Samourai Wallet
-        url: https://samouraiwallet.com/
-        description: |
-          An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
-        followWith: Bitcoin
-        github: Samourai-Wallet/samourai-wallet-android
-
       - name: Sparrow Wallet
         url: https://sparrowwallet.com/
         description: |
