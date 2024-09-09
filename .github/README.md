@@ -522,7 +522,6 @@ its own crawler. Has a zero tracking policy (it is not open source)
 
 > - [MetaGear](https://metager.org)
 > - [YaCy](https://yacy.net)
-> - [Brave Search](https://search.brave.com/)
 > - [Searx](https://github.com/searxng/searxng) - Self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used. A fork of the original [Searx](https://searx.github.io/searx/).
 </details>
 
