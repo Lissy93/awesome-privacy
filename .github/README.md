@@ -87,7 +87,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Smart Home](#smart-home) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
-	- [Crypto Wallets](#crypto-wallets) (9)
+	- [Crypto Wallets](#crypto-wallets) (8)
 	- [Crypto Exchanges](#crypto-exchanges) (4)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
@@ -4474,15 +4474,6 @@ be physically tracked (CCTV, phone location, card payments etc)
 		<summary>Stats</summary>
 
 		[![GitHub: spesmilo/electrum](https://img.shields.io/github/stars/spesmilo/electrum?style=flat&logo=github&label=electrum&color=%235f53f4&cacheSeconds=3600)](https://github.com/spesmilo/electrum) [![Privacy Policy](https://shields.tosdr.org/en_2761.svg)](https://tosdr.org/en/service/2761) [![Electrum on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Electrum)](https://awesome-privacy.xyz/finance/crypto-wallets/electrum) 
-˙ 
-
-		</details>
-- **[<img src='https://icon.horse/icon/samouraiwallet.com' width='16' height='16' alt='icon' /> Samourai Wallet](https://samouraiwallet.com/)** - An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
-[…](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet "View full Samourai Wallet report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: Samourai-Wallet/samourai-wallet-android](https://img.shields.io/github/stars/Samourai-Wallet/samourai-wallet-android?style=flat&logo=github&label=samourai-wallet-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/Samourai-Wallet/samourai-wallet-android)  [![Samourai Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Samourai_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet) 
 ˙ 
 
 		</details>
