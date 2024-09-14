@@ -87,7 +87,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Smart Home](#smart-home) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
-	- [Crypto Wallets](#crypto-wallets) (9)
+	- [Crypto Wallets](#crypto-wallets) (8)
 	- [Crypto Exchanges](#crypto-exchanges) (4)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
@@ -522,7 +522,6 @@ its own crawler. Has a zero tracking policy (it is not open source)
 
 > - [MetaGear](https://metager.org)
 > - [YaCy](https://yacy.net)
-> - [Brave Search](https://search.brave.com/)
 > - [Searx](https://github.com/searxng/searxng) - Self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used. A fork of the original [Searx](https://searx.github.io/searx/).
 </details>
 
@@ -1037,7 +1036,7 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 
 ### Virtual Phone Numbers
 
-- **[<img src='https://www.smspool.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+- **[<img src='https://i.ibb.co/2t4MBFj/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
 We support over 50+ countries and support over 300+ services.
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool "View full SMSPool report") 
 	- <details>
@@ -4477,15 +4476,6 @@ be physically tracked (CCTV, phone location, card payments etc)
 ˙ 
 
 		</details>
-- **[<img src='https://icon.horse/icon/samouraiwallet.com' width='16' height='16' alt='icon' /> Samourai Wallet](https://samouraiwallet.com/)** - An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
-[…](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet "View full Samourai Wallet report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: Samourai-Wallet/samourai-wallet-android](https://img.shields.io/github/stars/Samourai-Wallet/samourai-wallet-android?style=flat&logo=github&label=samourai-wallet-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/Samourai-Wallet/samourai-wallet-android)  [![Samourai Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Samourai_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet) 
-˙ 
-
-		</details>
 - **[<img src='https://icon.horse/icon/sparrowwallet.com' width='16' height='16' alt='icon' /> Sparrow Wallet](https://sparrowwallet.com/)** - Sparrow is a Bitcoin wallet for those who value financial self-sovereignty. Sparrow’s emphasis is on security, privacy, and usability. Sparrow does not hide information from you - on the contrary, it attempts to provide as much detail as possible about your transactions and UTXOs, but in a way that is manageable and usable.
 […](https://awesome-privacy.xyz/finance/crypto-wallets/sparrow-wallet "View full Sparrow Wallet report") 
 	- <details>
@@ -5712,6 +5702,13 @@ This project exists thanks to all the people who've helped build and maintain it
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/SadMadLad">
+            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
+            <br />
+            <sub><b>Saad Azam</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
@@ -5745,15 +5742,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Titanism</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/smspool">
             <img src="https://avatars.githubusercontent.com/u/113311275?v=4" width="80;" alt="smspool"/>
             <br />
             <sub><b>SMSPool</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
@@ -5780,13 +5777,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
             <br />
             <sub><b>Alex Ogden</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/AshboDev">
-            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
-            <br />
-            <sub><b>Ash Scott</b></sub>
         </a>
     </td>
     <td align="center">
