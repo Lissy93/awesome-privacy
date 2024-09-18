@@ -3296,14 +3296,6 @@ categories:
     - name: File Drop
       alternativeTo: ['wetransfer', 'send anywhere', 'filemail', 'smash']
       services:
-      - name: FilePizza
-        url: https://file.pizza
-        github: kern/filepizza
-        followWith: Web
-        description: |
-          Peer-to-peer based file transfer from the browser, using Web Torrent. It's quick and easy to use, and doesn't
-          require any software to be installed. Can also be self-hosted.
-
       - name: FileSend
         url: https://filesend.standardnotes.org
         followWith: Web
