@@ -5037,7 +5037,7 @@ categories:
         url: https://photopea.com
         icon: https://www.photopea.com/promo/icon512.png
         github: photopea/photopea
-        openSource: true
+        openSource: false
         securityAudited: false
         acceptsCrypto: true
         tosdrId: 4105
