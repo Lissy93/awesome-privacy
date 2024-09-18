@@ -49,7 +49,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Clients](#dns-clients) (6)
 	- [Firewalls](#firewalls) (14)
 	- [Ad Blockers](#ad-blockers) (8)
-	- [Host Block Lists](#host-block-lists) (6)
+	- [Host Block Lists](#host-block-lists) (5)
 	- [Router Firmware](#router-firmware) (2)
 	- [Network Analysis](#network-analysis) (4)
 	- [Intrusion Detection](#intrusion-detection) (5)
@@ -2574,15 +2574,6 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 - **[<img src='https://d3pkfiqitivr8j.cloudfront.net/sitefiles/images/favicon.ico' width='16' height='16' alt='icon' /> iBlockList](https://www.iblocklist.com)** - Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
 political, illegal, hijacked, bad peers and more.
 […](https://awesome-privacy.xyz/networking/host-block-lists/iblocklist "View full iBlockList report") 
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Energized](https://github.com/EnergizedProtection/block)** - A variety of well-maintained lists, available in all common formats, with millions of hosts included.
-[…](https://awesome-privacy.xyz/networking/host-block-lists/energized "View full Energized report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: EnergizedProtection/block](https://img.shields.io/github/stars/EnergizedProtection/block?style=flat&logo=github&label=block&color=%235f53f4&cacheSeconds=3600)](https://github.com/EnergizedProtection/block)  [![Energized on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Energized)](https://awesome-privacy.xyz/networking/host-block-lists/energized) 
-˙ 
-
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
