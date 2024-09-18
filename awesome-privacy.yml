@@ -2661,13 +2661,6 @@ categories:
           Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
           political, illegal, hijacked, bad peers and more.
 
-      - name: Energized
-        url: https://github.com/EnergizedProtection/block
-        github: EnergizedProtection/block
-        description: |
-          A variety of well-maintained lists, available in all common formats, with millions of hosts included.
-
-
     #############################
     ###### Router FirmWARE ######
     #############################
