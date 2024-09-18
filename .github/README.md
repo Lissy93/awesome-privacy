@@ -1064,8 +1064,8 @@ and payment is accepted in BTC, XMR or credit card.
 		</details>
 - **[<img src='https://jmp.chat/static/jmp.svg' width='16' height='16' alt='icon' /> Jmp.chat](https://jmp.chat/)** - Phone number for incoming + outgoing calls and messages, provided by Soprani.
 Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at
-$2.99 / month. Only available in the US and Canada, as (as of 2022) the service
-is still in Beta. See alternate instances at [soprani.ca](https://soprani.ca/)
+$4.99 / month. Only available in the US and Canada (as of 2024).
+See alternate instances at [soprani.ca](https://soprani.ca/)
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/jmp.chat "View full Jmp.chat report") 
 - **[<img src='https://i.ibb.co/Dgwr4Z0/monero-sms.png' width='16' height='16' alt='icon' /> MoneroSMS](https://monerosms.com)** - Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
 email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
