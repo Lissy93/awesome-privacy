@@ -48,7 +48,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Providers](#dns-providers) (3)
 	- [DNS Clients](#dns-clients) (6)
 	- [Firewalls](#firewalls) (14)
-	- [Ad Blockers](#ad-blockers) (9)
+	- [Ad Blockers](#ad-blockers) (8)
 	- [Host Block Lists](#host-block-lists) (6)
 	- [Router Firmware](#router-firmware) (2)
 	- [Network Analysis](#network-analysis) (4)
@@ -2453,16 +2453,6 @@ has detailed statistics, and makes it easy to pause/ resume Pi-Hole if needed.
 - **[<img src='https://diversion.ch/files/theme-src/images/favicon/favicon-16x16.png' width='16' height='16' alt='icon' /> Diversion](https://diversion.ch)** - A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
 and more on supported routers running Asuswrt-Merlin firmware, including its forks.
 […](https://awesome-privacy.xyz/networking/ad-blockers/diversion "View full Diversion report") 
-- **[<img src='https://f-droid.org/repo/icons-640/org.jak_linux.dns66.29.png' width='16' height='16' alt='icon' /> DN66](https://jak-linux.org/projects/dns66)** - DNS-based host and ad blocker for Android. Easy to configure, but the default config uses several
-widely-respected host files aimed at stopping ads, malware, and other weird stuff.
-[…](https://awesome-privacy.xyz/networking/ad-blockers/dn66 "View full DN66 report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: julian-klode/dns66](https://img.shields.io/github/stars/julian-klode/dns66?style=flat&logo=github&label=dns66&color=%235f53f4&cacheSeconds=3600)](https://github.com/julian-klode/dns66)  [![DN66 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DN66)](https://awesome-privacy.xyz/networking/ad-blockers/dn66) 
-˙ 
-
-		</details>
 - **[<img src='https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png' width='16' height='16' alt='icon' /> BlockParty](https://github.com/krishkumar/BlockParty)** - Native Apple (Swift) apps, for system-wide ad-blocking. Can be customized with custom host lists,
 primarily aimed for just ad-blocking.
 […](https://awesome-privacy.xyz/networking/ad-blockers/blockparty "View full BlockParty report") 
