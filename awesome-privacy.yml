@@ -2547,15 +2547,6 @@ categories:
           A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
           and more on supported routers running Asuswrt-Merlin firmware, including its forks.
 
-      - name: DN66
-        url: https://jak-linux.org/projects/dns66
-        icon: https://f-droid.org/repo/icons-640/org.jak_linux.dns66.29.png
-        github: julian-klode/dns66
-        followWith: Android
-        description: |
-          DNS-based host and ad blocker for Android. Easy to configure, but the default config uses several
-          widely-respected host files aimed at stopping ads, malware, and other weird stuff.
-
       - name: BlockParty
         url: https://github.com/krishkumar/BlockParty
         icon: https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png
