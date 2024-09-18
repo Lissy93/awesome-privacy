@@ -63,7 +63,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (3)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [File Drop](#file-drop) (3)
+	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (5)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
 - **Utilities**
@@ -3247,16 +3247,6 @@ privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB F
 
 ### File Drop
 
-- **[<img src='https://icon.horse/icon/file.pizza' width='16' height='16' alt='icon' /> FilePizza](https://file.pizza)** - Peer-to-peer based file transfer from the browser, using Web Torrent. It's quick and easy to use, and doesn't
-require any software to be installed. Can also be self-hosted.
-[…](https://awesome-privacy.xyz/productivity/file-drop/filepizza "View full FilePizza report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: kern/filepizza](https://img.shields.io/github/stars/kern/filepizza?style=flat&logo=github&label=filepizza&color=%235f53f4&cacheSeconds=3600)](https://github.com/kern/filepizza)  [![FilePizza on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FilePizza)](https://awesome-privacy.xyz/productivity/file-drop/filepizza) 
-˙ 
-
-		</details>
 - **[<img src='https://icon.horse/icon/filesend.standardnotes.org' width='16' height='16' alt='icon' /> FileSend](https://filesend.standardnotes.org)** - Simple, encrypted file sharing, with a 500mb limit and 5-day retention. Files are secured with client-side AES-256
 encryption and no IP address or device info is logged. Files are permanently deleted after download or after specified
 duration. Developed by StandardNotes, and has built-in integration with the SN app.
