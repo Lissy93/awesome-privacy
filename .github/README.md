@@ -5644,6 +5644,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/SadMadLad">
+            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
+            <br />
+            <sub><b>Saad Azam</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ki-er">
             <img src="https://avatars.githubusercontent.com/u/32241933?v=4" width="80;" alt="Ki-er"/>
             <br />
@@ -5663,20 +5670,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Guillaume</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
             <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
             <br />
             <sub><b>LamTrinh.Dev</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/SadMadLad">
-            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
-            <br />
-            <sub><b>Saad Azam</b></sub>
         </a>
     </td>
     <td align="center">
