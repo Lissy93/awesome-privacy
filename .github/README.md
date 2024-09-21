@@ -48,8 +48,8 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Providers](#dns-providers) (3)
 	- [DNS Clients](#dns-clients) (6)
 	- [Firewalls](#firewalls) (14)
-	- [Ad Blockers](#ad-blockers) (9)
-	- [Host Block Lists](#host-block-lists) (6)
+	- [Ad Blockers](#ad-blockers) (8)
+	- [Host Block Lists](#host-block-lists) (5)
 	- [Router Firmware](#router-firmware) (2)
 	- [Network Analysis](#network-analysis) (4)
 	- [Intrusion Detection](#intrusion-detection) (5)
@@ -63,7 +63,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (3)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [File Drop](#file-drop) (3)
+	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (5)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
 - **Utilities**
@@ -1064,8 +1064,8 @@ and payment is accepted in BTC, XMR or credit card.
 		</details>
 - **[<img src='https://jmp.chat/static/jmp.svg' width='16' height='16' alt='icon' /> Jmp.chat](https://jmp.chat/)** - Phone number for incoming + outgoing calls and messages, provided by Soprani.
 Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at
-$2.99 / month. Only available in the US and Canada, as (as of 2022) the service
-is still in Beta. See alternate instances at [soprani.ca](https://soprani.ca/)
+$4.99 / month. Only available in the US and Canada (as of 2024).
+See alternate instances at [soprani.ca](https://soprani.ca/)
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/jmp.chat "View full Jmp.chat report") 
 - **[<img src='https://i.ibb.co/Dgwr4Z0/monero-sms.png' width='16' height='16' alt='icon' /> MoneroSMS](https://monerosms.com)** - Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
 email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
@@ -2453,16 +2453,6 @@ has detailed statistics, and makes it easy to pause/ resume Pi-Hole if needed.
 - **[<img src='https://diversion.ch/files/theme-src/images/favicon/favicon-16x16.png' width='16' height='16' alt='icon' /> Diversion](https://diversion.ch)** - A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
 and more on supported routers running Asuswrt-Merlin firmware, including its forks.
 […](https://awesome-privacy.xyz/networking/ad-blockers/diversion "View full Diversion report") 
-- **[<img src='https://f-droid.org/repo/icons-640/org.jak_linux.dns66.29.png' width='16' height='16' alt='icon' /> DN66](https://jak-linux.org/projects/dns66)** - DNS-based host and ad blocker for Android. Easy to configure, but the default config uses several
-widely-respected host files aimed at stopping ads, malware, and other weird stuff.
-[…](https://awesome-privacy.xyz/networking/ad-blockers/dn66 "View full DN66 report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: julian-klode/dns66](https://img.shields.io/github/stars/julian-klode/dns66?style=flat&logo=github&label=dns66&color=%235f53f4&cacheSeconds=3600)](https://github.com/julian-klode/dns66)  [![DN66 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DN66)](https://awesome-privacy.xyz/networking/ad-blockers/dn66) 
-˙ 
-
-		</details>
 - **[<img src='https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png' width='16' height='16' alt='icon' /> BlockParty](https://github.com/krishkumar/BlockParty)** - Native Apple (Swift) apps, for system-wide ad-blocking. Can be customized with custom host lists,
 primarily aimed for just ad-blocking.
 […](https://awesome-privacy.xyz/networking/ad-blockers/blockparty "View full BlockParty report") 
@@ -2584,15 +2574,6 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 - **[<img src='https://d3pkfiqitivr8j.cloudfront.net/sitefiles/images/favicon.ico' width='16' height='16' alt='icon' /> iBlockList](https://www.iblocklist.com)** - Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
 political, illegal, hijacked, bad peers and more.
 […](https://awesome-privacy.xyz/networking/host-block-lists/iblocklist "View full iBlockList report") 
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Energized](https://github.com/EnergizedProtection/block)** - A variety of well-maintained lists, available in all common formats, with millions of hosts included.
-[…](https://awesome-privacy.xyz/networking/host-block-lists/energized "View full Energized report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: EnergizedProtection/block](https://img.shields.io/github/stars/EnergizedProtection/block?style=flat&logo=github&label=block&color=%235f53f4&cacheSeconds=3600)](https://github.com/EnergizedProtection/block)  [![Energized on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Energized)](https://awesome-privacy.xyz/networking/host-block-lists/energized) 
-˙ 
-
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -3247,16 +3228,6 @@ privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB F
 
 ### File Drop
 
-- **[<img src='https://icon.horse/icon/file.pizza' width='16' height='16' alt='icon' /> FilePizza](https://file.pizza)** - Peer-to-peer based file transfer from the browser, using Web Torrent. It's quick and easy to use, and doesn't
-require any software to be installed. Can also be self-hosted.
-[…](https://awesome-privacy.xyz/productivity/file-drop/filepizza "View full FilePizza report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: kern/filepizza](https://img.shields.io/github/stars/kern/filepizza?style=flat&logo=github&label=filepizza&color=%235f53f4&cacheSeconds=3600)](https://github.com/kern/filepizza)  [![FilePizza on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FilePizza)](https://awesome-privacy.xyz/productivity/file-drop/filepizza) 
-˙ 
-
-		</details>
 - **[<img src='https://icon.horse/icon/filesend.standardnotes.org' width='16' height='16' alt='icon' /> FileSend](https://filesend.standardnotes.org)** - Simple, encrypted file sharing, with a 500mb limit and 5-day retention. Files are secured with client-side AES-256
 encryption and no IP address or device info is logged. Files are permanently deleted after download or after specified
 duration. Developed by StandardNotes, and has built-in integration with the SN app.
@@ -5161,7 +5132,7 @@ with a very wide range of supported formats
 		<summary>Stats</summary>
 
 		[![GitHub: photopea/photopea](https://img.shields.io/github/stars/photopea/photopea?style=flat&logo=github&label=photopea&color=%235f53f4&cacheSeconds=3600)](https://github.com/photopea/photopea) [![Privacy Policy](https://shields.tosdr.org/en_4105.svg)](https://tosdr.org/en/service/4105) [![PhotoPea on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PhotoPea)](https://awesome-privacy.xyz/creativity/image-editors/photopea) 
-📦 Open Source 💰 Accepts Anonymous Payment ˙ 
+💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/TqtRH52/Krita.png' width='16' height='16' alt='icon' /> Krita](https://krita.org/en)** - Digital painting application.
@@ -5673,6 +5644,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/SadMadLad">
+            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
+            <br />
+            <sub><b>Saad Azam</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ki-er">
             <img src="https://avatars.githubusercontent.com/u/32241933?v=4" width="80;" alt="Ki-er"/>
             <br />
@@ -5692,20 +5670,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Guillaume</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
             <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
             <br />
             <sub><b>LamTrinh.Dev</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/SadMadLad">
-            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
-            <br />
-            <sub><b>Saad Azam</b></sub>
         </a>
     </td>
     <td align="center">
