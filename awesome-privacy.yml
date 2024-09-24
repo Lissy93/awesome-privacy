@@ -4822,6 +4822,14 @@ categories:
         url: https://movim.eu/
         github: movim/movim
 
+      - name: Pico
+        description: |
+          Web services over SSH, including blogging with Prose, microsites with Pages, and a pastebin with
+          Pastes. The services use public-key cryptography by default with no browser-based tracking and
+          minimal logging.
+        url: https://pico.sh/
+        github: picosh/pico
+        openSource: true
 
       notableMentions: |
         If you use [Standard Notes](https://standardnotes.com/?s=chelvq36),
