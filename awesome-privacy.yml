@@ -775,7 +775,7 @@ categories:
         icon: https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png
         openSource: false
         tosdrId: 1694
-        reddit: Mailfence
+        subreddit: Mailfence
         androidApp: com.contactoffice.mailfence
         iosApp: https://apps.apple.com/us/app/mailfence/id1628808776
         description: |
@@ -792,7 +792,7 @@ categories:
         icon: https://i.ibb.co/zJtHBTZ/mailfence.png
         openSource: false
         tosdrId: 1517
-        reddit: Mailbox_org
+        subreddit: Mailbox_org
         description: |
           A Berlin-based, eco-friendly secure mail provider. There is no free plan, the
           standard service costs €12/year. You can use your own domain, with the option of
@@ -837,7 +837,7 @@ categories:
       - name: Mozilla Thunderbird
         url: https://www.thunderbird.net
         icon: https://www.thunderbird.net/media/img/thunderbird/ios-icon-180.png
-        reddit: Thunderbird
+        subreddit: Thunderbird
         openSource: true
         tosdrId: 3365
         description: |
