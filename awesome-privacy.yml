@@ -1250,7 +1250,7 @@ categories:
         description: |
           Allows you to block the execution of certain scripts. **Download**:
           [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
-          [Ppera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+          [Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
 
       - name: Firefox Multi-Account Containers
         github: mozilla/multi-account-containers
