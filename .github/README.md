@@ -1179,7 +1179,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/c5co_NoLmEt48VC_yVp0JgKcgd83yiq_CdekGaOlBBfD5WII5mjxngERgikcQd4P56uoX9epiknU5ktXadPqj2EEVsE' width='16' height='16' alt='icon' /> ScriptSafe](https://www.andryou.com/scriptsafe)** - Allows you to block the execution of certain scripts. **Download**:
 [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
-[Ppera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+[Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
 […](https://awesome-privacy.xyz/security-tools/browser-extensions/scriptsafe "View full ScriptSafe report") 
 	- <details>
 		<summary>Stats</summary>
