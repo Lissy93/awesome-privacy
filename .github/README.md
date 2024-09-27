@@ -95,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
-	- [Blogging Platforms](#blogging-platforms) (5)
+	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (3)
 	- [Proxy Sites](#proxy-sites) (4)
 - **Media**
@@ -4900,6 +4900,17 @@ integrating social and communication tools in a unified platform.
 
 		[![GitHub: movim/movim](https://img.shields.io/github/stars/movim/movim?style=flat&logo=github&label=movim&color=%235f53f4&cacheSeconds=3600)](https://github.com/movim/movim)  [![Movim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Movim)](https://awesome-privacy.xyz/social/blogging-platforms/movim) 
 ˙ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/pico.sh' width='16' height='16' alt='icon' /> Pico](https://pico.sh/)** - Web services over SSH, including blogging with Prose, microsites with Pages, and a pastebin with
+Pastes. The services use public-key cryptography by default with no browser-based tracking and
+minimal logging.
+[…](https://awesome-privacy.xyz/social/blogging-platforms/pico "View full Pico report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: picosh/pico](https://img.shields.io/github/stars/picosh/pico?style=flat&logo=github&label=pico&color=%235f53f4&cacheSeconds=3600)](https://github.com/picosh/pico)  [![Pico on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pico)](https://awesome-privacy.xyz/social/blogging-platforms/pico) 
+📦 Open Source ˙ 
 
 		</details>
 
