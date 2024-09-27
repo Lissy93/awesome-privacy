@@ -5405,7 +5405,7 @@ A custom Reddit feed covering news and updates for all the apps covered here can
 ---
 
 ## The Website
-The easist way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
+The easiest way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
 
 [![screenshots](https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/.github/screenshots/grid.png)](https://awesome-privacy.xyz)
 
