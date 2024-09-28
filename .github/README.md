@@ -95,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
-	- [Blogging Platforms](#blogging-platforms) (5)
+	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (3)
 	- [Proxy Sites](#proxy-sites) (4)
 - **Media**
@@ -686,7 +686,7 @@ Tox.
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.<br><br> For a more details comparison of email providers, see [email-comparison.as93.net](https://email-comparison.as93.net/)
 
-- **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An open-source, end-to-end encrypted anonymous email service. ProtonMail has a
+- **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An end-to-end encrypted anonymous email service. ProtonMail has a
 modern easy-to-use and customizable UI, as well as fast, secure native mobile
 apps. ProtonMail has all the features that you'd expect from a modern email
 service and is based on simplicity without sacrificing security. It has a free
@@ -1179,7 +1179,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/c5co_NoLmEt48VC_yVp0JgKcgd83yiq_CdekGaOlBBfD5WII5mjxngERgikcQd4P56uoX9epiknU5ktXadPqj2EEVsE' width='16' height='16' alt='icon' /> ScriptSafe](https://www.andryou.com/scriptsafe)** - Allows you to block the execution of certain scripts. **Download**:
 [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
-[Ppera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+[Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
 […](https://awesome-privacy.xyz/security-tools/browser-extensions/scriptsafe "View full ScriptSafe report") 
 	- <details>
 		<summary>Stats</summary>
@@ -4902,6 +4902,17 @@ integrating social and communication tools in a unified platform.
 ˙ 
 
 		</details>
+- **[<img src='https://icon.horse/icon/pico.sh' width='16' height='16' alt='icon' /> Pico](https://pico.sh/)** - Web services over SSH, including blogging with Prose, microsites with Pages, and a pastebin with
+Pastes. The services use public-key cryptography by default with no browser-based tracking and
+minimal logging.
+[…](https://awesome-privacy.xyz/social/blogging-platforms/pico "View full Pico report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: picosh/pico](https://img.shields.io/github/stars/picosh/pico?style=flat&logo=github&label=pico&color=%235f53f4&cacheSeconds=3600)](https://github.com/picosh/pico)  [![Pico on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pico)](https://awesome-privacy.xyz/social/blogging-platforms/pico) 
+📦 Open Source ˙ 
+
+		</details>
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
@@ -5405,7 +5416,7 @@ A custom Reddit feed covering news and updates for all the apps covered here can
 ---
 
 ## The Website
-The easist way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
+The easiest way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
 
 [![screenshots](https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/.github/screenshots/grid.png)](https://awesome-privacy.xyz)
 
@@ -5571,6 +5582,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Sacquer">
+            <img src="https://avatars.githubusercontent.com/u/29262439?v=4" width="80;" alt="Sacquer"/>
+            <br />
+            <sub><b>Gökhan Alkacir</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -5590,15 +5608,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Bastii717</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/frankdez93">
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/st617">
             <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
@@ -5723,6 +5741,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/catbash">
+            <img src="https://avatars.githubusercontent.com/u/88514774?v=4" width="80;" alt="catbash"/>
+            <br />
+            <sub><b>catbash</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/slade991">
             <img src="https://avatars.githubusercontent.com/u/10143703?v=4" width="80;" alt="slade991"/>
             <br />
@@ -5749,15 +5774,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Alex Ogden</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
@@ -5792,15 +5817,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Azzam S.A</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/jxhn">
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
@@ -5834,13 +5859,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
             <br />
             <sub><b>Paul Nodet</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/poegl">
-            <img src="https://avatars.githubusercontent.com/u/57896970?v=4" width="80;" alt="poegl"/>
-            <br />
-            <sub><b>WP</b></sub>
         </a>
     </td></tr>
 </table>
