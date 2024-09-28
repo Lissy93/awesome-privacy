@@ -410,14 +410,6 @@ categories:
           may not work correctly. As with everything there are
           [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
-      - name: Bromite
-        url: https://www.bromite.org/
-        icon: https://www.bromite.org/bromite.png
-        github: bromite/bromite
-        tosdrId: 9174
-        description: |
-          Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
-          adblock and additional settings for hardening.
       - name: Cromite
         url: https://www.cromite.org/
         icon: https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
