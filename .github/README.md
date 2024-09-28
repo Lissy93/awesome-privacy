@@ -24,7 +24,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
-	- [Browsers](#browsers) (6)
+	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
@@ -422,16 +422,6 @@ may not work correctly. As with everything there are
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2845.svg)](https://tosdr.org/en/service/2845) [![Tor Browser on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tor_Browser)](https://awesome-privacy.xyz/essentials/browsers/tor-browser) 
 📦 Open Source ˙ 
-
-		</details>
-- **[<img src='https://www.bromite.org/bromite.png' width='16' height='16' alt='icon' /> Bromite](https://www.bromite.org/)** - Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
-adblock and additional settings for hardening.
-[…](https://awesome-privacy.xyz/essentials/browsers/bromite "View full Bromite report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: bromite/bromite](https://img.shields.io/github/stars/bromite/bromite?style=flat&logo=github&label=bromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/bromite/bromite) [![Privacy Policy](https://shields.tosdr.org/en_9174.svg)](https://tosdr.org/en/service/9174) [![Bromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bromite)](https://awesome-privacy.xyz/essentials/browsers/bromite) 
-˙ 
 
 		</details>
 - **[<img src='https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67' width='16' height='16' alt='icon' /> Cromite](https://www.cromite.org/)** - Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
