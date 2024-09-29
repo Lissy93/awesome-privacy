@@ -1344,18 +1344,6 @@ categories:
           [Chrome](https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg?hl=en-GB) \
           [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/duckduckgo-for-firefox/)
 
-      - name: Self-Destructing Cookies
-        url: https://add0n.com/self-destructing-cookies.html
-        icon: https://i.ibb.co/1T06gbX/self-destructing-cookies128.png
-        github: joue-quroi/self-destructing-cookies
-        description: |
-          Prevents websites from tracking you by storing unique cookies (note Fingerprinting is often also used for tracking).
-          It removes all related cookies whenever you end a session. **Download**:
-          [Chrome](https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf) -
-          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies-webex/) -
-          [Opera](https://addons.opera.com/en/extensions/details/self-destructing-cookies/) -
-          [Source](https://github.com/joue-quroi/self-destructing-cookies)
-
       - name: Privacy Redirect
         url: https://github.com/SimonBrazell/privacy-redirect
         github: SimonBrazell/privacy-redirect
@@ -1363,16 +1351,6 @@ categories:
         description: |
           A simple web extension that redirects Twitter, YouTube, Instagram & Google Maps requests to privacy friendly alternatives
           **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/) - [Chrome](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
-
-      - name: Site Bleacher
-        url: https://github.com/wooque/site-bleacher
-        github: wooque/site-bleacher
-        icon: https://lh3.googleusercontent.com/a2Vje7WEAiLb8NwUY43hyzhTXrQllBc4qP3ymqZdoBEaT8ME98dMzRpFNx0fI5w998jIUaJozj5KeNLTiJBEwe4O
-        description: |
-          Remove automatically cookies, local storages, IndexedDBs and service workers **Download**:
-          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/site-bleacher/) -
-          [Chrome](https://chrome.google.com/webstore/detail/site-bleacher/mlcfcepfmnjphcdkfbfgokkjodlkmemo) -
-          [Source](https://github.com/wooque/site-bleacher)
 
       - name: User Agent Switcher
         url: https://add0n.com/useragent-switcher.html
