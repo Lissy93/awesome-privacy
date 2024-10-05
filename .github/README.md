@@ -5547,7 +5547,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/Sacquer">
-            <img src="https://avatars.githubusercontent.com/u/29262439?v=4" width="80;" alt="Sacquer"/>
+            <img src="https://avatars.githubusercontent.com/u/29262439?u=c925b80a37404bc8cf652ac9ce8e6639fd97e2f4&v=4" width="80;" alt="Sacquer"/>
             <br />
             <sub><b>Gökhan Alkacir</b></sub>
         </a>
@@ -5708,7 +5708,7 @@ This project exists thanks to all the people who've helped build and maintain it
         <a href="https://github.com/catbash">
             <img src="https://avatars.githubusercontent.com/u/88514774?v=4" width="80;" alt="catbash"/>
             <br />
-            <sub><b>catbash</b></sub>
+            <sub><b>Catbash</b></sub>
         </a>
     </td>
     <td align="center">
