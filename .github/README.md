@@ -24,7 +24,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
 	- [File Encryption](#file-encryption) (3)
-	- [Browsers](#browsers) (6)
+	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (4)
@@ -37,7 +37,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
-	- [Browser Extensions](#browser-extensions) (27)
+	- [Browser Extensions](#browser-extensions) (25)
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
@@ -422,16 +422,6 @@ may not work correctly. As with everything there are
 
 		 [![Privacy Policy](https://shields.tosdr.org/en_2845.svg)](https://tosdr.org/en/service/2845) [![Tor Browser on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tor_Browser)](https://awesome-privacy.xyz/essentials/browsers/tor-browser) 
 📦 Open Source ˙ 
-
-		</details>
-- **[<img src='https://www.bromite.org/bromite.png' width='16' height='16' alt='icon' /> Bromite](https://www.bromite.org/)** - Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
-adblock and additional settings for hardening.
-[…](https://awesome-privacy.xyz/essentials/browsers/bromite "View full Bromite report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: bromite/bromite](https://img.shields.io/github/stars/bromite/bromite?style=flat&logo=github&label=bromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/bromite/bromite) [![Privacy Policy](https://shields.tosdr.org/en_9174.svg)](https://tosdr.org/en/service/9174) [![Bromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bromite)](https://awesome-privacy.xyz/essentials/browsers/bromite) 
-˙ 
 
 		</details>
 - **[<img src='https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67' width='16' height='16' alt='icon' /> Cromite](https://www.cromite.org/)** - Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
@@ -1290,20 +1280,6 @@ Improves privacy and load times. Works out-of-the-box and plays nicely with regu
 📦 Open Source ˙ 
 
 		</details>
-- **[<img src='https://i.ibb.co/1T06gbX/self-destructing-cookies128.png' width='16' height='16' alt='icon' /> Self-Destructing Cookies](https://add0n.com/self-destructing-cookies.html)** - Prevents websites from tracking you by storing unique cookies (note Fingerprinting is often also used for tracking).
-It removes all related cookies whenever you end a session. **Download**:
-[Chrome](https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf) -
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies-webex/) -
-[Opera](https://addons.opera.com/en/extensions/details/self-destructing-cookies/) -
-[Source](https://github.com/joue-quroi/self-destructing-cookies)
-[…](https://awesome-privacy.xyz/security-tools/browser-extensions/self-destructing-cookies "View full Self-Destructing Cookies report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: joue-quroi/self-destructing-cookies](https://img.shields.io/github/stars/joue-quroi/self-destructing-cookies?style=flat&logo=github&label=self-destructing-cookies&color=%235f53f4&cacheSeconds=3600)](https://github.com/joue-quroi/self-destructing-cookies)  [![Self-Destructing Cookies on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Self-Destructing_Cookies)](https://awesome-privacy.xyz/security-tools/browser-extensions/self-destructing-cookies) 
-˙ 
-
-		</details>
 - **[<img src='https://lh3.googleusercontent.com/pC5a_u12RlaLQhJ-5Jz87rtju2s0tCksUfZHvr3JYzAaiYZJfJapmuftodT7wuAedFOHtgxR2BGh_GmKijgiK5bJyA' width='16' height='16' alt='icon' /> Privacy Redirect](https://github.com/SimonBrazell/privacy-redirect)** - A simple web extension that redirects Twitter, YouTube, Instagram & Google Maps requests to privacy friendly alternatives
 **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/) - [Chrome](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
 […](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-redirect "View full Privacy Redirect report") 
@@ -1311,18 +1287,6 @@ It removes all related cookies whenever you end a session. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: SimonBrazell/privacy-redirect](https://img.shields.io/github/stars/SimonBrazell/privacy-redirect?style=flat&logo=github&label=privacy-redirect&color=%235f53f4&cacheSeconds=3600)](https://github.com/SimonBrazell/privacy-redirect)  [![Privacy Redirect on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy_Redirect)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-redirect) 
-˙ 
-
-		</details>
-- **[<img src='https://lh3.googleusercontent.com/a2Vje7WEAiLb8NwUY43hyzhTXrQllBc4qP3ymqZdoBEaT8ME98dMzRpFNx0fI5w998jIUaJozj5KeNLTiJBEwe4O' width='16' height='16' alt='icon' /> Site Bleacher](https://github.com/wooque/site-bleacher)** - Remove automatically cookies, local storages, IndexedDBs and service workers **Download**:
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/site-bleacher/) -
-[Chrome](https://chrome.google.com/webstore/detail/site-bleacher/mlcfcepfmnjphcdkfbfgokkjodlkmemo) -
-[Source](https://github.com/wooque/site-bleacher)
-[…](https://awesome-privacy.xyz/security-tools/browser-extensions/site-bleacher "View full Site Bleacher report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: wooque/site-bleacher](https://img.shields.io/github/stars/wooque/site-bleacher?style=flat&logo=github&label=site-bleacher&color=%235f53f4&cacheSeconds=3600)](https://github.com/wooque/site-bleacher)  [![Site Bleacher on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Bleacher)](https://awesome-privacy.xyz/security-tools/browser-extensions/site-bleacher) 
 ˙ 
 
 		</details>
@@ -5583,7 +5547,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/Sacquer">
-            <img src="https://avatars.githubusercontent.com/u/29262439?v=4" width="80;" alt="Sacquer"/>
+            <img src="https://avatars.githubusercontent.com/u/29262439?u=c925b80a37404bc8cf652ac9ce8e6639fd97e2f4&v=4" width="80;" alt="Sacquer"/>
             <br />
             <sub><b>Gökhan Alkacir</b></sub>
         </a>
@@ -5744,7 +5708,7 @@ This project exists thanks to all the people who've helped build and maintain it
         <a href="https://github.com/catbash">
             <img src="https://avatars.githubusercontent.com/u/88514774?v=4" width="80;" alt="catbash"/>
             <br />
-            <sub><b>catbash</b></sub>
+            <sub><b>Catbash</b></sub>
         </a>
     </td>
     <td align="center">
