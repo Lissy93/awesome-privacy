@@ -3829,7 +3829,7 @@ categories:
           messaging. Open source, and built on top of Debian. Tails is simple to stop, configure and use.
 
       - name: Parrot
-        url: https://parrotlinux.org/
+        url: https://www.parrotsec.org/
         followWith: security
         tosdrId: 8267
         description: |
