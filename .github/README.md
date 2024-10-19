@@ -3744,7 +3744,7 @@ privacy and anonymity through having no persistent memory/ leaving no trace on t
 built-in system-wide, and uses state-of-the-art cryptographic tools to encrypt your files, emails and instant
 messaging. Open source, and built on top of Debian. Tails is simple to stop, configure and use.
 […](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/tails "View full Tails report") 
-- **[<img src='https://icon.horse/icon/parrotlinux.org' width='16' height='16' alt='icon' /> Parrot](https://parrotlinux.org/)** - Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
+- **[<img src='https://icon.horse/icon/www.parrotsec.org' width='16' height='16' alt='icon' /> Parrot](https://www.parrotsec.org/)** - Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
 It is fully-featured yet light-weight, very open. There are 3 editions: General Purpose, Security and Forensic.
 The Secure distribution includes its own sandbox system obtained with the combination of Firejail and AppArmor
 with custom security profiles. While the Forensics Edition is bundled with a comprehensive suite of security/
