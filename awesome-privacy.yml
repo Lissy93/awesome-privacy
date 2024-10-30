@@ -306,6 +306,14 @@ categories:
           `age` is a simple, modern and secure CLI file encryption tool and Go library.
           It features small explicit keys, no config options, and UNIX-style composability
 
+      - name: Picocrypt
+        github: Picocrypt/Picocrypt
+        icon: https://avatars.githubusercontent.com/u/171401041
+        description: |
+          Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
+          that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+          with a focus on security, simplicity, and reliability.
+
       wordOfWarning: >
         Where possible, choose a cross-platform and well established encryption method,
         so that you are never faced with not being able to access your files using your current system.<br>
