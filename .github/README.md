@@ -23,7 +23,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
-	- [File Encryption](#file-encryption) (3)
+	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
@@ -343,6 +343,17 @@ It features small explicit keys, no config options, and UNIX-style composability
 		<summary>Stats</summary>
 
 		[![GitHub: FiloSottile/age](https://img.shields.io/github/stars/FiloSottile/age?style=flat&logo=github&label=age&color=%235f53f4&cacheSeconds=3600)](https://github.com/FiloSottile/age)  [![age on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=age)](https://awesome-privacy.xyz/essentials/file-encryption/age) 
+˙ 
+
+		</details>
+- **[<img src='https://avatars.githubusercontent.com/u/171401041' width='16' height='16' alt='icon' /> Picocrypt](None)** - Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
+that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+with a focus on security, simplicity, and reliability.
+[…](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt "View full Picocrypt report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: Picocrypt/Picocrypt](https://img.shields.io/github/stars/Picocrypt/Picocrypt?style=flat&logo=github&label=Picocrypt&color=%235f53f4&cacheSeconds=3600)](https://github.com/Picocrypt/Picocrypt)  [![Picocrypt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Picocrypt)](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt) 
 ˙ 
 
 		</details>
@@ -5532,6 +5543,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/undefined">
+            <img src="" width="80;" alt="undefined"/>
+            <br />
+            <sub><b>Undefined</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/mryesiller">
             <img src="https://avatars.githubusercontent.com/u/24632172?u=0d20f2d615158f87cd60a3398d3efb026c32f291&v=4" width="80;" alt="mryesiller"/>
             <br />
@@ -5543,13 +5561,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/26634535?v=4" width="80;" alt="sushibait"/>
             <br />
             <sub><b>Shiverme Timbers</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/undefined">
-            <img src="" width="80;" alt="undefined"/>
-            <br />
-            <sub><b>Undefined</b></sub>
         </a>
     </td>
     <td align="center">
