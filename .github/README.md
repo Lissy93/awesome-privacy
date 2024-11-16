@@ -5578,13 +5578,20 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/OlliVHH">
+            <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
+            <br />
+            <sub><b>HamburgerJung</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/frankdez93">
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/st617">
             <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
@@ -5745,6 +5752,13 @@ This project exists thanks to all the people who've helped build and maintain it
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/alxwnth">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
+            <br />
+            <sub><b>Alxwnth</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
@@ -5778,15 +5792,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/azzamsa">
             <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
             <br />
             <sub><b>Azzam S.A</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
@@ -5820,13 +5834,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
             <br />
             <sub><b>Pavan</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/pnodet">
-            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
-            <br />
-            <sub><b>Paul Nodet</b></sub>
         </a>
     </td></tr>
 </table>
