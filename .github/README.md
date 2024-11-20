@@ -1664,12 +1664,12 @@ Only install from official sources.
 <summary>✳️ <b>Notable Mentions</b></summary>
 
 > For more open source security & privacy apps, check out these publishers:
-> [The Guardian Project](https://play.google.com/store/apps/dev?id=6502754515281796553),
-> [The Tor Project](https://play.google.com/store/apps/developer?id=The+Tor+Project),
-> [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
-> [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
-> [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-> and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
+> [The Guardian Project](https://guardianproject.info) ([Play Store](https://play.google.com/store/apps/dev?id=6502754515281796553), [F-Droid](https://search.f-droid.org/?q=guardianproject)),
+> [The Tor Project](https://www.torproject.org/) ([Play Store](https://play.google.com/store/apps/developer?id=The+Tor+Project), [F-Droid](https://search.f-droid.org/?q=torproject)),
+> [Oasis Feng](https://github.com/oasisfeng) ([Play Store](https://play.google.com/store/apps/dev?id=7664242523989527886)),
+> [FairCode (Marcel Bokhorst)](https://www.faircode.eu/) ([Play Store](https://play.google.com/store/apps/dev?id=8420080860664580239), [F-Droid](https://search.f-droid.org/?q=faircode)),
+> [SECUSO Research Group](https://secuso.aifb.kit.edu/english/105.php) ([Play Store](https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US), [F-Droid](https://search.f-droid.org/?q=secuso)),
+> and [Fossify](https://www.fossify.org) ([Play Store](https://play.google.com/store/apps/dev?id=9070296388022589266), [F-Droid](https://search.f-droid.org/?q=fossify)) -
 > all of which are trusted developers or organisations, who've done amazing work.
 > 
 > For offensive and defensive security, see
