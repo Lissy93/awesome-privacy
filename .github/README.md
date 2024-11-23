@@ -5644,6 +5644,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ltguillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
+            <br />
+            <sub><b>Guillaume</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ki-er">
             <img src="https://avatars.githubusercontent.com/u/32241933?v=4" width="80;" alt="Ki-er"/>
             <br />
@@ -5655,13 +5662,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/78992082?v=4" width="80;" alt="lilithium-hydride"/>
             <br />
             <sub><b>Lilith</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/ltguillaume">
-            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
-            <br />
-            <sub><b>Guillaume</b></sub>
         </a>
     </td></tr>
 <tr>
