@@ -5522,7 +5522,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/arcestia">
-            <img src="https://avatars.githubusercontent.com/u/7936962?v=4" width="80;" alt="arcestia"/>
+            <img src="https://avatars.githubusercontent.com/u/7936962?u=41e34bb816ad09323e1650f3efc0bec4fb2bc5dd&v=4" width="80;" alt="arcestia"/>
             <br />
             <sub><b>Laurensius Jeffrey</b></sub>
         </a>
