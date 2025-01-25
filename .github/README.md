@@ -5458,7 +5458,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
 <tr>
     <td align="center">
         <a href="https://github.com/vincentkoc">
-            <img src="https://avatars.githubusercontent.com/u/25068?u=cbf098fc04c0473523d373b0dd2145b4ec99ef93&v=4" width="80;" alt="vincentkoc"/>
+            <img src="https://avatars.githubusercontent.com/u/25068?u=fbd5b2d51142daa4bdbc21e21953a3b8b8188a4a&v=4" width="80;" alt="vincentkoc"/>
             <br />
             <sub><b>Vincent Koc</b></sub>
         </a>
@@ -5605,6 +5605,20 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Hudsonrock-partnerships</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/adamt279">
+            <img src="https://avatars.githubusercontent.com/u/173125775?v=4" width="80;" alt="adamt279"/>
+            <br />
+            <sub><b>adamt279</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/CarterPerez-dev">
+            <img src="https://avatars.githubusercontent.com/u/188120068?v=4" width="80;" alt="CarterPerez-dev"/>
+            <br />
+            <sub><b>Carter Perez</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: sponsors -end -->
@@ -5745,6 +5759,13 @@ This project exists thanks to all the people who've helped build and maintain it
     </td></tr>
 <tr>
     <td align="center">
+        <a href="https://github.com/AshboDev">
+            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
+            <br />
+            <sub><b>Ash Scott</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/WardPearce">
             <img src="https://avatars.githubusercontent.com/u/27844174?v=4" width="80;" alt="WardPearce"/>
             <br />
@@ -5778,15 +5799,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/azzamsa">
             <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
             <br />
             <sub><b>Azzam S.A</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
@@ -5820,13 +5841,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
             <br />
             <sub><b>Pavan</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/pnodet">
-            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
-            <br />
-            <sub><b>Paul Nodet</b></sub>
         </a>
     </td></tr>
 </table>
