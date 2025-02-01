@@ -5464,6 +5464,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/pho3nixf1re">
+            <img src="https://avatars.githubusercontent.com/u/96882?v=4" width="80;" alt="pho3nixf1re"/>
+            <br />
+            <sub><b>Matthew Turney</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/AnandChowdhary">
             <img src="https://avatars.githubusercontent.com/u/2841780?u=747e554b3a7f12eb20b7910e1c87d817844f714f&v=4" width="80;" alt="AnandChowdhary"/>
             <br />
@@ -5490,15 +5497,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Ulises Gascón</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/digitalarche">
             <img src="https://avatars.githubusercontent.com/u/6546135?u=564756d7f44ab2206819eb3148f6d822673f5066&v=4" width="80;" alt="digitalarche"/>
             <br />
             <sub><b>Digital Archeology</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
@@ -5533,15 +5540,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Vlad</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/helixzz">
             <img src="https://avatars.githubusercontent.com/u/12218889?u=d06d0c103dfbdb99450623064f7da3c5a3675fb6&v=4" width="80;" alt="helixzz"/>
             <br />
             <sub><b>HeliXZz</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/patvdv">
             <img src="https://avatars.githubusercontent.com/u/12430107?u=e8911c2fb91af4d30432f76da8c40927b2830bd7&v=4" width="80;" alt="patvdv"/>
@@ -5576,15 +5583,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>HamburgerJung</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/frankdez93">
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/st617">
             <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
@@ -5610,12 +5617,12 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         <a href="https://github.com/adamt279">
             <img src="https://avatars.githubusercontent.com/u/173125775?v=4" width="80;" alt="adamt279"/>
             <br />
-            <sub><b>adamt279</b></sub>
+            <sub><b>Adamt279</b></sub>
         </a>
     </td>
     <td align="center">
         <a href="https://github.com/CarterPerez-dev">
-            <img src="https://avatars.githubusercontent.com/u/188120068?v=4" width="80;" alt="CarterPerez-dev"/>
+            <img src="https://avatars.githubusercontent.com/u/188120068?u=0e409c671324f8872efe4e2f7e5c12ebb8670010&v=4" width="80;" alt="CarterPerez-dev"/>
             <br />
             <sub><b>Carter Perez</b></sub>
         </a>
@@ -5759,10 +5766,10 @@ This project exists thanks to all the people who've helped build and maintain it
     </td></tr>
 <tr>
     <td align="center">
-        <a href="https://github.com/AshboDev">
-            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
+        <a href="https://github.com/spignelon">
+            <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
-            <sub><b>Ash Scott</b></sub>
+            <sub><b>Ujjawal Saini</b></sub>
         </a>
     </td>
     <td align="center">
