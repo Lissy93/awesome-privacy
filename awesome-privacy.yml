@@ -1117,6 +1117,14 @@ categories:
           Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
           email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
 
+      - name: quackr
+        url: https://quackr.io
+        icon: https://i.imgur.com/AVQcz9W.png
+        description: |
+          Popular SMS platform which offers free and premium temporary phone numbers in over 30 countries.  Numbers are non-VOIP so are suitable for account activation and verification.
+        androidApp: com.quackr.app
+        acceptsCrypto: true
+
     ################################
     ###### Team Collaboration ######
     ################################
