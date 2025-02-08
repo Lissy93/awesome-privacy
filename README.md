@@ -5465,7 +5465,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/pho3nixf1re">
-            <img src="https://avatars.githubusercontent.com/u/96882?v=4" width="80;" alt="pho3nixf1re"/>
+            <img src="https://avatars.githubusercontent.com/u/96882?u=214f67d8214bf1aff8ec83d4c827904b68f8a77f&v=4" width="80;" alt="pho3nixf1re"/>
             <br />
             <sub><b>Matthew Turney</b></sub>
         </a>
@@ -5593,6 +5593,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/rpvu">
+            <img src="https://avatars.githubusercontent.com/u/90328029?v=4" width="80;" alt="rpvu"/>
+            <br />
+            <sub><b>rpvu</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/st617">
             <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
             <br />
@@ -5619,7 +5626,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Adamt279</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/CarterPerez-dev">
             <img src="https://avatars.githubusercontent.com/u/188120068?u=0e409c671324f8872efe4e2f7e5c12ebb8670010&v=4" width="80;" alt="CarterPerez-dev"/>
