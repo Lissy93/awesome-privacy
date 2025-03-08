@@ -10,7 +10,7 @@ interface Props {
   url: string;
 };
 
-const { iosData, url } = Astro.props;
+const { iosData } = Astro.props;
 
 const bytesToMb = (bytes: number) => (bytes / 1024 / 1024).toFixed(2);
 
@@ -18,7 +18,10 @@ const makeRatingPercentage = (rating: number) => (rating / 5) * 100;
 
 const roundRatings = (rating: number) => Math.round(rating * 100) / 100;
 
-const putCommaInNumber = (num: number) => num.toLocaleString();
+const putCommaInNumber = (num: number | any) => {
+  if (!num) return 'Unknown';
+  return typeof num === 'number' ? num.toLocaleString() : num;
+}
 
 ---
 
@@ -72,7 +75,7 @@ const putCommaInNumber = (num: number) => num.toLocaleString();
       </li>
       <li>
         <span class="lbl">Device Models Supported</span>
-        <span class="val">{iosData.supportedDevices.length}</span>
+        <span class="val">{iosData.supportedDevices ? iosData.supportedDevices.length : 'Unknown'}</span>
       </li>
     </ul>
   </div>
@@ -92,10 +95,12 @@ const putCommaInNumber = (num: number) => num.toLocaleString();
         <span class="lbl">Age Advisory</span>
         <span class="val">{iosData.contentAdvisoryRating}</span>
       </li>
+      {iosData.languageCodesISO2A && (
       <li>
         <span class="lbl">Supported Languages</span>
         <span class="val" title={iosData.languageCodesISO2A.join(', ')}>{iosData.languageCodesISO2A.length}</span>
       </li>
+      )}
       <li>
         <span class="lbl">Developer</span>
         <span class="val"><a href={iosData.artistViewUrl}>{iosData.sellerName}</a></span>
@@ -106,14 +111,16 @@ const putCommaInNumber = (num: number) => num.toLocaleString();
       </li>
     </ul>
 
-    <h4>Screenshots</h4>
-    <ul class="screenshots">
-      {iosData.screenshotUrls.map((url) => (
-        <li>
-          <img src={url} width="100" />
-        </li>
-      ))}
-    </ul>
+    {iosData.screenshotUrls && (
+      <h4>Screenshots</h4>
+      <ul class="screenshots">
+        {iosData.screenshotUrls.map((url) => (
+          <li>
+            <img src={url} width="100" />
+          </li>
+        ))}
+      </ul>
+    )}
     
   </div>
 </div>

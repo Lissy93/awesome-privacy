@@ -165,11 +165,11 @@ const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignor
 
 const findPrivacyPolicyLink = () => {
   if (!privacyData) return null;
-  const docs = privacyData.parameters.documents;
-  if (docs) {
-    const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
-    if (privacyPolicy) return privacyPolicy.url;
-  }
+  // const docs = privacyData?.parameters?.documents;
+  // if (docs) {
+  //   const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
+  //   if (privacyPolicy) return privacyPolicy.url;
+  // }
   return `https://tosdr.org/en/service/${tosdrId}`;
 };
 
@@ -338,7 +338,7 @@ const getApiEndpoint = () => {
         <AndroidAppDetailedInfo androidData={androidData} />
       </section>
     )}
-    { iosData && (
+    { iosData && typeof iosData === 'object' && Object.keys(iosData).length > 0 && (
       <section>
         <h3>{name} iOS App</h3>
         <IosAppDetailedInfo url={url} iosData={iosData} />

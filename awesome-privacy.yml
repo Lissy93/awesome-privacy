@@ -213,16 +213,6 @@ categories:
           Simple, native, open source 2-FA Client for iOS, which never connects to the
           internet - built by @mattrubin.me
 
-      - name: Raivo OTP
-        url: https://raivo-otp.com/
-        icon: https://raivo-otp.com/img/app-icon.png
-        github: raivo-otp/ios-application
-        followWith: iOS
-        iosApp: https://apps.apple.com/us/app/raivo-authenticator/id1459042137
-        description: |
-          A native, lightweight and secure one-time-password (OTP) client built for iOS;
-          Raivo OTP! - built by @tijme
-
       - name: WinAuth
         url: https://winauth.github.io/winauth
         github: winauth/winauth
@@ -252,6 +242,20 @@ categories:
           Authenticator Extension is an in-browser One-Time Password (OTP) client,
           supports both Time-Based One-Time Password (TOTP, specified in [RFC 6238](https://tools.ietf.org/html/rfc6238))
           and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ietf.org/html/rfc4226)).
+
+      - name: Ente Auth
+        url: https://ente.io/auth/
+        icon: https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico
+        openSource: true
+        github: ente-io/ente
+        tosdrId: 5256
+        iosApp: https://apps.apple.com/us/app/ente-auth/id6444121398
+        androidApp: io.ente.auth
+        description: |
+          Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
+          It can be used with an online account to backup and sync your tokens across your 
+          devices (and access them via a web interface) in a secure, end-to-end encrypted 
+          fashion. It can also be used offline on a single device with no account necessary.
 
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
@@ -301,6 +305,14 @@ categories:
         description: |
           `age` is a simple, modern and secure CLI file encryption tool and Go library.
           It features small explicit keys, no config options, and UNIX-style composability
+
+      - name: Picocrypt
+        github: Picocrypt/Picocrypt
+        icon: https://avatars.githubusercontent.com/u/171401041
+        description: |
+          Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
+          that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+          with a focus on security, simplicity, and reliability.
 
       wordOfWarning: >
         Where possible, choose a cross-platform and well established encryption method,
@@ -406,14 +418,13 @@ categories:
           may not work correctly. As with everything there are
           [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
-      - name: Bromite
-        url: https://www.bromite.org/
-        icon: https://www.bromite.org/bromite.png
-        github: bromite/bromite
-        tosdrId: 9174
+      - name: Cromite
+        url: https://www.cromite.org/
+        icon: https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
+        github: uazo/cromite
         description: |
-          Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
-          adblock and additional settings for hardening.
+          Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
+
       notableMentions: >
         **Mobile Browsers**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android),
         [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
@@ -505,8 +516,6 @@ categories:
         url: https://metager.org
       - name: YaCy
         url: https://yacy.net
-      - name: Brave Search
-        url: https://search.brave.com/
       - name: Searx
         url: https://github.com/searxng/searxng
         description: >
@@ -724,7 +733,7 @@ categories:
         iosApp: https://apps.apple.com/us/app/proton-mail-encrypted-email/id979659905
         subreddit: ProtonMail
         description: |
-          An open-source, end-to-end encrypted anonymous email service. ProtonMail has a
+          An end-to-end encrypted anonymous email service. ProtonMail has a
           modern easy-to-use and customizable UI, as well as fast, secure native mobile
           apps. ProtonMail has all the features that you'd expect from a modern email
           service and is based on simplicity without sacrificing security. It has a free
@@ -734,6 +743,7 @@ categories:
           accept anonymous payment: BTC and cash (as well as the normal credit card and PayPal).
       - name: Tuta
         icon: https://tuta.com/resources/favicon/logo-favicon.svg
+        openSource: true
         github: tutao/tutanota
         tosdrId: 157
         url: https://tuta.com
@@ -742,15 +752,17 @@ categories:
         iosApp: https://apps.apple.com/us/app/encrypted-email-tuta/id922429609
         description: |
           Free and open source email service based in Germany. It has a basic intuitive UI,
-          secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
-          full-featured free plan or a premium subscription for businesses allowing for
-          custom domains ($12/ month). Tuta
+          secure native mobile apps and desktop email clients, anonymous signup, and an encrypted calendar. Tuta has a
+          full-featured free plan and premium subscription plans allowing for
+          custom domains (starting at $3/month). Tuta
           [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
-          like most encrypted mail providers, instead they use a standardized, hybrid method
-          consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
-          2048 bit RSA). This causes compatibility issues when communicating with contacts
+          like other encrypted mail providers, instead they use a standardized, hybrid method
+          consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+          or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
           using PGP. But it does allow them to encrypt much more of the header data (body,
-          attachments, subject lines, and sender names etc) which PGP mail providers cannot do.
+          attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
+          to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+          posed by quantum computers.
       - name: Forward Email
         url: https://forwardemail.net
         icon: https://forwardemail.net/img/android-chrome-192x192.png
@@ -763,7 +775,7 @@ categories:
         icon: https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png
         openSource: false
         tosdrId: 1694
-        reddit: Mailfence
+        subreddit: Mailfence
         androidApp: com.contactoffice.mailfence
         iosApp: https://apps.apple.com/us/app/mailfence/id1628808776
         description: |
@@ -780,7 +792,7 @@ categories:
         icon: https://i.ibb.co/zJtHBTZ/mailfence.png
         openSource: false
         tosdrId: 1517
-        reddit: Mailbox_org
+        subreddit: Mailbox_org
         description: |
           A Berlin-based, eco-friendly secure mail provider. There is no free plan, the
           standard service costs €12/year. You can use your own domain, with the option of
@@ -825,7 +837,7 @@ categories:
       - name: Mozilla Thunderbird
         url: https://www.thunderbird.net
         icon: https://www.thunderbird.net/media/img/thunderbird/ios-icon-180.png
-        reddit: Thunderbird
+        subreddit: Thunderbird
         openSource: true
         tosdrId: 3365
         description: |
@@ -1060,6 +1072,16 @@ categories:
     - name: Virtual Phone Numbers
       alternativeTo: ['google voice', 'grasshopper', 'ringcentral', 'sideline', 'burner']
       services:
+      - name: SMSPool
+        url: https://www.smspool.net
+        icon: https://i.ibb.co/2t4MBFj/apple-touch-icon.png
+        description: |
+          Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+          We support over 50+ countries and support over 300+ services.
+        androidApp: com.smspool.app
+        iosApp: https://apps.apple.com/app/smspool/id6474617801
+        tosdrId: 10033
+        acceptsCrypto: true
       - name: Silent.link
         url: https://silent.link/
         icon: https://silent.link/static/favicon/apple-icon-114x114.png
@@ -1085,8 +1107,8 @@ categories:
         description: |
           Phone number for incoming + outgoing calls and messages, provided by Soprani.
           Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at
-          $2.99 / month. Only available in the US and Canada, as (as of 2022) the service
-          is still in Beta. See alternate instances at [soprani.ca](https://soprani.ca/)
+          $4.99 / month. Only available in the US and Canada (as of 2024).
+          See alternate instances at [soprani.ca](https://soprani.ca/)
 
       - name: MoneroSMS
         url: https://monerosms.com
@@ -1228,7 +1250,7 @@ categories:
         description: |
           Allows you to block the execution of certain scripts. **Download**:
           [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
-          [Ppera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+          [Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
 
       - name: Firefox Multi-Account Containers
         github: mozilla/multi-account-containers
@@ -1330,18 +1352,6 @@ categories:
           [Chrome](https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg?hl=en-GB) \
           [Firefox](https://addons.mozilla.org/en-GB/firefox/addon/duckduckgo-for-firefox/)
 
-      - name: Self-Destructing Cookies
-        url: https://add0n.com/self-destructing-cookies.html
-        icon: https://i.ibb.co/1T06gbX/self-destructing-cookies128.png
-        github: joue-quroi/self-destructing-cookies
-        description: |
-          Prevents websites from tracking you by storing unique cookies (note Fingerprinting is often also used for tracking).
-          It removes all related cookies whenever you end a session. **Download**:
-          [Chrome](https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf) -
-          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies-webex/) -
-          [Opera](https://addons.opera.com/en/extensions/details/self-destructing-cookies/) -
-          [Source](https://github.com/joue-quroi/self-destructing-cookies)
-
       - name: Privacy Redirect
         url: https://github.com/SimonBrazell/privacy-redirect
         github: SimonBrazell/privacy-redirect
@@ -1349,16 +1359,6 @@ categories:
         description: |
           A simple web extension that redirects Twitter, YouTube, Instagram & Google Maps requests to privacy friendly alternatives
           **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/) - [Chrome](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
-
-      - name: Site Bleacher
-        url: https://github.com/wooque/site-bleacher
-        github: wooque/site-bleacher
-        icon: https://lh3.googleusercontent.com/a2Vje7WEAiLb8NwUY43hyzhTXrQllBc4qP3ymqZdoBEaT8ME98dMzRpFNx0fI5w998jIUaJozj5KeNLTiJBEwe4O
-        description: |
-          Remove automatically cookies, local storages, IndexedDBs and service workers **Download**:
-          [Firefox](https://addons.mozilla.org/en-US/firefox/addon/site-bleacher/) -
-          [Chrome](https://chrome.google.com/webstore/detail/site-bleacher/mlcfcepfmnjphcdkfbfgokkjodlkmemo) -
-          [Source](https://github.com/wooque/site-bleacher)
 
       - name: User Agent Switcher
         url: https://add0n.com/useragent-switcher.html
@@ -1712,7 +1712,7 @@ categories:
           man-in-the-middle modifying requests.
 
       - name: RethinkDNS & Firewall
-        url: https://rethinkdns.com/app
+        url: https://rethinkdns.com
         github: celzero/rethink-app
         tosdrId: 4691
         icon: https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png
@@ -1735,12 +1735,12 @@ categories:
         Only install from official sources.
       notableMentions: |
         For more open source security & privacy apps, check out these publishers:
-        [The Guardian Project](https://play.google.com/store/apps/dev?id=6502754515281796553),
-        [The Tor Project](https://play.google.com/store/apps/developer?id=The+Tor+Project),
-        [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
-        [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
-        [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-        and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
+        [The Guardian Project](https://guardianproject.info) ([Play Store](https://play.google.com/store/apps/dev?id=6502754515281796553), [F-Droid](https://search.f-droid.org/?q=guardianproject)),
+        [The Tor Project](https://www.torproject.org/) ([Play Store](https://play.google.com/store/apps/developer?id=The+Tor+Project), [F-Droid](https://search.f-droid.org/?q=torproject)),
+        [Oasis Feng](https://github.com/oasisfeng) ([Play Store](https://play.google.com/store/apps/dev?id=7664242523989527886)),
+        [FairCode (Marcel Bokhorst)](https://www.faircode.eu/) ([Play Store](https://play.google.com/store/apps/dev?id=8420080860664580239), [F-Droid](https://search.f-droid.org/?q=faircode)),
+        [SECUSO Research Group](https://secuso.aifb.kit.edu/english/105.php) ([Play Store](https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US), [F-Droid](https://search.f-droid.org/?q=secuso)),
+        and [Fossify](https://www.fossify.org) ([Play Store](https://play.google.com/store/apps/dev?id=9070296388022589266), [F-Droid](https://search.f-droid.org/?q=fossify)) -
         all of which are trusted developers or organisations, who've done amazing work.
 
         For offensive and defensive security, see
@@ -2316,6 +2316,7 @@ categories:
         icon: https://rethinkdns.com/ico/app_icon.svg
         followWith: Android
         tosdrId: 4691
+        androidApp: com.celzero.bravedns
         description: |
           Free and open source DNS changer with support for DNS-over-HTTPS, DNS-over-Tor, and DNSCrypt v3
           with Anonymized Relays. (Note, since this uses Android's VPN API, it is not possible to run a
@@ -2386,6 +2387,7 @@ categories:
         followWith: Android
         github: celzero/rethink-app
         icon: https://rethinkdns.com/ico/app_icon.svg
+        androidApp: com.celzero.bravedns
         tosdrId: 4691
         description: |
           An open-source ad-blocker and firewall app for Android 6+ (does not require root).
@@ -2523,15 +2525,6 @@ categories:
           A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
           and more on supported routers running Asuswrt-Merlin firmware, including its forks.
 
-      - name: DN66
-        url: https://jak-linux.org/projects/dns66
-        icon: https://f-droid.org/repo/icons-640/org.jak_linux.dns66.29.png
-        github: julian-klode/dns66
-        followWith: Android
-        description: |
-          DNS-based host and ad blocker for Android. Easy to configure, but the default config uses several
-          widely-respected host files aimed at stopping ads, malware, and other weird stuff.
-
       - name: BlockParty
         url: https://github.com/krishkumar/BlockParty
         icon: https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png
@@ -2556,6 +2549,8 @@ categories:
         url: https://blokada.org/
         github: blokadaorg/blokada
         followWith: Android/ iOS
+        androidApp: org.blokada.sex
+        iosApp: https://apps.apple.com/us/app/blokada/id1508341781
         tosdrId: 8557
         description: |
           Open source mobile ad-blocker that acts like a firewall. Since it's device-wide, once connected all apps will
@@ -2568,6 +2563,7 @@ categories:
         followWith: Android
         tosdrId: 4691
         icon: https://rethinkdns.com/ico/app_icon.svg
+        androidApp: com.celzero.bravedns
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
 
@@ -2642,13 +2638,6 @@ categories:
         description: |
           Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
           political, illegal, hijacked, bad peers and more.
-
-      - name: Energized
-        url: https://github.com/EnergizedProtection/block
-        github: EnergizedProtection/block
-        description: |
-          A variety of well-maintained lists, available in all common formats, with millions of hosts included.
-
 
     #############################
     ###### Router FirmWARE ######
@@ -2987,7 +2976,7 @@ categories:
       - name: Logseq
         url: https://logseq.com/
         followWith: Windows, MacOS, Linux, Android, iOS, Web
-        icon: https://logseq.com/logo-with-border.5bf84f43.png
+        icon: https://logseq.com/logo-with-border.a30e7bd0.png
         securityAudited: false
         github: logseq/logseq
         iosApp: https://apps.apple.com/us/app/logseq/id1601013908
@@ -3269,14 +3258,6 @@ categories:
     - name: File Drop
       alternativeTo: ['wetransfer', 'send anywhere', 'filemail', 'smash']
       services:
-      - name: FilePizza
-        url: https://file.pizza
-        github: kern/filepizza
-        followWith: Web
-        description: |
-          Peer-to-peer based file transfer from the browser, using Web Torrent. It's quick and easy to use, and doesn't
-          require any software to be installed. Can also be self-hosted.
-
       - name: FileSend
         url: https://filesend.standardnotes.org
         followWith: Web
@@ -3856,7 +3837,7 @@ categories:
           messaging. Open source, and built on top of Debian. Tails is simple to stop, configure and use.
 
       - name: Parrot
-        url: https://parrotlinux.org/
+        url: https://www.parrotsec.org/
         followWith: security
         tosdrId: 8267
         description: |
@@ -4469,13 +4450,6 @@ categories:
         github: spesmilo/electrum
         tosdrId: 2761
 
-      - name: Samourai Wallet
-        url: https://samouraiwallet.com/
-        description: |
-          An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
-        followWith: Bitcoin
-        github: Samourai-Wallet/samourai-wallet-android
-
       - name: Sparrow Wallet
         url: https://sparrowwallet.com/
         description: |
@@ -4826,6 +4800,14 @@ categories:
         url: https://movim.eu/
         github: movim/movim
 
+      - name: Pico
+        description: |
+          Web services over SSH, including blogging with Prose, microsites with Pages, and a pastebin with
+          Pastes. The services use public-key cryptography by default with no browser-based tracking and
+          minimal logging.
+        url: https://pico.sh/
+        github: picosh/pico
+        openSource: true
 
       notableMentions: |
         If you use [Standard Notes](https://standardnotes.com/?s=chelvq36),
@@ -5017,7 +4999,7 @@ categories:
         url: https://photopea.com
         icon: https://www.photopea.com/promo/icon512.png
         github: photopea/photopea
-        openSource: true
+        openSource: false
         securityAudited: false
         acceptsCrypto: true
         tosdrId: 4105

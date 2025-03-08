@@ -23,7 +23,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
 	- [2-Factor Authentication](#2-factor-authentication) (9)
-	- [File Encryption](#file-encryption) (3)
+	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
@@ -34,10 +34,10 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (3)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (4)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
-	- [Browser Extensions](#browser-extensions) (27)
+	- [Browser Extensions](#browser-extensions) (25)
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
@@ -48,8 +48,8 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Providers](#dns-providers) (3)
 	- [DNS Clients](#dns-clients) (6)
 	- [Firewalls](#firewalls) (14)
-	- [Ad Blockers](#ad-blockers) (9)
-	- [Host Block Lists](#host-block-lists) (6)
+	- [Ad Blockers](#ad-blockers) (8)
+	- [Host Block Lists](#host-block-lists) (5)
 	- [Router Firmware](#router-firmware) (2)
 	- [Network Analysis](#network-analysis) (4)
 	- [Intrusion Detection](#intrusion-detection) (5)
@@ -63,7 +63,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (3)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [File Drop](#file-drop) (3)
+	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (5)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
 - **Utilities**
@@ -87,7 +87,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Smart Home](#smart-home) (1)
 - **Finance**
 	- [Cryptocurrencies](#cryptocurrencies) (2)
-	- [Crypto Wallets](#crypto-wallets) (9)
+	- [Crypto Wallets](#crypto-wallets) (8)
 	- [Crypto Exchanges](#crypto-exchanges) (4)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
@@ -95,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
-	- [Blogging Platforms](#blogging-platforms) (5)
+	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (3)
 	- [Proxy Sites](#proxy-sites) (4)
 - **Media**
@@ -252,16 +252,6 @@ internet - built by @mattrubin.me
 ˙ 
 
 		</details>
-- **[<img src='https://raivo-otp.com/img/app-icon.png' width='16' height='16' alt='icon' /> Raivo OTP](https://raivo-otp.com/)** - A native, lightweight and secure one-time-password (OTP) client built for iOS;
-Raivo OTP! - built by @tijme
-[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp "View full Raivo OTP report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: raivo-otp/ios-application](https://img.shields.io/github/stars/raivo-otp/ios-application?style=flat&logo=github&label=ios-application&color=%235f53f4&cacheSeconds=3600)](https://github.com/raivo-otp/ios-application)  [![Raivo OTP on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Raivo_OTP)](https://awesome-privacy.xyz/essentials/2-factor-authentication/raivo-otp) 
-˙ 
-
-		</details>
 - **[<img src='https://winauth.github.io/winauth/favicon.ico' width='16' height='16' alt='icon' /> WinAuth](https://winauth.github.io/winauth)** - Portable, encrypted desktop authenticator app for Microsoft Windows. With
 useful features, like hotkeys and some additional security tools, WinAuth is a
 great companion authenticator for desktop power-users. It's open source and
@@ -286,6 +276,18 @@ and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ie
 
 		[![GitHub: Authenticator-Extension/Authenticator](https://img.shields.io/github/stars/Authenticator-Extension/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/Authenticator-Extension/Authenticator)  [![Authenticator CC on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_CC)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-cc) 
 ˙ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico' width='16' height='16' alt='icon' /> Ente Auth](https://ente.io/auth/)** - Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
+It can be used with an online account to backup and sync your tokens across your 
+devices (and access them via a web interface) in a secure, end-to-end encrypted 
+fashion. It can also be used offline on a single device with no account necessary.
+[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth "View full Ente Auth report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: ente-io/ente](https://img.shields.io/github/stars/ente-io/ente?style=flat&logo=github&label=ente&color=%235f53f4&cacheSeconds=3600)](https://github.com/ente-io/ente) [![Privacy Policy](https://shields.tosdr.org/en_5256.svg)](https://tosdr.org/en/service/5256) [![Ente Auth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Ente_Auth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth) 
+📦 Open Source ˙ 
 
 		</details>
 
@@ -341,6 +343,17 @@ It features small explicit keys, no config options, and UNIX-style composability
 		<summary>Stats</summary>
 
 		[![GitHub: FiloSottile/age](https://img.shields.io/github/stars/FiloSottile/age?style=flat&logo=github&label=age&color=%235f53f4&cacheSeconds=3600)](https://github.com/FiloSottile/age)  [![age on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=age)](https://awesome-privacy.xyz/essentials/file-encryption/age) 
+˙ 
+
+		</details>
+- **[<img src='https://avatars.githubusercontent.com/u/171401041' width='16' height='16' alt='icon' /> Picocrypt](None)** - Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
+that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+with a focus on security, simplicity, and reliability.
+[…](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt "View full Picocrypt report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: Picocrypt/Picocrypt](https://img.shields.io/github/stars/Picocrypt/Picocrypt?style=flat&logo=github&label=Picocrypt&color=%235f53f4&cacheSeconds=3600)](https://github.com/Picocrypt/Picocrypt)  [![Picocrypt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Picocrypt)](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt) 
 ˙ 
 
 		</details>
@@ -422,13 +435,12 @@ may not work correctly. As with everything there are
 📦 Open Source ˙ 
 
 		</details>
-- **[<img src='https://www.bromite.org/bromite.png' width='16' height='16' alt='icon' /> Bromite](https://www.bromite.org/)** - Hardened and privacy-respecting fork of Chromium for Android. Comes with built-in
-adblock and additional settings for hardening.
-[…](https://awesome-privacy.xyz/essentials/browsers/bromite "View full Bromite report") 
+- **[<img src='https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67' width='16' height='16' alt='icon' /> Cromite](https://www.cromite.org/)** - Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
+[…](https://awesome-privacy.xyz/essentials/browsers/cromite "View full Cromite report") 
 	- <details>
 		<summary>Stats</summary>
 
-		[![GitHub: bromite/bromite](https://img.shields.io/github/stars/bromite/bromite?style=flat&logo=github&label=bromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/bromite/bromite) [![Privacy Policy](https://shields.tosdr.org/en_9174.svg)](https://tosdr.org/en/service/9174) [![Bromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bromite)](https://awesome-privacy.xyz/essentials/browsers/bromite) 
+		[![GitHub: uazo/cromite](https://img.shields.io/github/stars/uazo/cromite?style=flat&logo=github&label=cromite&color=%235f53f4&cacheSeconds=3600)](https://github.com/uazo/cromite)  [![Cromite on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cromite)](https://awesome-privacy.xyz/essentials/browsers/cromite) 
 ˙ 
 
 		</details>
@@ -511,7 +523,6 @@ its own crawler. Has a zero tracking policy (it is not open source)
 
 > - [MetaGear](https://metager.org)
 > - [YaCy](https://yacy.net)
-> - [Brave Search](https://search.brave.com/)
 > - [Searx](https://github.com/searxng/searxng) - Self-hostable search engines that use the results of multiple other engines (such as Google and Bing) at the same time. They're open source and self-hostable, although using a [public instance](https://searx.space) has the benefit of not singling out your queries to the engines used. A fork of the original [Searx](https://searx.github.io/searx/).
 </details>
 
@@ -676,7 +687,7 @@ Tox.
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.<br><br> For a more details comparison of email providers, see [email-comparison.as93.net](https://email-comparison.as93.net/)
 
-- **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An open-source, end-to-end encrypted anonymous email service. ProtonMail has a
+- **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An end-to-end encrypted anonymous email service. ProtonMail has a
 modern easy-to-use and customizable UI, as well as fast, secure native mobile
 apps. ProtonMail has all the features that you'd expect from a modern email
 service and is based on simplicity without sacrificing security. It has a free
@@ -693,21 +704,23 @@ accept anonymous payment: BTC and cash (as well as the normal credit card and Pa
 
 		</details>
 - **[<img src='https://tuta.com/resources/favicon/logo-favicon.svg' width='16' height='16' alt='icon' /> Tuta](https://tuta.com)** - Free and open source email service based in Germany. It has a basic intuitive UI,
-secure native mobile apps, anonymous signup, and a .onion site. Tuta has a
-full-featured free plan or a premium subscription for businesses allowing for
-custom domains ($12/ month). Tuta
+secure native mobile apps and desktop email clients, anonymous signup, and an encrypted calendar. Tuta has a
+full-featured free plan and premium subscription plans allowing for
+custom domains (starting at $3/month). Tuta
 [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
-like most encrypted mail providers, instead they use a standardized, hybrid method
-consisting of a symmetrical and an asymmetrical algorithm (with 128 bit AES, and
-2048 bit RSA). This causes compatibility issues when communicating with contacts
+like other encrypted mail providers, instead they use a standardized, hybrid method
+consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
 using PGP. But it does allow them to encrypt much more of the header data (body,
-attachments, subject lines, and sender names etc) which PGP mail providers cannot do.
+attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
+to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+posed by quantum computers.
 […](https://awesome-privacy.xyz/communication/encrypted-email/tuta "View full Tuta report") 
 	- <details>
 		<summary>Stats</summary>
 
 		[![GitHub: tutao/tutanota](https://img.shields.io/github/stars/tutao/tutanota?style=flat&logo=github&label=tutanota&color=%235f53f4&cacheSeconds=3600)](https://github.com/tutao/tutanota) [![Privacy Policy](https://shields.tosdr.org/en_157.svg)](https://tosdr.org/en/service/157) [![Tuta on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tuta)](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 
-˙ 
+📦 Open Source ˙ 
 
 		</details>
 - **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
@@ -1024,6 +1037,16 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 
 ### Virtual Phone Numbers
 
+- **[<img src='https://i.ibb.co/2t4MBFj/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+We support over 50+ countries and support over 300+ services.
+[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool "View full SMSPool report") 
+	- <details>
+		<summary>Stats</summary>
+
+		 [![Privacy Policy](https://shields.tosdr.org/en_10033.svg)](https://tosdr.org/en/service/10033) [![SMSPool on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SMSPool)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool) 
+💰 Accepts Anonymous Payment ˙ 
+
+		</details>
 - **[<img src='https://silent.link/static/favicon/apple-icon-114x114.png' width='16' height='16' alt='icon' /> Silent.link](https://silent.link/)** - Anonymous eSIM for sending / receiving SMS, incoming calls and 4G / 5G internet
 + world-wide roaming. No data is required at sign-up. Affordable pricing, with
 payments and top-ups accepted in BTC. Requires an eSim-compatible device.
@@ -1042,8 +1065,8 @@ and payment is accepted in BTC, XMR or credit card.
 		</details>
 - **[<img src='https://jmp.chat/static/jmp.svg' width='16' height='16' alt='icon' /> Jmp.chat](https://jmp.chat/)** - Phone number for incoming + outgoing calls and messages, provided by Soprani.
 Works with Jabber, Matrix, Snikket, XMPP or any SIP client. Pricing starts at
-$2.99 / month. Only available in the US and Canada, as (as of 2022) the service
-is still in Beta. See alternate instances at [soprani.ca](https://soprani.ca/)
+$4.99 / month. Only available in the US and Canada (as of 2024).
+See alternate instances at [soprani.ca](https://soprani.ca/)
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/jmp.chat "View full Jmp.chat report") 
 - **[<img src='https://i.ibb.co/Dgwr4Z0/monero-sms.png' width='16' height='16' alt='icon' /> MoneroSMS](https://monerosms.com)** - Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
 email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
@@ -1157,7 +1180,7 @@ from secretly tracking where you go and what pages you look at. **Download**:
 		</details>
 - **[<img src='https://lh3.googleusercontent.com/c5co_NoLmEt48VC_yVp0JgKcgd83yiq_CdekGaOlBBfD5WII5mjxngERgikcQd4P56uoX9epiknU5ktXadPqj2EEVsE' width='16' height='16' alt='icon' /> ScriptSafe](https://www.andryou.com/scriptsafe)** - Allows you to block the execution of certain scripts. **Download**:
 [Chrome](https://chromewebstore.google.com/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf) -
-[Ppera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
+[Opera](https://addons.opera.com/en/extensions/details/scriptsafe-2/)
 […](https://awesome-privacy.xyz/security-tools/browser-extensions/scriptsafe "View full ScriptSafe report") 
 	- <details>
 		<summary>Stats</summary>
@@ -1268,20 +1291,6 @@ Improves privacy and load times. Works out-of-the-box and plays nicely with regu
 📦 Open Source ˙ 
 
 		</details>
-- **[<img src='https://i.ibb.co/1T06gbX/self-destructing-cookies128.png' width='16' height='16' alt='icon' /> Self-Destructing Cookies](https://add0n.com/self-destructing-cookies.html)** - Prevents websites from tracking you by storing unique cookies (note Fingerprinting is often also used for tracking).
-It removes all related cookies whenever you end a session. **Download**:
-[Chrome](https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf) -
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies-webex/) -
-[Opera](https://addons.opera.com/en/extensions/details/self-destructing-cookies/) -
-[Source](https://github.com/joue-quroi/self-destructing-cookies)
-[…](https://awesome-privacy.xyz/security-tools/browser-extensions/self-destructing-cookies "View full Self-Destructing Cookies report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: joue-quroi/self-destructing-cookies](https://img.shields.io/github/stars/joue-quroi/self-destructing-cookies?style=flat&logo=github&label=self-destructing-cookies&color=%235f53f4&cacheSeconds=3600)](https://github.com/joue-quroi/self-destructing-cookies)  [![Self-Destructing Cookies on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Self-Destructing_Cookies)](https://awesome-privacy.xyz/security-tools/browser-extensions/self-destructing-cookies) 
-˙ 
-
-		</details>
 - **[<img src='https://lh3.googleusercontent.com/pC5a_u12RlaLQhJ-5Jz87rtju2s0tCksUfZHvr3JYzAaiYZJfJapmuftodT7wuAedFOHtgxR2BGh_GmKijgiK5bJyA' width='16' height='16' alt='icon' /> Privacy Redirect](https://github.com/SimonBrazell/privacy-redirect)** - A simple web extension that redirects Twitter, YouTube, Instagram & Google Maps requests to privacy friendly alternatives
 **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/privacy-redirect/) - [Chrome](https://chrome.google.com/webstore/detail/privacy-redirect/pmcmeagblkinmogikoikkdjiligflglb)
 […](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-redirect "View full Privacy Redirect report") 
@@ -1289,18 +1298,6 @@ It removes all related cookies whenever you end a session. **Download**:
 		<summary>Stats</summary>
 
 		[![GitHub: SimonBrazell/privacy-redirect](https://img.shields.io/github/stars/SimonBrazell/privacy-redirect?style=flat&logo=github&label=privacy-redirect&color=%235f53f4&cacheSeconds=3600)](https://github.com/SimonBrazell/privacy-redirect)  [![Privacy Redirect on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Privacy_Redirect)](https://awesome-privacy.xyz/security-tools/browser-extensions/privacy-redirect) 
-˙ 
-
-		</details>
-- **[<img src='https://lh3.googleusercontent.com/a2Vje7WEAiLb8NwUY43hyzhTXrQllBc4qP3ymqZdoBEaT8ME98dMzRpFNx0fI5w998jIUaJozj5KeNLTiJBEwe4O' width='16' height='16' alt='icon' /> Site Bleacher](https://github.com/wooque/site-bleacher)** - Remove automatically cookies, local storages, IndexedDBs and service workers **Download**:
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/site-bleacher/) -
-[Chrome](https://chrome.google.com/webstore/detail/site-bleacher/mlcfcepfmnjphcdkfbfgokkjodlkmemo) -
-[Source](https://github.com/wooque/site-bleacher)
-[…](https://awesome-privacy.xyz/security-tools/browser-extensions/site-bleacher "View full Site Bleacher report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: wooque/site-bleacher](https://img.shields.io/github/stars/wooque/site-bleacher?style=flat&logo=github&label=site-bleacher&color=%235f53f4&cacheSeconds=3600)](https://github.com/wooque/site-bleacher)  [![Site Bleacher on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Bleacher)](https://awesome-privacy.xyz/security-tools/browser-extensions/site-bleacher) 
 ˙ 
 
 		</details>
@@ -1633,7 +1630,7 @@ Get from [F-Droid](https://f-droid.org/packages/dev.ukanth.ufirewall/)
 and the certificate seen from an external network. If they do not match, this may indicate a
 man-in-the-middle modifying requests.
 […](https://awesome-privacy.xyz/security-tools/mobile-apps/catch-the-man-in-the-middle "View full Catch the Man-in-the-Middle report") 
-- **[<img src='https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com/app)** - An open-source ad-blocker and firewall app for Android 6+ (does not require root).
+- **[<img src='https://f-droid.org/repo/com.celzero.bravedns/en-US/icon_AwgyVcHjczoaNxANCvUeSJrEfOWsIIeIpCgBaUKoXuY=.png' width='16' height='16' alt='icon' /> RethinkDNS & Firewall](https://rethinkdns.com)** - An open-source ad-blocker and firewall app for Android 6+ (does not require root).
 […](https://awesome-privacy.xyz/security-tools/mobile-apps/rethinkdns-and-firewall "View full RethinkDNS & Firewall report") 
 	- <details>
 		<summary>Stats</summary>
@@ -1667,12 +1664,12 @@ Only install from official sources.
 <summary>✳️ <b>Notable Mentions</b></summary>
 
 > For more open source security & privacy apps, check out these publishers:
-> [The Guardian Project](https://play.google.com/store/apps/dev?id=6502754515281796553),
-> [The Tor Project](https://play.google.com/store/apps/developer?id=The+Tor+Project),
-> [Oasis Feng](https://play.google.com/store/apps/dev?id=7664242523989527886),
-> [Marcel Bokhorst](https://play.google.com/store/apps/dev?id=8420080860664580239),
-> [SECUSO Research Group]( https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US)
-> and [Simple Mobile Tools](https://play.google.com/store/apps/dev?id=9070296388022589266) -
+> [The Guardian Project](https://guardianproject.info) ([Play Store](https://play.google.com/store/apps/dev?id=6502754515281796553), [F-Droid](https://search.f-droid.org/?q=guardianproject)),
+> [The Tor Project](https://www.torproject.org/) ([Play Store](https://play.google.com/store/apps/developer?id=The+Tor+Project), [F-Droid](https://search.f-droid.org/?q=torproject)),
+> [Oasis Feng](https://github.com/oasisfeng) ([Play Store](https://play.google.com/store/apps/dev?id=7664242523989527886)),
+> [FairCode (Marcel Bokhorst)](https://www.faircode.eu/) ([Play Store](https://play.google.com/store/apps/dev?id=8420080860664580239), [F-Droid](https://search.f-droid.org/?q=faircode)),
+> [SECUSO Research Group](https://secuso.aifb.kit.edu/english/105.php) ([Play Store](https://play.google.com/store/apps/developer?id=SECUSO+Research+Group&hl=en_US), [F-Droid](https://search.f-droid.org/?q=secuso)),
+> and [Fossify](https://www.fossify.org) ([Play Store](https://play.google.com/store/apps/dev?id=9070296388022589266), [F-Droid](https://search.f-droid.org/?q=fossify)) -
 > all of which are trusted developers or organisations, who've done amazing work.
 > 
 > For offensive and defensive security, see
@@ -2431,16 +2428,6 @@ has detailed statistics, and makes it easy to pause/ resume Pi-Hole if needed.
 - **[<img src='https://diversion.ch/files/theme-src/images/favicon/favicon-16x16.png' width='16' height='16' alt='icon' /> Diversion](https://diversion.ch)** - A shell script application to manage ad-blocking, Dnsmasq logging, Entware and pixelserv-tls installations
 and more on supported routers running Asuswrt-Merlin firmware, including its forks.
 […](https://awesome-privacy.xyz/networking/ad-blockers/diversion "View full Diversion report") 
-- **[<img src='https://f-droid.org/repo/icons-640/org.jak_linux.dns66.29.png' width='16' height='16' alt='icon' /> DN66](https://jak-linux.org/projects/dns66)** - DNS-based host and ad blocker for Android. Easy to configure, but the default config uses several
-widely-respected host files aimed at stopping ads, malware, and other weird stuff.
-[…](https://awesome-privacy.xyz/networking/ad-blockers/dn66 "View full DN66 report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: julian-klode/dns66](https://img.shields.io/github/stars/julian-klode/dns66?style=flat&logo=github&label=dns66&color=%235f53f4&cacheSeconds=3600)](https://github.com/julian-klode/dns66)  [![DN66 on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=DN66)](https://awesome-privacy.xyz/networking/ad-blockers/dn66) 
-˙ 
-
-		</details>
 - **[<img src='https://user-images.githubusercontent.com/425580/202258429-28da1274-2fb6-49dc-930c-3833f929b65e.png' width='16' height='16' alt='icon' /> BlockParty](https://github.com/krishkumar/BlockParty)** - Native Apple (Swift) apps, for system-wide ad-blocking. Can be customized with custom host lists,
 primarily aimed for just ad-blocking.
 […](https://awesome-privacy.xyz/networking/ad-blockers/blockparty "View full BlockParty report") 
@@ -2562,15 +2549,6 @@ sources. You can optionally pick extensions to block p0rn, Social Media, gamblin
 - **[<img src='https://d3pkfiqitivr8j.cloudfront.net/sitefiles/images/favicon.ico' width='16' height='16' alt='icon' /> iBlockList](https://www.iblocklist.com)** - Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
 political, illegal, hijacked, bad peers and more.
 […](https://awesome-privacy.xyz/networking/host-block-lists/iblocklist "View full iBlockList report") 
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> Energized](https://github.com/EnergizedProtection/block)** - A variety of well-maintained lists, available in all common formats, with millions of hosts included.
-[…](https://awesome-privacy.xyz/networking/host-block-lists/energized "View full Energized report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: EnergizedProtection/block](https://img.shields.io/github/stars/EnergizedProtection/block?style=flat&logo=github&label=block&color=%235f53f4&cacheSeconds=3600)](https://github.com/EnergizedProtection/block)  [![Energized on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Energized)](https://awesome-privacy.xyz/networking/host-block-lists/energized) 
-˙ 
-
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -2919,7 +2897,7 @@ other services. Supports synchronisation with cloud services, implemented with E
 🛡️ Security Audited ˙ 
 
 		</details>
-- **[<img src='https://logseq.com/logo-with-border.5bf84f43.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
+- **[<img src='https://logseq.com/logo-with-border.a30e7bd0.png' width='16' height='16' alt='icon' /> Logseq](https://logseq.com/)** - Privacy-first, open-source knowledge base that works on top of local plain-text Markdown and
 Org-mode files.
 Supports lots of different note modes, including task management,
 PDF annotation, flashcards, whiteboards strong markdown support and more.
@@ -3225,16 +3203,6 @@ privacy and security. Made in Spain. Open-source mobile and desktop apps. 10GB F
 
 ### File Drop
 
-- **[<img src='https://icon.horse/icon/file.pizza' width='16' height='16' alt='icon' /> FilePizza](https://file.pizza)** - Peer-to-peer based file transfer from the browser, using Web Torrent. It's quick and easy to use, and doesn't
-require any software to be installed. Can also be self-hosted.
-[…](https://awesome-privacy.xyz/productivity/file-drop/filepizza "View full FilePizza report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: kern/filepizza](https://img.shields.io/github/stars/kern/filepizza?style=flat&logo=github&label=filepizza&color=%235f53f4&cacheSeconds=3600)](https://github.com/kern/filepizza)  [![FilePizza on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FilePizza)](https://awesome-privacy.xyz/productivity/file-drop/filepizza) 
-˙ 
-
-		</details>
 - **[<img src='https://icon.horse/icon/filesend.standardnotes.org' width='16' height='16' alt='icon' /> FileSend](https://filesend.standardnotes.org)** - Simple, encrypted file sharing, with a 500mb limit and 5-day retention. Files are secured with client-side AES-256
 encryption and no IP address or device info is logged. Files are permanently deleted after download or after specified
 duration. Developed by StandardNotes, and has built-in integration with the SN app.
@@ -3787,7 +3755,7 @@ privacy and anonymity through having no persistent memory/ leaving no trace on t
 built-in system-wide, and uses state-of-the-art cryptographic tools to encrypt your files, emails and instant
 messaging. Open source, and built on top of Debian. Tails is simple to stop, configure and use.
 […](https://awesome-privacy.xyz/operating-systems/desktop-operating-systems/tails "View full Tails report") 
-- **[<img src='https://icon.horse/icon/parrotlinux.org' width='16' height='16' alt='icon' /> Parrot](https://parrotlinux.org/)** - Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
+- **[<img src='https://icon.horse/icon/www.parrotsec.org' width='16' height='16' alt='icon' /> Parrot](https://www.parrotsec.org/)** - Parrot Linux, is a full Debian-based operating system, that is geared towards security, privacy and development.
 It is fully-featured yet light-weight, very open. There are 3 editions: General Purpose, Security and Forensic.
 The Secure distribution includes its own sandbox system obtained with the combination of Firejail and AppArmor
 with custom security profiles. While the Forensics Edition is bundled with a comprehensive suite of security/
@@ -4454,15 +4422,6 @@ be physically tracked (CCTV, phone location, card payments etc)
 ˙ 
 
 		</details>
-- **[<img src='https://icon.horse/icon/samouraiwallet.com' width='16' height='16' alt='icon' /> Samourai Wallet](https://samouraiwallet.com/)** - An open-source, Bitcoin-only privacy-focused wallet, with some innovative features. Samourai Wallet works under any network conditions, with a full offline mode, useful for cold storage. It also supports a comprehensive range of privacy features including: STONEWALL that helps guard against address clustering deanonymization attacks, PayNym which allows you to receive funds without revealing your public address for all to see, Stealth Mode which hides Samourai from your devices launcher, Remote SMS Commands to wipe or recover your wallet if the device is seized or stolen, and Whirlpool which is similar to a coin mixer, and OpenDime is also supported for offline USB hardware wallets.
-[…](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet "View full Samourai Wallet report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: Samourai-Wallet/samourai-wallet-android](https://img.shields.io/github/stars/Samourai-Wallet/samourai-wallet-android?style=flat&logo=github&label=samourai-wallet-android&color=%235f53f4&cacheSeconds=3600)](https://github.com/Samourai-Wallet/samourai-wallet-android)  [![Samourai Wallet on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Samourai_Wallet)](https://awesome-privacy.xyz/finance/crypto-wallets/samourai-wallet) 
-˙ 
-
-		</details>
 - **[<img src='https://icon.horse/icon/sparrowwallet.com' width='16' height='16' alt='icon' /> Sparrow Wallet](https://sparrowwallet.com/)** - Sparrow is a Bitcoin wallet for those who value financial self-sovereignty. Sparrow’s emphasis is on security, privacy, and usability. Sparrow does not hide information from you - on the contrary, it attempts to provide as much detail as possible about your transactions and UTXOs, but in a way that is manageable and usable.
 […](https://awesome-privacy.xyz/finance/crypto-wallets/sparrow-wallet "View full Sparrow Wallet report") 
 	- <details>
@@ -4918,6 +4877,17 @@ integrating social and communication tools in a unified platform.
 ˙ 
 
 		</details>
+- **[<img src='https://icon.horse/icon/pico.sh' width='16' height='16' alt='icon' /> Pico](https://pico.sh/)** - Web services over SSH, including blogging with Prose, microsites with Pages, and a pastebin with
+Pastes. The services use public-key cryptography by default with no browser-based tracking and
+minimal logging.
+[…](https://awesome-privacy.xyz/social/blogging-platforms/pico "View full Pico report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: picosh/pico](https://img.shields.io/github/stars/picosh/pico?style=flat&logo=github&label=pico&color=%235f53f4&cacheSeconds=3600)](https://github.com/picosh/pico)  [![Pico on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pico)](https://awesome-privacy.xyz/social/blogging-platforms/pico) 
+📦 Open Source ˙ 
+
+		</details>
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
@@ -5148,7 +5118,7 @@ with a very wide range of supported formats
 		<summary>Stats</summary>
 
 		[![GitHub: photopea/photopea](https://img.shields.io/github/stars/photopea/photopea?style=flat&logo=github&label=photopea&color=%235f53f4&cacheSeconds=3600)](https://github.com/photopea/photopea) [![Privacy Policy](https://shields.tosdr.org/en_4105.svg)](https://tosdr.org/en/service/4105) [![PhotoPea on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PhotoPea)](https://awesome-privacy.xyz/creativity/image-editors/photopea) 
-📦 Open Source 💰 Accepts Anonymous Payment ˙ 
+💰 Accepts Anonymous Payment ˙ 
 
 		</details>
 - **[<img src='https://i.ibb.co/TqtRH52/Krita.png' width='16' height='16' alt='icon' /> Krita](https://krita.org/en)** - Digital painting application.
@@ -5421,7 +5391,7 @@ A custom Reddit feed covering news and updates for all the apps covered here can
 ---
 
 ## The Website
-The easist way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
+The easiest way to browse Awesome Privacy, is via our website, at **[awesome-privacy.xyz](https://awesome-privacy.xyz)**
 
 [![screenshots](https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/.github/screenshots/grid.png)](https://awesome-privacy.xyz)
 
@@ -5487,31 +5457,10 @@ Huge thanks to the following sponsors, for their ongoing support 💖
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/undefined">
-            <img src="" width="80;" alt="undefined"/>
-            <br />
-            <sub><b>Undefined</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/koconder">
-            <img src="https://avatars.githubusercontent.com/u/25068?u=582657b23622aaa3dfe68bd028a780f272f456fa&v=4" width="80;" alt="koconder"/>
+        <a href="https://github.com/vincentkoc">
+            <img src="https://avatars.githubusercontent.com/u/25068?u=fbd5b2d51142daa4bdbc21e21953a3b8b8188a4a&v=4" width="80;" alt="vincentkoc"/>
             <br />
             <sub><b>Vincent Koc</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/Admonstrator">
-            <img src="https://avatars.githubusercontent.com/u/69824?u=1e226d7a36cdd661c3e4cd486fea140d045b7d57&v=4" width="80;" alt="Admonstrator"/>
-            <br />
-            <sub><b>Aaron Viehl</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/tbjers">
-            <img src="https://avatars.githubusercontent.com/u/1117052?v=4" width="80;" alt="tbjers"/>
-            <br />
-            <sub><b>Torgny Bjers</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5527,8 +5476,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Shrippen</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/bile0026">
             <img src="https://avatars.githubusercontent.com/u/5022496?u=aec96ad173c0ea9baaba93807efa8a848af6595c&v=4" width="80;" alt="bile0026"/>
@@ -5549,7 +5497,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Digital Archeology</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
@@ -5570,11 +5519,17 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Brian McGonagill</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
-        <a href="https://github.com/vlad-timofeev">
-            <img src="https://avatars.githubusercontent.com/u/11474041?u=eee43705b54d2ec9f51fc4fcce5ad18dd17c87e4&v=4" width="80;" alt="vlad-timofeev"/>
+        <a href="https://github.com/arcestia">
+            <img src="https://avatars.githubusercontent.com/u/7936962?u=41e34bb816ad09323e1650f3efc0bec4fb2bc5dd&v=4" width="80;" alt="arcestia"/>
+            <br />
+            <sub><b>Laurensius Jeffrey</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/vlad-tim">
+            <img src="https://avatars.githubusercontent.com/u/11474041?u=eee43705b54d2ec9f51fc4fcce5ad18dd17c87e4&v=4" width="80;" alt="vlad-tim"/>
             <br />
             <sub><b>Vlad</b></sub>
         </a>
@@ -5585,19 +5540,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>HeliXZz</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/patvdv">
             <img src="https://avatars.githubusercontent.com/u/12430107?u=e8911c2fb91af4d30432f76da8c40927b2830bd7&v=4" width="80;" alt="patvdv"/>
             <br />
             <sub><b>Patrick Van Der Veken</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/plgonzalezrx8">
-            <img src="https://avatars.githubusercontent.com/u/19900049?u=48a58d2da520a9d712184c6e6e99927ff3cbf179&v=4" width="80;" alt="plgonzalezrx8"/>
-            <br />
-            <sub><b>Pedro Gonzalez</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5608,32 +5557,24 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/allesauseinerhand">
-            <img src="https://avatars.githubusercontent.com/u/32039836?v=4" width="80;" alt="allesauseinerhand"/>
+        <a href="https://github.com/sushibait">
+            <img src="https://avatars.githubusercontent.com/u/26634535?v=4" width="80;" alt="sushibait"/>
             <br />
-            <sub><b>Allesauseinerhand</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/lamtrinhdev">
-            <img src="https://avatars.githubusercontent.com/u/49742151?u=c5eaca5aa6841a80605cf4f7d0e861a9e6339ef3&v=4" width="80;" alt="lamtrinhdev"/>
-            <br />
-            <sub><b>LamTrinh.Dev</b></sub>
+            <sub><b>Shiverme Timbers</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/Bastii717">
-            <img src="https://avatars.githubusercontent.com/u/53431819?u=604977bed6ad6875ada890d0d3765a4cacc2fa14&v=4" width="80;" alt="Bastii717"/>
+        <a href="https://github.com/undefined">
+            <img src="" width="80;" alt="undefined"/>
             <br />
-            <sub><b>Bastii717</b></sub>
+            <sub><b>Undefined</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/M2TD">
-            <img src="https://avatars.githubusercontent.com/u/85460457?v=4" width="80;" alt="M2TD"/>
+        <a href="https://github.com/OlliVHH">
+            <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
             <br />
-            <sub><b>M2TD</b></sub>
+            <sub><b>HamburgerJung</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5642,19 +5583,27 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
-        <a href="https://github.com/NixyJuppie">
-            <img src="https://avatars.githubusercontent.com/u/138570196?u=b102c222487905728b858704962d32759df29ebe&v=4" width="80;" alt="NixyJuppie"/>
+        <a href="https://github.com/st617">
+            <img src="https://avatars.githubusercontent.com/u/128325650?v=4" width="80;" alt="st617"/>
             <br />
-            <sub><b>Nixy</b></sub>
+            <sub><b>St617</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/nrvo">
-            <img src="https://avatars.githubusercontent.com/u/151435968?u=e1dcb307fd0efdc45cddbe9490a7b956e4da6835&v=4" width="80;" alt="nrvo"/>
+        <a href="https://github.com/hudsonrock-partnerships">
+            <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
             <br />
-            <sub><b>Nrvo</b></sub>
+            <sub><b>Hudsonrock-partnerships</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/CarterPerez-dev">
+            <img src="https://avatars.githubusercontent.com/u/188120068?u=0e409c671324f8872efe4e2f7e5c12ebb8670010&v=4" width="80;" alt="CarterPerez-dev"/>
+            <br />
+            <sub><b>Carter Perez</b></sub>
         </a>
     </td></tr>
 </table>
@@ -5681,6 +5630,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/SadMadLad">
+            <img src="https://avatars.githubusercontent.com/u/74383721?v=4" width="80;" alt="SadMadLad"/>
+            <br />
+            <sub><b>Saad Azam</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/ltguillaume">
+            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
+            <br />
+            <sub><b>Guillaume</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/Ki-er">
             <img src="https://avatars.githubusercontent.com/u/32241933?v=4" width="80;" alt="Ki-er"/>
             <br />
@@ -5693,22 +5656,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Lilith</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/ltguillaume">
-            <img src="https://avatars.githubusercontent.com/u/4777345?v=4" width="80;" alt="ltguillaume"/>
-            <br />
-            <sub><b>Guillaume</b></sub>
-        </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/lamtrinhdev">
             <img src="https://avatars.githubusercontent.com/u/49742151?v=4" width="80;" alt="lamtrinhdev"/>
             <br />
             <sub><b>LamTrinh.Dev</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
@@ -5743,6 +5699,21 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Titanism</b></sub>
         </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/smspool">
+            <img src="https://avatars.githubusercontent.com/u/113311275?v=4" width="80;" alt="smspool"/>
+            <br />
+            <sub><b>SMSPool</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/catbash">
+            <img src="https://avatars.githubusercontent.com/u/88514774?v=4" width="80;" alt="catbash"/>
+            <br />
+            <sub><b>Catbash</b></sub>
+        </a>
     </td>
     <td align="center">
         <a href="https://github.com/slade991">
@@ -5750,8 +5721,7 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Slade991</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/samsapti">
             <img src="https://avatars.githubusercontent.com/u/26819407?v=4" width="80;" alt="samsapti"/>
@@ -5772,19 +5742,13 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Alex Ogden</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
-        <a href="https://github.com/alxwnth">
-            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="alxwnth"/>
+        <a href="https://github.com/0xrivst">
+            <img src="https://avatars.githubusercontent.com/u/69579692?v=4" width="80;" alt="0xrivst"/>
             <br />
             <sub><b>Alex</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/tschlotfeldt">
-            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
-            <br />
-            <sub><b>Tim Schlotfeldt</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5792,14 +5756,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
             <sub><b>Ujjawal Saini</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
-        <a href="https://github.com/Upstream8022">
-            <img src="https://avatars.githubusercontent.com/u/105393306?v=4" width="80;" alt="Upstream8022"/>
-            <br />
-            <sub><b>Upstream8022</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5829,15 +5785,22 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
+    <td align="center">
+        <a href="https://github.com/azzamsa">
+            <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
+            <br />
+            <sub><b>Azzam S.A</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/colenh">
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
@@ -5864,20 +5827,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
             <br />
             <sub><b>Magical-heyrovsky</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mrpavan">
-            <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
-            <br />
-            <sub><b>Pavan</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/pnodet">
-            <img src="https://avatars.githubusercontent.com/u/5941125?v=4" width="80;" alt="pnodet"/>
-            <br />
-            <sub><b>Paul Nodet</b></sub>
         </a>
     </td></tr>
 </table>

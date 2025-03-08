@@ -61,7 +61,7 @@ const removeDuplicates = () => {
     {priv.documents && priv.documents.length > 0 && (
       <h4>Documents</h4>
       <ul>
-        {priv.documents.map((document) => (
+        {(priv.documents || []).map((document) => (
           <li class="list-item">
             <a href={document.url} target="_blank">{document.name}</a>
             <div class="date-block">
