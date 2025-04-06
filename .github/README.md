@@ -4467,10 +4467,11 @@ properly - to keep it safe from theft, loss or damage.
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> [Metamask](https://metamask.io/) (Ethereum and ERC20 tokens) is a bridge
+> [Konkret Wallet](https://codeberg.org/konkret/konkret-wallet) (Ethereum and ERC20 tokens) is a bridge
 > that allows you to visit and interact with distributed web apps in your browser.
 > Metamask has good hardware wallet support, so you can use it to swap, stake,
 > sign, lend and interact with dapps without you're private key ever leaving your device.
+> It is a fork of and replacement for MetaMask Extension.
 > However the very nature of being a browser-based app means that you need to stay vigilant with what services you give access to.
 > </details>
 
