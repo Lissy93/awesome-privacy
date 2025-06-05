@@ -2819,6 +2819,14 @@ categories:
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
           reputable providers.
 
+      - name: Hiddence
+        url: https://hiddence.net
+        acceptsCrypto: true
+        description: |
+          Hiddence offers VPS/VDS services with a focus on privacy, convenience, and reliability — ideal for those who value
+          online anonymity and stable server performance. Servers based on Ryzen 9 & Core i9 with up to 200 Gbps network speed.
+          Crypto payments only. No KYC, no email required.
+
       notableMentions: |
         See also: [1984](https://www.1984.is) based in Iceland.
         [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
