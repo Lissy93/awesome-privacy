@@ -570,6 +570,23 @@ categories:
           several of these nodes. All communications are E2E encrypted, and there is no
           meta data.
 
+      - name: SimpleX
+        url: https://simplex.chat/
+        openSource: true
+        github: simplex-chat/simplex-chat
+        tosdrId: 7638
+        iosApp: https://apps.apple.com/us/app/simplex-chat-secure-messenger/id1605771084
+        androidApp: chat.simplex.app
+        icon: https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png
+        subreddit: SimpleXChat
+        description: |
+          Simplex is gaining popularity as a secure and private messaging app renowned
+          for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+          Simplex offers instant messaging, supports media attachments and voice and video calls.
+          Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
+          preferences for convenience, security, and accessibility. 
+          Learn more about the [Security Policy](https://simplex.chat/security/).
+
       - name: XMPP
         url: https://xmpp.org
         icon: https://xmpp.org/favicon.ico
