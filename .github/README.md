@@ -93,7 +93,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Other Payment Methods](#other-payment-methods) (3)
 	- [Secure Budgeting](#secure-budgeting) (3)
 - **Social**
-	- [Social Networks](#social-networks) (4)
+	- [Social Networks](#social-networks) (5)
 	- [Video Platforms](#video-platforms) (3)
 	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (3)
@@ -4729,6 +4729,20 @@ without algorithmic timeline manipulations. It operates across independent serve
 		<summary>Stats</summary>
 
 		[![GitHub: mastodon/mastodon](https://img.shields.io/github/stars/mastodon/mastodon?style=flat&logo=github&label=mastodon&color=%235f53f4&cacheSeconds=3600)](https://github.com/mastodon/mastodon) [![Privacy Policy](https://shields.tosdr.org/en_639.svg)](https://tosdr.org/en/service/639) [![Mastodon on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mastodon)](https://awesome-privacy.xyz/social/social-networks/mastodon) 
+˙ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> nostr](https://github.com/nostr-protocol/nostr)** - nostr stands for Notes and other stuff transmitted by relays. 
+It is an open protocol, not merely a platform. 
+This distinction enables truly censorship-resistant and global value-for-value publishing on the web. 
+With the power to replace data-greedy applications like Twitter and Instagram, 
+nostr offers a promising alternative for users seeking a more private and secure online experience 
+without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.  
+[…](https://awesome-privacy.xyz/social/social-networks/nostr "View full nostr report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: https://github.com/nostr-protocol](https://img.shields.io/github/stars/https://github.com/nostr-protocol?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/nostr-protocol)  [![nostr on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nostr)](https://awesome-privacy.xyz/social/social-networks/nostr) 
 ˙ 
 
 		</details>
