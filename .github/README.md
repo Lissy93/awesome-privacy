@@ -27,7 +27,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
-	- [Encrypted Messaging](#encrypted-messaging) (4)
+	- [Encrypted Messaging](#encrypted-messaging) (5)
 	- [P2P Messaging](#p2p-messaging) (5)
 	- [Encrypted Email](#encrypted-email) (5)
 	- [Email Clients](#email-clients) (6)
@@ -561,6 +561,20 @@ meta data.
 		<summary>Stats</summary>
 
 		[![GitHub: oxen-io/lokinet](https://img.shields.io/github/stars/oxen-io/lokinet?style=flat&logo=github&label=lokinet&color=%235f53f4&cacheSeconds=3600)](https://github.com/oxen-io/lokinet) [![Privacy Policy](https://shields.tosdr.org/en_3015.svg)](https://tosdr.org/en/service/3015) [![Session on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Session)](https://awesome-privacy.xyz/communication/encrypted-messaging/session) 
+📦 Open Source ˙ 
+
+		</details>
+- **[<img src='https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png' width='16' height='16' alt='icon' /> SimpleX](https://simplex.chat/)** - Simplex is gaining popularity as a secure and private messaging app renowned
+for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+Simplex offers instant messaging, supports media attachments and voice and video calls.
+Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
+preferences for convenience, security, and accessibility. 
+Learn more about the [Security Policy](https://simplex.chat/security/).
+[…](https://awesome-privacy.xyz/communication/encrypted-messaging/simplex "View full SimpleX report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: simplex-chat/simplex-chat](https://img.shields.io/github/stars/simplex-chat/simplex-chat?style=flat&logo=github&label=simplex-chat&color=%235f53f4&cacheSeconds=3600)](https://github.com/simplex-chat/simplex-chat) [![Privacy Policy](https://shields.tosdr.org/en_7638.svg)](https://tosdr.org/en/service/7638) [![SimpleX on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SimpleX)](https://awesome-privacy.xyz/communication/encrypted-messaging/simplex) 
 📦 Open Source ˙ 
 
 		</details>
