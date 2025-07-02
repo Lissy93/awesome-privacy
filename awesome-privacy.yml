@@ -257,6 +257,16 @@ categories:
           devices (and access them via a web interface) in a secure, end-to-end encrypted 
           fashion. It can also be used offline on a single device with no account necessary.
 
+      - name: Chronos Authenticator
+        url: https://chronosauth.com
+        icon: https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png
+        openSource: true
+        github: joeldavidw/Chronos
+        iosApp: https://apps.apple.com/app/chronos-authenticator/id6503929490
+        description: >-
+          Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust 
+          security and reliable backup options.
+
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
       notableMentions: >
