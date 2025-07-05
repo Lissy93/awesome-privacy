@@ -5520,20 +5520,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/digitalarche">
-            <img src="https://avatars.githubusercontent.com/u/6546135?u=564756d7f44ab2206819eb3148f6d822673f5066&v=4" width="80;" alt="digitalarche"/>
-            <br />
-            <sub><b>Digital Archeology</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
             <br />
             <sub><b>InDieTasten</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/araguaci">
             <img src="https://avatars.githubusercontent.com/u/7318668?v=4" width="80;" alt="araguaci"/>
@@ -5568,15 +5561,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Göksel Yeşiller</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
@@ -5600,7 +5593,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/gl0bal01">
-            <img src="https://avatars.githubusercontent.com/u/173822055?v=4" width="80;" alt="gl0bal01"/>
+            <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
@@ -5665,6 +5658,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/marc3linho">
+            <img src="https://avatars.githubusercontent.com/u/130232436?v=4" width="80;" alt="marc3linho"/>
+            <br />
+            <sub><b>Marcelinho</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
@@ -5691,15 +5691,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>GhoulBoi69</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/titanism">
             <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
             <br />
             <sub><b>Titanism</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/smspool">
             <img src="https://avatars.githubusercontent.com/u/113311275?v=4" width="80;" alt="smspool"/>
@@ -5734,15 +5734,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Coccocoa's Helper</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/AlexOgden">
             <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
             <br />
             <sub><b>Alex Ogden</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
@@ -5777,15 +5777,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/azzamsa">
             <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
@@ -5819,13 +5819,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
             <br />
             <sub><b>Magical-heyrovsky</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mrpavan">
-            <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
-            <br />
-            <sub><b>Pavan</b></sub>
         </a>
     </td></tr>
 </table>
