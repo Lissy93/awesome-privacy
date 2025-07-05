@@ -181,12 +181,12 @@ categories:
           Free, secure and open source authenticator app for Android. Has a backup/
           restore feature and a customisable UI with dark mode
 
-      - name: Authenticator Pro
-        url: https://authenticatorpro.jmh.me/
-        icon: https://authenticatorpro.jmh.me/img/icon.svg
+      - name: Stratum
+        url: https://stratumauth.com/
+        icon: https://stratumauth.com/img/icon.svg
         followWith: Android
-        github: jamie-mh/AuthenticatorPro
-        androidApp: me.jmh.authenticatorpro
+        github: stratumauth/app
+        androidApp: com.stratumauth.app
         description: |
           Free and open-source two factor authentication app for Android. It features
           encrypted backups, icons, categories and a high level of customisation. It
