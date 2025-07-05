@@ -27,7 +27,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
 - **Communication**
-	- [Encrypted Messaging](#encrypted-messaging) (4)
+	- [Encrypted Messaging](#encrypted-messaging) (5)
 	- [P2P Messaging](#p2p-messaging) (5)
 	- [Encrypted Email](#encrypted-email) (5)
 	- [Email Clients](#email-clients) (6)
@@ -93,7 +93,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Other Payment Methods](#other-payment-methods) (3)
 	- [Secure Budgeting](#secure-budgeting) (3)
 - **Social**
-	- [Social Networks](#social-networks) (4)
+	- [Social Networks](#social-networks) (5)
 	- [Video Platforms](#video-platforms) (3)
 	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (3)
@@ -561,6 +561,20 @@ meta data.
 		<summary>Stats</summary>
 
 		[![GitHub: oxen-io/lokinet](https://img.shields.io/github/stars/oxen-io/lokinet?style=flat&logo=github&label=lokinet&color=%235f53f4&cacheSeconds=3600)](https://github.com/oxen-io/lokinet) [![Privacy Policy](https://shields.tosdr.org/en_3015.svg)](https://tosdr.org/en/service/3015) [![Session on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Session)](https://awesome-privacy.xyz/communication/encrypted-messaging/session) 
+📦 Open Source ˙ 
+
+		</details>
+- **[<img src='https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png' width='16' height='16' alt='icon' /> SimpleX](https://simplex.chat/)** - Simplex is gaining popularity as a secure and private messaging app renowned
+for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+Simplex offers instant messaging, supports media attachments and voice and video calls.
+Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
+preferences for convenience, security, and accessibility. 
+Learn more about the [Security Policy](https://simplex.chat/security/).
+[…](https://awesome-privacy.xyz/communication/encrypted-messaging/simplex "View full SimpleX report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: simplex-chat/simplex-chat](https://img.shields.io/github/stars/simplex-chat/simplex-chat?style=flat&logo=github&label=simplex-chat&color=%235f53f4&cacheSeconds=3600)](https://github.com/simplex-chat/simplex-chat) [![Privacy Policy](https://shields.tosdr.org/en_7638.svg)](https://tosdr.org/en/service/7638) [![SimpleX on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=SimpleX)](https://awesome-privacy.xyz/communication/encrypted-messaging/simplex) 
 📦 Open Source ˙ 
 
 		</details>
@@ -4732,6 +4746,20 @@ without algorithmic timeline manipulations. It operates across independent serve
 ˙ 
 
 		</details>
+- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> nostr](https://github.com/nostr-protocol/nostr)** - nostr stands for Notes and other stuff transmitted by relays. 
+It is an open protocol, not merely a platform. 
+This distinction enables truly censorship-resistant and global value-for-value publishing on the web. 
+With the power to replace data-greedy applications like Twitter and Instagram, 
+nostr offers a promising alternative for users seeking a more private and secure online experience 
+without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.  
+[…](https://awesome-privacy.xyz/social/social-networks/nostr "View full nostr report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: https://github.com/nostr-protocol](https://img.shields.io/github/stars/https://github.com/nostr-protocol?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/nostr-protocol)  [![nostr on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nostr)](https://awesome-privacy.xyz/social/social-networks/nostr) 
+˙ 
+
+		</details>
 - **[<img src='https://icon.horse/icon/www.minds.com' width='16' height='16' alt='icon' /> Minds](https://www.minds.com)** - A social media platform designed to foster open conversations and community
 engagement. Rewards content creation.
 […](https://awesome-privacy.xyz/social/social-networks/minds "View full Minds report") 
@@ -5492,20 +5520,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/digitalarche">
-            <img src="https://avatars.githubusercontent.com/u/6546135?u=564756d7f44ab2206819eb3148f6d822673f5066&v=4" width="80;" alt="digitalarche"/>
-            <br />
-            <sub><b>Digital Archeology</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
             <br />
             <sub><b>InDieTasten</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/araguaci">
             <img src="https://avatars.githubusercontent.com/u/7318668?v=4" width="80;" alt="araguaci"/>
@@ -5540,15 +5561,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Göksel Yeşiller</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
@@ -5572,7 +5593,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/gl0bal01">
-            <img src="https://avatars.githubusercontent.com/u/173822055?v=4" width="80;" alt="gl0bal01"/>
+            <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
@@ -5637,6 +5658,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/marc3linho">
+            <img src="https://avatars.githubusercontent.com/u/130232436?v=4" width="80;" alt="marc3linho"/>
+            <br />
+            <sub><b>Marcelinho</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/A-childs-encyclopedia">
             <img src="https://avatars.githubusercontent.com/u/84061672?v=4" width="80;" alt="A-childs-encyclopedia"/>
             <br />
@@ -5663,15 +5691,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>GhoulBoi69</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/titanism">
             <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
             <br />
             <sub><b>Titanism</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/smspool">
             <img src="https://avatars.githubusercontent.com/u/113311275?v=4" width="80;" alt="smspool"/>
@@ -5706,15 +5734,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Coccocoa's Helper</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/AlexOgden">
             <img src="https://avatars.githubusercontent.com/u/1379601?v=4" width="80;" alt="AlexOgden"/>
             <br />
             <sub><b>Alex Ogden</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
@@ -5749,15 +5777,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
             <br />
             <sub><b>Sanmonji</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/azzamsa">
             <img src="https://avatars.githubusercontent.com/u/17734314?v=4" width="80;" alt="azzamsa"/>
@@ -5791,13 +5819,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
             <br />
             <sub><b>Magical-heyrovsky</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mrpavan">
-            <img src="https://avatars.githubusercontent.com/u/20220426?v=4" width="80;" alt="mrpavan"/>
-            <br />
-            <sub><b>Pavan</b></sub>
         </a>
     </td></tr>
 </table>
