@@ -1496,6 +1496,17 @@ categories:
           [Chrome](https://www.eff.org/https-everywhere) \
           [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
 
+      - name: Linguist
+        url: https://linguister.io
+        github: https://github.com/translate-tools/linguist
+        description: |
+          Linguist is a privacy‑focused translation solution in-browser that has an embedded offline translator
+          and lets users create [custom translators](https://linguister.io/docs/CustomTranslator) to use any translation API,
+          even if it's locally deployed.
+          Full-page translation, selected text translation, dictionary, history,
+          and other features you may expect of a full-featured translation solution in-browser. **Download**:
+          [Chrome](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie) / [Firefox](https://addons.mozilla.org/addon/linguist-translator/)
+
       notableMentions:
       - name: Extension source viewer
         url: https://addons.mozilla.org/en-US/firefox/addon/crxviewer
