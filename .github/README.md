@@ -5492,6 +5492,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/anivar">
+            <img src="https://avatars.githubusercontent.com/u/422943?v=4" width="80;" alt="anivar"/>
+            <br />
+            <sub><b>Anivar Aravind</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/BrianCurliss">
             <img src="https://avatars.githubusercontent.com/u/1222949?v=4" width="80;" alt="BrianCurliss"/>
             <br />
@@ -5518,15 +5525,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Ulises Gascón</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
             <br />
             <sub><b>InDieTasten</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/araguaci">
             <img src="https://avatars.githubusercontent.com/u/7318668?v=4" width="80;" alt="araguaci"/>
@@ -5561,15 +5568,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Göksel Yeşiller</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
@@ -5596,6 +5603,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/phishdestroy">
+            <img src="https://avatars.githubusercontent.com/u/208413058?v=4" width="80;" alt="phishdestroy"/>
+            <br />
+            <sub><b>PhishDestroy</b></sub>
         </a>
     </td></tr>
 </table>
