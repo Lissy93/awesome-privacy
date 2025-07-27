@@ -37,7 +37,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
-	- [Browser Extensions](#browser-extensions) (25)
+	- [Browser Extensions](#browser-extensions) (26)
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
@@ -1431,6 +1431,20 @@ Note this functionality is now included by default in most modern browsers. **Do
 		<summary>Stats</summary>
 
 		[![GitHub: EFForg/https-everywhere](https://img.shields.io/github/stars/EFForg/https-everywhere?style=flat&logo=github&label=https-everywhere&color=%235f53f4&cacheSeconds=3600)](https://github.com/EFForg/https-everywhere) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![HTTPS Everywhere on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=HTTPS_Everywhere)](https://awesome-privacy.xyz/security-tools/browser-extensions/https-everywhere) 
+˙ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/linguister.io' width='16' height='16' alt='icon' /> Linguist](https://linguister.io)** - Linguist is a privacy‑focused translation solution in-browser that has an embedded offline translator
+and lets users create [custom translators](https://linguister.io/docs/CustomTranslator) to use any translation API,
+even if it's locally deployed.
+Full-page translation, selected text translation, dictionary, history,
+and other features you may expect of a full-featured translation solution in-browser. **Download**:
+[Chrome](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie) / [Firefox](https://addons.mozilla.org/addon/linguist-translator/)
+[…](https://awesome-privacy.xyz/security-tools/browser-extensions/linguist "View full Linguist report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: https://github.com/translate-tools/linguist](https://img.shields.io/github/stars/https://github.com/translate-tools/linguist?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/translate-tools/linguist)  [![Linguist on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Linguist)](https://awesome-privacy.xyz/security-tools/browser-extensions/linguist) 
 ˙ 
 
 		</details>
