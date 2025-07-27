@@ -221,14 +221,14 @@ restore feature and a customisable UI with dark mode
 ˙ 
 
 		</details>
-- **[<img src='https://authenticatorpro.jmh.me/img/icon.svg' width='16' height='16' alt='icon' /> Authenticator Pro](https://authenticatorpro.jmh.me/)** - Free and open-source two factor authentication app for Android. It features
+- **[<img src='https://stratumauth.com/img/icon.svg' width='16' height='16' alt='icon' /> Stratum](https://stratumauth.com/)** - Free and open-source two factor authentication app for Android. It features
 encrypted backups, icons, categories and a high level of customisation. It
 also has a Wear OS companion app
-[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-pro "View full Authenticator Pro report") 
+[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/stratum "View full Stratum report") 
 	- <details>
 		<summary>Stats</summary>
 
-		[![GitHub: jamie-mh/AuthenticatorPro](https://img.shields.io/github/stars/jamie-mh/AuthenticatorPro?style=flat&logo=github&label=AuthenticatorPro&color=%235f53f4&cacheSeconds=3600)](https://github.com/jamie-mh/AuthenticatorPro)  [![Authenticator Pro on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_Pro)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-pro) 
+		[![GitHub: stratumauth/app](https://img.shields.io/github/stars/stratumauth/app?style=flat&logo=github&label=app&color=%235f53f4&cacheSeconds=3600)](https://github.com/stratumauth/app)  [![Stratum on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Stratum)](https://awesome-privacy.xyz/essentials/2-factor-authentication/stratum) 
 ˙ 
 
 		</details>
