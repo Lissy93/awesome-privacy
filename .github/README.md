@@ -5507,7 +5507,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/anivar">
-            <img src="https://avatars.githubusercontent.com/u/422943?v=4" width="80;" alt="anivar"/>
+            <img src="https://avatars.githubusercontent.com/u/422943?u=cdf8a8b22ffbfc018b7dd9aae8220902394d01e7&v=4" width="80;" alt="anivar"/>
             <br />
             <sub><b>Anivar Aravind</b></sub>
         </a>
@@ -5621,7 +5621,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/phishdestroy">
-            <img src="https://avatars.githubusercontent.com/u/208413058?v=4" width="80;" alt="phishdestroy"/>
+            <img src="https://avatars.githubusercontent.com/u/208413058?u=d2a7f07fdebe6bdbde4b3141ca3ab958fbf0bae9&v=4" width="80;" alt="phishdestroy"/>
             <br />
             <sub><b>PhishDestroy</b></sub>
         </a>
@@ -5772,6 +5772,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/AshboDev">
+            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
+            <br />
+            <sub><b>Ash Scott</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tschlotfeldt">
+            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+            <br />
+            <sub><b>Tim Schlotfeldt</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
@@ -5791,7 +5805,8 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Wesley-Ryan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/thezacharytaylor">
             <img src="https://avatars.githubusercontent.com/u/21206039?v=4" width="80;" alt="thezacharytaylor"/>
@@ -5805,8 +5820,7 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
@@ -5833,20 +5847,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
             <br />
             <sub><b>Jxhn</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/kolaente">
-            <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
-            <br />
-            <sub><b>Kolaente</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/magical-heyrovsky">
-            <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
-            <br />
-            <sub><b>Magical-heyrovsky</b></sub>
         </a>
     </td></tr>
 </table>
