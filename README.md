@@ -37,7 +37,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
-	- [Browser Extensions](#browser-extensions) (25)
+	- [Browser Extensions](#browser-extensions) (26)
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
@@ -221,14 +221,14 @@ restore feature and a customisable UI with dark mode
 ˙ 
 
 		</details>
-- **[<img src='https://authenticatorpro.jmh.me/img/icon.svg' width='16' height='16' alt='icon' /> Authenticator Pro](https://authenticatorpro.jmh.me/)** - Free and open-source two factor authentication app for Android. It features
+- **[<img src='https://stratumauth.com/img/icon.svg' width='16' height='16' alt='icon' /> Stratum](https://stratumauth.com/)** - Free and open-source two factor authentication app for Android. It features
 encrypted backups, icons, categories and a high level of customisation. It
 also has a Wear OS companion app
-[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-pro "View full Authenticator Pro report") 
+[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/stratum "View full Stratum report") 
 	- <details>
 		<summary>Stats</summary>
 
-		[![GitHub: jamie-mh/AuthenticatorPro](https://img.shields.io/github/stars/jamie-mh/AuthenticatorPro?style=flat&logo=github&label=AuthenticatorPro&color=%235f53f4&cacheSeconds=3600)](https://github.com/jamie-mh/AuthenticatorPro)  [![Authenticator Pro on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator_Pro)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator-pro) 
+		[![GitHub: stratumauth/app](https://img.shields.io/github/stars/stratumauth/app?style=flat&logo=github&label=app&color=%235f53f4&cacheSeconds=3600)](https://github.com/stratumauth/app)  [![Stratum on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Stratum)](https://awesome-privacy.xyz/essentials/2-factor-authentication/stratum) 
 ˙ 
 
 		</details>
@@ -1431,6 +1431,20 @@ Note this functionality is now included by default in most modern browsers. **Do
 		<summary>Stats</summary>
 
 		[![GitHub: EFForg/https-everywhere](https://img.shields.io/github/stars/EFForg/https-everywhere?style=flat&logo=github&label=https-everywhere&color=%235f53f4&cacheSeconds=3600)](https://github.com/EFForg/https-everywhere) [![Privacy Policy](https://shields.tosdr.org/en_682.svg)](https://tosdr.org/en/service/682) [![HTTPS Everywhere on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=HTTPS_Everywhere)](https://awesome-privacy.xyz/security-tools/browser-extensions/https-everywhere) 
+˙ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/linguister.io' width='16' height='16' alt='icon' /> Linguist](https://linguister.io)** - Linguist is a privacy‑focused translation solution in-browser that has an embedded offline translator
+and lets users create [custom translators](https://linguister.io/docs/CustomTranslator) to use any translation API,
+even if it's locally deployed.
+Full-page translation, selected text translation, dictionary, history,
+and other features you may expect of a full-featured translation solution in-browser. **Download**:
+[Chrome](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie) / [Firefox](https://addons.mozilla.org/addon/linguist-translator/)
+[…](https://awesome-privacy.xyz/security-tools/browser-extensions/linguist "View full Linguist report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: https://github.com/translate-tools/linguist](https://img.shields.io/github/stars/https://github.com/translate-tools/linguist?style=flat&logo=github&label=&color=%235f53f4&cacheSeconds=3600)](https://github.com/https://github.com/translate-tools/linguist)  [![Linguist on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Linguist)](https://awesome-privacy.xyz/security-tools/browser-extensions/linguist) 
 ˙ 
 
 		</details>
@@ -5493,7 +5507,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/anivar">
-            <img src="https://avatars.githubusercontent.com/u/422943?v=4" width="80;" alt="anivar"/>
+            <img src="https://avatars.githubusercontent.com/u/422943?u=cdf8a8b22ffbfc018b7dd9aae8220902394d01e7&v=4" width="80;" alt="anivar"/>
             <br />
             <sub><b>Anivar Aravind</b></sub>
         </a>
@@ -5607,7 +5621,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/phishdestroy">
-            <img src="https://avatars.githubusercontent.com/u/208413058?v=4" width="80;" alt="phishdestroy"/>
+            <img src="https://avatars.githubusercontent.com/u/208413058?u=d2a7f07fdebe6bdbde4b3141ca3ab958fbf0bae9&v=4" width="80;" alt="phishdestroy"/>
             <br />
             <sub><b>PhishDestroy</b></sub>
         </a>
@@ -5758,6 +5772,20 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/AshboDev">
+            <img src="https://avatars.githubusercontent.com/u/14421977?v=4" width="80;" alt="AshboDev"/>
+            <br />
+            <sub><b>Ash Scott</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/tschlotfeldt">
+            <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
+            <br />
+            <sub><b>Tim Schlotfeldt</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/spignelon">
             <img src="https://avatars.githubusercontent.com/u/92091338?v=4" width="80;" alt="spignelon"/>
             <br />
@@ -5777,7 +5805,8 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Wesley-Ryan</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/thezacharytaylor">
             <img src="https://avatars.githubusercontent.com/u/21206039?v=4" width="80;" alt="thezacharytaylor"/>
@@ -5791,8 +5820,7 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Zhymabek Roman</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/baddate">
             <img src="https://avatars.githubusercontent.com/u/37013819?v=4" width="80;" alt="baddate"/>
@@ -5819,20 +5847,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
             <br />
             <sub><b>Jxhn</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/kolaente">
-            <img src="https://avatars.githubusercontent.com/u/13721712?v=4" width="80;" alt="kolaente"/>
-            <br />
-            <sub><b>Kolaente</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/magical-heyrovsky">
-            <img src="https://avatars.githubusercontent.com/u/101060148?v=4" width="80;" alt="magical-heyrovsky"/>
-            <br />
-            <sub><b>Magical-heyrovsky</b></sub>
         </a>
     </td></tr>
 </table>
