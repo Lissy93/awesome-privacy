@@ -426,7 +426,7 @@ categories:
           Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
 
       notableMentions: >
-        **Mobile Browsers**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android),
+        **Mobile Browsers**:
         [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
         [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS),
         [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android),
