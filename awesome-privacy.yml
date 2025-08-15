@@ -405,6 +405,15 @@ categories:
           one of these guides by: [Restore Privacy](https://restoreprivacy.com/firefox-privacy/)
           or [12Bytes](https://codeberg.org/12bytes/firefox-config-guide)
 
+      - name: IronFox
+        url: https://ironfoxoss.org
+        icon: https://gitlab.com/ironfox-oss/IronFox/-/raw/dev/assets/ironfox.png
+        openSource: true
+        description: |
+          A hardened fork of Firefox for Android, intended to provide a reasonable default
+          configuration that maximizes security and privacy while retaining a usable setup
+          for everyday browsing. Based on [Phoenix](https://codeberg.org/celenity/Phoenix/).
+
       - name: Tor Browser
         url: https://www.torproject.org/
         icon: https://www.torproject.org/static/images/favicon/favicon.ico
