@@ -5606,6 +5606,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/KraskoP">
+            <img src="https://avatars.githubusercontent.com/u/133645143?v=4" width="80;" alt="KraskoP"/>
+            <br />
+            <sub><b>Krasko</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/hudsonrock-partnerships">
             <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
             <br />
@@ -5618,7 +5625,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/phishdestroy">
             <img src="https://avatars.githubusercontent.com/u/208413058?u=d2a7f07fdebe6bdbde4b3141ca3ab958fbf0bae9&v=4" width="80;" alt="phishdestroy"/>
