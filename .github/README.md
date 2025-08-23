@@ -5607,7 +5607,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/KraskoP">
-            <img src="https://avatars.githubusercontent.com/u/133645143?v=4" width="80;" alt="KraskoP"/>
+            <img src="https://avatars.githubusercontent.com/u/133645143?u=2d5b55b046d22c4756d55d478ea81780d499c5e0&v=4" width="80;" alt="KraskoP"/>
             <br />
             <sub><b>Krasko</b></sub>
         </a>
@@ -5722,10 +5722,10 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/GhoulBoii">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="GhoulBoii"/>
+        <a href="https://github.com/ksharizard">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="ksharizard"/>
             <br />
-            <sub><b>GhoulBoi69</b></sub>
+            <sub><b>Kshamendra</b></sub>
         </a>
     </td></tr>
 <tr>
