@@ -5606,13 +5606,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/KraskoP">
-            <img src="https://avatars.githubusercontent.com/u/133645143?u=2d5b55b046d22c4756d55d478ea81780d499c5e0&v=4" width="80;" alt="KraskoP"/>
-            <br />
-            <sub><b>Krasko</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/hudsonrock-partnerships">
             <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
             <br />
