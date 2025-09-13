@@ -1788,6 +1788,13 @@ categories:
       intro: >
         A selection of free online tools and utilities, to check, test and protect your security
       services:
+        - name: InstagramPrivSniffer
+          github: obitouka/InstagramPrivSniffer
+          icon: https://github.com/obitouka/InstagramPrivSniffer/blob/main/assets/img/logo.png
+          description: |
+            Even if you have 0% idea about them, see what they don’t want you to i.e. every collaborated post and 
+            who they collaborated with from a private account, revealed by colllaborating with a public profile (all without logging in!)
+            
         - name: Have i been pwned
           url: https://haveibeenpwned.com
           icon: https://i.ibb.co/XxmfTyw/haveibeenpwnd.png
@@ -4703,6 +4710,12 @@ categories:
         should be able to choose with whom you share what, and that is what the
         following sites aim to do.
       services:
+      - name: InstagramPrivSniffer
+        description: |
+            Even if you have 0% idea about them, see what they don’t want you to i.e. every collaborated post and 
+            who they collaborated with from a private account, revealed by colllaborating with a public profile (all without logging in!)
+        github: obitouka/InstagramPrivSniffer
+            
       - name: Aether
         description: |
           Offers self-governing communities with auditable moderation, akin to Reddit but
