@@ -5607,7 +5607,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/BigoudOps">
-            <img src="https://avatars.githubusercontent.com/u/101472804?v=4" width="80;" alt="BigoudOps"/>
+            <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
             <br />
             <sub><b>John BigoudOps</b></sub>
         </a>
