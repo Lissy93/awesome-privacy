@@ -5537,7 +5537,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         <a href="https://github.com/martin68">
             <img src="https://avatars.githubusercontent.com/u/6174552?v=4" width="80;" alt="martin68"/>
             <br />
-            <sub><b>martin68</b></sub>
+            <sub><b>Martin68</b></sub>
         </a>
     </td></tr>
 <tr>
@@ -5577,20 +5577,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/mryesiller">
-            <img src="https://avatars.githubusercontent.com/u/24632172?u=0d20f2d615158f87cd60a3398d3efb026c32f291&v=4" width="80;" alt="mryesiller"/>
+        <a href="https://github.com/Tuggster">
+            <img src="https://avatars.githubusercontent.com/u/29806952?v=4" width="80;" alt="Tuggster"/>
             <br />
-            <sub><b>Göksel Yeşiller</b></sub>
+            <sub><b>Paxton Phillips</b></sub>
         </a>
     </td></tr>
 <tr>
-    <td align="center">
-        <a href="https://github.com/meroxdotdev">
-            <img src="https://avatars.githubusercontent.com/u/35839230?u=2a3bb4891a20bc1b69ffbdbf0b6647aff0900705&v=4" width="80;" alt="meroxdotdev"/>
-            <br />
-            <sub><b>Melcher Robert</b></sub>
-        </a>
-    </td>
     <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
@@ -5625,15 +5618,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Hudsonrock-partnerships</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/LambdaTest-Inc">
-            <img src="https://avatars.githubusercontent.com/u/171592363?v=4" width="80;" alt="LambdaTest-Inc"/>
+            <img src="https://avatars.githubusercontent.com/u/171592363?u=96606606a45fa170427206199014f2a5a2a4920b&v=4" width="80;" alt="LambdaTest-Inc"/>
             <br />
             <sub><b>LambdaTest</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/gl0bal01">
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
