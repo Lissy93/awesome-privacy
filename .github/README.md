@@ -5534,20 +5534,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/martin68">
-            <img src="https://avatars.githubusercontent.com/u/6174552?v=4" width="80;" alt="martin68"/>
-            <br />
-            <sub><b>Martin68</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/InDieTasten">
             <img src="https://avatars.githubusercontent.com/u/7047377?u=8d8f8017628b38bc46dcbf3620e194b01d3fb2d1&v=4" width="80;" alt="InDieTasten"/>
             <br />
             <sub><b>InDieTasten</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/araguaci">
             <img src="https://avatars.githubusercontent.com/u/7318668?v=4" width="80;" alt="araguaci"/>
@@ -5582,15 +5575,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Paxton Phillips</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
@@ -5610,6 +5603,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
             <br />
             <sub><b>John BigoudOps</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/Fovvy">
+            <img src="https://avatars.githubusercontent.com/u/136544445?v=4" width="80;" alt="Fovvy"/>
+            <br />
+            <sub><b>~</b></sub>
         </a>
     </td>
     <td align="center">
