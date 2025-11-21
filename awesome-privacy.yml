@@ -4311,6 +4311,19 @@ categories:
         description: |
           Lightweight self-hosted git platform, written in Go.
 
+    - name: AI Coding Assistants
+      alternativeTo: ['github copilot', 'cursor', 'amazon codewhisperer', 'tabnine', 'codeium']
+      intro: |
+        Traditional AI coding assistants often collect extensive telemetry and send your code
+        to cloud services for training. Privacy-focused alternatives give you control over
+        what data is shared and where your code is processed.
+      services:
+      - name: VSCode AI Chat
+        url: https://marketplace.visualstudio.com/items?itemName=Dimslaev.ai-chat-vscode
+        github: dimslaev/ai-chat
+        openSource: true
+        description: |
+          Privacy-first AI coding assistant with manual context control optimised for local LLMs. Zero telemetry, no cloud storage, local data only.
     - name: IDEs
       alternativeTo: ['visual studio code', 'intellij idea', 'eclipse', 'pycharm', 'atom']
       services: []
