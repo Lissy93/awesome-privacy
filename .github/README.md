@@ -5570,20 +5570,27 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/ubaidwazir">
+            <img src="https://avatars.githubusercontent.com/u/81792092?v=4" width="80;" alt="ubaidwazir"/>
+            <br />
+            <sub><b>Muhammad Ubaid</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
             <br />
             <sub><b>HamburgerJung</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/frankdez93">
             <img src="https://avatars.githubusercontent.com/u/87549420?v=4" width="80;" alt="frankdez93"/>
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BigoudOps">
             <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
@@ -5618,7 +5625,8 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/mazzeroo">
             <img src="https://avatars.githubusercontent.com/u/217485921?v=4" width="80;" alt="mazzeroo"/>
