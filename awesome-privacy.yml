@@ -1922,6 +1922,15 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: Linu.li
+          url: https://linu.li
+          icon: https://linu.li/assets/favicon.svg
+          github: immineal/linu-li
+          openSource: true
+          description: |
+            A privacy-first suite of web utilities including PDF tools, image compressors, and metadata scrubbers.
+            All processing is performed 100% client-side using WebAssembly, ensuring files never leave the device.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
