@@ -1826,7 +1826,8 @@ on how to stay protected.
 […](https://awesome-privacy.xyz/security-tools/online-tools/am-i-floced "View full Am I FloCed? report") 
 - **[<img src='https://static.netcraft.com/images/favicon.ico' width='16' height='16' alt='icon' /> Site Report](https://sitereport.netcraft.com/)** - A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
 host, registrar, IP and SSL certificates.
-[…](https://awesome-privacy.xyz/security-tools/online-tools/site-report "View full Site Report report") 
+[…](https://awesome-privacy.xyz/security-tools/online-tools/site-report "View full Site Report report")
+- **[<img src='https://leaknix.com/fav.png' width='16' height='16' alt='icon' /> LeakNix](https://leaknix.com)** - Real-time data breach scanner and 24x7 monitoring for leaked emails and passwords.
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
