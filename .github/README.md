@@ -5571,7 +5571,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/ubaidwazir">
-            <img src="https://avatars.githubusercontent.com/u/81792092?v=4" width="80;" alt="ubaidwazir"/>
+            <img src="https://avatars.githubusercontent.com/u/81792092?u=f8bc533847c7307ba4f6b6fd4a32c0c39cb387ff&v=4" width="80;" alt="ubaidwazir"/>
             <br />
             <sub><b>Muhammad Ubaid</b></sub>
         </a>
