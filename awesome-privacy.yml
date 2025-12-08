@@ -181,12 +181,12 @@ categories:
           Free, secure and open source authenticator app for Android. Has a backup/
           restore feature and a customisable UI with dark mode
 
-      - name: Authenticator Pro
-        url: https://authenticatorpro.jmh.me/
-        icon: https://authenticatorpro.jmh.me/img/icon.svg
+      - name: Stratum
+        url: https://stratumauth.com/
+        icon: https://stratumauth.com/img/icon.svg
         followWith: Android
-        github: jamie-mh/AuthenticatorPro
-        androidApp: me.jmh.authenticatorpro
+        github: stratumauth/app
+        androidApp: com.stratumauth.app
         description: |
           Free and open-source two factor authentication app for Android. It features
           encrypted backups, icons, categories and a high level of customisation. It
@@ -569,6 +569,23 @@ categories:
           though [Loki Net](https://loki.network), messages are encrypted and routed through
           several of these nodes. All communications are E2E encrypted, and there is no
           meta data.
+
+      - name: SimpleX
+        url: https://simplex.chat/
+        openSource: true
+        github: simplex-chat/simplex-chat
+        tosdrId: 7638
+        iosApp: https://apps.apple.com/us/app/simplex-chat-secure-messenger/id1605771084
+        androidApp: chat.simplex.app
+        icon: https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png
+        subreddit: SimpleXChat
+        description: |
+          Simplex is gaining popularity as a secure and private messaging app renowned
+          for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+          Simplex offers instant messaging, supports media attachments and voice and video calls.
+          Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
+          preferences for convenience, security, and accessibility. 
+          Learn more about the [Security Policy](https://simplex.chat/security/).
 
       - name: XMPP
         url: https://xmpp.org
@@ -1478,6 +1495,17 @@ categories:
           Note this functionality is now included by default in most modern browsers. **Download**:
           [Chrome](https://www.eff.org/https-everywhere) \
           [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
+
+      - name: Linguist
+        url: https://linguister.io
+        github: https://github.com/translate-tools/linguist
+        description: |
+          Linguist is a privacy‑focused translation solution in-browser that has an embedded offline translator
+          and lets users create [custom translators](https://linguister.io/docs/CustomTranslator) to use any translation API,
+          even if it's locally deployed.
+          Full-page translation, selected text translation, dictionary, history,
+          and other features you may expect of a full-featured translation solution in-browser. **Download**:
+          [Chrome](https://chrome.google.com/webstore/detail/gbefmodhlophhakmoecijeppjblibmie) / [Firefox](https://addons.mozilla.org/addon/linguist-translator/)
 
       notableMentions:
       - name: Extension source viewer
@@ -4698,6 +4726,17 @@ categories:
         url: https://mastodon.social
         github: mastodon/mastodon
         tosdrId: 639
+
+      - name: nostr
+        description: |
+          nostr stands for Notes and other stuff transmitted by relays. 
+          It is an open protocol, not merely a platform. 
+          This distinction enables truly censorship-resistant and global value-for-value publishing on the web. 
+          With the power to replace data-greedy applications like Twitter and Instagram, 
+          nostr offers a promising alternative for users seeking a more private and secure online experience 
+          without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.  
+        url: https://github.com/nostr-protocol/nostr
+        github: https://github.com/nostr-protocol
 
       - name: Minds
         description: |
