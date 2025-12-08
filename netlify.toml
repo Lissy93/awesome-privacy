@@ -1,0 +1,41 @@
+# Netlify configuration for webawesome-privacy
+# Deploy subdomain: webawesome.marcstrub.com
+
+[build]
+  # Base directory for the web application
+  base = "web"
+  # Build command
+  command = "npm install && npm run build"
+  # Publish directory for Astro with Netlify adapter
+  publish = ".netlify"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "20"
+  # Astro deployment target
+  DEPLOY_TARGET = "netlify"
+  # Output mode (hybrid for SSR + static)
+  OUTPUT = "hybrid"
+  # Site URL for sitemaps and canonical URLs
+  SITE_URL = "https://webawesome.marcstrub.com"
+
+# Redirects for SPA-style routing (if needed)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# Headers for security and caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
