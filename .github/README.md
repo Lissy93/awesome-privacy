@@ -5611,13 +5611,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/mazzeroo">
-            <img src="https://avatars.githubusercontent.com/u/217485921?v=4" width="80;" alt="mazzeroo"/>
-            <br />
-            <sub><b>Maria</b></sub>
-        </a>
     </td></tr>
 </table>
 <!-- readme: sponsors -end -->
