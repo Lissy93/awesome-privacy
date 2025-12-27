@@ -2009,6 +2009,17 @@ categories:
           A court-proven VPN service with support for Wireguard and OpenVPN support, and optional
           ad-blocking. Running on dedicated hardware, with no hard drives.
 
+      - name: Party VPN
+        url: https://partyvpn.com
+        icon: https://partyvpn.com/icon.png
+        securityAudited: false
+        acceptsCrypto: true
+        discordInvite: https://discord.gg/6GRddHhW2d
+        description: |
+          Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
+          WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
+          subscriptions or credit cards.
+
       wordOfWarning: |
         - *A VPN does not make you anonymous - it merely changes your public IP address to that of your VPN provider, instead of your ISP. Your browsing session can still be linked back to your real identity either through your system details (such as user agent, screen resolution even typing patterns), cookies / session storage, or by the identifiable data that you enter. [Read more about fingerprinting](https://pixelprivacy.com/resources/browser-fingerprinting/)*
         - *Logging - If you choose to use a VPN because you do not agree with your ISP logging your full browsing history, then it is important to keep in mind that your VPN provider can see (and mess with) all your traffic. Many VPNs claim not to keep logs, but you cannot be certain of this ([VPN leaks](https://vpnleaks.com/)). See [this article](https://gist.github.com/joepie91/5a9909939e6ce7d09e29) for more*
