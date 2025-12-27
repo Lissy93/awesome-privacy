@@ -701,6 +701,25 @@ Tox.
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.<br><br> For a more details comparison of email providers, see [email-comparison.as93.net](https://email-comparison.as93.net/)
 
+- **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - A 100% open-source, privacy-focused email service with quantum-safe encrypted
+SQLite mailboxes (sandboxed and portable). Supports IMAP, POP3, SMTP, CalDAV
+(calendars), and CardDAV (contacts). Features include
+[OpenPGP/MIME and E2EE](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+[Web Key Directory (WKD)](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+and [quantum-resistant encryption](https://forwardemail.net/blog/docs/best-quantum-safe-encrypted-email-service)
+using ChaCha20-Poly1305. Offers a free plan (forwarding only), Enhanced Protection
+at $3/month (10 GB storage, unlimited domains/aliases), Team at $9/month, and
+Enterprise at $250/month. Additional storage available. Can be
+[self-hosted via Docker](https://forwardemail.net/en/faq#do-you-support-self-hosting).
+All code is available on [GitHub](https://github.com/forwardemail).
+[…](https://awesome-privacy.xyz/communication/encrypted-email/forward-email "View full Forward Email report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![Forward Email on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Forward_Email)](https://awesome-privacy.xyz/communication/encrypted-email/forward-email) 
+📦 Open Source ˙ 
+
+		</details>
 - **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An end-to-end encrypted anonymous email service. ProtonMail has a
 modern easy-to-use and customizable UI, as well as fast, secure native mobile
 apps. ProtonMail has all the features that you'd expect from a modern email
@@ -734,15 +753,6 @@ posed by quantum computers.
 		<summary>Stats</summary>
 
 		[![GitHub: tutao/tutanota](https://img.shields.io/github/stars/tutao/tutanota?style=flat&logo=github&label=tutanota&color=%235f53f4&cacheSeconds=3600)](https://github.com/tutao/tutanota) [![Privacy Policy](https://shields.tosdr.org/en_157.svg)](https://tosdr.org/en/service/157) [![Tuta on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tuta)](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 
-📦 Open Source ˙ 
-
-		</details>
-- **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
-[…](https://awesome-privacy.xyz/communication/encrypted-email/forward-email "View full Forward Email report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![Forward Email on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Forward_Email)](https://awesome-privacy.xyz/communication/encrypted-email/forward-email) 
 📦 Open Source ˙ 
 
 		</details>
