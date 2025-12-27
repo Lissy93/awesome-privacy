@@ -740,6 +740,24 @@ categories:
         For a more details comparison of email providers, see
         [email-comparison.as93.net](https://email-comparison.as93.net/)
       services:
+      - name: Forward Email
+        url: https://forwardemail.net
+        icon: https://forwardemail.net/img/android-chrome-192x192.png
+        github: forwardemail/free-email-forwarding
+        openSource: true
+        subreddit: forwardemail
+        description: |
+          A 100% open-source, privacy-focused email service with quantum-safe encrypted
+          SQLite mailboxes (sandboxed and portable). Supports IMAP, POP3, SMTP, CalDAV
+          (calendars), and CardDAV (contacts). Features include
+          [OpenPGP/MIME and E2EE](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+          [Web Key Directory (WKD)](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+          and [quantum-resistant encryption](https://forwardemail.net/blog/docs/best-quantum-safe-encrypted-email-service)
+          using ChaCha20-Poly1305. Offers a free plan (forwarding only), Enhanced Protection
+          at $3/month (10 GB storage, unlimited domains/aliases), Team at $9/month, and
+          Enterprise at $250/month. Additional storage available. Can be
+          [self-hosted via Docker](https://forwardemail.net/en/faq#do-you-support-self-hosting).
+          All code is available on [GitHub](https://github.com/forwardemail).
       - name: ProtonMail
         url: https://protonmail.com
         icon: https://proton.me/favicons/android-chrome-192x192.png
@@ -780,13 +798,6 @@ categories:
           attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
           to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
           posed by quantum computers.
-      - name: Forward Email
-        url: https://forwardemail.net
-        icon: https://forwardemail.net/img/android-chrome-192x192.png
-        github: forwardemail/free-email-forwarding
-        openSource: true
-        description: |
-          An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
       - name: Mailfence
         url: https://mailfence.com?src=digitald
         icon: https://mailfence.com/c/mailfence/images/favicon/android-chrome-192x192.png
