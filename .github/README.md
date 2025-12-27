@@ -41,7 +41,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
-	- [Virtual Private Networks](#virtual-private-networks) (5)
+	- [Virtual Private Networks](#virtual-private-networks) (6)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
 	- [Mix Networks](#mix-networks) (3)
 	- [Proxies](#proxies) (2)
@@ -1909,6 +1909,10 @@ ad-blocking. Running on dedicated hardware, with no hard drives.
 ˙ 
 
 		</details>
+- **[<img src='https://partyvpn.com/icon.png' width='16' height='16' alt='icon' /> Party VPN](https://partyvpn.com)** - Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
+WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
+subscriptions or credit cards.
+[…](https://awesome-privacy.xyz/networking/virtual-private-networks/party-vpn "View full Party VPN report") 
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
