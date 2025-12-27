@@ -5563,13 +5563,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ubaidwazir">
-            <img src="https://avatars.githubusercontent.com/u/81792092?u=f8bc533847c7307ba4f6b6fd4a32c0c39cb387ff&v=4" width="80;" alt="ubaidwazir"/>
-            <br />
-            <sub><b>Muhammad Ubaid</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/OlliVHH">
             <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
             <br />
@@ -5582,15 +5575,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BigoudOps">
             <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
             <br />
             <sub><b>John BigoudOps</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/hudsonrock-partnerships">
             <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
