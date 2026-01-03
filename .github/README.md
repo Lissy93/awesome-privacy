@@ -41,7 +41,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (18)
 - **Networking**
-	- [Virtual Private Networks](#virtual-private-networks) (5)
+	- [Virtual Private Networks](#virtual-private-networks) (6)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
 	- [Mix Networks](#mix-networks) (3)
 	- [Proxies](#proxies) (2)
@@ -701,6 +701,25 @@ Tox.
 
 Email is not secure - your messages can be easily intercepted and read. Corporations scan the content of your mail, to build up a profile of you, either to show you targeted ads or to sell onto third-parties. Through the [Prism Program](https://en.wikipedia.org/wiki/PRISM_(surveillance_program)), the government also has full access to your emails (if not end-to-end encrypted) - this applies to Gmail, Outlook Mail, Yahoo Mail, GMX, ZoHo, iCloud, AOL and more.<br><br> For a more details comparison of email providers, see [email-comparison.as93.net](https://email-comparison.as93.net/)
 
+- **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - A 100% open-source, privacy-focused email service with quantum-safe encrypted
+SQLite mailboxes (sandboxed and portable). Supports IMAP, POP3, SMTP, CalDAV
+(calendars), and CardDAV (contacts). Features include
+[OpenPGP/MIME and E2EE](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+[Web Key Directory (WKD)](https://forwardemail.net/en/faq#do-you-support-openpgpmime-end-to-end-encryption-e2ee-and-web-key-directory-wkd),
+and [quantum-resistant encryption](https://forwardemail.net/blog/docs/best-quantum-safe-encrypted-email-service)
+using ChaCha20-Poly1305. Offers a free plan (forwarding only), Enhanced Protection
+at $3/month (10 GB storage, unlimited domains/aliases), Team at $9/month, and
+Enterprise at $250/month. Additional storage available. Can be
+[self-hosted via Docker](https://forwardemail.net/en/faq#do-you-support-self-hosting).
+All code is available on [GitHub](https://github.com/forwardemail).
+[…](https://awesome-privacy.xyz/communication/encrypted-email/forward-email "View full Forward Email report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![Forward Email on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Forward_Email)](https://awesome-privacy.xyz/communication/encrypted-email/forward-email) 
+📦 Open Source ˙ 
+
+		</details>
 - **[<img src='https://proton.me/favicons/android-chrome-192x192.png' width='16' height='16' alt='icon' /> ProtonMail](https://protonmail.com)** - An end-to-end encrypted anonymous email service. ProtonMail has a
 modern easy-to-use and customizable UI, as well as fast, secure native mobile
 apps. ProtonMail has all the features that you'd expect from a modern email
@@ -734,15 +753,6 @@ posed by quantum computers.
 		<summary>Stats</summary>
 
 		[![GitHub: tutao/tutanota](https://img.shields.io/github/stars/tutao/tutanota?style=flat&logo=github&label=tutanota&color=%235f53f4&cacheSeconds=3600)](https://github.com/tutao/tutanota) [![Privacy Policy](https://shields.tosdr.org/en_157.svg)](https://tosdr.org/en/service/157) [![Tuta on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Tuta)](https://awesome-privacy.xyz/communication/encrypted-email/tuta) 
-📦 Open Source ˙ 
-
-		</details>
-- **[<img src='https://forwardemail.net/img/android-chrome-192x192.png' width='16' height='16' alt='icon' /> Forward Email](https://forwardemail.net)** - An open source, privacy-focused, encrypted email service supporting SMTP, IMAP, and API access
-[…](https://awesome-privacy.xyz/communication/encrypted-email/forward-email "View full Forward Email report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: forwardemail/free-email-forwarding](https://img.shields.io/github/stars/forwardemail/free-email-forwarding?style=flat&logo=github&label=free-email-forwarding&color=%235f53f4&cacheSeconds=3600)](https://github.com/forwardemail/free-email-forwarding)  [![Forward Email on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Forward_Email)](https://awesome-privacy.xyz/communication/encrypted-email/forward-email) 
 📦 Open Source ˙ 
 
 		</details>
@@ -1899,6 +1909,10 @@ ad-blocking. Running on dedicated hardware, with no hard drives.
 ˙ 
 
 		</details>
+- **[<img src='https://partyvpn.com/icon.png' width='16' height='16' alt='icon' /> Party VPN](https://partyvpn.com)** - Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
+WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
+subscriptions or credit cards.
+[…](https://awesome-privacy.xyz/networking/virtual-private-networks/party-vpn "View full Party VPN report") 
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
@@ -5556,17 +5570,17 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Zero-Tail">
+            <img src="https://avatars.githubusercontent.com/u/16860155?v=4" width="80;" alt="Zero-Tail"/>
+            <br />
+            <sub><b>ZeroTail</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/OlliVHH">
-            <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
-            <br />
-            <sub><b>HamburgerJung</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5603,6 +5617,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/JDB321Sailor">
+            <img src="https://avatars.githubusercontent.com/u/212125521?v=4" width="80;" alt="JDB321Sailor"/>
+            <br />
+            <sub><b>JDB321Sailor</b></sub>
         </a>
     </td></tr>
 </table>
@@ -5693,18 +5714,18 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ksharizard">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="ksharizard"/>
-            <br />
-            <sub><b>Kshamendra</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/titanism">
             <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
             <br />
             <sub><b>Titanism</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/ksharizard">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="ksharizard"/>
+            <br />
+            <sub><b>Kshamendra</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5758,6 +5779,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/edent">
+            <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
+            <br />
+            <sub><b>Terence Eden</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
@@ -5777,15 +5805,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
             <br />
             <sub><b>Wesley-Ryan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/thezacharytaylor">
             <img src="https://avatars.githubusercontent.com/u/21206039?v=4" width="80;" alt="thezacharytaylor"/>
@@ -5819,13 +5847,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/jxhn">
-            <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
-            <br />
-            <sub><b>Jxhn</b></sub>
         </a>
     </td></tr>
 </table>
