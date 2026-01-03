@@ -5570,17 +5570,17 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/Zero-Tail">
+            <img src="https://avatars.githubusercontent.com/u/16860155?v=4" width="80;" alt="Zero-Tail"/>
+            <br />
+            <sub><b>ZeroTail</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
             <sub><b>Undefined</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/OlliVHH">
-            <img src="https://avatars.githubusercontent.com/u/84959562?v=4" width="80;" alt="OlliVHH"/>
-            <br />
-            <sub><b>HamburgerJung</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5617,6 +5617,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/JDB321Sailor">
+            <img src="https://avatars.githubusercontent.com/u/212125521?v=4" width="80;" alt="JDB321Sailor"/>
+            <br />
+            <sub><b>JDB321Sailor</b></sub>
         </a>
     </td></tr>
 </table>
@@ -5707,18 +5714,18 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/ksharizard">
-            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="ksharizard"/>
-            <br />
-            <sub><b>Kshamendra</b></sub>
-        </a>
-    </td></tr>
-<tr>
-    <td align="center">
         <a href="https://github.com/titanism">
             <img src="https://avatars.githubusercontent.com/u/101466223?v=4" width="80;" alt="titanism"/>
             <br />
             <sub><b>Titanism</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/ksharizard">
+            <img src="https://avatars.githubusercontent.com/u/78494833?v=4" width="80;" alt="ksharizard"/>
+            <br />
+            <sub><b>Kshamendra</b></sub>
         </a>
     </td>
     <td align="center">
@@ -5772,6 +5779,13 @@ This project exists thanks to all the people who've helped build and maintain it
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/edent">
+            <img src="https://avatars.githubusercontent.com/u/837136?v=4" width="80;" alt="edent"/>
+            <br />
+            <sub><b>Terence Eden</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/tschlotfeldt">
             <img src="https://avatars.githubusercontent.com/u/149240?v=4" width="80;" alt="tschlotfeldt"/>
             <br />
@@ -5791,15 +5805,15 @@ This project exists thanks to all the people who've helped build and maintain it
             <br />
             <sub><b>Ward</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/Wesley-Ryan">
             <img src="https://avatars.githubusercontent.com/u/69822796?v=4" width="80;" alt="Wesley-Ryan"/>
             <br />
             <sub><b>Wesley-Ryan</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/thezacharytaylor">
             <img src="https://avatars.githubusercontent.com/u/21206039?v=4" width="80;" alt="thezacharytaylor"/>
@@ -5833,13 +5847,6 @@ This project exists thanks to all the people who've helped build and maintain it
             <img src="https://avatars.githubusercontent.com/u/40342475?v=4" width="80;" alt="colenh"/>
             <br />
             <sub><b>Cole</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/jxhn">
-            <img src="https://avatars.githubusercontent.com/u/1396009?v=4" width="80;" alt="jxhn"/>
-            <br />
-            <sub><b>Jxhn</b></sub>
         </a>
     </td></tr>
 </table>
