@@ -3764,6 +3764,22 @@ categories:
         use to securely remove files or directories, just run `srm -zsv /path/to/file`
         for a single pass over.
 
+    ##########################
+    ###### Analytics ######
+    ##########################
+    - name: Analytics
+      intro: |
+        In a web ecosystem where user privacy is increasingly compromised, traditional analytics tools often rely on
+        invasive tracking, cookies, and user profiling. This section highlights privacy-respecting analytics tools that 
+        help website owners understand usage without collecting personally identifiable data or enabling cross-site tracking. 
+      services:
+      - name: Vistrall
+        url: https://vistrall.com/
+        openSource: false
+        icon: https://vistrall.com/vistrall-favicon.png
+        description: |
+          Vistrall is a privacy-first analytics platform helping agencies measure performance, environmental impact, 
+          and customer behaviour ethically, without compromising user trust.
 
 
   - name: Operating Systems
