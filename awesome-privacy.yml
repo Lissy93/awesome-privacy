@@ -104,6 +104,19 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: AliasVault
+        url: https://www.aliasvault.net
+        icon: https://www.aliasvault.net/favicon.png
+        openSource: true
+        followWith: Self-Hosted
+        github: lanedirt/aliasvault
+        discordInvite: DsaXMTEtpF
+        description: |
+          End-to-end encrypted open source password and alias manager with built-in email server.
+          AliasVault protects protects your privacy by creating alternative identities, passwords
+          and email addresses for every website you use. Use the cloud version, or self-host and
+          deploy within minutes via Docker.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
