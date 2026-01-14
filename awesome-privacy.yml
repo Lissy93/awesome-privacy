@@ -257,6 +257,20 @@ categories:
           devices (and access them via a web interface) in a secure, end-to-end encrypted 
           fashion. It can also be used offline on a single device with no account necessary.
 
+      - name: Proton Authenticator
+        url: https://proton.me/authenticator
+        icon: https://raw.githubusercontent.com/protonpass/android-pass/refs/heads/main/metadata/en-US/images/icon.png
+        openSource: true
+        github: protonpass/android-authenticator
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-authenticator/id6741758667
+        androidApp: https://play.google.com/store/apps/details?id=proton.android.authenticator
+        description: |
+          Proton Authenticator is yet another addition to the Proton application suite. It is 
+          free, open source, and available for both iOS and Android. You do not need a Proton 
+          account to use Proton Authenticator. Existing 2FA codes can be imported from other 
+          popular apps such as Google Authenticator and LastPass.
+
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
       notableMentions: >
