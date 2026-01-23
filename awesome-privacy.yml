@@ -4996,7 +4996,12 @@ categories:
       services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: []
+      services:
+            - name: BulkPicTools
+              description: A high-performance, 100% client-side image batch processor. Supports resizing, converting, and compressing with zero server uploads and no cookies.
+              url: https://bulkpictools.com
+              icon: https://bulkpictools.com/apple-touch-icon.png
+              openSource: false
 
   - name: Creativity
     sections:
