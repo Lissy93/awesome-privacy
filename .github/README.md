@@ -5632,13 +5632,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>0x41647269656E</b></sub>
         </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/JDB321Sailor">
-            <img src="https://avatars.githubusercontent.com/u/212125521?v=4" width="80;" alt="JDB321Sailor"/>
-            <br />
-            <sub><b>JDB321Sailor</b></sub>
-        </a>
     </td></tr>
 </table>
 <!-- readme: sponsors -end -->
