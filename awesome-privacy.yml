@@ -393,7 +393,7 @@ categories:
           Brave also has Tor built-in, when you open up a private tab/ window.
 
       - name: Firefox
-        url: https://www.mozilla.org/firefox
+        url: https://www.firefox.com/
         icon: https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg
         openSource: true
         tosdrId: 188
