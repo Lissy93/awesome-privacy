@@ -5577,13 +5577,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/4aka">
-            <img src="https://avatars.githubusercontent.com/u/30434449?u=f2c0f3a157f1f59cffad960dc06107f47086fbb4&v=4" width="80;" alt="4aka"/>
-            <br />
-            <sub><b>Arch Incorp</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -5596,15 +5589,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BigoudOps">
             <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
             <br />
             <sub><b>John BigoudOps</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/hudsonrock-partnerships">
             <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
@@ -5620,17 +5613,17 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/hesreallyhim">
+            <img src="https://avatars.githubusercontent.com/u/172150522?v=4" width="80;" alt="hesreallyhim"/>
+            <br />
+            <sub><b>Really Him</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/gl0bal01">
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/0x41647269656E">
-            <img src="https://avatars.githubusercontent.com/u/191976713?u=e2c3d380c9e9140fa022a27c598915538b0083e5&v=4" width="80;" alt="0x41647269656E"/>
-            <br />
-            <sub><b>0x41647269656E</b></sub>
         </a>
     </td></tr>
 </table>
