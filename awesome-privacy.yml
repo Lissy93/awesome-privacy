@@ -1249,6 +1249,7 @@ categories:
         is able to be loaded and executed while your browsing.<br>
         Before installing anything, you should read the Word of Warning section below.
       services:
+- name: Cookie Guardian        url: https://chromewebstore.google.com/detail/cookie-guardian-auto-dele/gnoaanpbfnjakaddkecnnamnfkebhgle        github: curlyethan/cookie-guardian        icon: https://raw.githubusercontent.com/curlyethan/cookie-guardian/main/icons/icon-128.png        openSource: true        description: |          Auto-delete cookies when you close tabs. Privacy-first, open-source alternative to Cookie AutoDelete,          built for Manifest V3. Features whitelist, greylist with 7-day expiry, and multi-tab detection.          Zero data collection. **Download**:          [Chrome](https://chromewebstore.google.com/detail/cookie-guardian-auto-dele/gnoaanpbfnjakaddkecnnamnfkebhgle)
       - name: Privacy Badger
         url: https://privacybadger.org/
         icon: https://i.ibb.co/8Y1ds5X/privacy-badger.png
