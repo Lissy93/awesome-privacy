@@ -2869,6 +2869,17 @@ categories:
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
           reputable providers.
 
+      - name: Yundera
+        url: https://yundera.com
+        openSource: true
+        github: Yundera
+        description: |
+          An open source Private Cloud Server stack making self hosting reliable and accessible. Yundera simplifies
+          self-hosting by handling app maintenance automatically, including updates and preventing system regressions.
+          Features include MeshRouter for domain management, CasaOS interface for server management, and an AppStore
+          with pre-configured applications. Designed to make self-hosting accessible for both experts and newcomers.
+          [GitHub](https://github.com/yundera)
+
       notableMentions: |
         See also: [1984](https://www.1984.is) based in Iceland.
         [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
