@@ -104,6 +104,15 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: Vault Password Generator
+        url: https://jarrydgordon.github.io/vault-demo/
+        github: JarrydGordon/vault-demo
+        openSource: true
+        description: >
+          Client-side password and passphrase generator. Single HTML file with no
+          server component — runs entirely in the browser using the Web Crypto API.
+          No data collection, no accounts, works offline.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
