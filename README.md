@@ -5614,7 +5614,7 @@ Huge thanks to the following sponsors, for their ongoing support 💖
     </td>
     <td align="center">
         <a href="https://github.com/hesreallyhim">
-            <img src="https://avatars.githubusercontent.com/u/172150522?v=4" width="80;" alt="hesreallyhim"/>
+            <img src="https://avatars.githubusercontent.com/u/172150522?u=e288991976c46b53437a5880e90be140634a8477&v=4" width="80;" alt="hesreallyhim"/>
             <br />
             <sub><b>Really Him</b></sub>
         </a>
