@@ -4994,10 +4994,33 @@ categories:
     - name: Torrent Downloaders
       alternativeTo: ['utorrent', 'bittorrent', 'qBittorrent', 'deluge', 'transmission']
       services: []
-    - name: File Converters
-      alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: []
-
+   - name: File Converters
+  alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
+  services:
+    - name: ConvertX
+      link: https://github.com/C4illin/ConvertX
+      description: A powerful, self-hosted web application for converting over a thousand formats including documents, images, videos, and ebooks. It integrates industry-standard open-source engines like FFmpeg and Pandoc, ensuring high-quality conversions while keeping your files entirely on your own server.
+      stats: 📦 Open Source ˙ (Self-Hosted)
+    
+    - name: Pandoc
+      link: https://pandoc.org/
+      description: The universal document converter. If you need to convert from one markup format to another, such as Markdown to PDF, DOCX, or HTML, Pandoc is the go-to command-line tool. It performs all conversions locally and is highly trusted in academic and technical writing.
+      stats: 📦 Open Source ˙ (CLI)
+    
+    - name: xsukax Audio Converter
+      link: https://github.com/xsukax/xsukax-Audio-Converter
+      description: A privacy-first, browser-based tool for converting audio files and extracting audio from videos. It uses FFmpeg.wasm to process files 100% client-side, meaning your media never leaves your device. It works offline after the initial load and collects no data.
+      stats: 📦 Open Source ˙ (Web-App)
+    
+    - name: FFmpeg
+      link: https://ffmpeg.org/
+      description: A complete, cross-platform solution to record, convert, and stream audio and video. It's the industry standard multimedia framework, handling a vast range of formats. As a command-line tool, it guarantees that all processing is done locally on your machine.
+      stats: 📦 Open Source ˙ (CLI)
+    
+    - name: HandBrake
+      link: https://handbrake.fr/
+      description: A popular and user-friendly tool for converting video from nearly any format to a selection of modern, widely supported codecs. It performs all conversions locally on your device, and its privacy can be ensured by disabling telemetry in the preferences.
+      stats: 📦 Open Source ˙ (GUI)
   - name: Creativity
     sections:
     - name: Image Editors
