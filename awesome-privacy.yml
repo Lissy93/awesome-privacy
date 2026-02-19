@@ -2869,6 +2869,13 @@ categories:
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
           reputable providers.
 
+      - name: DarkVps
+        url: https://darkvps.pro
+        acceptsCrypto: true
+        description: |
+           Anonymous Offshore VPS Hosting Provider located in Bulgaria with own Hardware, accepting anonymous payment method
+           cryptocurrency.
+
       notableMentions: |
         See also: [1984](https://www.1984.is) based in Iceland.
         [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
