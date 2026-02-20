@@ -418,6 +418,16 @@ categories:
           may not work correctly. As with everything there are
           [trade-offs](https://github.com/Lissy93/personal-security-checklist/issues/19)
 
+      - name: Marshall Browser
+        url: https://github.com/AnticsLabs/marshall
+        icon: https://raw.githubusercontent.com/AnticsLabs/marshall/main/icons/marshall-icon.png
+        github: AnticsLabs/marshall
+        openSource: true
+        description: |
+          Privacy-first browser with built-in VPN-grade encryption, anti-fingerprint technology,
+          and zero tracking by default. Features Cloudflare DNS-over-HTTPS out of the box,
+          secure password manager integration, and Tor support.
+
       - name: Cromite
         url: https://www.cromite.org/
         icon: https://camo.githubusercontent.com/fc003f5ff33669908e7b929692fdbb8d10ec7df5ffa5e02e4d9becf405dd7804/68747470733a2f2f7777772e63726f6d6974652e6f72672f6170705f69636f6e2e706e67
