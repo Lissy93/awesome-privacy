@@ -181,7 +181,7 @@ categories:
           Free, secure and open source authenticator app for Android. Has a backup/
           restore feature and a customisable UI with dark mode
 
-      - name: Stratum
+      - name: Stratuma
         url: https://stratumauth.com/
         icon: https://stratumauth.com/img/icon.svg
         followWith: Android
@@ -2869,6 +2869,12 @@ categories:
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
           reputable providers.
 
+      - name: DarkVPS
+        url: https://darkvps.pro
+        icon: https://darkvps.pro/favicon.ico
+        acceptsCrypto: true
+        description: |
+          Anonymous offshore VPS hosting with no KYC requirements, strict no-log policy, and cryptocurrency payments accepted.
       notableMentions: |
         See also: [1984](https://www.1984.is) based in Iceland.
         [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
