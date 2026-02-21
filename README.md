@@ -5625,6 +5625,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Fab 💖 ↀ◡ↀ</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/clj00321">
+            <img src="https://avatars.githubusercontent.com/u/243985327?v=4" width="80;" alt="clj00321"/>
+            <br />
+            <sub><b>Christian Løvgren Jensen</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: sponsors -end -->
