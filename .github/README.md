@@ -1792,6 +1792,8 @@ against fingerprinting.
 ˙ 
 
 		</details>
+- **[<img src='https://exifeditor.io/favexif.svg' width='16' height='16' alt='icon' /> EXIF Editor](https://exifeditor.io)** - Browser-based EXIF viewer & editor. Edit, view, and remove image metadata instantly, with full client-side privacy and no uploads.
+[…](https://awesome-privacy.xyz/security-tools/online-tools/exif-editor "View full IP Leak Test report") 
 - **[<img src='https://www.exifremove.com/favicon.ico' width='16' height='16' alt='icon' /> EXIF Remove](https://www.exifremove.com)** - Displays, and removes Meta and EXIF data from an uploaded photo or document.
 […](https://awesome-privacy.xyz/security-tools/online-tools/exif-remove "View full EXIF Remove report") 
 - **[<img src='https://redirectdetective.com/redirect-detective.png' width='16' height='16' alt='icon' /> Redirect Detective](https://redirectdetective.com)** - Check where a suspicious URL redirects to (without having to click it). Lets you avoid being tracked by not being
