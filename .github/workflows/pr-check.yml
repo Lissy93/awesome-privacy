@@ -10,65 +10,131 @@ permissions:
   pull-requests: read
 
 jobs:
-  check-pr:
-    name: Check PR
+  detect-changes:
+    name: Detect changes
     runs-on: ubuntu-latest
-
+    outputs:
+      yaml_changed: ${{ steps.changes.outputs.yaml_changed }}
+      non_yaml_changed: ${{ steps.changes.outputs.non_yaml_changed }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Fetch base ref
-        run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
-
+      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - run: pip install -q -r lib/requirements.txt
-
       - name: Detect changed files
         id: changes
         run: python lib/checks/detect-changes.py --base-ref ${{ github.event.pull_request.base.sha }}
-
-      - name: Check for direct README edits
-        id: readme
-        run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
-
-      - name: Schema validation
-        id: schema
-        if: steps.changes.outputs.yaml_changed == 'true'
-        run: make validate
-
-      - name: YAML diff analysis
-        id: diff
-        if: steps.changes.outputs.yaml_changed == 'true'
-        run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
-
-      - name: Link validation
-        if: steps.changes.outputs.yaml_changed == 'true' && steps.diff.outputs.has_service_changes == 'true'
-        run: python lib/checks/check-links.py --diff-json /tmp/pr-diff.json
-
-      - name: PR template check
-        id: template
-        env:
-          PR_BODY: ${{ github.event.pull_request.body }}
-        run: python lib/checks/check-template.py
-
       - name: Non-YAML changes warning
         if: steps.changes.outputs.non_yaml_changed == 'true'
         run: python lib/checks/warn-non-yaml.py --base-ref ${{ github.event.pull_request.base.sha }}
 
-      - name: Save PR metadata
+  readme:
+    name: README edits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: Check for direct README edits
+        run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
+
+  schema:
+    name: Schema validation
+    needs: detect-changes
+    if: needs.detect-changes.outputs.yaml_changed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: Validate schema
+        run: make validate
+
+  diff:
+    name: Single-entry rule
+    needs: detect-changes
+    if: needs.detect-changes.outputs.yaml_changed == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      has_service_changes: ${{ steps.diff.outputs.has_service_changes }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: YAML diff analysis
+        id: diff
+        run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
+      - name: Upload diff data
         if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-diff
+          path: /tmp/pr-diff.json
+          if-no-files-found: ignore
+
+  links:
+    name: Link validation
+    needs: diff
+    if: needs.diff.result == 'success' && needs.diff.outputs.has_service_changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: Download diff data
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-diff
+          path: /tmp
+      - name: Validate links
+        run: python lib/checks/check-links.py --diff-json /tmp/pr-diff.json
+
+  template:
+    name: PR template
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: PR template check
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: python lib/checks/check-template.py
+
+  comment:
+    name: Summary
+    if: always()
+    needs: [readme, schema, diff, links, template]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save PR metadata
         run: |
           mkdir -p /tmp/pr-meta
           echo "${{ github.event.pull_request.number }}" > /tmp/pr-meta/number.txt
           echo "${{ github.run_id }}" > /tmp/pr-meta/run-id.txt
 
       - name: Build failure comment
-        if: failure()
+        if: contains(needs.*.result, 'failure')
         run: |
           cat > /tmp/pr-meta/comment.md << 'HEADER'
           <!-- pr-check-bot -->
@@ -76,7 +142,7 @@ jobs:
           > ## PR check failed
           HEADER
 
-          if [ "${{ steps.readme.outcome }}" = "failure" ]; then
+          if [ "${{ needs.readme.result }}" = "failure" ]; then
           cat >> /tmp/pr-meta/comment.md << 'EOF'
 
           ### Direct README edits
@@ -85,7 +151,7 @@ jobs:
           EOF
           fi
 
-          if [ "${{ steps.schema.outcome }}" = "failure" ]; then
+          if [ "${{ needs.schema.result }}" = "failure" ]; then
           cat >> /tmp/pr-meta/comment.md << 'EOF'
 
           ### Schema validation failed
@@ -94,7 +160,7 @@ jobs:
           EOF
           fi
 
-          if [ "${{ steps.diff.outcome }}" = "failure" ]; then
+          if [ "${{ needs.diff.result }}" = "failure" ]; then
           cat >> /tmp/pr-meta/comment.md << 'EOF'
 
           ### Single-entry rule
@@ -103,7 +169,16 @@ jobs:
           EOF
           fi
 
-          if [ "${{ steps.template.outcome }}" = "failure" ]; then
+          if [ "${{ needs.links.result }}" = "failure" ]; then
+          cat >> /tmp/pr-meta/comment.md << 'EOF'
+
+          ### Link validation failed
+          One or more URLs in your entry could not be verified.
+          Please ensure all links are correct and accessible.
+          EOF
+          fi
+
+          if [ "${{ needs.template.result }}" = "failure" ]; then
           cat >> /tmp/pr-meta/comment.md << 'EOF'
 
           ### PR template incomplete
@@ -112,7 +187,6 @@ jobs:
           EOF
           fi
 
-          # Footer with link to logs
           printf '\n---\n*See the [workflow logs](%s/%s/actions/runs/%s) for full details.*\n' \
             "${{ github.server_url }}" "${{ github.repository }}" "${{ github.run_id }}" \
             >> /tmp/pr-meta/comment.md
