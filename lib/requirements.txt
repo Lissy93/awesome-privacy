@@ -1,5 +1,2 @@
 PyYAML==6.0.1
-requests==2.31.0
-jsonschema
-pyyaml
-termcolor
+jsonschema==4.23.0

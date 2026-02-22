@@ -22,23 +22,23 @@
                       "name": { "type": "string" },
                       "description": { "type": "string" },
                       "url": { "type": "string" },
-                      "github": { "type": "string", "nullable": true },
-                      "icon": { "type": "string", "nullable": true },
-                      "followWith": { "type": "string", "nullable": true },
-                      "securityAudited": { "type": "boolean", "nullable": true },
-                      "openSource": { "type": "boolean", "nullable": true },
-                      "acceptsCrypto": { "type": "boolean", "nullable": true },
-                      "tosdrId": { "type": "number", "nullable": true },
-                      "iosApp": { "type": "string", "nullable": true },
-                      "androidApp": { "type": "string", "nullable": true },
-                      "discordInvite": { "type": "string", "nullable": true },
-                      "subreddit": { "type": "string", "nullable": true }
+                      "github": { "type": ["string", "null"] },
+                      "icon": { "type": ["string", "null"] },
+                      "followWith": { "type": ["string", "null"] },
+                      "securityAudited": { "type": ["boolean", "null"] },
+                      "openSource": { "type": ["boolean", "null"] },
+                      "acceptsCrypto": { "type": ["boolean", "null"] },
+                      "tosdrId": { "type": ["number", "null"] },
+                      "iosApp": { "type": ["string", "null"] },
+                      "androidApp": { "type": ["string", "null"] },
+                      "discordInvite": { "type": ["string", "null"] },
+                      "subreddit": { "type": ["string", "null"] }
                     },
                     "required": ["name", "description", "url"],
                     "additionalProperties": false
                   }
                 },
-                "intro": { "type": "string", "nullable": true },
+                "intro": { "type": ["string", "null"] },
                 "notableMentions": {
                   "oneOf": [
                     {
@@ -54,16 +54,20 @@
                         "additionalProperties": false
                       }
                     },
-                    { "type": "string" }
-                  ],
-                  "nullable": true
+                    { "type": "string" },
+                    { "type": "null" }
+                  ]
                 },
-                "furtherInfo": { "type": "string", "nullable": true },
-                "wordOfWarning": { "type": "string", "nullable": true },
+                "furtherInfo": { "type": ["string", "null"] },
+                "wordOfWarning": { "type": ["string", "null"] },
                 "alternativeTo": {
-                  "type": "array",
-                  "items": { "type": "string" },
-                  "nullable": true
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    { "type": "null" }
+                  ]
                 }
               },
               "required": ["name", "services"],

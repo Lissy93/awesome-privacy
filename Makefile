@@ -34,7 +34,7 @@ WEB_DIR := web
 
 # Targets for lib/
 install_lib_deps:
-	$(PYTHON) -m pip install -r $(LIB_DIR)/requirements.txt
+	$(PYTHON) -m pip install -q -r $(LIB_DIR)/requirements.txt
 
 gen_readme: install_lib_deps
 	$(PYTHON) $(LIB_DIR)/awesome-privacy-readme-gen.py
