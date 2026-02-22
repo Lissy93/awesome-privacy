@@ -1,0 +1,125 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check-pr:
+    name: Check PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch base ref
+        run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -q -r lib/requirements.txt
+
+      - name: Detect changed files
+        id: changes
+        run: python lib/checks/detect-changes.py --base-ref ${{ github.event.pull_request.base.sha }}
+
+      - name: Check for direct README edits
+        id: readme
+        run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
+
+      - name: Schema validation
+        id: schema
+        if: steps.changes.outputs.yaml_changed == 'true'
+        run: make validate
+
+      - name: YAML diff analysis
+        id: diff
+        if: steps.changes.outputs.yaml_changed == 'true'
+        run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
+
+      - name: Link validation
+        if: steps.changes.outputs.yaml_changed == 'true' && steps.diff.outputs.has_service_changes == 'true'
+        run: python lib/checks/check-links.py --diff-json /tmp/pr-diff.json
+
+      - name: PR template check
+        id: template
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: python lib/checks/check-template.py
+
+      - name: Non-YAML changes warning
+        if: steps.changes.outputs.non_yaml_changed == 'true'
+        run: python lib/checks/warn-non-yaml.py --base-ref ${{ github.event.pull_request.base.sha }}
+
+      - name: Save PR metadata
+        if: always()
+        run: |
+          mkdir -p /tmp/pr-meta
+          echo "${{ github.event.pull_request.number }}" > /tmp/pr-meta/number.txt
+          echo "${{ github.run_id }}" > /tmp/pr-meta/run-id.txt
+
+      - name: Build failure comment
+        if: failure()
+        run: |
+          cat > /tmp/pr-meta/comment.md << 'HEADER'
+          <!-- pr-check-bot -->
+          > [!CAUTION]
+          > ## PR check failed
+          HEADER
+
+          if [ "${{ steps.readme.outcome }}" = "failure" ]; then
+          cat >> /tmp/pr-meta/comment.md << 'EOF'
+
+          ### Direct README edits
+          The auto-generated section of the README must not be edited directly.
+          Please make your changes in `awesome-privacy.yml` instead — the README is regenerated from it.
+          EOF
+          fi
+
+          if [ "${{ steps.schema.outcome }}" = "failure" ]; then
+          cat >> /tmp/pr-meta/comment.md << 'EOF'
+
+          ### Schema validation failed
+          `awesome-privacy.yml` does not conform to the expected schema.
+          Please check your YAML against the structure defined in `lib/schema.json`.
+          EOF
+          fi
+
+          if [ "${{ steps.diff.outcome }}" = "failure" ]; then
+          cat >> /tmp/pr-meta/comment.md << 'EOF'
+
+          ### Single-entry rule
+          Each PR should add, modify, or remove only **one** service at a time.
+          If you need to change multiple services, please split them into separate PRs.
+          EOF
+          fi
+
+          if [ "${{ steps.template.outcome }}" = "failure" ]; then
+          cat >> /tmp/pr-meta/comment.md << 'EOF'
+
+          ### PR template incomplete
+          Your PR description is missing required sections.
+          Please fill out the **Type**, **Changes**, and **Checklist** sections of the PR template.
+          EOF
+          fi
+
+          # Footer with link to logs
+          printf '\n---\n*See the [workflow logs](%s/%s/actions/runs/%s) for full details.*\n' \
+            "${{ github.server_url }}" "${{ github.repository }}" "${{ github.run_id }}" \
+            >> /tmp/pr-meta/comment.md
+
+      - name: Upload PR metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-meta
+          path: /tmp/pr-meta/

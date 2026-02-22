@@ -7,38 +7,64 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
+          "name": { "type": "string", "minLength": 1, "maxLength": 50 },
           "sections": {
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "name": { "type": "string" },
+                "name": { "type": "string", "minLength": 1, "maxLength": 100 },
                 "services": {
                   "type": "array",
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name": { "type": "string" },
-                      "description": { "type": "string" },
-                      "url": { "type": "string" },
-                      "github": { "type": ["string", "null"] },
-                      "icon": { "type": ["string", "null"] },
-                      "followWith": { "type": ["string", "null"] },
+                      "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+                      "description": { "type": "string", "minLength": 10, "maxLength": 1500 },
+                      "url": {
+                        "type": "string",
+                        "anyOf": [
+                          { "pattern": "^https?://" },
+                          { "maxLength": 0 }
+                        ]
+                      },
+                      "github": {
+                        "type": ["string", "null"],
+                        "pattern": "^([a-zA-Z0-9._-]+/[a-zA-Z0-9._-]+|https://github\\.com/.+)$"
+                      },
+                      "icon": {
+                        "type": ["string", "null"],
+                        "pattern": "^https?://.+"
+                      },
+                      "followWith": { "type": ["string", "null"], "minLength": 1, "maxLength": 100 },
                       "securityAudited": { "type": ["boolean", "null"] },
                       "openSource": { "type": ["boolean", "null"] },
                       "acceptsCrypto": { "type": ["boolean", "null"] },
-                      "tosdrId": { "type": ["number", "null"] },
-                      "iosApp": { "type": ["string", "null"] },
-                      "androidApp": { "type": ["string", "null"] },
-                      "discordInvite": { "type": ["string", "null"] },
-                      "subreddit": { "type": ["string", "null"] }
+                      "tosdrId": { "type": ["integer", "null"], "minimum": 1 },
+                      "iosApp": {
+                        "type": ["string", "null"],
+                        "pattern": "^https://apps\\.apple\\.com/"
+                      },
+                      "androidApp": {
+                        "type": ["string", "null"],
+                        "pattern": "^[a-zA-Z][a-zA-Z0-9_]*(\\.[a-zA-Z][a-zA-Z0-9_]*)+$"
+                      },
+                      "discordInvite": {
+                        "type": ["string", "null"],
+                        "pattern": "^(https://discord\\.gg/[a-zA-Z0-9]+|[a-zA-Z0-9]+|)$"
+                      },
+                      "subreddit": {
+                        "type": ["string", "null"],
+                        "pattern": "^[a-zA-Z0-9_]+$",
+                        "minLength": 1,
+                        "maxLength": 50
+                      }
                     },
                     "required": ["name", "description", "url"],
                     "additionalProperties": false
                   }
                 },
-                "intro": { "type": ["string", "null"] },
+                "intro": { "type": ["string", "null"], "minLength": 1 },
                 "notableMentions": {
                   "oneOf": [
                     {
@@ -46,25 +72,26 @@
                       "items": {
                         "type": "object",
                         "properties": {
-                          "name": { "type": "string" },
-                          "description": { "type": "string" },
-                          "url": { "type": "string" }
+                          "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+                          "description": { "type": "string", "minLength": 1 },
+                          "url": { "type": "string", "pattern": "^https?://" }
                         },
                         "required": ["name", "url"],
                         "additionalProperties": false
                       }
                     },
-                    { "type": "string" },
+                    { "type": "string", "minLength": 1 },
                     { "type": "null" }
                   ]
                 },
-                "furtherInfo": { "type": ["string", "null"] },
-                "wordOfWarning": { "type": ["string", "null"] },
+                "furtherInfo": { "type": ["string", "null"], "minLength": 1 },
+                "wordOfWarning": { "type": ["string", "null"], "minLength": 1 },
                 "alternativeTo": {
                   "oneOf": [
                     {
                       "type": "array",
-                      "items": { "type": "string" }
+                      "items": { "type": "string", "minLength": 1, "maxLength": 100 },
+                      "minItems": 1
                     },
                     { "type": "null" }
                   ]
