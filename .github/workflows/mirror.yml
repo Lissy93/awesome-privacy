@@ -1,0 +1,16 @@
+# Syncs repo to the Codeberg mirror
+name: 🪞 Mirror
+on:
+  schedule: [{ cron: '0 5 * * 0' }]
+  push: { tags: ['v*'] }
+  workflow_dispatch:
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lissy93/repo-mirror-action@main
+        with:
+          ssh_key: ${{ secrets.CODEBERG_SSH }}
+          host: git@codeberg.org
+          user: alicia
+          repo: awesome-privacy
