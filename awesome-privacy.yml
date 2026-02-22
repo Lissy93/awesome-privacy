@@ -2920,7 +2920,19 @@ categories:
         followWith: Web
         description: |
           Free DNS hosting provider designed with security in mind, and running
-          on purely open source software. deSEC is backed and funded by SSE. 
+          on purely open source software. deSEC is backed and funded by SSE.
+
+      - name: NSL.SH
+        url: https://nsl.sh
+        openSource: true
+        github: yundera/mesh-router-tunnel
+        followWith: Self-Hosted
+        description: |
+          A free and open-source domain and domain routing service for independent home server setups. Provides
+          personalized subdomains (name.nsl.sh) with automatic HTTPS/TLS encryption. Integrates with CasaOS for
+          simplified Docker container management and claims a 5-minute setup process. Completely free with no
+          paywall-locked features, maintained by Aptero.
+          [GitHub](https://github.com/yundera/mesh-router-tunnel)
 
 
     ###########################
