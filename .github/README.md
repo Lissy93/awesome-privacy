@@ -107,7 +107,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [E-Book Readers](#e-book-readers) (0)
 	- [Podcast Players](#podcast-players) (0)
 	- [Torrent Downloaders](#torrent-downloaders) (0)
-	- [File Converters](#file-converters) (0)
+	- [File Converters](#file-converters) (1)
 - **Creativity**
 	- [Image Editors](#image-editors) (8)
 	- [Video Editors](#video-editors) (7)
@@ -5107,7 +5107,19 @@ It is built upon the [Invidious](https://invidious.io/) API.
 
 ### File Converters
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://ffmpeg.org/favicon.ico' width='16' height='16' alt='icon' /> FFmpeg](https://ffmpeg.org/)** - A complete, cross-platform solution to record, convert, and stream audio and
+video. It's the industry standard multimedia framework, handling a vast range
+of formats. As a command-line tool, it guarantees that all processing is done
+locally on your machine.
+[…](https://awesome-privacy.xyz/media/file-converters/ffmpeg "View full FFmpeg report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: FFmpeg/FFmpeg](https://img.shields.io/github/stars/FFmpeg/FFmpeg?style=flat&logo=github&label=FFmpeg&color=%235f53f4&cacheSeconds=3600)](https://github.com/FFmpeg/FFmpeg)  [![FFmpeg on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FFmpeg)](https://awesome-privacy.xyz/media/file-converters/ffmpeg) 
+📦 Open Source ˙ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
