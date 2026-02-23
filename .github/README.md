@@ -408,7 +408,7 @@ Brave also has Tor built-in, when you open up a private tab/ window.
 ˙ 
 
 		</details>
-- **[<img src='https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg' width='16' height='16' alt='icon' /> Firefox](https://www.mozilla.org/firefox)** - Significantly more private, and offers some nifty privacy features than Chrome,
+- **[<img src='https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg' width='16' height='16' alt='icon' /> Firefox](https://www.firefox.com/)** - Significantly more private, and offers some nifty privacy features than Chrome,
 Internet Explorer and Safari. After installing, there are a couple of small tweaks
 you will need to make, in order to secure Firefox. For a though config, see
 [@arkenfox's user.js](https://github.com/arkenfox/user.js/). You can also follow
