@@ -1,7 +1,5 @@
-"""
-Analyzes the diff between base and head versions of awesome-privacy.yml.
-Enforces the single-entry rule: only one service addition/amendment/removal per PR.
-Outputs a JSON diff to /tmp/pr-diff.json and writes a step summary.
+"""Analyzes the diff between base and head versions of awesome-privacy.yml.
+Enforces the single-entry rule and outputs a JSON diff to /tmp/pr-diff.json.
 """
 
 import argparse
@@ -12,22 +10,18 @@ import sys
 
 import yaml
 
-# Paths (relative to project root)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
 DIFF_OUTPUT_PATH = "/tmp/pr-diff.json"
 
-# Exit codes
 EXIT_PASS = 0
 EXIT_RULE_VIOLATION = 1
 EXIT_RUNTIME_ERROR = 2
 
-# ANSI color helpers
 _use_color = sys.stderr.isatty() and not os.environ.get("NO_COLOR")
 red = (lambda s: f"\033[31m{s}\033[0m") if _use_color else (lambda s: s)
 green = (lambda s: f"\033[32m{s}\033[0m") if _use_color else (lambda s: s)
 yellow = (lambda s: f"\033[33m{s}\033[0m") if _use_color else (lambda s: s)
-dim = (lambda s: f"\033[2m{s}\033[0m") if _use_color else (lambda s: s)
 
 
 def load_base_yaml(base_ref):
@@ -35,13 +29,11 @@ def load_base_yaml(base_ref):
     try:
         result = subprocess.run(
             ["git", "show", f"{base_ref}:awesome-privacy.yml"],
-            capture_output=True, text=True, check=True,
-            cwd=PROJECT_ROOT,
+            capture_output=True, text=True, check=True, cwd=PROJECT_ROOT,
         )
         return yaml.safe_load(result.stdout)
     except subprocess.CalledProcessError:
-        # File doesn't exist in base (completely new file)
-        print(yellow("Warning: awesome-privacy.yml not found in base ref, treating as empty"), file=sys.stderr)
+        print(yellow("awesome-privacy.yml not found in base ref, treating as empty"), file=sys.stderr)
         return {"categories": []}
     except yaml.YAMLError as e:
         print(red(f"Failed to parse base YAML: {e}"), file=sys.stderr)
@@ -51,163 +43,43 @@ def load_base_yaml(base_ref):
 def load_head_yaml():
     """Load the YAML from the current working tree."""
     try:
-        with open(DATA_PATH, "r") as f:
+        with open(DATA_PATH) as f:
             return yaml.safe_load(f)
-    except FileNotFoundError:
-        print(red(f"File not found: {DATA_PATH}"), file=sys.stderr)
-        sys.exit(EXIT_RUNTIME_ERROR)
-    except yaml.YAMLError as e:
-        print(red(f"Failed to parse head YAML: {e}"), file=sys.stderr)
+    except (FileNotFoundError, yaml.YAMLError) as e:
+        print(red(f"Failed to load head YAML: {e}"), file=sys.stderr)
         sys.exit(EXIT_RUNTIME_ERROR)
 
 
-def build_service_index(data):
-    """Build a dict keyed by (category, section, service_name) -> service dict."""
+def build_index(data, depth):
+    """Build a keyed index at the given depth (3=services, 2=sections, 1=categories)."""
     index = {}
     for cat in data.get("categories", []):
-        cat_name = cat.get("name", "")
+        cn = cat.get("name", "")
+        if depth == 1:
+            index[cn] = {k: v for k, v in cat.items() if k != "sections"}
+            continue
         for sec in cat.get("sections", []):
-            sec_name = sec.get("name", "")
+            sn = sec.get("name", "")
+            if depth == 2:
+                index[(cn, sn)] = {k: v for k, v in sec.items() if k != "services"}
+                continue
             for svc in sec.get("services", []):
-                svc_name = svc.get("name", "")
-                key = (cat_name, sec_name, svc_name)
-                index[key] = svc
+                index[(cn, sn, svc.get("name", ""))] = svc
     return index
 
 
-def build_section_index(data):
-    """Build a dict keyed by (category, section) -> section metadata (excluding services)."""
-    index = {}
-    for cat in data.get("categories", []):
-        cat_name = cat.get("name", "")
-        for sec in cat.get("sections", []):
-            sec_name = sec.get("name", "")
-            key = (cat_name, sec_name)
-            meta = {k: v for k, v in sec.items() if k != "services"}
-            index[key] = meta
-    return index
-
-
-def build_category_index(data):
-    """Build a dict keyed by category_name -> category metadata (excluding sections)."""
-    index = {}
-    for cat in data.get("categories", []):
-        cat_name = cat.get("name", "")
-        meta = {k: v for k, v in cat.items() if k != "sections"}
-        index[cat_name] = meta
-    return index
-
-
-def diff_services(base_data, head_data):
-    """Find added, removed, and modified services."""
-    base_idx = build_service_index(base_data)
-    head_idx = build_service_index(head_data)
-
-    base_keys = set(base_idx.keys())
-    head_keys = set(head_idx.keys())
-
-    added = []
-    for key in sorted(head_keys - base_keys):
-        added.append({
-            "category": key[0],
-            "section": key[1],
-            "service": key[2],
-            "fields": head_idx[key],
-        })
-
-    removed = []
-    for key in sorted(base_keys - head_keys):
-        removed.append({
-            "category": key[0],
-            "section": key[1],
-            "service": key[2],
-        })
-
+def diff_index(base_idx, head_idx):
+    """Return (added_keys, removed_keys, modified_keys_with_changed_fields)."""
+    base_keys, head_keys = set(base_idx), set(head_idx)
+    added = sorted(head_keys - base_keys)
+    removed = sorted(base_keys - head_keys)
     modified = []
     for key in sorted(base_keys & head_keys):
-        base_svc = base_idx[key]
-        head_svc = head_idx[key]
-        if base_svc != head_svc:
-            changed_fields = []
-            all_fields = set(base_svc.keys()) | set(head_svc.keys())
-            for field in sorted(all_fields):
-                old_val = base_svc.get(field)
-                new_val = head_svc.get(field)
-                if old_val != new_val:
-                    changed_fields.append(field)
-            modified.append({
-                "category": key[0],
-                "section": key[1],
-                "service": key[2],
-                "changed_fields": changed_fields,
-            })
-
+        if base_idx[key] != head_idx[key]:
+            all_fields = set(base_idx[key]) | set(head_idx[key])
+            changed = sorted(f for f in all_fields if base_idx[key].get(f) != head_idx[key].get(f))
+            modified.append((key, changed))
     return added, removed, modified
-
-
-def diff_sections(base_data, head_data):
-    """Find section-level metadata changes (intro, wordOfWarning, etc.)."""
-    base_idx = build_section_index(base_data)
-    head_idx = build_section_index(head_data)
-
-    base_keys = set(base_idx.keys())
-    head_keys = set(head_idx.keys())
-
-    changes = []
-
-    # New sections
-    for key in sorted(head_keys - base_keys):
-        changes.append({
-            "category": key[0],
-            "section": key[1],
-            "change_type": "added_section",
-        })
-
-    # Removed sections
-    for key in sorted(base_keys - head_keys):
-        changes.append({
-            "category": key[0],
-            "section": key[1],
-            "change_type": "removed_section",
-        })
-
-    # Modified section metadata
-    for key in sorted(base_keys & head_keys):
-        base_meta = base_idx[key]
-        head_meta = head_idx[key]
-        if base_meta != head_meta:
-            changed_fields = []
-            all_fields = set(base_meta.keys()) | set(head_meta.keys())
-            for field in sorted(all_fields):
-                if base_meta.get(field) != head_meta.get(field):
-                    changed_fields.append(field)
-            changes.append({
-                "category": key[0],
-                "section": key[1],
-                "change_type": "modified_section_metadata",
-                "changed_fields": changed_fields,
-            })
-
-    return changes
-
-
-def diff_categories(base_data, head_data):
-    """Find structural category changes."""
-    base_idx = build_category_index(base_data)
-    head_idx = build_category_index(head_data)
-
-    base_keys = set(base_idx.keys())
-    head_keys = set(head_idx.keys())
-
-    changes = []
-
-    for name in sorted(head_keys - base_keys):
-        changes.append({"category": name, "change_type": "added_category"})
-
-    for name in sorted(base_keys - head_keys):
-        changes.append({"category": name, "change_type": "removed_category"})
-
-    return changes
 
 
 def write_github_output(name, value):
@@ -218,123 +90,113 @@ def write_github_output(name, value):
             f.write(f"{name}={value}\n")
 
 
+def fmt_path(key):
+    """Format a tuple key as a readable path."""
+    return " → ".join(key) if isinstance(key, tuple) else key
+
+
 def write_step_summary(diff_result):
-    """Write a Markdown summary to $GITHUB_STEP_SUMMARY."""
+    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
     summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
     if not summary_file:
         return
 
     lines = ["## YAML Diff Analysis\n"]
+    bullets = []
 
-    added = diff_result["services"]["added"]
-    removed = diff_result["services"]["removed"]
-    modified = diff_result["services"]["modified"]
-    section_changes = diff_result["sections"]
-    category_changes = diff_result["categories"]
+    for svc in diff_result["services"]["added"]:
+        bullets.append(f"- Added **{svc['service']}** in {svc['category']} → {svc['section']}")
+    for svc in diff_result["services"]["removed"]:
+        bullets.append(f"- Removed **{svc['service']}** from {svc['category']} → {svc['section']}")
+    for svc in diff_result["services"]["modified"]:
+        fields = ", ".join(f"`{f}`" for f in svc["changed_fields"])
+        bullets.append(f"- Modified {fields} in {svc['category']} → {svc['section']} → {svc['service']}")
+    for change in diff_result["sections"]:
+        ct = change["change_type"]
+        path = f"{change['category']} → {change['section']}"
+        if ct == "added_section":
+            bullets.append(f"- Added section **{change['section']}** in {change['category']}")
+        elif ct == "removed_section":
+            bullets.append(f"- Removed section **{change['section']}** from {change['category']}")
+        else:
+            fields = ", ".join(f"`{f}`" for f in change.get("changed_fields", []))
+            bullets.append(f"- Modified section metadata ({fields}) in {path}")
+    for change in diff_result["categories"]:
+        if change["change_type"] == "added_category":
+            bullets.append(f"- Added category **{change['category']}**")
+        else:
+            bullets.append(f"- Removed category **{change['category']}**")
 
-    if not added and not removed and not modified and not section_changes and not category_changes:
-        lines.append("No changes detected in `awesome-privacy.yml`.\n")
+    if bullets:
+        lines.extend(bullets)
     else:
-        lines.append("| Type | Category | Section | Service | Details |")
-        lines.append("|------|----------|---------|---------|---------|")
-
-        for svc in added:
-            lines.append(f"| Added | {svc['category']} | {svc['section']} | {svc['service']} | New service |")
-
-        for svc in removed:
-            lines.append(f"| Removed | {svc['category']} | {svc['section']} | {svc['service']} | Service removed |")
-
-        for svc in modified:
-            fields = ", ".join(svc["changed_fields"])
-            lines.append(f"| Modified | {svc['category']} | {svc['section']} | {svc['service']} | Changed: {fields} |")
-
-        for change in section_changes:
-            detail = change["change_type"].replace("_", " ").title()
-            fields = ", ".join(change.get("changed_fields", []))
-            if fields:
-                detail += f" ({fields})"
-            lines.append(f"| Section | {change['category']} | {change['section']} | - | {detail} |")
-
-        for change in category_changes:
-            detail = change["change_type"].replace("_", " ").title()
-            lines.append(f"| Category | {change['category']} | - | - | {detail} |")
-
-        lines.append("")
+        lines.append("No changes detected in `awesome-privacy.yml`.")
 
     with open(summary_file, "a") as f:
         f.write("\n".join(lines) + "\n")
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Analyze YAML diff for PR checks")
-    parser.add_argument("--base-ref", required=True, help="Base git ref (SHA or branch) to diff against")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--base-ref", required=True)
     args = parser.parse_args()
 
-    # Load both versions
-    base_data = load_base_yaml(args.base_ref)
-    head_data = load_head_yaml()
+    base = load_base_yaml(args.base_ref)
+    head = load_head_yaml()
 
-    # Compute diffs
-    added, removed, modified = diff_services(base_data, head_data)
-    section_changes = diff_sections(base_data, head_data)
-    category_changes = diff_categories(base_data, head_data)
+    svc_added, svc_removed, svc_modified = diff_index(
+        build_index(base, 3), build_index(head, 3),
+    )
+    sec_added, sec_removed, sec_modified = diff_index(
+        build_index(base, 2), build_index(head, 2),
+    )
+    cat_added, cat_removed, _ = diff_index(
+        build_index(base, 1), build_index(head, 1),
+    )
 
-    # Build result
+    added = [{"category": k[0], "section": k[1], "service": k[2],
+              "fields": build_index(head, 3)[k]} for k in svc_added]
+    removed = [{"category": k[0], "section": k[1], "service": k[2]} for k in svc_removed]
+    modified = [{"category": k[0], "section": k[1], "service": k[2],
+                 "changed_fields": cf} for k, cf in svc_modified]
+
+    sections = []
+    for k in sec_added:
+        sections.append({"category": k[0], "section": k[1], "change_type": "added_section"})
+    for k in sec_removed:
+        sections.append({"category": k[0], "section": k[1], "change_type": "removed_section"})
+    for k, cf in sec_modified:
+        sections.append({"category": k[0], "section": k[1],
+                         "change_type": "modified_section_metadata", "changed_fields": cf})
+
+    categories = []
+    for k in cat_added:
+        categories.append({"category": k, "change_type": "added_category"})
+    for k in cat_removed:
+        categories.append({"category": k, "change_type": "removed_category"})
+
     diff_result = {
-        "services": {
-            "added": added,
-            "removed": removed,
-            "modified": modified,
-        },
-        "sections": section_changes,
-        "categories": category_changes,
+        "services": {"added": added, "removed": removed, "modified": modified},
+        "sections": sections,
+        "categories": categories,
     }
 
-    # Write diff JSON
     with open(DIFF_OUTPUT_PATH, "w") as f:
         json.dump(diff_result, f, indent=2)
-    print(f"Diff written to {DIFF_OUTPUT_PATH}")
 
-    # Determine if there are service-level changes
-    has_service_changes = bool(added or removed or modified)
-    write_github_output("has_service_changes", str(has_service_changes).lower())
-
-    # Write step summary
+    write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
     write_step_summary(diff_result)
 
-    # Enforce single-entry rule
-    service_change_count = len(added) + len(removed) + len(modified)
-
-    if service_change_count > 1:
-        print(red("Single-entry rule violation: PRs must contain only one service change."), file=sys.stderr)
-        print(red(f"Found {service_change_count} service-level changes:"), file=sys.stderr)
-        for svc in added:
-            print(f"  + Added: {svc['category']} > {svc['section']} > {svc['service']}", file=sys.stderr)
-        for svc in removed:
-            print(f"  - Removed: {svc['category']} > {svc['section']} > {svc['service']}", file=sys.stderr)
-        for svc in modified:
-            fields = ", ".join(svc["changed_fields"])
-            print(f"  ~ Modified: {svc['category']} > {svc['section']} > {svc['service']} ({fields})", file=sys.stderr)
+    svc_count = len(added) + len(removed) + len(modified)
+    if svc_count > 1:
+        print(red(f"Single-entry rule violation: {svc_count} service changes found."), file=sys.stderr)
+        sys.exit(EXIT_RULE_VIOLATION)
+    if svc_count == 0 and len(sections) > 1:
+        print(red(f"Single-entry rule violation: {len(sections)} section changes found."), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
 
-    # If no service changes, check section-level changes
-    if service_change_count == 0 and len(section_changes) > 1:
-        print(red("Single-entry rule violation: PRs must contain only one section-level change."), file=sys.stderr)
-        print(red(f"Found {len(section_changes)} section-level changes:"), file=sys.stderr)
-        for change in section_changes:
-            detail = change["change_type"].replace("_", " ")
-            fields = change.get("changed_fields", [])
-            extra = f" ({', '.join(fields)})" if fields else ""
-            print(f"  ~ {change['category']} > {change['section']}: {detail}{extra}", file=sys.stderr)
-        sys.exit(EXIT_RULE_VIOLATION)
-
-    # Summary
-    total = service_change_count + len(section_changes) + len(category_changes)
-    if total == 0:
-        print(green("No changes detected in awesome-privacy.yml"))
-    else:
-        print(green(f"Single-entry rule passed. {service_change_count} service change(s), "
-                     f"{len(section_changes)} section change(s), {len(category_changes)} category change(s)."))
+    print(green(f"Single-entry rule passed. {svc_count} service, "
+                f"{len(sections)} section, {len(categories)} category change(s)."))
     sys.exit(EXIT_PASS)
 
 

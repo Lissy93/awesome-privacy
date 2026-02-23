@@ -7,12 +7,6 @@ import sys
 ARTIFACTS_DIR = "/tmp/artifacts"
 OUTPUT_DIR = "/tmp/pr-meta"
 
-README_MSG = (
-    "Do not edit the README directly. This file is auto-generated from the"
-    " content in `awesome-privacy.yml`, and so your changes will be overridden!"
-    " Instead, only modify the YAML file, and be sure to follow our Contributing Guidelines."
-)
-
 CONTRIBUTING = "https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md"
 
 COMMENT_TEMPLATE = """<!-- pr-check-bot -->
@@ -38,12 +32,10 @@ def load_findings(filename):
         return []
 
 
-def collect_findings(readme_failed):
-    """Gather all findings in display order: meta, readme, data, project."""
+def collect_findings():
+    """Gather all findings in display order: compliance, data, project."""
     all_findings = []
-    all_findings.extend(load_findings("findings-meta.json"))
-    if readme_failed:
-        all_findings.append(README_MSG)
+    all_findings.extend(load_findings("findings-compliance.json"))
     all_findings.extend(load_findings("findings-data.json"))
     all_findings.extend(load_findings("findings-project.json"))
     return all_findings
@@ -78,7 +70,6 @@ def main():
         user = os.environ.get("PR_USER", "contributor")
         pr_number = os.environ.get("PR_NUMBER", "")
         run_id = os.environ.get("RUN_ID", "")
-        readme_failed = os.environ.get("README_FAILED", "false") == "true"
 
         os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -89,7 +80,7 @@ def main():
             with open(os.path.join(OUTPUT_DIR, "run-id.txt"), "w") as f:
                 f.write(run_id)
 
-        findings = collect_findings(readme_failed)
+        findings = collect_findings()
         write_step_summary(findings)
 
         if findings:

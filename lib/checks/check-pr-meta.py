@@ -5,7 +5,7 @@ import os
 import re
 import sys
 
-FINDINGS_PATH = "/tmp/findings-meta.json"
+FINDINGS_PATH = "/tmp/findings-compliance.json"
 
 BAD_TITLES = {"update readme.md", "update awesome-privacy.yml"}
 
@@ -26,6 +26,11 @@ CHECKBOX_MSG = (
     "Ensure you have completed the checklist (put a tick the checkboxes with `[x]`),"
     " to confirm that you've read the contributing guidelines, checked your submission,"
     " indicated your affiliation and agree to follow our CoC"
+)
+README_MSG = (
+    "Do not edit the README directly. This file is auto-generated from the"
+    " content in `awesome-privacy.yml`, and so your changes will be overridden!"
+    " Instead, only modify the YAML file, and be sure to follow our Contributing Guidelines."
 )
 
 
@@ -78,6 +83,13 @@ def check_checkboxes(body):
     return None
 
 
+def check_readme(readme_failed):
+    """Return a finding if the README check reported a failure."""
+    if readme_failed == "true":
+        return README_MSG
+    return None
+
+
 def write_findings(findings):
     """Write the findings list to the output JSON file."""
     with open(FINDINGS_PATH, "w") as f:
@@ -91,6 +103,7 @@ def main():
         title = os.environ.get("PR_TITLE", "")
         body = os.environ.get("PR_BODY", "")
         draft = os.environ.get("PR_DRAFT", "false")
+        readme_failed = os.environ.get("README_FAILED", "false")
 
         finding = check_title(title)
         if finding:
@@ -111,6 +124,10 @@ def main():
             finding = check_checkboxes(body)
             if finding:
                 findings.append(finding)
+
+        finding = check_readme(readme_failed)
+        if finding:
+            findings.append(finding)
     except Exception:
         pass
 

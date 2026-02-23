@@ -1,6 +1,6 @@
 """
 Detects which files changed between the PR base and HEAD.
-Sets GitHub Actions outputs: yaml_changed, non_yaml_changed.
+Sets GitHub Actions output: yaml_changed.
 """
 
 import argparse
@@ -38,12 +38,8 @@ def main():
         print(f"  {f}")
 
     yaml_changed = YAML_FILE in changed_files
-    non_yaml_changed = any(f != YAML_FILE for f in changed_files)
-
     write_github_output("yaml_changed", str(yaml_changed).lower())
-    write_github_output("non_yaml_changed", str(non_yaml_changed).lower())
-
-    print(f"yaml_changed={yaml_changed}, non_yaml_changed={non_yaml_changed}")
+    print(f"yaml_changed={yaml_changed}")
 
 
 if __name__ == "__main__":
