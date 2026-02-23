@@ -1,0 +1,156 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, edited, synchronize, reopened]
+    paths:
+      - 'awesome-privacy.yml'
+      - '.github/README.md'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-compliance:
+    name: PR Compliance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check README edits
+        id: readme
+        continue-on-error: true
+        run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
+      - name: Check PR metadata
+        id: meta
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_DRAFT: ${{ github.event.pull_request.draft }}
+          README_FAILED: ${{ steps.readme.outcome == 'failure' && 'true' || 'false' }}
+        run: python lib/checks/check-pr-meta.py
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-compliance
+          path: /tmp/findings-compliance.json
+          if-no-files-found: ignore
+      - name: Fail if critical
+        if: steps.readme.outcome == 'failure' || steps.meta.outcome == 'failure'
+        run: exit 1
+
+  data-validation:
+    name: Data Validation
+    runs-on: ubuntu-latest
+    outputs:
+      yaml_changed: ${{ steps.changes.outputs.yaml_changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Detect changes
+        id: changes
+        run: python lib/checks/detect-changes.py --base-ref ${{ github.event.pull_request.base.sha }}
+      - name: Install dependencies
+        if: steps.changes.outputs.yaml_changed == 'true'
+        run: pip install -q -r lib/requirements.txt
+      - name: Schema validation
+        if: steps.changes.outputs.yaml_changed == 'true'
+        id: schema
+        continue-on-error: true
+        run: make validate
+      - name: YAML diff
+        if: steps.changes.outputs.yaml_changed == 'true'
+        id: diff
+        continue-on-error: true
+        run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
+      - name: Check additions
+        if: steps.changes.outputs.yaml_changed == 'true'
+        env:
+          SCHEMA_OUTCOME: ${{ steps.schema.outcome }}
+        run: python lib/checks/check-additions.py
+      - name: Upload diff data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-diff
+          path: /tmp/pr-diff.json
+          if-no-files-found: ignore
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-data
+          path: /tmp/findings-data.json
+          if-no-files-found: ignore
+      - name: Fail if critical
+        if: steps.changes.outputs.yaml_changed == 'true' && (steps.schema.outcome == 'failure' || steps.diff.outcome == 'failure')
+        run: exit 1
+
+  submission-eligibility:
+    name: Submission Eligibility
+    needs: data-validation
+    if: "!cancelled() && needs.data-validation.outputs.yaml_changed == 'true'"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r lib/requirements.txt
+      - name: Download diff data
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-diff
+          path: /tmp
+        continue-on-error: true
+      - name: Check project health
+        env:
+          PR_USER: ${{ github.event.pull_request.user.login }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python lib/checks/check-project.py
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-project
+          path: /tmp/findings-project.json
+          if-no-files-found: ignore
+
+  summary:
+    name: Summary
+    if: always()
+    needs: [pr-compliance, data-validation, submission-eligibility]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download all findings
+        uses: actions/download-artifact@v4
+        with:
+          pattern: findings-*
+          path: /tmp/artifacts
+          merge-multiple: true
+        continue-on-error: true
+      - name: Format comment
+        env:
+          PR_USER: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_ID: ${{ github.run_id }}
+        run: python lib/checks/format-comment.py
+      - name: Upload PR metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-meta
+          path: /tmp/pr-meta/
