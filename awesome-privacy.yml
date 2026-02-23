@@ -52,6 +52,11 @@ categories:
           Bitwarden clients](https://bitwarden.com/download/).
 
       - name: KeePass
+        url: test
+        openSource: true
+        description: x
+
+      - name: KeePass
         url: https://keepass.info
         openSource: true
         subreddit: KeePass
