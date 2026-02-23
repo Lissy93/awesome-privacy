@@ -19,7 +19,7 @@
 You can add, edit or remove entries by opening a pull request.
 
 All data is stored in [`awesome-privacy.yml`](https://github.com/Lissy93/awesome-privacy/blob/main/awesome-privacy.yml).
-If you're adding, editing or removing a listing - **this is the only file you need to edit**.
+If you're adding, editing or removing a listing - **this is the only file you need to edit**. Don't edit the README directly, as this is auto-generated from the YAML file.
 
 ### Process
 
@@ -74,12 +74,11 @@ Usually these entries go within the "Notable Mentions" section instead._
 
 Your pull request must follow these requirements. Failure to do so, might result in it being closed.
 
-- Do not edit the README directly when adding / editing a listing
+- Do not edit the README directly when adding / editing a listing (it's auto-generated!)
 - Ensure your PR is not a duplicate, search for existing / previous submissions first
-- You must respond to any comments or requests for changes in a timely manner, 48-hours maximum
+- You must respond to any comments or requests for changes in a timely manner, 14 days maximum
 - Write short but descriptive git commit messages, under 50 characters. This must be in the format of `Adds [software-name] to [section-name]`. Your PR will be rejected if you name it `Updates README.md`
 - Only include a single addition / amendment / removal, per pull request
-- If your pull request contains multiple commits, you must squash them first
 - You must complete each of the sections in the pull request template. Do not delete it!
 - Where applicable, include links to supporting material for your addition: git repo, docs, recent security audits, etc. This will make researching it much easier for reviewers
 - While adding new software to the list, don't make your entry read like an advert. Be objective, and include drawbacks as well as strengths
@@ -90,8 +89,8 @@ Your pull request must follow these requirements. Failure to do so, might result
 - You must adhere to the Contributor Covenant Code of Conduct
 - Don't open a Draft / WIP pull request while you work on the guidelines. A pull request should be 100% ready and should adhere to all the above guidelines when you open it
 - Your changes must be correctly spelled, and with good grammar
-- Your changes must be correctly formatted, in valid markdown
-- The addition title must be a link the project, and in bold
+- Your changes must be correctly formatted, in valid yaml and markdown
+- The addition title must be a link the project
 - The addition description must be no less than 50, and no more than 250 characters, keep it clear and to the point
 
 ---
@@ -102,8 +101,6 @@ All content in both the README and website is generated using the data in [`awes
 This file may look a bit daunting to start with, but don't worry - it's pretty simple.
 
 ### Top-Level Structure
-
-
 
 ```mermaid
 ---
