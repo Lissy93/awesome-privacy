@@ -143,8 +143,9 @@ def check_single_entry(diff):
     if added_count > 1:
         return MULTIPLE_MSG
     if added_count == 0:
-        sec_count = len(diff.get("sections", []))
-        if sec_count > 1:
+        added_sections = [s for s in diff.get("sections", [])
+                          if s.get("change_type") == "added_section"]
+        if len(added_sections) > 1:
             return MULTIPLE_MSG
     return None
 

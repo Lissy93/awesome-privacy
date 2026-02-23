@@ -191,8 +191,9 @@ def main():
     if added_count > 1:
         print(red(f"Single-entry rule violation: {added_count} service additions found."), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
-    if added_count == 0 and len(sections) > 1:
-        print(red(f"Single-entry rule violation: {len(sections)} section changes found."), file=sys.stderr)
+    added_sections = [s for s in sections if s["change_type"] == "added_section"]
+    if added_count == 0 and len(added_sections) > 1:
+        print(red(f"Single-entry rule violation: {len(added_sections)} section additions found."), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
 
     total = len(added) + len(removed) + len(modified)
