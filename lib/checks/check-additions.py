@@ -35,6 +35,22 @@ OPENSOURCE_MSG = (
     f" [Requirements]({CONTRIBUTING}#requirements)."
     " Please ensure that this is justified in your PR body."
 )
+DUPLICATE_NAME_MSG = (
+    "A service named `{name}` already exists (in {location})."
+    " If this is a different service, please clarify in your PR description"
+)
+DUPLICATE_URL_MSG = (
+    "The URL `{url}` is already associated with `{existing}`."
+    " Please check this isn't a duplicate submission"
+)
+DESC_LENGTH_MSG = (
+    "Description length ({length} chars) is outside the recommended 50\u2013250"
+    f" character range. Please see our [Contributing Guidelines]({CONTRIBUTING}#description)"
+)
+OPENSOURCE_GITHUB_MSG = (
+    "You marked this service as open source but didn't include a `github` field."
+    " Please add the repository link"
+)
 
 
 def load_json(path):
@@ -81,7 +97,7 @@ def check_required_fields(diff, head):
     for svc in diff.get("services", {}).get("added", []):
         fields = svc.get("fields", {})
         for f in REQUIRED_FIELDS:
-            if not fields.get(f):
+            if fields.get(f) is None:
                 missing.add(f)
     for svc in diff.get("services", {}).get("modified", []):
         if not head:
@@ -92,7 +108,7 @@ def check_required_fields(diff, head):
         )
         if fields:
             for f in REQUIRED_FIELDS:
-                if f in changed and not fields.get(f):
+                if f in changed and fields.get(f) is None:
                     missing.add(f)
     if missing:
         names = ", ".join(f"`{f}`" for f in sorted(missing))
@@ -133,6 +149,75 @@ def check_single_entry(diff):
     return None
 
 
+def build_name_index(head):
+    """Build {lowercase_name: "category > section"} from all services."""
+    index = {}
+    if not head:
+        return index
+    for cat in head.get("categories", []):
+        cn = cat.get("name", "")
+        for sec in cat.get("sections", []):
+            sn = sec.get("name", "")
+            for svc in sec.get("services", []):
+                name = svc.get("name", "").lower().strip()
+                if name:
+                    index[name] = f"{cn} > {sn}"
+    return index
+
+
+def build_url_index(head):
+    """Build {url: service_name} from all services, skipping empty URLs."""
+    index = {}
+    if not head:
+        return index
+    for cat in head.get("categories", []):
+        for sec in cat.get("sections", []):
+            for svc in sec.get("services", []):
+                url = svc.get("url", "")
+                if url:
+                    index[url] = svc.get("name", "")
+    return index
+
+
+def check_duplicate_name(diff, name_index):
+    """Return a finding if an added service name already exists in the YAML."""
+    for svc in diff.get("services", {}).get("added", []):
+        name = svc.get("fields", {}).get("name", "").lower().strip()
+        if name and name in name_index:
+            return DUPLICATE_NAME_MSG.format(
+                name=svc["fields"]["name"], location=name_index[name],
+            )
+    return None
+
+
+def check_duplicate_url(diff, url_index):
+    """Return a finding if an added service URL already exists in the YAML."""
+    for svc in diff.get("services", {}).get("added", []):
+        url = svc.get("fields", {}).get("url", "")
+        if url and url in url_index:
+            return DUPLICATE_URL_MSG.format(url=url, existing=url_index[url])
+    return None
+
+
+def check_description_length(diff):
+    """Return a finding if an added service description is outside 50-250 chars."""
+    for svc in diff.get("services", {}).get("added", []):
+        desc = svc.get("fields", {}).get("description", "")
+        length = len(desc)
+        if length < 50 or length > 250:
+            return DESC_LENGTH_MSG.format(length=length)
+    return None
+
+
+def check_opensource_github(diff):
+    """Return a finding if an added service is open source but has no github field."""
+    for svc in diff.get("services", {}).get("added", []):
+        fields = svc.get("fields", {})
+        if fields.get("openSource") is True and not fields.get("github"):
+            return OPENSOURCE_GITHUB_MSG
+    return None
+
+
 def main():
     findings = []
     try:
@@ -156,6 +241,25 @@ def main():
                 findings.append(finding)
 
             finding = check_open_source(diff)
+            if finding:
+                findings.append(finding)
+
+            name_index = build_name_index(head)
+            url_index = build_url_index(head)
+
+            finding = check_duplicate_name(diff, name_index)
+            if finding:
+                findings.append(finding)
+
+            finding = check_duplicate_url(diff, url_index)
+            if finding:
+                findings.append(finding)
+
+            finding = check_description_length(diff)
+            if finding:
+                findings.append(finding)
+
+            finding = check_opensource_github(diff)
             if finding:
                 findings.append(finding)
     except Exception:

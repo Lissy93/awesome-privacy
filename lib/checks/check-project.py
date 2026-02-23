@@ -126,21 +126,31 @@ def get_services(diff, key):
 
 
 def check_links(diff, head):
-    """Return LINK_MSG if any service URL is unreachable."""
+    """Return LINK_MSG if any service URL or icon URL is unreachable."""
     for svc in get_services(diff, "added"):
-        url = svc.get("fields", {}).get("url")
+        fields = svc.get("fields", {})
+        url = fields.get("url")
         if url and not check_url(url):
             return LINK_MSG
+        icon = fields.get("icon")
+        if icon and not check_url(icon):
+            return LINK_MSG
     for svc in get_services(diff, "modified"):
-        if "url" not in svc.get("changed_fields", []):
+        changed = svc.get("changed_fields", [])
+        if "url" not in changed and "icon" not in changed:
             continue
         head_svc = find_service_in_head(
             head, svc["category"], svc["section"], svc["service"]
         )
         if head_svc:
-            url = head_svc.get("url")
-            if url and not check_url(url):
-                return LINK_MSG
+            if "url" in changed:
+                url = head_svc.get("url")
+                if url and not check_url(url):
+                    return LINK_MSG
+            if "icon" in changed:
+                icon = head_svc.get("icon")
+                if icon and not check_url(icon):
+                    return LINK_MSG
     return None
 
 

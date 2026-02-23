@@ -187,16 +187,18 @@ def main():
     write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
     write_step_summary(diff_result)
 
-    svc_count = len(added) + len(removed) + len(modified)
-    if svc_count > 1:
-        print(red(f"Single-entry rule violation: {svc_count} service changes found."), file=sys.stderr)
+    added_count = len(added)
+    if added_count > 1:
+        print(red(f"Single-entry rule violation: {added_count} service additions found."), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
-    if svc_count == 0 and len(sections) > 1:
+    if added_count == 0 and len(sections) > 1:
         print(red(f"Single-entry rule violation: {len(sections)} section changes found."), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
 
-    print(green(f"Single-entry rule passed. {svc_count} service, "
-                f"{len(sections)} section, {len(categories)} category change(s)."))
+    total = len(added) + len(removed) + len(modified)
+    print(green(f"Single-entry rule passed. {total} service "
+                f"({added_count} added), {len(sections)} section, "
+                f"{len(categories)} category change(s)."))
     sys.exit(EXIT_PASS)
 
 
