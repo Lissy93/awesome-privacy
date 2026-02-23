@@ -86,12 +86,13 @@ def check_required_fields(diff, head):
     for svc in diff.get("services", {}).get("modified", []):
         if not head:
             continue
+        changed = svc.get("changed_fields", [])
         fields = find_service_fields(
             head, svc["category"], svc["section"], svc["service"]
         )
         if fields:
             for f in REQUIRED_FIELDS:
-                if not fields.get(f):
+                if f in changed and not fields.get(f):
                     missing.add(f)
     if missing:
         names = ", ".join(f"`{f}`" for f in sorted(missing))
@@ -120,16 +121,12 @@ def check_open_source(diff):
 
 
 def check_single_entry(diff):
-    """Return a finding if the diff contains multiple service or section changes."""
+    """Return a finding if the diff adds multiple new services or sections."""
     services = diff.get("services", {})
-    svc_count = (
-        len(services.get("added", []))
-        + len(services.get("removed", []))
-        + len(services.get("modified", []))
-    )
-    if svc_count > 1:
+    added_count = len(services.get("added", []))
+    if added_count > 1:
         return MULTIPLE_MSG
-    if svc_count == 0:
+    if added_count == 0:
         sec_count = len(diff.get("sections", []))
         if sec_count > 1:
             return MULTIPLE_MSG
