@@ -33,7 +33,6 @@ jobs:
           script: |
             const fs = require('fs');
             const marker = '<!-- pr-check-bot -->';
-            const conclusion = context.payload.workflow_run.conclusion;
 
             // Determine the PR number
             let prNumber;
@@ -73,12 +72,8 @@ jobs:
             });
             const existing = comments.find(c => c.body.includes(marker));
 
-            if (conclusion === 'failure') {
-              const commentFile = 'pr-meta/comment.md';
-              if (!fs.existsSync(commentFile)) {
-                console.log('No comment.md found — skipping comment.');
-                return;
-              }
+            const commentFile = 'pr-meta/comment.md';
+            if (fs.existsSync(commentFile)) {
               const body = fs.readFileSync(commentFile, 'utf8').trim();
               if (existing) {
                 await github.rest.issues.updateComment({
@@ -96,7 +91,7 @@ jobs:
                 });
               }
             } else if (existing) {
-              // Checks passed — remove stale failure comment
+              // No findings — remove stale comment
               await github.rest.issues.deleteComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,

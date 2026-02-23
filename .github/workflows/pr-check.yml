@@ -18,13 +18,10 @@ jobs:
       non_yaml_changed: ${{ steps.changes.outputs.non_yaml_changed }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q -r lib/requirements.txt
       - name: Detect changed files
         id: changes
         run: python lib/checks/detect-changes.py --base-ref ${{ github.event.pull_request.base.sha }}
@@ -32,54 +29,64 @@ jobs:
         if: steps.changes.outputs.non_yaml_changed == 'true'
         run: python lib/checks/warn-non-yaml.py --base-ref ${{ github.event.pull_request.base.sha }}
 
-  readme:
-    name: README edits
+  pr-meta:
+    name: PR metadata
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
+          python-version: "3.12"
+      - name: Check PR metadata
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_DRAFT: ${{ github.event.pull_request.draft }}
+        run: python lib/checks/check-pr-meta.py
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-meta
+          path: /tmp/findings-meta.json
+          if-no-files-found: ignore
+
+  file-checks:
+    name: File checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
       - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q -r lib/requirements.txt
       - name: Check for direct README edits
         run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
 
-  schema:
-    name: Schema validation
+  data-validation:
+    name: Data validation
     needs: detect-changes
     if: needs.detect-changes.outputs.yaml_changed == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -q -r lib/requirements.txt
-      - name: Validate schema
-        run: make validate
-
-  diff:
-    name: Single-entry rule
-    needs: detect-changes
-    if: needs.detect-changes.outputs.yaml_changed == 'true'
-    runs-on: ubuntu-latest
-    outputs:
-      has_service_changes: ${{ steps.diff.outputs.has_service_changes }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -q -r lib/requirements.txt
-      - name: YAML diff analysis
+      - name: Schema validation
+        id: schema
+        continue-on-error: true
+        run: make validate
+      - name: YAML diff
         id: diff
+        continue-on-error: true
         run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
+      - name: Check additions
+        env:
+          SCHEMA_OUTCOME: ${{ steps.schema.outcome }}
+        run: python lib/checks/check-additions.py
       - name: Upload diff data
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,11 +94,21 @@ jobs:
           name: pr-diff
           path: /tmp/pr-diff.json
           if-no-files-found: ignore
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-data
+          path: /tmp/findings-data.json
+          if-no-files-found: ignore
+      - name: Fail if critical checks failed
+        if: steps.schema.outcome == 'failure' || steps.diff.outcome == 'failure'
+        run: exit 1
 
-  links:
-    name: Link validation
-    needs: diff
-    if: needs.diff.result == 'success' && needs.diff.outputs.has_service_changes == 'true'
+  project-checks:
+    name: Project checks
+    needs: data-validation
+    if: "!cancelled() && needs.data-validation.result != 'skipped'"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -104,93 +121,44 @@ jobs:
         with:
           name: pr-diff
           path: /tmp
-      - name: Validate links
-        run: python lib/checks/check-links.py --diff-json /tmp/pr-diff.json
+        continue-on-error: true
+      - name: Check project health
+        env:
+          PR_USER: ${{ github.event.pull_request.user.login }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python lib/checks/check-project.py
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: findings-project
+          path: /tmp/findings-project.json
+          if-no-files-found: ignore
 
-  template:
-    name: PR template
+  summary:
+    name: Summary
+    if: always()
+    needs: [detect-changes, pr-meta, file-checks, data-validation, project-checks]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q -r lib/requirements.txt
-      - name: PR template check
+      - name: Download all findings
+        uses: actions/download-artifact@v4
+        with:
+          pattern: findings-*
+          path: /tmp/artifacts
+          merge-multiple: true
+        continue-on-error: true
+      - name: Format comment
         env:
-          PR_BODY: ${{ github.event.pull_request.body }}
-        run: python lib/checks/check-template.py
-
-  comment:
-    name: Summary
-    if: always()
-    needs: [readme, schema, diff, links, template]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Save PR metadata
-        run: |
-          mkdir -p /tmp/pr-meta
-          echo "${{ github.event.pull_request.number }}" > /tmp/pr-meta/number.txt
-          echo "${{ github.run_id }}" > /tmp/pr-meta/run-id.txt
-
-      - name: Build failure comment
-        if: contains(needs.*.result, 'failure')
-        run: |
-          cat > /tmp/pr-meta/comment.md << 'HEADER'
-          <!-- pr-check-bot -->
-          > [!CAUTION]
-          > ## PR check failed
-          HEADER
-
-          if [ "${{ needs.readme.result }}" = "failure" ]; then
-          cat >> /tmp/pr-meta/comment.md << 'EOF'
-
-          ### Direct README edits
-          The auto-generated section of the README must not be edited directly.
-          Please make your changes in `awesome-privacy.yml` instead — the README is regenerated from it.
-          EOF
-          fi
-
-          if [ "${{ needs.schema.result }}" = "failure" ]; then
-          cat >> /tmp/pr-meta/comment.md << 'EOF'
-
-          ### Schema validation failed
-          `awesome-privacy.yml` does not conform to the expected schema.
-          Please check your YAML against the structure defined in `lib/schema.json`.
-          EOF
-          fi
-
-          if [ "${{ needs.diff.result }}" = "failure" ]; then
-          cat >> /tmp/pr-meta/comment.md << 'EOF'
-
-          ### Single-entry rule
-          Each PR should add, modify, or remove only **one** service at a time.
-          If you need to change multiple services, please split them into separate PRs.
-          EOF
-          fi
-
-          if [ "${{ needs.links.result }}" = "failure" ]; then
-          cat >> /tmp/pr-meta/comment.md << 'EOF'
-
-          ### Link validation failed
-          One or more URLs in your entry could not be verified.
-          Please ensure all links are correct and accessible.
-          EOF
-          fi
-
-          if [ "${{ needs.template.result }}" = "failure" ]; then
-          cat >> /tmp/pr-meta/comment.md << 'EOF'
-
-          ### PR template incomplete
-          Your PR description is missing required sections.
-          Please fill out the **Type**, **Changes**, and **Checklist** sections of the PR template.
-          EOF
-          fi
-
-          printf '\n---\n*See the [workflow logs](%s/%s/actions/runs/%s) for full details.*\n' \
-            "${{ github.server_url }}" "${{ github.repository }}" "${{ github.run_id }}" \
-            >> /tmp/pr-meta/comment.md
-
+          PR_USER: ${{ github.event.pull_request.user.login }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          RUN_ID: ${{ github.run_id }}
+          README_FAILED: ${{ needs.file-checks.result == 'failure' && 'true' || 'false' }}
+        run: python lib/checks/format-comment.py
       - name: Upload PR metadata
         if: always()
         uses: actions/upload-artifact@v4
