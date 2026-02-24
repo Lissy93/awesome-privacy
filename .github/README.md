@@ -4627,13 +4627,6 @@ is a free plan for up to 3 identities, and premium plans start at $0.99/month.
 
 		</details>
 
-- **[<img src='https://icon.horse/icon/izipay.me' width='16' height='16' alt='icon' /> izipay.me](https://izipay.me)** - A privacy-first bridge for crypto spending. Offers instant virtual VISA/Mastercard cards that can be loaded with $USDT, $BTC, $TON, and $ETH. Supports Apple Pay/Google Pay and does not require mandatory KYC for standard use.
-	- <details>
-		<summary>Stats</summary>
-
-		 [![Privacy Policy](https://img.shields.io/badge/Privacy-Policy-brightgreen)](https://izipay.me/privacy-policy) [![izipay on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=izipay)](https://izipay.me/blog/buy-telegram-stars-crypto)
-    </details>
-	
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
