@@ -1,85 +1,112 @@
 import json
 import os
 import sys
-import logging
+
 import yaml
-from termcolor import colored
 from jsonschema import Draft7Validator
 
-# Configure Logging
-LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
-logging.basicConfig(level=LOG_LEVEL)
-logger = logging.getLogger(__name__)
+# Paths (relative to project root)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
+SCHEMA_PATH = os.path.join(PROJECT_ROOT, "lib/schema.json")
+
+# Exit codes
+EXIT_VALID = 0
+EXIT_VALIDATION_ERRORS = 1
+EXIT_RUNTIME_ERROR = 2
+
+MAX_ERRORS = 20
+
+# ANSI color helpers (disabled when NO_COLOR is set or stderr is not a TTY)
+_use_color = sys.stderr.isatty() and not os.environ.get("NO_COLOR")
+red = (lambda s: f"\033[31m{s}\033[0m") if _use_color else (lambda s: s)
+green = (lambda s: f"\033[32m{s}\033[0m") if _use_color else (lambda s: s)
+yellow = (lambda s: f"\033[33m{s}\033[0m") if _use_color else (lambda s: s)
+dim = (lambda s: f"\033[2m{s}\033[0m") if _use_color else (lambda s: s)
 
 
-# Determine the project root based on the script's location
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-awesome_privacy_path = os.path.join(project_root, 'awesome-privacy.yml')
-schema_path = os.path.join(project_root, 'lib/schema.json')
+def resolve_path(data, path_parts):
+    """Walk the data along path_parts, replacing indices with 'name' values."""
+    segments = []
+    current = data
+    for part in path_parts:
+        if isinstance(current, dict) and part in current:
+            current = current[part]
+            if isinstance(current, dict) and "name" in current:
+                segments.append(current["name"])
+            elif not isinstance(part, int):
+                pass  # skip dict keys like 'categories', 'sections', 'services'
+        elif isinstance(current, list) and isinstance(part, int) and part < len(current):
+            current = current[part]
+            if isinstance(current, dict) and "name" in current:
+                segments.append(current["name"])
+            else:
+                segments.append(str(part))
+        else:
+            segments.append(str(part))
+            break
+    return " > ".join(segments) if segments else "(root)"
 
 
-# Log method, accepts a message and optional log level
-# and prints the output to the terminal in right color
-def loggy(message: str, level: str = 'debug'):
-    if level == "info":
-        logger.info(colored(message, 'blue'))
-    elif level == "warning":
-        logger.warning(colored(message, 'yellow'))
-    elif level == "error":
-        logger.error(colored(message, 'red'))
-    elif level == "success":
-        logger.info(colored(message, 'green'))
-    elif level == "debug":
-        logger.debug(colored(message, 'grey'))
-
-
-# Loads a given YAML file and returns the data
-def load_yaml(yaml_path: str):
-    loggy(f"Loading YAML from {yaml_path}", "info")
+def load_yaml(path):
     try:
-        with open(yaml_path, 'r') as file:
-            return yaml.safe_load(file)
+        with open(path, "r") as f:
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        print(red(f"File not found: {path}"), file=sys.stderr)
+        sys.exit(EXIT_RUNTIME_ERROR)
     except yaml.YAMLError as e:
-        loggy(f"Failed to load YAML: {e}", "error")
-        sys.exit(1)
+        print(red(f"Failed to parse YAML: {e}"), file=sys.stderr)
+        sys.exit(EXIT_RUNTIME_ERROR)
 
 
-# Loads a given JSON Schema file and returns the data
-def load_schema(schema_path: str):
-    loggy(f"Loading JSON Schema from {schema_path}", "info")
+def load_schema(path):
     try:
-        with open(schema_path, 'r') as file:
-            return json.load(file)
+        with open(path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(red(f"File not found: {path}"), file=sys.stderr)
+        sys.exit(EXIT_RUNTIME_ERROR)
     except json.JSONDecodeError as e:
-        loggy(f"Failed to load JSON Schema: {e}", "error")
-        sys.exit(1)
+        print(red(f"Failed to parse JSON schema: {e}"), file=sys.stderr)
+        sys.exit(EXIT_RUNTIME_ERROR)
 
 
-# Validates the given YAML data against the given JSON Schema
-def validate_yaml(data, schema):
-    loggy("Beginning validation", "info")
+def validate(data, schema):
     validator = Draft7Validator(schema)
-    errors = sorted(validator.iter_errors(data), key=lambda e: e.path)
-    if errors:
-        for error in errors:
-            error_location = "->".join(map(str, error.path))
-            loggy(f"Validation error: {error.message} (at {error_location})", "warning")
-        return False
-    return True
+    errors = sorted(validator.iter_errors(data), key=lambda e: list(e.path))
+    formatted = []
+    for error in errors:
+        location = resolve_path(data, list(error.path))
+        formatted.append(f"{location}: {error.message}")
+    return formatted
 
 
-# Main method
 def main():
-    loggy("Starting...", "info")
-    yaml_data = load_yaml(awesome_privacy_path)
-    schema = load_schema(schema_path)
+    data = load_yaml(DATA_PATH)
+    schema = load_schema(SCHEMA_PATH)
+    errors = validate(data, schema)
 
-    if validate_yaml(yaml_data, schema):
-        loggy("Validation successful!", "success")
-        sys.exit(0)
-    else:
-        loggy("Validation failed.", "error")
-        sys.exit(1)
+    if errors:
+        shown = errors[:MAX_ERRORS]
+        for msg in shown:
+            print(red("ERROR") + " " + msg, file=sys.stderr)
+        if len(errors) > MAX_ERRORS:
+            print(dim(f"...and {len(errors) - MAX_ERRORS} more"), file=sys.stderr)
+        print(red(f"Validation failed: {len(errors)} error(s)"), file=sys.stderr)
+        sys.exit(EXIT_VALIDATION_ERRORS)
+
+    # Gather stats
+    categories = data.get("categories", [])
+    num_categories = len(categories)
+    num_sections = sum(len(c.get("sections", [])) for c in categories)
+    num_services = sum(
+        len(s.get("services", []))
+        for c in categories
+        for s in c.get("sections", [])
+    )
+    print(green(f"Valid! {num_categories} categories, {num_sections} sections, {num_services} services"))
+    sys.exit(EXIT_VALID)
 
 
 if __name__ == "__main__":

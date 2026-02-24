@@ -135,7 +135,7 @@ categories:
           Free for self-hosted data (or $3/ month hosted). Be aware that 1Password
           is not fully open source, but they do regularly publish results of their
           independent [security audits](https://support.1password.com/security-assessments),
-          and they have a solid reputation for transparently disclosing and fixing vulnerabilities     
+          and they have a solid reputation for transparently disclosing and fixing vulnerabilities
       furtherInfo: >
         **Other Open Source PM**: [Buttercup](https://buttercup.pw), [Clipperz](https://clipperz.is),
         [Pass](https://www.passwordstore.org), [Padloc](https://padloc.app), [TeamPass](https://teampass.net),
@@ -252,9 +252,9 @@ categories:
         iosApp: https://apps.apple.com/us/app/ente-auth/id6444121398
         androidApp: io.ente.auth
         description: |
-          Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
-          It can be used with an online account to backup and sync your tokens across your 
-          devices (and access them via a web interface) in a secure, end-to-end encrypted 
+          Ente Auth is a free and open-source app which stores and generates TOTP tokens.
+          It can be used with an online account to backup and sync your tokens across your
+          devices (and access them via a web interface) in a secure, end-to-end encrypted
           fashion. It can also be used offline on a single device with no account necessary.
 
       furtherInfo: >
@@ -265,7 +265,7 @@ categories:
         [Etopa](https://play.google.com/store/apps/details?id=de.ltheinrich.etopa) *(Android)*<br>
         For KeePass users, [TrayTop](https://keepass.info/plugins.html#traytotp)
         is a plugin for managing TOTP's -  offline and compatible with Windows, Mac and Linux.
-    
+
     #############################
     ###### File Encryption ######
     #############################
@@ -309,9 +309,10 @@ categories:
       - name: Picocrypt
         github: Picocrypt/Picocrypt
         icon: https://avatars.githubusercontent.com/u/171401041
+        url: ''
         description: |
           Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
-          that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+          that you can use to protect your files. It's designed to be the go-to tool for encryption,
           with a focus on security, simplicity, and reliability.
 
       wordOfWarning: >
@@ -393,7 +394,7 @@ categories:
           Brave also has Tor built-in, when you open up a private tab/ window.
 
       - name: Firefox
-        url: https://www.mozilla.org/firefox
+        url: https://www.firefox.com/
         icon: https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg
         openSource: true
         tosdrId: 188
@@ -440,7 +441,7 @@ categories:
         After installing, check the privacy & security settings, and update the configuration to
         something that you are comfortable with. 12Bytes maintains a comprehensive guide on
         [Firefox Configuration for Privacy and Performance](https://codeberg.org/12bytes/firefox-config-guide)
-    
+
     ############################
     ###### Search Engines ######
     ############################
@@ -524,8 +525,8 @@ categories:
           and self-hostable, although using a [public instance](https://searx.space)
           has the benefit of not singling out your queries to the engines used.
           A fork of the original [Searx](https://searx.github.io/searx/).
-      
-  
+
+
   - name: Communication
     sections:
     #################################
@@ -581,10 +582,10 @@ categories:
         subreddit: SimpleXChat
         description: |
           Simplex is gaining popularity as a secure and private messaging app renowned
-          for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+          for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.
           Simplex offers instant messaging, supports media attachments and voice and video calls.
-          Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
-          preferences for convenience, security, and accessibility. 
+          Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's
+          preferences for convenience, security, and accessibility.
           Learn more about the [Security Policy](https://simplex.chat/security/).
 
       - name: XMPP
@@ -615,7 +616,7 @@ categories:
           an open specification and Simple pragmatic RESTful HTTP/JSON API it makes it easy
           to integrates with existing 3rd party IDs to authenticate and discover users, as
           well as to build apps on top of it.
-      notableMentions: 
+      notableMentions:
         - name: Chat Secure
           url: https://chatsecure.org
         - name: KeyBase
@@ -649,7 +650,7 @@ categories:
         be used to communicate any sensitive data.
         [Wire](https://wire.com/) has also been removed, due to
         a [recent acquisition](https://blog.privacytools.io/delisting-wire/)
-    
+
     ###########################
     ###### P2P Messaging ######
     ###########################
@@ -724,7 +725,7 @@ categories:
         url: https://github.com/Bitmessage/PyBitmessage
       - name: RetroShare
         url: https://retroshare.cc
-    
+
     #############################
     ###### Encrypted Email ######
     #############################
@@ -792,11 +793,11 @@ categories:
           custom domains (starting at $3/month). Tuta
           [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
           like other encrypted mail providers, instead they use a standardized, hybrid method
-          consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+          consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048
           or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
           using PGP. But it does allow them to encrypt much more of the header data (body,
           attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
-          to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+          to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks
           posed by quantum computers.
       - name: Mailfence
         url: https://mailfence.com?src=digitald
@@ -1104,7 +1105,7 @@ categories:
         url: https://www.smspool.net
         icon: https://i.ibb.co/2t4MBFj/apple-touch-icon.png
         description: |
-          Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+          Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers.
           We support over 50+ countries and support over 300+ services.
         androidApp: com.smspool.app
         iosApp: https://apps.apple.com/app/smspool/id6474617801
@@ -1452,7 +1453,7 @@ categories:
           Displays a country flag depicting the location of the current website's server, which can be useful to know at a glance.
           Click icon for more tools such as site safety checks, whois, validation etc **Download**:
           [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
-      
+
       - name: Lightbeam
         url: https://mozilla.github.io/lightbeam/
         github: mozilla/lightbeam-we
@@ -1523,7 +1524,7 @@ categories:
         url: https://addons.mozilla.org/en-US/firefox/addon/crxviewer
         description: >
           A handy extension for viewing the source code of another browser extension,
-          which is a useful tool for verifying the code does what it says 
+          which is a useful tool for verifying the code does what it says
       wordOfWarning: |
         - Having many extensions installed raises entropy, causing your fingerprint to be more unique, hence making tracking easier.
         - Much of the functionality of the above addons can be applied without installing anything, by configuring browser settings yourself. For Firefox this is done in the user.js
@@ -2043,7 +2044,7 @@ categories:
         See [Streisand](https://github.com/StreisandEffect/streisand), to learn more, and get started with running a VPN.
         [Digital Ocean](https://m.do.co/c/3838338e7f79) provides flexible,
         secure and easy Linux VMs, (from $0.007/hour or $5/month),
-        Here is a [1-click install script](http://dovpn.carlfriess.com/)for 
+        Here is a [1-click install script](http://dovpn.carlfriess.com/)for
         on [Digital Ocean](https://m.do.co/c/3838338e7f79), by Carl Friess.
 
         Recently distributed self-hosted solutions for running your own VPNs have
@@ -2203,8 +2204,8 @@ categories:
         Tor, I2P and Freenet are all anonymity networks - but they work very differently and each is good for specific purposes.
         So a good and viable solution would be to use all of them, for different tasks.
         *You can read more about how I2P compares to Tor, [here](https://blokt.com/guides/what-is-i2p-vs-tor-browser)*
-    
-    
+
+
     #####################
     ###### Proxies ######
     #####################
@@ -2323,7 +2324,7 @@ categories:
           Mullvads public DNS with QNAME minimization and basic ad blocking.
           It has been audited by the security experts at Assured.
           You can use this privacy-enhancing service even if you don't use Mullvad.
-    
+
     #########################
     ###### DNS Clients ######
     #########################
@@ -2654,7 +2655,7 @@ categories:
 
         Some VPNs have ad-tracking blocking features, such as
         [TrackStop with PerfectPrivacy](https://www.perfect-privacy.com/en/features/trackstop?a_aid=securitychecklist).
-        
+
         [Private Internet Access](https://www.privateinternetaccess.com/),
         [CyberGhost](https://www.cyberghostvpn.com/),
         [PureVPN](https://www.anrdoezrs.net/click-9242873-13842740),
@@ -2893,7 +2894,7 @@ categories:
         [5 eyes](https://en.wikipedia.org/wiki/Five_Eyes) (Australia, Canada, New Zealand, US and UK)
         and [other international cooperatives](https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives)
         who have legal right to view your data.
-    
+
     ###############################
     ###### Domain Registrars ######
     ###############################
@@ -2931,7 +2932,7 @@ categories:
         followWith: Web
         description: |
           Free DNS hosting provider designed with security in mind, and running
-          on purely open source software. deSEC is backed and funded by SSE. 
+          on purely open source software. deSEC is backed and funded by SSE.
 
 
     ###########################
@@ -3018,7 +3019,7 @@ categories:
           All notes are saved individually as .md files, making them easy to manage.
           No mobile app, built-in cloud-sync, encryption or web UI. But due to the structure of the files,
           it is easy to use your own cloud sync provider, and additional features are provided through extensions.
-      
+
       - name: Joplin
         url: https://joplinapp.org
         github: laurent22/joplin
@@ -3092,7 +3093,7 @@ categories:
 
       notableMentions: |
         If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com)
-        is a utility that encrypts your entire notebook, before it is uploaded to the cloud. 
+        is a utility that encrypts your entire notebook, before it is uploaded to the cloud.
 
         [Org Mode](https://orgmode.org) is a mode for [GNU Emacs](https://www.gnu.org/software/emacs/)
         dedicated to working with the Org markup format. Org can be thought of as
@@ -3342,7 +3343,7 @@ categories:
         using [Web Torrent](https://webtorrent.io).
 
         For specifically transferring images, [Up1](https://github.com/Upload/Up1) is a good self-hosted option, with client-side encryption.
-        
+
         Finally [PsiTransfer](https://github.com/psi-4ward/psitransfer) is a feature-rich, self-hosted file drop, using streams.
 
 
@@ -3391,7 +3392,7 @@ categories:
         description: |
           Simple bookmark manager written in Go, intended to be a clone of Pocket, it has both a simple and clean web
           interface as well as a CLI. Shiori has easy import/ export, is portable and has webpage archiving features.
-      
+
       notableMentions: |
         [Ymarks](https://ymarks.org) is a C-based self-hosted bookmark synchronization
         server and [Chrome](https://chrome.google.com/webstore/detail/ymarks/gefignhaigoigfjfbjjobmegihhaacfi) extension.
@@ -3449,7 +3450,7 @@ categories:
       notableMentions: |
         [Apache OpenMeetings](https://openmeetings.apache.org) provides self-hosted
         video-conferencing, chat rooms, file server and tools for meetings.
-        
+
         [together.brave.com](https://together.brave.com) is Brave's Jitsi Fork.
 
         For remote learning, [BigBlueButton](https://bigbluebutton.org) is self-hosted conference call software,
@@ -3506,10 +3507,10 @@ categories:
         it is not open source, and although there is a free version, a license
         is required to access all features. VMWare performs very well when running
         on a server, with hundreds of hosts and users.
-        
+
         For Mac users, [Parallels](https://www.parallels.com/uk/) is a popular
         option which performs really well, but again is not open source.
-        
+
         For Windows users, there's
         [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v),
         which is a native Windows product, developed by Microsoft.
@@ -3578,7 +3579,7 @@ categories:
         description: |
           iOS app for encrypting/ decrypting text.
           Has native keyboard integration, keychain support and app integrations which makes it quick to use in any app.
-          
+
 
       - name: FlowCrypt
         url: https://flowcrypt.com
@@ -3657,10 +3658,10 @@ categories:
 
         Alternatively, with [ImageMagic](https://imagemagick.org) installed, just run
         `convert -strip path/to/image.png` to remove all metadata.
-        
+
         If you have [GIMP](https://www.gimp.org) installed, then just go to `File --> Export As --> Export --> Advanced Options --> Uncheck the "Save EXIF data" option`.
 
-        Often you need to perform meta data removal programmatically, as part of a script or automation process.  
+        Often you need to perform meta data removal programmatically, as part of a script or automation process.
         - GoLang: [go-exif](https://github.com/dsoprea/go-exif) by @dsoprea
         - JS: [exifr](https://github.com/MikeKovarik/exifr) by @MikeKovarik
         - Python: [Piexif](https://github.com/hMatoba/Piexif) by @hMatoba
@@ -3676,7 +3677,7 @@ categories:
         [not remove it](https://uk.norton.com/internetsecurity-privacy-is-my-personal-data-really-gone-when-its-deleted-from-a-device.html)
         from the disk, and recovering deleted files is a
         [simple task](https://www.lifewire.com/how-to-recover-deleted-files-2622870).
-        
+
         Therefore, to protect your privacy, you should erase/ overwrite data from
         the disk, before you destroy, sell or give away a hard drive.
       services:
@@ -3765,12 +3766,12 @@ categories:
         Or [badblocks](https://linux.die.net/man/8/badblocks) which is intended to search for all bad blocks,
         but can also be used to write zeros to a disk,
         by running `sudo badblocks -wsv /dev/sdd`.
-        
+
         An effective method of erasing an SSD, it to use [hdparm](https://en.wikipedia.org/wiki/Hdparm)
         to issue a [secure erase](https://en.wikipedia.org/wiki/Parallel_ATA#HDD_passwords_and_security)
         command, to your target storage device,
         for this, see step-by-step instructions via: [wiki.kernel.org](https://ata.wiki.kernel.org/index.php/ATA_Secure_Erase).
-        
+
         Finally, [srm](https://www.systutorials.com/docs/linux/man/1-srm/) can be
         use to securely remove files or directories, just run `srm -zsv /path/to/file`
         for a single pass over.
@@ -3788,7 +3789,7 @@ categories:
         If you are an Android user, your device has Google built-in at its core.
         [Google tracks you](https://digitalcontentnext.org/blog/2018/08/21/google-data-collection-research/),
         collecting a wealth of information, and logging your every move.
-        
+
         A [custom ROM](https://en.wikipedia.org/wiki/List_of_custom_Android_distributions),
         is an open source, usually Google-free mobile OS that can be flashed to your device.
       services:
@@ -3797,7 +3798,7 @@ categories:
         github: GrapheneOS/hardened_malloc
         icon: https://grapheneos.org/apple-touch-icon.png
         description: |
-          GrapheneOS is an open source privacy and security focused mobile OS with Android app compatibility. Developed by Daniel Micay. 
+          GrapheneOS is an open source privacy and security focused mobile OS with Android app compatibility. Developed by Daniel Micay.
           GrapheneOS is a young project, and currently only supports Pixel devices, partially due to their strong hardware security.
 
       - name: CalyxOS
@@ -3806,8 +3807,8 @@ categories:
         github: CalyxOS/calyxos
         tosdrId: 2558
         description: |
-          CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users. 
-          Plus, proactive security recommendations and automatic updates take the guesswork out of keeping your personal data personal. Also currently 
+          CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users.
+          Plus, proactive security recommendations and automatic updates take the guesswork out of keeping your personal data personal. Also currently
           only supports Pixel devices and Xiaomi Mi A2 with Fairphone 4, OnePlus 8T, OnePlus 9 test builds available. Developed by the Calyx Foundation.
 
       - name: DivestOS
@@ -3816,8 +3817,8 @@ categories:
         github: Divested-Mobile/DivestOS-Build
         tosdrId: 2550
         description: |
-          DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of 
-          discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. Project is developed and maintained 
+          DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of
+          discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. Project is developed and maintained
           solely by Tad (SkewedZeppelin) since 2014.
 
       - name: LineageOS
@@ -3826,17 +3827,17 @@ categories:
         github: LineageOS/android
         tosdrId: 7188
         description: |
-          A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained, 
+          A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained,
           supports a wide range of devices, and comes bundled with Privacy Guard.
 
       notableMentions: |
         [Replicant OS](https://www.replicant.us/) is a fully-featured distro,
         with an emphasis on freedom, privacy and security.
-        
+
         [OmniRom](https://www.omnirom.org/),
         [Resurrection Remix OS](https://resurrectionremix.com/)
         and [Paranoid Android](http://paranoidandroid.co/) are also popular options.
-        
+
         Alternatively, [Ubuntu Touch](https://ubports.com/) is a Linux (Ubuntu)- based OS.
         It is secure by design and runs on almost any device, - but it does fall short when it comes to the app store.
 
@@ -4003,7 +4004,7 @@ categories:
         some technical knowledge to get started with, but once setup should perform
         just as any other Windows 10 system. Note that you should only download the
         LTSC ISO from the Microsoft's
-        [official page](https://www.microsoft.com/en-in/evalcenter/evaluate-windows-10-enterprise) 
+        [official page](https://www.microsoft.com/en-in/evalcenter/evaluate-windows-10-enterprise)
 
 
         #### Improve the Security and Privacy of your current OS
@@ -4232,8 +4233,8 @@ categories:
         and check reviews/ forums.
         Create a system restore point, before making any significant changes to
         your OS (such as disabling core features).
-        
-        From a security and privacy perspective, Linux may be a better option.  
+
+        From a security and privacy perspective, Linux may be a better option.
 
       notableMentions: |
         See also these lists:
@@ -4306,7 +4307,7 @@ categories:
         that offer free solutions, even if you pay for the premium package.
         This includes (but not limited to) Avast, AVG, McAfee and Kasperky.
         For AV to be effective, it needs intermate access to all areas of your PC,
-        so it is important to go with a trusted vendor, and monitor its activity closely. 
+        so it is important to go with a trusted vendor, and monitor its activity closely.
 
 
   - name: Development
@@ -4361,7 +4362,7 @@ categories:
         [reputation](https://srlabs.de/bites/smart-spies) when it comes to protecting
         consumers privacy, there have been
         [many recent breaches](https://www.theverge.com/2019/10/21/20924886/alexa-google-home-security-vulnerability-srlabs-phishing-eavesdropping).
-        
+
         For that reason it is recommended not to have these devices in your house.
         The following are open source AI voice assistants, that aim to provide a
         human voice interface while also protecting your privacy and security
@@ -4397,7 +4398,7 @@ categories:
         [LinTO](https://linto.ai), [Jovo](https://www.jovo.tech) and [Snips](https://snips.ai)
         are private-by-design voice assistant frameworks that can be built on by developers,
         or used by enterprises.
-        
+
         [Jasper](https://jasperproject.github.io),
         [Stephanie](https://github.com/SlapBot/stephanie-va) and
         [Hey Athena](https://github.com/rcbyron/hey-athena-client) are Python-based voice assistant, but neither is under active development anymore.
@@ -4414,7 +4415,7 @@ categories:
         description: |
           An open source privacy-respecting Home Assistant, compatible with a wide range of
           devices including Raspberry Pi, desktop computers, or NAS systems.
-          Actively developed, with good french community and various integrations 
+          Actively developed, with good french community and various integrations
           (Zigbee, Philips, Camera, Tuya, MQTT, Telegram, ...).
         url: https://gladysassistant.com/
         github: gladysassistant/gladys
@@ -4457,7 +4458,7 @@ categories:
       notableMentions: |
         Other privacy-focused cryptocurrencies include:
         [PIVX](https://pivx.org),
-        [Verge](https://vergecurrency.com), and [Piratechain](https://pirate.black/). 
+        [Verge](https://vergecurrency.com), and [Piratechain](https://pirate.black/).
       wordOfWarning: |
         Not all cryptocurrencies are anonymous, and without using a privacy-focused coin,
         a record of your transaction will live on a publicly available distributed ledger, forever.
@@ -4594,7 +4595,7 @@ categories:
 
         [BitMex](https://www.bitmex.com/) has more advanced trading features,
         but ID verification is required for higher value trades involving Fiat currency.
-        
+
         For buying and selling alt-coins, [Binance](https://www.binance.com/en/register?ref=X2BHKID1) has a wide range of currencies,
         ~and ID verification is not needed for small-value trades~ but ID verification is required in most countries.
 
@@ -4731,7 +4732,7 @@ categories:
         Over the past decade, social networks have revolutionized the way we communicate
         and bought the world closer together - but it came at the
         [cost of our privacy](https://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services).
-        
+
         Social networks are built on the principle of sharing - but you, the user
         should be able to choose with whom you share what, and that is what the
         following sites aim to do.
@@ -4762,12 +4763,12 @@ categories:
 
       - name: nostr
         description: |
-          nostr stands for Notes and other stuff transmitted by relays. 
-          It is an open protocol, not merely a platform. 
-          This distinction enables truly censorship-resistant and global value-for-value publishing on the web. 
-          With the power to replace data-greedy applications like Twitter and Instagram, 
-          nostr offers a promising alternative for users seeking a more private and secure online experience 
-          without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.  
+          nostr stands for Notes and other stuff transmitted by relays.
+          It is an open protocol, not merely a platform.
+          This distinction enables truly censorship-resistant and global value-for-value publishing on the web.
+          With the power to replace data-greedy applications like Twitter and Instagram,
+          nostr offers a promising alternative for users seeking a more private and secure online experience
+          without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.
         url: https://github.com/nostr-protocol/nostr
         github: https://github.com/nostr-protocol
 
@@ -4886,7 +4887,7 @@ categories:
         then [Listed.to](https://listed.to) is a public blogging platform with
         strong privacy features.
         It lets you publish posts directly through the Standard Notes app or web interface.
-        
+
         Other minimalistic platforms include [Notepin.co](https://notepin.co) and [Pen.io](http://pen.io).
 
         Want to write a simple text post and promote it yourself?
@@ -4968,7 +4969,7 @@ categories:
         url: https://newpipe.schabi.org
         description: An open source, privacy-respecting YouTube client for Android.
         # tosdrId: 2568
-      - name: FreeTube 
+      - name: FreeTube
         url: https://freetubeapp.io
         description: |
           An open source YouTube client for Windows, MacOS and Linux, providing
@@ -5007,7 +5008,17 @@ categories:
       services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: []
+      services: 
+      - name: FFmpeg
+        url: https://ffmpeg.org/
+        icon: https://ffmpeg.org/favicon.ico
+        openSource: true
+        github: FFmpeg/FFmpeg
+        description: |
+          A complete, cross-platform solution to record, convert, and stream audio and
+          video. It's the industry standard multimedia framework, handling a vast range
+          of formats. As a command-line tool, it guarantees that all processing is done
+          locally on your machine.
 
   - name: Creativity
     sections:
@@ -5098,7 +5109,7 @@ categories:
 
     - name: Video Editors
       alternativeTo: ['adobe premiere pro', 'final cut pro', 'davinci resolve', 'imovie', 'sony vegas pro']
-      services: 
+      services:
       - name: Shotcut
         followWith: Windows, Mac OS, Linux
         description: |
@@ -5163,7 +5174,7 @@ categories:
         github: NatronGitHub/Natron
         icon: https://natrongithub.github.io/img/Natron_icon.svg
         openSource: true
-    
+
     - name: Audio Editors & Recorders
       alternativeTo: ['adobe audition', 'garageband', 'fl studio', 'ableton live']
       services:
@@ -5174,16 +5185,16 @@ categories:
           great free alternative to Adobe Audition.
           Features recording from real and virtual devices,
           import/export to a wide range of formats, high-quality processing
-          advanced multi-track editing, noise reduction, pitch correction, 
+          advanced multi-track editing, noise reduction, pitch correction,
           audio restoration and much more.
-          It's easily extendable via community plugins, and 
+          It's easily extendable via community plugins, and
           also supports cusotm macros and many scripting options
         url: https://www.audacityteam.org
         github: audacity/audacity
         icon: https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg
         openSource: true
         tosdrId: 4516
-    
+
     - name: Casting & Streaming
       alternativeTo: ['xsplit', 'streamlabs obs', 'twitch studio', 'wirecast']
       services:
@@ -5200,11 +5211,11 @@ categories:
         icon: https://obsproject.com/assets/images/new_icon_small-r.png
         openSource: true
         tosdrId: 4227
-    
+
     - name: Screenshot Tools
       alternativeTo: ['snagit', 'greenshot', 'lightshot', 'gyazo', 'sharex']
       services: []
-    
+
     - name: 3D Graphics
       alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
       services:
@@ -5230,7 +5241,7 @@ categories:
         url: https://wings3d.com
         github: dgud/wings
         icon: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Wings3d.png/120px-Wings3d.png
-    
+
     - name: Animation
       alternativeTo: ['adobe after effects', 'animate cc', 'toon boom harmony', 'moho (anime studio)', 'pencil2d']
       services:
