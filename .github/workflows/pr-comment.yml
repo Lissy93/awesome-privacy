@@ -1,0 +1,94 @@
+name: PR Comment
+
+on:
+  workflow_run:
+    workflows: ["PR Check"]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    name: Post PR comment
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.event == 'pull_request'
+
+    steps:
+      - name: Download PR metadata
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-meta
+          path: pr-meta
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- pr-check-bot -->';
+
+            // Check if there are findings to post
+            const commentFile = 'pr-meta/comment.md';
+            if (!fs.existsSync(commentFile)) {
+              console.log('No findings to post — skipping.');
+              return;
+            }
+
+            // Determine the PR number
+            let prNumber;
+            const numberFile = 'pr-meta/number.txt';
+            if (fs.existsSync(numberFile)) {
+              prNumber = parseInt(fs.readFileSync(numberFile, 'utf8').trim());
+            }
+            if (!prNumber) {
+              // workflow_run.pull_requests is empty for fork PRs, so
+              // fall back to searching by head SHA if needed
+              const prs = context.payload.workflow_run.pull_requests;
+              if (prs && prs.length > 0) {
+                prNumber = prs[0].number;
+              } else {
+                const headSha = context.payload.workflow_run.head_sha;
+                const { data: prList } = await github.rest.pulls.list({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  sort: 'updated',
+                  direction: 'desc',
+                  per_page: 100,
+                });
+                const match = prList.find(pr => pr.head.sha === headSha);
+                if (!match) {
+                  console.log(`No open PR found for SHA ${headSha} — skipping.`);
+                  return;
+                }
+                prNumber = match.number;
+              }
+            }
+
+            // Skip if we already commented on this PR
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              per_page: 100,
+            });
+            if (comments.some(c => c.body.includes(marker))) {
+              console.log('Bot comment already exists — skipping.');
+              return;
+            }
+
+            // Post the comment
+            const body = fs.readFileSync(commentFile, 'utf8').trim();
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body,
+            });

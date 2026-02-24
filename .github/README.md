@@ -107,7 +107,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [E-Book Readers](#e-book-readers) (0)
 	- [Podcast Players](#podcast-players) (0)
 	- [Torrent Downloaders](#torrent-downloaders) (0)
-	- [File Converters](#file-converters) (0)
+	- [File Converters](#file-converters) (1)
 - **Creativity**
 	- [Image Editors](#image-editors) (8)
 	- [Video Editors](#video-editors) (7)
@@ -186,7 +186,7 @@ free plan.
 
 > - [Password Safe](https://www.pwsafe.org) - An offline, open source password manager designed by [Bruce Schneier](https://www.schneier.com/academic/passsafe/), with native applications for Windows, Linux, MacOS, Android and iOS, and support for YubiKey. The UI is a little dated, and there is no official browser extension, making is slightly less convenient to use compared with other options
 > - [PassBolt](https://www.passbolt.com) - A good option for teams. It is free, open source, self-hosted, extensible and OpenPGP based. It is specifically good for development and DevOps usage, with integrations for the terminal, browser and chat, and can be easily extended for custom usage, and deployed quickly with Docker
-> - [1Password](https://1password.com) - (proprietary) A fully-featured cross-platform password manager with sync. Free for self-hosted data (or $3/ month hosted). Be aware that 1Password is not fully open source, but they do regularly publish results of their independent [security audits](https://support.1password.com/security-assessments), and they have a solid reputation for transparently disclosing and fixing vulnerabilities     
+> - [1Password](https://1password.com) - (proprietary) A fully-featured cross-platform password manager with sync. Free for self-hosted data (or $3/ month hosted). Be aware that 1Password is not fully open source, but they do regularly publish results of their independent [security audits](https://support.1password.com/security-assessments), and they have a solid reputation for transparently disclosing and fixing vulnerabilities
 </details>
 
 <details>
@@ -278,9 +278,9 @@ and HMAC-Based One-Time Password (HOTP, specified in [RFC 4226](https://tools.ie
 ˙ 
 
 		</details>
-- **[<img src='https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico' width='16' height='16' alt='icon' /> Ente Auth](https://ente.io/auth/)** - Ente Auth is a free and open-source app which stores and generates TOTP tokens. 
-It can be used with an online account to backup and sync your tokens across your 
-devices (and access them via a web interface) in a secure, end-to-end encrypted 
+- **[<img src='https://raw.githubusercontent.com/ente-io/ente/main/auth/assets/icons/auth-icon.ico' width='16' height='16' alt='icon' /> Ente Auth](https://ente.io/auth/)** - Ente Auth is a free and open-source app which stores and generates TOTP tokens.
+It can be used with an online account to backup and sync your tokens across your
+devices (and access them via a web interface) in a secure, end-to-end encrypted
 fashion. It can also be used offline on a single device with no account necessary.
 […](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth "View full Ente Auth report") 
 	- <details>
@@ -346,8 +346,8 @@ It features small explicit keys, no config options, and UNIX-style composability
 ˙ 
 
 		</details>
-- **[<img src='https://avatars.githubusercontent.com/u/171401041' width='16' height='16' alt='icon' /> Picocrypt](None)** - Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
-that you can use to protect your files. It's designed to be the go-to tool for encryption, 
+- **[<img src='https://avatars.githubusercontent.com/u/171401041' width='16' height='16' alt='icon' /> Picocrypt]()** - Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
+that you can use to protect your files. It's designed to be the go-to tool for encryption,
 with a focus on security, simplicity, and reliability.
 […](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt "View full Picocrypt report") 
 	- <details>
@@ -408,7 +408,7 @@ Brave also has Tor built-in, when you open up a private tab/ window.
 ˙ 
 
 		</details>
-- **[<img src='https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg' width='16' height='16' alt='icon' /> Firefox](https://www.mozilla.org/firefox)** - Significantly more private, and offers some nifty privacy features than Chrome,
+- **[<img src='https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg' width='16' height='16' alt='icon' /> Firefox](https://www.firefox.com/)** - Significantly more private, and offers some nifty privacy features than Chrome,
 Internet Explorer and Safari. After installing, there are a couple of small tweaks
 you will need to make, in order to secure Firefox. For a though config, see
 [@arkenfox's user.js](https://github.com/arkenfox/user.js/). You can also follow
@@ -565,10 +565,10 @@ meta data.
 
 		</details>
 - **[<img src='https://github.com/simplex-chat/simplex-chat/blob/stable/media-logos/simplex-symbol-light.png' width='16' height='16' alt='icon' /> SimpleX](https://simplex.chat/)** - Simplex is gaining popularity as a secure and private messaging app renowned
-for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.     
+for its robust encryption protocol without user IDs or phone numbers and this improves your privacy.
 Simplex offers instant messaging, supports media attachments and voice and video calls.
-Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's 
-preferences for convenience, security, and accessibility. 
+Additionally, it is cross-platform, open-source, and completely free, aligning with the modern user's
+preferences for convenience, security, and accessibility.
 Learn more about the [Security Policy](https://simplex.chat/security/).
 […](https://awesome-privacy.xyz/communication/encrypted-messaging/simplex "View full SimpleX report") 
 	- <details>
@@ -742,11 +742,11 @@ full-featured free plan and premium subscription plans allowing for
 custom domains (starting at $3/month). Tuta
 [does not use OpenPGP](https://tuta.com/blog/posts/differences-email-encryption/)
 like other encrypted mail providers, instead they use a standardized, hybrid method
-consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048 
+consisting of symmetrical and asymmetrical algorithms (with AES256, and RSA 2048
 or ECC (x25519) and Kyber-1024). This causes compatibility issues when communicating with contacts
 using PGP. But it does allow them to encrypt much more of the header data (body,
 attachments, subject lines, and sender names etc) which PGP mail providers cannot do. The recent upgrades
-to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks 
+to Tuta's encryption algorithm makes data stored and sent with their service safe against attacks
 posed by quantum computers.
 […](https://awesome-privacy.xyz/communication/encrypted-email/tuta "View full Tuta report") 
 	- <details>
@@ -1061,7 +1061,7 @@ Native apps for Android, iOS, Windows, GNU/Linux and MacOS.
 
 ### Virtual Phone Numbers
 
-- **[<img src='https://i.ibb.co/2t4MBFj/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers. 
+- **[<img src='https://i.ibb.co/2t4MBFj/apple-touch-icon.png' width='16' height='16' alt='icon' /> SMSPool](https://www.smspool.net)** - Don't feel comfortable giving out your phone number? Protect your online identity by using our one-time-use non-VoIP phone numbers.
 We support over 50+ countries and support over 300+ services.
 […](https://awesome-privacy.xyz/communication/virtual-phone-numbers/smspool "View full SMSPool report") 
 	- <details>
@@ -1474,7 +1474,7 @@ and other features you may expect of a full-featured translation solution in-bro
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> - [Extension source viewer](https://addons.mozilla.org/en-US/firefox/addon/crxviewer) - A handy extension for viewing the source code of another browser extension, which is a useful tool for verifying the code does what it says 
+> - [Extension source viewer](https://addons.mozilla.org/en-US/firefox/addon/crxviewer) - A handy extension for viewing the source code of another browser extension, which is a useful tool for verifying the code does what it says
 </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
@@ -2830,7 +2830,7 @@ who have legal right to view your data.
 ### DNS Hosting
 
 - **[<img src='https://desec.io/favicon.svg' width='16' height='16' alt='icon' /> deSEC](https://desec.io)** - Free DNS hosting provider designed with security in mind, and running
-on purely open source software. deSEC is backed and funded by SSE. 
+on purely open source software. deSEC is backed and funded by SSE.
 […](https://awesome-privacy.xyz/networking/dns-hosting/desec "View full deSEC report") 
 	- <details>
 		<summary>Stats</summary>
@@ -2991,7 +2991,7 @@ month for 10GB, additional plans go up-to 2TB.
 <summary>✳️ <b>Notable Mentions</b></summary>
 
 > If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com)
-> is a utility that encrypts your entire notebook, before it is uploaded to the cloud. 
+> is a utility that encrypts your entire notebook, before it is uploaded to the cloud.
 > 
 > [Org Mode](https://orgmode.org) is a mode for [GNU Emacs](https://www.gnu.org/software/emacs/)
 > dedicated to working with the Org markup format. Org can be thought of as
@@ -3581,7 +3581,7 @@ for Windows, implemented by Bogdan Hrastnik.
 > 
 > If you have [GIMP](https://www.gimp.org) installed, then just go to `File --> Export As --> Export --> Advanced Options --> Uncheck the "Save EXIF data" option`.
 > 
-> Often you need to perform meta data removal programmatically, as part of a script or automation process.  
+> Often you need to perform meta data removal programmatically, as part of a script or automation process.
 > - GoLang: [go-exif](https://github.com/dsoprea/go-exif) by @dsoprea
 > - JS: [exifr](https://github.com/MikeKovarik/exifr) by @MikeKovarik
 > - Python: [Piexif](https://github.com/hMatoba/Piexif) by @hMatoba
@@ -3684,7 +3684,7 @@ collecting a wealth of information, and logging your every move.
 A [custom ROM](https://en.wikipedia.org/wiki/List_of_custom_Android_distributions),
 is an open source, usually Google-free mobile OS that can be flashed to your device.
 
-- **[<img src='https://grapheneos.org/apple-touch-icon.png' width='16' height='16' alt='icon' /> GrapheneOS](https://grapheneos.org/)** - GrapheneOS is an open source privacy and security focused mobile OS with Android app compatibility. Developed by Daniel Micay. 
+- **[<img src='https://grapheneos.org/apple-touch-icon.png' width='16' height='16' alt='icon' /> GrapheneOS](https://grapheneos.org/)** - GrapheneOS is an open source privacy and security focused mobile OS with Android app compatibility. Developed by Daniel Micay.
 GrapheneOS is a young project, and currently only supports Pixel devices, partially due to their strong hardware security.
 […](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/grapheneos "View full GrapheneOS report") 
 	- <details>
@@ -3694,8 +3694,8 @@ GrapheneOS is a young project, and currently only supports Pixel devices, partia
 ˙ 
 
 		</details>
-- **[<img src='https://calyxos.org/assets/images/favicon/apple-touch-icon.png' width='16' height='16' alt='icon' /> CalyxOS](https://calyxos.org)** - CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users. 
-Plus, proactive security recommendations and automatic updates take the guesswork out of keeping your personal data personal. Also currently 
+- **[<img src='https://calyxos.org/assets/images/favicon/apple-touch-icon.png' width='16' height='16' alt='icon' /> CalyxOS](https://calyxos.org)** - CalyxOS is an free and open source Android mobile operating system that puts privacy and security into the hands of everyday users.
+Plus, proactive security recommendations and automatic updates take the guesswork out of keeping your personal data personal. Also currently
 only supports Pixel devices and Xiaomi Mi A2 with Fairphone 4, OnePlus 8T, OnePlus 9 test builds available. Developed by the Calyx Foundation.
 […](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/calyxos "View full CalyxOS report") 
 	- <details>
@@ -3705,8 +3705,8 @@ only supports Pixel devices and Xiaomi Mi A2 with Fairphone 4, OnePlus 8T, OnePl
 ˙ 
 
 		</details>
-- **[<img src='https://divestos.org/images/favicon.png' width='16' height='16' alt='icon' /> DivestOS](https://divestos.org)** - DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of 
-discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. Project is developed and maintained 
+- **[<img src='https://divestos.org/images/favicon.png' width='16' height='16' alt='icon' /> DivestOS](https://divestos.org)** - DivestOS is a vastly diverged unofficial more secure and private soft fork of LineageOS. DivestOS primary goal is prolonging the life-span of
+discontinued devices, enhancing user privacy, and providing a modest increase of security where/when possible. Project is developed and maintained
 solely by Tad (SkewedZeppelin) since 2014.
 […](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/divestos "View full DivestOS report") 
 	- <details>
@@ -3716,7 +3716,7 @@ solely by Tad (SkewedZeppelin) since 2014.
 ˙ 
 
 		</details>
-- **[<img src='https://www.lineageos.org/images/logo.png' width='16' height='16' alt='icon' /> LineageOS](https://www.lineageos.org)** - A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained, 
+- **[<img src='https://www.lineageos.org/images/logo.png' width='16' height='16' alt='icon' /> LineageOS](https://www.lineageos.org)** - A free and open-source operating system for various devices, based on the Android mobile platform - Lineage is light-weight, well maintained,
 supports a wide range of devices, and comes bundled with Privacy Guard.
 […](https://awesome-privacy.xyz/operating-systems/mobile-operating-systems/lineageos "View full LineageOS report") 
 	- <details>
@@ -3903,7 +3903,7 @@ which are not available in a standard Windows 10 instance. It does require
 some technical knowledge to get started with, but once setup should perform
 just as any other Windows 10 system. Note that you should only download the
 LTSC ISO from the Microsoft's
-[official page](https://www.microsoft.com/en-in/evalcenter/evaluate-windows-10-enterprise) 
+[official page](https://www.microsoft.com/en-in/evalcenter/evaluate-windows-10-enterprise)
 
 
 #### Improve the Security and Privacy of your current OS
@@ -4106,7 +4106,7 @@ and check reviews/ forums.
 Create a system restore point, before making any significant changes to
 your OS (such as disabling core features).
 
-From a security and privacy perspective, Linux may be a better option.  
+From a security and privacy perspective, Linux may be a better option.
 
 
 </details>
@@ -4188,7 +4188,7 @@ decrease your privacy. Never use a free anti-virus, and never trust the companie
 that offer free solutions, even if you pay for the premium package.
 This includes (but not limited to) Avast, AVG, McAfee and Kasperky.
 For AV to be effective, it needs intermate access to all areas of your PC,
-so it is important to go with a trusted vendor, and monitor its activity closely. 
+so it is important to go with a trusted vendor, and monitor its activity closely.
 
 
 </details>
@@ -4334,7 +4334,7 @@ you are happy with how it works, from a privacy perspective.
 
 - **[<img src='https://avatars.githubusercontent.com/u/7365162?s=200&v=4' width='16' height='16' alt='icon' /> Gladys Assistant](https://gladysassistant.com/)** - An open source privacy-respecting Home Assistant, compatible with a wide range of
 devices including Raspberry Pi, desktop computers, or NAS systems.
-Actively developed, with good french community and various integrations 
+Actively developed, with good french community and various integrations
 (Zigbee, Philips, Camera, Tuya, MQTT, Telegram, ...).
 […](https://awesome-privacy.xyz/smart-home-and-iot/smart-home/gladys-assistant "View full Gladys Assistant report") 
 	- <details>
@@ -4407,7 +4407,7 @@ and be very weary crypto-related scams are very common. as is and cryptocurrency
 
 > Other privacy-focused cryptocurrencies include:
 > [PIVX](https://pivx.org),
-> [Verge](https://vergecurrency.com), and [Piratechain](https://pirate.black/). 
+> [Verge](https://vergecurrency.com), and [Piratechain](https://pirate.black/).
 > </details>
 
 <details>
@@ -4781,12 +4781,12 @@ without algorithmic timeline manipulations. It operates across independent serve
 ˙ 
 
 		</details>
-- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> nostr](https://github.com/nostr-protocol/nostr)** - nostr stands for Notes and other stuff transmitted by relays. 
-It is an open protocol, not merely a platform. 
-This distinction enables truly censorship-resistant and global value-for-value publishing on the web. 
-With the power to replace data-greedy applications like Twitter and Instagram, 
-nostr offers a promising alternative for users seeking a more private and secure online experience 
-without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.  
+- **[<img src='https://icon.horse/icon/github.com' width='16' height='16' alt='icon' /> nostr](https://github.com/nostr-protocol/nostr)** - nostr stands for Notes and other stuff transmitted by relays.
+It is an open protocol, not merely a platform.
+This distinction enables truly censorship-resistant and global value-for-value publishing on the web.
+With the power to replace data-greedy applications like Twitter and Instagram,
+nostr offers a promising alternative for users seeking a more private and secure online experience
+without algorithmic manipulations. ".... I feel like I’m looking at the future." that is what [Snowden](https://x.com/Snowden/status/1617623779626352640) wrote about nostr.
 […](https://awesome-privacy.xyz/social/social-networks/nostr "View full nostr report") 
 	- <details>
 		<summary>Stats</summary>
@@ -5114,7 +5114,19 @@ It is built upon the [Invidious](https://invidious.io/) API.
 
 ### File Converters
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://ffmpeg.org/favicon.ico' width='16' height='16' alt='icon' /> FFmpeg](https://ffmpeg.org/)** - A complete, cross-platform solution to record, convert, and stream audio and
+video. It's the industry standard multimedia framework, handling a vast range
+of formats. As a command-line tool, it guarantees that all processing is done
+locally on your machine.
+[…](https://awesome-privacy.xyz/media/file-converters/ffmpeg "View full FFmpeg report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: FFmpeg/FFmpeg](https://img.shields.io/github/stars/FFmpeg/FFmpeg?style=flat&logo=github&label=FFmpeg&color=%235f53f4&cacheSeconds=3600)](https://github.com/FFmpeg/FFmpeg)  [![FFmpeg on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FFmpeg)](https://awesome-privacy.xyz/media/file-converters/ffmpeg) 
+📦 Open Source ˙ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
@@ -5298,9 +5310,9 @@ easily extendable via community plugins, or by writing Python scripts
 great free alternative to Adobe Audition.
 Features recording from real and virtual devices,
 import/export to a wide range of formats, high-quality processing
-advanced multi-track editing, noise reduction, pitch correction, 
+advanced multi-track editing, noise reduction, pitch correction,
 audio restoration and much more.
-It's easily extendable via community plugins, and 
+It's easily extendable via community plugins, and
 also supports cusotm macros and many scripting options
 […](https://awesome-privacy.xyz/creativity/audio-editors-and-recorders/audacity "View full Audacity report") 
 	- <details>
@@ -5584,13 +5596,6 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/4aka">
-            <img src="https://avatars.githubusercontent.com/u/30434449?u=f2c0f3a157f1f59cffad960dc06107f47086fbb4&v=4" width="80;" alt="4aka"/>
-            <br />
-            <sub><b>Arch Incorp</b></sub>
-        </a>
-    </td>
-    <td align="center">
         <a href="https://github.com/undefined">
             <img src="" width="80;" alt="undefined"/>
             <br />
@@ -5603,15 +5608,15 @@ Huge thanks to the following sponsors, for their ongoing support 💖
             <br />
             <sub><b>Frankdez93</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/BigoudOps">
             <img src="https://avatars.githubusercontent.com/u/101472804?u=5e4948110e48320024f212edf5ae2332b63fc391&v=4" width="80;" alt="BigoudOps"/>
             <br />
             <sub><b>John BigoudOps</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/hudsonrock-partnerships">
             <img src="https://avatars.githubusercontent.com/u/163282900?u=5f2667f7fe5d284ac7a2da6b0800ea8970b0fcbf&v=4" width="80;" alt="hudsonrock-partnerships"/>
@@ -5627,6 +5632,13 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/hesreallyhim">
+            <img src="https://avatars.githubusercontent.com/u/172150522?u=e288991976c46b53437a5880e90be140634a8477&v=4" width="80;" alt="hesreallyhim"/>
+            <br />
+            <sub><b>Really Him</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/gl0bal01">
             <img src="https://avatars.githubusercontent.com/u/173822055?u=4d323807f120b34da9b156bfd168b46a22844764&v=4" width="80;" alt="gl0bal01"/>
             <br />
@@ -5634,17 +5646,10 @@ Huge thanks to the following sponsors, for their ongoing support 💖
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/0x41647269656E">
-            <img src="https://avatars.githubusercontent.com/u/191976713?u=e2c3d380c9e9140fa022a27c598915538b0083e5&v=4" width="80;" alt="0x41647269656E"/>
+        <a href="https://github.com/clj00321">
+            <img src="https://avatars.githubusercontent.com/u/243985327?v=4" width="80;" alt="clj00321"/>
             <br />
-            <sub><b>0x41647269656E</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/JDB321Sailor">
-            <img src="https://avatars.githubusercontent.com/u/212125521?v=4" width="80;" alt="JDB321Sailor"/>
-            <br />
-            <sub><b>JDB321Sailor</b></sub>
+            <sub><b>Christian Løvgren Jensen</b></sub>
         </a>
     </td></tr>
 </table>
