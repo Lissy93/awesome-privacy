@@ -257,6 +257,21 @@ categories:
           devices (and access them via a web interface) in a secure, end-to-end encrypted
           fashion. It can also be used offline on a single device with no account necessary.
 
+      - name: Bitwarden Authenticator
+        url: https://bitwarden.com/products/authenticator/
+        icon: https://avatars.githubusercontent.com/u/15990069
+        openSource: true
+        github: bitwarden/ios
+        tosdrId: 5256
+        iosApp: https://apps.apple.com/app/bitwarden-authenticator/id6497335175
+        androidApp: com.bitwarden.authenticator
+        description: |
+          Bitwarden Authenticator is a free and open-source app which stores and generates
+          time-based codes for multi-factor authentication. It can be used with an online
+          account to backup and sync your tokens across your  devices (and access them via
+          a web interface) in a secure, end-to-end encrypted fashion. It can also be used
+          offline on a single device with no account necessary.
+
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
       notableMentions: >
