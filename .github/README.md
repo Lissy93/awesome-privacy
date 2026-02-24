@@ -22,7 +22,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (9)
+	- [2-Factor Authentication](#2-factor-authentication) (10)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (5)
@@ -287,6 +287,19 @@ fashion. It can also be used offline on a single device with no account necessar
 		<summary>Stats</summary>
 
 		[![GitHub: ente-io/ente](https://img.shields.io/github/stars/ente-io/ente?style=flat&logo=github&label=ente&color=%235f53f4&cacheSeconds=3600)](https://github.com/ente-io/ente) [![Privacy Policy](https://shields.tosdr.org/en_5256.svg)](https://tosdr.org/en/service/5256) [![Ente Auth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Ente_Auth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/ente-auth) 
+📦 Open Source ˙ 
+
+		</details>
+- **[<img src='https://avatars.githubusercontent.com/u/15990069' width='16' height='16' alt='icon' /> Bitwarden Authenticator](https://bitwarden.com/products/authenticator/)** - Bitwarden Authenticator is a free and open-source app which stores and generates
+time-based codes for multi-factor authentication. It can be used with an online
+account to backup and sync your tokens across your  devices (and access them via
+a web interface) in a secure, end-to-end encrypted fashion. It can also be used
+offline on a single device with no account necessary.
+[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/bitwarden-authenticator "View full Bitwarden Authenticator report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: bitwarden/ios](https://img.shields.io/github/stars/bitwarden/ios?style=flat&logo=github&label=ios&color=%235f53f4&cacheSeconds=3600)](https://github.com/bitwarden/ios) [![Privacy Policy](https://shields.tosdr.org/en_5256.svg)](https://tosdr.org/en/service/5256) [![Bitwarden Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bitwarden_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/bitwarden-authenticator) 
 📦 Open Source ˙ 
 
 		</details>
