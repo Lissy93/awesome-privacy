@@ -3164,11 +3164,9 @@ categories:
         github: bewcloud/bewcloud
         openSource: true
         description: |
-          Modern and simpler alternative to Nextcloud and ownCloud, built with
-          TypeScript and Deno, with a Docker image available.
-          Combines file management, syncing, sharing, markdown notes, RSS feeds,
-          expenses, calendars, contacts, and photo viewing in one interface.
-          Supports MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
+          Modern and simpler alternative to Nextcloud/ownCloud crafted with TypeScript.
+          Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
+          contacts, and photos, with MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
 
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
