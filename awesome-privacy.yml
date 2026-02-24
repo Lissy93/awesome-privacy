@@ -394,7 +394,7 @@ categories:
           Brave also has Tor built-in, when you open up a private tab/ window.
 
       - name: Firefox
-        url: https://www.mozilla.org/firefox
+        url: https://www.firefox.com/
         icon: https://www.mozilla.org/media/protocol/img/logos/firefox/logo.fedb52c912d6.svg
         openSource: true
         tosdrId: 188
@@ -4997,7 +4997,17 @@ categories:
       services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: []
+      services: 
+      - name: FFmpeg
+        url: https://ffmpeg.org/
+        icon: https://ffmpeg.org/favicon.ico
+        openSource: true
+        github: FFmpeg/FFmpeg
+        description: |
+          A complete, cross-platform solution to record, convert, and stream audio and
+          video. It's the industry standard multimedia framework, handling a vast range
+          of formats. As a command-line tool, it guarantees that all processing is done
+          locally on your machine.
 
   - name: Creativity
     sections:
