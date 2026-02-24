@@ -4719,6 +4719,7 @@ categories:
           Ledger, hledger, and Beancount among others, providing a flexible and vendor-independent
           approach to accounting.
         url: https://plaintextaccounting.org
+ 
 
       notableMentions: |
         Spreadsheets remain a popular choice for managing budgets and financial planning.
@@ -5264,3 +5265,4 @@ categories:
         description: An animated sprite editor & pixel art tool for Windows, macOS and Linux.
         github: https://github.com/aseprite/aseprite
         openSource: true
+
