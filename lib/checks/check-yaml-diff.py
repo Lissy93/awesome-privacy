@@ -90,6 +90,23 @@ def write_github_output(name, value):
             f.write(f"{name}={value}\n")
 
 
+def find_duplicate_names(data):
+    """Find duplicate service names within the same section."""
+    duplicates = []
+    for cat in data.get("categories", []):
+        cn = cat.get("name", "")
+        for sec in cat.get("sections", []):
+            sn = sec.get("name", "")
+            seen = {}
+            for svc in sec.get("services", []):
+                name = svc.get("name", "")
+                if name in seen:
+                    duplicates.append((cn, sn, name))
+                else:
+                    seen[name] = True
+    return duplicates
+
+
 def fmt_path(key):
     """Format a tuple key as a readable path."""
     return " → ".join(key) if isinstance(key, tuple) else key
@@ -126,6 +143,11 @@ def write_step_summary(diff_result):
             bullets.append(f"- Added category **{change['category']}**")
         else:
             bullets.append(f"- Removed category **{change['category']}**")
+    for dup in diff_result.get("duplicates", []):
+        bullets.append(
+            f"- ⚠️ Duplicate service name **{dup['service']}** "
+            f"in {dup['category']} → {dup['section']}"
+        )
 
     if bullets:
         lines.extend(bullets)
@@ -175,10 +197,15 @@ def main():
     for k in cat_removed:
         categories.append({"category": k, "change_type": "removed_category"})
 
+    duplicates = find_duplicate_names(head)
+    dup_entries = [{"category": d[0], "section": d[1], "service": d[2]}
+                   for d in duplicates]
+
     diff_result = {
         "services": {"added": added, "removed": removed, "modified": modified},
         "sections": sections,
         "categories": categories,
+        "duplicates": dup_entries,
     }
 
     with open(DIFF_OUTPUT_PATH, "w") as f:
@@ -194,6 +221,11 @@ def main():
     added_sections = [s for s in sections if s["change_type"] == "added_section"]
     if added_count == 0 and len(added_sections) > 1:
         print(red(f"Single-entry rule violation: {len(added_sections)} section additions found."), file=sys.stderr)
+        sys.exit(EXIT_RULE_VIOLATION)
+
+    if duplicates:
+        names = ", ".join(f"{d[2]} (in {d[0]} → {d[1]})" for d in duplicates)
+        print(red(f"Duplicate service names found: {names}"), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
 
     total = len(added) + len(removed) + len(modified)

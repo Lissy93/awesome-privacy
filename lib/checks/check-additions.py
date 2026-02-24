@@ -150,30 +150,46 @@ def check_single_entry(diff):
     return None
 
 
-def build_name_index(head):
-    """Build {lowercase_name: "category > section"} from all services."""
+def _added_keys(diff):
+    """Build a set of (category, section, lowercase_name) for added services."""
+    keys = set()
+    for svc in diff.get("services", {}).get("added", []):
+        name = svc.get("fields", {}).get("name", "").lower().strip()
+        keys.add((svc.get("category", ""), svc.get("section", ""), name))
+    return keys
+
+
+def build_name_index(head, diff):
+    """Build {lowercase_name: "category > section"} from all services, excluding additions."""
     index = {}
     if not head:
         return index
+    exclude = _added_keys(diff)
     for cat in head.get("categories", []):
         cn = cat.get("name", "")
         for sec in cat.get("sections", []):
             sn = sec.get("name", "")
             for svc in sec.get("services", []):
                 name = svc.get("name", "").lower().strip()
-                if name:
+                if name and (cn, sn, name) not in exclude:
                     index[name] = f"{cn} > {sn}"
     return index
 
 
-def build_url_index(head):
-    """Build {url: service_name} from all services, skipping empty URLs."""
+def build_url_index(head, diff):
+    """Build {url: service_name} from all services, excluding additions."""
     index = {}
     if not head:
         return index
+    exclude = _added_keys(diff)
     for cat in head.get("categories", []):
+        cn = cat.get("name", "")
         for sec in cat.get("sections", []):
+            sn = sec.get("name", "")
             for svc in sec.get("services", []):
+                name = svc.get("name", "").lower().strip()
+                if (cn, sn, name) in exclude:
+                    continue
                 url = svc.get("url", "")
                 if url:
                     index[url] = svc.get("name", "")
@@ -245,8 +261,8 @@ def main():
             if finding:
                 findings.append(finding)
 
-            name_index = build_name_index(head)
-            url_index = build_url_index(head)
+            name_index = build_name_index(head, diff)
+            url_index = build_url_index(head, diff)
 
             finding = check_duplicate_name(diff, name_index)
             if finding:
