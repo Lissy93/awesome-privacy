@@ -2422,9 +2422,7 @@ on a raspberry Pi, since it is lightweight and heavily customizable.
 - **[<img src='https://shorewall.org/favicon.ico' width='16' height='16' alt='icon' /> Shorewall](https://shorewall.org)** - An open source firewall tool for Linux that builds upon the Netfilter system built into the Linux kernel,
 making it easier to manage more complex configuration schemes with iptables.
 […](https://awesome-privacy.xyz/networking/firewalls/shorewall "View full Shorewall report") 
-- **[<img src='https://docs.bunkerweb.io/latest/assets/favicon.png' width='16' height='16' alt='icon' /> BunkerWeb](https://www.bunkerweb.io)** - BunkerWeb is an open-source Next-Generation Web Application Firewall (WAF).
-It provides easy protection for your web services and is designed to remain secure by default.
-It integrates seamlessly with modern environments (Docker, Kubernetes, Linux, etc.).
+- **[<img src='https://docs.bunkerweb.io/latest/assets/favicon.png' width='16' height='16' alt='icon' /> BunkerWeb](https://www.bunkerweb.io)** - BunkerWeb is an open-source web application firewall (WAF) that protects web services from common web attacks. It integrates with environments such as Docker, Kubernetes, and Linux.
 […](https://awesome-privacy.xyz/networking/firewalls/bunkerweb "View full BunkerWeb report") 
 	- <details>
 		<summary>Stats</summary>
