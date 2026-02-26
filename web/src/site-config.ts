@@ -14,39 +14,59 @@ export const authorProjects = [
   {
     title: 'Web-Check',
     description: 'OSINT tool for analysing any website',
-    icon: 'https://web-check.as93.net/web-check.png',
+    icon: 'https://cdn.as93.net/logo/web-check/w256',
     link: 'https://github.com/lissy93/web-check',
   },
   {
     title: 'Dashy',
     description: 'Dashboard app, for organising your self-hosted services',
-    icon: 'https://dashy.to/img/dashy.png',
+    icon: 'https://cdn.as93.net/logo/dashy/w256',
     link: 'https://github.com/lissy93/dashy',
+  },
+  {
+    title: 'Domain Locker',
+    description:
+      'All-in-one tool, for keeping track of your domain name portfolio',
+    icon: 'https://cdn.as93.net/logo/domain-locker/w256',
+    link: 'https://github.com/lissy93/domain-locker',
+  },
+  {
+    title: 'Pixelflare',
+    description: 'Ultra high-performance privacy-respecting image CDN',
+    icon: 'https://cdn.as93.net/logo/pixelflare/w256',
+    link: 'https://github.com/Lissy93/pixelflare',
+  },
+  {
+    title: 'Networking Toolbox',
+    description:
+      '100+ offline-first networking lookups, calculators and conversions',
+    icon: 'https://cdn.as93.net/logo/networking-toolbox/w256',
+    link: 'https://github.com/Lissy93/networking-toolbox',
   },
   {
     title: 'Portainer-Templates',
     description: 'Compiled repository of 1-click Docker apps for self-hosting',
-    icon: 'https://portainer-templates.as93.net/favicon.png',
+    icon: 'https://cdn.as93.net/logo/portainer-templates/w256',
     link: 'https://github.com/lissy93/portainer-templates',
   },
   {
     title: 'AdGuardian',
     description:
       'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
-    icon: 'https://adguardian.as93.net/favicon.png',
+    icon: 'https://cdn.as93.net/logo/adguardian/w256',
     link: 'https://github.com/lissy93/adguardian-term',
   },
   {
     title: 'Bug-Bounties',
     description:
       'Database of websites which accept responsible vulnerability disclosure',
-    icon: 'https://bug-bounties.as93.net/favicon.png',
+    icon: 'https://cdn.as93.net/logo/bug-bounties',
     link: 'https://github.com/lissy93/bug-bounties',
   },
   {
     title: 'Git-In',
     description: 'Tools and resources to help beginners get into open source',
-    icon: 'https://www.git-in.to/favicon.png',
+    icon: 'https://cdn.as93.net/logo/git-in/w256',
     link: 'https://github.com/lissy93/git-in',
   },
 ];
@@ -85,7 +105,7 @@ export const authorSocials = [
 ];
 
 export const aboutOurData = `
-All data is stored in 
+All data is stored in
 [\`awesome-privacy.yml\`](https://github.com/lissy93/awesome-privacy/blob/main/awesome-privacy.yml).
 
 This file is then pulled into the website at build-time, and also used to generate
@@ -133,7 +153,7 @@ Use our public instance, at: \`https://api.awesome-privacy.xyz\` or [self-host y
 `;
 
 export const projectRequirements = `
-For software to be included in this list, it must meet the following requirements: 
+For software to be included in this list, it must meet the following requirements:
 
 - **Privacy Respecting**
 	- The project must respect users privacy, not collect more data than necessary, and store info securely
@@ -149,7 +169,7 @@ For software to be included in this list, it must meet the following requirement
 	- Ideally it should be possible for the user to build and run/deploy the software themselves from source
 - **Actively Maintained**
   - The developers should address dependency updates and security patches in a timely manner
-  - Ideally the source should have been updated within the last 12 months 
+  - Ideally the source should have been updated within the last 12 months
 - **Transparent**
   - It should be clear who is behind the project, what their motives are, and what (if any) the funding model is
   - For hosted solutions, the privacy policy should clearly state what data is collected, how it's used and how long it's stored

@@ -34,4 +34,16 @@ const adapter = {
 }[deployTarget]();
 
 // Export Astro configuration
-export default defineConfig({ output, integrations, site, adapter });
+export default defineConfig({
+	output,
+	integrations,
+	site,
+	adapter,
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: { api: 'modern' },
+			},
+		},
+	},
+});
