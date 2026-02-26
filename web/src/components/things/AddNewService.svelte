@@ -20,24 +20,31 @@
   const serviceCrypto = writable(false);
   const additionalInfo = writable('');
 
-  let codeBlock: any;
+  let codeBlock: HTMLElement | undefined;
   let interactiveActivated = false;
 
   $: (yamlText, updateHighlighting());
 
+  /* eslint-disable svelte/no-dom-manipulating -- hljs requires direct DOM access for syntax highlighting */
   function updateHighlighting() {
     if (codeBlock) {
       codeBlock.textContent = yamlText;
       codeBlock.dataset.highlighted && delete codeBlock.dataset.highlighted;
-      if (window && (window as any).hljs) {
-        (window as any).hljs.highlightElement(codeBlock);
+      const hljs = (
+        window as Window & {
+          hljs?: { highlightElement: (el: HTMLElement) => void };
+        }
+      ).hljs;
+      if (hljs) {
+        hljs.highlightElement(codeBlock);
         interactiveActivated = true;
       }
     }
   }
+  /* eslint-enable svelte/no-dom-manipulating */
 
-  const filterEmptyValues = (obj: Record<string, any>) => {
-    const filteredObj: Record<string, any> = {};
+  const filterEmptyValues = (obj: Record<string, unknown>) => {
+    const filteredObj: Record<string, unknown> = {};
     Object.keys(obj).forEach((key) => {
       if (obj[key] || ['name', 'url', 'icon', 'description'].includes(key)) {
         filteredObj[key] = obj[key];
@@ -397,6 +404,7 @@
     upon approval.
   </p>
   {#if !interactiveActivated || !codeBlock}
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -- yamlText is generated from user form input via yaml.dump, not arbitrary HTML -->
     <pre><code class="language-yaml">{@html yamlText}</code></pre>
   {/if}
   <pre><code bind:this={codeBlock} class="language-yaml"></code></pre>

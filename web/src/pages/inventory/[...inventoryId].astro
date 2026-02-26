@@ -1,11 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import SavedServices from '@components/things/SavedServices.svelte';
-import GetSharableLink from '@components/things/GetSharableLink.svelte';
 
 import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
-import EditableTitle from '@components/form/EditableTitle.svelte';
 import type { Category } from '../../types/Service';
 
 const categories = (await fetchData())?.categories || ([] as Category[]);

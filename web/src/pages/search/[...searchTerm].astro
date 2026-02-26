@@ -4,15 +4,14 @@ import Fuse from 'fuse.js';
 import Layout from '@layouts/Layout.astro';
 import { fetchData, slugify } from '@utils/fetch-data';
 import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
+import type { SearchItem } from '@utils/do-searchy-searchy';
 import Search from '@components/things/Search.svelte';
 import SmartSuggestions from '@components/things/SmartSuggestions.svelte';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 
-import type { Service } from '../../types/Service';
-
 export const prerender = false;
 
-let fuse: Fuse<any>;
+let fuse: Fuse<SearchItem>;
 
 const categories = (await fetchData())?.categories;
 
@@ -28,26 +27,35 @@ const searchResults = fuse
 
 const services = searchResults.filter((result) => result.type === 'Service');
 
+interface GroupedSection {
+	sectionName: string;
+	items: SearchItem[];
+}
+
+interface GroupedCategory {
+	categoryName: string;
+	sections: Record<string, GroupedSection>;
+}
+
 const putResultsIntoGroups = () => {
-	const grouped = services.reduce((acc, item) => {
-		const { category: categoryName, sectionName, ...service } = item;
+	const grouped: Record<string, GroupedCategory> = {};
 
-		if (!acc[categoryName]) {
-			acc[categoryName] = { categoryName, sections: {} };
+	for (const item of services) {
+		const categoryName = item.category;
+		const sectionName = item.sectionName || '';
+
+		if (!grouped[categoryName]) {
+			grouped[categoryName] = { categoryName, sections: {} };
 		}
 
-		if (!acc[categoryName].sections[sectionName]) {
-			acc[categoryName].sections[sectionName] = { sectionName, items: [] };
+		if (!grouped[categoryName].sections[sectionName]) {
+			grouped[categoryName].sections[sectionName] = { sectionName, items: [] };
 		}
 
-		acc[categoryName].sections[sectionName].items.push(service);
+		grouped[categoryName].sections[sectionName].items.push(item);
+	}
 
-		return acc;
-	}, {});
-
-	// Convert the grouped object into the desired array structure.
-	// And fuck it, let's use `any`
-	return Object.values(grouped).map((category: any) => ({
+	return Object.values(grouped).map((category) => ({
 		categoryName: category.categoryName,
 		sections: Object.values(category.sections),
 	}));
@@ -74,7 +82,7 @@ const beer = putResultsIntoGroups();
 	</section>
 	<div class="results">
 		{
-			beer.map((category: any) => (
+			beer.map((category) => (
 				<div class="category">
 					<a class="category-title" href={`/${slugify(category.categoryName)}`}>
 						<h3>{category.categoryName}</h3>
@@ -83,11 +91,11 @@ const beer = putResultsIntoGroups();
 						<FontAwesome iconName={slugify(category.categoryName)} />
 					</span>
 					<ul class="section-list">
-						{category.sections.map((section: any) => (
+						{category.sections.map((section) => (
 							<li class="section-item">
 								<h4>{section.sectionName}</h4>
 								<ul class="service-list">
-									{section.items.map((item: Service) => (
+									{section.items.map((item) => (
 										<li>
 											<a href={item.url}>{item.name}</a>
 										</li>

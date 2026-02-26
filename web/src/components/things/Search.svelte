@@ -2,21 +2,17 @@
   import { onMount } from 'svelte';
   import Fuse from 'fuse.js';
   import { slugify } from '@utils/fetch-data';
-  import type {
-    Category,
-    Section,
-    Service,
-    ShortService,
-  } from '../../types/Service';
+  import type { Category } from '../../types/Service';
   import { formatLink } from '@utils/parse-markdown';
   import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
+  import type { SearchItem } from '@utils/do-searchy-searchy';
 
   export let data: Category[];
   export let previousSearch: string | undefined = undefined;
 
-  let fuse: Fuse<any>;
+  let fuse: Fuse<SearchItem>;
   let searchQuery = '';
-  let results: any[] = [];
+  let results: SearchItem[];
 
   // Initialize Fuse.js
   onMount(() => {
@@ -91,7 +87,7 @@
   {#if searchQuery.length > 0}
     <div class="suggestions">
       <ul>
-        {#each results as result}
+        {#each results as result (result.name + result.category + result.sectionName)}
           <li class="result-row">
             <a
               href={makeResultLink(

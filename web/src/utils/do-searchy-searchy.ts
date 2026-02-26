@@ -1,7 +1,19 @@
 import type { Category } from '../types/Service';
 
-export const prepareSearchItems = (categories: Category[]) => {
-  const items: any = [];
+export interface SearchItem {
+  type: 'Category' | 'Section' | 'Service';
+  category: string;
+  itemCount?: number;
+  sectionName?: string;
+  description?: string;
+  name?: string;
+  url?: string;
+  github?: string;
+  logo?: string;
+}
+
+export const prepareSearchItems = (categories: Category[]): SearchItem[] => {
+  const items: SearchItem[] = [];
   // Add each category
   categories.forEach((category) => {
     items.push({

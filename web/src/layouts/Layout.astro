@@ -10,7 +10,7 @@ interface Props {
 	keywords?: string; // Overide keywords tag
 	hideNav?: boolean; // Don't show the navbar (just homepage)
 	author?: string; // Author of the content
-	customSchemaJson?: any; // Custom schema item
+	customSchemaJson?: Record<string, unknown>; // Custom schema item
 	breadcrumbs?: Array<{
 		name: string;
 		item: string;
@@ -121,6 +121,7 @@ const makeSearchLd = () => {
 		{
 			breadcrumbs && (
 				<script
+					is:inline
 					type="application/ld+json"
 					set:html={JSON.stringify(makeBreadcrumbs())}
 				/>
@@ -129,12 +130,14 @@ const makeSearchLd = () => {
 		{
 			customSchemaJson && (
 				<script
+					is:inline
 					type="application/ld+json"
 					set:html={JSON.stringify(customSchemaJson)}
 				/>
 			)
 		}
 		<script
+			is:inline
 			type="application/ld+json"
 			set:html={JSON.stringify(makeSearchLd)}
 		/>

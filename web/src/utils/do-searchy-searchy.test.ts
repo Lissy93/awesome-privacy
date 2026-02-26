@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { prepareSearchItems } from './do-searchy-searchy';
+import type { SearchItem } from './do-searchy-searchy';
 import type { Category } from '../types/Service';
 
 const makeCategory = (overrides: Partial<Category> = {}): Category =>
@@ -35,7 +36,7 @@ describe('prepareSearchItems', () => {
       }),
     ] as Category[];
     const items = prepareSearchItems(categories);
-    const section = items.find((i: { type: string }) => i.type === 'Section');
+    const section = items.find((i: SearchItem) => i.type === 'Section');
     expect(section).toMatchObject({
       type: 'Section',
       sectionName: 'Messaging',
@@ -66,7 +67,7 @@ describe('prepareSearchItems', () => {
       }),
     ] as Category[];
     const items = prepareSearchItems(categories);
-    const service = items.find((i: { type: string }) => i.type === 'Service');
+    const service = items.find((i: SearchItem) => i.type === 'Service');
     expect(service).toMatchObject({
       type: 'Service',
       name: 'Signal',
@@ -99,7 +100,7 @@ describe('prepareSearchItems', () => {
       }),
     ] as Category[];
     const items = prepareSearchItems(categories);
-    const cat = items.find((i: { type: string }) => i.type === 'Category');
-    expect(cat.itemCount).toBe(3);
+    const cat = items.find((i: SearchItem) => i.type === 'Category');
+    expect(cat?.itemCount).toBe(3);
   });
 });

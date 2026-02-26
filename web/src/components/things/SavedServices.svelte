@@ -48,7 +48,7 @@
 <div>
   {#if $savedServices.length > 0}
     <div class="saved-services">
-      {#each $savedServices as thingy}
+      {#each $savedServices as thingy (thingy.service.name + thingy.section)}
         <ServiceCard
           categoryName={thingy.category}
           sectionName={thingy.section}

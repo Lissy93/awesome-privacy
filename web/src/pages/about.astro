@@ -12,24 +12,43 @@ import {
 	appDescription,
 } from '../site-config';
 
-const contributorsResource = async () => {
+interface GitHubContributor {
+	login: string;
+	avatar_url: string;
+	html_url: string;
+}
+
+interface Sponsor {
+	login: string;
+	avatarUrl: string;
+	name?: string;
+}
+
+const githubHeaders: Record<string, string> = {
+	'User-Agent': 'awesome-privacy',
+};
+const apiKey = import.meta.env.GITHUB_API_KEY;
+if (apiKey) {
+	githubHeaders['Authorization'] = `Bearer ${apiKey}`;
+}
+
+const contributorsResource = async (): Promise<GitHubContributor[] | null> => {
 	const url =
 		'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
-	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error('Failed to fetch contributors');
-	}
+	const response = await fetch(url, { headers: githubHeaders });
+	if (!response.ok) return null;
 	return await response.json();
 };
 
-const sponsorsResource = async () => {
+const sponsorsResource = async (): Promise<Sponsor[] | null> => {
 	const url = 'https://github-sponsors.as93.workers.dev/lissy93';
 	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error('Failed to fetch sponsors');
-	}
+	if (!response.ok) return null;
 	return await response.json();
 };
+
+const contributors = await contributorsResource();
+const sponsors = await sponsorsResource();
 
 const licenseContent = async () => {
 	const url =
@@ -98,10 +117,10 @@ const licenseContent = async () => {
 			<h2 id="acknowledgements">Acknowledgements</h2>
 			<h3 id="sponsors">Sponsors</h3>
 			<p>Huge thanks to the following sponsors, for their ongoing support 💖</p>
-			<div class="user-list">
-				{
-					sponsorsResource().then((sponsors) => {
-						return sponsors.map((sponsor: any) => (
+			{
+				sponsors ? (
+					<div class="user-list">
+						{sponsors.map((sponsor) => (
 							<a
 								class="user"
 								href={`https://github.com/${sponsor.login}`}
@@ -111,10 +130,16 @@ const licenseContent = async () => {
 								<img src={sponsor.avatarUrl} alt={sponsor.login} />
 								<p>{sponsor.name || sponsor.login}</p>
 							</a>
-						));
-					})
-				}
-			</div>
+						))}
+					</div>
+				) : (
+					<img
+						class="fallback-img"
+						src="https://readme-contribs.as93.net/sponsors/lissy93?perRow=12&shape=squircle&textColor=ffffff&limit=96"
+						alt="Sponsors"
+					/>
+				)
+			}
 
 			<h3 id="contributors">Contributors</h3>
 			<p>
@@ -122,23 +147,29 @@ const licenseContent = async () => {
 				maintain it.<br />
 				Special thanks to the below, top-100 contributors 🌟
 			</p>
-			<div class="user-list">
-				{
-					contributorsResource().then((sponsors) => {
-						return sponsors.map((sponsor: any) => (
+			{
+				contributors ? (
+					<div class="user-list">
+						{contributors.map((contributor) => (
 							<a
 								class="user"
-								href={sponsor.html_url}
+								href={contributor.html_url}
 								target="_blank"
 								rel="noreferrer"
 							>
-								<img src={sponsor.avatar_url} alt={sponsor.login} />
-								<p>{sponsor.login}</p>
+								<img src={contributor.avatar_url} alt={contributor.login} />
+								<p>{contributor.login}</p>
 							</a>
-						));
-					})
-				}
-			</div>
+						))}
+					</div>
+				) : (
+					<img
+						class="fallback-img"
+						src="https://readme-contribs.as93.net/contributors/lissy93/awesome-privacy?perRow=12&shape=squircle&textColor=ffffff&limit=96"
+						alt="Contributors"
+					/>
+				)
+			}
 
 			<hr />
 
@@ -281,7 +312,7 @@ const licenseContent = async () => {
 <style lang="scss">
 	h2 {
 		font-size: 2rem;
-		margin: 2rem 0 1rem 0;
+		margin: 1rem 0 0.5rem 0;
 	}
 	p {
 		font-size: 1.2rem;
@@ -343,18 +374,25 @@ const licenseContent = async () => {
 	.user-list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: 0.25rem;
 		margin: 2rem 0;
 		.user {
 			width: 6rem;
 			overflow: hidden;
 			text-align: center;
+			padding: 0.5rem;
+			border-radius: var(--curve-sm);
+			transition: background 0.2s ease-in-out;
+			&:hover {
+				background: var(--background-form);
+			}
 			img {
 				width: 5rem;
 				height: 5rem;
 				border-radius: var(--curve-md);
 			}
 			p {
+				margin: 0.5rem auto 0 auto;
 				font-size: 1rem;
 				display: -webkit-box;
 				-webkit-line-clamp: 1;
@@ -362,6 +400,12 @@ const licenseContent = async () => {
 				overflow: hidden;
 			}
 		}
+	}
+
+	.fallback-img {
+		max-width: 100%;
+		margin: 2rem 0;
+		border-radius: var(--curve-sm);
 	}
 
 	.license-content {
@@ -372,7 +416,7 @@ const licenseContent = async () => {
 		border-radius: var(--curve-sm);
 		padding: 0.5rem;
 		font-size: 0.7rem;
-		font-family: mono;
+		font-family: 'Lekton', monospace;
 		max-width: 100vw;
 		white-space: pre-line;
 	}

@@ -44,6 +44,7 @@
       src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
     />
     <div class="service-body">
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- description is from curated YAML data, not user input -->
       <p>{@html service.description}</p>
     </div>
   </div>
@@ -64,5 +65,5 @@
 </div>
 
 <style lang="scss">
-  @import './service-card.scss';
+  @use './service-card.scss';
 </style>

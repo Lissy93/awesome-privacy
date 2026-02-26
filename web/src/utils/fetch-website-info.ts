@@ -61,7 +61,7 @@ interface Redirection {
   found: boolean;
   external: boolean;
   url: string;
-  redirects: any[];
+  redirects: string[];
 }
 
 interface ResponseHeaders {
