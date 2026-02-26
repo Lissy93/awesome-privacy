@@ -1,37 +1,30 @@
 ---
-
-const {
-  text,
-  url,
-  className,
-  title,
-} = Astro.props;
-
+const { text, url, className, title } = Astro.props;
 ---
 
 <div class={`button ${className || ''}`} title={title}>
-  <a href={url}>{text}<slot /></a>
+	<a href={url}>{text}<slot /></a>
 </div>
 
 <style lang="scss">
-  .button {
-    font-family: "Lekton", sans-serif;
-    text-align: center;
-    border: 1px solid var(--box-outline);
-    box-shadow: 3px 3px 0 var(--box-outline);
-    background: var(--accent);
-    border-radius: 18px;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      box-shadow: 4px 4px 0 var(--box-outline);
-    }
-    a {
-      text-decoration: none;
-      color: var(--accent-fg);;
-      font-size: 1.2rem;
-      font-family: "Lekton", sans-serif;
-      font-weight: bold;
-    }
-  }
+	.button {
+		font-family: 'Lekton', sans-serif;
+		text-align: center;
+		border: 1px solid var(--box-outline);
+		box-shadow: 3px 3px 0 var(--box-outline);
+		background: var(--accent);
+		border-radius: 18px;
+		padding: 0.5rem 1rem;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			box-shadow: 4px 4px 0 var(--box-outline);
+		}
+		a {
+			text-decoration: none;
+			color: var(--accent-fg);
+			font-size: 1.2rem;
+			font-family: 'Lekton', sans-serif;
+			font-weight: bold;
+		}
+	}
 </style>

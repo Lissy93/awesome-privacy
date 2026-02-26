@@ -1,0 +1,17 @@
+dist/
+.astro/
+node_modules/
+.vercel/
+yarn.lock
+public/
+*.md
+
+# Astro files with adjacent JSX elements that prettier-plugin-astro cannot parse
+src/components/things/DockerDetailedInfo.astro
+src/components/things/GitHubDetailedInfo.astro
+src/components/things/IosAppDetailedInfo.astro
+src/components/things/ItemGitHubMetrics.astro
+src/components/things/PrivacyPolicyDetails.astro
+src/components/things/WebsiteDetailedInfo.astro
+src/pages/*section*.astro
+src/pages/all.astro

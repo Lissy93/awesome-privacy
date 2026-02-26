@@ -3,91 +3,123 @@
 
 /* Rubik Font Faces */
 @font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Rubik'), url('/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		local('Rubik'),
+		url('/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Rubik Italic'), url('/fonts/Rubik/Rubik-Italic.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: italic;
+	font-weight: 400;
+	src:
+		local('Rubik Italic'),
+		url('/fonts/Rubik/Rubik-Italic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Rubik Medium'), url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		local('Rubik Medium'),
+		url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 500;
-  src: local('Rubik Medium Italic'), url('/fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: italic;
+	font-weight: 500;
+	src:
+		local('Rubik Medium Italic'),
+		url('/fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Rubik SemiBold'), url('/fonts/Rubik/Rubik-SemiBold.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 600;
+	src:
+		local('Rubik SemiBold'),
+		url('/fonts/Rubik/Rubik-SemiBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Rubik';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Rubik SemiBold Italic'), url('/fonts/Rubik/Rubik-SemiBoldItalic.ttf') format('truetype');
+	font-family: 'Rubik';
+	font-style: italic;
+	font-weight: 600;
+	src:
+		local('Rubik SemiBold Italic'),
+		url('/fonts/Rubik/Rubik-SemiBoldItalic.ttf') format('truetype');
 }
 
 /* Libre Franklin Font Faces */
 @font-face {
-  font-family: 'Libre Franklin';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Libre Franklin Bold'), url('/fonts/Libre_Franklin/LibreFranklin-Bold.ttf') format('truetype');
+	font-family: 'Libre Franklin';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		local('Libre Franklin Bold'),
+		url('/fonts/Libre_Franklin/LibreFranklin-Bold.ttf') format('truetype');
 }
 
 /* Lekton Font Faces */
 @font-face {
-  font-family: 'Lekton';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lekton Bold'), url('/fonts/Lekton/Lekton-Bold.ttf') format('truetype');
+	font-family: 'Lekton';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		local('Lekton Bold'),
+		url('/fonts/Lekton/Lekton-Bold.ttf') format('truetype');
 }
 
 html {
-  font-family: system-ui, sans-serif;
+	font-family: system-ui, sans-serif;
 }
 
 code {
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace;
+	font-family:
+		Menlo,
+		Monaco,
+		Lucida Console,
+		Liberation Mono,
+		DejaVu Sans Mono,
+		Bitstream Vera Sans Mono,
+		Courier New,
+		monospace;
 }
 
-.heading, h1 {
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
+.heading,
+h1 {
+	font-family: 'Libre Franklin', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
 }
 
-.subtitle, h2, h3, h4, h5, h6 {
-  font-family: "Lekton", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.subtitle,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lekton', sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
-html, body, p, a, ul, ol, li, blockquote, pre, strong, i {
-  font-family: "Rubik", sans-serif;
+html,
+body,
+p,
+a,
+ul,
+ol,
+li,
+blockquote,
+pre,
+strong,
+i {
+	font-family: 'Rubik', sans-serif;
 }
 
 a {
-  color: var(--accent);
+	color: var(--accent);
 }

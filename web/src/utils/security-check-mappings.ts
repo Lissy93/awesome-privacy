@@ -1,5 +1,4 @@
-
-const securityCheckMapping: {[key: string]: string} = {
+const securityCheckMapping: { [key: string]: string } = {
   is_host_an_ipv4: 'Host is an IPv4 Address',
   is_uncommon_host_length: 'Uncommon Host Length',
   is_uncommon_dash_char_count: 'Uncommon Number of Dashes in Host',
@@ -51,7 +50,8 @@ const securityCheckMapping: {[key: string]: string} = {
   is_masked_linux_elf_file: 'Masked Linux ELF File Detected',
   is_masked_windows_exe_file: 'Masked Windows Executable Detected',
   is_ms_office_file: 'Microsoft Office File Detected',
-  is_windows_exe_file_on_free_dynamic_dns: 'Windows Executable on Free Dynamic DNS',
+  is_windows_exe_file_on_free_dynamic_dns:
+    'Windows Executable on Free Dynamic DNS',
   is_windows_exe_file_on_free_hosting: 'Windows Executable on Free Hosting',
   is_windows_exe_file_on_ipv4: 'Windows Executable on IPv4 Address',
   is_windows_exe_file: 'Windows Executable Detected',
@@ -65,91 +65,98 @@ const securityCheckMapping: {[key: string]: string} = {
   is_domain_very_recent: 'Domain Very Recently Created',
   is_credit_card_field: 'Credit Card Field Present',
   is_password_field: 'Password Field Present',
-  is_valid_https: 'Valid HTTPS Connection'
+  is_valid_https: 'Valid HTTPS Connection',
 };
-const passFailLogic: {[key: string]: boolean | string} = {
-      // True means the check needs to be true to pass
-    is_valid_https: true,
-    is_host_an_ipv4: false,
-    is_uncommon_host_length: false,
-    is_uncommon_dash_char_count: false,
-    is_uncommon_dot_char_count: false,
-    is_uncommon_host_name: false,
-    is_suspicious_url_pattern: false,
-    is_suspicious_file_extension: false,
-    is_robots_noindex: false,
-    is_suspended_page: false,
-    is_most_abused_tld: false,
-    is_uncommon_clickable_url: false,
-    is_phishing_heuristic: false,
-    is_possible_emotet: false,
-    is_redirect_to_search_engine: false,
-    is_redirect_to_wikipedia: false,
-    is_http_status_error: false,
-    is_http_server_error: false,
-    is_http_client_error: false,
-    is_suspicious_content: false,
-    is_url_accessible: true,
-    is_empty_page_title: false,
-    is_empty_page_content: false,
-    is_domain_ipv4_assigned: true,
-    is_domain_ipv4_private: false,
-    is_domain_ipv4_loopback: false,
-    is_domain_ipv4_reserved: false,
-    is_domain_ipv4_valid: true,
-    is_domain_blacklisted: false,
-    is_suspicious_domain: false,
-    is_sinkholed_domain: false,
-    is_defaced_heuristic: false,
-    is_masked_file: false,
-    is_risky_geo_location: false,
-    is_china_country: false,
-    is_nigeria_country: false,
-    is_non_standard_port: false,
-    is_email_address_on_url_query: false,
-    is_directory_listing: false,
-    is_exe_on_directory_listing: false,
-    is_zip_on_directory_listing: false,
-    is_php_on_directory_listing: false,
-    is_doc_on_directory_listing: false,
-    is_pdf_on_directory_listing: false,
-    is_apk_on_directory_listing: false,
-    is_linux_elf_file: false,
-    is_linux_elf_file_on_free_dynamic_dns: false,
-    is_linux_elf_file_on_free_hosting: false,
-    is_linux_elf_file_on_ipv4: false,
-    is_masked_linux_elf_file: false,
-    is_masked_windows_exe_file: false,
-    is_ms_office_file: false,
-    is_windows_exe_file_on_free_dynamic_dns: false,
-    is_windows_exe_file_on_free_hosting: false,
-    is_windows_exe_file_on_ipv4: false,
-    is_windows_exe_file: false,
-    is_android_apk_file_on_free_dynamic_dns: false,
-    is_android_apk_file_on_free_hosting: false,
-    is_android_apk_file_on_ipv4: false,
-    is_android_apk_file: false,
-    is_external_redirect: false,
-    is_risky_category: false,
-    is_domain_recent: "no",
-    is_domain_very_recent: "no",
-    is_credit_card_field: false,
-    is_password_field: false,
+const passFailLogic: { [key: string]: boolean | string } = {
+  // True means the check needs to be true to pass
+  is_valid_https: true,
+  is_host_an_ipv4: false,
+  is_uncommon_host_length: false,
+  is_uncommon_dash_char_count: false,
+  is_uncommon_dot_char_count: false,
+  is_uncommon_host_name: false,
+  is_suspicious_url_pattern: false,
+  is_suspicious_file_extension: false,
+  is_robots_noindex: false,
+  is_suspended_page: false,
+  is_most_abused_tld: false,
+  is_uncommon_clickable_url: false,
+  is_phishing_heuristic: false,
+  is_possible_emotet: false,
+  is_redirect_to_search_engine: false,
+  is_redirect_to_wikipedia: false,
+  is_http_status_error: false,
+  is_http_server_error: false,
+  is_http_client_error: false,
+  is_suspicious_content: false,
+  is_url_accessible: true,
+  is_empty_page_title: false,
+  is_empty_page_content: false,
+  is_domain_ipv4_assigned: true,
+  is_domain_ipv4_private: false,
+  is_domain_ipv4_loopback: false,
+  is_domain_ipv4_reserved: false,
+  is_domain_ipv4_valid: true,
+  is_domain_blacklisted: false,
+  is_suspicious_domain: false,
+  is_sinkholed_domain: false,
+  is_defaced_heuristic: false,
+  is_masked_file: false,
+  is_risky_geo_location: false,
+  is_china_country: false,
+  is_nigeria_country: false,
+  is_non_standard_port: false,
+  is_email_address_on_url_query: false,
+  is_directory_listing: false,
+  is_exe_on_directory_listing: false,
+  is_zip_on_directory_listing: false,
+  is_php_on_directory_listing: false,
+  is_doc_on_directory_listing: false,
+  is_pdf_on_directory_listing: false,
+  is_apk_on_directory_listing: false,
+  is_linux_elf_file: false,
+  is_linux_elf_file_on_free_dynamic_dns: false,
+  is_linux_elf_file_on_free_hosting: false,
+  is_linux_elf_file_on_ipv4: false,
+  is_masked_linux_elf_file: false,
+  is_masked_windows_exe_file: false,
+  is_ms_office_file: false,
+  is_windows_exe_file_on_free_dynamic_dns: false,
+  is_windows_exe_file_on_free_hosting: false,
+  is_windows_exe_file_on_ipv4: false,
+  is_windows_exe_file: false,
+  is_android_apk_file_on_free_dynamic_dns: false,
+  is_android_apk_file_on_free_hosting: false,
+  is_android_apk_file_on_ipv4: false,
+  is_android_apk_file: false,
+  is_external_redirect: false,
+  is_risky_category: false,
+  is_domain_recent: 'no',
+  is_domain_very_recent: 'no',
+  is_credit_card_field: false,
+  is_password_field: false,
 };
 
-export const analyzeSecurityChecks = (checks: { [key: string]: boolean | string }) => {
-  
-  let passedChecks = [];
-  let failedChecks = [];
+export const analyzeSecurityChecks = (checks: {
+  [key: string]: boolean | string;
+}) => {
+  const passedChecks = [];
+  const failedChecks = [];
   for (const [check, value] of Object.entries(checks)) {
-      let shouldPass = passFailLogic.hasOwnProperty(check) ? passFailLogic[check] : false;
-      let actualPass = (value === shouldPass) || (shouldPass === true && value !== "no");
+    const shouldPass = Object.prototype.hasOwnProperty.call(
+      passFailLogic,
+      check,
+    )
+      ? passFailLogic[check]
+      : false;
+    const actualPass =
+      value === shouldPass || (shouldPass === true && value !== 'no');
 
-      if (actualPass) {
-          passedChecks.push(securityCheckMapping[check]);
-      } else {
-          failedChecks.push(securityCheckMapping[check]);
-      }
+    if (actualPass) {
+      passedChecks.push(securityCheckMapping[check]);
+    } else {
+      failedChecks.push(securityCheckMapping[check]);
+    }
   }
   return { passedChecks, failedChecks };
-}
+};

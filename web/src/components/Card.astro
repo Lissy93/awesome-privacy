@@ -21,19 +21,18 @@ const { href, title, body } = Astro.props;
 </li>
 <style lang="scss">
 	.link-card {
-    color: var(--foreground);
-    background: var(--background);
-    border: 2px solid var(--box-outline);
-    box-shadow: 6px 6px 0 var(--box-outline);
-    font-family: "Lekton", sans-serif;
-    font-weight: 700;
+		color: var(--foreground);
+		background: var(--background);
+		border: 2px solid var(--box-outline);
+		box-shadow: 6px 6px 0 var(--box-outline);
+		font-family: 'Lekton', sans-serif;
+		font-weight: 700;
 		transition: all ease-in-out 0.1s;
 		list-style: none;
 		&:hover {
 			box-shadow: 8px 8px 0 var(--box-outline);
 			background: var(--accent);
 			color: var(--background);
-		
 		}
 		a {
 			box-sizing: border-box;
@@ -45,5 +44,4 @@ const { href, title, body } = Astro.props;
 			margin: 0;
 		}
 	}
-	
 </style>

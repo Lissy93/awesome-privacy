@@ -1,5 +1,6 @@
-
-export const fetchDiscordInfo = async (discordInvite: string): Promise<DiscordInfo | null> => {
+export const fetchDiscordInfo = async (
+  discordInvite: string,
+): Promise<DiscordInfo | null> => {
   const endpoint = `https://discord-invite-info.as93.net/${discordInvite}`;
   try {
     return await fetch(endpoint).then((res) => res.json());

@@ -1,57 +1,55 @@
 ---
-
 import Layout from '@layouts/Layout.astro';
 import { fetchData } from '@utils/fetch-data';
 
 import Search from '@components/things/Search.svelte';
 
 const categories = (await fetchData())?.categories;
-
 ---
 
 <Layout title="Search | Awesome Privacy">
-  <section>
-    <h1>Search</h1>
-    <Search client:visible data={categories} />
-    <p class="sitemap-link">
-      Browse <a href="/all">all listings</a>, or see all pages in the <a href="/sitemap">Sitemap</a>
-    </p>
-  </section>
+	<section>
+		<h1>Search</h1>
+		<Search client:visible data={categories} />
+		<p class="sitemap-link">
+			Browse <a href="/all">all listings</a>, or see all pages in the <a
+				href="/sitemap">Sitemap</a
+			>
+		</p>
+	</section>
 </Layout>
 
-
 <style lang="scss">
+	section {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		box-shadow: 4px 4px 0 var(--box-outline);
+		background: var(--accent-fg);
+		border: 2px solid var(--box-outline);
+		border-radius: var(--curve-sm);
+		margin: 2rem auto;
+		padding: 1rem;
+		width: calc(100% - 5rem);
+		max-width: 1100px;
+		min-height: 80vh;
 
-section {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  box-shadow: 4px 4px 0 var(--box-outline);
-  background: var(--accent-fg);
-  border: 2px solid var(--box-outline);
-  border-radius: var(--curve-sm);
-  margin: 2rem auto;
-  padding: 1rem;
-  width: calc(100% - 5rem);
-  max-width: 1100px;
-  min-height: 80vh;
-
-  h1 {
-    font-size: 3rem;
-		color: var(--accent-3);
-		font-family: "Lekton", sans-serif;
-		text-align: center;
-		margin: 1rem 0;
-  }
-  .sitemap-link {
-    opacity: 0.6;
-    text-align: center;
-    font-size: 0.8rem;
-    margin: 2rem auto;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}
+		h1 {
+			font-size: 3rem;
+			color: var(--accent-3);
+			font-family: 'Lekton', sans-serif;
+			text-align: center;
+			margin: 1rem 0;
+		}
+		.sitemap-link {
+			opacity: 0.6;
+			text-align: center;
+			font-size: 0.8rem;
+			margin: 2rem auto;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
 </style>

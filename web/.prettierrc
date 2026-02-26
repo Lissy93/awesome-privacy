@@ -1,0 +1,22 @@
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"semi": true,
+	"trailingComma": "all",
+	"plugins": ["prettier-plugin-astro", "prettier-plugin-svelte"],
+	"overrides": [
+		{
+			"files": "*.astro",
+			"options": {
+				"parser": "astro"
+			}
+		},
+		{
+			"files": ["*.ts", "*.js", "*.svelte", "*.scss"],
+			"options": {
+				"useTabs": false,
+				"tabWidth": 2
+			}
+		}
+	]
+}

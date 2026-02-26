@@ -1,7 +1,6 @@
-
-
-
-export const fetchGitHubStats = async (github: string): Promise<GitHubStatsResponse | null> => {
+export const fetchGitHubStats = async (
+  github: string,
+): Promise<GitHubStatsResponse | null> => {
   const endpoint = `https://repo-info.as93.workers.dev/${github}`;
   try {
     return await fetch(endpoint).then((res) => res.json());

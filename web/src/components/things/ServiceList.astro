@@ -1,5 +1,4 @@
 ---
-
 import Button from '@components/form/Button.astro';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
@@ -11,326 +10,387 @@ import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
 import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props {
-  services: Service[];
-  subHeading?: boolean;
-  buttonLink?: string;
-  noGitHubMetrics?: boolean;
-  sectionName: string;
-  categoryName: string;
+	services: Service[];
+	subHeading?: boolean;
+	buttonLink?: string;
+	noGitHubMetrics?: boolean;
+	sectionName: string;
+	categoryName: string;
 }
 
 const {
-  services,
-  subHeading,
-  buttonLink,
-  noGitHubMetrics,
-  sectionName,
-  categoryName,
+	services,
+	subHeading,
+	buttonLink,
+	noGitHubMetrics,
+	sectionName,
+	categoryName,
 } = Astro.props;
-
 ---
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const serviceIcons = document.querySelectorAll<HTMLImageElement>('.service-icon');
-  const broke = '/broken-image.png';
+	document.addEventListener('DOMContentLoaded', () => {
+		const serviceIcons =
+			document.querySelectorAll<HTMLImageElement>('.service-icon');
+		const broke = '/broken-image.png';
 
-  serviceIcons.forEach(function(icon) {
-    icon.onerror = function() {
-      const imgElement = this as HTMLImageElement;
-      const serviceUrl = imgElement.getAttribute('data-service-url');
-      const newSrcAttribute = (imgElement.src.includes('on.ho') ? broke : `https://icon.horse/icon/${serviceUrl}`);
-      imgElement.src = imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
-      imgElement.onerror = null;
-    };
-  });
-});
+		serviceIcons.forEach(function (icon) {
+			icon.onerror = function () {
+				const imgElement = this as HTMLImageElement;
+				const serviceUrl = imgElement.getAttribute('data-service-url');
+				const newSrcAttribute = imgElement.src.includes('on.ho')
+					? broke
+					: `https://icon.horse/icon/${serviceUrl}`;
+				imgElement.src =
+					imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
+				imgElement.onerror = null;
+			};
+		});
+	});
 </script>
 
-
-
 <section>
-  {services && services.length > 0 ? (
-    <ul>
-    {services.map((service: Service) => (
-      <li id={slugify(service.name)}>
-        <DeleteListing client:load categoryName={categoryName} sectionName={sectionName} serviceName={service.name} />
-        <div class="save-listing">
-          <SaveListing client:visible
-            categoryName={categoryName}
-            sectionName={sectionName}
-            serviceName={service.name}
-          />
-        </div>
-        <div class="service-head">
-          <img 
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-            class="service-icon"
-            alt={`${service.name} Icon`}
-            data-service-url={formatLink(service.url)}
-            src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
-          />
+	{
+		services && services.length > 0 ? (
+			<ul>
+				{services.map((service: Service) => (
+					<li id={slugify(service.name)}>
+						<DeleteListing
+							client:load
+							categoryName={categoryName}
+							sectionName={sectionName}
+							serviceName={service.name}
+						/>
+						<div class="save-listing">
+							<SaveListing
+								client:visible
+								categoryName={categoryName}
+								sectionName={sectionName}
+								serviceName={service.name}
+							/>
+						</div>
+						<div class="service-head">
+							<img
+								width="40"
+								height="40"
+								loading="lazy"
+								decoding="async"
+								class="service-icon"
+								alt={`${service.name} Icon`}
+								data-service-url={formatLink(service.url)}
+								src={
+									service.icon ||
+									`https://icon.horse/icon/${formatLink(service.url)}`
+								}
+							/>
 
-          <a class="service-title" href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
-            {subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
-          </a>
-          {service.followWith && <p class="follow-with">({service.followWith})</p> }
-          <a class="service-link" href={service.url}>{formatLink(service.url)}</a>
-        </div>
-        <div class="service-body">
-          <p set:html={parseMarkdown(service.description)}></p>
-          <div class="service-stats">
-            <div class="left">
-            { service.securityAudited && (
-              <span class="meta-item great" title={`${service.name} has been security audited by an accredited auditor, with results published publicly`}>
-                <FontAwesome iconName="securityAudited" /> Security Audited
-              </span>
-            )}
-            { service.acceptsCrypto && (
-              <span class="meta-item great" title={`${service.name} accepts anonymous payment methods`}>
-                <FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
-              </span>
-            )}
-            { service.securityAudited === false && (
-              <span class="meta-item warning" title={`${service.name} has not been audited`}>
-                <FontAwesome iconName="notSecurityAudited" /> No Security Audit
-              </span>
-            )}
-            { (service.openSource === false) && (
-              <span class="warning">
-                <FontAwesome iconName="closedSource" />
-                Not Open Source
-              </span>
-            )}
-            { service.openSource || (service.github && service.openSource !== false) ? (
-              <span class="meta-item great" title={`${service.name} is open source`}>
-                <FontAwesome iconName="openSource" /> Open Source
-              </span>
-            ) : null }
-            { service.github && !noGitHubMetrics && <GitHubMetrics github={service.github} /> }
-            { service.github && noGitHubMetrics && (
-              <span class="meta-item" title={`View ${service.name} on GitHub`}>
-                <a href={`https://github.com/${service.github}`} target="_blank">
-                  <FontAwesome iconName="github" /> {service.github}
-                </a>
-              </span>
-            ) }
-            </div>
-            <div class="view-service">
-              <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>View {service.name} Report</a>
-            </div>
-          </div>
-        </div>
-      </li>
-    ))}
-    </ul>
-  ) : (
-    <p class="nothing-yet">
-      <strong>⚠️ This section is still a work in progress ⚠️</strong><br />
-      Check back soon, or help us complete it by submiting a pull request on GitHub.
-      <br />
-      <span class="quick-submit">Or submit an entry <a href="/submit">here</a></span>
-    </p>
-  )}
+							<a
+								class="service-title"
+								href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+							>
+								{subHeading ? <h4>{service.name}</h4> : <h3>{service.name}</h3>}
+							</a>
+							{service.followWith && (
+								<p class="follow-with">({service.followWith})</p>
+							)}
+							<a class="service-link" href={service.url}>
+								{formatLink(service.url)}
+							</a>
+						</div>
+						<div class="service-body">
+							<p set:html={parseMarkdown(service.description)} />
+							<div class="service-stats">
+								<div class="left">
+									{service.securityAudited && (
+										<span
+											class="meta-item great"
+											title={`${service.name} has been security audited by an accredited auditor, with results published publicly`}
+										>
+											<FontAwesome iconName="securityAudited" /> Security
+											Audited
+										</span>
+									)}
+									{service.acceptsCrypto && (
+										<span
+											class="meta-item great"
+											title={`${service.name} accepts anonymous payment methods`}
+										>
+											<FontAwesome iconName="cryptoAccepted" /> Crypto Payments
+											Accepted
+										</span>
+									)}
+									{service.securityAudited === false && (
+										<span
+											class="meta-item warning"
+											title={`${service.name} has not been audited`}
+										>
+											<FontAwesome iconName="notSecurityAudited" /> No Security
+											Audit
+										</span>
+									)}
+									{service.openSource === false && (
+										<span class="warning">
+											<FontAwesome iconName="closedSource" />
+											Not Open Source
+										</span>
+									)}
+									{service.openSource ||
+									(service.github && service.openSource !== false) ? (
+										<span
+											class="meta-item great"
+											title={`${service.name} is open source`}
+										>
+											<FontAwesome iconName="openSource" /> Open Source
+										</span>
+									) : null}
+									{service.github && !noGitHubMetrics && (
+										<GitHubMetrics github={service.github} />
+									)}
+									{service.github && noGitHubMetrics && (
+										<span
+											class="meta-item"
+											title={`View ${service.name} on GitHub`}
+										>
+											<a
+												href={`https://github.com/${service.github}`}
+												target="_blank"
+											>
+												<FontAwesome iconName="github" /> {service.github}
+											</a>
+										</span>
+									)}
+								</div>
+								<div class="view-service">
+									<a
+										href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+									>
+										View {service.name} Report
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				))}
+			</ul>
+		) : (
+			<p class="nothing-yet">
+				<>
+					<strong>⚠️ This section is still a work in progress ⚠️</strong>
+					<br />
+				</>
+				Check back soon, or help us complete it by submiting a pull request on
+				GitHub.
+				<br />
+				<span class="quick-submit">
+					Or submit an entry <a href="/submit">here</a>
+				</span>
+			</p>
+		)
+	}
 
-  {buttonLink && (
-    <Button title={`View all ${categoryName}`} className="view-all" text="View More..." url={buttonLink} />
-  )}
+	{
+		buttonLink && (
+			<Button
+				title={`View all ${categoryName}`}
+				className="view-all"
+				text="View More..."
+				url={buttonLink}
+			/>
+		)
+	}
 </section>
 
-
 <style lang="scss">
+	section {
+		padding: 1rem 0;
+		position: relative;
+		&:not(:last-child) {
+			border-bottom: 2px solid var(--accent-3);
+		}
+	}
 
-  section {
-    padding: 1rem 0;
-    position: relative;
-    &:not(:last-child) {
-      border-bottom: 2px solid var(--accent-3);
-    }
-  }
-  
-  .nothing-yet {
-    font-size: 1.4rem;
-    opacity: 0.8;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 3rem;
-    .quick-submit {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      opacity: 0.8;
-    }
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 3rem 0;
-    li {
-      margin-bottom: 1rem;
-      position: relative;
-      .save-listing {
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-      }
-      .service-head {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        .service-title {
-          text-decoration: none;
-          color: var(--foreground);
-          h3, h4 {
-            margin: 0;
-            font-size: 1.6rem;
-          }
+	.nothing-yet {
+		font-size: 1.4rem;
+		opacity: 0.8;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 3rem;
+		.quick-submit {
+			margin-top: 1rem;
+			font-size: 0.8rem;
+			opacity: 0.8;
+		}
+	}
 
-          position: relative;
-          &:after {    
-            background: none repeat scroll 0 0 transparent;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 3px;
-            left: 50%;
-            position: absolute;
-            background: var(--accent-3);
-            transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            width: 0;
-          }
-          &:hover:after { 
-            width: 100%; 
-            left: 0; 
-          }
-        }
-        
-        .service-icon {
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: var(--curve-sm);
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 3rem 0;
+		li {
+			margin-bottom: 1rem;
+			position: relative;
+			.save-listing {
+				position: absolute;
+				right: 1rem;
+				top: 1rem;
+			}
+			.service-head {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				flex-wrap: wrap;
+				.service-title {
+					text-decoration: none;
+					color: var(--foreground);
+					h3,
+					h4 {
+						margin: 0;
+						font-size: 1.6rem;
+					}
 
-          font-size: 10px;
-          overflow: hidden;
-          color: var(--accent);
-        }
-        .follow-with {
-          opacity: 0.7;
-          font-style: italic;
-          margin: 0;
-        }
-        .service-link {
-          max-width: 300px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-        }
-      }
-  
-      .service-body {
-        margin: 0.5rem 0 2rem;
-        opacity: 0.8;
-        :global(p) {
-          margin: 0;
-          font-size: 1.2rem;
-          :global(a) {
-            color: var(--foregorund);
-          }
-        }
-        .service-stats {
-          .left {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            align-items: center;
-          }
-          display: flex;
-          gap: 1rem;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .view-service {
-          transition: all 0.2s ease-in-out;
-          opacity: 0.95;
-          a {
-            padding: 0.25rem 0.6rem;
-            width: fit-content;
-            right: 1rem;
-            font-size: 0.9rem;
-            background: var(--accent-3);
-            color: var(--accent-fg);
-            text-decoration: none;
-            border-radius: var(--curve-md);
-          }
-          &:hover {
-            opacity: 1;
-            transform: scale(1.05);
-          }
-        }
+					position: relative;
+					&:after {
+						background: none repeat scroll 0 0 transparent;
+						bottom: 0;
+						content: '';
+						display: block;
+						height: 3px;
+						left: 50%;
+						position: absolute;
+						background: var(--accent-3);
+						transition:
+							width 0.3s ease 0s,
+							left 0.3s ease 0s;
+						width: 0;
+					}
+					&:hover:after {
+						width: 100%;
+						left: 0;
+					}
+				}
 
-        .meta-item, .warning {
-          display: flex;
-          align-items: center;
-          // justify-content: center;
-          gap: 0.25rem;
-          // opacity: 0.6;
-          font-size: 0.9rem;
-          padding: 0.5rem 0;
-          :global(svg) {
-            color: var(--foreground);
-            width: 1.2rem;
-            height: 1.2rem;
-          }
-          a {
-            text-decoration: none;
-            color: var(--foreground);
-            display: flex;
-            gap: 0.25rem;
-            &:hover {
-              color: var(--accent-3);
-              :global(svg) {
-                color: var(--accent-3);
-              }
-            }
-          }
-        }
-        .warning {
-          color: var(--danger);
-          :global(svg) {
-            color: var(--danger);
-          }
-        }
-        .great {
-          color: #0fb953; // var(--success);
-          :global(svg) {
-            color: #0fb953; // var(--success);
-          }
-        }
-      }
-    }
-  }
+				.service-icon {
+					width: 2.5rem;
+					height: 2.5rem;
+					border-radius: var(--curve-sm);
 
-  section :global(.view-all) {
-    width: fit-content;
-    position: absolute;
-    right: 1rem;
-    margin-top: -2.5rem;
-    background: var(--accent-3);
-  }
+					font-size: 10px;
+					overflow: hidden;
+					color: var(--accent);
+				}
+				.follow-with {
+					opacity: 0.7;
+					font-style: italic;
+					margin: 0;
+				}
+				.service-link {
+					max-width: 300px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+				}
+			}
 
-  li:hover :global(.actions) {
-    opacity: 0.6;
-    :global(a):hover {
-      opacity: 1;
-    }
-  }
-  :global(.actions a):hover {
-    opacity: 1;
-  }
-  
+			.service-body {
+				margin: 0.5rem 0 2rem;
+				opacity: 0.8;
+				:global(p) {
+					margin: 0;
+					font-size: 1.2rem;
+					:global(a) {
+						color: var(--foregorund);
+					}
+				}
+				.service-stats {
+					.left {
+						display: flex;
+						gap: 1rem;
+						flex-wrap: wrap;
+						align-items: center;
+					}
+					display: flex;
+					gap: 1rem;
+					flex-wrap: wrap;
+					align-items: center;
+					justify-content: space-between;
+				}
+				.view-service {
+					transition: all 0.2s ease-in-out;
+					opacity: 0.95;
+					a {
+						padding: 0.25rem 0.6rem;
+						width: fit-content;
+						right: 1rem;
+						font-size: 0.9rem;
+						background: var(--accent-3);
+						color: var(--accent-fg);
+						text-decoration: none;
+						border-radius: var(--curve-md);
+					}
+					&:hover {
+						opacity: 1;
+						transform: scale(1.05);
+					}
+				}
+
+				.meta-item,
+				.warning {
+					display: flex;
+					align-items: center;
+					// justify-content: center;
+					gap: 0.25rem;
+					// opacity: 0.6;
+					font-size: 0.9rem;
+					padding: 0.5rem 0;
+					:global(svg) {
+						color: var(--foreground);
+						width: 1.2rem;
+						height: 1.2rem;
+					}
+					a {
+						text-decoration: none;
+						color: var(--foreground);
+						display: flex;
+						gap: 0.25rem;
+						&:hover {
+							color: var(--accent-3);
+							:global(svg) {
+								color: var(--accent-3);
+							}
+						}
+					}
+				}
+				.warning {
+					color: var(--danger);
+					:global(svg) {
+						color: var(--danger);
+					}
+				}
+				.great {
+					color: #0fb953; // var(--success);
+					:global(svg) {
+						color: #0fb953; // var(--success);
+					}
+				}
+			}
+		}
+	}
+
+	section :global(.view-all) {
+		width: fit-content;
+		position: absolute;
+		right: 1rem;
+		margin-top: -2.5rem;
+		background: var(--accent-3);
+	}
+
+	li:hover :global(.actions) {
+		opacity: 0.6;
+		:global(a):hover {
+			opacity: 1;
+		}
+	}
+	:global(.actions a):hover {
+		opacity: 1;
+	}
 </style>

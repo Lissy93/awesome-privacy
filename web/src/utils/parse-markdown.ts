@@ -23,19 +23,24 @@ export const parseMarkdown = (text: string | undefined): string => {
 
   // Sanitize the input to remove <script> tags
   const sanitizeHtml = (html: string): string => {
-    return html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+    return html.replace(
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      '',
+    );
   };
 
   // Configure marked with the custom renderer
   marked.use({ renderer });
 
   // Parse the markdown, then sanitize the HTML to remove <script> tags
-  const rawHtml = marked.parse(text, { async: false}) as string;
+  const rawHtml = marked.parse(text, { async: false }) as string;
   const sanitizedHtml = sanitizeHtml(rawHtml);
 
   return sanitizedHtml;
 };
 
 export const formatLink = (link: string) => {
-  return (link || '').replace(/^(https?:\/\/)?(www\.)?/, '').replace(/\/+$/, '');
+  return (link || '')
+    .replace(/^(https?:\/\/)?(www\.)?/, '')
+    .replace(/\/+$/, '');
 };

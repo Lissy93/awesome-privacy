@@ -1,5 +1,4 @@
 ---
-
 import Layout from '@layouts/Layout.astro';
 import SectionList from '@components/things/SectionList.astro';
 import Main from '@components/scafold/MainCard.astro';
@@ -29,129 +28,137 @@ export async function getStaticPaths() {
 		});
 	});
 
-  return pages.map(({ category, title, sections }) => {
-    return {
-      params: { category },
-      props: { title, sections },
-    };
-  });
+	return pages.map(({ category, title, sections }) => {
+		return {
+			params: { category },
+			props: { title, sections },
+		};
+	});
 }
 
 const makeCarasolData = () => {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      sections.map((section, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://awesomeprivacy.com/${slugify(title)}/${slugify(section.name)}`,
-        "item": {
-          "@type": "Service",
-          "name": section.name,
-          "url": `https://awesomeprivacy.com/${slugify(title)}/${slugify(section.name)}`,
-        }
-      })),
-    ]
-  }
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		itemListElement: [
+			sections.map((section, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				url: `https://awesomeprivacy.com/${slugify(title)}/${slugify(section.name)}`,
+				item: {
+					'@type': 'Service',
+					name: section.name,
+					url: `https://awesomeprivacy.com/${slugify(title)}/${slugify(section.name)}`,
+				},
+			})),
+		],
+	};
 };
 
 const makeBreadcrumbs = () => {
-  return [
-    { name: 'Home', item: '/' },
-    { name: title, item: slugify(title) },
-  ];
+	return [
+		{ name: 'Home', item: '/' },
+		{ name: title, item: slugify(title) },
+	];
 };
 
-
 const makePaginationLinks = () => {
-  const index = categories.findIndex(category => category.name === title);
-  const previousCategory = index >  0 ? categories[index -  1].name : null;
-  const nextCategory = index < categories.length -  1 ? categories[index +  1].name : null;
-  return { previous: previousCategory, next: nextCategory };
+	const index = categories.findIndex((category) => category.name === title);
+	const previousCategory = index > 0 ? categories[index - 1].name : null;
+	const nextCategory =
+		index < categories.length - 1 ? categories[index + 1].name : null;
+	return { previous: previousCategory, next: nextCategory };
 };
 
 const { previous, next } = makePaginationLinks();
-
 ---
 
-<Layout title={`${title} | Awesome Privacy`} breadcrumbs={makeBreadcrumbs()} customSchemaJson={makeCarasolData()}>
+<Layout
+	title={`${title} | Awesome Privacy`}
+	breadcrumbs={makeBreadcrumbs()}
+	customSchemaJson={makeCarasolData()}
+>
 	<Main>
-    <div class="breadcrumbs">
-      <span>
-        <a href="/">Awesome Privacy</a>
-        ➔ <a href={`/${slugify(title)}`}>{title}</a>
-      </span>
-    </div>
+		<div class="breadcrumbs">
+			<span>
+				<a href="/">Awesome Privacy</a>
+				➔ <a href={`/${slugify(title)}`}>{title}</a>
+			</span>
+		</div>
 		<SectionList title={title} sections={sections} bigTitle={true} />
-    Or, <a href={`/all#${slugify(title)}`}>Browse All {title}</a>
+		Or, <a href={`/all#${slugify(title)}`}>Browse All {title}</a>
 		<div class="pagination-navigation">
-      { previous ? (
-        <Button url={`/${slugify(previous)}`}>
-          <span>← Previous</span>
-          <p>{previous}</p>
-        </Button>
-      ) : <p class="nothing"></p>}
-      { next && (
-        <Button url={`/${slugify(next)}`}>
-          <span>Next →</span>
-          <p>{next}</p>
-        </Button>
-      )}
-    </div>
+			{
+				previous ? (
+					<Button url={`/${slugify(previous)}`}>
+						<span>← Previous</span>
+						<p>{previous}</p>
+					</Button>
+				) : (
+					<p class="nothing" />
+				)
+			}
+			{
+				next && (
+					<Button url={`/${slugify(next)}`}>
+						<span>Next →</span>
+						<p>{next}</p>
+					</Button>
+				)
+			}
+		</div>
 	</Main>
 </Layout>
 
 <style lang="scss">
-.pagination-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  :global(.button) {
-    min-width: 120px;
-    width: fit-content;
-    padding: 0.25rem 1rem;
-    text-align: right;
-    &:first-child { text-align: left; }
-    p {
-      margin: 0;
-      font-weight: normal;
-      font-size: 1rem;
-    }
-    span {
-      font-size: 0.8rem;
-    }
-    
-  }
-  .nothing {
-    width: 120px;
-  }
-  .go-to-category {
-    color: var(--foreground);
-    font-size: 0.8rem;
-    opacity: 0.5;
-  }
-}
+	.pagination-navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
+		:global(.button) {
+			min-width: 120px;
+			width: fit-content;
+			padding: 0.25rem 1rem;
+			text-align: right;
+			&:first-child {
+				text-align: left;
+			}
+			p {
+				margin: 0;
+				font-weight: normal;
+				font-size: 1rem;
+			}
+			span {
+				font-size: 0.8rem;
+			}
+		}
+		.nothing {
+			width: 120px;
+		}
+		.go-to-category {
+			color: var(--foreground);
+			font-size: 0.8rem;
+			opacity: 0.5;
+		}
+	}
 
+	.breadcrumbs {
+		opacity: 0.5;
+		font-size: 0.8rem;
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		a {
+			color: var(--foreground);
+			transition: all 0.15s ease-in-out;
 
-.breadcrumbs {
-  opacity: 0.5;
-  font-size: 0.8rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  a {
-    color: var(--foreground);
-    transition: all 0.15s ease-in-out;
-    
-    &:hover {
-      color: var(--accent);
-    }
-  }
-  @media(max-width: 768px) {
-    display: none;
-  }
-}
-
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
 </style>

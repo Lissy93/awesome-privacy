@@ -1,23 +1,29 @@
+---
+const year = new Date().getFullYear();
+---
 
 <footer>
-  <a href="/about">Awesome Privacy</a> is licensed
-  under <a href="https://github.com/Lissy93/awesome-privacy/blob/main/LICENSE">MIT</a>
-  © <a href="https://aliciasykes.com">Alicia Sykes</a> 2024 |
-  Source code available on <a href="https://github.com/Lissy93/awesome-privacy">GitHub</a>
+	<a href="/about">Awesome Privacy</a> is licensed under <a
+		href="https://github.com/Lissy93/awesome-privacy/blob/main/LICENSE"
+		>CC0 1.0 Universal</a
+	>
+	© <a href="https://aliciasykes.com">Alicia Sykes</a> 2018 - {
+		year || 'Present'
+	} | Source code available on <a
+		href="https://github.com/Lissy93/awesome-privacy">GitHub</a
+	>
 </footer>
 
 <style lang="scss">
-  footer {
-    font-family: "Lekton", sans-serif;
-    font-weight: bold;
-    text-align: center;
-    padding: 0.5rem 0;
-    margin: 0 auto;
-    a {
-      font-family: "Lekton", sans-serif;
-      color: var(--accent);
-    }
-    
-    
-  }
+	footer {
+		font-family: 'Lekton', sans-serif;
+		font-weight: bold;
+		text-align: center;
+		padding: 0.5rem 0;
+		margin: 0 auto;
+		a {
+			font-family: 'Lekton', sans-serif;
+			color: var(--accent);
+		}
+	}
 </style>

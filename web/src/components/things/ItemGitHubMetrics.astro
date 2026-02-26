@@ -2,13 +2,19 @@
 import FontAwesome from "@components/form/FontAwesome.svelte";
 const { github } = Astro.props;
 
-// const [user, repo] = github.split("/");
+interface GitHubRepoData {
+  stargazers_count?: number;
+  forks_count?: number;
+  open_issues_count?: number;
+  language?: string;
+  license?: { spdx_id?: string; name?: string };
+}
 
 /**
  * For a given `user/repo` fetch repository stats from the GitHub API data
  * If API key is available through env var, use it to increase rate limit
  * Returns the response data and status code (200 == success)
- * @param repo 
+ * @param repo
  */
 const fetchGitHubData = async (repo: string) => {
   const apiKey = import.meta.env.GITHUB_API_KEY;
@@ -17,8 +23,8 @@ const fetchGitHubData = async (repo: string) => {
     headers.append("Authorization", `token ${apiKey}`);
   }
 
-  let data = {};
-  let statusCode = 0;
+  let data: GitHubRepoData = {};
+  let statusCode;
 
   const response = await fetch(`https://api.github.com/repos/${repo}`, {
     headers: headers,
@@ -50,7 +56,7 @@ const fetchGitHubData = async (repo: string) => {
  * Given a license object, return SPDX ID, or a formatted name
  * @param license 
  */
-const formatLicense = (license: { spdx_id?: string, name?: string }) => {
+const formatLicense = (license?: { spdx_id?: string, name?: string }) => {
   if (!license) {
     return "Unknown";
   }
@@ -65,7 +71,8 @@ const formatLicense = (license: { spdx_id?: string, name?: string }) => {
  * E.g. If greater than thousand, then return in k format
  * @param num 
  */
-const formatBigNumber = (num: number) => {
+const formatBigNumber = (num: number | undefined) => {
+  if (num == null) return 0;
   if (num > 1000) {
     return `${(num / 1000).toFixed(1)}k`;
   }
@@ -73,7 +80,7 @@ const formatBigNumber = (num: number) => {
 }
 
 // Initiate GitHub fetch, and make available to the component
-const stats = (await fetchGitHubData(github)) as any;
+const stats = await fetchGitHubData(github);
 
 const {
   stargazers_count, forks_count, open_issues_count, language, license,

@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ViewTransitions } from 'astro:transitions';
 import NavBar from '@components/scafold/NavBar.astro';
 import Footer from '@components/scafold/Footer.astro';
 import config from '../site-config';
@@ -7,14 +7,14 @@ import config from '../site-config';
 interface Props {
 	title?: string; // Page title
 	description?: string; // Overide description tag
-  keywords?: string; // Overide keywords tag
+	keywords?: string; // Overide keywords tag
 	hideNav?: boolean; // Don't show the navbar (just homepage)
 	author?: string; // Author of the content
-	customSchemaJson?: any; // Custom schema item
+	customSchemaJson?: Record<string, unknown>; // Custom schema item
 	breadcrumbs?: Array<{
 		name: string;
 		item: string;
-	}>
+	}>;
 }
 
 const {
@@ -30,92 +30,120 @@ const {
 const makeBreadcrumbs = () => {
 	if (!breadcrumbs) return null;
 	return {
-			"@context": "https://schema.org",
-			"@type": "BreadcrumbList",
-			"itemListElement": breadcrumbs.map((breadcrumb, index) => ({
-				"@type": "ListItem",
-				"position": index + 1,
-				"name": breadcrumb.name,
-				"item": `https://awesome-privacy.xyz/${breadcrumb.item}`
-			}))
-	}
-}
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: breadcrumbs.map((breadcrumb, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: breadcrumb.name,
+			item: `https://awesome-privacy.xyz/${breadcrumb.item}`,
+		})),
+	};
+};
 
 const makeSearchLd = () => {
 	return {
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"url": "https://awesome-privacy.xyz/",
-		"potentialAction": [{
-			"@type": "SearchAction",
-			"target": {
-				"@type": "EntryPoint",
-				"urlTemplate": "https://awesome-privacy.xyz/search?q={search_term_string}"
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		url: 'https://awesome-privacy.xyz/',
+		potentialAction: [
+			{
+				'@type': 'SearchAction',
+				target: {
+					'@type': 'EntryPoint',
+					urlTemplate:
+						'https://awesome-privacy.xyz/search?q={search_term_string}',
+				},
+				'query-input': 'required name=search_term_string',
 			},
-			"query-input": "required name=search_term_string"
-		}]
-	}
+		],
+	};
 };
-
 ---
 
 <!doctype html>
 <html lang="en" data-theme="dark">
 	<head>
-
 		<ViewTransitions />
-		
+
 		<!-- Core info -->
 		<title>{title}</title>
-		<meta name="description" content={description}>
-		<meta name="keywords" content={keywords}>
-		<meta name="author" content={author}>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content={author} />
 
 		<!-- Page info, viewport, Astro credit -->
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="robots" content="index, follow">
+		<meta name="robots" content="index, follow" />
 
 		<!-- Icons and colors -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
 		<!-- Social media meta tags (Open Graphh + Twitter) -->
-		<meta property="og:site_name" content="Awesome Privacy">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://awesome-privacy.xyz">
-		<meta property="og:title" content={title}>
-		<meta property="og:description" content={description}>
-		<meta property="og:image" content="https://awesome-privacy.xyz/banner.png">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:url" content="https://awesome-privacy.xyz">
-		<meta name="twitter:title" content={title}>
-		<meta name="twitter:description" content={description}>
-		<meta name="twitter:image" content="https://awesome-privacy.xyz/banner.png">
-		<link rel="twitter:image" sizes="180x180" href="https://awesome-privacy.xyz/apple-touch-icon.png">
-		<meta name="twitter:site" content="@Lissy_Sykes">
-		<meta name="twitter:creator" content="@Lissy_Sykes">
+		<meta property="og:site_name" content="Awesome Privacy" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://awesome-privacy.xyz" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta
+			property="og:image"
+			content="https://awesome-privacy.xyz/banner.png"
+		/>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:url" content="https://awesome-privacy.xyz" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta
+			name="twitter:image"
+			content="https://awesome-privacy.xyz/banner.png"
+		/>
+		<link
+			rel="twitter:image"
+			sizes="180x180"
+			href="https://awesome-privacy.xyz/apple-touch-icon.png"
+		/>
+		<meta name="twitter:site" content="@Lissy_Sykes" />
+		<meta name="twitter:creator" content="@Lissy_Sykes" />
 
 		<!-- Non-tracking hit counter -->
-		<script defer is:inline
+		<script
+			defer
+			is:inline
 			type="text/partytown"
 			data-domain="awesome-privacy.xyz"
-			src="https://no-track.as93.net/js/script.js">
-		</script>
+			src="https://no-track.as93.net/js/script.js"></script>
 
 		<!-- Schema.org markup for Google -->
-		{breadcrumbs && (
-			<script type="application/ld+json" set:html={JSON.stringify(makeBreadcrumbs())} />
-		)}
-		{customSchemaJson && (
-			<script type="application/ld+json" set:html={JSON.stringify(customSchemaJson)} />
-		)}
-		<script type="application/ld+json" set:html={JSON.stringify(makeSearchLd)} />
+		{
+			breadcrumbs && (
+				<script
+					is:inline
+					type="application/ld+json"
+					set:html={JSON.stringify(makeBreadcrumbs())}
+				/>
+			)
+		}
+		{
+			customSchemaJson && (
+				<script
+					is:inline
+					type="application/ld+json"
+					set:html={JSON.stringify(customSchemaJson)}
+				/>
+			)
+		}
+		<script
+			is:inline
+			type="application/ld+json"
+			set:html={JSON.stringify(makeSearchLd)}
+		/>
 	</head>
 	<body>
-		{!hideNav && <NavBar /> }
+		{!hideNav && <NavBar />}
 		<slot />
 		<Footer />
 	</body>
@@ -124,11 +152,9 @@ const makeSearchLd = () => {
 <style is:global>
 	@import '../styles/values.css';
 	@import '../styles/typography.css';
-	</style>
-	
+</style>
 
 <style is:global>
-
 	html {
 		::selection {
 			background: var(--accent);
@@ -142,5 +168,4 @@ const makeSearchLd = () => {
 		color: var(--foreground);
 		background: var(--background);
 	}
-	
 </style>

@@ -1,13 +1,13 @@
 """
 Reads app list from awesome-privacy.yml,
-formats into markdown, and inserts into README.md 
+formats into markdown, and inserts into README.md
 """
 
 import os
 import re
 import yaml
 import logging
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 
 # Configure Logging
 LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO").upper()
@@ -44,14 +44,32 @@ def tosElement(tosdrId):
         return ""
     return f"[![Privacy Policy](https://shields.tosdr.org/en_{tosdrId}.svg)](https://tosdr.org/en/service/{tosdrId})"
 
-def statsElement(isOpenSource, isSecurityAudited, isAcceptsCrypto):
+def statsElement(app, categoryName, sectionName):
     statsStr = ""
-    if isOpenSource == True:
-      statsStr += "📦 Open Source "
-    if isSecurityAudited == True:
-      statsStr += "🛡️ Security Audited "
-    if isAcceptsCrypto == True:
-      statsStr += "💰 Accepts Anonymous Payment "
+    if app.get('openSource') == True:
+        github = app.get('github')
+        if github:
+            link = f"https://github.com/{github}"
+        elif app.get('url'):
+            link = app.get('url')
+        else:
+            link = f"https://awesome-privacy.xyz/{slugify(categoryName)}/{slugify(sectionName)}/{slugify(app.get('name'))}"
+        statsStr += (
+            f"[![Open Source](https://img.shields.io/badge/-Open_Source-3DA639"
+            f"?style=flat&logo=opensourceinitiative&logoColor=white)]({link}) "
+        )
+    if app.get('securityAudited') == True:
+        statsStr += (
+            "![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639"
+            "?style=flat&logo=data:image/svg+xml;base64,"
+            "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4="
+            "&logoColor=white) "
+        )
+    if app.get('acceptsCrypto') == True:
+        statsStr += (
+            "![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted"
+            "%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) "
+        )
     return statsStr
 
 def slugify(title):
@@ -63,6 +81,11 @@ def slugify(title):
     title = title.replace('?', '')
     return title
 
+def shieldsEncode(text):
+    if not text: return ''
+    text = text.strip().replace('-', '--').replace('_', '__').replace(' ', '_')
+    return quote(text, safe='_-.')
+
 def awesomePrivacyReport(categoryName, sectionName, serviceName):
   if not serviceName:
       return ""
@@ -72,12 +95,74 @@ def awesomePrivacyReport(categoryName, sectionName, serviceName):
       f"(https://awesome-privacy.xyz/{slugify(categoryName)}/{slugify(sectionName)}/{slugify(serviceName)})"
   )
 
-def makeStatsCard():
-  return (
-      f"\t- <details><summary>Stats</summary>\n\n"
-      f""
-      f"\n\n</details>"
-  )
+def playStoreBadge(name, androidApp):
+    if not androidApp: return ""
+    encoded = shieldsEncode(name)
+    return (
+        f"[![{name} on Google Play](https://img.shields.io/badge/-{encoded}-3bd47f"
+        f"?style=flat&logo=android&logoColor=white)]"
+        f"(https://play.google.com/store/apps/details?id={androidApp}) "
+    )
+
+def appStoreBadge(name, iosApp):
+    if not iosApp: return ""
+    encoded = shieldsEncode(name)
+    return (
+        f"[![{name} on App Store](https://img.shields.io/badge/-{encoded}-0D96F6"
+        f"?style=flat&logo=appstore&logoColor=white)]"
+        f"({iosApp}) "
+    )
+
+def redditBadge(subreddit):
+    if not subreddit or not subreddit.strip(): return ""
+    sub = subreddit.strip()
+    return (
+        f"[![r/{sub} on Reddit](https://img.shields.io/badge/-{sub}-FF4500"
+        f"?style=flat&logo=reddit&logoColor=white)]"
+        f"(https://reddit.com/r/{sub}) "
+    )
+
+def discordBadge(name, discordInvite):
+    if not discordInvite or not discordInvite.strip(): return ""
+    invite = discordInvite.strip()
+    encoded = shieldsEncode(name)
+    link = invite if invite.startswith('https://') else f"https://discord.gg/{invite}"
+    return (
+        f"[![{name} on Discord](https://img.shields.io/badge/-{encoded}-5865F2"
+        f"?style=flat&logo=discord&logoColor=white)]"
+        f"({link}) "
+    )
+
+_MD_PATTERNS = [
+    re.compile(r'\[([^\]]*)\]\([^)]*\)'),    # [text](url) — group 1 = visible text
+    re.compile(r'\*\*(.+?)\*\*'),             # **bold**
+    re.compile(r'`([^`]+)`'),                 # `code`
+    re.compile(r'(?<!\*)\*([^*]+)\*(?!\*)'),  # *italic*
+]
+
+def truncateMarkdown(text, maxLen=200):
+    """Returns (truncated_text, was_truncated) preserving markdown constructs."""
+    if len(text) <= maxLen:
+        return text, False
+
+    result = []
+    visible = 0
+    i = 0
+
+    while i < len(text) and visible < maxLen:
+        for pattern in _MD_PATTERNS:
+            m = pattern.match(text, i)
+            if m:
+                result.append(m.group(0))
+                visible += len(m.group(1))
+                i = m.end()
+                break
+        else:
+            result.append(text[i])
+            visible += 1
+            i += 1
+
+    return ''.join(result).rstrip(), True
 
 def makeHref(text):
     if not text: return "#"
@@ -116,21 +201,32 @@ def makeAwesomePrivacy():
             )
           # For each service, list it's name, icon, url, and description
           for app in section.get('services') or []:
+              description, was_truncated = truncateMarkdown(app.get('description', ''))
+              ap_link = (
+                  f"https://awesome-privacy.xyz/"
+                  f"{slugify(category.get('name'))}/{slugify(section.get('name'))}/{slugify(app.get('name'))}"
+              )
+              ellipsis = f"[…]({ap_link} \"View full {app.get('name')} report\")" if was_truncated else ""
               markdown += (
                   f"- **[{iconElement(app.get('url'), app.get('icon'))} {app.get('name')}]"
-                  f"({app.get('url')})** - {app.get('description')}"
-                  f"[…](https://awesome-privacy.xyz/"
-                  f"{slugify(category.get('name'))}/{slugify(section.get('name'))}/{slugify(app.get('name'))} \"View full {app.get('name')} report\") \n"
-                  + ((
-                    f"\t- <details>\n\t\t<summary>Stats</summary>\n\n\t\t"
-                    f"{repoElement(app.get('github'))} "
-                    f"{tosElement(app.get('tosdrId'))} "
-                    f"{awesomePrivacyReport(category.get('name'), section.get('name'), app.get('name'))} \n"
-                    f"{statsElement(app.get('openSource'), app.get('securityAudited'), app.get('acceptsCrypto'))}˙ \n"
-                    f"\n\t\t</details>\n"
-                  )
-                  if app.get('github') or app.get('tosdrId') else '')
+                  f"({app.get('url')})** - {description}{ellipsis} \n"
               )
+              badges = ' '.join(filter(None, [
+                  repoElement(app.get('github')),
+                  tosElement(app.get('tosdrId')),
+                  awesomePrivacyReport(category.get('name'), section.get('name'), app.get('name')),
+                  statsElement(app, category.get('name'), section.get('name')).rstrip(),
+                  playStoreBadge(app.get('name'), app.get('androidApp')).rstrip(),
+                  appStoreBadge(app.get('name'), app.get('iosApp')).rstrip(),
+                  redditBadge(app.get('subreddit')).rstrip(),
+                  discordBadge(app.get('name'), app.get('discordInvite')).rstrip(),
+              ]))
+              if badges:
+                  markdown += (
+                      f"\t- <details>\n\t\t<summary>Stats</summary>\n\n\t\t"
+                      f"{badges}ㅤ \n"
+                      f"\n\t\t</details>\n"
+                  )
           markdown += "\n"
           # If word of warning exists, append it
           if section.get('wordOfWarning'):
@@ -145,7 +241,7 @@ def makeAwesomePrivacy():
                 markdown += f"> - [{mention.get('name')}]({mention.get('url')})" + (
                   f" - {mention.get('description')}" if mention.get('description') else "\n"
               )
-            else: 
+            else:
               notable_mentions = section.get('notableMentions').replace('\n', '\n> ')
               markdown += f"> {notable_mentions}"
 
@@ -170,7 +266,7 @@ def update_content_between_markers(content, start_marker, end_marker, new_conten
     logger.info(f"Updating content between {start_marker} and {end_marker} markers...")
     start_index = content.find(start_marker)
     end_index = content.find(end_marker)
-    
+
     if start_index != -1 and end_index != -1:
         before_section = content[:start_index + len(start_marker)]
         after_section = content[end_index:]
