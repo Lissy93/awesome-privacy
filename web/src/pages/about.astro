@@ -1,14 +1,20 @@
 ---
-
 import Layout from '@layouts/Layout.astro';
 import Main from '@components/scafold/MainCard.astro';
 import Icon from '@components/form/Icon.astro';
 import SocialShare from '@components/form/Social.astro';
 import { parseMarkdown } from '@utils/parse-markdown';
-import { authorProjects, authorSocials,   aboutOurData, projectRequirements, appDescription } from '../site-config';
+import {
+	authorProjects,
+	authorSocials,
+	aboutOurData,
+	projectRequirements,
+	appDescription,
+} from '../site-config';
 
 const contributorsResource = async () => {
-	const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
+	const url =
+		'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
 	const response = await fetch(url);
 	if (!response.ok) {
 		throw new Error('Failed to fetch contributors');
@@ -26,334 +32,403 @@ const sponsorsResource = async () => {
 };
 
 const licenseContent = async () => {
-	const url = 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/HEAD/LICENSE';
+	const url =
+		'https://raw.githubusercontent.com/Lissy93/awesome-privacy/HEAD/LICENSE';
 	const response = await fetch(url);
 	if (!response.ok) {
 		throw new Error('Failed to fetch license');
 	}
 	return await response.text();
 };
-
 ---
 
 <Layout title="About | Awesome Privacy" description={appDescription}>
 	<div class="about-page">
-	<Main>
-		<h2 id="objective">Objective</h2>
-		<p>
-			Large data-hungry corporations dominate the digital world but with little,
-			or no respect for your privacy.
-			We believe that privacy is a fundamental human right and that it should be protected.
-			<br /><br />
-			Migrating to open-source applications and those with a strong emphasis on
-			privacy & security will help safegaurd you from corporations,
-			governments, and hackers who log, store or sell your sensetive personal data.
-			<br /><br />
-			Awesome Privacy is a directory of alternative software which respects your privacy.
-			<br /><br />
-			
-		</p>
-		<hr />
+		<Main>
+			<h2 id="objective">Objective</h2>
+			<p>
+				Large data-hungry corporations dominate the digital world but with
+				little, or no respect for your privacy. We believe that privacy is a
+				fundamental human right and that it should be protected.
+				<br /><br />
+				Migrating to open-source applications and those with a strong emphasis on
+				privacy & security will help safegaurd you from corporations, governments,
+				and hackers who log, store or sell your sensetive personal data.
+				<br /><br />
+				Awesome Privacy is a directory of alternative software which respects your
+				privacy.
+				<br /><br />
+			</p>
+			<hr />
 
-		<h2 id="creteria">Software Requirements</h2>
-		<div class="software-requirements"><p set:html={parseMarkdown(projectRequirements)}></p></div>
-		<hr />
+			<h2 id="creteria">Software Requirements</h2>
+			<div class="software-requirements">
+				<p set:html={parseMarkdown(projectRequirements)} />
+			</div>
+			<hr />
 
-		<h2 id="our-data">Our Data</h2>
-		<div class="about-the-data"><p set:html={parseMarkdown(aboutOurData)}></p></div>
-		<hr />
+			<h2 id="our-data">Our Data</h2>
+			<div class="about-the-data">
+				<p set:html={parseMarkdown(aboutOurData)} />
+			</div>
+			<hr />
 
-		<h2 id="contributing">Contributing</h2>
-		<p>
-			Awesome Privacy (including all data and code) is fully open source,
-			maintained by a core group of volenteers, with a lot of help from the community.
-			<br /><br />
-			We welcome suggestions, additions, edits and removals to the list.<br />
-			It's thanks to contributors like you that this project is possible 💜
-			<br /><br />
-			To get started, head over to our <a href="https://github.com/lissy93/awesome-privacy">GitHub repository</a>.
-			From here, you'll be able to edit <a href="#"><code>awesome-privacy.yml</code></a>
-			where all data is stored, and then submit your changes as a pull request.
-			<br /><br />
-			If you're new to open source, you can find some resources to get you started
-			at <a href="https://git-in.to">git-in.to</a>, but feel free to reach out if you need any help 😊
-		</p>
-		<hr />
+			<h2 id="contributing">Contributing</h2>
+			<p>
+				Awesome Privacy (including all data and code) is fully open source,
+				maintained by a core group of volenteers, with a lot of help from the
+				community.
+				<br /><br />
+				We welcome suggestions, additions, edits and removals to the list.<br />
+				It's thanks to contributors like you that this project is possible 💜
+				<br /><br />
+				To get started, head over to our <a
+					href="https://github.com/lissy93/awesome-privacy">GitHub repository</a
+				>. From here, you'll be able to edit <a href="#"
+					><code>awesome-privacy.yml</code></a
+				>
+				where all data is stored, and then submit your changes as a pull request.
+				<br /><br />
+				If you're new to open source, you can find some resources to get you started
+				at <a href="https://git-in.to">git-in.to</a>, but feel free to reach out
+				if you need any help 😊
+			</p>
+			<hr />
 
-		<h2 id="acknowledgements">Acknowledgements</h2>
-		<h3 id="sponsors">Sponsors</h3>
-		<p>Huge thanks to the following sponsors, for their ongoing support 💖</p>
-		<div class="user-list">
-			{sponsorsResource().then((sponsors) => {
-				return sponsors.map((sponsor: any) => (
-					<a class="user" href={`https://github.com/${sponsor.login}`} target="_blank" rel="noreferrer">
-						<img src={sponsor.avatarUrl} alt={sponsor.login} />
-						<p>{sponsor.name || sponsor.login}</p>
-					</a>
-				));
-			})}
-		</div>
+			<h2 id="acknowledgements">Acknowledgements</h2>
+			<h3 id="sponsors">Sponsors</h3>
+			<p>Huge thanks to the following sponsors, for their ongoing support 💖</p>
+			<div class="user-list">
+				{
+					sponsorsResource().then((sponsors) => {
+						return sponsors.map((sponsor: any) => (
+							<a
+								class="user"
+								href={`https://github.com/${sponsor.login}`}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<img src={sponsor.avatarUrl} alt={sponsor.login} />
+								<p>{sponsor.name || sponsor.login}</p>
+							</a>
+						));
+					})
+				}
+			</div>
 
-		<h3 id="contributors">Contributors</h3>
-		<p>
-			This project exists thanks to all the people who've helped build and maintain it.<br />
-			Special thanks to the below, top-100 contributors 🌟
-		</p>
-		<div class="user-list">
-			{contributorsResource().then((sponsors) => {
-				return sponsors.map((sponsor: any) => (
-					<a class="user" href={sponsor.html_url} target="_blank" rel="noreferrer">
-						<img src={sponsor.avatar_url} alt={sponsor.login} />
-						<p>{sponsor.login}</p>
-					</a>
-				));
-			})}
-		</div>
+			<h3 id="contributors">Contributors</h3>
+			<p>
+				This project exists thanks to all the people who've helped build and
+				maintain it.<br />
+				Special thanks to the below, top-100 contributors 🌟
+			</p>
+			<div class="user-list">
+				{
+					contributorsResource().then((sponsors) => {
+						return sponsors.map((sponsor: any) => (
+							<a
+								class="user"
+								href={sponsor.html_url}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<img src={sponsor.avatar_url} alt={sponsor.login} />
+								<p>{sponsor.login}</p>
+							</a>
+						));
+					})
+				}
+			</div>
 
-		<hr />
+			<hr />
 
-		<h2 id="support-us">Help us out</h2>
-		<p>
-			Awesome Privacy is a free, open source and community-maintained resource.<br />
-			There's a few ways you can support us:
-			<ul class="help-list">
-				<li>Visiting, forking, or starring or our <a href="https://github.com/lissy93/awesome-privacy">GitHub repository</a></li>
-				<li>Help us keep our info up-to-date, but submitting an addition, removal or ammendment</li>
-				<li>Leave feedback on services that you've used, to help others make a more informed decission</li>
-				<li>Consider <a href="https://github.com/sponsors/Lissy93">sponsoring us on GitHub</a>, if you're able 💖</li>
-				<li>Share Awesome Privacy with your network</li>
-			</ul>
-			<SocialShare />
-		</p>
+			<h2 id="support-us">Help us out</h2>
+			<p>
+				Awesome Privacy is a free, open source and community-maintained
+				resource.<br />
+				There's a few ways you can support us:
+				<ul class="help-list">
+					<li>
+						Visiting, forking, or starring or our <a
+							href="https://github.com/lissy93/awesome-privacy"
+							>GitHub repository</a
+						>
+					</li>
+					<li>
+						Help us keep our info up-to-date, but submitting an addition,
+						removal or ammendment
+					</li>
+					<li>
+						Leave feedback on services that you've used, to help others make a
+						more informed decission
+					</li>
+					<li>
+						Consider <a href="https://github.com/sponsors/Lissy93"
+							>sponsoring us on GitHub</a
+						>, if you're able 💖
+					</li>
+					<li>Share Awesome Privacy with your network</li>
+				</ul>
+				<SocialShare />
+			</p>
 
-		<hr />
+			<hr />
 
-		<h2 id="author">Author</h2>
-		<article class="author">
+			<h2 id="author">Author</h2>
+			<article class="author">
 				<p>
-					This project was originally started by
-					me, <a href="https://aliciasykes.com">Alicia Sykes</a>
+					This project was originally started by me, <a
+						href="https://aliciasykes.com">Alicia Sykes</a
+					>
 					(with a lot of help from the community)
 				</p>
 				<br />
 				<p class="about">
-					I build apps which aim to help people escape big tech, secure their data,
-					and protect their privacy.
+					I build apps which aim to help people escape big tech, secure their
+					data, and protect their privacy.
 				</p>
 				<br />
 				<div class="pic-and-socials">
 					<a href="https://aliciasykes.com">
-						<img class="pic" width="180" height="240" alt="Alicia Sykes" src="https://i.ibb.co/fq10qhL/DSC-0597.jpg" />
+						<img
+							class="pic"
+							width="180"
+							height="240"
+							alt="Alicia Sykes"
+							src="https://i.ibb.co/fq10qhL/DSC-0597.jpg"
+						/>
 					</a>
 					<div class="socials">
 						{
-							authorSocials.map((social: { link: string; color: string; icon: string; }) => (
-								<a href={social.link} style={`--color: ${social.color}`} target="_blank">
-									<Icon icon={social.icon} width={24} height={24} />
-								</a>
-							))
+							authorSocials.map(
+								(social: { link: string; color: string; icon: string }) => (
+									<a
+										href={social.link}
+										style={`--color: ${social.color}`}
+										target="_blank"
+									>
+										<Icon icon={social.icon} width={24} height={24} />
+									</a>
+								),
+							)
 						}
 					</div>
 				</div>
 				<p class="more-about">
-					I have a particular interest in self-hosting, Linux, security and OSINT.<br />
+					I have a particular interest in self-hosting, Linux, security and
+					OSINT.<br />
 					So if this type of stuff interests you, check out these other projects:
 				</p>
 				<ul>
 					{
-						authorProjects.map((project: { title: string; icon: string; link: string; description: string; }) => (
-							<li>
-								<img width="20" height="20" alt={project.title} src={project.icon} />
-								<a href={project.link} target="_blank" rel="noreferrer">
-									{project.title}
-								</a> - {project.description}
-							</li>
-						))
+						authorProjects.map(
+							(project: {
+								title: string;
+								icon: string;
+								link: string;
+								description: string;
+							}) => (
+								<li>
+									<img
+										width="20"
+										height="20"
+										alt={project.title}
+										src={project.icon}
+									/>
+									<a href={project.link} target="_blank" rel="noreferrer">
+										{project.title}
+									</a>{' '}
+									- {project.description}
+								</li>
+							),
+						)
 					}
 					<li>
-						...and loads more, over at <a href="https://apps.aliciasykes.com/">apps.aliciasykes.com</a>
+						...and loads more, over at <a href="https://apps.aliciasykes.com/"
+							>apps.aliciasykes.com</a
+						>
 						and on <a href="https://github.com/lissy93">github.com/lissy93</a>
 					</li>
 				</ul>
 				<br />
 				<p>
-					If you'd like to support the ongoing work on Awesome Privacy,
-					and other similar projects,
-					consider <a href="https://github.com/sponsors/lissy93">sponsoring me</a> on GitHub 💖
+					If you'd like to support the ongoing work on Awesome Privacy, and
+					other similar projects, consider <a
+						href="https://github.com/sponsors/lissy93">sponsoring me</a
+					> on GitHub 💖
 				</p>
+			</article>
 
-		</article>
-		
-		<hr />
+			<hr />
 
-		<h2 id="license">License</h2>
-		<p>
-			All content on Awesome Privacy is freely available, within the public domain,
-			licensed under Creative Commons Zero v1.0 Universal.
-			The code for the website is licensed under MIT.
-		</p>
-		<p>
-			{licenseContent().then((license) => {
-				return (<pre class="license-content">{license}</pre>)
-			})}
-		</p>
-
-	</Main>
+			<h2 id="license">License</h2>
+			<p>
+				All content on Awesome Privacy is freely available, within the public
+				domain, licensed under Creative Commons Zero v1.0 Universal. The code
+				for the website is licensed under MIT.
+			</p>
+			<p>
+				{
+					licenseContent().then((license) => {
+						return <pre class="license-content">{license}</pre>;
+					})
+				}
+			</p>
+		</Main>
 	</div>
 </Layout>
 
 <style lang="scss">
-h2 {
-	font-size: 2rem;
-	margin: 2rem 0 1rem 0;
-}
-p {
-	font-size: 1.2rem;
-}
-hr {
-	margin: 2rem 0;
-	border: 0;
-	border-top: 2px solid var(--accent);
-	&:nth-child(6) {
-		border-color: var(--accent-3);
+	h2 {
+		font-size: 2rem;
+		margin: 2rem 0 1rem 0;
 	}
-	&:nth-child(9) {
-		border-color: var(--accent-2);
-	}
-}
-
-h3 {
-	font-size: 1.6rem;
-}
-
-.software-requirements, .about-the-data {
-	:global(p) {
-		font-size: 1.2rem;
-		margin: 0 0 0.5rem 0;
-	}
-	:global(ul) {
-		padding-left: 0.5rem;
-		list-style: none;
-		font-size: 1.2rem;
-		:global(li ul) {
-			padding: 0 0 0.5rem 1rem;
-			list-style: circle;
-		}
-	
-	}
-	:global(h3) {
-		font-size: 1.6rem;
-		margin-bottom: 0;
-	}
-	:global(strong) {
-		font-weight: 500;
-	}
-	:global(small) {
-		font-size: 0.8rem;
-		opacity: 0.7;
-		:global(a) {
-			color: var(--accent-3);
-		}
-	}
-	:global(code) {
-		font-family: 'Courier New', Courier, monospace;
-		background: #acabb782;
-    padding: 0.2rem 0.4rem;
-    border-radius: var(--curve-sm);
-    font-size: 0.9rem;
-	}
-}
-
-.user-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	margin: 2rem 0;
-	.user {
-		width: 6rem;
-		overflow: hidden;
-		text-align: center;
-		img {
-			width: 5rem;
-			height: 5rem;
-			border-radius: var(--curve-md);
-		}
-		p {
-			font-size: 1rem;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;  
-			overflow: hidden;
-		}
-	}
-}
-
-.license-content {
-	max-height: 500px;
-  overflow: scroll;
-  background: var(--background-form);
-  width: fit-content;
-  border-radius: var(--curve-sm);
-  padding: 0.5rem;
-  font-size: 0.7rem;
-  font-family: mono;
-	max-width: 100vw;
-	white-space: pre-line;
-}
-
-.help-list {
-	padding-left: 1rem;
-	list-style: circle;
-	font-size: 1.1rem;
-}
-
-.author {
 	p {
-		margin: 1rem 0 0 0;
+		font-size: 1.2rem;
 	}
-	ul {
-		padding-left: 1.5rem;
+	hr {
+		margin: 2rem 0;
+		border: 0;
+		border-top: 2px solid var(--accent);
+		&:nth-child(6) {
+			border-color: var(--accent-3);
+		}
+		&:nth-child(9) {
+			border-color: var(--accent-2);
+		}
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+
+	.software-requirements,
+	.about-the-data {
+		:global(p) {
+			font-size: 1.2rem;
+			margin: 0 0 0.5rem 0;
+		}
+		:global(ul) {
+			padding-left: 0.5rem;
+			list-style: none;
+			font-size: 1.2rem;
+			:global(li ul) {
+				padding: 0 0 0.5rem 1rem;
+				list-style: circle;
+			}
+		}
+		:global(h3) {
+			font-size: 1.6rem;
+			margin-bottom: 0;
+		}
+		:global(strong) {
+			font-weight: 500;
+		}
+		:global(small) {
+			font-size: 0.8rem;
+			opacity: 0.7;
+			:global(a) {
+				color: var(--accent-3);
+			}
+		}
+		:global(code) {
+			font-family: 'Courier New', Courier, monospace;
+			background: #acabb782;
+			padding: 0.2rem 0.4rem;
+			border-radius: var(--curve-sm);
+			font-size: 0.9rem;
+		}
+	}
+
+	.user-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 2rem 0;
+		.user {
+			width: 6rem;
+			overflow: hidden;
+			text-align: center;
+			img {
+				width: 5rem;
+				height: 5rem;
+				border-radius: var(--curve-md);
+			}
+			p {
+				font-size: 1rem;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.license-content {
+		max-height: 500px;
+		overflow: scroll;
+		background: var(--background-form);
+		width: fit-content;
+		border-radius: var(--curve-sm);
+		padding: 0.5rem;
+		font-size: 0.7rem;
+		font-family: mono;
+		max-width: 100vw;
+		white-space: pre-line;
+	}
+
+	.help-list {
+		padding-left: 1rem;
 		list-style: circle;
-		margin-bottom: 0;
-		li {
-			font-size: 1.1rem;
+		font-size: 1.1rem;
+	}
+
+	.author {
+		p {
+			margin: 1rem 0 0 0;
 		}
-	}
-	.about {
-		font-size: 1.4rem;
-		font-style: italic;
-		font-weight: 300;
-		color: var(--accent-3);
-		text-align: center;
-		max-width: 550px;
-		margin: 0 auto;
-	}
-	
-	small {
-		font-size: 1rem;
-		margin: 1rem 0;
-	}
-	.pic-and-socials {
-		float:right;
-		img {
-			margin: 0.5rem 1rem;
-			border-radius: var(--curve-md);
-			border: 2px solid var(--box-outline);
-			box-shadow: 4px 4px 0 var(--box-outline);
+		ul {
+			padding-left: 1.5rem;
+			list-style: circle;
+			margin-bottom: 0;
+			li {
+				font-size: 1.1rem;
+			}
 		}
-		.socials {
-			display: flex;
-			margin: 0.5rem 1rem;
-			justify-content: space-between;
-			:global(a svg) {
-				color: var(--foreground);
-				transition: color 0.2s ease-in-out;
-				&:hover {
-					color: var(--color);
+		.about {
+			font-size: 1.4rem;
+			font-style: italic;
+			font-weight: 300;
+			color: var(--accent-3);
+			text-align: center;
+			max-width: 550px;
+			margin: 0 auto;
+		}
+
+		small {
+			font-size: 1rem;
+			margin: 1rem 0;
+		}
+		.pic-and-socials {
+			float: right;
+			img {
+				margin: 0.5rem 1rem;
+				border-radius: var(--curve-md);
+				border: 2px solid var(--box-outline);
+				box-shadow: 4px 4px 0 var(--box-outline);
+			}
+			.socials {
+				display: flex;
+				margin: 0.5rem 1rem;
+				justify-content: space-between;
+				:global(a svg) {
+					color: var(--foreground);
+					transition: color 0.2s ease-in-out;
+					&:hover {
+						color: var(--color);
+					}
 				}
 			}
 		}
 	}
-}
-
 </style>

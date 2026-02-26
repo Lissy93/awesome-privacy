@@ -4,7 +4,6 @@
   import * as brands from '@fortawesome/free-brands-svg-icons';
   import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-
   export const iconMap: Record<string, IconDefinition> = {
     // Branding
     logo: solidIcons.faEyeSlash,
@@ -83,13 +82,8 @@
   };
 
   export let iconName: string;
-
 </script>
 
 {#if iconMap[iconName]}
-  <FontAwesomeIcon 
-    class="fa-icon" 
-    icon={iconMap[iconName]} />
+  <FontAwesomeIcon class="fa-icon" icon={iconMap[iconName]} />
 {/if}
-
-

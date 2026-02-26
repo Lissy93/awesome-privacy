@@ -1,5 +1,4 @@
 ---
-
 import Layout from '@layouts/Layout.astro';
 import ServiceList from '@components/things/ServiceList.astro';
 import Comments from '@components/things/Comments.svelte';
@@ -30,123 +29,132 @@ import Button from '@components/form/Button.astro';
 import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props extends Service {
-  slug: string;
-  parentSection: Section;
-  categoryName: string;
+	slug: string;
+	parentSection: Section;
+	categoryName: string;
 }
 
 const {
-  name,
-  description,
-  url,
-  github,
-  tosdrId,
-  discordInvite,
-  subreddit,
-  iosApp,
-  androidApp,
-  icon,
-  followWith,
-  links,
-  securityAudited,
-  openSource,
-  acceptsCrypto,
-  parentSection,
-  categoryName,
+	name,
+	description,
+	url,
+	github,
+	tosdrId,
+	discordInvite,
+	subreddit,
+	iosApp,
+	androidApp,
+	icon,
+	followWith,
+	links,
+	securityAudited,
+	openSource,
+	acceptsCrypto,
+	parentSection,
+	categoryName,
 } = Astro.props;
-
 
 /**
  * Make a list of keywords, for the <meta keywords> tag
  */
 const makeKeyWordTag = () => {
-  const keywords: string[] = [];
-  keywords.push(`open source ${parentSection.name}`);
-  keywords.push(`${parentSection.name} comparison`);
-  (parentSection.alternativeTo || []).forEach((alt: string) => {
-    keywords.push(`${alt} alternative`);
-  });
-  (parentSection.services || []).forEach((serv: Service) => {
-    keywords.push(`${serv.name} vs`);
-  });
-  keywords.push('private');
-  keywords.push('ad free');
-  keywords.push('encrypted');
-  keywords.push('open source software');
-  keywords.push('privacy respecting apps');
-  keywords.push('free tools');
-  return keywords.join(', ');
+	const keywords: string[] = [];
+	keywords.push(`open source ${parentSection.name}`);
+	keywords.push(`${parentSection.name} comparison`);
+	(parentSection.alternativeTo || []).forEach((alt: string) => {
+		keywords.push(`${alt} alternative`);
+	});
+	(parentSection.services || []).forEach((serv: Service) => {
+		keywords.push(`${serv.name} vs`);
+	});
+	keywords.push('private');
+	keywords.push('ad free');
+	keywords.push('encrypted');
+	keywords.push('open source software');
+	keywords.push('privacy respecting apps');
+	keywords.push('free tools');
+	return keywords.join(', ');
 };
 
 /**
  * Make a page title
  */
 const makePageTitle = () => {
-  return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
+	return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
 };
 
 const makeBreadcrumbs = () => {
-  return [
-    { name: 'Home', item: '/' },
-    { name: categoryName, item: slugify(categoryName) },
-    { name: parentSection.name, item: `${slugify(categoryName)}/${slugify(parentSection.name)}` },
-    { name: name, item: `${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}` },
-  ];
+	return [
+		{ name: 'Home', item: '/' },
+		{ name: categoryName, item: slugify(categoryName) },
+		{
+			name: parentSection.name,
+			item: `${slugify(categoryName)}/${slugify(parentSection.name)}`,
+		},
+		{
+			name: name,
+			item: `${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`,
+		},
+	];
 };
 
 /**
  * Make a string page intro, for the description tag
  */
 const makeDescriptionTag = () => {
-  let description = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
-  if (parentSection.services) {
-    const serviceList = parentSection.services.map((serv: Service) => serv.name);
-    description += `Compare ${serviceList.join(' vs ')} more apps. `
-  }
-  if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
-    description += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')} in 2024. `;
-  }
-  description += 'All this, and many more free and awesome tools and software.'
-  return description;
+	let description = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
+	if (parentSection.services) {
+		const serviceList = parentSection.services.map(
+			(serv: Service) => serv.name,
+		);
+		description += `Compare ${serviceList.join(' vs ')} more apps. `;
+	}
+	if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
+		description += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')} in 2024. `;
+	}
+	description += 'All this, and many more free and awesome tools and software.';
+	return description;
 };
 
 // Return a list of Services, except for the currtent one
 const filterServices = () => {
-  return parentSection.services.filter((service: Service) => service.name !== name);
+	return parentSection.services.filter(
+		(service: Service) => service.name !== name,
+	);
 };
 
 export async function getStaticPaths() {
-  const pages = await fetchData().then((data) => {
-    const results: Array<Props> = [];
-    if (!data || !data.categories) return results;
-    (data as AwesomePrivacy).categories.forEach((category) => {
-      category.sections.forEach((section) => {
-        const services = (section.services || []).map((service) => {
-          return {
-            slug: `${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`,
-            parentSection: section,
-            categoryName: category.name,
-            ...service,
-          };
-        });
-        results.push(...services);
-      });
-      
-    });
-    return results;
-  });
+	const pages = await fetchData().then((data) => {
+		const results: Array<Props> = [];
+		if (!data || !data.categories) return results;
+		(data as AwesomePrivacy).categories.forEach((category) => {
+			category.sections.forEach((section) => {
+				const services = (section.services || []).map((service) => {
+					return {
+						slug: `${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`,
+						parentSection: section,
+						categoryName: category.name,
+						...service,
+					};
+				});
+				results.push(...services);
+			});
+		});
+		return results;
+	});
 
-  return pages.map((props: Props) => {
-    return {params: { listing: props.slug }, props };
-  });
+	return pages.map((props: Props) => {
+		return { params: { listing: props.slug }, props };
+	});
 }
 
 const makePaginationLinks = () => {
-  const allServices = parentSection.services || [];
-  const index = allServices.findIndex(item => item.name === name);
-  const previousItem = index >  0 ? allServices[index -  1].name : null;
-  const nextItem = index < allServices.length -  1 ? allServices[index +  1].name : null;
-  return { previous: previousItem, next: nextItem };
+	const allServices = parentSection.services || [];
+	const index = allServices.findIndex((item) => item.name === name);
+	const previousItem = index > 0 ? allServices[index - 1].name : null;
+	const nextItem =
+		index < allServices.length - 1 ? allServices[index + 1].name : null;
+	return { previous: previousItem, next: nextItem };
 };
 
 const { previous, next } = makePaginationLinks();
@@ -158,565 +166,659 @@ const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
 const androidData = androidApp ? await fetchAndroidInfo(androidApp) : null;
-const discordData = discordInvite ? await fetchDiscordInfo(discordInvite) : null;
+const discordData = discordInvite
+	? await fetchDiscordInfo(discordInvite)
+	: null;
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
-const websiteData = (url && !ignoredSites.some(ignoredSite => url.includes(ignoredSite))) ? await fetchWebsiteInfo(url) : null;
+const websiteData =
+	url && !ignoredSites.some((ignoredSite) => url.includes(ignoredSite))
+		? await fetchWebsiteInfo(url)
+		: null;
 
 const findPrivacyPolicyLink = () => {
-  if (!privacyData) return null;
-  // const docs = privacyData?.parameters?.documents;
-  // if (docs) {
-  //   const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
-  //   if (privacyPolicy) return privacyPolicy.url;
-  // }
-  return `https://tosdr.org/en/service/${tosdrId}`;
+	if (!privacyData) return null;
+	// const docs = privacyData?.parameters?.documents;
+	// if (docs) {
+	//   const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
+	//   if (privacyPolicy) return privacyPolicy.url;
+	// }
+	return `https://tosdr.org/en/service/${tosdrId}`;
 };
 
 const privacyPolicyLink = findPrivacyPolicyLink();
 
 const getApiEndpoint = () => {
-  return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
-}
-
+	return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
+};
 ---
 
 <Layout
-  title={makePageTitle()}
-  keywords={makeKeyWordTag()}
-  description={makeDescriptionTag()}
-  breadcrumbs={makeBreadcrumbs()}
+	title={makePageTitle()}
+	keywords={makeKeyWordTag()}
+	description={makeDescriptionTag()}
+	breadcrumbs={makeBreadcrumbs()}
 >
-  <main>
-    <section>
-      <div class="service-head">
-        <h2>{name}</h2>
-        <span class="url-wrap">
-          <a class="service-url" href={url}>{formatLink(url)}</a>
-          <span class="follow-with">{followWith}</span>
-        </span>
-      </div>
-      <div class="breadcrumbs">
-        <span>
-          <a href="/">Awesome Privacy</a>
-          ➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
-          ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}>{parentSection.name}</a>
-          ➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}>{name}</a>
-        </span>
-      </div>
-      <div class="save-listing">
-        <SaveListing client:visible
-          categoryName={categoryName}
-          sectionName={parentSection.name}
-          serviceName={name}
-          showLabel={true}
-        />
-      </div>
-      <div class="intro">
-        <img 
-          width="60"
-          height="60"
-          loading="lazy"
-          decoding="async"
-          class="service-icon"
-          alt={`${name} Icon`}
-          data-service-url={formatLink(url)}
-          src={icon || `https://icon.horse/icon/${formatLink(url)}`}
-        />
-        <div>
-        <p class="description" set:html={parseMarkdown(description)}></p>
-        <ul>
-          { url && (
-          <li>
-            <b>Homepage:</b>
-            <a href={url}>{formatLink(url)}</a>
-          </li>
-          )}
-          { github && (
-          <li>
-            <b>GitHub:</b>
-            <a href={`https://github.com/${github}`}>github.com/{github}</a>
-          </li>
-          )}
-          { tosdrId && (
-          <li>
-            <b>Privacy:</b>
-            <a href={privacyPolicyLink}>{formatLink(privacyPolicyLink || '')}</a>
-          </li>
-          )}
-          { iosApp && (
-          <li>
-            <b>iOS App:</b>
-            <a href={iosApp}>{formatLink(iosApp)}</a>
-          </li>
-          )}
-          { androidApp && (
-          <li>
-            <b>Android App:</b>
-            <a href={`https://play.google.com/store/apps/details?id=${androidApp}`}>{`https://play.google.com/store/apps/details?id=${androidApp}`}</a>
-          </li>
-          )}
-          { discordInvite && (
-          <li>
-            <b>Discord Invite:</b>
-            <a href={`https://discord.com/invite/${discordInvite}`}>{discordInvite}</a>
-          </li>
-          )}
-          { subreddit && (
-          <li>
-            <b>Subreddit:</b>
-            <a href={`https://reddit.com/r/${subreddit}`}>r/{subreddit}</a>
-          </li>
-          )}
-          { url && (
-          <li>
-            <b>Web info:</b>
-            <a href={`https://web-check.xyz/results/${formatLink(url)}`}>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
-          </li>
-          )}
-          { links && links.length > 0 && (
-            links.map((link) => (
-              <li>
-                <b>{link.title}</b>
-                <a href={link.url}>{link.url}</a>
-              </li>
-            ))
-          )}
-        </ul>
-        </div>
-      </div>
-      <div class="highlights">
-        { securityAudited && (
-          <span class="meta-item great" title={`${name} has been security audited by an accredited auditor, with results published publicly`}>
-            <FontAwesome iconName="securityAudited" /> Security Audited
-          </span>
-        )}
-        { acceptsCrypto && (
-          <span class="meta-item great" title={`${name} accepts anonymous payment methods`}>
-            <FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
-          </span>
-        )}
-        { securityAudited === false && (
-          <span class="meta-item warning" title={`${name} has not been audited`}>
-            <FontAwesome iconName="notSecurityAudited" /> No Security Audit
-          </span>
-        )}
-        { (openSource === false) && (
-          <span class="warning">
-            <FontAwesome iconName="closedSource" />
-            Not Open Source
-          </span>
-        )}
-        { openSource || (github && openSource !== false) ? (
-          <span class="meta-item great" title={`${name} is open source`}>
-            <FontAwesome iconName="openSource" /> Open Source
-          </span>
-        ) : null }
-      </div>
-    </section>
-    { privacyData && privacyData.parameters.points.length > 0 && (
-      <section>
-        <h3>{name} Privacy Policy</h3>
-        <PrivacyPolicyDetails privacyData={privacyData} />
-      </section>
-    )}
-    { github && githubData && (
-      <section class="github-wrap">
-        <h3>{name} Source Code</h3>
-        <GitHubDetailedInfo gitHubData={githubData} repo={github} />
-      </section>
-    )}
-    { websiteData && (
-      <section>
-        <h3>{name} Website</h3>
-        <WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
-      </section>
-    )}
-    { (androidData && !androidData.error) && (
-      <section>
-        <h3>{name} Android App</h3>
-        <AndroidAppDetailedInfo androidData={androidData} />
-      </section>
-    )}
-    { iosData && typeof iosData === 'object' && Object.keys(iosData).length > 0 && (
-      <section>
-        <h3>{name} iOS App</h3>
-        <IosAppDetailedInfo url={url} iosData={iosData} />
-      </section>
-    )}
-    { dockerData && dockerData.found && (
-    <section>
-      <h3>{name} Docker</h3>
-      <DockerDetailedInfo docker={dockerData} />
-    </section>
-    )}
-    { (discordData || redditData) && (
-    <section>
-      <h3>{name} Socials</h3>
-      <div class="social-wrap">
-      { discordData && <DiscordDetailedInfo discordData={discordData} /> }
-      { redditData && <RedditDetailedInfo redditData={redditData} /> }
-      </div>
-    </section>
-    )}
+	<main>
+		<section>
+			<div class="service-head">
+				<h2>{name}</h2>
+				<span class="url-wrap">
+					<a class="service-url" href={url}>{formatLink(url)}</a>
+					<span class="follow-with">{followWith}</span>
+				</span>
+			</div>
+			<div class="breadcrumbs">
+				<span>
+					<a href="/">Awesome Privacy</a>
+					➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
+					➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+						>{parentSection.name}</a
+					>
+					➔ <a
+						href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}
+						>{name}</a
+					>
+				</span>
+			</div>
+			<div class="save-listing">
+				<SaveListing
+					client:visible
+					categoryName={categoryName}
+					sectionName={parentSection.name}
+					serviceName={name}
+					showLabel={true}
+				/>
+			</div>
+			<div class="intro">
+				<img
+					width="60"
+					height="60"
+					loading="lazy"
+					decoding="async"
+					class="service-icon"
+					alt={`${name} Icon`}
+					data-service-url={formatLink(url)}
+					src={icon || `https://icon.horse/icon/${formatLink(url)}`}
+				/>
+				<div>
+					<p class="description" set:html={parseMarkdown(description)} />
+					<ul>
+						{
+							url && (
+								<li>
+									<b>Homepage:</b>
+									<a href={url}>{formatLink(url)}</a>
+								</li>
+							)
+						}
+						{
+							github && (
+								<li>
+									<b>GitHub:</b>
+									<a href={`https://github.com/${github}`}>
+										github.com/{github}
+									</a>
+								</li>
+							)
+						}
+						{
+							tosdrId && (
+								<li>
+									<b>Privacy:</b>
+									<a href={privacyPolicyLink}>
+										{formatLink(privacyPolicyLink || '')}
+									</a>
+								</li>
+							)
+						}
+						{
+							iosApp && (
+								<li>
+									<b>iOS App:</b>
+									<a href={iosApp}>{formatLink(iosApp)}</a>
+								</li>
+							)
+						}
+						{
+							androidApp && (
+								<li>
+									<b>Android App:</b>
+									<a
+										href={`https://play.google.com/store/apps/details?id=${androidApp}`}
+									>{`https://play.google.com/store/apps/details?id=${androidApp}`}</a>
+								</li>
+							)
+						}
+						{
+							discordInvite && (
+								<li>
+									<b>Discord Invite:</b>
+									<a href={`https://discord.com/invite/${discordInvite}`}>
+										{discordInvite}
+									</a>
+								</li>
+							)
+						}
+						{
+							subreddit && (
+								<li>
+									<b>Subreddit:</b>
+									<a href={`https://reddit.com/r/${subreddit}`}>
+										r/{subreddit}
+									</a>
+								</li>
+							)
+						}
+						{
+							url && (
+								<li>
+									<b>Web info:</b>
+									<a
+										href={`https://web-check.xyz/results/${formatLink(url)}`}
+									>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
+								</li>
+							)
+						}
+						{
+							links &&
+								links.length > 0 &&
+								links.map((link) => (
+									<li>
+										<b>{link.title}</b>
+										<a href={link.url}>{link.url}</a>
+									</li>
+								))
+						}
+					</ul>
+				</div>
+			</div>
+			<div class="highlights">
+				{
+					securityAudited && (
+						<span
+							class="meta-item great"
+							title={`${name} has been security audited by an accredited auditor, with results published publicly`}
+						>
+							<FontAwesome iconName="securityAudited" /> Security Audited
+						</span>
+					)
+				}
+				{
+					acceptsCrypto && (
+						<span
+							class="meta-item great"
+							title={`${name} accepts anonymous payment methods`}
+						>
+							<FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
+						</span>
+					)
+				}
+				{
+					securityAudited === false && (
+						<span
+							class="meta-item warning"
+							title={`${name} has not been audited`}
+						>
+							<FontAwesome iconName="notSecurityAudited" /> No Security Audit
+						</span>
+					)
+				}
+				{
+					openSource === false && (
+						<span class="warning">
+							<FontAwesome iconName="closedSource" />
+							Not Open Source
+						</span>
+					)
+				}
+				{
+					openSource || (github && openSource !== false) ? (
+						<span class="meta-item great" title={`${name} is open source`}>
+							<FontAwesome iconName="openSource" /> Open Source
+						</span>
+					) : null
+				}
+			</div>
+		</section>
+		{
+			privacyData && privacyData.parameters.points.length > 0 && (
+				<section>
+					<h3>{name} Privacy Policy</h3>
+					<PrivacyPolicyDetails privacyData={privacyData} />
+				</section>
+			)
+		}
+		{
+			github && githubData && (
+				<section class="github-wrap">
+					<h3>{name} Source Code</h3>
+					<GitHubDetailedInfo gitHubData={githubData} repo={github} />
+				</section>
+			)
+		}
+		{
+			websiteData && (
+				<section>
+					<h3>{name} Website</h3>
+					<WebsiteDetailedInfo url={url} websiteInfo={websiteData} />
+				</section>
+			)
+		}
+		{
+			androidData && !androidData.error && (
+				<section>
+					<h3>{name} Android App</h3>
+					<AndroidAppDetailedInfo androidData={androidData} />
+				</section>
+			)
+		}
+		{
+			iosData &&
+				typeof iosData === 'object' &&
+				Object.keys(iosData).length > 0 && (
+					<section>
+						<h3>{name} iOS App</h3>
+						<IosAppDetailedInfo url={url} iosData={iosData} />
+					</section>
+				)
+		}
+		{
+			dockerData && dockerData.found && (
+				<section>
+					<h3>{name} Docker</h3>
+					<DockerDetailedInfo docker={dockerData} />
+				</section>
+			)
+		}
+		{
+			(discordData || redditData) && (
+				<section>
+					<h3>{name} Socials</h3>
+					<div class="social-wrap">
+						{discordData && <DiscordDetailedInfo discordData={discordData} />}
+						{redditData && <RedditDetailedInfo redditData={redditData} />}
+					</div>
+				</section>
+			)
+		}
 
-    <section>
-      <h3>{name} Reviews</h3>
-      <Comments client:visible />
-    </section>
+		<section>
+			<h3>{name} Reviews</h3>
+			<Comments client:visible />
+		</section>
 
-    <section>
-      <h3>More {parentSection.name}</h3>
-      <ServiceList
-        services={filterServices()}
-        subHeading={true}
-        noGitHubMetrics={true}
-        buttonLink={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
-        categoryName={categoryName}
-        sectionName={parentSection.name}
-      />
-    </section>
-    <section>
-      <h3>About the Data: {name}</h3>
-      <DataActions client:load categoryName={categoryName} sectionName={parentSection.name} serviceName={name} />
-      <h4>API</h4>
-      <p>
-        You can access {name}'s data programmatically via our API.
-        Simply make a <code>GET</code> request to:
-      </p>
-      <pre><a href={getApiEndpoint()}><code>{getApiEndpoint()}</code></a></pre>
-      <p>
-        The REST API is free, no-auth and CORS-enabled.
-        To learn more, view the  <a href="/api">Swagger Docs</a> or read the <a href="/about#api">API Usage Guide</a>.
-      </p>
+		<section>
+			<h3>More {parentSection.name}</h3>
+			<ServiceList
+				services={filterServices()}
+				subHeading={true}
+				noGitHubMetrics={true}
+				buttonLink={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+				categoryName={categoryName}
+				sectionName={parentSection.name}
+			/>
+		</section>
+		<section>
+			<h3>About the Data: {name}</h3>
+			<DataActions
+				client:load
+				categoryName={categoryName}
+				sectionName={parentSection.name}
+				serviceName={name}
+			/>
+			<h4>API</h4>
+			<p>
+				You can access {name}'s data programmatically via our API. Simply make a <code
+					>GET</code
+				> request to:
+			</p>
+			<pre><a href={getApiEndpoint()}><code>{getApiEndpoint()}</code></a></pre>
+			<p>
+				The REST API is free, no-auth and CORS-enabled. To learn more, view the <a
+					href="/api">Swagger Docs</a
+				> or read the <a href="/about#api">API Usage Guide</a>.
+			</p>
 
-      <h4>About the Data</h4>
-      <p>
-        Beyond the user-submitted YAML you see above, we also augment each listing with
-        additional data dynamically fetched from several sources.
-        To learn more about where the rest of data included in this page comes from,
-        and how it is computed,
-        see the <a href="/about#our-data">About the Data</a> section of our About page.
-      </p>
-    </section>
+			<h4>About the Data</h4>
+			<p>
+				Beyond the user-submitted YAML you see above, we also augment each
+				listing with additional data dynamically fetched from several sources.
+				To learn more about where the rest of data included in this page comes
+				from, and how it is computed, see the <a href="/about#our-data"
+					>About the Data</a
+				> section of our About page.
+			</p>
+		</section>
 
-    <section>
-      <h3>Share {name}</h3>
-      <p>
-        Help your friends compare {parentSection.name}, and pick privacy-respecting software and services.<br />
-        Share {name} and Awesome Privacy with your network!
-        <div>
-          <SocialShare
-            url={`${site}/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)} `}
-            title={`Checkout ${name}! \n`}
-            description={
-            `Compare #${name} and other privacy-respecting ${parentSection.name} at `
-            + `Awesome-Privacy.xyz, the free and open source list of private software alternatives. `
-            + `#privacy #opensource #awesomeprivacy by @Lissy_Sykes`}
-          />
-        </div>
-      </p>
-    </section>
+		<section>
+			<h3>Share {name}</h3>
+			<p>
+				Help your friends compare {parentSection.name}, and pick
+				privacy-respecting software and services.<br />
+				Share {name} and Awesome Privacy with your network!
+				<div>
+					<SocialShare
+						url={`${site}/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)} `}
+						title={`Checkout ${name}! \n`}
+						description={`Compare #${name} and other privacy-respecting ${parentSection.name} at ` +
+							`Awesome-Privacy.xyz, the free and open source list of private software alternatives. ` +
+							`#privacy #opensource #awesomeprivacy by @Lissy_Sykes`}
+					/>
+				</div>
+			</p>
+		</section>
 
-    <div class="pagination-navigation">
-      { previous ? (
-        <Button url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(previous)}`}>
-          <span>← Previous</span>
-          <p>{previous}</p>
-        </Button>
-      ) : <p class="nothing"></p>}
-      <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`} class="go-to-category">
-        View {parentSection.name} ({(parentSection.services || []).length})
-      </a>
-      { next && (
-        <Button url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(next)}`}>
-          <span>Next →</span>
-          <p>{next}</p>
-        </Button>
-      )}
-    </div>
-  </main>
+		<div class="pagination-navigation">
+			{
+				previous ? (
+					<Button
+						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(previous)}`}
+					>
+						<span>← Previous</span>
+						<p>{previous}</p>
+					</Button>
+				) : (
+					<p class="nothing" />
+				)
+			}
+			<a
+				href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+				class="go-to-category"
+			>
+				View {parentSection.name} ({(parentSection.services || []).length})
+			</a>
+			{
+				next && (
+					<Button
+						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(next)}`}
+					>
+						<span>Next →</span>
+						<p>{next}</p>
+					</Button>
+				)
+			}
+		</div>
+	</main>
 </Layout>
 
 <style lang="scss">
+	main {
+		margin: 2rem auto;
+		padding: 1rem;
+		width: 1200px;
+		max-width: calc(100% - 5rem);
+		position: relative;
+		@media (max-width: 768px) {
+			max-width: 95%;
+			padding: 0.5rem;
+			margin: 0 auto;
+		}
+	}
 
-main {
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 1200px;
-  max-width: calc(100% - 5rem);
-  position: relative;
-  @media(max-width: 768px) {
-    max-width: 95%;
-    padding: 0.5rem;
-    margin: 0 auto;
-  }
-}	
+	section {
+		margin: 1rem 0 4rem 0;
+		padding: 1rem;
+		min-height: 8rem;
+		position: relative;
+		border: 2px solid var(--box-outline);
+		box-shadow: 6px 6px 0 var(--box-outline);
+		background: var(--accent-fg);
+	}
 
-section {
-  margin: 1rem 0 4rem 0;
-  padding: 1rem;
-  min-height: 8rem;
-  position: relative;
-  border: 2px solid var(--box-outline);
-  box-shadow: 6px 6px 0 var(--box-outline);
-  background: var(--accent-fg);
+	p {
+		margin: 0.25rem 0 0.5rem 0;
+	}
 
-}
+	h3 {
+		font-size: 2rem;
+		margin: -2rem 0 1rem -2rem;
+		box-shadow: 6px 6px 0 var(--box-outline);
+		background: var(--accent);
+		color: var(--accent-fg);
+		width: fit-content;
+		padding: 0.25rem 0.5rem;
+		@media (max-width: 768px) {
+			margin: -2rem auto 2rem auto;
+		}
+	}
 
-p {
-  margin: 0.25rem 0 0.5rem 0;
-}
+	.service-head {
+		h2 {
+			font-size: 3rem;
+			margin: 0;
+			@media (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		.url-wrap {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			a {
+				font-size: 1.2rem;
+			}
+			.follow-with {
+				font-style: italic;
+				opacity: 0.6;
+			}
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+		}
+	}
 
-h3 {
-    font-size: 2rem;
-    margin: -2rem 0 1rem -2rem;
-    box-shadow: 6px 6px 0 var(--box-outline);
-    background: var(--accent);
-    color: var(--accent-fg);
-    width: fit-content;
-    padding: 0.25rem 0.5rem;
-    @media(max-width: 768px) {
-      margin: -2rem auto 2rem auto;
-    }
-  }
+	.breadcrumbs {
+		opacity: 0.5;
+		font-size: 0.8rem;
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		a {
+			color: var(--foreground);
+			transition: all 0.15s ease-in-out;
 
-.service-head {
-  h2 {
-    font-size: 3rem;
-    margin: 0;
-    @media(max-width: 768px) {
-      text-align: center;
-    }
-  }
-  .url-wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    a {
-      font-size: 1.2rem;
-    }
-    .follow-with {
-      font-style: italic;
-      opacity: 0.6;
-    }
-    @media(max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-  
-}
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
 
-.breadcrumbs {
-  opacity: 0.5;
-  font-size: 0.8rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  a {
-    color: var(--foreground);
-    transition: all 0.15s ease-in-out;
-    
-    &:hover {
-      color: var(--accent);
-    }
-  }
-  @media(max-width: 768px) {
-    display: none;
-  }
-}
+	.save-listing {
+		position: absolute;
+		top: 3rem;
+		right: 1rem;
+	}
 
-.save-listing {
-  position: absolute;
-  top: 3rem;
-  right: 1rem;
-}
+	h4 {
+		font-size: 1.4rem;
+		margin-bottom: 0;
+	}
 
-h4 {
-  font-size: 1.4rem;
-  margin-bottom: 0;
-}
+	.intro {
+		font-size: 1.2rem;
+		font-style: italic;
+		opacity: 0.9;
+		display: flex;
+		gap: 0.5rem;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+		.service-icon {
+			border-radius: var(--curve-md);
+			margin-top: 1rem;
+			@media (max-width: 768px) {
+				margin: 1rem auto 0 auto;
+			}
+		}
+		ul {
+			padding-left: 1rem;
+			list-style: circle;
+			font-style: normal;
+			font-size: 1rem;
+			margin-top: 0;
+			b {
+				font-size: 1rem;
+				font-weight: 400;
+				min-width: 100px;
+				display: inline-block;
+				@media (max-width: 768px) {
+					width: auto;
+					display: block;
+				}
+			}
+		}
+	}
 
-.intro {
-  font-size: 1.2rem;
-  font-style: italic;
-  opacity: 0.9; 
-  display: flex;
-  gap: 0.5rem;
-  @media(max-width: 768px) {
-    flex-direction: column; 
-  }
-  .service-icon {
-    border-radius: var(--curve-md);
-    margin-top: 1rem;
-    @media(max-width: 768px) {
-      margin: 1rem auto 0 auto;
-    }
-  }
-  ul {
-    padding-left: 1rem;
-    list-style: circle;
-    font-style: normal;
-    font-size: 1rem;
-    margin-top: 0;
-    b {
-      font-size: 1rem;
-      font-weight: 400;
-      min-width: 100px;
-      display: inline-block;
-      @media(max-width: 768px) {
-        width: auto;
-        display: block;
-      }
-    }
-  }
-}
+	.pagination-navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
+		:global(.button) {
+			min-width: 120px;
+			width: fit-content;
+			padding: 0.25rem 1rem;
+			text-align: right;
+			&:first-child {
+				text-align: left;
+			}
+			p {
+				margin: 0;
+				font-weight: normal;
+				font-size: 1rem;
+			}
+			span {
+				font-size: 0.8rem;
+			}
+		}
+		.nothing {
+			width: 120px;
+		}
+		.go-to-category {
+			color: var(--foreground);
+			font-size: 0.8rem;
+			opacity: 0.5;
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
 
-.pagination-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  :global(.button) {
-    min-width: 120px;
-    width: fit-content;
-    padding: 0.25rem 1rem;
-    text-align: right;
-    &:first-child { text-align: left; }
-    p {
-      margin: 0;
-      font-weight: normal;
-      font-size: 1rem;
-    }
-    span {
-      font-size: 0.8rem;
-    }
-    
-  }
-  .nothing {
-    width: 120px;
-  }
-  .go-to-category {
-    color: var(--foreground);
-    font-size: 0.8rem;
-    opacity: 0.5;
-    @media (max-width: 768px) {
-      display: none;
-    }
-  }
-}
+	.further-info,
+	.notable-mentions,
+	.word-of-warning {
+		h3 {
+			font-size: 1.4rem;
+			margin: 1rem 0;
+		}
+		:global(p) {
+			font-size: 0.9rem;
+			opacity: 0.7;
+			:global(strong) {
+				font-weight: 500;
+			}
+			:global(a) {
+				color: var(--foreground);
+				transition: all 0.15s ease-in-out;
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+		:global(strong) {
+			font-weight: 500;
+		}
+		:global(h4) {
+			font-size: 1.2rem;
+			margin: 0.5rem 0 0 0;
+		}
+		:global(ul) {
+			list-style: circle;
+			padding-left: 1rem;
+			font-size: 0.9rem;
+			opacity: 0.7;
+			li {
+				margin-bottom: 0.25rem;
+				:global(p) {
+					display: inline;
+				}
+			}
+		}
+	}
 
+	pre {
+		a {
+			text-decoration: none;
+			color: var(--foreground);
+			code {
+				background: #acabb782;
+				padding: 0.2rem 0.4rem;
+				border-radius: var(--curve-sm);
+				font-family: Courier New;
+				font-size: 0.9rem;
+				@media (max-width: 768px) {
+					white-space: break-spaces;
+				}
+			}
+		}
+	}
 
+	.social-wrap {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
-.further-info, .notable-mentions, .word-of-warning {
-  h3 {
-    font-size: 1.4rem;
-    margin: 1rem 0;
-  }
-  :global(p) {
-    font-size: 0.9rem;
-    opacity: 0.7; 
-    :global(strong) {
-      font-weight: 500;
-    }
-    :global(a) {
-      color: var(--foreground);
-      transition: all 0.15s ease-in-out;
-      &:hover {
-        color: var(--accent);
-      }
-    }
-  }
-  :global(strong) {
-    font-weight: 500;
-  }
-  :global(h4) {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0 0;
-  }
-  :global(ul) {
-    list-style: circle;
-    padding-left: 1rem;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    li {
-      margin-bottom: 0.25rem;
-      :global(p) {
-        display: inline;
-      }
-    }
-  }
-}
+	.highlights {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: end;
 
-pre {
-  a {
-    text-decoration: none;
-    color: var(--foreground);
-    code {
-      background: #acabb782;
-      padding: 0.2rem 0.4rem;
-      border-radius: var(--curve-sm);
-      font-family: Courier New;
-      font-size: 0.9rem;
-      @media(max-width: 768px) {
-        white-space: break-spaces;
-      }
-    }
-  }
-}
-
-.social-wrap {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.highlights {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: end;
-
-  .meta-item, .warning {
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    gap: 0.25rem;
-    opacity: 0.6;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    :global(svg) {
-      color: var(--foreground);
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-    a {
-      text-decoration: none;
-      color: var(--foreground);
-      display: flex;
-      gap: 0.25rem;
-      &:hover {
-        color: var(--accent-3);
-        :global(svg) {
-          color: var(--accent-3);
-        }
-      }
-    }
-  }
-  .warning {
-    color: var(--danger);
-    :global(svg) {
-      color: var(--danger);
-    }
-  }
-  .great {
-    color: #007930; // var(--success);
-    :global(svg) {
-      color: #007930; // var(--success);
-    }
-  }
-}
-
+		.meta-item,
+		.warning {
+			display: flex;
+			align-items: center;
+			// justify-content: center;
+			gap: 0.25rem;
+			opacity: 0.6;
+			font-size: 0.9rem;
+			padding: 0.5rem 0;
+			:global(svg) {
+				color: var(--foreground);
+				width: 1.2rem;
+				height: 1.2rem;
+			}
+			a {
+				text-decoration: none;
+				color: var(--foreground);
+				display: flex;
+				gap: 0.25rem;
+				&:hover {
+					color: var(--accent-3);
+					:global(svg) {
+						color: var(--accent-3);
+					}
+				}
+			}
+		}
+		.warning {
+			color: var(--danger);
+			:global(svg) {
+				color: var(--danger);
+			}
+		}
+		.great {
+			color: #007930; // var(--success);
+			:global(svg) {
+				color: #007930; // var(--success);
+			}
+		}
+	}
 </style>

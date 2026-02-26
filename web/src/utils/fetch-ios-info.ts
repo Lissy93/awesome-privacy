@@ -1,5 +1,6 @@
-
-export const fetchIosInfo = async (iosUrl: string): Promise<IoSApiResponse | null> => {
+export const fetchIosInfo = async (
+  iosUrl: string,
+): Promise<IoSApiResponse | null> => {
   const endpoint = `https://ios-app-info.as93.net?appStoreUrl=${iosUrl}`;
   try {
     return await fetch(endpoint).then((res) => res.json());

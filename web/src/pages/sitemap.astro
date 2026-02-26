@@ -1,234 +1,244 @@
 ---
-
-
 import Layout from '@layouts/Layout.astro';
 import type { AwesomePrivacy } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
 
-const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
-
+const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 ---
 
 <Layout title="All Links | Awesome Privacy">
-    <main>
-      <h2>Sitemap</h2>
-      <p>
-        Below is a full listing of all pages on this site.<br>
-        <small>As reflected in our <a href="/sitemap-index.xml">sitemap.xml</a></small>
-      </p>
-      <span class="search-controlls">
-        <input id="searchInput" type="search" placeholder="Start typing to filter..." />
-        <p id="press-enter-msg" class="press-enter">Press enter for deep search</p>
-      </span>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/search">Search</a>
-        </li>
-        <li>
-          <a href="/all">View All</a>
-        </li>
-        <li>
-          <a href="/inventory">My Inventory</a>
-        </li>
-        <li>
-          <a href="/submit">Submit Listing</a>
-        </li>
-        <li>
-          <a href="/api">API</a>
-        </li>
-        <li>
-          <a href="/browse">Categories</a>
-          <ul>
-            {categories.map((category) => (
-              <li>
-                <a href={`/${slugify(category.name)}`}>{category.name}</a>
-                <ul>
-                  {category.sections.map((section) => (
-                    <li>
-                      <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
-                      <ul>
-                        {(section.services || []).map((service) => (
-                          <li title={service.description || ''}>
-                            <a href={`/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`}>
-                              {service.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}  
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </li>
-        <li>
-          <a href="/about">About</a>
-          <ul>
-            <li><a href="/about#objective">Objective</a></li>
-            <li><a href="/about#criteria">Listing Criteria</a></li>
-            <li><a href="/about#contributing">Contributing</a></li>
-            <li>
-              <a href="/about#acknowledgements">Acknowledgements</a>
-              <ul>
-                <li><a href="/about#contributors">Contributors</a></li>
-                <li><a href="/about#sponsors">Sponsors</a></li>
-              </ul>
-            </li>
-            <li><a href="/about#author">Author</a></li>
-            <li><a href="/about#license">License</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="/sitemap">Sitemap</a>
-        </li>
-      </ul>
-  </main>
-  
+	<main>
+		<h2>Sitemap</h2>
+		<p>
+			Below is a full listing of all pages on this site.<br />
+			<small
+				>As reflected in our <a href="/sitemap-index.xml">sitemap.xml</a></small
+			>
+		</p>
+		<span class="search-controlls">
+			<input
+				id="searchInput"
+				type="search"
+				placeholder="Start typing to filter..."
+			/>
+			<p id="press-enter-msg" class="press-enter">
+				Press enter for deep search
+			</p>
+		</span>
+		<ul>
+			<li>
+				<a href="/">Home</a>
+			</li>
+			<li>
+				<a href="/search">Search</a>
+			</li>
+			<li>
+				<a href="/all">View All</a>
+			</li>
+			<li>
+				<a href="/inventory">My Inventory</a>
+			</li>
+			<li>
+				<a href="/submit">Submit Listing</a>
+			</li>
+			<li>
+				<a href="/api">API</a>
+			</li>
+			<li>
+				<a href="/browse">Categories</a>
+				<ul>
+					{
+						categories.map((category) => (
+							<li>
+								<a href={`/${slugify(category.name)}`}>{category.name}</a>
+								<ul>
+									{category.sections.map((section) => (
+										<li>
+											<a
+												href={`/${slugify(category.name)}/${slugify(section.name)}`}
+											>
+												{section.name}
+											</a>
+											<ul>
+												{(section.services || []).map((service) => (
+													<li title={service.description || ''}>
+														<a
+															href={`/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`}
+														>
+															{service.name}
+														</a>
+													</li>
+												))}
+											</ul>
+										</li>
+									))}
+								</ul>
+							</li>
+						))
+					}
+				</ul>
+			</li>
+			<li>
+				<a href="/about">About</a>
+				<ul>
+					<li><a href="/about#objective">Objective</a></li>
+					<li><a href="/about#criteria">Listing Criteria</a></li>
+					<li><a href="/about#contributing">Contributing</a></li>
+					<li>
+						<a href="/about#acknowledgements">Acknowledgements</a>
+						<ul>
+							<li><a href="/about#contributors">Contributors</a></li>
+							<li><a href="/about#sponsors">Sponsors</a></li>
+						</ul>
+					</li>
+					<li><a href="/about#author">Author</a></li>
+					<li><a href="/about#license">License</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/sitemap">Sitemap</a>
+			</li>
+		</ul>
+	</main>
 </Layout>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Select elements for events (search field, each result, and message str)
-    const filterInput = document.querySelector<HTMLInputElement>('input');
-    const pages = document.querySelectorAll<HTMLElement>('li');
-    const pressEnterMsg = document.getElementById('press-enter-msg');
-    if (!pressEnterMsg) throw new Error('pressEnterMsg element not found');
+	document.addEventListener('DOMContentLoaded', () => {
+		// Select elements for events (search field, each result, and message str)
+		const filterInput = document.querySelector<HTMLInputElement>('input');
+		const pages = document.querySelectorAll<HTMLElement>('li');
+		const pressEnterMsg = document.getElementById('press-enter-msg');
+		if (!pressEnterMsg) throw new Error('pressEnterMsg element not found');
 
-    // Instant search/filter functionality
-    filterInput?.addEventListener('input', (e: Event) => {
-      const filter = (e.target as HTMLInputElement).value.toLowerCase();
-      pressEnterMsg.style.visibility = filter.length > 0 ? 'visible' : 'hidden';
-      Array.from(pages).reduce((count, page) => {
-        const match = page.textContent?.toLowerCase().includes(filter) || false;
-        page.style.display = match ? 'block' : 'none';
-        return count + (match ? 1 : 0);
-      }, 0);
-    });
-    // Handle keypress events, so Esc clears search, and Entr runs deep search
-    document.addEventListener('keydown', (event: KeyboardEvent) => {
-      if (!filterInput) return;
-      switch (event.key) {
-        case 'Enter':
-          event.preventDefault();
-          const searchTerm = encodeURIComponent(filterInput.value);
-          window.location.href = `/search/${searchTerm}`;
-          break;
-        case 'Escape':
-          filterInput.value = '';
-          filterInput.blur();
-          pressEnterMsg.style.visibility = 'hidden';
-          pages.forEach(page => page.style.display = 'block');
-          break;
-      }
-    });
-  });
+		// Instant search/filter functionality
+		filterInput?.addEventListener('input', (e: Event) => {
+			const filter = (e.target as HTMLInputElement).value.toLowerCase();
+			pressEnterMsg.style.visibility = filter.length > 0 ? 'visible' : 'hidden';
+			Array.from(pages).reduce((count, page) => {
+				const match = page.textContent?.toLowerCase().includes(filter) || false;
+				page.style.display = match ? 'block' : 'none';
+				return count + (match ? 1 : 0);
+			}, 0);
+		});
+		// Handle keypress events, so Esc clears search, and Entr runs deep search
+		document.addEventListener('keydown', (event: KeyboardEvent) => {
+			if (!filterInput) return;
+			switch (event.key) {
+				case 'Enter':
+					event.preventDefault();
+					const searchTerm = encodeURIComponent(filterInput.value);
+					window.location.href = `/search/${searchTerm}`;
+					break;
+				case 'Escape':
+					filterInput.value = '';
+					filterInput.blur();
+					pressEnterMsg.style.visibility = 'hidden';
+					pages.forEach((page) => (page.style.display = 'block'));
+					break;
+			}
+		});
+	});
 </script>
 
 <style lang="scss">
+	main {
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 5rem);
+		margin: 4rem auto 5rem auto;
+		padding: 0 2rem;
+		border: 2px solid var(--box-outline);
+		box-shadow: 6px 6px 0 var(--box-outline);
+		background: var(--accent-fg);
+		position: relative;
+		p {
+			font-size: 1.3rem;
+			margin: 0;
+			small {
+				font-size: 0.8rem;
+				opacity: 0.5;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+		}
+		ul {
+			padding-left: 1.2rem;
+			list-style: none;
+			border-left: 3px solid #5f53f482;
+			border-radius: 4px;
+			li {
+				font-weight: 600;
+				ul li {
+					font-weight: 500;
+					ul li {
+						font-weight: 400;
+						ul li {
+							font-weight: 300;
+						}
+					}
+				}
+				&::before {
+					content: '━ ';
+					color: #5f53f482;
+					margin-left: -1.2rem;
+				}
+				a {
+					transition: all ease-in-out 0.2s;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 
-main {
-  padding: 1rem;
-  width: 1000px;
-  max-width: calc(100% - 5rem);
-  margin: 4rem auto 5rem auto;
-  padding: 0 2rem;
-  border: 2px solid var(--box-outline);
-  box-shadow: 6px 6px 0 var(--box-outline);
-  background: var(--accent-fg);
-  position: relative;
-  p {
-    font-size: 1.3rem;
-    margin: 0;
-    small {
-      font-size: 0.8rem;
-      opacity: 0.5;
-      transition: all 0.2s ease-in-out;
-      &:hover { opacity: 0.8; }
-    }
-  }
-  ul {
-    padding-left: 1.2rem;
-    list-style: none;
-    border-left: 3px solid #5f53f482;
-    border-radius: 4px;;
-    li {
-      font-weight: 600;
-        ul li {
-          font-weight: 500;
-          ul li {
-            font-weight: 400;
-            ul li {
-              font-weight: 300;
-            }
-          }
-        }
-      &::before {
-        content: "━ ";
-        color: #5f53f482;
-        margin-left: -1.2rem;
-      }
-      a {
-        transition: all ease-in-out 0.2s;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
+	h2 {
+		margin: 0;
+		gap: 1rem;
+		font-size: 2rem;
+		margin: -2rem 0 2rem -4rem;
+		box-shadow: 6px 6px 0 var(--box-outline);
+		background: var(--accent);
+		color: var(--accent-fg);
+		width: fit-content;
+		padding: 0.25rem 0.5rem;
+		@media (max-width: 768px) {
+			margin: -2rem auto 1rem auto;
+		}
+	}
 
-h2 {
-  margin: 0;
-  gap: 1rem;
-  font-size: 2rem;
-  margin: -2rem 0 2rem -4rem;
-  box-shadow: 6px 6px 0 var(--box-outline);
-  background: var(--accent);
-  color: var(--accent-fg);
-  width: fit-content;
-  padding: 0.25rem 0.5rem;
-  @media (max-width: 768px) {
-    margin: -2rem auto 1rem auto;
-  }
-}
-
-.search-controlls {
-  float: right;
-  top: 1rem;
-  right: 1rem;
-  position: absolute;
-  @media (max-width: 768px) {
-    position: relative;
-    float: none;
-    top: 0;
-    right: 0;
-  }
-  .press-enter {
-    margin: 0.5rem 0 0 0;
-    opacity: 0.5;
-    visibility: hidden;
-    font-size: 1rem;
-  }
-  input {
-    padding: 0.25rem;
-    border: 2px solid var(--box-outline);
-    border-radius: var(--curve-sm);
-    font-size: 1rem;
-    box-shadow: 3px 3px 0 var(--box-outline);
-    color: var(--accent-3);
-    background: var(--background-form);
-    &:focus {
-      outline: none;
-      box-shadow: 4px 4px 0 var(--box-outline);
-    }
-  }
-}
-
-
-
+	.search-controlls {
+		float: right;
+		top: 1rem;
+		right: 1rem;
+		position: absolute;
+		@media (max-width: 768px) {
+			position: relative;
+			float: none;
+			top: 0;
+			right: 0;
+		}
+		.press-enter {
+			margin: 0.5rem 0 0 0;
+			opacity: 0.5;
+			visibility: hidden;
+			font-size: 1rem;
+		}
+		input {
+			padding: 0.25rem;
+			border: 2px solid var(--box-outline);
+			border-radius: var(--curve-sm);
+			font-size: 1rem;
+			box-shadow: 3px 3px 0 var(--box-outline);
+			color: var(--accent-3);
+			background: var(--background-form);
+			&:focus {
+				outline: none;
+				box-shadow: 4px 4px 0 var(--box-outline);
+			}
+		}
+	}
 </style>

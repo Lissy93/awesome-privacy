@@ -1,42 +1,48 @@
 <script lang="ts">
-import { onMount } from 'svelte';
-import { writable } from 'svelte/store';
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
 
-import type { Category, Service } from '../../types/Service';
-import { slugify } from "@utils/fetch-data";
-import ServiceCard from './ServiceCard.svelte';
+  import type { Category, Service } from '../../types/Service';
+  import { slugify } from '@utils/fetch-data';
+  import ServiceCard from './ServiceCard.svelte';
 
-export let allData: Category[];
-export let serviceList: string[] | null = null;
+  export let allData: Category[];
+  export let serviceList: string[] | null = null;
 
-interface SavedServices {
-  category: string;
-  section: string;
-  service: Service;
-}
+  interface SavedServices {
+    category: string;
+    section: string;
+    service: Service;
+  }
 
-const savedServices = writable<SavedServices[]>([]);
+  const savedServices = writable<SavedServices[]>([]);
 
-onMount(async () => {
-  const results: SavedServices[] = [];
-  const saved = serviceList || JSON.parse(localStorage.getItem('savedServices') || '[]');
-  saved.forEach((serviceId: string) => {
-    const parts = serviceId.split('/');
-    const categoryName = parts[0];
-    const sectionName = parts[1];
-    const serviceName = parts[2];
+  onMount(async () => {
+    const results: SavedServices[] = [];
+    const saved =
+      serviceList || JSON.parse(localStorage.getItem('savedServices') || '[]');
+    saved.forEach((serviceId: string) => {
+      const parts = serviceId.split('/');
+      const categoryName = parts[0];
+      const sectionName = parts[1];
+      const serviceName = parts[2];
 
-    const category = allData.find((category) => slugify(category.name) === categoryName);
-    if (!category) return;
-    const section = category.sections.find((section) => slugify(section.name) === sectionName);
-    if (!section) return;
-    const service = section.services.find((service) => slugify(service.name) === serviceName);
-    if (!service) return;
-    results.push({ category: category.name, section: section.name, service});
+      const category = allData.find(
+        (category) => slugify(category.name) === categoryName,
+      );
+      if (!category) return;
+      const section = category.sections.find(
+        (section) => slugify(section.name) === sectionName,
+      );
+      if (!section) return;
+      const service = section.services.find(
+        (service) => slugify(service.name) === serviceName,
+      );
+      if (!service) return;
+      results.push({ category: category.name, section: section.name, service });
+    });
+    savedServices.set(results || []);
   });
-  savedServices.set(results || []);
-});
-
 </script>
 
 <div>
@@ -52,10 +58,13 @@ onMount(async () => {
     </div>
   {:else if !serviceList}
     <div class="nothing-yet">
-      <p>Here you'll find a list of all the software and services you've bookmarked.</p>
+      <p>
+        Here you'll find a list of all the software and services you've
+        bookmarked.
+      </p>
       <small>
-        All data is stored on-device, in your browser's local storage,
-        and not sent anywhere unless you choose to share it
+        All data is stored on-device, in your browser's local storage, and not
+        sent anywhere unless you choose to share it
       </small>
       <p class="nope">Nothing saved yet!</p>
     </div>

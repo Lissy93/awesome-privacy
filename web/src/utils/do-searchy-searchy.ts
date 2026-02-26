@@ -3,17 +3,17 @@ import type { Category } from '../types/Service';
 export const prepareSearchItems = (categories: Category[]) => {
   const items: any = [];
   // Add each category
-  categories.forEach(category => {
+  categories.forEach((category) => {
     items.push({
       type: 'Category',
       category: category.name,
       itemCount: (category.sections || []).reduce((acc, section) => {
-          return acc + (section.services || []).length;
-        }, 0),
+        return acc + (section.services || []).length;
+      }, 0),
     });
 
     // Add section with category context
-    category.sections.forEach(section => {
+    category.sections.forEach((section) => {
       items.push({
         type: 'Section',
         sectionName: section.name,
@@ -21,9 +21,9 @@ export const prepareSearchItems = (categories: Category[]) => {
         category: category.name,
         itemCount: (section.services || []).length,
       });
-      
+
       // Add service with section and category context
-      (section.services || []).forEach(service => {
+      (section.services || []).forEach((service) => {
         items.push({
           type: 'Service',
           name: service.name,
@@ -53,6 +53,6 @@ export const searchOptions = {
     { name: 'description', weight: 0.1 },
     { name: 'intro', weight: 0.1 },
     { name: 'furtherInfo', weight: 0.1 },
-    { name: 'wordOfWarning', weight: 0.1 },        
+    { name: 'wordOfWarning', weight: 0.1 },
   ],
 };

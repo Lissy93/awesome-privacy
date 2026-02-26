@@ -31,13 +31,15 @@ export const authorProjects = [
   },
   {
     title: 'AdGuardian',
-    description: 'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
+    description:
+      'CLI tool for monitoring your networks traffic and AdGuard DNS stats',
     icon: 'https://adguardian.as93.net/favicon.png',
     link: 'https://github.com/lissy93/adguardian-term',
   },
   {
     title: 'Bug-Bounties',
-    description: 'Database of websites which accept responsible vulnerability disclosure',
+    description:
+      'Database of websites which accept responsible vulnerability disclosure',
     icon: 'https://bug-bounties.as93.net/favicon.png',
     link: 'https://github.com/lissy93/bug-bounties',
   },
@@ -81,7 +83,6 @@ export const authorSocials = [
     color: '#0A66C2',
   },
 ];
-
 
 export const aboutOurData = `
 All data is stored in 
@@ -167,18 +168,20 @@ by the community, and the drawbacks / anti-features must be clearly listed along
 Usually these entries go within the "Notable Mentions" section instead._
 `;
 
-export const appDescription = 'Privacy is a fundamental human right; '
-	+ 'without it, we\'re just open books in a world where everyone\'s '
-	+ 'watching. Let\'s take control back.\n'
-	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
-	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
-
+export const appDescription =
+  'Privacy is a fundamental human right; ' +
+  "without it, we're just open books in a world where everyone's " +
+  "watching. Let's take control back.\n" +
+  'Migrating open-source applications which do not collect, sell or log your data is a great first step.' +
+  'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
 
 export default {
   title: 'Awesome Privacy | The Ultimate List of Private Apps',
-	description: 'Your guide to finding privacy-respecting alternatives to popular software and services.',
-	keywords: 'security, privacy, awesome privacy, data collection, free software, open source, privacy tools, privacy respecting software',
-	author: 'Alicia Sykes',
+  description:
+    'Your guide to finding privacy-respecting alternatives to popular software and services.',
+  keywords:
+    'security, privacy, awesome privacy, data collection, free software, open source, privacy tools, privacy respecting software',
+  author: 'Alicia Sykes',
   authorProjects,
   authorSocials,
   aboutOurData,

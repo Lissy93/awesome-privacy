@@ -1,37 +1,39 @@
-
 <script lang="ts">
+  import { slugify } from '@utils/fetch-data';
 
-import { slugify } from "@utils/fetch-data";
+  let linkId = '';
+  let done = false;
+  let error = false;
 
-let linkId = '';
-let done = false;
-let error = false;
-
-const save = async () => {
-  const savedServices =  JSON.parse(localStorage.getItem('savedServices') || '[]');
-  const inventoryTitle = localStorage.getItem('userTitle') || 'Anon\'s Inventory';
-  const uniqueId = Math.random().toString(36).substring(2);
-  const saveKey = `${uniqueId}_${slugify(inventoryTitle)}`;
-  const url = 'https://awesome-privacy-share-api.as93.net';
-  const data = { key: saveKey, services: savedServices };
-  fetch(url, {
+  const save = async () => {
+    const savedServices = JSON.parse(
+      localStorage.getItem('savedServices') || '[]',
+    );
+    const inventoryTitle =
+      localStorage.getItem('userTitle') || "Anon's Inventory";
+    const uniqueId = Math.random().toString(36).substring(2);
+    const saveKey = `${uniqueId}_${slugify(inventoryTitle)}`;
+    const url = 'https://awesome-privacy-share-api.as93.net';
+    const data = { key: saveKey, services: savedServices };
+    fetch(url, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(data => {
-    linkId = data.key;
-    done = true;
-    error = false;
-    navigator.clipboard.writeText(`https://awesome-privacy.xyz/inventory/${linkId}`);
-  })
-  .catch(error => {
-    error = true;
-    console.error('Error:', error)
-  });
-};
-
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        linkId = data.key;
+        done = true;
+        error = false;
+        navigator.clipboard.writeText(
+          `https://awesome-privacy.xyz/inventory/${linkId}`,
+        );
+      })
+      .catch((error) => {
+        error = true;
+        console.error('Error:', error);
+      });
+  };
 </script>
 
 <div class="share-container">

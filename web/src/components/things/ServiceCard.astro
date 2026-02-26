@@ -1,5 +1,4 @@
 ---
-
 import { formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
@@ -7,86 +6,91 @@ import SaveListing from '@components/things/SaveListing.svelte';
 import { slugify } from '@utils/fetch-data';
 
 interface Props {
-  service: Service;
-  categoryName: string;
-  sectionName: string;
+	service: Service;
+	categoryName: string;
+	sectionName: string;
 }
 
-const {
-  service,
-  sectionName,
-  categoryName,
-} = Astro.props;
-
+const { service, sectionName, categoryName } = Astro.props;
 ---
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const serviceIcons = document.querySelectorAll<HTMLImageElement>('.service-icon');
-  const broke = '/broken-image.png';
+	document.addEventListener('DOMContentLoaded', () => {
+		const serviceIcons =
+			document.querySelectorAll<HTMLImageElement>('.service-icon');
+		const broke = '/broken-image.png';
 
-  serviceIcons.forEach(function(icon) {
-    icon.onerror = function() {
-      const imgElement = this as HTMLImageElement;
-      const serviceUrl = imgElement.getAttribute('data-service-url');
-      const newSrcAttribute = (imgElement.src.includes('on.ho') ? broke : `https://icon.horse/icon/${serviceUrl}`);
-      imgElement.src = imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
-      imgElement.onerror = null;
-    };
-  });
-});
+		serviceIcons.forEach(function (icon) {
+			icon.onerror = function () {
+				const imgElement = this as HTMLImageElement;
+				const serviceUrl = imgElement.getAttribute('data-service-url');
+				const newSrcAttribute = imgElement.src.includes('on.ho')
+					? broke
+					: `https://icon.horse/icon/${serviceUrl}`;
+				imgElement.src =
+					imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
+				imgElement.onerror = null;
+			};
+		});
+	});
 </script>
 
-
-
 <div class="service" id={slugify(service.name)}>
-    <div class="service-head">
-      <a class="service-title" href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
-        <h4>{service.name}</h4>
-      </a>
-      {service.followWith && <p class="follow-with">({service.followWith})</p> }
-    </div>
+	<div class="service-head">
+		<a
+			class="service-title"
+			href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+		>
+			<h4>{service.name}</h4>
+		</a>
+		{service.followWith && <p class="follow-with">({service.followWith})</p>}
+	</div>
 
-    <div class="save-listing">
-      <SaveListing client:visible
-        categoryName={categoryName}
-        sectionName={sectionName}
-        serviceName={service.name}
-      />
-    </div>
+	<div class="save-listing">
+		<SaveListing
+			client:visible
+			categoryName={categoryName}
+			sectionName={sectionName}
+			serviceName={service.name}
+		/>
+	</div>
 
-    <div class="service-body">
-      <img 
-        width="40"
-        height="40"
-        loading="lazy"
-        decoding="async"
-        class="service-icon"
-        alt={`${service.name} Icon`}
-        data-service-url={formatLink(service.url)}
-        src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
-      />
-      <div class="service-body">
-        <p set:html={service.description}></p>
-      </div>
-    </div>
+	<div class="service-body">
+		<img
+			width="40"
+			height="40"
+			loading="lazy"
+			decoding="async"
+			class="service-icon"
+			alt={`${service.name} Icon`}
+			data-service-url={formatLink(service.url)}
+			src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
+		/>
+		<div class="service-body">
+			<p set:html={service.description} />
+		</div>
+	</div>
 
-    <div class="service-links">
-      <a class="link" href={service.url}>
-        <FontAwesome iconName="website"/> <span>{formatLink(service.url)}</span>
-      </a>
-      {service.github &&
-        <a class="link" href={`https://github.com/${service.github}`}>
-          <FontAwesome iconName="sourceCode"/> GitHub
-        </a>
-      }
-      <a href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}>
-        <FontAwesome iconName="viewReport" /> View Report ➔
-      </a>
+	<div class="service-links">
+		<a class="link" href={service.url}>
+			<FontAwesome iconName="website" />
+			<span>{formatLink(service.url)}</span>
+		</a>
+		{
+			service.github && (
+				<a class="link" href={`https://github.com/${service.github}`}>
+					<FontAwesome iconName="sourceCode" /> GitHub
+				</a>
+			)
+		}
+		<a
+			href={`/${slugify(categoryName)}/${slugify(sectionName)}/${slugify(service.name)}`}
+		>
+			<FontAwesome iconName="viewReport" /> View Report ➔
+		</a>
+	</div>
+</div>
 
-    </div>
-  </div>
-
-  <style lang="scss">
-    @import './service-card.scss';
-  </style>
+<style lang="scss">
+	@import './service-card.scss';
+</style>

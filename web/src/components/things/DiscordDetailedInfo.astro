@@ -1,110 +1,113 @@
 ---
-
 import type { DiscordInfo } from '@utils/fetch-discord-info';
-import { formatDate, timeAgo } from '@utils/dates-n-stuff'; 
-import FontAwesome from "@components/form/FontAwesome.svelte"
-
+import { formatDate, timeAgo } from '@utils/dates-n-stuff';
+import FontAwesome from '@components/form/FontAwesome.svelte';
 
 interface Props {
-  discordData: DiscordInfo;
-};
+	discordData: DiscordInfo;
+}
 
 const { discordData } = Astro.props;
-
-
 ---
 
 <div class="discord-info-wrapper">
+	<h3>Discord</h3>
 
-    <h3>Discord</h3>
+	<ul class="list-table">
+		<li>
+			<span class="lbl">Server Name</span>
+			<span class="val"
+				><img src={discordData.icon} width="16" />{discordData.name}</span
+			>
+		</li>
+		<li>
+			<span class="lbl">Member Count</span>
+			<span class="val"
+				>{discordData.memberCount} ({discordData.memberOnlineCount} online)</span
+			>
+		</li>
+		<li>
+			<span class="lbl">Initial Channel</span>
+			<span class="val">{discordData.channel}</span>
+		</li>
+		<li>
+			<span class="lbl">Inviter</span>
+			<span class="val">{discordData.inviter || 'Anon'}</span>
+		</li>
+		<li>
+			<span class="lbl">Join Link</span>
+			<span class="val"
+				><a href={`https://discord.com/invite/${discordData.inviteCode}`}
+					>discord.com/invite/{discordData.inviteCode}</a
+				></span
+			>
+		</li>
+	</ul>
 
-    <ul class="list-table">
-      <li>
-        <span class="lbl">Server Name</span>
-        <span class="val"><img src={discordData.icon} width="16" />{discordData.name}</span>
-      </li>
-      <li>
-        <span class="lbl">Member Count</span>
-        <span class="val">{discordData.memberCount} ({discordData.memberOnlineCount} online)</span>
-      </li>
-      <li>
-        <span class="lbl">Initial Channel</span>
-        <span class="val">{discordData.channel}</span>
-      </li>
-      <li>
-        <span class="lbl">Inviter</span>
-        <span class="val">{discordData.inviter || 'Anon'}</span>
-      </li>
-      <li>
-        <span class="lbl">Join Link</span>
-        <span class="val"><a href={`https://discord.com/invite/${discordData.inviteCode}`}>discord.com/invite/{discordData.inviteCode}</a></span>
-      </li>
-    </ul>
-
-    { discordData.banner && (<img class="banner" width="300" src={discordData.banner} />)}
-  
-    
+	{
+		discordData.banner && (
+			<img class="banner" width="300" src={discordData.banner} />
+		)
+	}
 </div>
 
-
 <style lang="scss">
-.discord-info-wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-}
+	.discord-info-wrapper {
+		display: flex;
+		flex-direction: column;
+		max-width: 400px;
+	}
 
-h3 {
-  margin: 0;
-  font-size: 1.6rem;
-}
+	h3 {
+		margin: 0;
+		font-size: 1.6rem;
+	}
 
-h4 {
-  margin: 1rem 0 0 0;
-  font-size: 1.2rem;
-}
+	h4 {
+		margin: 1rem 0 0 0;
+		font-size: 1.2rem;
+	}
 
-ul {
-  padding-left: 0;
-  list-style: none;
-  max-height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  img {
-    border-radius: var(--curve-sm);
-  }
-  .list-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
-  }
-  &.list-table {
-    font-size: 0.9rem;
-    padding-left: 0;
-    li {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.1rem 0;
-      .lbl {
-        font-weight: 400;
-      }
-      .val {
-        img {
-          margin-right: 0.5rem;
-        }
-      }
-      &:not(:last-child) {
-        border-bottom: 1px solid #5f53f440;
-      }
-    }
-  }
-}
+	ul {
+		padding-left: 0;
+		list-style: none;
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		img {
+			border-radius: var(--curve-sm);
+		}
+		.list-item {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0.5rem;
+		}
+		&.list-table {
+			font-size: 0.9rem;
+			padding-left: 0;
+			li {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.1rem 0;
+				.lbl {
+					font-weight: 400;
+				}
+				.val {
+					img {
+						margin-right: 0.5rem;
+					}
+				}
+				&:not(:last-child) {
+					border-bottom: 1px solid #5f53f440;
+				}
+			}
+		}
+	}
 
-.banner {
-  width: 80%;
-  margin: 1rem auto 0 auto;
-  display: flex;
-  border-radius: var(--curve-md);
-}
-
+	.banner {
+		width: 80%;
+		margin: 1rem auto 0 auto;
+		display: flex;
+		border-radius: var(--curve-md);
+	}
 </style>

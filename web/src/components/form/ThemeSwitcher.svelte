@@ -28,7 +28,6 @@
   }
 </script>
 
-
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="theme-switcher" on:click={toggleTheme}>
@@ -37,7 +36,6 @@
     <span class="theme-icon">☀️</span>
   </div>
 </div>
-
 
 <style lang="scss">
   .theme-switcher {
@@ -52,7 +50,7 @@
     transition: background-color 0.3s ease;
     border: 2px solid var(--box-outline);
     box-shadow: 3px 3px 0 var(--box-outline);
-    
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
@@ -96,5 +94,4 @@
     display: flex;
     font-size: 1.5rem;
   }
-
 </style>

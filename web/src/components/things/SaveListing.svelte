@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import FontAwesome from "@components/form/FontAwesome.svelte";
-  import { slugify } from "@utils/fetch-data";
+  import FontAwesome from '@components/form/FontAwesome.svelte';
+  import { slugify } from '@utils/fetch-data';
 
   export let categoryName: string;
   export let sectionName: string;
@@ -34,23 +34,24 @@
 </script>
 
 <div class="wrapper-or-something">
-<button
-  class={`save-container ${isSaved ? 'saved' : ''} ${showLabel ? 'label-button' : ''}`}
-  title={`Save ${serviceName}`}
-  on:click={toggleSave}>
-  {#if showLabel }
-    <span>
-      {isSaved ? 'Saved' : 'Save'}
-    </span>
-  {/if}
-  <FontAwesome iconName="saveListing"/>
-</button>
+  <button
+    class={`save-container ${isSaved ? 'saved' : ''} ${showLabel ? 'label-button' : ''}`}
+    title={`Save ${serviceName}`}
+    on:click={toggleSave}
+  >
+    {#if showLabel}
+      <span>
+        {isSaved ? 'Saved' : 'Save'}
+      </span>
+    {/if}
+    <FontAwesome iconName="saveListing" />
+  </button>
 
-{#if showLabel && isSaved }
-<div class="done-msg">
-  You can view all saved items in your <a href="/inventory">Inventory</a>
-</div>
-{/if}
+  {#if showLabel && isSaved}
+    <div class="done-msg">
+      You can view all saved items in your <a href="/inventory">Inventory</a>
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -71,7 +72,7 @@
       font-size: 1.2rem;
       opacity: 0.8;
       color: var(--foreground);
-      font-family: "Lekton";
+      font-family: 'Lekton';
     }
     :global(svg) {
       color: var(--foreground);
@@ -98,9 +99,8 @@
       box-shadow: 3px 3px 0 var(--box-outline);
       border: 1px solid var(--box-outline);
       background: var(--background-form);
-      
+
       &:hover {
-        
         box-shadow: 4px 4px 0 var(--box-outline);
       }
     }
@@ -110,7 +110,7 @@
     max-width: 165px;
     font-size: 0.8rem;
     opacity: 0.6;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }

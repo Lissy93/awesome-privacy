@@ -29,21 +29,23 @@
     h4 {
       text-decoration: none;
       position: relative;
-      &:after {    
+      &:after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
-        content: "";
+        content: '';
         display: block;
         height: 3px;
         left: 50%;
         position: absolute;
         background: var(--accent-3);
-        transition: width 0.2s ease 0s, left 0.2s ease 0s;
+        transition:
+          width 0.2s ease 0s,
+          left 0.2s ease 0s;
         width: 0;
       }
-      &:hover:after { 
-        width: 100%; 
-        left: 0; 
+      &:hover:after {
+        width: 100%;
+        left: 0;
       }
     }
   }
@@ -66,7 +68,7 @@
     :global(p) {
       display: -webkit-box;
       -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;  
+      -webkit-box-orient: vertical;
       overflow: hidden;
       margin: 0.5rem 0;
       width: calc(100% - 2rem);

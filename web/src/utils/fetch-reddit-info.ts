@@ -1,5 +1,6 @@
-
-export const fetchRedditInfo = async (subreddit: string): Promise<RedditData | null> => {
+export const fetchRedditInfo = async (
+  subreddit: string,
+): Promise<RedditData | null> => {
   const endpoint = `https://subreddit-info.as93.net/${subreddit}`;
   try {
     return await fetch(endpoint).then((res) => res.json());

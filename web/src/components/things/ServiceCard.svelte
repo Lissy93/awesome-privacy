@@ -17,7 +17,10 @@
 
 <div class="service" id={serviceRef}>
   <div class="service-head">
-    <a class="service-title" href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}>
+    <a
+      class="service-title"
+      href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}
+    >
       <h4>{service.name}</h4>
     </a>
     {#if service.followWith}
@@ -26,11 +29,7 @@
   </div>
 
   <div class="save-listing">
-    <SaveListing
-      categoryName={categoryName}
-      sectionName={sectionName}
-      serviceName={service.name}
-    />
+    <SaveListing {categoryName} {sectionName} serviceName={service.name} />
   </div>
 
   <div class="service-body">

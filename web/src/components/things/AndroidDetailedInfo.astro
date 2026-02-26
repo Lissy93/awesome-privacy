@@ -1,170 +1,178 @@
 ---
-
 import type { AndroidInfo } from '@utils/fetch-android-info';
-import { formatDate, timeAgo } from '@utils/dates-n-stuff'; 
-import FontAwesome from "@components/form/FontAwesome.svelte"
-
+import { formatDate, timeAgo } from '@utils/dates-n-stuff';
+import FontAwesome from '@components/form/FontAwesome.svelte';
 
 interface Props {
-  androidData: AndroidInfo;
-};
+	androidData: AndroidInfo;
+}
 
 const { androidData } = Astro.props;
 
 function permissionToReadable(permission: string): string {
-  return (permission
-    .split('.')
-    .pop() || '')
-    .replace(/_/g, ' ')
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+	return (permission.split('.').pop() || '')
+		.replace(/_/g, ' ')
+		.toLowerCase()
+		.split(' ')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
 }
-
-
 ---
 
 <div class="android-info-wrapper">
-  <div class="left">
-    <h4>Update Info</h4>
-    <ul class="list-table">
-      <li>
-        <span class="lbl">App</span>
-        <span class="val">
-          <!-- <img width="20" src={`https://reports.exodus-privacy.eu.org/en/reports/${androidData.version_code}/icon`} alt="Android Icon" /> -->
-          <a href={`https://play.google.com/store/apps/details?id=${androidData.handle}`}>{androidData.app_name}</a>
-        </span>
-      </li>
-      <li>
-        <span class="lbl">Creation Date</span>
-        <span class="val">{formatDate(androidData.created)}</span>
-      </li>
-      <li>
-        <span class="lbl">Last Updated</span>
-        <span class="val">{formatDate(androidData.updated)}</span>
-      </li>
-      <li>
-        <span class="lbl">Current Version</span>
-        <span class="val">{androidData.version_name}</span>
-      </li>
-      {androidData.creator && (
-        <li>
-          <span class="lbl">Creator</span>
-          <span class="val">{androidData.creator}</span>
-        </li>
-      )}
-      {androidData.downloads && (
-        <li>
-          <span class="lbl">Downloads</span>
-          <span class="val">{androidData.downloads}</span>
-        </li>
-      )}
-    </ul>
+	<div class="left">
+		<h4>Update Info</h4>
+		<ul class="list-table">
+			<li>
+				<span class="lbl">App</span>
+				<span class="val">
+					<!-- <img width="20" src={`https://reports.exodus-privacy.eu.org/en/reports/${androidData.version_code}/icon`} alt="Android Icon" /> -->
+					<a
+						href={`https://play.google.com/store/apps/details?id=${androidData.handle}`}
+						>{androidData.app_name}</a
+					>
+				</span>
+			</li>
+			<li>
+				<span class="lbl">Creation Date</span>
+				<span class="val">{formatDate(androidData.created)}</span>
+			</li>
+			<li>
+				<span class="lbl">Last Updated</span>
+				<span class="val">{formatDate(androidData.updated)}</span>
+			</li>
+			<li>
+				<span class="lbl">Current Version</span>
+				<span class="val">{androidData.version_name}</span>
+			</li>
+			{
+				androidData.creator && (
+					<li>
+						<span class="lbl">Creator</span>
+						<span class="val">{androidData.creator}</span>
+					</li>
+				)
+			}
+			{
+				androidData.downloads && (
+					<li>
+						<span class="lbl">Downloads</span>
+						<span class="val">{androidData.downloads}</span>
+					</li>
+				)
+			}
+		</ul>
 
-    <h4>Trackers</h4>
-    {(androidData.trackers || []).length === 0 && (
-      <p class="all-good">
-        <FontAwesome iconName="noTrackers" />
-        No trackers found
-      </p>
-    )}
-    <ul class="list">
-      {(androidData.trackers || []).map((track) => (
-        <li title={track.code_signature}>{track.name}</li>
-      ))}
-    </ul>
-  </div>
+		<h4>Trackers</h4>
+		{
+			(androidData.trackers || []).length === 0 && (
+				<p class="all-good">
+					<FontAwesome iconName="noTrackers" />
+					No trackers found
+				</p>
+			)
+		}
+		<ul class="list">
+			{
+				(androidData.trackers || []).map((track) => (
+					<li title={track.code_signature}>{track.name}</li>
+				))
+			}
+		</ul>
+	</div>
 
-  <div class="right">
-    <h4>Permissions</h4>
-    {(androidData.permissions || []).length === 0 && (
-      <p class="all-good">
-        <FontAwesome iconName="noTrackers" />
-        No permissions required
-      </p>
-    )}
-    <ul class="list">
-      {(androidData.permissions || []).map((perm) => (
-        <li title={perm}>{permissionToReadable(perm)}</li>
-      ))}
-    </ul>
-  </div>
+	<div class="right">
+		<h4>Permissions</h4>
+		{
+			(androidData.permissions || []).length === 0 && (
+				<p class="all-good">
+					<FontAwesome iconName="noTrackers" />
+					No permissions required
+				</p>
+			)
+		}
+		<ul class="list">
+			{
+				(androidData.permissions || []).map((perm) => (
+					<li title={perm}>{permissionToReadable(perm)}</li>
+				))
+			}
+		</ul>
+	</div>
 </div>
 
-
 <style lang="scss">
-.android-info-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  .left, .right {
-    width: calc(50% - 1rem);
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-  }
-}
+	.android-info-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 1rem;
+		.left,
+		.right {
+			width: calc(50% - 1rem);
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+		}
+	}
 
-h3 {
-  margin: 0;
-  font-size: 1.6rem;
-}
+	h3 {
+		margin: 0;
+		font-size: 1.6rem;
+	}
 
-h4 {
-  margin: 1rem 0 0 0;
-  font-size: 1.2rem;
-}
+	h4 {
+		margin: 1rem 0 0 0;
+		font-size: 1.2rem;
+	}
 
-ul {
-  padding-left: 0;
-  list-style: none;
-  max-height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  img {
-    border-radius: var(--curve-sm);
-  }
-  .list-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
-  }
-  &.list-table {
-    font-size: 0.9rem;
-    padding-left: 0;
-    li {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.1rem 0;
-      .lbl {
-        font-weight: 400;
-      }
-      .val {
-        img {
-          margin-right: 0.5rem;
-        }
-      }
-      &:not(:last-child) {
-        border-bottom: 1px solid #5f53f440;
-      }
-    }
-  }
-  &.list {
-    list-style: circle;
-    padding-left: 1rem;
-  }
-}
+	ul {
+		padding-left: 0;
+		list-style: none;
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		img {
+			border-radius: var(--curve-sm);
+		}
+		.list-item {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 0.5rem;
+		}
+		&.list-table {
+			font-size: 0.9rem;
+			padding-left: 0;
+			li {
+				display: flex;
+				justify-content: space-between;
+				padding: 0.1rem 0;
+				.lbl {
+					font-weight: 400;
+				}
+				.val {
+					img {
+						margin-right: 0.5rem;
+					}
+				}
+				&:not(:last-child) {
+					border-bottom: 1px solid #5f53f440;
+				}
+			}
+		}
+		&.list {
+			list-style: circle;
+			padding-left: 1rem;
+		}
+	}
 
-.all-good {
-  color: var(--success);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  :global(svg) {
-    width: 1.5rem;
-  }
-}
-
+	.all-good {
+		color: var(--success);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		:global(svg) {
+			width: 1.5rem;
+		}
+	}
 </style>
