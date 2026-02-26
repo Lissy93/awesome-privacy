@@ -131,7 +131,7 @@ def check_open_source(diff):
     """Return a finding if an added service has openSource missing or not true."""
     for svc in diff.get("services", {}).get("added", []):
         fields = svc.get("fields", {})
-        if fields.get("openSource") is not True:
+        if fields.get("openSource") is not True and not fields.get("github"):
             return OPENSOURCE_MSG
     return None
 
@@ -221,7 +221,7 @@ def check_description_length(diff):
     for svc in diff.get("services", {}).get("added", []):
         desc = svc.get("fields", {}).get("description", "")
         length = len(desc)
-        if length < 50 or length > 250:
+        if length < 50 or length > 280:
             return DESC_LENGTH_MSG.format(length=length)
     return None
 

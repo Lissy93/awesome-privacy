@@ -7,19 +7,9 @@ import sys
 ARTIFACTS_DIR = "/tmp/artifacts"
 OUTPUT_DIR = "/tmp/pr-meta"
 
-CONTRIBUTING = "https://github.com/Lissy93/awesome-privacy/blob/main/.github/CONTRIBUTING.md"
-
-COMMENT_TEMPLATE = """<!-- pr-check-bot -->
-Hello @{user}
-
-Thank you for contributing to Awesome Privacy! We will review your PR shortly. In the meantime, please ensure that your submission is inline with our guidelines in our [Contributing Requirements]({contributing}).
-
-Looks like there could be some issues in your PR. Please double check that:
-
-{findings}
-
-> [!NOTE]
-> I am a bot, and sometimes make mistakes in my suggestions. But a human will review your submission shortly!"""
+REPO_URL = "https://github.com/Lissy93/awesome-privacy"
+CONTRIBUTING = f"{REPO_URL}/blob/main/.github/CONTRIBUTING.md"
+DIFF_SUMMARY_PATH = os.path.join(ARTIFACTS_DIR, "pr-diff-summary.md")
 
 
 def load_findings(filename):
@@ -41,12 +31,49 @@ def collect_findings():
     return all_findings
 
 
-def format_comment(findings, user):
-    """Build the markdown comment from findings."""
-    bullet_list = "\n".join(f"- {f}" for f in findings)
-    return COMMENT_TEMPLATE.format(
-        user=user, contributing=CONTRIBUTING, findings=bullet_list,
-    )
+def load_diff_summary():
+    """Load the pre-formatted diff summary, or None if unavailable."""
+    try:
+        with open(DIFF_SUMMARY_PATH) as f:
+            content = f.read().strip()
+            return content if content else None
+    except Exception:
+        return None
+
+
+def format_comment(findings, user, changes_summary, run_id):
+    """Build the markdown comment."""
+    parts = [
+        f"<!-- pr-check-bot -->\nHello @{user}\n",
+        f"Thank you for contributing to Awesome Privacy! We will review your "
+        f"submission shortly. In the meantime, please ensure all changes are "
+        f"correct and inline with our [Contributing Requirements]({CONTRIBUTING}).\n",
+    ]
+
+    if findings:
+        bullet_list = "\n".join(f"- {f}" for f in findings)
+        parts.append(
+            f"Our automated checks detected some issues:\n\n{bullet_list}\n\n"
+            f"> [!NOTE]\n"
+            f"> I am a bot, and sometimes make mistakes in my suggestions. "
+            f"But a human will review your submission shortly!"
+        )
+    else:
+        parts.append("> ✅ All our automated checks have passed.")
+
+    if changes_summary:
+        parts.append(
+            f"<details><summary>Summary of Changes:</summary>\n\n"
+            f"{changes_summary}\n</details>"
+        )
+
+    if run_id:
+        parts.append(
+            f'<sup>For full details, please see workflow run '
+            f'<a href="{REPO_URL}/actions/runs/{run_id}">{run_id}</a></sup>'
+        )
+
+    return "\n\n".join(parts) + "\n"
 
 
 def write_step_summary(findings):
@@ -81,12 +108,12 @@ def main():
                 f.write(run_id)
 
         findings = collect_findings()
+        changes_summary = load_diff_summary()
         write_step_summary(findings)
 
-        if findings:
-            comment = format_comment(findings, user)
-            with open(os.path.join(OUTPUT_DIR, "comment.md"), "w") as f:
-                f.write(comment)
+        comment = format_comment(findings, user, changes_summary, run_id)
+        with open(os.path.join(OUTPUT_DIR, "comment.md"), "w") as f:
+            f.write(comment)
     except Exception:
         pass
 

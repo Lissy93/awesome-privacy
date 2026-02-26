@@ -17,6 +17,12 @@ TIMEOUT = 10
 USER_AGENT = "awesome-privacy-ci/1.0"
 MIN_STARS = 100
 INACTIVE_DAYS = 90
+MIN_AGE_DAYS = 120
+AI_COMMIT_THRESHOLD = 5
+AI_BOT_AUTHORS = [
+    "noreply@anthropic.com",
+    "devin-ai-integration[bot]",
+]
 
 LINK_MSG = (
     "Our automated checks were unable to verify the link(s) you included"
@@ -34,6 +40,29 @@ STARS_MSG = (
 ACTIVITY_MSG = (
     "Please confirm that the project you are adding is actively maintained,"
     " as it looks to not have had any recent updates in the past 3 months."
+)
+MATURITY_MSG = (
+    "This project appears to be quite new (created less than 4 months ago)."
+    " Repositories should have a proven track record before listing."
+)
+AI_CODE_MSG = (
+    "This project appears to contain AI-generated code."
+    " Additional care will be needed when reviewing the submission."
+)
+FORK_MSG = (
+    "The GitHub link in this listing is a fork."
+    " Please confirm it's the correct (and actively maintained) repository"
+)
+LICENSE_MSG = (
+    "There doesn't appear to be a license included in the project's GitHub repo"
+)
+ARCHIVED_MSG = (
+    "The GitHub project linked has been archived."
+    " Additions must be actively maintained."
+)
+SECURITY_MSG = (
+    "This project has open security vulnerabilities (critical or high severity)"
+    " flagged by GitHub Dependabot. Please verify these have been addressed"
 )
 
 
@@ -154,6 +183,51 @@ def check_links(diff, head):
     return None
 
 
+def check_ai_commits(owner, repo, token):
+    """Return AI_CODE_MSG if recent commits contain significant AI bot activity."""
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        if token:
+            headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/repos/{owner}/{repo}/commits",
+            headers=headers, timeout=TIMEOUT, params={"per_page": 100},
+        )
+        if resp.status_code != 200:
+            return None
+        bot_set = {a.lower() for a in AI_BOT_AUTHORS}
+        count = 0
+        for commit in resp.json():
+            author = commit.get("commit", {}).get("author", {})
+            email = (author.get("email") or "").lower()
+            name = (author.get("name") or "").lower()
+            if email in bot_set or name in bot_set:
+                count += 1
+        if count >= AI_COMMIT_THRESHOLD:
+            return AI_CODE_MSG
+    except Exception:
+        pass
+    return None
+
+
+def check_security_alerts(owner, repo, token):
+    """Return SECURITY_MSG if the repo has open critical/high Dependabot alerts."""
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        if token:
+            headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/repos/{owner}/{repo}/dependabot/alerts",
+            headers=headers, timeout=TIMEOUT,
+            params={"state": "open", "severity": "critical,high", "per_page": 1},
+        )
+        if resp.status_code == 200 and resp.json():
+            return SECURITY_MSG
+    except Exception:
+        pass
+    return None
+
+
 def check_repo_signals(diff, pr_user, token):
     """Check GitHub repo author match, stars, and activity for added services."""
     findings = []
@@ -185,6 +259,15 @@ def check_repo_signals(diff, pr_user, token):
         if stars < MIN_STARS and STARS_MSG not in findings:
             findings.append(STARS_MSG)
 
+        if data.get("fork") and FORK_MSG not in findings:
+            findings.append(FORK_MSG)
+
+        if not data.get("license") and LICENSE_MSG not in findings:
+            findings.append(LICENSE_MSG)
+
+        if data.get("archived") and ARCHIVED_MSG not in findings:
+            findings.append(ARCHIVED_MSG)
+
         pushed = data.get("pushed_at")
         if pushed and ACTIVITY_MSG not in findings:
             try:
@@ -194,6 +277,26 @@ def check_repo_signals(diff, pr_user, token):
                     findings.append(ACTIVITY_MSG)
             except Exception:
                 pass
+
+        created = data.get("created_at")
+        if created and MATURITY_MSG not in findings:
+            try:
+                created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+                now = datetime.now(timezone.utc)
+                if (now - created_dt).days < MIN_AGE_DAYS:
+                    findings.append(MATURITY_MSG)
+            except Exception:
+                pass
+
+        if AI_CODE_MSG not in findings:
+            finding = check_ai_commits(owner, repo, token)
+            if finding:
+                findings.append(finding)
+
+        if SECURITY_MSG not in findings:
+            finding = check_security_alerts(owner, repo, token)
+            if finding:
+                findings.append(finding)
 
     return findings
 

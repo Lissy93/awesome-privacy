@@ -13,6 +13,7 @@ import yaml
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
 DIFF_OUTPUT_PATH = "/tmp/pr-diff.json"
+SUMMARY_OUTPUT_PATH = "/tmp/pr-diff-summary.md"
 
 EXIT_PASS = 0
 EXIT_RULE_VIOLATION = 1
@@ -112,13 +113,8 @@ def fmt_path(key):
     return " → ".join(key) if isinstance(key, tuple) else key
 
 
-def write_step_summary(diff_result):
-    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
-    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-    if not summary_file:
-        return
-
-    lines = ["## YAML Diff Analysis\n"]
+def format_diff_bullets(diff_result):
+    """Build bullet-point lines summarizing all changes. Returns list of strings or empty list."""
     bullets = []
 
     for svc in diff_result["services"]["added"]:
@@ -149,6 +145,25 @@ def write_step_summary(diff_result):
             f"in {dup['category']} → {dup['section']}"
         )
 
+    return bullets
+
+
+def write_diff_summary(diff_result):
+    """Write the bullet-point summary to a file for downstream consumers."""
+    bullets = format_diff_bullets(diff_result)
+    if bullets:
+        with open(SUMMARY_OUTPUT_PATH, "w") as f:
+            f.write("\n".join(bullets) + "\n")
+
+
+def write_step_summary(diff_result):
+    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
+    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_file:
+        return
+
+    bullets = format_diff_bullets(diff_result)
+    lines = ["## YAML Diff Analysis\n"]
     if bullets:
         lines.extend(bullets)
     else:
@@ -213,6 +228,7 @@ def main():
 
     write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
     write_step_summary(diff_result)
+    write_diff_summary(diff_result)
 
     added_count = len(added)
     if added_count > 1:

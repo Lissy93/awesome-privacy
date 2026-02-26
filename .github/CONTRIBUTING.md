@@ -62,6 +62,10 @@ For software to be included in this list, it must meet the following requirement
 	- A stable (non-alpha/beta) release is required at a minimum
 	- Must be accessible to the general public, and not just a select group of people
 	- If technical knowledge is required to run it, the software must be well documented
+- **Mature**
+  - Software needs to have a proven track record of commitment to maintenance
+  - Repositories must not be newly created, and the first stable release older than 4 months
+  - Projects primarily written with AI or vibe coded are not suitable for listing here
 
 _There may be some exceptions, but these would need to be fully justified, reviewed
 by the community, and the drawbacks / anti-features must be clearly listed along-side the software.
@@ -79,19 +83,18 @@ Your pull request must follow these requirements. Failure to do so, might result
 - You must respond to any comments or requests for changes in a timely manner, 14 days maximum
 - Write short but descriptive git commit messages, under 50 characters. This must be in the format of `Adds [software-name] to [section-name]`. Your PR will be rejected if you name it `Updates README.md`
 - Only include a single addition / amendment / removal, per pull request
-- You must complete each of the sections in the pull request template. Do not delete it!
+- You must complete each of the sections in the [pull request template](https://github.com/Lissy93/awesome-privacy/blob/main/.github/PULL_REQUEST_TEMPLATE.md). Do not delete it!
 - Where applicable, include links to supporting material for your addition: git repo, docs, recent security audits, etc. This will make researching it much easier for reviewers
 - While adding new software to the list, don't make your entry read like an advert. Be objective, and include drawbacks as well as strengths
 - Your entry should be added at the bottom of the appropriate category, unless otherwise requested
-- If there are other pull requests open, please help review them before submitting yours
-- A pull request must receive multiple approval reviews before it can be merged
 - You must be transparent about your affiliation with a product or service that you are adding. It's totally okay to submit your own projects as additions (providing they meet the requirements), but if you don't declare your association with that project then there becomes a clear conflict of interest
-- You must adhere to the Contributor Covenant Code of Conduct
+- You must adhere to the [Contributor Covenant Code of Conduct](https://github.com/Lissy93/awesome-privacy?tab=coc-ov-file#contributor-covenant-code-of-conduct)
 - Don't open a Draft / WIP pull request while you work on the guidelines. A pull request should be 100% ready and should adhere to all the above guidelines when you open it
 - Your changes must be correctly spelled, and with good grammar
 - Your changes must be correctly formatted, in valid yaml and markdown
-- The addition title must be a link the project
 - The addition description must be no less than 50, and no more than 250 characters, keep it clear and to the point
+- If there are other pull requests open, please help review them before submitting yours
+- A pull request must receive multiple approval reviews before it can be merged
 
 ---
 

@@ -82,7 +82,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pr-diff
-          path: /tmp/pr-diff.json
+          path: |
+            /tmp/pr-diff.json
+            /tmp/pr-diff-summary.md
           if-no-files-found: ignore
       - name: Upload findings
         if: always()
@@ -141,6 +143,12 @@ jobs:
           pattern: findings-*
           path: /tmp/artifacts
           merge-multiple: true
+        continue-on-error: true
+      - name: Download diff data
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-diff
+          path: /tmp/artifacts
         continue-on-error: true
       - name: Format comment
         env:
