@@ -3157,6 +3157,17 @@ categories:
           A key benefit the wide range of plug-ins in the NextCloud App Store,
           maintained by the community. NextCloud was a hard fork off OwnCloud.
 
+      - name: bewCloud
+        url: https://bewcloud.com
+        icon: https://bewcloud.com/favicon.svg
+        followWith: Web
+        github: bewcloud/bewcloud
+        openSource: true
+        description: |
+          Modern and simpler alternative to Nextcloud/ownCloud crafted with TypeScript.
+          Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
+          contacts, and photos, with MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
+
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
         or [Duplicity](http://duplicity.nongnu.org).
