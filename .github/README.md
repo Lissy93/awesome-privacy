@@ -60,7 +60,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
 	- [Calendar](#calendar) (0)
-	- [Backup and Sync](#backup-and-sync) (3)
+	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
 	- [File Drop](#file-drop) (2)
@@ -2858,6 +2858,15 @@ A key benefit the wide range of plug-ins in the NextCloud App[…](https://aweso
 		<summary>Stats</summary>
 
 		[![Privacy Policy](https://shields.tosdr.org/en_707.svg)](https://tosdr.org/en/service/707) [![NextCloud on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=NextCloud)](https://awesome-privacy.xyz/productivity/backup-and-sync/nextcloud)ㅤ 
+
+		</details>
+- **[<img src='https://bewcloud.com/favicon.svg' width='16' height='16' alt='icon' /> bewCloud](https://bewcloud.com)** - Modern and simpler alternative to Nextcloud/ownCloud crafted with TypeScript.
+Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
+contacts, and photos, with MFA, WebDAV, CalDAV, C[…](https://awesome-privacy.xyz/productivity/backup-and-sync/bewcloud "View full bewCloud report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: bewcloud/bewcloud](https://img.shields.io/github/stars/bewcloud/bewcloud?style=flat&logo=github&label=bewcloud&color=%235f53f4&cacheSeconds=3600)](https://github.com/bewcloud/bewcloud) [![bewCloud on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=bewCloud)](https://awesome-privacy.xyz/productivity/backup-and-sync/bewcloud) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/bewcloud/bewcloud)ㅤ 
 
 		</details>
 
