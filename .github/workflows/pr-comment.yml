@@ -4,9 +4,12 @@ on:
   workflow_run:
     workflows: ["PR Check"]
     types: [completed]
+  pull_request_review:
+    types: [submitted]
 
 permissions:
   actions: read
+  checks: read
   contents: read
   pull-requests: write
 
@@ -132,3 +135,87 @@ jobs:
               });
               console.log('Updated bot comment.');
             }
+
+  review-notify:
+    name: Notify maintainer
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_review'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch review and CI context
+        id: context
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const pr = context.payload.pull_request;
+            const { owner, repo } = context.repo;
+
+            // Fetch reviews — extract user login and state
+            const { data: reviews } = await github.rest.pulls.listReviews({
+              owner, repo, pull_number: pr.number, per_page: 100,
+            });
+            const reviewData = reviews.map(r => ({
+              user: r.user.login,
+              state: r.state,
+            }));
+
+            // Fetch check runs for the PR head SHA
+            const { data: { check_runs } } = await github.rest.checks.listForRef({
+              owner, repo, ref: pr.head.sha, per_page: 100,
+            });
+            const checkData = check_runs.map(cr => ({
+              status: cr.status,
+              conclusion: cr.conclusion,
+            }));
+
+            // Check if we already posted the notification
+            const marker = '<!-- pr-review-ready -->';
+            const { data: comments } = await github.rest.issues.listComments({
+              owner, repo, issue_number: pr.number, per_page: 100,
+            });
+            const alreadyNotified = comments.some(c => c.body.includes(marker));
+
+            // Write data for Python
+            fs.mkdirSync('pr-meta', { recursive: true });
+            fs.writeFileSync('pr-meta/reviews.json', JSON.stringify(reviewData));
+            fs.writeFileSync('pr-meta/check-runs.json', JSON.stringify(checkData));
+            fs.writeFileSync('pr-meta/already-notified.txt', String(alreadyNotified));
+
+            core.setOutput('pr_number', pr.number);
+
+      - name: Check review readiness
+        run: python lib/checks/check-review-ready.py
+
+      - name: Post notification
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const actionFile = 'pr-meta/action.txt';
+            if (!fs.existsSync(actionFile)) return;
+
+            const action = fs.readFileSync(actionFile, 'utf8').trim();
+            if (action !== 'notify') {
+              console.log('Not ready for review — skipping.');
+              return;
+            }
+
+            const body = [
+              '<!-- pr-review-ready -->',
+              'This PR is now ready to be merged, pending maintainer review. All checks are passing and it has been peer-reviewed.',
+              '',
+              '@Lissy93 - Please evaluate, and either merge or leave feedback.',
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: parseInt('${{ steps.context.outputs.pr_number }}'),
+              body,
+            });
+            console.log('Posted maintainer notification.');
