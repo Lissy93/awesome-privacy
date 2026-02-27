@@ -7,6 +7,7 @@ on:
 
 permissions:
   actions: read
+  contents: read
   pull-requests: write
 
 jobs:
@@ -16,6 +17,8 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request'
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Download PR metadata
         id: download
         continue-on-error: true
@@ -26,20 +29,13 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Post comment
+      - name: Resolve PR context
+        id: context
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
-            const marker = '<!-- pr-check-bot -->';
-
-            // Check if there are findings to post
-            const commentFile = 'pr-meta/comment.md';
-            if (!fs.existsSync(commentFile)) {
-              console.log('No findings to post — skipping.');
-              return;
-            }
 
             // Determine the PR number
             let prNumber;
@@ -48,8 +44,6 @@ jobs:
               prNumber = parseInt(fs.readFileSync(numberFile, 'utf8').trim());
             }
             if (!prNumber) {
-              // workflow_run.pull_requests is empty for fork PRs, so
-              // fall back to searching by head SHA if needed
               const prs = context.payload.workflow_run.pull_requests;
               if (prs && prs.length > 0) {
                 prNumber = prs[0].number;
@@ -72,23 +66,69 @@ jobs:
               }
             }
 
-            // Skip if we already commented on this PR
+            // Fetch existing bot comment (if any) and write to file for Python
+            const marker = '<!-- pr-check-bot -->';
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
               per_page: 100,
             });
-            if (comments.some(c => c.body.includes(marker))) {
-              console.log('Bot comment already exists — skipping.');
+            const existing = comments.find(c => c.body.includes(marker));
+            if (existing) {
+              fs.mkdirSync('pr-meta', { recursive: true });
+              fs.writeFileSync('pr-meta/existing-comment.md', existing.body);
+              fs.writeFileSync('pr-meta/existing-comment-id.txt', String(existing.id));
+            }
+
+            core.setOutput('pr_number', prNumber);
+
+      - name: Prepare comment
+        if: steps.context.outputs.pr_number
+        env:
+          CHECK_RUN_ID: ${{ github.event.workflow_run.id }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python lib/checks/prepare-comment.py
+
+      - name: Post or update comment
+        if: steps.context.outputs.pr_number
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const actionFile = 'pr-meta/action.txt';
+            if (!fs.existsSync(actionFile)) return;
+
+            const action = fs.readFileSync(actionFile, 'utf8').trim();
+            if (action === 'skip') {
+              console.log('Nothing to do — skipping.');
               return;
             }
 
-            // Post the comment
-            const body = fs.readFileSync(commentFile, 'utf8').trim();
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body,
-            });
+            const bodyFile = 'pr-meta/final-comment.md';
+            if (!fs.existsSync(bodyFile)) {
+              console.log('No comment body found — skipping.');
+              return;
+            }
+            const body = fs.readFileSync(bodyFile, 'utf8').trim();
+            const prNumber = parseInt('${{ steps.context.outputs.pr_number }}');
+
+            if (action === 'create') {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+              console.log('Created bot comment.');
+            } else if (action === 'update') {
+              const commentId = parseInt(fs.readFileSync('pr-meta/existing-comment-id.txt', 'utf8').trim());
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: commentId,
+                body,
+              });
+              console.log('Updated bot comment.');
+            }

@@ -108,6 +108,8 @@ def main():
                 f.write(run_id)
 
         findings = collect_findings()
+        with open(os.path.join(OUTPUT_DIR, "findings-count.txt"), "w") as f:
+            f.write(str(len(findings)))
         changes_summary = load_diff_summary()
         write_step_summary(findings)
 
