@@ -1,11 +1,18 @@
+import { error } from './logger';
+
 export const fetchDiscordInfo = async (
   discordInvite: string,
 ): Promise<DiscordInfo | null> => {
   const endpoint = `https://discord-invite-info.as93.net/${discordInvite}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching discord data:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('Discord', `HTTP ${res.status} for ${discordInvite} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('Discord', `Network error for ${discordInvite}: ${err}`);
     return null;
   }
 };

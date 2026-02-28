@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
+import { printSummary } from './src/utils/logger.ts';
 
 // Adapters
 import vercelAdapter from '@astrojs/vercel/serverless';
@@ -21,7 +22,14 @@ const output = import.meta.env.OUTPUT || 'hybrid';
 const site = import.meta.env.SITE_URL || 'https://awesome-privacy.xyz';
 
 // Initialize Astro integrations
-const integrations = [svelte(), partytown(), sitemap()];
+const buildLogger = {
+	name: 'build-logger',
+	hooks: {
+		'astro:build:done': () => printSummary(),
+	},
+};
+
+const integrations = [svelte(), partytown(), sitemap(), buildLogger];
 
 // Set the appropriate adapter, based on the deploy target
 const adapter = {

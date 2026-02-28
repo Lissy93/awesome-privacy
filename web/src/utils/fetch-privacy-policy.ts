@@ -1,11 +1,18 @@
+import { error } from './logger';
+
 export const fetchTosdrPrivacy = async (
   serviceId: string,
 ): Promise<PrivacyPolicyResponse | null> => {
   const endpoint = `https://privacy-policies.as93.workers.dev/${serviceId}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching privacy policy data:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('ToS;DR', `HTTP ${res.status} for service ${serviceId} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('ToS;DR', `Network error for service ${serviceId}: ${err}`);
     return null;
   }
 };

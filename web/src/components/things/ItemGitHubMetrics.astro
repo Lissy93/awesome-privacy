@@ -1,5 +1,6 @@
 ---
 import FontAwesome from "@components/form/FontAwesome.svelte";
+import { error } from "@utils/logger";
 const { github } = Astro.props;
 
 interface GitHubRepoData {
@@ -29,7 +30,7 @@ const fetchGitHubData = async (repo: string) => {
   const response = await fetch(`https://api.github.com/repos/${repo}`, {
     headers: headers,
   }).catch((e) => {
-    console.error(`Network error: ${e.message}`);
+    error('GitHub API', `Network error for ${repo}: ${e.message}`);
     // Return a placeholder response to handle this gracefully
     return null;
   });
@@ -45,7 +46,7 @@ const fetchGitHubData = async (repo: string) => {
   if (response.ok) {
     data = await response.json();
   } else {
-    console.error(`HTTP error: Received status code ${response.status}`);
+    error('GitHub API', `HTTP ${response.status} for ${repo}`);
   }
 
   return { data, statusCode };

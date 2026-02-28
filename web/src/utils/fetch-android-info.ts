@@ -1,3 +1,5 @@
+import { error } from './logger';
+
 const doubleCheckPackageName = (packageStr: string) => {
   return packageStr.includes('id=') ? packageStr.split('id=')[1] : packageStr;
 };
@@ -7,9 +9,14 @@ export const fetchAndroidInfo = async (
 ): Promise<AndroidInfo | null> => {
   const endpoint = `https://android-app-privacy.as93.net/${doubleCheckPackageName(androidPackage)}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching android data:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('Android', `HTTP ${res.status} for ${androidPackage} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('Android', `Network error for ${androidPackage}: ${err}`);
     return null;
   }
 };
