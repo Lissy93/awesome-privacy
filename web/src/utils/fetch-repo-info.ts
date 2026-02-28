@@ -82,9 +82,13 @@ const fetchFromWorker = async (github: string): Promise<GitHubStatsResponse | nu
   return res.json();
 };
 
+const normalizeRepo = (github: string): string =>
+  github.replace(/^https?:\/\/github\.com\//, '');
+
 export const fetchGitHubStats = async (
   github: string,
 ): Promise<GitHubStatsResponse | null> => {
+  github = normalizeRepo(github);
   try {
     const result = await fetchFromGitHub(github);
     if (result) return result;
