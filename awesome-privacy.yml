@@ -1161,6 +1161,14 @@ categories:
           Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
           email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
 
+      - name: VerifySMS
+        url: https://verifysms.app
+        icon: https://verifysms.app/apple-touch-icon.png
+        description: |
+          Virtual phone numbers for SMS verification in 150+ countries. Pricing starts
+          at $0.20 per verification. iOS app available. Automatic refund if no SMS is
+          received within the timeout period.
+
     ################################
     ###### Team Collaboration ######
     ################################
