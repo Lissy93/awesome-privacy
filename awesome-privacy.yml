@@ -2161,6 +2161,16 @@ categories:
         description: |
           Open-source self-hosted VPN and firewall built on WireGuard®.
 
+      - name: FCaptcha
+        url: https://webdecoy.com/product/fcaptcha/
+        github: WebDecoy/FCaptcha
+        openSource: true
+        icon: https://webdecoy.com/favicon.svg
+        description: |
+          Self-hosted CAPTCHA that detects bots, vision AI agents, and
+          headless browsers through behavioral analysis and SHA-256 proof
+          of work. No fingerprinting, no tracking, no external dependencies.
+
     ##########################
     ###### Mix networks ######
     ##########################
