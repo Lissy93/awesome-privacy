@@ -527,6 +527,17 @@ categories:
         description: |
           British search engine providing independent and unbiased search results using
           its own crawler. Has a zero tracking policy (it is not open source)
+      
+      - name: Uruky
+        url: https://uruky.com
+        icon: https://uruky.com/public/images/favicon.svg
+        iosApp: https://apps.apple.com/us/app/uruky-private-ad-free-search/id6758864380
+        description: |
+          Uruky is an ad-free, private search engine focused on personalization. It uses,
+          among other providers, Mojeek and Marginalia. It is EU-based and does not keep
+          or track any personal data (it is not 100% open source, but after 12 months as
+          a paying customer, you get a copy of the source code).
+      
       notableMentions:
       - name: MetaGear
         url: https://metager.org
