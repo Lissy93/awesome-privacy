@@ -5003,7 +5003,10 @@ categories:
         # tosdrId: 3996
       wordOfWarning: |
         When proxies are involved - only use reputable services, and **never** enter any personal information
-
+      furtherInfo: |
+        *[alternative-front-ends](https://github.com/mendel5/alternative-front-ends) provides information on
+        dozens of alternative front-end options for popular platforms, such as YouTube, Twitter, Reddit,
+        TikTok, and more.*
 
   - name: Media
     sections:
