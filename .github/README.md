@@ -4964,6 +4964,14 @@ a more private experience, with a native-feel desktop app.
 It is built upon the [Invidious](https://invidious.io/) API.
 </details>
 
+<details>
+<summary>ℹ️ <b>Further Info</b></summary>
+
+> *[alternative-front-ends](https://github.com/mendel5/alternative-front-ends) provides information on
+dozens of alternative front-end options for popular platforms, such as YouTube, Twitter, Reddit,
+TikTok, and more.*
+</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
