@@ -25,7 +25,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [2-Factor Authentication](#2-factor-authentication) (10)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
-	- [Search Engines](#search-engines) (5)
+	- [Search Engines](#search-engines) (6)
 - **Communication**
 	- [Encrypted Messaging](#encrypted-messaging) (5)
 	- [P2P Messaging](#p2p-messaging) (5)
@@ -477,6 +477,15 @@ its own crawler. Has a zero tracking policy (it is not open source)
 		<summary>Stats</summary>
 
 		[![Privacy Policy](https://shields.tosdr.org/en_2432.svg)](https://tosdr.org/en/service/2432) [![Mojeek on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Mojeek)](https://awesome-privacy.xyz/essentials/search-engines/mojeek) [![Mojeek on Google Play](https://img.shields.io/badge/-Mojeek-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=mojeek.app) [![Mojeek on App Store](https://img.shields.io/badge/-Mojeek-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/gb/app/mojeek/id1505807785) [![r/mojeek on Reddit](https://img.shields.io/badge/-mojeek-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/mojeek)ㅤ 
+
+		</details>
+- **[<img src='https://uruky.com/public/images/favicon.svg' width='16' height='16' alt='icon' /> Uruky](https://uruky.com)** - Uruky is an ad-free, private search engine focused on personalization. It uses,
+among other providers, Mojeek and Marginalia. It is EU-based and does not keep
+or track any personal data (it is not 100[…](https://awesome-privacy.xyz/essentials/search-engines/uruky "View full Uruky report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![Uruky on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Uruky)](https://awesome-privacy.xyz/essentials/search-engines/uruky) [![Uruky on App Store](https://img.shields.io/badge/-Uruky-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/uruky-private-ad-free-search/id6758864380)ㅤ 
 
 		</details>
 
