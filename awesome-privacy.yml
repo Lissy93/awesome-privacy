@@ -3802,6 +3802,25 @@ categories:
         use to securely remove files or directories, just run `srm -zsv /path/to/file`
         for a single pass over.
 
+    ######################################
+    ###### Personal Genome Analysis ######
+    ######################################
+    - name: Personal Genome Analysis
+      intro: |
+        Tools for analyzing raw DNA data from consumer testing kits (e.g. 23andMe, AncestryDNA)
+        in a privacy-preserving way. These tools process your genetic data locally,
+        without uploading it to third-party servers.
+      services:
+      - name: DNA Claude Analysis
+        url: https://github.com/shmlkv/dna-claude-analysis
+        github: shmlkv/dna-claude-analysis
+        openSource: true
+        description: |
+          Privacy-first personal genome analysis toolkit that processes all DNA data locally.
+          Python scripts analyze raw DNA files across 17 categories including ancestry, health risks,
+          nutrition, sports, pharmacogenomics and carrier status. Generates a self-contained
+          single-page HTML visualization with no external data transmission.
+
 
 
   - name: Operating Systems
