@@ -3179,6 +3179,17 @@ categories:
           Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
           contacts, and photos, with MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
 
+      - name: Telegram Archive
+        url: https://github.com/GeiserX/Telegram-Archive
+        icon: https://raw.githubusercontent.com/GeiserX/Telegram-Archive/master/assets/Telegram-Archive.png
+        github: GeiserX/Telegram-Archive
+        openSource: true
+        description: |
+          Self-hosted Telegram backup tool running on Docker. Performs automated
+          incremental backups of messages and media on a configurable schedule,
+          with a built-in web viewer. All data stays on your own infrastructure
+          with no cloud dependency.
+
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
         or [Duplicity](http://duplicity.nongnu.org).
