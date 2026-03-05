@@ -2709,6 +2709,18 @@ categories:
         description: |
           Comprehensive list of domains for blocking tracking, social scripts, bad cookies and annoying stuff.
 
+      - name: SaneHosts
+        url: https://sanehosts.com
+        github: sane-apps/SaneHosts
+        icon: https://sanehosts.com/favicon.ico
+        followWith: macOS
+        description: |
+          Native macOS hosts file manager for system-wide ad and tracker blocking.
+          Choose from 5 curated protection levels, each bundles the right blocklists.
+          All blocking is done via /etc/hosts, reaching all apps system-wide.
+          No telemetry, no cloud, no account required. PolyForm Shield licensed
+          (open code for personal use).
+
       - name: iBlockList
         url: https://www.iblocklist.com
         icon: https://d3pkfiqitivr8j.cloudfront.net/sitefiles/images/favicon.ico
