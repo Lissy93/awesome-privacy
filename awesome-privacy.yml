@@ -1122,6 +1122,23 @@ categories:
         description: An open source portable SIP softphone for Windows based on PJSIP stack
 
     ###################################
+    ############################
+    ###### SMS Filtering ######
+    ############################
+    - name: SMS Filtering
+      alternativeTo: ['built-in sms filters', 'carrier spam filters']
+      services:
+      - name: ElectionDeflection
+        url: https://github.com/MillerMedia/ElectionDeflection
+        openSource: true
+        github: MillerMedia/ElectionDeflection
+        iosApp: https://apps.apple.com/us/app/electiondeflection/id6670375536
+        icon: https://raw.githubusercontent.com/MillerMedia/ElectionDeflection/main/ElectionDeflection/Assets.xcassets/AppIcon.appiconset/icon_1024.png
+        description: >
+          Open-source iOS SMS filter that blocks political and election text messages
+          using on-device machine learning via ILMessageFilterExtension and CoreML.
+          No data ever leaves the device.
+
     ###### Virtual Phone Numbers ######
     ###################################
     - name: Virtual Phone Numbers
