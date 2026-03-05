@@ -2716,6 +2716,17 @@ categories:
           Variety of lists (free and paid-for) for blocking content based on certain topics, inducing: spam, abuse,
           political, illegal, hijacked, bad peers and more.
 
+      - name: SaneHosts
+        url: https://sanehosts.com
+        github: sane-apps/SaneHosts
+        icon: https://sanehosts.com/apple-touch-icon.png
+        openSource: true
+        followWith: macOS
+        description: >-
+          Native macOS hosts file manager with curated blocklists for system-wide
+          ad and tracker blocking. Five protection levels, no telemetry, no cloud.
+          Open source under PolyForm Shield.
+
     #############################
     ###### Router FirmWARE ######
     #############################
