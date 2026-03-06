@@ -3127,7 +3127,15 @@ categories:
     ######################
     - name: Calendar
       alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
-      services: []
+      services:
+      - name: Tymeslot
+        url: https://tymeslot.app
+        followWith: Web, Docker, Cloudron
+        icon: https://tymeslot.app/images/brand/favicon.svg
+        description: |
+          Self-hostable appointment scheduling platform and privacy-respecting Calendly alternative.
+          Syncs with Google Calendar, Outlook, and CalDAV. Automatic video room creation, 90+ timezones,
+          no tracking or ads. Source code available under Elastic License 2.0.
 
     ###########################
     ###### Backup & Sync ######
