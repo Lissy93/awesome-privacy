@@ -3131,6 +3131,7 @@ categories:
       - name: Tymeslot
         url: https://tymeslot.app
         followWith: Web, Docker, Cloudron
+        github: Tymeslot/tymeslot
         icon: https://tymeslot.app/images/brand/favicon.svg
         description: |
           Self-hostable appointment scheduling platform and privacy-respecting Calendly alternative.
