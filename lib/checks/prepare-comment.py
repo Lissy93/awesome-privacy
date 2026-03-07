@@ -42,10 +42,10 @@ def read_findings_count(new_body):
 def _was_already_passing(existing_body):
     """Check if the most recent state in the comment is already all-clear."""
     # If there's a previous "all passing" edit, the last state was passing
-    if re.search(r"^Edit(?: \d+)?: All checks are (now passing|passing now)", existing_body, re.MULTILINE):
+    if re.search(r"^(?:\*\*)?Edit(?: \d+)?(?:\*\*)?: (?:- )?All checks are (now passing|passing now)", existing_body, re.MULTILINE):
         return True
     # If there are no edits at all, check the original comment body
-    if not re.search(r"^Edit(?: \d+)?:", existing_body, re.MULTILINE):
+    if not re.search(r"^(?:\*\*)?Edit(?: \d+)?(?:\*\*)?:", existing_body, re.MULTILINE):
         return "All our automated checks have passed" in existing_body
     return False
 
@@ -53,15 +53,21 @@ def _was_already_passing(existing_body):
 def _previous_failing_count(existing_body):
     """Extract the findings count from the most recent state in the comment."""
     # Check edit lines first (most recent state)
-    matches = re.findall(r"^Edit(?: \d+)?: (\d+) checks? (?:is|are) still failing", existing_body, re.MULTILINE)
+    matches = re.findall(r"^(?:\*\*)?Edit(?: \d+)?(?:\*\*)?: (?:- )?(\d+) checks? (?:is|are) still failing", existing_body, re.MULTILINE)
     if matches:
         return int(matches[-1])
     # No edits — count bullets in the original comment (before <details>)
-    if not re.search(r"^Edit(?: \d+)?:", existing_body, re.MULTILINE):
+    if not re.search(r"^(?:\*\*)?Edit(?: \d+)?(?:\*\*)?:", existing_body, re.MULTILINE):
         body_before_details = existing_body.split("<details>")[0]
         bullets = re.findall(r"^- .+$", body_before_details, re.MULTILINE)
         return len(bullets) if bullets else None
     return None
+
+
+def _extract_pr_author(existing_body):
+    """Extract the PR author username from the 'Hello @user' greeting."""
+    match = re.search(r"Hello @([\w-]+)", existing_body)
+    return match.group(1) if match else None
 
 
 def build_edit_line(existing_body, findings_count, check_run_id, repo):
@@ -79,20 +85,37 @@ def build_edit_line(existing_body, findings_count, check_run_id, repo):
         return None
 
     # Count previous edits to determine the next number
-    edits = re.findall(r"^Edit(?: \d+)?:", existing_body, re.MULTILINE)
+    edits = re.findall(r"^(?:\*\*)?Edit(?: \d+)?(?:\*\*)?:", existing_body, re.MULTILINE)
     edit_count = len(edits)
     next_edit = edit_count + 1
 
     run_url = f"https://github.com/{repo}/actions/runs/{check_run_id}"
 
+    # Build resolved-issue prefix
+    prev_count = _previous_failing_count(existing_body)
+    resolved_prefix = ""
+    if prev_count is not None and prev_count > findings_count:
+        resolved = prev_count - findings_count
+        noun = "issue was" if resolved == 1 else "issues were"
+        resolved_prefix = f"{resolved} {noun} resolved, but "
+
     if findings_count == 0:
-        if edit_count == 0:
-            return f"Edit: All checks are now passing \U0001f389 {run_tag}"
-        return f"Edit {next_edit}: All checks are passing now \u2705 {run_tag}"
+        edit_label = "**Edit:**" if edit_count == 0 else f"**Edit {next_edit}:**"
+        line = f"{edit_label} - All checks are now passing \U0001f389, see [here]({run_url}) for details {run_tag}"
+        # Add thank-you when transitioning from failures to passing
+        if prev_count is not None and prev_count > 0:
+            author = _extract_pr_author(existing_body)
+            if author:
+                line += (
+                    f"\n\nThank you @{author} for fixing those issues! \U0001f607\n"
+                    f"This PR is now ready for human review, looping in @Lissy93 \U0001fae1"
+                )
+        return line
 
     verb = "check is" if findings_count == 1 else "checks are"
+    edit_label = f"**Edit {next_edit}:**"
     return (
-        f"Edit {next_edit}: {findings_count} {verb} still failing, "
+        f"{edit_label} - {resolved_prefix}{findings_count} {verb} still failing, "
         f"see [here]({run_url}) for details {run_tag}"
     )
 
@@ -135,7 +158,10 @@ def main():
         write_output("skip")
         return
 
-    updated = existing_body.rstrip() + "\n\n" + edit_line
+    if "### Updates" in existing_body:
+        updated = existing_body.rstrip() + "\n" + edit_line
+    else:
+        updated = existing_body.rstrip() + "\n\n---\n\n### Updates\n\n" + edit_line
     write_output("update", updated)
 
 
