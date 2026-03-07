@@ -34,7 +34,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (3)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (5)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (6)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (26)
@@ -976,6 +976,15 @@ email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
 		<summary>Stats</summary>
 
 		[![MoneroSMS on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MoneroSMS)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/monerosms)ㅤ 
+
+		</details>
+- **[<img src='https://pikasim.com/img/pika-transparent.png' width='16' height='16' alt='icon' /> PikaSim](https://pikasim.com)** - Privacy-focused eSIM provider for 170+ countries, with instant eSIM delivery.
+No account, ID, email needed, and accepts crypto via a self-hosted BTCPay Server.
+ 
+	- <details>
+		<summary>Stats</summary>
+
+		[![PikaSim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PikaSim)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/pikasim) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
 
 		</details>
 
