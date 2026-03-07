@@ -22,7 +22,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (10)
+	- [2-Factor Authentication](#2-factor-authentication) (11)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (6)
@@ -288,6 +288,15 @@ account to backup and sync your tokens[…](https://awesome-privacy.xyz/essentia
 		<summary>Stats</summary>
 
 		[![GitHub: bitwarden/ios](https://img.shields.io/github/stars/bitwarden/ios?style=flat&logo=github&label=ios&color=%235f53f4&cacheSeconds=3600)](https://github.com/bitwarden/ios) [![Privacy Policy](https://shields.tosdr.org/en_5256.svg)](https://tosdr.org/en/service/5256) [![Bitwarden Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Bitwarden_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/bitwarden-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/bitwarden/ios) [![Bitwarden Authenticator on Google Play](https://img.shields.io/badge/-Bitwarden_Authenticator-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.bitwarden.authenticator) [![Bitwarden Authenticator on App Store](https://img.shields.io/badge/-Bitwarden_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/app/bitwarden-authenticator/id6497335175)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/protonpass/android-pass/refs/heads/main/metadata/en-US/images/icon.png' width='16' height='16' alt='icon' /> Proton Authenticator](https://proton.me/authenticator)** - Proton Authenticator is free, open source, and available for both iOS and Android.
+A Proton account is required to use Proton Authenticator.
+Existing 2FA codes can be imported from other popular apps[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/proton-authenticator "View full Proton Authenticator report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: protonpass/android-authenticator](https://img.shields.io/github/stars/protonpass/android-authenticator?style=flat&logo=github&label=android-authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/protonpass/android-authenticator) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/proton-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/protonpass/android-authenticator) [![Proton Authenticator on Google Play](https://img.shields.io/badge/-Proton_Authenticator-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=proton.android.authenticator) [![Proton Authenticator on App Store](https://img.shields.io/badge/-Proton_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-authenticator/id6741758667)ㅤ 
 
 		</details>
 
