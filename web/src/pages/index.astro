@@ -1,5 +1,4 @@
 ---
-
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/Hero.astro';
 import Search from '@components/things/Search.svelte';
@@ -10,14 +9,14 @@ import { fetchData } from '@utils/fetch-data';
 import Button from '@components/form/Button.astro';
 import type { Category } from 'src/types/Service';
 
-const categories = (await fetchData())?.categories || [] as Category[];
+const categories = (await fetchData())?.categories || ([] as Category[]);
 
-const description = 'Privacy is a fundamental human right; '
-	+ 'without it, we\'re just open books in a world where everyone\'s '
-	+ 'watching. Let\'s take control back.\n'
-	+ 'Migrating open-source applications which do not collect, sell or log your data is a great first step.'
-	+ 'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
-
+const description =
+	'Privacy is a fundamental human right; ' +
+	"without it, we're just open books in a world where everyone's " +
+	"watching. Let's take control back.\n" +
+	'Migrating open-source applications which do not collect, sell or log your data is a great first step.' +
+	'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
 ---
 
 <Layout title="Home | Awesome Privacy" hideNav={true} description={description}>
@@ -29,11 +28,13 @@ const description = 'Privacy is a fundamental human right; '
 		<Search client:visible data={categories} />
 		<h2 class="browse-title"><a href="/browse">Browse</a></h2>
 		<ul class="categories">
-		{categories.map((category) => (
-			<li class="category">
-				<SectionList title={category.name} sections={category.sections} />
-			</li>
-		))}
+			{
+				categories.map((category) => (
+					<li class="category">
+						<SectionList title={category.name} sections={category.sections} />
+					</li>
+				))
+			}
 		</ul>
 		<div class="view-all">
 			<span>Or, just</span>
@@ -48,28 +49,33 @@ const description = 'Privacy is a fundamental human right; '
 		</h2>
 		<div class="about-summary">
 			<p>
-				Awesome Privacy is a collection of privacy-respecting services and tools.
-				The aim is to help you escape big tech, and choose software that respects your privacy. 
+				Awesome Privacy is a collection of privacy-respecting services and
+				tools. The aim is to help you escape big tech, and choose software that
+				respects your privacy.
 			</p>
 			<p>
-				Why? Because privacy is a fundamental human right; without it, we're just open books
-				in a world where everyone's watching. Let's take control back.
+				Why? Because privacy is a fundamental human right; without it, we're
+				just open books in a world where everyone's watching. Let's take control
+				back.
 			</p>
 			<p>
-				Noticed something that should be added / removed / amended?
-				We're a community-driven resource, so welcome contributions of any nature.
-				All content and code is <a href="https://github.com/lissy93/awesome-privacy">open source</a>.
+				Noticed something that should be added / removed / amended? We're a
+				community-driven resource, so welcome contributions of any nature. All
+				content and code is <a href="https://github.com/lissy93/awesome-privacy"
+					>open source</a
+				>.
 			</p>
 			<p>
-				If you've found Awesome Privacy useful, help us out by sharing it with others,
-				contributing, or consider <a href="https://github.com/sponsors/lissy93">sponsoring me</a> on GitHub.
+				If you've found Awesome Privacy useful, help us out by sharing it with
+				others, contributing, or consider <a
+					href="https://github.com/sponsors/lissy93">sponsoring me</a
+				> on GitHub.
 			</p>
 		</div>
 		<div class="view-all">
 			<span>Want to learn more?</span>
 			<Button url="/about" text="Keep Reading..." />
 		</div>
-		
 	</main>
 </Layout>
 
@@ -81,8 +87,8 @@ const description = 'Privacy is a fundamental human right; '
 		max-width: calc(100% - 5rem);
 		font-size: 20px;
 		line-height: 1.6;
-		@media(max-width: 768px) {
-			padding:  0;
+		@media (max-width: 768px) {
+			padding: 0;
 		}
 		.view-all {
 			text-align: center;
@@ -97,41 +103,43 @@ const description = 'Privacy is a fundamental human right; '
 	h2 {
 		font-size: 3rem;
 		color: var(--accent-3);
-		font-family: "Lekton", sans-serif;
+		font-family: 'Lekton', sans-serif;
 		text-align: center;
 		margin: 3rem 0 1rem 0;
 		a {
 			text-decoration: none;
 			color: var(--accent-3);
-			font-family: "Lekton", sans-serif;
+			font-family: 'Lekton', sans-serif;
 			position: relative;
-			&:after {    
+			&:after {
 				background: none repeat scroll 0 0 transparent;
 				bottom: 0;
-				content: "";
+				content: '';
 				display: block;
 				height: 3px;
 				left: 50%;
 				position: absolute;
 				background: var(--accent);
-				transition: width 0.3s ease 0s, left 0.3s ease 0s;
+				transition:
+					width 0.3s ease 0s,
+					left 0.3s ease 0s;
 				width: 0;
 			}
-			&:hover:after { 
-				width: 100%; 
-				left: 0; 
+			&:hover:after {
+				width: 100%;
+				left: 0;
 			}
 		}
 	}
 
 	.about-summary {
 		background: var(--accent-fg);
-			border: 2px solid var(--box-outline);
-			border-radius: var(--curve-sm);
-			box-shadow: 4px 4px 0 var(--box-outline);
-			padding: 1rem;
-			width: 85%;
-			margin: 0 auto;
+		border: 2px solid var(--box-outline);
+		border-radius: var(--curve-sm);
+		box-shadow: 4px 4px 0 var(--box-outline);
+		padding: 1rem;
+		width: 85%;
+		margin: 0 auto;
 	}
 
 	.categories {
@@ -148,7 +156,7 @@ const description = 'Privacy is a fundamental human right; '
 			display: inline-flex;
 			flex-direction: column;
 			margin: 1rem;
-			@media(max-width: 768px) {
+			@media (max-width: 768px) {
 				margin: 1rem 0;
 				width: 90%;
 			}
@@ -157,7 +165,7 @@ const description = 'Privacy is a fundamental human right; '
 				color: var(--foreground);
 			}
 			h3 {
-				font-family: "Lekton", sans-serif;
+				font-family: 'Lekton', sans-serif;
 				font-weight: bold;
 				margin: 0;
 				font-size: 1.8rem;
@@ -176,6 +184,4 @@ const description = 'Privacy is a fundamental human right; '
 			}
 		}
 	}
-
-
 </style>
