@@ -32,6 +32,7 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_DRAFT: ${{ github.event.pull_request.draft }}
+          BASE_REF: ${{ github.event.pull_request.base.sha }}
           README_FAILED: ${{ steps.readme.outcome == 'failure' && 'true' || 'false' }}
         run: python lib/checks/check-pr-meta.py
       - name: Upload findings
@@ -117,6 +118,7 @@ jobs:
       - name: Check project health
         env:
           PR_USER: ${{ github.event.pull_request.user.login }}
+          PR_BODY: ${{ github.event.pull_request.body }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python lib/checks/check-project.py
       - name: Upload findings

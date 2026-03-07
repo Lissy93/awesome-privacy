@@ -2,8 +2,9 @@
 
 import json
 import os
+import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 import yaml
@@ -18,11 +19,14 @@ USER_AGENT = "awesome-privacy-ci/1.0"
 MIN_STARS = 100
 INACTIVE_DAYS = 90
 MIN_AGE_DAYS = 120
-AI_COMMIT_THRESHOLD = 5
+AI_COMMIT_RATIO = 0.2
 AI_BOT_AUTHORS = [
     "noreply@anthropic.com",
     "devin-ai-integration[bot]",
+    "copilot-swe-agent.github.com",
+    "noreply@cursor.com",
 ]
+SPAM_PR_THRESHOLD = 5
 
 LINK_MSG = (
     "Our automated checks were unable to verify the link(s) you included"
@@ -33,7 +37,7 @@ AUTHOR_MSG = (
     " have clearly disclosed this in your PR body for transparency"
 )
 STARS_MSG = (
-    "It looks like your submission is adding a quite small project."
+    "It looks like your submission is quite a small project without a lot of users yet."
     " In some circumstances we may ask you to resubmit this once the project"
     " is more mature and has a proven track record of good practices and maintenance."
 )
@@ -63,6 +67,10 @@ ARCHIVED_MSG = (
 SECURITY_MSG = (
     "This project has open security vulnerabilities (critical or high severity)"
     " flagged by GitHub Dependabot. Please verify these have been addressed"
+)
+SPAM_MSG = (
+    "This user has opened up a large number of PRs to other awesome-* repos"
+    " in the past 24 hours, and appears to be spamming"
 )
 
 
@@ -183,6 +191,21 @@ def check_links(diff, head):
     return None
 
 
+def _commit_has_bot(commit, bot_set):
+    """Check if a commit was authored or co-authored by a known AI bot."""
+    author = commit.get("commit", {}).get("author", {})
+    email = (author.get("email") or "").lower()
+    name = (author.get("name") or "").lower()
+    if email in bot_set or name in bot_set:
+        return True
+    message = (commit.get("commit", {}).get("message") or "").lower()
+    for line in message.splitlines():
+        if line.strip().startswith("co-authored-by:"):
+            if any(bot in line for bot in bot_set):
+                return True
+    return False
+
+
 def check_ai_commits(owner, repo, token):
     """Return AI_CODE_MSG if recent commits contain significant AI bot activity."""
     try:
@@ -195,15 +218,12 @@ def check_ai_commits(owner, repo, token):
         )
         if resp.status_code != 200:
             return None
+        commits = resp.json()
+        if not commits:
+            return None
         bot_set = {a.lower() for a in AI_BOT_AUTHORS}
-        count = 0
-        for commit in resp.json():
-            author = commit.get("commit", {}).get("author", {})
-            email = (author.get("email") or "").lower()
-            name = (author.get("name") or "").lower()
-            if email in bot_set or name in bot_set:
-                count += 1
-        if count >= AI_COMMIT_THRESHOLD:
+        count = sum(1 for c in commits if _commit_has_bot(c, bot_set))
+        if count / len(commits) >= AI_COMMIT_RATIO:
             return AI_CODE_MSG
     except Exception:
         pass
@@ -228,7 +248,51 @@ def check_security_alerts(owner, repo, token):
     return None
 
 
-def check_repo_signals(diff, pr_user, token):
+def check_spam_prs(pr_user, token):
+    """Return SPAM_MSG if the user has opened many PRs to other awesome-* repos recently."""
+    if not pr_user or not token:
+        return None
+    try:
+        since = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            "https://api.github.com/search/issues",
+            headers=headers, timeout=TIMEOUT,
+            params={"q": f"type:pr author:{pr_user} created:>={since}"},
+        )
+        if resp.status_code != 200:
+            return None
+        items = resp.json().get("items", [])
+        this_repo = os.environ.get("GITHUB_REPOSITORY", "Lissy93/awesome-privacy").lower()
+        count = 0
+        for item in items:
+            repo_url = item.get("repository_url", "")
+            # repository_url looks like https://api.github.com/repos/owner/repo-name
+            repo_full = "/".join(repo_url.rstrip("/").split("/")[-2:]).lower()
+            repo_name = repo_url.rstrip("/").split("/")[-1].lower()
+            if repo_name.startswith("awesome-") and repo_full != this_repo:
+                count += 1
+        if count >= SPAM_PR_THRESHOLD:
+            return SPAM_MSG
+    except Exception:
+        pass
+    return None
+
+
+_DISCLOSURE_RE = re.compile(
+    r"i am the author|i'm the author|my project|i created|i develop"
+    r"|i maintain|i built|my own project|i made|author of|maintainer of",
+    re.IGNORECASE,
+)
+
+
+def _pr_discloses_authorship(pr_body):
+    """Return True if the PR body already discloses the submitter is the author."""
+    return bool(pr_body and _DISCLOSURE_RE.search(pr_body))
+
+
+def check_repo_signals(diff, pr_user, token, pr_body=""):
     """Check GitHub repo author match, stars, and activity for added services."""
     findings = []
     if not token:
@@ -252,6 +316,7 @@ def check_repo_signals(diff, pr_user, token):
             and repo_owner.get("type") == "User"
             and repo_owner.get("login", "").lower() == pr_user.lower()
             and AUTHOR_MSG not in findings
+            and not _pr_discloses_authorship(pr_body)
         ):
             findings.append(AUTHOR_MSG)
 
@@ -316,8 +381,13 @@ def main():
             findings.append(finding)
 
         pr_user = os.environ.get("PR_USER", "")
+        pr_body = os.environ.get("PR_BODY", "")
         token = os.environ.get("GITHUB_TOKEN", "")
-        findings.extend(check_repo_signals(diff, pr_user, token))
+        findings.extend(check_repo_signals(diff, pr_user, token, pr_body))
+
+        finding = check_spam_prs(pr_user, token)
+        if finding:
+            findings.append(finding)
     except Exception:
         pass
 
