@@ -266,10 +266,9 @@ categories:
         iosApp: https://apps.apple.com/us/app/proton-authenticator/id6741758667
         androidApp: https://play.google.com/store/apps/details?id=proton.android.authenticator
         description: |
-          Proton Authenticator is yet another addition to the Proton application suite. It is
-          free, open source, and available for both iOS and Android. You do not need a Proton
-          account to use Proton Authenticator. Existing 2FA codes can be imported from other
-          popular apps such as Google Authenticator and LastPass.
+          Proton Authenticator is free, open source, and available for both iOS and Android.
+          A Proton account is required to use Proton Authenticator.
+          Existing 2FA codes can be imported from other popular apps such as Google Authenticator and LastPass.
 
       - name: Bitwarden Authenticator
         url: https://bitwarden.com/products/authenticator/
