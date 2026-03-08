@@ -75,6 +75,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [PGP Managers](#pgp-managers) (9)
 	- [Metadata Removal](#metadata-removal) (3)
 	- [Data Erasers](#data-erasers) (9)
+	- [Analytics](#analytics) (1)
 - **Operating Systems**
 	- [Mobile Operating Systems](#mobile-operating-systems) (4)
 	- [Desktop Operating Systems](#desktop-operating-systems) (6)
@@ -3041,6 +3042,24 @@ the disk, before you destroy, sell or give away a hard drive.
 > use to securely remove files or directories, just run `srm -zsv /path/to/file`
 > for a single pass over.
 > </details>
+
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
+### Analytics
+
+In a web ecosystem where user privacy is increasingly compromised, traditional analytics tools often rely on
+invasive tracking, cookies, and user profiling. This section highlights privacy-respecting analytics tools that 
+help website owners understand usage without collecting personally identifiable data or enabling cross-site tracking. 
+
+- **[<img src='https://vistrall.com/vistrall-favicon.png' width='16' height='16' alt='icon' /> Vistrall](https://vistrall.com/)** - Vistrall is a privacy-first analytics platform helping agencies measure performance, environmental impact, and customer behaviour ethically, without compromising user trust. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![Vistrall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Vistrall)](https://awesome-privacy.xyz/utilities/analytics/vistrall)ㅤ 
+
+		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
