@@ -237,9 +237,10 @@ def check_opensource_github(diff):
 
 def main():
     findings = []
+    critical = False
     try:
         if os.environ.get("SCHEMA_OUTCOME") == "failure":
-            findings.append(SCHEMA_MSG)
+            findings.append({"msg": SCHEMA_MSG, "level": "error"})
 
         diff = load_json(DIFF_PATH)
         head = load_yaml_data(DATA_PATH)
@@ -251,7 +252,8 @@ def main():
 
             finding = check_required_fields(diff, head)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
+                critical = True
 
             finding = check_position(diff, head)
             if finding:
@@ -284,7 +286,7 @@ def main():
 
     with open(FINDINGS_PATH, "w") as f:
         json.dump(findings, f)
-    sys.exit(0)
+    sys.exit(1 if critical else 0)
 
 
 if __name__ == "__main__":

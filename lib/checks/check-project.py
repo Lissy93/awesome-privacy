@@ -29,8 +29,8 @@ AI_BOT_AUTHORS = [
 SPAM_PR_THRESHOLD = 5
 
 LINK_MSG = (
-    "Our automated checks were unable to verify the link(s) you included"
-    " were reachable, so please double check this yourself"
+    "The link(s) you included seem to be returning a 404."
+    " Please double check all URLs listed are valid and publicly accessible"
 )
 AUTHOR_MSG = (
     "Looks like you are the author of this package. Please ensure that you"

@@ -169,15 +169,16 @@ def makeHref(text):
     return re.sub(r'[^\w\s-]', '', text.lower()).replace(" ", "-")
 
 def makeContents():
-    contents = "<blockquote><details>\n"
+    contents = "<blockquote><details open>\n"
     contents += "<summary>📋 <b>Contents</b></summary>\n"
 
     for category in data.get('categories'):
         contents += f"\n- **{category.get('name')}**"
         for section in category.get('sections'):
-            contents += (
-                f"\n\t- [{section.get('name')}](#{makeHref(section.get('name'))}) "
-                f"({len(section.get('services') or [])})"
+            if (len(section.get('services') or []) > 0):
+                contents += (
+                    f"\n\t- [{section.get('name')}](#{makeHref(section.get('name'))}) "
+                    f"({len(section.get('services') or [])})"
             )
     contents += "\n</details></blockquote>\n\n"
     return contents
@@ -201,7 +202,7 @@ def makeAwesomePrivacy():
             )
           # For each service, list it's name, icon, url, and description
           for app in section.get('services') or []:
-              description, was_truncated = truncateMarkdown(app.get('description', ''))
+              description, was_truncated = truncateMarkdown(' '.join(app.get('description', '').split()))
               ap_link = (
                   f"https://awesome-privacy.xyz/"
                   f"{slugify(category.get('name'))}/{slugify(section.get('name'))}/{slugify(app.get('name'))}"

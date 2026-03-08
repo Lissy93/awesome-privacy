@@ -11,6 +11,7 @@ on:
 permissions:
   contents: read
   pull-requests: read
+  security-events: read
 
 jobs:
   pr-compliance:
@@ -75,6 +76,8 @@ jobs:
         run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
       - name: Check additions
         if: steps.changes.outputs.yaml_changed == 'true'
+        id: additions
+        continue-on-error: true
         env:
           SCHEMA_OUTCOME: ${{ steps.schema.outcome }}
         run: python lib/checks/check-additions.py
@@ -95,7 +98,7 @@ jobs:
           path: /tmp/findings-data.json
           if-no-files-found: ignore
       - name: Fail if critical
-        if: steps.changes.outputs.yaml_changed == 'true' && (steps.schema.outcome == 'failure' || steps.diff.outcome == 'failure')
+        if: steps.changes.outputs.yaml_changed == 'true' && (steps.schema.outcome == 'failure' || steps.diff.outcome == 'failure' || steps.additions.outcome == 'failure')
         run: exit 1
 
   submission-eligibility:
@@ -121,6 +124,18 @@ jobs:
           PR_BODY: ${{ github.event.pull_request.body }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python lib/checks/check-project.py
+      - name: Generate repo stats
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python lib/checks/make-info-stats.py
+      - name: Upload repo stats
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-stats
+          path: /tmp/repo-stats.md
+          if-no-files-found: ignore
       - name: Upload findings
         if: always()
         uses: actions/upload-artifact@v4
@@ -150,6 +165,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: pr-diff
+          path: /tmp/artifacts
+        continue-on-error: true
+      - name: Download repo stats
+        uses: actions/download-artifact@v4
+        with:
+          name: repo-stats
           path: /tmp/artifacts
         continue-on-error: true
       - name: Format comment

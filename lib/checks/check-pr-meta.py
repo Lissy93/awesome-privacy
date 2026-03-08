@@ -140,27 +140,29 @@ def main():
 
         finding = check_title(title)
         if finding:
-            findings.append(finding)
+            findings.append({"msg": finding, "level": "error"})
+            critical = True
 
         finding = check_draft(draft)
         if finding:
             findings.append(finding)
 
         if not body or not body.strip():
-            findings.append(TEMPLATE_MSG)
+            findings.append({"msg": TEMPLATE_MSG, "level": "error"})
             critical = True
         else:
             finding = check_template(body)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
                 critical = True
             finding = check_checkboxes(body)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
+                critical = True
 
         finding = check_readme(readme_failed)
         if finding:
-            findings.append(finding)
+            findings.append({"msg": finding, "level": "error"})
     except Exception:
         pass
 
