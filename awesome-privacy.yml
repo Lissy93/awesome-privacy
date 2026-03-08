@@ -1981,6 +1981,12 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: EXIF Editor
+          url: https://exifeditor.io
+          icon: https://exifeditor.io/favexif.svg
+          description: |
+            Browser-based EXIF viewer & editor. Edit, view, and remove image metadata instantly, with full client-side privacy and no uploads
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
