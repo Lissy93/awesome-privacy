@@ -1,12 +1,15 @@
 ---
-
 import Icon from '@components/form/FontAwesome.svelte';
-import { site, title as defaultTitle, description as defaultDescription } from '@utils/config';
+import {
+	site,
+	title as defaultTitle,
+	description as defaultDescription,
+} from '@utils/config';
 
 interface Props {
-  url?: string;
-  title?: string;
-  description?: string;
+	url?: string;
+	title?: string;
+	description?: string;
 }
 
 const url = Astro.props.url || site;
@@ -18,109 +21,114 @@ const encodedTitle = encodeURIComponent(title);
 const encodedDescription = encodeURIComponent(description);
 
 const socialMedias = {
-  mastodon: {
-    url: `https://mastodon.social/share?text=${encodeURIComponent(`${title} ${description}`)}&url=${encodedUrl}`,
-    title: 'Mastodon',
-    icon: 'mastodon',
-    color: '#6364FF',
-  },
-  twitter: {
-    url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title} ${description}`)}&url=${url}`,
-    title: 'Twitter',
-    icon: 'twitter',
-    color: '#444343'
-  },
-  reddit: {
-    url: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
-    title: 'Reddit',
-    icon: 'reddit',
-    color: '#FF4500',
-  },
-  linkedIn: {
-    url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
-    title: 'LinkedIn',
-    icon: 'linkedin',
-    color: '#0A66C2'
-  },
-  pinterest: {
-    url: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
-    title: 'Pinterest',
-    icon: 'pinterest',
-    color: '#BD081C',
-  },
-  telegram: {
-    url: `https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(`${title} ${description}`)}`,
-    title: 'Telegram',
-    icon: 'telegram',
-    color: '#26A5E4',
-  },
-  whatsapp: {
-    url: `https://wa.me/?text=${encodedTitle} ${encodedUrl}`,
-    title: 'WhatsApp',
-    icon: 'whatsapp',
-    color: '#25D366',
-  },
-  signal: {
-    url: `https://signal.me/#p/+${encodedUrl}`,
-    title: 'Signal',
-    icon: 'signal',
-    color: '#3A76F0',
-  },
-  pocket: {
-    url: `https://getpocket.com/save?url=${encodedUrl}&title=${encodedTitle}`,
-    title: 'Pocket',
-    icon: 'pocket',
-    color: '#EF3F56',
-  },
+	mastodon: {
+		url: `https://mastodon.social/share?text=${encodeURIComponent(`${title} ${description}`)}&url=${encodedUrl}`,
+		title: 'Mastodon',
+		icon: 'mastodon',
+		color: '#6364FF',
+	},
+	twitter: {
+		url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title} ${description}`)}&url=${url}`,
+		title: 'Twitter',
+		icon: 'twitter',
+		color: '#444343',
+	},
+	reddit: {
+		url: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+		title: 'Reddit',
+		icon: 'reddit',
+		color: '#FF4500',
+	},
+	linkedIn: {
+		url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
+		title: 'LinkedIn',
+		icon: 'linkedin',
+		color: '#0A66C2',
+	},
+	pinterest: {
+		url: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
+		title: 'Pinterest',
+		icon: 'pinterest',
+		color: '#BD081C',
+	},
+	telegram: {
+		url: `https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(`${title} ${description}`)}`,
+		title: 'Telegram',
+		icon: 'telegram',
+		color: '#26A5E4',
+	},
+	whatsapp: {
+		url: `https://wa.me/?text=${encodedTitle} ${encodedUrl}`,
+		title: 'WhatsApp',
+		icon: 'whatsapp',
+		color: '#25D366',
+	},
+	signal: {
+		url: `https://signal.me/#p/+${encodedUrl}`,
+		title: 'Signal',
+		icon: 'signal',
+		color: '#3A76F0',
+	},
+	pocket: {
+		url: `https://getpocket.com/save?url=${encodedUrl}&title=${encodedTitle}`,
+		title: 'Pocket',
+		icon: 'pocket',
+		color: '#EF3F56',
+	},
 };
-
 ---
 
 <ul class="social-share">
-  {Object.entries(socialMedias).map(([platform, shareUrl]) => (
-    <li style={`--color: ${shareUrl.color}`}>
-      <a title={`Share on ${platform}`} href={shareUrl.url} target="_blank" rel="noopener noreferrer">
-        <Icon iconName={shareUrl.icon} />
-      </a>
-    </li>
-  ))}
+	{
+		Object.entries(socialMedias).map(([platform, shareUrl]) => (
+			<li style={`--color: ${shareUrl.color}`}>
+				<a
+					title={`Share on ${platform}`}
+					href={shareUrl.url}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon iconName={shareUrl.icon} />
+				</a>
+			</li>
+		))
+	}
 </ul>
 
 <style lang="scss">
-.social-share {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  li {
-    padding: 0;
-    margin: 0;
-    opacity: 0.8;
-    border: 1px solid var(--box-outline);
-    box-shadow: 2px 2px 0 var(--box-outline);
-    border-radius: var(--curve-sm);
-    transition: all 0.2s ease-in-out;
-    background: var(--background-form);
-    a {
-      display: flex;
-      color: var(--foreground);
-      transition: all 0.2s ease-in-out;
-      padding: 4px;
-      :global(svg) {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
-    &:hover {
-      box-shadow: 3px 3px 0 var(--box-outline);
-      border-radius: var(--curve-md);
-      opacity: 1;
-      a {
-        color: var(--color);
-      }
-    }
-  }
-}
+	.social-share {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		li {
+			padding: 0;
+			margin: 0;
+			opacity: 0.8;
+			border: 1px solid var(--box-outline);
+			box-shadow: 2px 2px 0 var(--box-outline);
+			border-radius: var(--curve-sm);
+			transition: all 0.2s ease-in-out;
+			background: var(--background-form);
+			a {
+				display: flex;
+				color: var(--foreground);
+				transition: all 0.2s ease-in-out;
+				padding: 4px;
+				:global(svg) {
+					width: 2rem;
+					height: 2rem;
+				}
+			}
+			&:hover {
+				box-shadow: 3px 3px 0 var(--box-outline);
+				border-radius: var(--curve-md);
+				opacity: 1;
+				a {
+					color: var(--color);
+				}
+			}
+		}
+	}
 </style>
-

@@ -1,10 +1,18 @@
+import { error } from './logger';
 
-export const fetchWebsiteInfo = async (url: string): Promise<WebsiteData | null> => {
+export const fetchWebsiteInfo = async (
+  url: string,
+): Promise<WebsiteData | null> => {
   const endpoint = `https://site-info-fetch.as93.workers.dev/?url=${url}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching website info:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('Website', `HTTP ${res.status} for ${url} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('Website', `Network error for ${url}: ${err}`);
     return null;
   }
 };
@@ -19,10 +27,10 @@ interface DNSRecord {
 
 interface DNSRecords {
   ns: {
-      records: DNSRecord[];
+    records: DNSRecord[];
   };
   mx: {
-      records: DNSRecord[];
+    records: DNSRecord[];
   };
 }
 
@@ -60,7 +68,7 @@ interface Redirection {
   found: boolean;
   external: boolean;
   url: string;
-  redirects: any[];
+  redirects: string[];
 }
 
 interface ResponseHeaders {

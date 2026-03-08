@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { writable } from "svelte/store";
-  import type { Category, Service } from "../../types/Service";
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
+  import type { Category, Service } from '../../types/Service';
   import { formatLink } from '@utils/parse-markdown';
   import { slugify } from '@utils/fetch-data';
 
@@ -14,21 +14,23 @@
 
   let results = writable<ServiceResult[]>([]);
 
-  const normalize = (str: string) => str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const normalize = (str: string) =>
+    str.toLowerCase().replace(/[^a-z0-9]/g, '');
 
   onMount(async () => {
-
     const apiEndpoint = `https://awesome-privacy.as93.workers.dev/${searchTerm}`;
     const fetchedServices = await fetch(apiEndpoint)
       .then((response) => response.json())
-      .then((data) => (JSON.parse(data) || []).map((servName: string) => normalize(servName)));
+      .then((data) =>
+        (JSON.parse(data) || []).map((servName: string) => normalize(servName)),
+      );
 
     const tmpResults: ServiceResult[] = [];
     categories.forEach((category) => {
       (category.sections || []).forEach((section) => {
         (section.services || []).forEach((service) => {
           if (fetchedServices.includes(normalize(service.name))) {
-            const path = `/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`
+            const path = `/${slugify(category.name)}/${slugify(section.name)}/${slugify(service.name)}`;
             tmpResults.push({ ...service, path });
             return;
           }
@@ -45,35 +47,36 @@
 {#if $results.length > 1}
   <h3>Top Results</h3>
 {/if}
-  <section>
-    {#each $results as service (service)}
-      <a class="service-result" href={service.path}>
-        <div class="service-head">
-          <img 
-            width="40"
-            height="40"
-            loading="lazy"
-            decoding="async"
-            class="service-icon"
-            alt={`${service.name} Icon`}
-            data-service-url={formatLink(service.url)}
-            src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
-          />
-          <div>
-            <h4>
-              {service.name}
-              {#if service.followWith}
+<section>
+  {#each $results as service (service)}
+    <a class="service-result" href={service.path}>
+      <div class="service-head">
+        <img
+          width="40"
+          height="40"
+          loading="lazy"
+          decoding="async"
+          class="service-icon"
+          alt={`${service.name} Icon`}
+          data-service-url={formatLink(service.url)}
+          src={service.icon ||
+            `https://icon.horse/icon/${formatLink(service.url)}`}
+        />
+        <div>
+          <h4>
+            {service.name}
+            {#if service.followWith}
               <p class="follow-with">({service.followWith})</p>
-              {/if}
-            </h4>
-            <a class="service-link" href={service.url}>{formatLink(service.url)}</a>
-          </div>
+            {/if}
+          </h4>
+          <a class="service-link" href={service.url}
+            >{formatLink(service.url)}</a
+          >
         </div>
-      </a>
-    {/each}
-  </section>
-
-
+      </div>
+    </a>
+  {/each}
+</section>
 
 <style lang="scss">
   h3 {
