@@ -1981,6 +1981,16 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: PolicyForge
+          url: https://policyforge-one.vercel.app
+          icon: https://policyforge-one.vercel.app/favicon.ico
+          github: ryuno2525/autonomous-claude-agent
+          openSource: true
+          description: |
+            Free privacy policy generator and GDPR/CCPA compliance scanner. Generates
+            legally compliant privacy policies instantly with no account required, and
+            scans websites for privacy compliance issues.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
