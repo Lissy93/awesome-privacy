@@ -1092,11 +1092,11 @@ categories:
 
       - name: Captchainbox
         url: https://captchainbox.com
-        description: |
-          CAPTCHA-based email filtering for Gmail. Known contacts get through instantly,
-          while unknown senders receive an auto-reply with a simple CAPTCHA challenge.
-          Verified senders are automatically whitelisted. Helps block spam and unwanted
-          outreach without maintaining complex filter rules.
+        icon: https://captchainbox.com/logo-512.png
+        openSource: false
+        description: >-
+          CAPTCHA-based email filtering for Gmail. Known contacts pass through,
+          unknown senders verify via a simple CAPTCHA. Verified senders are auto-whitelisted.
 
       notableMentions: >
         If you are using ProtonMail, then the [ProtonMail Bridge](https://protonmail.com/bridge/thunderbird)
