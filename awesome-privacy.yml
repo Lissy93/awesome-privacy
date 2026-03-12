@@ -3395,6 +3395,30 @@ categories:
 
 
     ###########################
+    ###########################
+    ###### Pastebins ######
+    ###########################
+    - name: Pastebins
+      alternativeTo: ['pastebin.com', 'hastebin', 'github gist']
+      services:
+      - name: CloakBin
+        url: https://cloakbin.com
+        github: Ishannaik/cloakbin-hosted
+        openSource: true
+        description: |
+          Zero-knowledge encrypted pastebin where AES-256-GCM encryption runs entirely in the browser.
+          The decryption key is stored only in the URL fragment (#key), which browsers never send to servers,
+          so even with full database access pastes are unreadable. Features syntax highlighting for 40+ languages,
+          burn-after-reading, custom expiry, and password protection.
+
+      - name: PrivateBin
+        url: https://privatebin.info
+        github: PrivateBin/PrivateBin
+        openSource: true
+        description: |
+          A minimalist, open-source online pastebin where the server has zero knowledge of pasted data.
+          Data is encrypted and decrypted in the browser using 256-bit AES. Requires self-hosting.
+
     ###### Browser Sync ######
     ##########################
     - name: Browser Sync
