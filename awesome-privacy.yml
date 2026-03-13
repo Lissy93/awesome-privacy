@@ -291,6 +291,7 @@ categories:
         openSource: true
         github: joeldavidw/Chronos
         iosApp: https://apps.apple.com/app/chronos-authenticator/id6503929490
+        followWith: iOS
         description: >-
           Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust
           security and reliable backup options.
