@@ -1982,8 +1982,8 @@ categories:
             host, registrar, IP and SSL certificates.
 
         - name: PolicyForge
-          url: https://policyforge-one.vercel.app
-          icon: https://policyforge-one.vercel.app/favicon.ico
+          url: https://policyforge.autonomous-claude.com
+          icon: https://policyforge.autonomous-claude.com/favicon.ico
           github: ryuno2525/autonomous-claude-agent
           openSource: true
           description: |
