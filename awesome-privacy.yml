@@ -1981,6 +1981,16 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: Hemmelig.app
+          url: https://hemmelig.app/
+          icon: https://hemmelig.app/icons/icon-512x512.png
+          openSource: true
+          github: HemmeligOrg/Hemmelig.app
+          description: |
+            Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
+            invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
+            Open source and self-hostable.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
