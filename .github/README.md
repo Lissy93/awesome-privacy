@@ -27,7 +27,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (11)
+	- [2-Factor Authentication](#2-factor-authentication) (12)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (6)
@@ -253,6 +253,13 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![GitHub: protonpass/android-authenticator](https://img.shields.io/github/stars/protonpass/android-authenticator?style=flat&logo=github&label=android-authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/protonpass/android-authenticator) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/proton-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/protonpass/android-authenticator) [![Proton Authenticator on Google Play](https://img.shields.io/badge/-Proton_Authenticator-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=proton.android.authenticator) [![Proton Authenticator on App Store](https://img.shields.io/badge/-Proton_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-authenticator/id6741758667)ㅤ 
+
+		</details>
+- **[<img src='https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png' width='16' height='16' alt='icon' /> Chronos Authenticator](https://chronosauth.com)** - Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust security and reliable backup options. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: joeldavidw/Chronos](https://img.shields.io/github/stars/joeldavidw/Chronos?style=flat&logo=github&label=Chronos&color=%235f53f4&cacheSeconds=3600)](https://github.com/joeldavidw/Chronos) [![Chronos Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Chronos_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/chronos-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/joeldavidw/Chronos) [![Chronos Authenticator on App Store](https://img.shields.io/badge/-Chronos_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/app/chronos-authenticator/id6503929490)ㅤ 
 
 		</details>
 
