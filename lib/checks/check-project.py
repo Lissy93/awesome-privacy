@@ -26,7 +26,10 @@ AI_BOT_AUTHORS = [
     "copilot-swe-agent.github.com",
     "noreply@cursor.com",
 ]
-SPAM_PR_THRESHOLD = 5
+SPAM_AWESOME_THRESHOLD = 3
+SPAM_DISTINCT_REPO_THRESHOLD = 7
+SPAM_WINDOW_DAYS = 2
+NEW_ACCOUNT_DAYS = 14
 
 LINK_MSG = (
     "The link(s) you included seem to be returning a 404."
@@ -47,7 +50,8 @@ ACTIVITY_MSG = (
 )
 MATURITY_MSG = (
     "This project appears to be quite new (created less than 4 months ago)."
-    " Repositories should have a proven track record before listing."
+    " Repositories should have a proven track record before listing,"
+    " and at least 16 weeks since first stable release."
 )
 AI_CODE_MSG = (
     "This project appears to contain AI-generated code."
@@ -62,15 +66,27 @@ LICENSE_MSG = (
 )
 ARCHIVED_MSG = (
     "The GitHub project linked has been archived."
-    " Additions must be actively maintained."
+    " Additions must be actively maintained"
 )
 SECURITY_MSG = (
     "This project has open security vulnerabilities (critical or high severity)"
     " flagged by GitHub Dependabot. Please verify these have been addressed"
 )
-SPAM_MSG = (
-    "This user has opened up a large number of PRs to other awesome-* repos"
-    " in the past 24 hours, and appears to be spamming"
+SPAM_AWESOME_MSG = (
+    "You have made many similar submissions on other awesome-* repos today."
+    " Please ensure that your submission is actually a good fit for awesome-privacy"
+)
+SPAM_MANY_MSG = (
+    "The submitter of this PR appears to have been previously flagged as a spammer."
+    " Caution is needed when reviewing this PR"
+)
+NEW_ACCOUNT_MSG = (
+    "This user has only just joined GitHub."
+    " New accounts submitting to awesome lists can be a spam signal, careful review needed"
+)
+DUPLICATE_URL_MSG = (
+    "The URL for this submission already exists in another listing."
+    " Please check that this is not a duplicate entry"
 )
 
 
@@ -249,34 +265,88 @@ def check_security_alerts(owner, repo, token):
 
 
 def check_spam_prs(pr_user, token):
-    """Return SPAM_MSG if the user has opened many PRs to other awesome-* repos recently."""
+    """Return list of spam findings based on recent PR activity."""
     if not pr_user or not token:
-        return None
+        return []
     try:
-        since = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%d")
-        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
-        headers["Authorization"] = f"token {token}"
+        since = (datetime.now(timezone.utc) - timedelta(days=SPAM_WINDOW_DAYS)).strftime("%Y-%m-%d")
+        headers = {
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": USER_AGENT,
+            "Authorization": f"token {token}",
+        }
         resp = requests.get(
             "https://api.github.com/search/issues",
             headers=headers, timeout=TIMEOUT,
             params={"q": f"type:pr author:{pr_user} created:>={since}"},
         )
         if resp.status_code != 200:
-            return None
+            return []
         items = resp.json().get("items", [])
         this_repo = os.environ.get("GITHUB_REPOSITORY", "Lissy93/awesome-privacy").lower()
-        count = 0
+        awesome_count = 0
+        distinct_repos = set()
         for item in items:
             repo_url = item.get("repository_url", "")
             # repository_url looks like https://api.github.com/repos/owner/repo-name
             repo_full = "/".join(repo_url.rstrip("/").split("/")[-2:]).lower()
+            if repo_full == this_repo:
+                continue
+            distinct_repos.add(repo_full)
             repo_name = repo_url.rstrip("/").split("/")[-1].lower()
-            if repo_name.startswith("awesome-") and repo_full != this_repo:
-                count += 1
-        if count >= SPAM_PR_THRESHOLD:
-            return SPAM_MSG
+            if repo_name.startswith("awesome-"):
+                awesome_count += 1
+        findings = []
+        if awesome_count >= SPAM_AWESOME_THRESHOLD:
+            findings.append(SPAM_AWESOME_MSG)
+        if len(distinct_repos) >= SPAM_DISTINCT_REPO_THRESHOLD:
+            findings.append(SPAM_MANY_MSG)
+        return findings
+    except Exception:
+        return []
+
+
+def check_new_account(pr_user, token):
+    """Return NEW_ACCOUNT_MSG if the PR author's GitHub account is very new."""
+    if not pr_user or not token:
+        return None
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/users/{pr_user}",
+            headers=headers, timeout=TIMEOUT,
+        )
+        if resp.status_code != 200:
+            return None
+        created = resp.json().get("created_at")
+        if not created:
+            return None
+        created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+        if (datetime.now(timezone.utc) - created_dt).days < NEW_ACCOUNT_DAYS:
+            return NEW_ACCOUNT_MSG
     except Exception:
         pass
+    return None
+
+
+def check_duplicate_urls(diff, head):
+    """Return DUPLICATE_URL_MSG if an added service's URL already exists in the YAML."""
+    if not head:
+        return None
+    # Count how many times each URL appears in the head YAML
+    url_counts = {}
+    for cat in head.get("categories", []):
+        for sec in cat.get("sections", []):
+            for svc in sec.get("services", []):
+                url = svc.get("url", "").rstrip("/").lower()
+                if url:
+                    url_counts[url] = url_counts.get(url, 0) + 1
+    # The added service is in head already, so a count > 1 means a duplicate exists
+    for svc in get_services(diff, "added"):
+        url = svc.get("fields", {}).get("url", "").rstrip("/").lower()
+        if url and url_counts.get(url, 0) > 1:
+            return DUPLICATE_URL_MSG
     return None
 
 
@@ -383,11 +453,18 @@ def main():
         pr_user = os.environ.get("PR_USER", "")
         pr_body = os.environ.get("PR_BODY", "")
         token = os.environ.get("GITHUB_TOKEN", "")
-        findings.extend(check_repo_signals(diff, pr_user, token, pr_body))
 
-        finding = check_spam_prs(pr_user, token)
+        findings.extend(check_spam_prs(pr_user, token))
+
+        finding = check_new_account(pr_user, token)
         if finding:
             findings.append(finding)
+
+        finding = check_duplicate_urls(diff, head)
+        if finding:
+            findings.append(finding)
+
+        findings.extend(check_repo_signals(diff, pr_user, token, pr_body))
     except Exception:
         pass
 

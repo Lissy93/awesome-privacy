@@ -70,6 +70,35 @@ def _extract_pr_author(existing_body):
     return match.group(1) if match else None
 
 
+_SUBMISSION_INFO_RE = re.compile(
+    r"<details><summary>Submission Info</summary>\s*\n.*?</details>",
+    re.DOTALL,
+)
+
+
+def _extract_submission_info(body):
+    """Extract the Submission Info <details> block, or None if absent."""
+    match = _SUBMISSION_INFO_RE.search(body)
+    return match.group(0) if match else None
+
+
+def _refresh_submission_info(existing_body, new_body):
+    """Replace or insert the Submission Info block from new_body into existing_body."""
+    new_block = _extract_submission_info(new_body)
+    if not new_block:
+        return existing_body
+    old_block = _extract_submission_info(existing_body)
+    if old_block:
+        if old_block == new_block:
+            return existing_body
+        return existing_body.replace(old_block, new_block)
+    # No existing block — insert before Updates section or workflow run link
+    for anchor in ("---\n\n### Updates", "<sup>For full details"):
+        if anchor in existing_body:
+            return existing_body.replace(anchor, new_block + "\n\n" + anchor, 1)
+    return existing_body.rstrip() + "\n\n" + new_block
+
+
 def build_edit_line(existing_body, findings_count, check_run_id, repo):
     """Build the edit line to append, or None if nothing to do."""
     run_tag = f"<!-- run:{check_run_id} -->"
@@ -154,14 +183,20 @@ def main():
     findings_count = read_findings_count(new_body)
     edit_line = build_edit_line(existing_body, findings_count, check_run_id, repo)
 
-    if not edit_line:
+    # Refresh the Submission Info block even if findings haven't changed
+    refreshed_body = _refresh_submission_info(existing_body, new_body)
+    info_changed = refreshed_body != existing_body
+
+    if not edit_line and not info_changed:
         write_output("skip")
         return
 
-    if "### Updates" in existing_body:
-        updated = existing_body.rstrip() + "\n" + edit_line
-    else:
-        updated = existing_body.rstrip() + "\n\n---\n\n### Updates\n\n" + edit_line
+    updated = refreshed_body
+    if edit_line:
+        if "### Updates" in updated:
+            updated = updated.rstrip() + "\n" + edit_line
+        else:
+            updated = updated.rstrip() + "\n\n---\n\n### Updates\n\n" + edit_line
     write_output("update", updated)
 
 

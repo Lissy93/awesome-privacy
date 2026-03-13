@@ -20,12 +20,12 @@ jobs:
     if: github.event.workflow_run.event == 'pull_request'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download PR metadata
         id: download
         continue-on-error: true
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: pr-meta
           path: pr-meta
@@ -34,7 +34,7 @@ jobs:
 
       - name: Resolve PR context
         id: context
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -95,7 +95,7 @@ jobs:
 
       - name: Post or update comment
         if: steps.context.outputs.pr_number
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -136,17 +136,38 @@ jobs:
               console.log('Updated bot comment.');
             }
 
+            // Auto-assign Lissy93 for review when appropriate (non-critical)
+            try {
+              const readInt = (f) => fs.existsSync(f) ? parseInt(fs.readFileSync(f, 'utf8').trim()) : NaN;
+              const errors = readInt('pr-meta/error-count.txt');
+              const total = readInt('pr-meta/findings-count.txt');
+              const shouldAssign =
+                (action === 'create' && errors === 0 && total === 0) ||
+                (action === 'update' && errors === 0);
+              if (shouldAssign) {
+                await github.rest.issues.addAssignees({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  assignees: ['Lissy93'],
+                });
+                console.log('Assigned Lissy93 for review.');
+              }
+            } catch (err) {
+              console.log(`Failed to auto-assign: ${err.message}`);
+            }
+
   review-notify:
     name: Notify maintainer
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request_review'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Fetch review and CI context
         id: context
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -191,7 +212,7 @@ jobs:
         run: python lib/checks/check-review-ready.py
 
       - name: Post notification
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.BOT_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -212,10 +233,23 @@ jobs:
               '@Lissy93 - Please evaluate, and either merge or leave feedback.',
             ].join('\n');
 
+            const prNumber = parseInt('${{ steps.context.outputs.pr_number }}');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: parseInt('${{ steps.context.outputs.pr_number }}'),
+              issue_number: prNumber,
               body,
             });
-            console.log('Posted maintainer notification.');
+
+            // Once all checks pass, assign the PR to myself, so i get notiifcation to review
+            try {
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                assignees: ['Lissy93'],
+              });
+            } catch (err) {
+              console.log(`Failed to assign Lissy93: ${err.message}`);
+            }

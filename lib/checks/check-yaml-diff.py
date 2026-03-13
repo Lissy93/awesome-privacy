@@ -156,22 +156,6 @@ def write_diff_summary(diff_result):
             f.write("\n".join(bullets) + "\n")
 
 
-def write_step_summary(diff_result):
-    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
-    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-    if not summary_file:
-        return
-
-    bullets = format_diff_bullets(diff_result)
-    lines = ["## YAML Diff Analysis\n"]
-    if bullets:
-        lines.extend(bullets)
-    else:
-        lines.append("No changes detected in `awesome-privacy.yml`.")
-
-    with open(summary_file, "a") as f:
-        f.write("\n".join(lines) + "\n")
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -227,7 +211,6 @@ def main():
         json.dump(diff_result, f, indent=2)
 
     write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
-    write_step_summary(diff_result)
     write_diff_summary(diff_result)
 
     added_count = len(added)

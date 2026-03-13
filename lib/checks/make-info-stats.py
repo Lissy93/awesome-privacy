@@ -591,11 +591,17 @@ def main():
                 print(f"Failed to fetch repo data for {args['owner']}/{args['repo']}", file=sys.stderr)
 
         if args["url"]:
-            site_data = fetch_website_data(args["url"])
-            has_sec_txt = check_security_txt(args["url"])
-            if site_data or has_sec_txt is not None:
+            parsed_url = urlparse(args["url"])
+            if parsed_url.hostname and parsed_url.hostname.rstrip(".").endswith("github.com"):
+                print(f"Skipped website checks, since github repo was specified: {args['url']}", file=sys.stderr)
                 sections.append(("Website Checks",
-                                 format_markdown(grade_website_stats(site_data, args["url"], has_sec_txt))))
+                                 f"- {ORANGE} **Skipped** web checks, since repo URL was submitted instead of a website"))
+            else:
+                site_data = fetch_website_data(args["url"])
+                has_sec_txt = check_security_txt(args["url"])
+                if site_data or has_sec_txt is not None:
+                    sections.append(("Website Checks",
+                                     format_markdown(grade_website_stats(site_data, args["url"], has_sec_txt))))
 
         if args["android"]:
             data = fetch_android_data(args["android"])

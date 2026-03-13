@@ -179,7 +179,8 @@ def write_step_summary(errors, warnings, user, pr_number, run_id, changes_summar
     if pr_number:
         lines.append(
             f"This workflow run was triggered at {timestamp}"
-            f" for PR #{pr_number} which was opened by @{user}\n"
+            f" for PR [#{pr_number}](https://github.com/Lissy93/awesome-privacy/pull/{pr_number})"
+            f" which was opened by @{user}\n"
         )
     else:
         lines.append(
@@ -191,7 +192,7 @@ def write_step_summary(errors, warnings, user, pr_number, run_id, changes_summar
         lines.append(f"{changes_summary}\n")
 
     if repo_stats:
-        lines.append("#### Submission Info\n")
+        lines.append("### Submission Info\n")
         lines.append(f"{repo_stats}\n")
 
     with open(summary_file, "a") as f:
@@ -217,6 +218,8 @@ def main():
         all_findings = errors + warnings
         with open(os.path.join(OUTPUT_DIR, "findings-count.txt"), "w") as f:
             f.write(str(len(all_findings)))
+        with open(os.path.join(OUTPUT_DIR, "error-count.txt"), "w") as f:
+            f.write(str(len(errors)))
         changes_summary = load_diff_summary()
         changes_bullets = _extract_changes_bullets(changes_summary)
         repo_stats = load_repo_stats()
