@@ -2015,7 +2015,7 @@ categories:
       alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
-        url: http://mullvad.net/en
+        url: https://mullvad.net/en
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
@@ -2088,6 +2088,20 @@ categories:
           Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
           WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
           subscriptions or credit cards.
+
+      - name: Windscribe
+        url: https://windscribe.com
+        github: Windscribe/Desktop-App
+        securityAudited: true
+        icon: https://avatars.githubusercontent.com/u/30499389
+        tosdrId: 2571
+        androidApp: com.windscribe.vpn
+        iosApp: https://apps.apple.com/us/app/windscribe-vpn/id1129435228
+        subreddit: Windscribe
+        description: |
+          An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions
+          and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling,
+          customizable DNS blocking, MAC spoofing, decoy traffic and censorship circumvention.
 
       wordOfWarning: |
         - *A VPN does not make you anonymous - it merely changes your public IP address to that of your VPN provider, instead of your ISP. Your browsing session can still be linked back to your real identity either through your system details (such as user agent, screen resolution even typing patterns), cookies / session storage, or by the identifiable data that you enter. [Read more about fingerprinting](https://pixelprivacy.com/resources/browser-fingerprinting/)*

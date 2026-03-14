@@ -46,7 +46,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mobile Apps](#mobile-apps) (25)
 	- [Online Tools](#online-tools) (19)
 - **Networking**
-	- [Virtual Private Networks](#virtual-private-networks) (6)
+	- [Virtual Private Networks](#virtual-private-networks) (7)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
 	- [Mix Networks](#mix-networks) (3)
 	- [Proxies](#proxies) (2)
@@ -1473,7 +1473,7 @@ A selection of free online tools and utilities, to check, test and protect your 
 
 ### Virtual Private Networks
 
-- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](http://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
+- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](https://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
 	- <details>
 		<summary>Stats</summary>
 
@@ -1513,6 +1513,13 @@ A selection of free online tools and utilities, to check, test and protect your 
 		<summary>Stats</summary>
 
 		[![Party VPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Party_VPN)](https://awesome-privacy.xyz/networking/virtual-private-networks/party-vpn) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) [![Party VPN on Discord](https://img.shields.io/badge/-Party_VPN-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/6GRddHhW2d)ㅤ 
+
+		</details>
+- **[<img src='https://avatars.githubusercontent.com/u/30499389' width='16' height='16' alt='icon' /> Windscribe](https://windscribe.com)** - An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling, customizable DNS blocking, MAC spoo[…](https://awesome-privacy.xyz/networking/virtual-private-networks/windscribe "View full Windscribe report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: Windscribe/Desktop-App](https://img.shields.io/github/stars/Windscribe/Desktop-App?style=flat&logo=github&label=Desktop-App&color=%235f53f4&cacheSeconds=3600)](https://github.com/Windscribe/Desktop-App) [![Privacy Policy](https://shields.tosdr.org/en_2571.svg)](https://tosdr.org/en/service/2571) [![Windscribe on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Windscribe)](https://awesome-privacy.xyz/networking/virtual-private-networks/windscribe) ![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4=&logoColor=white) [![Windscribe on Google Play](https://img.shields.io/badge/-Windscribe-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.windscribe.vpn) [![Windscribe on App Store](https://img.shields.io/badge/-Windscribe-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/windscribe-vpn/id1129435228) [![r/Windscribe on Reddit](https://img.shields.io/badge/-Windscribe-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/Windscribe)ㅤ 
 
 		</details>
 
