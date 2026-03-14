@@ -2015,7 +2015,7 @@ categories:
       alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
-        url: http://mullvad.net/en
+        url: https://mullvad.net/en
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
