@@ -38,7 +38,7 @@ jobs:
         run: python lib/checks/check-pr-meta.py
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: findings-compliance
           path: /tmp/findings-compliance.json
@@ -83,7 +83,7 @@ jobs:
         run: python lib/checks/check-additions.py
       - name: Upload diff data
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: pr-diff
           path: |
@@ -92,7 +92,7 @@ jobs:
           if-no-files-found: ignore
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: findings-data
           path: /tmp/findings-data.json
@@ -113,7 +113,7 @@ jobs:
           python-version: "3.12"
       - run: pip install -q -r lib/requirements.txt
       - name: Download diff data
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: pr-diff
           path: /tmp
@@ -131,14 +131,14 @@ jobs:
         run: python lib/checks/make-info-stats.py
       - name: Upload repo stats
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: repo-stats
           path: /tmp/repo-stats.md
           if-no-files-found: ignore
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: findings-project
           path: /tmp/findings-project.json
@@ -155,20 +155,21 @@ jobs:
         with:
           python-version: "3.12"
       - name: Download all findings
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           pattern: findings-*
           path: /tmp/artifacts
           merge-multiple: true
         continue-on-error: true
       - name: Download diff data
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: pr-diff
           path: /tmp/artifacts
         continue-on-error: true
       - name: Download repo stats
-        uses: actions/download-artifact@v5
+        if: needs.submission-eligibility.result == 'success'
+        uses: actions/download-artifact@v7
         with:
           name: repo-stats
           path: /tmp/artifacts
@@ -181,7 +182,7 @@ jobs:
         run: python lib/checks/format-comment.py
       - name: Upload PR metadata
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: pr-meta
           path: /tmp/pr-meta/

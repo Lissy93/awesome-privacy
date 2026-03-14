@@ -25,7 +25,7 @@ jobs:
       - name: Download PR metadata
         id: download
         continue-on-error: true
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: pr-meta
           path: pr-meta

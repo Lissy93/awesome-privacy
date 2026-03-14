@@ -479,6 +479,9 @@ def grade_android_stats(data):
 
 def fetch_ios_data(app_url):
     """Fetch iOS app info."""
+    # The API requires a country code in the URL path — insert /us/ if missing
+    if app_url and "apps.apple.com/app/" in app_url:
+        app_url = app_url.replace("apps.apple.com/app/", "apps.apple.com/us/app/", 1)
     return _api_get(IOS_API_URL, params={"appStoreUrl": app_url})
 
 
@@ -607,16 +610,22 @@ def main():
             data = fetch_android_data(args["android"])
             if data:
                 sections.append(("Android App", format_markdown(grade_android_stats(data))))
+            else:
+                print(f"Failed to fetch Android data for {args['android']}", file=sys.stderr)
 
         if args["ios"]:
             data = fetch_ios_data(args["ios"])
             if data:
                 sections.append(("iOS App", format_markdown(grade_ios_stats(data))))
+            else:
+                print(f"Failed to fetch iOS data for {args['ios']}", file=sys.stderr)
 
         if args["tosdr"]:
             data = fetch_tosdr_data(args["tosdr"])
             if data:
                 sections.append(("Privacy Policy", format_markdown(grade_tosdr_stats(data))))
+            else:
+                print(f"Failed to fetch ToS;DR data for {args['tosdr']}", file=sys.stderr)
 
         if not sections:
             sys.exit(0)
