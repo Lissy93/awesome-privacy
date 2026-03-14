@@ -1473,7 +1473,7 @@ A selection of free online tools and utilities, to check, test and protect your 
 
 ### Virtual Private Networks
 
-- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](http://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
+- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](https://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
 	- <details>
 		<summary>Stats</summary>
 
