@@ -982,6 +982,17 @@ categories:
           interface, with a dark mode option, it is also very lightweight and consumes minimal
           data usage.
 
+      - name: HeyRobyn
+        url: https://heyrobyn.ai
+        openSource: false
+        iosApp: https://heyrobyn.ai
+        description: |
+          Native macOS unified inbox for email, Slack, and GitHub. Built with SwiftUI for
+          performance and native integration. Privacy-first design with all data stored
+          on-device, no cloud sync. Aggregates multiple communication channels into a single
+          window, reducing context switching for developers and teams. Features include unified
+          search, notifications, and quick actions across all connected services.
+
       - name: K-9 Mail
         url: https://k9mail.app
         icon: https://k9mail.app/assets/img/k9-logo.svg
