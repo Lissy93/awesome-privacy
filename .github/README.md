@@ -26,7 +26,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 <summary>📋 <b>Contents</b></summary>
 
 - **Essentials**
-	- [Password Managers](#password-managers) (6)
+	- [Password Managers](#password-managers) (7)
 	- [2-Factor Authentication](#2-factor-authentication) (12)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
@@ -155,6 +155,13 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![Pass on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pass)](https://awesome-privacy.xyz/essentials/password-managers/pass) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://www.passwordstore.org/)ㅤ 
+
+		</details>
+- **[<img src='https://www.aliasvault.net/favicon.png' width='16' height='16' alt='icon' /> AliasVault](https://www.aliasvault.net)** - End-to-end encrypted open source password and alias manager with built-in email server. AliasVault protects protects your privacy by creating alternative identities, passwords and email addresses for[…](https://awesome-privacy.xyz/essentials/password-managers/aliasvault "View full AliasVault report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: lanedirt/aliasvault](https://img.shields.io/github/stars/lanedirt/aliasvault?style=flat&logo=github&label=aliasvault&color=%235f53f4&cacheSeconds=3600)](https://github.com/lanedirt/aliasvault) [![AliasVault on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AliasVault)](https://awesome-privacy.xyz/essentials/password-managers/aliasvault) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/lanedirt/aliasvault) [![AliasVault on Discord](https://img.shields.io/badge/-AliasVault-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/DsaXMTEtpF)ㅤ 
 
 		</details>
 
