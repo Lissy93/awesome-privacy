@@ -1204,6 +1204,16 @@ categories:
           Privacy-focused eSIM provider for 170+ countries, with instant eSIM delivery.
           No account, ID, email needed, and accepts crypto via a self-hosted BTCPay Server.
 
+      - name: LNVPN
+        url: https://lnvpn.net
+        icon: https://lnvpn.net/favicon.ico
+        acceptsCrypto: true
+        description: >-
+          Disposable (20-min) and extendable rental (3-month) phone numbers for
+          anonymous SMS verification, plus anonymous eSIM data plans for 200+
+          countries. No account, no email, no KYC. Pay with Bitcoin, Monero,
+          stablecoins, other crypto, or credit card via Stripe.
+
     ################################
     ###### Team Collaboration ######
     ################################
