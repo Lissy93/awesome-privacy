@@ -13,6 +13,7 @@ import yaml
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
 DIFF_OUTPUT_PATH = "/tmp/pr-diff.json"
+SUMMARY_OUTPUT_PATH = "/tmp/pr-diff-summary.md"
 
 EXIT_PASS = 0
 EXIT_RULE_VIOLATION = 1
@@ -90,18 +91,30 @@ def write_github_output(name, value):
             f.write(f"{name}={value}\n")
 
 
+def find_duplicate_names(data):
+    """Find duplicate service names within the same section."""
+    duplicates = []
+    for cat in data.get("categories", []):
+        cn = cat.get("name", "")
+        for sec in cat.get("sections", []):
+            sn = sec.get("name", "")
+            seen = {}
+            for svc in sec.get("services", []):
+                name = svc.get("name", "")
+                if name in seen:
+                    duplicates.append((cn, sn, name))
+                else:
+                    seen[name] = True
+    return duplicates
+
+
 def fmt_path(key):
     """Format a tuple key as a readable path."""
     return " → ".join(key) if isinstance(key, tuple) else key
 
 
-def write_step_summary(diff_result):
-    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
-    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-    if not summary_file:
-        return
-
-    lines = ["## YAML Diff Analysis\n"]
+def format_diff_bullets(diff_result):
+    """Build bullet-point lines summarizing all changes. Returns list of strings or empty list."""
     bullets = []
 
     for svc in diff_result["services"]["added"]:
@@ -126,14 +139,22 @@ def write_step_summary(diff_result):
             bullets.append(f"- Added category **{change['category']}**")
         else:
             bullets.append(f"- Removed category **{change['category']}**")
+    for dup in diff_result.get("duplicates", []):
+        bullets.append(
+            f"- ⚠️ Duplicate service name **{dup['service']}** "
+            f"in {dup['category']} → {dup['section']}"
+        )
 
+    return bullets
+
+
+def write_diff_summary(diff_result):
+    """Write the bullet-point summary to a file for downstream consumers."""
+    bullets = format_diff_bullets(diff_result)
     if bullets:
-        lines.extend(bullets)
-    else:
-        lines.append("No changes detected in `awesome-privacy.yml`.")
+        with open(SUMMARY_OUTPUT_PATH, "w") as f:
+            f.write("\n".join(bullets) + "\n")
 
-    with open(summary_file, "a") as f:
-        f.write("\n".join(lines) + "\n")
 
 
 def main():
@@ -175,17 +196,22 @@ def main():
     for k in cat_removed:
         categories.append({"category": k, "change_type": "removed_category"})
 
+    duplicates = find_duplicate_names(head)
+    dup_entries = [{"category": d[0], "section": d[1], "service": d[2]}
+                   for d in duplicates]
+
     diff_result = {
         "services": {"added": added, "removed": removed, "modified": modified},
         "sections": sections,
         "categories": categories,
+        "duplicates": dup_entries,
     }
 
     with open(DIFF_OUTPUT_PATH, "w") as f:
         json.dump(diff_result, f, indent=2)
 
     write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
-    write_step_summary(diff_result)
+    write_diff_summary(diff_result)
 
     added_count = len(added)
     if added_count > 1:
@@ -194,6 +220,11 @@ def main():
     added_sections = [s for s in sections if s["change_type"] == "added_section"]
     if added_count == 0 and len(added_sections) > 1:
         print(red(f"Single-entry rule violation: {len(added_sections)} section additions found."), file=sys.stderr)
+        sys.exit(EXIT_RULE_VIOLATION)
+
+    if duplicates:
+        names = ", ".join(f"{d[2]} (in {d[0]} → {d[1]})" for d in duplicates)
+        print(red(f"Duplicate service names found: {names}"), file=sys.stderr)
         sys.exit(EXIT_RULE_VIOLATION)
 
     total = len(added) + len(removed) + len(modified)

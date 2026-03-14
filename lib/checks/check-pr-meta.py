@@ -3,6 +3,7 @@
 import json
 import os
 import re
+import subprocess
 import sys
 
 FINDINGS_PATH = "/tmp/findings-compliance.json"
@@ -31,6 +32,15 @@ README_MSG = (
     "Do not edit the README directly. This file is auto-generated from the"
     " content in `awesome-privacy.yml`, and so your changes will be overridden!"
     " Instead, only modify the YAML file, and be sure to follow our Contributing Guidelines."
+)
+BOT_MSG = (
+    "Submissions are only accepted from humans."
+    " This PR appears to have been authored by a bot or AI assistant."
+)
+
+_BOT_AUTHOR_RE = re.compile(
+    r"(?:noreply@anthropic\.com|devin-ai-integration|copilot-swe-agent|noreply@cursor\.com)",
+    re.IGNORECASE,
 )
 
 
@@ -83,6 +93,24 @@ def check_checkboxes(body):
     return None
 
 
+def check_bot_coauthors(base_ref):
+    """Return a finding if any commit in the PR has a bot author or co-author."""
+    if not base_ref:
+        return None
+    try:
+        result = subprocess.run(
+            ["git", "log", f"{base_ref}..HEAD", "--format=%aN <%aE>%n%B"],
+            capture_output=True, text=True, timeout=30,
+        )
+        if result.returncode != 0:
+            return None
+        if _BOT_AUTHOR_RE.search(result.stdout):
+            return BOT_MSG
+    except Exception:
+        pass
+    return None
+
+
 def check_readme(readme_failed):
     """Return a finding if the README check reported a failure."""
     if readme_failed == "true":
@@ -104,30 +132,37 @@ def main():
         body = os.environ.get("PR_BODY", "")
         draft = os.environ.get("PR_DRAFT", "false")
         readme_failed = os.environ.get("README_FAILED", "false")
+        base_ref = os.environ.get("BASE_REF", "")
+
+        finding = check_bot_coauthors(base_ref)
+        if finding:
+            findings.append(finding)
 
         finding = check_title(title)
         if finding:
-            findings.append(finding)
+            findings.append({"msg": finding, "level": "error"})
+            critical = True
 
         finding = check_draft(draft)
         if finding:
             findings.append(finding)
 
         if not body or not body.strip():
-            findings.append(TEMPLATE_MSG)
+            findings.append({"msg": TEMPLATE_MSG, "level": "error"})
             critical = True
         else:
             finding = check_template(body)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
                 critical = True
             finding = check_checkboxes(body)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
+                critical = True
 
         finding = check_readme(readme_failed)
         if finding:
-            findings.append(finding)
+            findings.append({"msg": finding, "level": "error"})
     except Exception:
         pass
 

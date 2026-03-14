@@ -72,23 +72,6 @@ def get_changed_line_numbers(base_ref):
 
     return changed_lines
 
-
-def write_step_summary():
-    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-    if not summary_file:
-        return
-
-    lines = [
-        "## Direct README Edit Detected\n",
-        "This PR directly modifies the auto-generated section of `.github/README.md` "
-        "(between `<!-- awesome-privacy-start -->` and `<!-- awesome-privacy-end -->`).\n",
-        "**Please edit `awesome-privacy.yml` instead.** The README is regenerated automatically from that file.\n",
-    ]
-
-    with open(summary_file, "a") as f:
-        f.write("\n".join(lines) + "\n")
-
-
 def main():
     parser = argparse.ArgumentParser(description="Check for direct README edits to generated section")
     parser.add_argument("--base-ref", required=True, help="Base git ref to diff against")
@@ -112,7 +95,6 @@ def main():
         if start_line <= line_num <= end_line:
             print(red("Direct edits to the generated section of the README are not allowed."), file=sys.stderr)
             print(red("Edit awesome-privacy.yml instead and the README will be regenerated."), file=sys.stderr)
-            write_step_summary()
             sys.exit(EXIT_FAIL)
 
     print(green("README changes are outside the generated section, OK."))

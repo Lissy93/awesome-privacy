@@ -104,6 +104,19 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: AliasVault
+        url: https://www.aliasvault.net
+        icon: https://www.aliasvault.net/favicon.png
+        openSource: true
+        followWith: Self-Hosted
+        github: lanedirt/aliasvault
+        discordInvite: DsaXMTEtpF
+        description: |
+          End-to-end encrypted open source password and alias manager with built-in email server.
+          AliasVault protects protects your privacy by creating alternative identities, passwords
+          and email addresses for every website you use. Use the cloud version, or self-host and
+          deploy within minutes via Docker.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
@@ -256,6 +269,45 @@ categories:
           It can be used with an online account to backup and sync your tokens across your
           devices (and access them via a web interface) in a secure, end-to-end encrypted
           fashion. It can also be used offline on a single device with no account necessary.
+
+      - name: Bitwarden Authenticator
+        url: https://bitwarden.com/products/authenticator/
+        icon: https://avatars.githubusercontent.com/u/15990069
+        openSource: true
+        github: bitwarden/ios
+        tosdrId: 5256
+        iosApp: https://apps.apple.com/app/bitwarden-authenticator/id6497335175
+        androidApp: com.bitwarden.authenticator
+        description: |
+          Bitwarden Authenticator is a free and open-source app which stores and generates
+          time-based codes for multi-factor authentication. It can be used with an online
+          account to backup and sync your tokens across your  devices (and access them via
+          a web interface) in a secure, end-to-end encrypted fashion. It can also be used
+          offline on a single device with no account necessary.
+
+      - name: Proton Authenticator
+        url: https://proton.me/authenticator
+        icon: https://raw.githubusercontent.com/protonpass/android-pass/refs/heads/main/metadata/en-US/images/icon.png
+        openSource: true
+        github: protonpass/android-authenticator
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-authenticator/id6741758667
+        androidApp: proton.android.authenticator
+        description: |
+          Proton Authenticator is free, open source, and available for both iOS and Android.
+          A Proton account is required to use Proton Authenticator.
+          Existing 2FA codes can be imported from other popular apps such as Google Authenticator and LastPass.
+
+      - name: Chronos Authenticator
+        url: https://chronosauth.com
+        icon: https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png
+        openSource: true
+        github: joeldavidw/Chronos
+        iosApp: https://apps.apple.com/app/chronos-authenticator/id6503929490
+        followWith: iOS
+        description: >-
+          Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust
+          security and reliable backup options.
 
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
@@ -512,6 +564,17 @@ categories:
         description: |
           British search engine providing independent and unbiased search results using
           its own crawler. Has a zero tracking policy (it is not open source)
+
+      - name: Uruky
+        url: https://uruky.com
+        icon: https://uruky.com/public/images/favicon.svg
+        iosApp: https://apps.apple.com/us/app/uruky-private-ad-free-search/id6758864380
+        description: |
+          Uruky is an ad-free, private search engine focused on personalization. It uses,
+          among other providers, Mojeek and Marginalia. It is EU-based and does not keep
+          or track any personal data (it is not 100% open source, but after 12 months as
+          a paying customer, you get a copy of the source code).
+
       notableMentions:
       - name: MetaGear
         url: https://metager.org
@@ -1145,6 +1208,14 @@ categories:
         description: |
           Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
           email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
+
+      - name: PikaSim
+        url: https://pikasim.com
+        icon: https://pikasim.com/img/pika-transparent.png
+        acceptsCrypto: true
+        description: |
+          Privacy-focused eSIM provider for 170+ countries, with instant eSIM delivery.
+          No account, ID, email needed, and accepts crypto via a self-hosted BTCPay Server.
 
     ################################
     ###### Team Collaboration ######
@@ -1934,6 +2005,16 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: Hemmelig.app
+          url: https://hemmelig.app/
+          icon: https://hemmelig.app/icons/icon-512x512.png
+          openSource: true
+          github: HemmeligOrg/Hemmelig.app
+          description: |
+            Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
+            invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
+            Open source and self-hostable.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
@@ -1947,7 +2028,7 @@ categories:
       alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
-        url: http://mullvad.net/en
+        url: https://mullvad.net/en
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
@@ -2020,6 +2101,20 @@ categories:
           Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
           WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
           subscriptions or credit cards.
+
+      - name: Windscribe
+        url: https://windscribe.com
+        github: Windscribe/Desktop-App
+        securityAudited: true
+        icon: https://avatars.githubusercontent.com/u/30499389
+        tosdrId: 2571
+        androidApp: com.windscribe.vpn
+        iosApp: https://apps.apple.com/us/app/windscribe-vpn/id1129435228
+        subreddit: Windscribe
+        description: |
+          An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions
+          and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling,
+          customizable DNS blocking, MAC spoofing, decoy traffic and censorship circumvention.
 
       wordOfWarning: |
         - *A VPN does not make you anonymous - it merely changes your public IP address to that of your VPN provider, instead of your ISP. Your browsing session can still be linked back to your real identity either through your system details (such as user agent, screen resolution even typing patterns), cookies / session storage, or by the identifiable data that you enter. [Read more about fingerprinting](https://pixelprivacy.com/resources/browser-fingerprinting/)*
@@ -3152,6 +3247,17 @@ categories:
           selectively sync encrypted files and folders between 1 or more clients.
           A key benefit the wide range of plug-ins in the NextCloud App Store,
           maintained by the community. NextCloud was a hard fork off OwnCloud.
+
+      - name: bewCloud
+        url: https://bewcloud.com
+        icon: https://bewcloud.com/favicon.svg
+        followWith: Web
+        github: bewcloud/bewcloud
+        openSource: true
+        description: |
+          Modern and simpler alternative to Nextcloud/ownCloud crafted with TypeScript.
+          Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
+          contacts, and photos, with MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
 
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
@@ -4719,9 +4825,8 @@ categories:
         [Smart Wallet](https://apps.apple.com/app/smart-wallet/id1378013954) (iOS),
         [My-Budget](https://rezach.github.io/my-budget) (Desktop),
         [MoneyManager EX](https://www.moneymanagerex.org),
-        [Skrooge](https://skrooge.org),
-        [kMyMoney](https://kmymoney.org) and
-        [Budget Zen](https://budgetzen.net) (a simple E2E encrypted budget manager)
+        [Skrooge](https://skrooge.org), and
+        [kMyMoney](https://kmymoney.org).
 
 
   - name: Social
@@ -4978,7 +5083,10 @@ categories:
         # tosdrId: 3996
       wordOfWarning: |
         When proxies are involved - only use reputable services, and **never** enter any personal information
-
+      furtherInfo: |
+        *[alternative-front-ends](https://github.com/mendel5/alternative-front-ends) provides information on
+        dozens of alternative front-end options for popular platforms, such as YouTube, Twitter, Reddit,
+        TikTok, and more.*
 
   - name: Media
     sections:
@@ -5008,7 +5116,7 @@ categories:
       services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: 
+      services:
       - name: FFmpeg
         url: https://ffmpeg.org/
         icon: https://ffmpeg.org/favicon.ico

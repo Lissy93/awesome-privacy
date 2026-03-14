@@ -2,8 +2,9 @@
 
 import json
 import os
+import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 import yaml
@@ -17,23 +18,75 @@ TIMEOUT = 10
 USER_AGENT = "awesome-privacy-ci/1.0"
 MIN_STARS = 100
 INACTIVE_DAYS = 90
+MIN_AGE_DAYS = 120
+AI_COMMIT_RATIO = 0.2
+AI_BOT_AUTHORS = [
+    "noreply@anthropic.com",
+    "devin-ai-integration[bot]",
+    "copilot-swe-agent.github.com",
+    "noreply@cursor.com",
+]
+SPAM_AWESOME_THRESHOLD = 3
+SPAM_DISTINCT_REPO_THRESHOLD = 7
+SPAM_WINDOW_DAYS = 2
+NEW_ACCOUNT_DAYS = 14
 
 LINK_MSG = (
-    "Our automated checks were unable to verify the link(s) you included"
-    " were reachable, so please double check this yourself"
+    "The link(s) you included seem to be returning a 404."
+    " Please double check all URLs listed are valid and publicly accessible"
 )
 AUTHOR_MSG = (
     "Looks like you are the author of this package. Please ensure that you"
     " have clearly disclosed this in your PR body for transparency"
 )
 STARS_MSG = (
-    "It looks like your submission is adding a quite small project."
+    "It looks like your submission is quite a small project without a lot of users yet."
     " In some circumstances we may ask you to resubmit this once the project"
     " is more mature and has a proven track record of good practices and maintenance."
 )
 ACTIVITY_MSG = (
     "Please confirm that the project you are adding is actively maintained,"
     " as it looks to not have had any recent updates in the past 3 months."
+)
+MATURITY_MSG = (
+    "This project appears to be quite new (created less than 4 months ago)."
+    " Repositories should have a proven track record before listing,"
+    " and at least 16 weeks since first stable release."
+)
+AI_CODE_MSG = (
+    "This project appears to contain AI-generated code."
+    " Additional care will be needed when reviewing the submission."
+)
+FORK_MSG = (
+    "The GitHub link in this listing is a fork."
+    " Please confirm it's the correct (and actively maintained) repository"
+)
+LICENSE_MSG = (
+    "There doesn't appear to be a license included in the project's GitHub repo"
+)
+ARCHIVED_MSG = (
+    "The GitHub project linked has been archived."
+    " Additions must be actively maintained"
+)
+SECURITY_MSG = (
+    "This project has open security vulnerabilities (critical or high severity)"
+    " flagged by GitHub Dependabot. Please verify these have been addressed"
+)
+SPAM_AWESOME_MSG = (
+    "You have made many similar submissions on other awesome-* repos today."
+    " Please ensure that your submission is actually a good fit for awesome-privacy"
+)
+SPAM_MANY_MSG = (
+    "The submitter of this PR appears to have been previously flagged as a spammer."
+    " Caution is needed when reviewing this PR"
+)
+NEW_ACCOUNT_MSG = (
+    "This user has only just joined GitHub."
+    " New accounts submitting to awesome lists can be a spam signal, careful review needed"
+)
+DUPLICATE_URL_MSG = (
+    "The URL for this submission already exists in another listing."
+    " Please check that this is not a duplicate entry"
 )
 
 
@@ -154,7 +207,162 @@ def check_links(diff, head):
     return None
 
 
-def check_repo_signals(diff, pr_user, token):
+def _commit_has_bot(commit, bot_set):
+    """Check if a commit was authored or co-authored by a known AI bot."""
+    author = commit.get("commit", {}).get("author", {})
+    email = (author.get("email") or "").lower()
+    name = (author.get("name") or "").lower()
+    if email in bot_set or name in bot_set:
+        return True
+    message = (commit.get("commit", {}).get("message") or "").lower()
+    for line in message.splitlines():
+        if line.strip().startswith("co-authored-by:"):
+            if any(bot in line for bot in bot_set):
+                return True
+    return False
+
+
+def check_ai_commits(owner, repo, token):
+    """Return AI_CODE_MSG if recent commits contain significant AI bot activity."""
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        if token:
+            headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/repos/{owner}/{repo}/commits",
+            headers=headers, timeout=TIMEOUT, params={"per_page": 100},
+        )
+        if resp.status_code != 200:
+            return None
+        commits = resp.json()
+        if not commits:
+            return None
+        bot_set = {a.lower() for a in AI_BOT_AUTHORS}
+        count = sum(1 for c in commits if _commit_has_bot(c, bot_set))
+        if count / len(commits) >= AI_COMMIT_RATIO:
+            return AI_CODE_MSG
+    except Exception:
+        pass
+    return None
+
+
+def check_security_alerts(owner, repo, token):
+    """Return SECURITY_MSG if the repo has open critical/high Dependabot alerts."""
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        if token:
+            headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/repos/{owner}/{repo}/dependabot/alerts",
+            headers=headers, timeout=TIMEOUT,
+            params={"state": "open", "severity": "critical,high", "per_page": 1},
+        )
+        if resp.status_code == 200 and resp.json():
+            return SECURITY_MSG
+    except Exception:
+        pass
+    return None
+
+
+def check_spam_prs(pr_user, token):
+    """Return list of spam findings based on recent PR activity."""
+    if not pr_user or not token:
+        return []
+    try:
+        since = (datetime.now(timezone.utc) - timedelta(days=SPAM_WINDOW_DAYS)).strftime("%Y-%m-%d")
+        headers = {
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": USER_AGENT,
+            "Authorization": f"token {token}",
+        }
+        resp = requests.get(
+            "https://api.github.com/search/issues",
+            headers=headers, timeout=TIMEOUT,
+            params={"q": f"type:pr author:{pr_user} created:>={since}"},
+        )
+        if resp.status_code != 200:
+            return []
+        items = resp.json().get("items", [])
+        this_repo = os.environ.get("GITHUB_REPOSITORY", "Lissy93/awesome-privacy").lower()
+        awesome_count = 0
+        distinct_repos = set()
+        for item in items:
+            repo_url = item.get("repository_url", "")
+            # repository_url looks like https://api.github.com/repos/owner/repo-name
+            repo_full = "/".join(repo_url.rstrip("/").split("/")[-2:]).lower()
+            if repo_full == this_repo:
+                continue
+            distinct_repos.add(repo_full)
+            repo_name = repo_url.rstrip("/").split("/")[-1].lower()
+            if repo_name.startswith("awesome-"):
+                awesome_count += 1
+        findings = []
+        if awesome_count >= SPAM_AWESOME_THRESHOLD:
+            findings.append(SPAM_AWESOME_MSG)
+        if len(distinct_repos) >= SPAM_DISTINCT_REPO_THRESHOLD:
+            findings.append(SPAM_MANY_MSG)
+        return findings
+    except Exception:
+        return []
+
+
+def check_new_account(pr_user, token):
+    """Return NEW_ACCOUNT_MSG if the PR author's GitHub account is very new."""
+    if not pr_user or not token:
+        return None
+    try:
+        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+        headers["Authorization"] = f"token {token}"
+        resp = requests.get(
+            f"https://api.github.com/users/{pr_user}",
+            headers=headers, timeout=TIMEOUT,
+        )
+        if resp.status_code != 200:
+            return None
+        created = resp.json().get("created_at")
+        if not created:
+            return None
+        created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+        if (datetime.now(timezone.utc) - created_dt).days < NEW_ACCOUNT_DAYS:
+            return NEW_ACCOUNT_MSG
+    except Exception:
+        pass
+    return None
+
+
+def check_duplicate_urls(diff, head):
+    """Return DUPLICATE_URL_MSG if an added service's URL already exists in the YAML."""
+    if not head:
+        return None
+    # Count how many times each URL appears in the head YAML
+    url_counts = {}
+    for cat in head.get("categories", []):
+        for sec in cat.get("sections", []):
+            for svc in sec.get("services", []):
+                url = svc.get("url", "").rstrip("/").lower()
+                if url:
+                    url_counts[url] = url_counts.get(url, 0) + 1
+    # The added service is in head already, so a count > 1 means a duplicate exists
+    for svc in get_services(diff, "added"):
+        url = svc.get("fields", {}).get("url", "").rstrip("/").lower()
+        if url and url_counts.get(url, 0) > 1:
+            return DUPLICATE_URL_MSG
+    return None
+
+
+_DISCLOSURE_RE = re.compile(
+    r"i am the author|i'm the author|my project|i created|i develop"
+    r"|i maintain|i built|my own project|i made|author of|maintainer of",
+    re.IGNORECASE,
+)
+
+
+def _pr_discloses_authorship(pr_body):
+    """Return True if the PR body already discloses the submitter is the author."""
+    return bool(pr_body and _DISCLOSURE_RE.search(pr_body))
+
+
+def check_repo_signals(diff, pr_user, token, pr_body=""):
     """Check GitHub repo author match, stars, and activity for added services."""
     findings = []
     if not token:
@@ -178,12 +386,22 @@ def check_repo_signals(diff, pr_user, token):
             and repo_owner.get("type") == "User"
             and repo_owner.get("login", "").lower() == pr_user.lower()
             and AUTHOR_MSG not in findings
+            and not _pr_discloses_authorship(pr_body)
         ):
             findings.append(AUTHOR_MSG)
 
         stars = data.get("stargazers_count", 0)
         if stars < MIN_STARS and STARS_MSG not in findings:
             findings.append(STARS_MSG)
+
+        if data.get("fork") and FORK_MSG not in findings:
+            findings.append(FORK_MSG)
+
+        if not data.get("license") and LICENSE_MSG not in findings:
+            findings.append(LICENSE_MSG)
+
+        if data.get("archived") and ARCHIVED_MSG not in findings:
+            findings.append(ARCHIVED_MSG)
 
         pushed = data.get("pushed_at")
         if pushed and ACTIVITY_MSG not in findings:
@@ -194,6 +412,26 @@ def check_repo_signals(diff, pr_user, token):
                     findings.append(ACTIVITY_MSG)
             except Exception:
                 pass
+
+        created = data.get("created_at")
+        if created and MATURITY_MSG not in findings:
+            try:
+                created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+                now = datetime.now(timezone.utc)
+                if (now - created_dt).days < MIN_AGE_DAYS:
+                    findings.append(MATURITY_MSG)
+            except Exception:
+                pass
+
+        if AI_CODE_MSG not in findings:
+            finding = check_ai_commits(owner, repo, token)
+            if finding:
+                findings.append(finding)
+
+        if SECURITY_MSG not in findings:
+            finding = check_security_alerts(owner, repo, token)
+            if finding:
+                findings.append(finding)
 
     return findings
 
@@ -213,8 +451,20 @@ def main():
             findings.append(finding)
 
         pr_user = os.environ.get("PR_USER", "")
+        pr_body = os.environ.get("PR_BODY", "")
         token = os.environ.get("GITHUB_TOKEN", "")
-        findings.extend(check_repo_signals(diff, pr_user, token))
+
+        findings.extend(check_spam_prs(pr_user, token))
+
+        finding = check_new_account(pr_user, token)
+        if finding:
+            findings.append(finding)
+
+        finding = check_duplicate_urls(diff, head)
+        if finding:
+            findings.append(finding)
+
+        findings.extend(check_repo_signals(diff, pr_user, token, pr_body))
     except Exception:
         pass
 

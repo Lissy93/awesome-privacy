@@ -131,7 +131,7 @@ def check_open_source(diff):
     """Return a finding if an added service has openSource missing or not true."""
     for svc in diff.get("services", {}).get("added", []):
         fields = svc.get("fields", {})
-        if fields.get("openSource") is not True:
+        if fields.get("openSource") is not True and not fields.get("github"):
             return OPENSOURCE_MSG
     return None
 
@@ -150,30 +150,46 @@ def check_single_entry(diff):
     return None
 
 
-def build_name_index(head):
-    """Build {lowercase_name: "category > section"} from all services."""
+def _added_keys(diff):
+    """Build a set of (category, section, lowercase_name) for added services."""
+    keys = set()
+    for svc in diff.get("services", {}).get("added", []):
+        name = svc.get("fields", {}).get("name", "").lower().strip()
+        keys.add((svc.get("category", ""), svc.get("section", ""), name))
+    return keys
+
+
+def build_name_index(head, diff):
+    """Build {lowercase_name: "category > section"} from all services, excluding additions."""
     index = {}
     if not head:
         return index
+    exclude = _added_keys(diff)
     for cat in head.get("categories", []):
         cn = cat.get("name", "")
         for sec in cat.get("sections", []):
             sn = sec.get("name", "")
             for svc in sec.get("services", []):
                 name = svc.get("name", "").lower().strip()
-                if name:
+                if name and (cn, sn, name) not in exclude:
                     index[name] = f"{cn} > {sn}"
     return index
 
 
-def build_url_index(head):
-    """Build {url: service_name} from all services, skipping empty URLs."""
+def build_url_index(head, diff):
+    """Build {url: service_name} from all services, excluding additions."""
     index = {}
     if not head:
         return index
+    exclude = _added_keys(diff)
     for cat in head.get("categories", []):
+        cn = cat.get("name", "")
         for sec in cat.get("sections", []):
+            sn = sec.get("name", "")
             for svc in sec.get("services", []):
+                name = svc.get("name", "").lower().strip()
+                if (cn, sn, name) in exclude:
+                    continue
                 url = svc.get("url", "")
                 if url:
                     index[url] = svc.get("name", "")
@@ -205,7 +221,7 @@ def check_description_length(diff):
     for svc in diff.get("services", {}).get("added", []):
         desc = svc.get("fields", {}).get("description", "")
         length = len(desc)
-        if length < 50 or length > 250:
+        if length < 50 or length > 280:
             return DESC_LENGTH_MSG.format(length=length)
     return None
 
@@ -221,9 +237,10 @@ def check_opensource_github(diff):
 
 def main():
     findings = []
+    critical = False
     try:
         if os.environ.get("SCHEMA_OUTCOME") == "failure":
-            findings.append(SCHEMA_MSG)
+            findings.append({"msg": SCHEMA_MSG, "level": "error"})
 
         diff = load_json(DIFF_PATH)
         head = load_yaml_data(DATA_PATH)
@@ -235,7 +252,8 @@ def main():
 
             finding = check_required_fields(diff, head)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
+                critical = True
 
             finding = check_position(diff, head)
             if finding:
@@ -245,8 +263,8 @@ def main():
             if finding:
                 findings.append(finding)
 
-            name_index = build_name_index(head)
-            url_index = build_url_index(head)
+            name_index = build_name_index(head, diff)
+            url_index = build_url_index(head, diff)
 
             finding = check_duplicate_name(diff, name_index)
             if finding:
@@ -268,7 +286,7 @@ def main():
 
     with open(FINDINGS_PATH, "w") as f:
         json.dump(findings, f)
-    sys.exit(0)
+    sys.exit(1 if critical else 0)
 
 
 if __name__ == "__main__":
