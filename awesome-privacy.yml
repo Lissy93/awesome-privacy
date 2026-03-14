@@ -104,6 +104,15 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: PaperVault
+        url: https://papervault.xyz
+        icon: https://papervault.xyz/papervault-512.png
+        github: boazeb/papervault
+        openSource: true
+        description: |
+          Store secrets and passwords on encrypted paper with distributed keys.
+          Designed to last generations. Open source, client-side only, works offline.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
