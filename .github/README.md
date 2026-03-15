@@ -157,7 +157,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 		[![Pass on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pass)](https://awesome-privacy.xyz/essentials/password-managers/pass) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://www.passwordstore.org/)ㅤ 
 
 		</details>
-- **[<img src='https://www.aliasvault.net/favicon.png' width='16' height='16' alt='icon' /> AliasVault](https://www.aliasvault.net)** - End-to-end encrypted open source password and alias manager with built-in email server. AliasVault protects protects your privacy by creating alternative identities, passwords and email addresses for[…](https://awesome-privacy.xyz/essentials/password-managers/aliasvault "View full AliasVault report") 
+- **[<img src='https://www.aliasvault.net/favicon.png' width='16' height='16' alt='icon' /> AliasVault](https://www.aliasvault.net)** - End-to-end encrypted open source password and alias manager with built-in email server. AliasVault protects your privacy by creating alternative identities, passwords and email addresses for every web[…](https://awesome-privacy.xyz/essentials/password-managers/aliasvault "View full AliasVault report") 
 	- <details>
 		<summary>Stats</summary>
 
