@@ -879,6 +879,20 @@ categories:
           prior email address is required. There is a fully-featured free plan, or you can
           pay for premium, and use a custom domain ($2.50/ month, or $7.50/ month for 5
           domains), where Bitcoin, LiteCoin or credit card is accepted.
+      - name: Nubo Email
+        url: https://nubo.email
+        icon: https://nubo.email/Nubo_Logo.svg
+        openSource: false
+        description: |
+          Privacy-first email and collaboration platform built on the modern JMAP protocol.
+          Features email, calendar (CalDAV), contacts (CardDAV), cloud drive, video meetings
+          (Nubo Meet), and team chat — all in one platform. Organization-based pricing with
+          unlimited users (no per-seat fees). Data residency options in India, EU, and US.
+          Encryption: TLS 1.3 in transit, AES-256 at rest, with zero-knowledge encryption
+          available. Compliance: GDPR, India DPDP, HIPAA-ready, SOC 2 Type II, ISO 27001.
+          Available on macOS (Apple Silicon + Intel), Windows, Linux, and PWA. Made in India
+          by Chandorkar Technologies. Zero-downtime migration from Gmail, Outlook, Zoho, and
+          any IMAP provider. Also offers 23 free email security tools at nubo.email/tools.
       - name: MailBox.org
         url: https://mailbox.org
         icon: https://i.ibb.co/zJtHBTZ/mailfence.png
