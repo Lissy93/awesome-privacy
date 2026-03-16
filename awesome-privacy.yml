@@ -1083,15 +1083,6 @@ categories:
     - name: Email Security Tools
       alternativeTo:  ['boomerang', 'mailtrack', 'grammarly for email', 'wisestamp', 'hubspot sales']
       services:
-      - name: Enigmail
-        url: https://www.enigmail.net
-        icon: https://upload.wikimedia.org/wikipedia/commons/5/50/Enigmail_logo_2018.svg
-        description: |
-          Mail client add-on, enabling the use of OpenPGP to easily encrypt, decrypt,
-          verify and sign emails. Free and open source, Enigmail is compatible with Interlink
-          Mail & News and Postbox. Their website contains thorough documentation and
-          quick-start guides, once set up it is extremely convenient to use.
-
       - name: Email Privacy Tester
         url: https://www.emailprivacytester.com/
         openSource: true
@@ -1556,18 +1547,6 @@ categories:
           \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero)
           \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/)
           \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
-
-      - name: HTTPS Everywhere
-        url: https://eff.org/https-everywhere
-        github: EFForg/https-everywhere
-        tosdrId: 682
-        description: |
-          **NOTE** On modern browsers, this is [no longer needed](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere)
-          Forces sites to load in HTTPS, in order to encrypt your communications with websites,
-          making your browsing more secure (Similar to [Smart HTTPS](https://mybrowseraddon.com/smart-https.html)).
-          Note this functionality is now included by default in most modern browsers. **Download**:
-          [Chrome](https://www.eff.org/https-everywhere) \
-          [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
 
       - name: Linguist
         url: https://linguister.io
@@ -2695,14 +2674,6 @@ categories:
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
 
-      - name: Ad Block Radio
-        url: https://github.com/adblockradio/adblockradio
-        github: adblockradio/adblockradio
-        followWith: Sound
-        description: |
-          Python script that uses machine learning to block adverts in live audio streams, such as Radio, Podcasts,
-          Audio Books, and music platforms such as Spotify. See live demo.
-
       - name: uBlock Origin
         url: https://github.com/gorhill/uBlock
         github: gorhill/uBlock
@@ -3666,14 +3637,6 @@ categories:
         description: |
           Browser extension for using PGP within Gmail, for Chrome and Firefox.
           Mobile version supported on Android and iOS.
-
-      - name: EnigMail
-        url: https://enigmail.net
-        followWith: Thunderbird
-        icon: https://enigmail.net/favicon.ico
-        openSource: true
-        description: |
-          OpenPGP extension for Thunderbird and PostBox, integrates natively within mail app.
 
       - name: Mailvelope
         url: https://www.mailvelope.com
