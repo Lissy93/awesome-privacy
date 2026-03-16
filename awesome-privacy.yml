@@ -1990,14 +1990,6 @@ categories:
             Tool for analyzing email headers, useful for checking the authenticity of messages, as well as knowing what info
             you are revealing in your outbound messages.
 
-        - name: Am I FloCed?
-          url: https://amifloced.org/
-          icon: https://amifloced.org/favicon.ico
-          description: |
-            Google testing out a new tracking feature called Federated Learning of Cohorts (aka "FLoC"). It currently effects
-            0.5% of Chrome users, this tool developed by the EFF will detect if you are affected, and provide additional info
-            on how to stay protected.
-
         - name: Site Report
           url: https://sitereport.netcraft.com/
           icon: https://static.netcraft.com/images/favicon.ico
