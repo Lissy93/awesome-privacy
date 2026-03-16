@@ -64,6 +64,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
+	- [Calendar](#calendar) (1)
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
@@ -2463,7 +2464,14 @@ be time consuming to setup and maintain and securing it correctly is critical
 
 ### Calendar
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://calendar.proton.me/assets/android-chrome-256x256.png' width='16' height='16' alt='icon' /> Proton Calendar](https://proton.me/calendar)** - The calendar app from the Proton suite. End-to-end encrypted. Supports ICS (not encrypted), colours, recurring events, mail integration, notifications and multiple time zones. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: ProtonMail/android-calendar](https://img.shields.io/github/stars/ProtonMail/android-calendar?style=flat&logo=github&label=android-calendar&color=%235f53f4&cacheSeconds=3600)](https://github.com/ProtonMail/android-calendar) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Calendar on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Calendar)](https://awesome-privacy.xyz/productivity/calendar/proton-calendar) ![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4=&logoColor=white) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) [![Proton Calendar on Google Play](https://img.shields.io/badge/-Proton_Calendar-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=me.proton.android.calendar) [![Proton Calendar on App Store](https://img.shields.io/badge/-Proton_Calendar-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943) [![r/ProtonCalendar on Reddit](https://img.shields.io/badge/-ProtonCalendar-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/ProtonCalendar)ㅤ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
