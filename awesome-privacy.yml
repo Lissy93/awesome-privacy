@@ -4461,27 +4461,11 @@ categories:
         For that reason it is recommended not to have these devices in your house.
         The following are open source AI voice assistants, that aim to provide a
         human voice interface while also protecting your privacy and security
-      services:
-      - name: Mycroft
-        tosdrId: 1824
-        description: |
-          An open source privacy-respecting AI platform, compatible with a wide range of
-          devices including Raspberry Pi, desktop computers, or dedicated Mycroft hardware.
-          Actively developed, with extensive documentation and a broad skill set. Facilitates
-          easy development of new skills.
-        url: https://mycroft-ai.gitbook.io/mark-ii
-        github: MycroftAI/mycroft-core
-        icon: https://avatars.githubusercontent.com/u/14171097?s=200&v=4
-
-      - name: Kalliope
-        description: |
-          A modular, always-on, voice-controlled personal assistant geared towards home automation.
-          Optimized for Raspberry Pi, Debian, or Ubuntu. Skills are easily programmable in YAML,
-          though the library of pre-built add-ons is not as extensive.
-        url: https://kalliope-project.github.io
-        github: kalliope-project/kalliope
+      services: []
 
       notableMentions: |
+        [Mycroft](https://github.com/MycroftAI/mycroft-core) and [Kalliope](https://github.com/kalliope-project/kalliope) removed, as no longer active.
+
         If you choose to continue using Google Home/ Alexa, then check out
         **[Project Alias](https://github.com/bjoernkarmann/project_alias)**.
         It's a small app that runs on a Pi, and gives you more control over your smart assistants, for both customisation and privacy.
