@@ -1525,16 +1525,6 @@ categories:
           Click icon for more tools such as site safety checks, whois, validation etc **Download**:
           [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 
-      - name: Lightbeam
-        url: https://mozilla.github.io/lightbeam/
-        github: mozilla/lightbeam-we
-        icon: https://mozilla.github.io/lightbeam/img/lightbeam_logo-only_32x32.png
-        description: >
-          Visualize in detail the servers you are contacting when you are surfing on the Internet.
-          Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers).
-          **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/)
-          - [Source](https://github.com/mozilla/lightbeam-we)
-
       - name: Track Me Not
         url: http://trackmenot.io
         github: vtoubiana/TrackMeNot
@@ -3996,14 +3986,6 @@ categories:
           with custom security profiles. While the Forensics Edition is bundled with a comprehensive suite of security/
           pen-testing tools, similar to Kali and Black Arch.
 
-      - name: Discreete Linux
-        url: https://www.privacy-cd.org/
-        followWith: offline
-        description: |
-          Aimed at journalists, activists and whistle-blowers, Discreete Linux is similar to Tails, in that it is booted
-          live from external media, and leaves no/ minimal trace on the system. The aim of the project, was to provide
-          all required cryptographic tools offline, to protect against Trojan-based surveillance.
-
       - name: Alpine Linux
         url: https://www.alpinelinux.org/
         followWith: Docker
@@ -4293,18 +4275,6 @@ categories:
         github: mirinsoft/spydish
         description: |
           Open source GUI app built upon PowerShell, allowing you to perform a quick and easy privacy check, on Windows 10 systems.
-
-      - name: SharpApp
-        url: https://github.com/mirinsoft/sharpapp
-        github: mirinsoft/sharpapp
-        description: |
-          Open source GUI app built upon PowerShell, for disabling telemetry functions in Windows 10, uninstalling preinstalled apps, installing software packages and automating Windows tasks with integrated PowerShell scripting.
-
-      - name: Debotnet
-        url: https://github.com/Mirinsoft/Debotnet
-        github: Mirinsoft/Debotnet
-        description: |
-          Light-weight, portable app for controlling the many privacy-related settings within Windows 10- with the aim of helping to keep private data, private.
 
       - name: PrivaZer
         url: https://privazer.com/
@@ -4633,15 +4603,6 @@ categories:
           An open-source, peer-to-peer application that allows you to buy and sell
           cryptocurrencies in exchange for national currencies. Fully decentralized,
           and no registration required.
-
-      - name: AtomicDEX
-        url: https://atomicdex.io/
-        description: |
-          Person-to-person cryptocurrency exchange with no KYC or registration
-          required and uses atomic swaps to perform trustless trades.
-          The orderbook uses a modified libp2p protocol to prevent censorship and maintain decentralization.
-          Fiat currencies are not supported, but hundreds of alt-coins and major cryptocurrencies are supported.
-        github: KomodoPlatform/atomicDEX-Pro
 
       - name: RoboSats
         url: https://learn.robosats.com
