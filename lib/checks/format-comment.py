@@ -1,9 +1,16 @@
 """Aggregates findings from all check jobs into a formatted PR comment."""
 
 import json
+import logging
 import os
 import sys
 from datetime import datetime, timezone
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s [%(filename)s] %(message)s",
+    stream=sys.stderr,
+)
 
 ARTIFACTS_DIR = "/tmp/artifacts"
 OUTPUT_DIR = "/tmp/pr-meta"
@@ -229,8 +236,8 @@ def main():
         comment = format_comment(all_findings, user, changes_summary, run_id, repo_stats)
         with open(os.path.join(OUTPUT_DIR, "comment.md"), "w") as f:
             f.write(comment)
-    except Exception:
-        pass
+    except Exception as exc:
+        logging.error("Unhandled error in main: %s", exc, exc_info=True)
 
     sys.exit(0)
 

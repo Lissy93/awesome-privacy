@@ -1,6 +1,7 @@
 """Checks project health: URL reachability, GitHub repo stars, activity, and author match."""
 
 import json
+import logging
 import os
 import re
 import sys
@@ -8,6 +9,12 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 import yaml
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s [%(filename)s] %(message)s",
+    stream=sys.stderr,
+)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
@@ -112,8 +119,11 @@ def check_url(url):
                 headers={"User-Agent": USER_AGENT}, stream=True,
             )
             resp.close()
+        if resp.status_code >= 400:
+            logging.warning("URL check failed for %s (HTTP %d)", url, resp.status_code)
         return resp.status_code < 400
-    except Exception:
+    except Exception as exc:
+        logging.warning("URL check error for %s: %s", url, exc)
         return True
 
 
@@ -133,21 +143,35 @@ def parse_github_field(value):
     return None, None
 
 
-def fetch_repo(owner, repo, token):
-    """Fetch GitHub repo metadata, returning None on any error."""
+def _gh_get(path, token, params=None, label=""):
+    """GET a GitHub API endpoint. Returns parsed JSON on 200, None otherwise."""
+    headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
+    if token:
+        headers["Authorization"] = f"token {token}"
     try:
-        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
-        if token:
-            headers["Authorization"] = f"token {token}"
         resp = requests.get(
-            f"https://api.github.com/repos/{owner}/{repo}",
-            headers=headers, timeout=TIMEOUT,
+            f"https://api.github.com{path}",
+            headers=headers, timeout=TIMEOUT, params=params,
         )
+        remaining = resp.headers.get("X-RateLimit-Remaining")
+        if remaining is not None:
+            try:
+                if int(remaining) < 100:
+                    logging.warning("[%s] GitHub rate limit low: %s/%s remaining",
+                                    label, remaining, resp.headers.get("X-RateLimit-Limit"))
+            except ValueError:
+                pass
         if resp.status_code == 200:
             return resp.json()
-    except Exception:
-        pass
+        logging.warning("[%s] HTTP %d from %s", label, resp.status_code, path)
+    except Exception as exc:
+        logging.warning("[%s] request error for %s: %s", label, path, exc)
     return None
+
+
+def fetch_repo(owner, repo, token):
+    """Fetch GitHub repo metadata, returning None on any error."""
+    return _gh_get(f"/repos/{owner}/{repo}", token, label="repos")
 
 
 def load_yaml_data():
@@ -224,65 +248,42 @@ def _commit_has_bot(commit, bot_set):
 
 def check_ai_commits(owner, repo, token):
     """Return AI_CODE_MSG if recent commits contain significant AI bot activity."""
-    try:
-        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
-        if token:
-            headers["Authorization"] = f"token {token}"
-        resp = requests.get(
-            f"https://api.github.com/repos/{owner}/{repo}/commits",
-            headers=headers, timeout=TIMEOUT, params={"per_page": 100},
-        )
-        if resp.status_code != 200:
-            return None
-        commits = resp.json()
-        if not commits:
-            return None
-        bot_set = {a.lower() for a in AI_BOT_AUTHORS}
-        count = sum(1 for c in commits if _commit_has_bot(c, bot_set))
-        if count / len(commits) >= AI_COMMIT_RATIO:
-            return AI_CODE_MSG
-    except Exception:
-        pass
+    commits = _gh_get(f"/repos/{owner}/{repo}/commits", token,
+                      params={"per_page": 100}, label="commits")
+    if not commits:
+        return None
+    bot_set = {a.lower() for a in AI_BOT_AUTHORS}
+    count = sum(1 for c in commits if _commit_has_bot(c, bot_set))
+    if count / len(commits) >= AI_COMMIT_RATIO:
+        return AI_CODE_MSG
     return None
 
 
 def check_security_alerts(owner, repo, token):
     """Return SECURITY_MSG if the repo has open critical/high Dependabot alerts."""
-    try:
-        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
-        if token:
-            headers["Authorization"] = f"token {token}"
-        resp = requests.get(
-            f"https://api.github.com/repos/{owner}/{repo}/dependabot/alerts",
-            headers=headers, timeout=TIMEOUT,
-            params={"state": "open", "severity": "critical,high", "per_page": 1},
-        )
-        if resp.status_code == 200 and resp.json():
-            return SECURITY_MSG
-    except Exception:
-        pass
+    alerts = _gh_get(f"/repos/{owner}/{repo}/dependabot/alerts", token,
+                     params={"state": "open", "severity": "critical,high", "per_page": 1},
+                     label="dependabot")
+    if alerts:
+        return SECURITY_MSG
     return None
 
 
 def check_spam_prs(pr_user, token):
     """Return list of spam findings based on recent PR activity."""
     if not pr_user or not token:
+        logging.warning("check_spam_prs skipped: %s", "no PR_USER" if not pr_user else "no GITHUB_TOKEN")
         return []
     try:
         since = (datetime.now(timezone.utc) - timedelta(days=SPAM_WINDOW_DAYS)).strftime("%Y-%m-%d")
-        headers = {
-            "Accept": "application/vnd.github.v3+json",
-            "User-Agent": USER_AGENT,
-            "Authorization": f"token {token}",
-        }
-        resp = requests.get(
-            "https://api.github.com/search/issues",
-            headers=headers, timeout=TIMEOUT,
-            params={"q": f"type:pr author:{pr_user} created:>={since}"},
-        )
-        if resp.status_code != 200:
+        data = _gh_get("/search/issues", token,
+                       params={"q": f"type:pr author:{pr_user} created:>={since}", "per_page": 100},
+                       label="spam")
+        if not data:
             return []
-        items = resp.json().get("items", [])
+        items = data.get("items", [])
+        logging.info("check_spam_prs: %d total PRs for %s (fetched %d)",
+                     data.get("total_count", 0), pr_user, len(items))
         this_repo = os.environ.get("GITHUB_REPOSITORY", "Lissy93/awesome-privacy").lower()
         awesome_count = 0
         distinct_repos = set()
@@ -296,13 +297,16 @@ def check_spam_prs(pr_user, token):
             repo_name = repo_url.rstrip("/").split("/")[-1].lower()
             if repo_name.startswith("awesome-"):
                 awesome_count += 1
+        logging.info("check_spam_prs: %d awesome-* PRs, %d distinct repos",
+                     awesome_count, len(distinct_repos))
         findings = []
         if awesome_count >= SPAM_AWESOME_THRESHOLD:
             findings.append(SPAM_AWESOME_MSG)
         if len(distinct_repos) >= SPAM_DISTINCT_REPO_THRESHOLD:
             findings.append(SPAM_MANY_MSG)
         return findings
-    except Exception:
+    except Exception as exc:
+        logging.warning("check_spam_prs error for %s: %s", pr_user, exc)
         return []
 
 
@@ -310,18 +314,13 @@ def check_new_account(pr_user, token):
     """Return NEW_ACCOUNT_MSG if the PR author's GitHub account is very new."""
     if not pr_user or not token:
         return None
+    data = _gh_get(f"/users/{pr_user}", token, label="user")
+    if not data:
+        return None
+    created = data.get("created_at")
+    if not created:
+        return None
     try:
-        headers = {"Accept": "application/vnd.github.v3+json", "User-Agent": USER_AGENT}
-        headers["Authorization"] = f"token {token}"
-        resp = requests.get(
-            f"https://api.github.com/users/{pr_user}",
-            headers=headers, timeout=TIMEOUT,
-        )
-        if resp.status_code != 200:
-            return None
-        created = resp.json().get("created_at")
-        if not created:
-            return None
         created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
         if (datetime.now(timezone.utc) - created_dt).days < NEW_ACCOUNT_DAYS:
             return NEW_ACCOUNT_MSG
@@ -439,8 +438,13 @@ def check_repo_signals(diff, pr_user, token, pr_body=""):
 def main():
     findings = []
     try:
+        pr_user = os.environ.get("PR_USER", "")
+        token = os.environ.get("GITHUB_TOKEN", "")
+        logging.info("PR_USER=%s, GITHUB_TOKEN=%s", pr_user or "(empty)", "present" if token else "MISSING")
+
         diff = load_diff(DIFF_PATH)
         if not diff:
+            logging.info("No diff file at %s, nothing to check", DIFF_PATH)
             with open(FINDINGS_PATH, "w") as f:
                 json.dump(findings, f)
             sys.exit(0)
@@ -450,9 +454,7 @@ def main():
         if finding:
             findings.append(finding)
 
-        pr_user = os.environ.get("PR_USER", "")
         pr_body = os.environ.get("PR_BODY", "")
-        token = os.environ.get("GITHUB_TOKEN", "")
 
         findings.extend(check_spam_prs(pr_user, token))
 
@@ -465,9 +467,10 @@ def main():
             findings.append(finding)
 
         findings.extend(check_repo_signals(diff, pr_user, token, pr_body))
-    except Exception:
-        pass
+    except Exception as exc:
+        logging.error("Unhandled error in main: %s", exc, exc_info=True)
 
+    logging.info("Writing %d finding(s) to %s", len(findings), FINDINGS_PATH)
     with open(FINDINGS_PATH, "w") as f:
         json.dump(findings, f)
     sys.exit(0)

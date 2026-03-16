@@ -1,10 +1,17 @@
 """Checks PR metadata: title format, draft status, template completeness, and checkboxes."""
 
 import json
+import logging
 import os
 import re
 import subprocess
 import sys
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s [%(filename)s] %(message)s",
+    stream=sys.stderr,
+)
 
 FINDINGS_PATH = "/tmp/findings-compliance.json"
 
@@ -106,8 +113,8 @@ def check_bot_coauthors(base_ref):
             return None
         if _BOT_AUTHOR_RE.search(result.stdout):
             return BOT_MSG
-    except Exception:
-        pass
+    except Exception as exc:
+        logging.warning("check_bot_coauthors error: %s", exc)
     return None
 
 
@@ -163,9 +170,10 @@ def main():
         finding = check_readme(readme_failed)
         if finding:
             findings.append({"msg": finding, "level": "error"})
-    except Exception:
-        pass
+    except Exception as exc:
+        logging.error("Unhandled error in main: %s", exc, exc_info=True)
 
+    logging.info("Writing %d finding(s) to %s", len(findings), FINDINGS_PATH)
     write_findings(findings)
     sys.exit(1 if critical else 0)
 
