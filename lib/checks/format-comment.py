@@ -99,9 +99,6 @@ def format_comment(findings, user, changes_summary, run_id, repo_stats=None):
         bullet_list = "\n".join(f"- {f}" for f in findings)
         parts.append(
             f"Our automated checks detected some issues:\n\n{bullet_list}\n\n"
-            f"> [!NOTE]\n"
-            f"> I am a bot, and sometimes make mistakes in my suggestions. "
-            f"But a human will review your submission shortly!"
         )
     else:
         parts.append("> \u2705 All our automated checks have passed.")
