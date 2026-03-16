@@ -4658,15 +4658,6 @@ categories:
           cryptocurrencies in exchange for national currencies. Fully decentralized,
           and no registration required.
 
-      - name: LocalBitcoins
-        url: https://localbitcoins.com/
-        tosdrId: 3645
-        description: |
-          Person-to-person exchange, find people local to your area, and trade
-          directly with them, to avoid going through any central organization.
-          Primarily focused on Bitcoin, Ethereum, Ripple, and LiteCoin,
-          as it gets harder to find people near you selling niche alt-coins.
-
       - name: AtomicDEX
         url: https://atomicdex.io/
         description: |
