@@ -3196,7 +3196,21 @@ categories:
     ######################
     - name: Calendar
       alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
-      services: []
+      services:
+      - name: Proton Calendar
+        url: https://proton.me/calendar
+        github: ProtonMail/android-calendar
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943
+        androidApp: me.proton.android.calendar
+        subreddit: ProtonCalendar
+        acceptsCrypto: true
+        securityAudited: true
+        icon: https://calendar.proton.me/assets/android-chrome-256x256.png
+        description: |
+          The calendar app from the Proton suite. End-to-end encrypted.
+          Supports ICS (not encrypted), colours, recurring events, mail integration,
+          notifications and multiple time zones.
 
     ###########################
     ###### Backup & Sync ######
