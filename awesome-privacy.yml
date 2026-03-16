@@ -4685,6 +4685,17 @@ categories:
           invoices to minimize custody and trust requirements.
           The deterministically generated avatars help users stick to best privacy practices.
 
+      - name: Haveno
+        url: https://haveno.exchange
+        github: haveno-dex/haveno
+        openSource: true
+        description: |
+          Decentralized, open-source peer-to-peer exchange built on Monero (XMR).
+          A fork of Bisq redesigned exclusively for XMR/fiat and XMR/crypto trading.
+          Requires no KYC, no central server, and no registration. Trades are secured
+          using 2-of-3 multisig escrow with a network arbitrator. Available via
+          multiple community-run instances including RetosSwap and DawnSwap.
+
       notableMentions: |
         For traders, [BaseFEX](https://www.basefex.com/) doesn't require ID and has a good privacy policy.
 
