@@ -3191,6 +3191,40 @@ categories:
         [Laverna](https://laverna.cc/) is a cross-platform secure notes app,
         where all entries are formatted with markdown.
 
+    ############################
+    ###### Text Expansion ######
+    ############################
+    - name: Text Expansion
+      alternativeTo: ['TextExpander', 'PhraseExpress', 'Text Blaze', 'Briskine']
+      intro: >
+        Text expanders let you type short abbreviations that auto-expand into
+        full text - saving time on repetitive typing. Most mainstream options
+        store your text in plaintext on their servers. These alternatives keep
+        your data private.
+      services:
+      - name: Makro
+        url: https://makroexpander.com
+        followWith: Chrome, Firefox, Edge, Brave
+        icon: https://makroexpander.com/icons/icon-128.png
+        description: >
+          Free, privacy-first text expander for Chrome and Firefox. All macros
+          encrypted at rest with AES-256-GCM. Zero-knowledge cloud sync (Pro).
+          Local AI rewriting via Ollama. No account required. Supports 7
+          languages. Import from TextExpander, Espanso, PhraseExpress and more.
+
+      - name: Espanso
+        url: https://espanso.org
+        github: espanso/espanso
+        followWith: Windows, Mac, Linux
+        openSource: true
+        icon: https://espanso.org/img/logo.png
+        description: >
+          Free, open-source, cross-platform text expander written in Rust.
+          Works system-wide across all desktop apps via CLI. Configured through
+          YAML files. Supports regex triggers, shell commands, and community
+          packages. No encryption or cloud sync built in.
+
+
     ######################
     ###### Calendar ######
     ######################
