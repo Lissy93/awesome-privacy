@@ -4733,15 +4733,14 @@ categories:
           numbers, virtual email addresses, messaging, private browsing, and more. There
           is a free plan for up to 3 identities, and premium plans start at $0.99/month.
 
-      - name: Haven
+      - name: Haven Card
         url: https://haven.hn
+        icon: https://cdn.prod.website-files.com/68a2a8a7de53d00447add222/68bb30e62327f0531c6d2d80_webclip.png
         acceptsCrypto: true
         description: |
-          A crypto-funded virtual card where your wallet address and card identity
-          are never linked. Deposit crypto, get a Mastercard for Apple Pay, Google Pay,
-          or Samsung Pay. The card provider handles KYC but never sees your on-chain
-          address, so there is no traceable connection between your wallet and your
-          spending. Supports Ethereum, Arbitrum, Base, and Fuel networks.
+          Crypto-funded virtual Mastercard where your wallet address and card identity
+          are never linked. Deposit crypto, get a card for Apple/Google/Samsung Pay.
+          Card provider handles KYC but never sees your on-chain address. Not open source yet.
 
 
     - name: Other Payment Methods
