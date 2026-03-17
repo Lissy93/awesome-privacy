@@ -26,8 +26,8 @@ corporations, governments, and hackers from logging, storing or selling your per
 <summary>📋 <b>Contents</b></summary>
 
 - **Essentials**
-	- [Password Managers](#password-managers) (6)
-	- [2-Factor Authentication](#2-factor-authentication) (11)
+	- [Password Managers](#password-managers) (7)
+	- [2-Factor Authentication](#2-factor-authentication) (12)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (6)
@@ -44,9 +44,9 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (26)
 	- [Mobile Apps](#mobile-apps) (25)
-	- [Online Tools](#online-tools) (18)
+	- [Online Tools](#online-tools) (19)
 - **Networking**
-	- [Virtual Private Networks](#virtual-private-networks) (6)
+	- [Virtual Private Networks](#virtual-private-networks) (7)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
 	- [Mix Networks](#mix-networks) (3)
 	- [Proxies](#proxies) (2)
@@ -64,6 +64,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
+	- [Calendar](#calendar) (1)
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
@@ -155,6 +156,13 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![Pass on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Pass)](https://awesome-privacy.xyz/essentials/password-managers/pass) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://www.passwordstore.org/)ㅤ 
+
+		</details>
+- **[<img src='https://www.aliasvault.net/favicon.png' width='16' height='16' alt='icon' /> AliasVault](https://www.aliasvault.net)** - End-to-end encrypted open source password and alias manager with built-in email server. AliasVault protects your privacy by creating alternative identities, passwords and email addresses for every web[…](https://awesome-privacy.xyz/essentials/password-managers/aliasvault "View full AliasVault report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: lanedirt/aliasvault](https://img.shields.io/github/stars/lanedirt/aliasvault?style=flat&logo=github&label=aliasvault&color=%235f53f4&cacheSeconds=3600)](https://github.com/lanedirt/aliasvault) [![AliasVault on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=AliasVault)](https://awesome-privacy.xyz/essentials/password-managers/aliasvault) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/lanedirt/aliasvault) [![AliasVault on Discord](https://img.shields.io/badge/-AliasVault-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/DsaXMTEtpF)ㅤ 
 
 		</details>
 
@@ -253,6 +261,13 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![GitHub: protonpass/android-authenticator](https://img.shields.io/github/stars/protonpass/android-authenticator?style=flat&logo=github&label=android-authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/protonpass/android-authenticator) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/proton-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/protonpass/android-authenticator) [![Proton Authenticator on Google Play](https://img.shields.io/badge/-Proton_Authenticator-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=proton.android.authenticator) [![Proton Authenticator on App Store](https://img.shields.io/badge/-Proton_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-authenticator/id6741758667)ㅤ 
+
+		</details>
+- **[<img src='https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png' width='16' height='16' alt='icon' /> Chronos Authenticator](https://chronosauth.com)** - Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust security and reliable backup options. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: joeldavidw/Chronos](https://img.shields.io/github/stars/joeldavidw/Chronos?style=flat&logo=github&label=Chronos&color=%235f53f4&cacheSeconds=3600)](https://github.com/joeldavidw/Chronos) [![Chronos Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Chronos_Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/chronos-authenticator) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/joeldavidw/Chronos) [![Chronos Authenticator on App Store](https://img.shields.io/badge/-Chronos_Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/app/chronos-authenticator/id6503929490)ㅤ 
 
 		</details>
 
@@ -1442,6 +1457,13 @@ A selection of free online tools and utilities, to check, test and protect your 
 		[![Site Report on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Report)](https://awesome-privacy.xyz/security-tools/online-tools/site-report)ㅤ 
 
 		</details>
+- **[<img src='https://hemmelig.app/icons/icon-512x512.png' width='16' height='16' alt='icon' /> Hemmelig.app](https://hemmelig.app/)** - Share rich text and files securely with locally encrypted messages that automatically self-destruct, or invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and[…](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app "View full Hemmelig.app report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
+
+		</details>
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
@@ -1459,7 +1481,7 @@ A selection of free online tools and utilities, to check, test and protect your 
 
 ### Virtual Private Networks
 
-- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](http://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
+- **[<img src='https://mullvad.net/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mullvad](https://mullvad.net/en)** - Mullvad is one of the best for privacy, they have a totally anonymous sign up process, you don't need to provide any details at all, you can choose to pay anonymously too (with Monero, BTC or cash). 
 	- <details>
 		<summary>Stats</summary>
 
@@ -1499,6 +1521,13 @@ A selection of free online tools and utilities, to check, test and protect your 
 		<summary>Stats</summary>
 
 		[![Party VPN on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Party_VPN)](https://awesome-privacy.xyz/networking/virtual-private-networks/party-vpn) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) [![Party VPN on Discord](https://img.shields.io/badge/-Party_VPN-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/6GRddHhW2d)ㅤ 
+
+		</details>
+- **[<img src='https://avatars.githubusercontent.com/u/30499389' width='16' height='16' alt='icon' /> Windscribe](https://windscribe.com)** - An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling, customizable DNS blocking, MAC spoo[…](https://awesome-privacy.xyz/networking/virtual-private-networks/windscribe "View full Windscribe report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: Windscribe/Desktop-App](https://img.shields.io/github/stars/Windscribe/Desktop-App?style=flat&logo=github&label=Desktop-App&color=%235f53f4&cacheSeconds=3600)](https://github.com/Windscribe/Desktop-App) [![Privacy Policy](https://shields.tosdr.org/en_2571.svg)](https://tosdr.org/en/service/2571) [![Windscribe on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Windscribe)](https://awesome-privacy.xyz/networking/virtual-private-networks/windscribe) ![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4=&logoColor=white) [![Windscribe on Google Play](https://img.shields.io/badge/-Windscribe-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.windscribe.vpn) [![Windscribe on App Store](https://img.shields.io/badge/-Windscribe-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/windscribe-vpn/id1129435228) [![r/Windscribe on Reddit](https://img.shields.io/badge/-Windscribe-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/Windscribe)ㅤ 
 
 		</details>
 
@@ -2435,7 +2464,14 @@ be time consuming to setup and maintain and securing it correctly is critical
 
 ### Calendar
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+- **[<img src='https://calendar.proton.me/assets/android-chrome-256x256.png' width='16' height='16' alt='icon' /> Proton Calendar](https://proton.me/calendar)** - The calendar app from the Proton suite. End-to-end encrypted. Supports ICS (not encrypted), colours, recurring events, mail integration, notifications and multiple time zones. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: ProtonMail/android-calendar](https://img.shields.io/github/stars/ProtonMail/android-calendar?style=flat&logo=github&label=android-calendar&color=%235f53f4&cacheSeconds=3600)](https://github.com/ProtonMail/android-calendar) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Calendar on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Calendar)](https://awesome-privacy.xyz/productivity/calendar/proton-calendar) ![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4=&logoColor=white) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) [![Proton Calendar on Google Play](https://img.shields.io/badge/-Proton_Calendar-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=me.proton.android.calendar) [![Proton Calendar on App Store](https://img.shields.io/badge/-Proton_Calendar-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943) [![r/ProtonCalendar on Reddit](https://img.shields.io/badge/-ProtonCalendar-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/ProtonCalendar)ㅤ 
+
+		</details>
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---

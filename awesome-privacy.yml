@@ -104,6 +104,19 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: AliasVault
+        url: https://www.aliasvault.net
+        icon: https://www.aliasvault.net/favicon.png
+        openSource: true
+        followWith: Self-Hosted
+        github: lanedirt/aliasvault
+        discordInvite: DsaXMTEtpF
+        description: |
+          End-to-end encrypted open source password and alias manager with built-in email server.
+          AliasVault protects your privacy by creating alternative identities, passwords
+          and email addresses for every website you use. Use the cloud version, or self-host and
+          deploy within minutes via Docker.
+
       - name: PaperVault
         url: https://papervault.xyz
         icon: https://papervault.xyz/papervault-512.png
@@ -293,6 +306,17 @@ categories:
           Proton Authenticator is free, open source, and available for both iOS and Android.
           A Proton account is required to use Proton Authenticator.
           Existing 2FA codes can be imported from other popular apps such as Google Authenticator and LastPass.
+
+      - name: Chronos Authenticator
+        url: https://chronosauth.com
+        icon: https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png
+        openSource: true
+        github: joeldavidw/Chronos
+        iosApp: https://apps.apple.com/app/chronos-authenticator/id6503929490
+        followWith: iOS
+        description: >-
+          Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust
+          security and reliable backup options.
 
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
@@ -1990,6 +2014,16 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: Hemmelig.app
+          url: https://hemmelig.app/
+          icon: https://hemmelig.app/icons/icon-512x512.png
+          openSource: true
+          github: HemmeligOrg/Hemmelig.app
+          description: |
+            Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
+            invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
+            Open source and self-hostable.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
@@ -2003,7 +2037,7 @@ categories:
       alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
-        url: http://mullvad.net/en
+        url: https://mullvad.net/en
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
@@ -2076,6 +2110,20 @@ categories:
           Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
           WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
           subscriptions or credit cards.
+
+      - name: Windscribe
+        url: https://windscribe.com
+        github: Windscribe/Desktop-App
+        securityAudited: true
+        icon: https://avatars.githubusercontent.com/u/30499389
+        tosdrId: 2571
+        androidApp: com.windscribe.vpn
+        iosApp: https://apps.apple.com/us/app/windscribe-vpn/id1129435228
+        subreddit: Windscribe
+        description: |
+          An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions
+          and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling,
+          customizable DNS blocking, MAC spoofing, decoy traffic and censorship circumvention.
 
       wordOfWarning: |
         - *A VPN does not make you anonymous - it merely changes your public IP address to that of your VPN provider, instead of your ISP. Your browsing session can still be linked back to your real identity either through your system details (such as user agent, screen resolution even typing patterns), cookies / session storage, or by the identifiable data that you enter. [Read more about fingerprinting](https://pixelprivacy.com/resources/browser-fingerprinting/)*
@@ -3157,7 +3205,21 @@ categories:
     ######################
     - name: Calendar
       alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
-      services: []
+      services:
+      - name: Proton Calendar
+        url: https://proton.me/calendar
+        github: ProtonMail/android-calendar
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943
+        androidApp: me.proton.android.calendar
+        subreddit: ProtonCalendar
+        acceptsCrypto: true
+        securityAudited: true
+        icon: https://calendar.proton.me/assets/android-chrome-256x256.png
+        description: |
+          The calendar app from the Proton suite. End-to-end encrypted.
+          Supports ICS (not encrypted), colours, recurring events, mail integration,
+          notifications and multiple time zones.
 
     ###########################
     ###### Backup & Sync ######

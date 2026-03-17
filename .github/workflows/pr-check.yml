@@ -18,9 +18,11 @@ jobs:
     name: PR Compliance
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Check README edits
@@ -38,7 +40,7 @@ jobs:
         run: python lib/checks/check-pr-meta.py
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: findings-compliance
           path: /tmp/findings-compliance.json
@@ -53,9 +55,9 @@ jobs:
     outputs:
       yaml_changed: ${{ steps.changes.outputs.yaml_changed }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Detect changes
@@ -83,7 +85,7 @@ jobs:
         run: python lib/checks/check-additions.py
       - name: Upload diff data
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: pr-diff
           path: |
@@ -92,7 +94,7 @@ jobs:
           if-no-files-found: ignore
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: findings-data
           path: /tmp/findings-data.json
@@ -106,14 +108,16 @@ jobs:
     needs: data-validation
     if: "!cancelled() && needs.data-validation.outputs.yaml_changed == 'true'"
     runs-on: ubuntu-latest
+    outputs:
+      has_repo_stats: ${{ steps.repo-stats.outputs.exists }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install -q -r lib/requirements.txt
       - name: Download diff data
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: pr-diff
           path: /tmp
@@ -129,16 +133,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python lib/checks/make-info-stats.py
-      - name: Upload repo stats
+      - name: Check for repo stats
         if: always()
-        uses: actions/upload-artifact@v4
+        id: repo-stats
+        run: test -f /tmp/repo-stats.md && echo "exists=true" >> "$GITHUB_OUTPUT" || echo "exists=false" >> "$GITHUB_OUTPUT"
+      - name: Upload repo stats
+        if: steps.repo-stats.outputs.exists == 'true'
+        uses: actions/upload-artifact@v6
         with:
           name: repo-stats
           path: /tmp/repo-stats.md
-          if-no-files-found: ignore
       - name: Upload findings
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: findings-project
           path: /tmp/findings-project.json
@@ -150,25 +157,26 @@ jobs:
     needs: [pr-compliance, data-validation, submission-eligibility]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Download all findings
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           pattern: findings-*
           path: /tmp/artifacts
           merge-multiple: true
         continue-on-error: true
       - name: Download diff data
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: pr-diff
           path: /tmp/artifacts
         continue-on-error: true
       - name: Download repo stats
-        uses: actions/download-artifact@v4
+        if: needs.submission-eligibility.outputs.has_repo_stats == 'true'
+        uses: actions/download-artifact@v7
         with:
           name: repo-stats
           path: /tmp/artifacts
@@ -181,7 +189,7 @@ jobs:
         run: python lib/checks/format-comment.py
       - name: Upload PR metadata
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: pr-meta
           path: /tmp/pr-meta/
