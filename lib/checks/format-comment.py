@@ -95,10 +95,17 @@ def format_comment(findings, user, changes_summary, run_id, repo_stats=None):
         f"correct and inline with our [Contributing Requirements]({CONTRIBUTING}).\n",
     ]
 
+    disclaimer = "> <sup> 🤖 I am a bot, and sometimes make mistakes. "
+    disclaimer += "If you feel that any info here is incorrect or inaccurate, "
+    disclaimer += "feel free to add a comment below with any corrections or justifications. "
+    disclaimer += "This bot does <b>not</b> use AI, and just runs preliminary validation "
+    disclaimer += "checks against submission requirements. Human review is still needed.</sup>"
+
     if findings:
         bullet_list = "\n".join(f"- {f}" for f in findings)
         parts.append(
             f"Our automated checks detected some issues:\n\n{bullet_list}\n\n"
+            f"{disclaimer}\n"
         )
     else:
         parts.append("> \u2705 All our automated checks have passed.")
@@ -126,7 +133,7 @@ def format_comment(findings, user, changes_summary, run_id, repo_stats=None):
 
 def write_step_summary(errors, warnings, user, pr_number, run_id, changes_summary,
                        repo_stats=None):
-    """Write a structured summary to GITHUB_STEP_SUMMARY."""
+    """Creates a human-readable summary of all checks, and writes to GITHUB_STEP_SUMMARY."""
     summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
     if not summary_file:
         return
@@ -144,12 +151,11 @@ def write_step_summary(errors, warnings, user, pr_number, run_id, changes_summar
         )
     elif ne:
         lines.append(
-            f"There are {ne} error(s) which must be resolved before this PR can be"
-            f" reviewed.\n"
+            f"There are {ne} error(s) which must be resolved before this PR can be reviewed.\n"
         )
     elif nw:
         lines.append(
-            f"There were no errors but {nw} warning(s) which need to be addressed"
+            f"There were no errors but {nw} warning(s) which should to be addressed"
             f" or justified before the PR can be merged.\n"
         )
     else:
@@ -178,27 +184,23 @@ def write_step_summary(errors, warnings, user, pr_number, run_id, changes_summar
 
     # Meta Info
     lines.append("### Meta Info\n")
-    now = datetime.now(timezone.utc)
-    timestamp = now.strftime("%H:%M UTC on %d %b %Y")
-    if pr_number:
-        lines.append(
-            f"This workflow run was triggered at {timestamp}"
-            f" for PR [#{pr_number}](https://github.com/Lissy93/awesome-privacy/pull/{pr_number})"
-            f" which was opened by @{user}\n"
-        )
-    else:
-        lines.append(
-            f"This workflow run was triggered at {timestamp} by @{user}\n"
-        )
+    timestamp = datetime.now(timezone.utc).strftime("%H:%M UTC on %d %b %Y")
+    pr_ref = f" for PR [#{pr_number}](https://github.com/Lissy93/awesome-privacy/pull/{pr_number})" if pr_number else ""
+    attempt = os.environ.get("GITHUB_RUN_ATTEMPT", "")
+    attempt_ref = f" (Attempt {attempt})" if attempt and attempt != "1" else ""
+    lines.append(f"This workflow was triggered at {timestamp}{pr_ref} by @{user}{attempt_ref}\n")
 
+    # Summary of changes (what was added/removed/edited in which sections)
     if changes_summary:
         lines.append("The PR introduces the following changes:\n")
         lines.append(f"{changes_summary}\n")
 
+    # Submission info (like the automated info looked up about repo, web, app, etc)
     if repo_stats:
         lines.append("### Submission Info\n")
         lines.append(f"{repo_stats}\n")
 
+    # All done, write to file for outputting to workflow summary
     with open(summary_file, "a") as f:
         f.write("\n".join(lines) + "\n")
 
