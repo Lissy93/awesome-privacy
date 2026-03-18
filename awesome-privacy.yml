@@ -3222,7 +3222,7 @@ categories:
         url: https://super-productivity.com
         github: johannesjo/super-productivity
         openSource: true
-        icon: https://super-productivity.com/assets/icons/favicon-96x96.png
+        icon: https://raw.githubusercontent.com/johannesjo/super-productivity/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
         androidApp: com.superproductivity.superproductivity
         iosApp: https://apps.apple.com/us/app/super-productivity/id6587185806
         description: |
