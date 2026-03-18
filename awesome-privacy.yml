@@ -3223,7 +3223,7 @@ categories:
         github: johannesjo/super-productivity
         openSource: true
         icon: https://super-productivity.com/assets/icons/favicon-96x96.png
-        androidApp: https://play.google.com/store/apps/details?id=com.superproductivity.superproductivity
+        androidApp: com.superproductivity.superproductivity
         iosApp: https://apps.apple.com/us/app/super-productivity/id6587185806
         description: |
           Privacy-respecting, open-source task manager and time tracker.
