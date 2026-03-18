@@ -3221,18 +3221,16 @@ categories:
       - name: Super Productivity
         url: https://super-productivity.com
         github: johannesjo/super-productivity
-        followWith: Web, Windows, Mac, Linux, Android, iOS
         openSource: true
-        securityAudited: false
         icon: https://super-productivity.com/assets/icons/favicon-96x96.png
-        androidApp: com.superproductivity.superproductivity
+        androidApp: https://play.google.com/store/apps/details?id=com.superproductivity.superproductivity
         iosApp: https://apps.apple.com/us/app/super-productivity/id6587185806
         description: |
-          Privacy-respecting, open-source (MIT) task manager and time tracker with 18k+ GitHub stars.
-          All data is stored locally on your device - no account required, no cloud dependency, and
-          zero telemetry. Supports Jira, GitLab, GitHub, Gitea, OpenProject and CalDAV integration.
-          Features include time tracking, Pomodoro timer, break reminders, and idle detection.
-          Available on all major platforms as a native app and progressive web app.
+          Privacy-respecting, open-source task manager and time tracker.
+          All data is stored locally on your device - no account required, no
+          cloud dependency, and zero telemetry. Supports Jira, GitLab, GitHub,
+          Gitea, OpenProject and CalDAV integration. Features include time
+          tracking, Pomodoro timer, break reminders, and idle detection.
 
     ###########################
     ###### Backup & Sync ######
