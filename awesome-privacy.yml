@@ -2458,16 +2458,6 @@ categories:
           Provides simple and advanced ways to block access to the internet. Applications and addresses
           can individually be allowed or denied access to Wi-Fi and/or mobile connection.
 
-      - name: NoRoot Firewall
-        followWith: Android
-        openSource: false
-        url: https://play.google.com/store/apps/details?id=app.greyshirts.firewall
-        icon: https://play-lh.googleusercontent.com/Eo7y02OP6nsOqTx-MsYORxLsIXltk-_0DQUkNztdPUrr_2ZIoR_RgaDXt3y6qrcdIT4=w240-h480
-        description: |
-          Notifies you when an app is trying to access the Internet, so all you need to do is just Allow
-          or Deny. Allows you to create filter rules based on IP address, host name or domain name, and
-          you can allow or deny only specific connections of an app.
-
       - name: AFWall+
         url: https://xdaforums.com/t/5-0-root-3-6-0-afwall-iptables-firewall-28-aug-2023.1957231
         github: ukanth/afwall
