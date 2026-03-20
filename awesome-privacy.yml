@@ -3705,13 +3705,6 @@ categories:
           Allows you to completely remove sensitive data from your hard drive by overwriting it several times with carefully
           selected patterns.
 
-      - name: Hard Disk Scrubber
-        url: http://www.summitcn.com/hdscrub.html
-        followWith: Windows
-        description: |
-          Easy to use, but with some advanced features, including custom wipe patterns. Data Sanitation Methods: AFSSI-5020,
-          DoD 5220.22-M, and Random Data.
-
       - name: SDelete
         url: https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete
         followWith: Windows
