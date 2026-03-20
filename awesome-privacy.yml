@@ -2796,14 +2796,6 @@ categories:
         description: |
           Passive Deep Packet Inspection blocker and Active DPI circumvention utility, for Windows.
 
-      - name: DPITunnel
-        url: https://github.com/zhenyolka/DPITunnel
-        github: nomoresat/DPITunnel-android
-        icon: https://raw.githubusercontent.com/nomoresat/DPITunnel-android/main/assets/logo.webp
-        followWith: Android
-        description: |
-          An Android app to bypass deep packet inspection.
-
       - name: Proxy Checker
         url: https://ping.eu/proxy/
         icon: https://ping.eu/favicon.ico
