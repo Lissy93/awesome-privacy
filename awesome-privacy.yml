@@ -4864,12 +4864,6 @@ categories:
           and offers a customizable and self-hostable platform for managing your news feeds.
         url: https://tt-rss.org
 
-      - name: RSSOwl
-        description: |
-          A powerful, desktop-based RSS reader offering extensive organization features. It facilitates
-          managing and curating news feeds from various sources.
-        url: http://www.rssowl.org
-
       - name: Feedly
         description: |
           Offers a premium news aggregation experience, presenting news from chosen sources in a clean,
