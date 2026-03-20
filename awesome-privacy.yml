@@ -4920,14 +4920,6 @@ categories:
         followWith: YouTube
         tosdrId: 1471
 
-      - name: Libreddit
-        description: |
-          A private, fast Reddit frontend written in Rust. Excludes ads, trackers, and bloat, making it much faster
-          than the official site. Can be self-hosted via Docker or other methods. Implements most Reddit features
-          for anonymous browsing.
-        url: https://libreddit.spike.codes
-        followWith: Reddit
-
       - name: WebProxy
         description: |
           A free proxy service offering a Tor mode for evading censorship and accessing geo-restricted content.
