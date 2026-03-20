@@ -4277,6 +4277,13 @@ categories:
         description: |
           Kernel-level, OS-level, and client-level security for macOS. With a Firewall, Blackhole, and Privatizing Proxy for Trackers, Attackers, Malware, Adware, and Spammers; with On-Demand and On-Access Anti-Virus Scanning.
 
+      - name: Lockpaw
+        url: https://getlockpaw.com
+        github: sorkila/lockpaw
+        openSource: true
+        description: |
+          macOS menu bar screen guard that prevents visual eavesdropping and shoulder surfing. Instantly lock and unlock your screen with a global hotkey, with Touch ID as a fallback. Lightweight, free, and open source.
+
 
     ##########################
     ###### Anti-Malware ######
