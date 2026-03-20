@@ -108,6 +108,8 @@ jobs:
     needs: data-validation
     if: "!cancelled() && needs.data-validation.outputs.yaml_changed == 'true'"
     runs-on: ubuntu-latest
+    outputs:
+      has_repo_stats: ${{ steps.repo-stats.outputs.exists }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -131,13 +133,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python lib/checks/make-info-stats.py
-      - name: Upload repo stats
+      - name: Check for repo stats
         if: always()
+        id: repo-stats
+        run: test -f /tmp/repo-stats.md && echo "exists=true" >> "$GITHUB_OUTPUT" || echo "exists=false" >> "$GITHUB_OUTPUT"
+      - name: Upload repo stats
+        if: steps.repo-stats.outputs.exists == 'true'
         uses: actions/upload-artifact@v6
         with:
           name: repo-stats
           path: /tmp/repo-stats.md
-          if-no-files-found: ignore
       - name: Upload findings
         if: always()
         uses: actions/upload-artifact@v6
@@ -170,7 +175,7 @@ jobs:
           path: /tmp/artifacts
         continue-on-error: true
       - name: Download repo stats
-        if: needs.submission-eligibility.result == 'success'
+        if: needs.submission-eligibility.outputs.has_repo_stats == 'true'
         uses: actions/download-artifact@v7
         with:
           name: repo-stats

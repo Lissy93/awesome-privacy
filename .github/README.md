@@ -65,6 +65,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Productivity**
 	- [Digital Notes](#digital-notes) (8)
 	- [Calendar](#calendar) (1)
+	- [Task Management](#task-management) (1)
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
@@ -2469,6 +2470,20 @@ be time consuming to setup and maintain and securing it correctly is critical
 		<summary>Stats</summary>
 
 		[![GitHub: ProtonMail/android-calendar](https://img.shields.io/github/stars/ProtonMail/android-calendar?style=flat&logo=github&label=android-calendar&color=%235f53f4&cacheSeconds=3600)](https://github.com/ProtonMail/android-calendar) [![Privacy Policy](https://shields.tosdr.org/en_491.svg)](https://tosdr.org/en/service/491) [![Proton Calendar on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Proton_Calendar)](https://awesome-privacy.xyz/productivity/calendar/proton-calendar) ![Security Audited](https://img.shields.io/badge/-Security_Audited-3DA639?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHoiLz48L3N2Zz4=&logoColor=white) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white) [![Proton Calendar on Google Play](https://img.shields.io/badge/-Proton_Calendar-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=me.proton.android.calendar) [![Proton Calendar on App Store](https://img.shields.io/badge/-Proton_Calendar-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943) [![r/ProtonCalendar on Reddit](https://img.shields.io/badge/-ProtonCalendar-FF4500?style=flat&logo=reddit&logoColor=white)](https://reddit.com/r/ProtonCalendar)ㅤ 
+
+		</details>
+
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
+### Task Management
+
+- **[<img src='https://raw.githubusercontent.com/johannesjo/super-productivity/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png' width='16' height='16' alt='icon' /> Super Productivity](https://super-productivity.com)** - Privacy-respecting, open-source task manager and time tracker. All data is stored locally on your device - no account required, no cloud dependency, and zero telemetry. Supports Jira, GitLab, GitHub,[…](https://awesome-privacy.xyz/productivity/task-management/super-productivity "View full Super Productivity report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: johannesjo/super-productivity](https://img.shields.io/github/stars/johannesjo/super-productivity?style=flat&logo=github&label=super-productivity&color=%235f53f4&cacheSeconds=3600)](https://github.com/johannesjo/super-productivity) [![Super Productivity on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Super_Productivity)](https://awesome-privacy.xyz/productivity/task-management/super-productivity) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/johannesjo/super-productivity) [![Super Productivity on Google Play](https://img.shields.io/badge/-Super_Productivity-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.superproductivity.superproductivity) [![Super Productivity on App Store](https://img.shields.io/badge/-Super_Productivity-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/super-productivity/id6587185806)ㅤ 
 
 		</details>
 

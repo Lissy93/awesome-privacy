@@ -3135,6 +3135,26 @@ categories:
           Supports ICS (not encrypted), colours, recurring events, mail integration,
           notifications and multiple time zones.
 
+    ###############################
+    ###### Task Management ######
+    ##############################
+    - name: Task Management
+      alternativeTo: ['todoist', 'microsoft to do', 'ticktick', 'any.do', 'asana']
+      services:
+      - name: Super Productivity
+        url: https://super-productivity.com
+        github: johannesjo/super-productivity
+        openSource: true
+        icon: https://raw.githubusercontent.com/johannesjo/super-productivity/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+        androidApp: com.superproductivity.superproductivity
+        iosApp: https://apps.apple.com/us/app/super-productivity/id6587185806
+        description: |
+          Privacy-respecting, open-source task manager and time tracker.
+          All data is stored locally on your device - no account required, no
+          cloud dependency, and zero telemetry. Supports Jira, GitLab, GitHub,
+          Gitea, OpenProject and CalDAV integration. Features include time
+          tracking, Pomodoro timer, break reminders, and idle detection.
+
     ###########################
     ###### Backup & Sync ######
     ###########################
