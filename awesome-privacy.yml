@@ -725,18 +725,6 @@ categories:
         that are open source, E2E encrypted, routed through Tor services,
         totally anonymous and operate without the collection of metadata.
       services:
-      - name: Oxen
-        url: https://oxen.io/
-        github: oxen-io/lokinet
-        tosdrId: 6622
-        icon: https://oxen.io/favicon.ico
-        description: |
-          Oxen (previously Loki) is an open source set of tools that allow users to transact
-          and communicate anonymously and privately, through a decentralised, encrypted,
-          onion-based network.
-          Session is a desktop and mobile app that uses these private routing protocols to
-          secure messages, media and metadata.
-
       - name: Briar
         url: https://briarproject.org
         icon: https://briarproject.org/img/briar_logo_circle.png
@@ -1083,15 +1071,6 @@ categories:
     - name: Email Security Tools
       alternativeTo:  ['boomerang', 'mailtrack', 'grammarly for email', 'wisestamp', 'hubspot sales']
       services:
-      - name: Enigmail
-        url: https://www.enigmail.net
-        icon: https://upload.wikimedia.org/wikipedia/commons/5/50/Enigmail_logo_2018.svg
-        description: |
-          Mail client add-on, enabling the use of OpenPGP to easily encrypt, decrypt,
-          verify and sign emails. Free and open source, Enigmail is compatible with Interlink
-          Mail & News and Postbox. Their website contains thorough documentation and
-          quick-start guides, once set up it is extremely convenient to use.
-
       - name: Email Privacy Tester
         url: https://www.emailprivacytester.com/
         openSource: true
@@ -1525,16 +1504,6 @@ categories:
           Click icon for more tools such as site safety checks, whois, validation etc **Download**:
           [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 
-      - name: Lightbeam
-        url: https://mozilla.github.io/lightbeam/
-        github: mozilla/lightbeam-we
-        icon: https://mozilla.github.io/lightbeam/img/lightbeam_logo-only_32x32.png
-        description: >
-          Visualize in detail the servers you are contacting when you are surfing on the Internet.
-          Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers).
-          **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/)
-          - [Source](https://github.com/mozilla/lightbeam-we)
-
       - name: Track Me Not
         url: http://trackmenot.io
         github: vtoubiana/TrackMeNot
@@ -1566,18 +1535,6 @@ categories:
           \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero)
           \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/)
           \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
-
-      - name: HTTPS Everywhere
-        url: https://eff.org/https-everywhere
-        github: EFForg/https-everywhere
-        tosdrId: 682
-        description: |
-          **NOTE** On modern browsers, this is [no longer needed](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere)
-          Forces sites to load in HTTPS, in order to encrypt your communications with websites,
-          making your browsing more secure (Similar to [Smart HTTPS](https://mybrowseraddon.com/smart-https.html)).
-          Note this functionality is now included by default in most modern browsers. **Download**:
-          [Chrome](https://www.eff.org/https-everywhere) \
-          [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
 
       - name: Linguist
         url: https://linguister.io
@@ -1989,14 +1946,6 @@ categories:
           description: |
             Tool for analyzing email headers, useful for checking the authenticity of messages, as well as knowing what info
             you are revealing in your outbound messages.
-
-        - name: Am I FloCed?
-          url: https://amifloced.org/
-          icon: https://amifloced.org/favicon.ico
-          description: |
-            Google testing out a new tracking feature called Federated Learning of Cohorts (aka "FLoC"). It currently effects
-            0.5% of Chrome users, this tool developed by the EFF will detect if you are affected, and provide additional info
-            on how to stay protected.
 
         - name: Site Report
           url: https://sitereport.netcraft.com/
@@ -2509,16 +2458,6 @@ categories:
           Provides simple and advanced ways to block access to the internet. Applications and addresses
           can individually be allowed or denied access to Wi-Fi and/or mobile connection.
 
-      - name: NoRoot Firewall
-        followWith: Android
-        openSource: false
-        url: https://play.google.com/store/apps/details?id=app.greyshirts.firewall
-        icon: https://play-lh.googleusercontent.com/Eo7y02OP6nsOqTx-MsYORxLsIXltk-_0DQUkNztdPUrr_2ZIoR_RgaDXt3y6qrcdIT4=w240-h480
-        description: |
-          Notifies you when an app is trying to access the Internet, so all you need to do is just Allow
-          or Deny. Allows you to create filter rules based on IP address, host name or domain name, and
-          you can allow or deny only specific connections of an app.
-
       - name: AFWall+
         url: https://xdaforums.com/t/5-0-root-3-6-0-afwall-iptables-firewall-28-aug-2023.1957231
         github: ukanth/afwall
@@ -2713,14 +2652,6 @@ categories:
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
 
-      - name: Ad Block Radio
-        url: https://github.com/adblockradio/adblockradio
-        github: adblockradio/adblockradio
-        followWith: Sound
-        description: |
-          Python script that uses machine learning to block adverts in live audio streams, such as Radio, Podcasts,
-          Audio Books, and music platforms such as Spotify. See live demo.
-
       - name: uBlock Origin
         url: https://github.com/gorhill/uBlock
         github: gorhill/uBlock
@@ -2854,14 +2785,6 @@ categories:
         followWith: Windows
         description: |
           Passive Deep Packet Inspection blocker and Active DPI circumvention utility, for Windows.
-
-      - name: DPITunnel
-        url: https://github.com/zhenyolka/DPITunnel
-        github: nomoresat/DPITunnel-android
-        icon: https://raw.githubusercontent.com/nomoresat/DPITunnel-android/main/assets/logo.webp
-        followWith: Android
-        description: |
-          An Android app to bypass deep packet inspection.
 
       - name: Proxy Checker
         url: https://ping.eu/proxy/
@@ -3505,15 +3428,6 @@ categories:
           A web application which acts as a todo app for bookmarks. You can either self-host it, or use their managed
           service which has a free and paid-for tier.
 
-      - name: Reminiscence
-        url: https://github.com/kanishka-linux/reminiscence
-        github: kanishka-linux/reminiscence
-        description: |
-          A self-hosted bookmark and archive manager. Reminiscence is more geared towards archiving useful web pages
-          either for offline viewing or to preserve a copy. It is a web application, that can be installed with Docker
-          on either a local or remote server, although it has a comprehensive and well-documented REST API, there is
-          currently no browser extension.
-
       - name: Shiori
         url: https://github.com/go-shiori/shiori
         icon: https://avatars.githubusercontent.com/u/41993376?s=200&v=4
@@ -3719,14 +3633,6 @@ categories:
           Browser extension for using PGP within Gmail, for Chrome and Firefox.
           Mobile version supported on Android and iOS.
 
-      - name: EnigMail
-        url: https://enigmail.net
-        followWith: Thunderbird
-        icon: https://enigmail.net/favicon.ico
-        openSource: true
-        description: |
-          OpenPGP extension for Thunderbird and PostBox, integrates natively within mail app.
-
       - name: Mailvelope
         url: https://www.mailvelope.com
         followWith: Email
@@ -3818,13 +3724,6 @@ categories:
         description: |
           Allows you to completely remove sensitive data from your hard drive by overwriting it several times with carefully
           selected patterns.
-
-      - name: Hard Disk Scrubber
-        url: http://www.summitcn.com/hdscrub.html
-        followWith: Windows
-        description: |
-          Easy to use, but with some advanced features, including custom wipe patterns. Data Sanitation Methods: AFSSI-5020,
-          DoD 5220.22-M, and Random Data.
 
       - name: SDelete
         url: https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete
@@ -4037,14 +3936,6 @@ categories:
           The Secure distribution includes its own sandbox system obtained with the combination of Firejail and AppArmor
           with custom security profiles. While the Forensics Edition is bundled with a comprehensive suite of security/
           pen-testing tools, similar to Kali and Black Arch.
-
-      - name: Discreete Linux
-        url: https://www.privacy-cd.org/
-        followWith: offline
-        description: |
-          Aimed at journalists, activists and whistle-blowers, Discreete Linux is similar to Tails, in that it is booted
-          live from external media, and leaves no/ minimal trace on the system. The aim of the project, was to provide
-          all required cryptographic tools offline, to protect against Trojan-based surveillance.
 
       - name: Alpine Linux
         url: https://www.alpinelinux.org/
@@ -4336,18 +4227,6 @@ categories:
         description: |
           Open source GUI app built upon PowerShell, allowing you to perform a quick and easy privacy check, on Windows 10 systems.
 
-      - name: SharpApp
-        url: https://github.com/mirinsoft/sharpapp
-        github: mirinsoft/sharpapp
-        description: |
-          Open source GUI app built upon PowerShell, for disabling telemetry functions in Windows 10, uninstalling preinstalled apps, installing software packages and automating Windows tasks with integrated PowerShell scripting.
-
-      - name: Debotnet
-        url: https://github.com/Mirinsoft/Debotnet
-        github: Mirinsoft/Debotnet
-        description: |
-          Light-weight, portable app for controlling the many privacy-related settings within Windows 10- with the aim of helping to keep private data, private.
-
       - name: PrivaZer
         url: https://privazer.com/
         description: |
@@ -4495,27 +4374,11 @@ categories:
         For that reason it is recommended not to have these devices in your house.
         The following are open source AI voice assistants, that aim to provide a
         human voice interface while also protecting your privacy and security
-      services:
-      - name: Mycroft
-        tosdrId: 1824
-        description: |
-          An open source privacy-respecting AI platform, compatible with a wide range of
-          devices including Raspberry Pi, desktop computers, or dedicated Mycroft hardware.
-          Actively developed, with extensive documentation and a broad skill set. Facilitates
-          easy development of new skills.
-        url: https://mycroft-ai.gitbook.io/mark-ii
-        github: MycroftAI/mycroft-core
-        icon: https://avatars.githubusercontent.com/u/14171097?s=200&v=4
-
-      - name: Kalliope
-        description: |
-          A modular, always-on, voice-controlled personal assistant geared towards home automation.
-          Optimized for Raspberry Pi, Debian, or Ubuntu. Skills are easily programmable in YAML,
-          though the library of pre-built add-ons is not as extensive.
-        url: https://kalliope-project.github.io
-        github: kalliope-project/kalliope
+      services: []
 
       notableMentions: |
+        [Mycroft](https://github.com/MycroftAI/mycroft-core) and [Kalliope](https://github.com/kalliope-project/kalliope) removed, as no longer active.
+
         If you choose to continue using Google Home/ Alexa, then check out
         **[Project Alias](https://github.com/bjoernkarmann/project_alias)**.
         It's a small app that runs on a Pi, and gives you more control over your smart assistants, for both customisation and privacy.
@@ -4692,24 +4555,6 @@ categories:
           cryptocurrencies in exchange for national currencies. Fully decentralized,
           and no registration required.
 
-      - name: LocalBitcoins
-        url: https://localbitcoins.com/
-        tosdrId: 3645
-        description: |
-          Person-to-person exchange, find people local to your area, and trade
-          directly with them, to avoid going through any central organization.
-          Primarily focused on Bitcoin, Ethereum, Ripple, and LiteCoin,
-          as it gets harder to find people near you selling niche alt-coins.
-
-      - name: AtomicDEX
-        url: https://atomicdex.io/
-        description: |
-          Person-to-person cryptocurrency exchange with no KYC or registration
-          required and uses atomic swaps to perform trustless trades.
-          The orderbook uses a modified libp2p protocol to prevent censorship and maintain decentralization.
-          Fiat currencies are not supported, but hundreds of alt-coins and major cryptocurrencies are supported.
-        github: KomodoPlatform/atomicDEX-Pro
-
       - name: RoboSats
         url: https://learn.robosats.com
         github: RoboSats/robosats
@@ -4865,14 +4710,6 @@ categories:
         should be able to choose with whom you share what, and that is what the
         following sites aim to do.
       services:
-      - name: Aether
-        description: |
-          Offers self-governing communities with auditable moderation, akin to Reddit but
-          prioritizing privacy, democracy, and transparency. Aether is peer-to-peer and open
-          source, available for Windows, Mac, and Linux.
-        url: https://getaether.net
-        github: getaether/aether-community-firmware
-
       - name: Discourse
         description: |
           A fully open-source, self-hostable discussion platform usable as a mailing list,
@@ -5039,20 +4876,6 @@ categories:
           and offers a customizable and self-hostable platform for managing your news feeds.
         url: https://tt-rss.org
 
-      - name: RSSOwl
-        description: |
-          A powerful, desktop-based RSS reader offering extensive organization features. It facilitates
-          managing and curating news feeds from various sources.
-        url: http://www.rssowl.org
-
-      - name: Feedly
-        description: |
-          Offers a premium news aggregation experience, presenting news from chosen sources in a clean,
-          modern interface. Beyond RSS, it integrates with various news outlets, ensuring a tailored
-          news feed without manipulated content. Parts of the service are open source.
-        url: https://feedly.com
-        tosdrId: 405
-
     - name: Proxy Sites
       intro: |
         These are websites that enable you to access existing social media platforms,
@@ -5077,14 +4900,6 @@ categories:
         url: https://invidious.io
         followWith: YouTube
         tosdrId: 1471
-
-      - name: Libreddit
-        description: |
-          A private, fast Reddit frontend written in Rust. Excludes ads, trackers, and bloat, making it much faster
-          than the official site. Can be self-hosted via Docker or other methods. Implements most Reddit features
-          for anonymous browsing.
-        url: https://libreddit.spike.codes
-        followWith: Reddit
 
       - name: WebProxy
         description: |
