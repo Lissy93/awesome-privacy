@@ -725,18 +725,6 @@ categories:
         that are open source, E2E encrypted, routed through Tor services,
         totally anonymous and operate without the collection of metadata.
       services:
-      - name: Oxen
-        url: https://oxen.io/
-        github: oxen-io/lokinet
-        tosdrId: 6622
-        icon: https://oxen.io/favicon.ico
-        description: |
-          Oxen (previously Loki) is an open source set of tools that allow users to transact
-          and communicate anonymously and privately, through a decentralised, encrypted,
-          onion-based network.
-          Session is a desktop and mobile app that uses these private routing protocols to
-          secure messages, media and metadata.
-
       - name: Briar
         url: https://briarproject.org
         icon: https://briarproject.org/img/briar_logo_circle.png
@@ -3437,15 +3425,6 @@ categories:
         description: |
           A web application which acts as a todo app for bookmarks. You can either self-host it, or use their managed
           service which has a free and paid-for tier.
-
-      - name: Reminiscence
-        url: https://github.com/kanishka-linux/reminiscence
-        github: kanishka-linux/reminiscence
-        description: |
-          A self-hosted bookmark and archive manager. Reminiscence is more geared towards archiving useful web pages
-          either for offline viewing or to preserve a copy. It is a web application, that can be installed with Docker
-          on either a local or remote server, although it has a comprehensive and well-documented REST API, there is
-          currently no browser extension.
 
       - name: Shiori
         url: https://github.com/go-shiori/shiori
