@@ -100,7 +100,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Video Platforms](#video-platforms) (3)
 	- [Blogging Platforms](#blogging-platforms) (6)
 	- [News Readers](#news-readers) (1)
-	- [Proxy Sites](#proxy-sites) (3)
+	- [Proxy Sites](#proxy-sites) (4)
 - **Media**
 	- [File Converters](#file-converters) (1)
 - **Creativity**
@@ -4220,6 +4220,13 @@ or tracking (unless otherwise stated).
 		<summary>Stats</summary>
 
 		[![WebProxy on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=WebProxy)](https://awesome-privacy.xyz/social/proxy-sites/webproxy)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/redlib-org/redlib/refs/heads/main/static/logo.png' width='16' height='16' alt='icon' /> Redlib](https://github.com/redlib-org/redlib)** - An alternative private front-end to Reddit, with its origins in [Libreddit](https://github.com/libreddit/libreddit). Has workarounds to access data without relying upon the restrictive Reddit API. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: redlib-org/redlib](https://img.shields.io/github/stars/redlib-org/redlib?style=flat&logo=github&label=redlib&color=%235f53f4&cacheSeconds=3600)](https://github.com/redlib-org/redlib) [![Redlib on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Redlib)](https://awesome-privacy.xyz/social/proxy-sites/redlib)ㅤ 
 
 		</details>
 
