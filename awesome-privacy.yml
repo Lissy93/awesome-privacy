@@ -4907,6 +4907,15 @@ categories:
           Claims to encrypt traffic, but caution is advised for personal information. Managed by DevroLabs.
         url: https://weboproxy.com
 
+      - name: Redlib
+        description: |
+          An alternative private front-end to Reddit, with its origins in [Libreddit](https://github.com/libreddit/libreddit).
+          Has workarounds to access data without relying upon the restrictive Reddit API.
+        github: redlib-org/redlib
+        icon: https://raw.githubusercontent.com/redlib-org/redlib/refs/heads/main/static/logo.png
+        url: https://github.com/redlib-org/redlib
+        followWith: Reddit
+
       notableMentions:
       - name: NewPipe
         url: https://newpipe.schabi.org
