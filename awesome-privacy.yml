@@ -1193,9 +1193,9 @@ categories:
           Privacy-focused eSIM provider for 170+ countries, with instant eSIM delivery.
           No account, ID, email needed, and accepts crypto via a self-hosted BTCPay Server.
 
-      - name: LNVPN
-        url: https://lnvpn.net
-        icon: https://lnvpn.net/favicon.ico
+      - name: nadanada
+        url: https://nadanada.me
+        icon: https://nadanada.me/favicon.ico
         acceptsCrypto: true
         description: >-
           Disposable (20-min) and extendable rental (3-month) phone numbers for
