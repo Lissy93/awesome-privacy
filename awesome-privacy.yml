@@ -2655,7 +2655,7 @@ categories:
       - name: uBlock Origin
         url: https://github.com/gorhill/uBlock
         github: gorhill/uBlock
-        icon: https://raw.githubusercontent.com/hectorm/hblock/master/resources/logo/bitmaps/logo-shield-ffffff-h512.png
+        icon: https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg
         followWith: Browser
         description: |
           Light-weight, fast browser extension for Firefox and Chromium (Chrome, Edge, Brave Opera etc), that blocks
