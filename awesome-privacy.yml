@@ -3804,6 +3804,25 @@ categories:
         use to securely remove files or directories, just run `srm -zsv /path/to/file`
         for a single pass over.
 
+    ##################################
+    ###### Maps & Navigation ########
+    ##################################
+    - name: Maps & Navigation
+      alternativeTo: ['Google Maps', 'Apple Maps', 'Mapbox']
+      intro: |
+        Privacy-respecting mapping services and APIs that do not track users
+        or log personal data.
+      services:
+      - name: MapAtlas
+        url: https://mapatlas.eu
+        icon: https://mapatlas.eu/favicon.ico
+        description: >-
+          European privacy-first mapping API providing geocoding, routing, and map tiles.
+          EU-hosted with GDPR compliance, ISO 27001 certification, no user tracking,
+          and no IP logging.
+        openSource: false
+        securityAudited: true
+
 
 
   - name: Operating Systems
