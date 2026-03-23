@@ -1967,9 +1967,9 @@ categories:
           url: https://1time.io/
           icon: https://1time.io/favicon.svg
           openSource: true
-          github: https://github.com/shingrus/1time.io
+          github: shingrus/1time.io
           description: |
-            [1time](https://github.com/shingrus/1time) - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side 
+            1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side 
             encryption, HKDF key derivation, CLI tool, and Docker self-hosting.
 
       wordOfWarning: >
