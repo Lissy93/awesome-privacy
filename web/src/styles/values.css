@@ -24,6 +24,11 @@ html {
 
 	--box-outline: #000;
 
+	--changelog-add: #6fdd8b;
+	--changelog-rem: #fdcc0b;
+	--changelog-mod: #42c1ff;
+	--changelog-rej: #ff2d55;
+
 	&[data-theme='light'] {
 		--accent: #f45397;
 		--accent-fg: #fff;

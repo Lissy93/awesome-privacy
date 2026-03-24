@@ -14,6 +14,7 @@ import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
+import { fetchChangelog } from '@utils/fetch-changelog';
 import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
@@ -175,6 +176,23 @@ const websiteData =
 	url && !ignoredSites.some((ignoredSite) => url.includes(ignoredSite))
 		? await fetchWebsiteInfo(url)
 		: null;
+
+// Filter changelog entries relevant to this service
+const serviceHistory = await fetchChangelog().then(({ entries }) => {
+	const isMatch = (c: { name: string; category: string; section: string }) =>
+		c.name === name && c.category === categoryName && c.section === parentSection.name;
+	const results: Array<{ date: string; type: 'added' | 'removed' | 'modified'; fields?: string[]; pr?: import('@utils/fetch-changelog').ChangelogPr | null }> = [];
+	for (const e of entries) {
+		const s = e.changes?.services;
+		const added = (s?.added || []).find(isMatch);
+		const removed = (s?.removed || []).find(isMatch);
+		const modified = (s?.modified || []).find(isMatch);
+		if (added) results.push({ date: e.date, type: 'added', pr: e.pr });
+		else if (removed) results.push({ date: e.date, type: 'removed', pr: e.pr });
+		else if (modified) results.push({ date: e.date, type: 'modified', fields: modified.fields, pr: e.pr });
+	}
+	return results;
+});
 
 const findPrivacyPolicyLink = () => {
 	if (!privacyData) return null;
@@ -466,6 +484,7 @@ const getApiEndpoint = () => {
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 				serviceName={name}
+				history={serviceHistory}
 			/>
 			<h4>API</h4>
 			<p>
