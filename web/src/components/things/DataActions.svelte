@@ -52,17 +52,36 @@
     {#each history as h (h.date + h.type)}
       <li>
         <span class="history-badge {h.type}">
-          {h.type === 'added' ? 'Added' : h.type === 'removed' ? 'Removed' : 'Amended'}
+          {h.type === 'added'
+            ? 'Added'
+            : h.type === 'removed'
+              ? 'Removed'
+              : 'Amended'}
         </span>
-        <time>{new Date(h.date + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time>
-        {#if h.fields}<span class="history-fields">({h.fields.join(', ')})</span>{/if}
+        <time
+          >{new Date(h.date + 'T00:00:00Z').toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            timeZone: 'UTC',
+          })}</time
+        >
+        {#if h.fields}<span class="history-fields">({h.fields.join(', ')})</span
+          >{/if}
         {#if h.pr?.author}
-          <span class="history-author">by
-            <a href={`https://github.com/${h.pr.author}`} target="_blank" rel="noreferrer">@{h.pr.author}</a>
+          <span class="history-author"
+            >by
+            <a
+              href={`https://github.com/${h.pr.author}`}
+              target="_blank"
+              rel="noreferrer">@{h.pr.author}</a
+            >
           </span>
         {/if}
         {#if h.pr}
-          <a class="history-pr" href={h.pr.url} target="_blank" rel="noreferrer">#{h.pr.number}</a>
+          <a class="history-pr" href={h.pr.url} target="_blank" rel="noreferrer"
+            >#{h.pr.number}</a
+          >
         {/if}
       </li>
     {/each}
@@ -120,37 +139,38 @@
 {/if}
 
 <style lang="scss">
+  @use '../../styles/mixins' as *;
   h4 {
-    font-size: 1.4rem;
+    font-size: var(--text-lg);
     margin-bottom: 0;
   }
   p {
-    margin: 0.25rem 0 0.5rem 0;
+    margin: var(--space-xs) 0 var(--space-sm) 0;
   }
 
   .button-wrap {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     justify-content: center;
-    margin: 1rem auto;
+    margin: var(--space-md) auto;
     @media (max-width: 768px) {
       flex-direction: column;
     }
   }
   .button-link {
     background: var(--accent-3);
-    border: 1px solid var(--box-outline);
-    box-shadow: 3px 3px 0 var(--box-outline);
+    border: var(--border-light);
+    box-shadow: var(--shadow-sm);
     color: var(--accent-fg);
     text-decoration: none;
-    border-radius: 18px;
-    padding: 0.5rem 1rem;
+    border-radius: var(--curve-pill);
+    padding: var(--space-sm) var(--space-md);
     font-weight: bold;
     min-width: 15rem;
     display: inline-block;
     text-align: center;
-    font-family: 'Lekton', sans-serif;
-    font-size: 1.2rem;
+    font-family: var(--font-subtitle);
+    font-size: var(--text-md);
     :global(svg) {
       width: 1rem;
       height: 1rem;
@@ -160,7 +180,7 @@
   .history {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0 1rem 0;
+    margin: var(--space-sm) 0 var(--space-md) 0;
     li {
       display: flex;
       align-items: baseline;
@@ -169,35 +189,58 @@
       padding: 0.3rem 0;
       font-size: 0.95rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      &:last-child { border-bottom: none; }
+      &:last-child {
+        border-bottom: none;
+      }
     }
-    time { opacity: 0.6; font-family: 'Lekton', sans-serif; font-size: 0.85rem; }
+    time {
+      opacity: var(--opacity-muted);
+      font-family: var(--font-subtitle);
+      font-size: var(--text-sm);
+    }
   }
   .history-badge {
-    font-size: 0.7rem;
-    padding: 0.05rem 0.35rem;
-    border-radius: var(--curve-sm);
-    font-family: 'Lekton', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    &.added { background: color-mix(in srgb, var(--changelog-add) 33%, transparent); color: var(--changelog-add); }
-    &.removed { background: color-mix(in srgb, var(--changelog-rem) 33%, transparent); color: var(--changelog-rem); }
-    &.modified { background: color-mix(in srgb, var(--changelog-mod) 33%, transparent); color: var(--changelog-mod); }
+    @include changelog-badge;
+    font-size: var(--text-xs);
+    &.added {
+      background: color-mix(in srgb, var(--changelog-add) 33%, transparent);
+      color: var(--changelog-add);
+    }
+    &.removed {
+      background: color-mix(in srgb, var(--changelog-rem) 33%, transparent);
+      color: var(--changelog-rem);
+    }
+    &.modified {
+      background: color-mix(in srgb, var(--changelog-mod) 33%, transparent);
+      color: var(--changelog-mod);
+    }
   }
-  .history-fields { font-size: 0.8rem; opacity: 0.5; font-style: italic; }
+  .history-fields {
+    font-size: var(--text-sm);
+    opacity: var(--opacity-dim);
+    font-style: italic;
+  }
   .history-author {
-    font-size: 0.85rem; opacity: 0.7;
-    a { color: var(--foreground); &:hover { color: var(--accent); } }
+    font-size: var(--text-sm);
+    opacity: var(--opacity-soft);
+    a {
+      color: var(--foreground);
+      &:hover {
+        color: var(--accent);
+      }
+    }
   }
   .history-pr {
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
     padding: 0.05rem 0.3rem;
     border-radius: var(--curve-sm);
     background: var(--accent-3);
     color: var(--accent-fg);
     text-decoration: none;
-    font-family: 'Lekton', sans-serif;
-    &:hover { opacity: 0.85; }
+    font-family: var(--font-subtitle);
+    &:hover {
+      opacity: 0.85;
+    }
   }
 
   .yaml-embed {
@@ -206,7 +249,7 @@
     border: 1px solid var(--accent-3);
     border-radius: var(--curve-lg);
     padding: 0;
-    margin: 1rem auto;
+    margin: var(--space-md) auto;
     box-shadow: 3px 3px 0 var(--accent-3);
   }
 </style>

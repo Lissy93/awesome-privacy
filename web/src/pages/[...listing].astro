@@ -180,8 +180,15 @@ const websiteData =
 // Filter changelog entries relevant to this service
 const serviceHistory = await fetchChangelog().then(({ entries }) => {
 	const isMatch = (c: { name: string; category: string; section: string }) =>
-		c.name === name && c.category === categoryName && c.section === parentSection.name;
-	const results: Array<{ date: string; type: 'added' | 'removed' | 'modified'; fields?: string[]; pr?: import('@utils/fetch-changelog').ChangelogPr | null }> = [];
+		c.name === name &&
+		c.category === categoryName &&
+		c.section === parentSection.name;
+	const results: Array<{
+		date: string;
+		type: 'added' | 'removed' | 'modified';
+		fields?: string[];
+		pr?: import('@utils/fetch-changelog').ChangelogPr | null;
+	}> = [];
 	for (const e of entries) {
 		const s = e.changes?.services;
 		const added = (s?.added || []).find(isMatch);
@@ -189,7 +196,13 @@ const serviceHistory = await fetchChangelog().then(({ entries }) => {
 		const modified = (s?.modified || []).find(isMatch);
 		if (added) results.push({ date: e.date, type: 'added', pr: e.pr });
 		else if (removed) results.push({ date: e.date, type: 'removed', pr: e.pr });
-		else if (modified) results.push({ date: e.date, type: 'modified', fields: modified.fields, pr: e.pr });
+		else if (modified)
+			results.push({
+				date: e.date,
+				type: 'modified',
+				fields: modified.fields,
+				pr: e.pr,
+			});
 	}
 	return results;
 });
@@ -333,8 +346,8 @@ const getApiEndpoint = () => {
 								<li>
 									<b>Web info:</b>
 									<a
-										href={`https://web-check.xyz/results/${formatLink(url)}`}
-									>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
+										href={`https://web-check.xyz/check/${formatLink(url)}`}
+									>{`web-check.xyz/check/${formatLink(url).split('/')[0]}`}</a>
 								</li>
 							)
 						}
@@ -563,48 +576,48 @@ const getApiEndpoint = () => {
 
 <style lang="scss">
 	main {
-		margin: 2rem auto;
-		padding: 1rem;
-		width: 1200px;
-		max-width: calc(100% - 5rem);
+		margin: var(--space-lg) auto;
+		padding: var(--space-md);
+		width: var(--width-container);
+		max-width: var(--width-container-max);
 		position: relative;
 		@media (max-width: 768px) {
 			max-width: 95%;
-			padding: 0.5rem;
+			padding: var(--space-sm);
 			margin: 0 auto;
 		}
 	}
 
 	section {
-		margin: 1rem 0 4rem 0;
-		padding: 1rem;
+		margin: var(--space-md) 0 var(--space-2xl) 0;
+		padding: var(--space-md);
 		min-height: 8rem;
 		position: relative;
-		border: 2px solid var(--box-outline);
-		box-shadow: 6px 6px 0 var(--box-outline);
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
 		background: var(--accent-fg);
 	}
 
 	p {
-		margin: 0.25rem 0 0.5rem 0;
+		margin: var(--space-xs) 0 var(--space-sm) 0;
 	}
 
 	h3 {
-		font-size: 2rem;
-		margin: -2rem 0 1rem -2rem;
-		box-shadow: 6px 6px 0 var(--box-outline);
+		font-size: var(--text-3xl);
+		margin: -2rem 0 var(--space-md) -2rem;
+		box-shadow: var(--shadow-lg);
 		background: var(--accent);
 		color: var(--accent-fg);
 		width: fit-content;
-		padding: 0.25rem 0.5rem;
+		padding: var(--space-xs) var(--space-sm);
 		@media (max-width: 768px) {
-			margin: -2rem auto 2rem auto;
+			margin: -2rem auto var(--space-lg) auto;
 		}
 	}
 
 	.service-head {
 		h2 {
-			font-size: 3rem;
+			font-size: var(--text-4xl);
 			margin: 0;
 			@media (max-width: 768px) {
 				text-align: center;
@@ -613,13 +626,13 @@ const getApiEndpoint = () => {
 		.url-wrap {
 			display: flex;
 			align-items: center;
-			gap: 0.5rem;
+			gap: var(--space-sm);
 			a {
-				font-size: 1.2rem;
+				font-size: var(--text-md);
 			}
 			.follow-with {
 				font-style: italic;
-				opacity: 0.6;
+				opacity: var(--opacity-muted);
 			}
 			@media (max-width: 768px) {
 				flex-direction: column;
@@ -627,60 +640,41 @@ const getApiEndpoint = () => {
 		}
 	}
 
-	.breadcrumbs {
-		opacity: 0.5;
-		font-size: 0.8rem;
-		position: absolute;
-		right: 1rem;
-		top: 1rem;
-		a {
-			color: var(--foreground);
-			transition: all 0.15s ease-in-out;
-
-			&:hover {
-				color: var(--accent);
-			}
-		}
-		@media (max-width: 768px) {
-			display: none;
-		}
-	}
-
 	.save-listing {
 		position: absolute;
-		top: 3rem;
-		right: 1rem;
+		top: var(--space-xl);
+		right: var(--space-md);
 	}
 
 	h4 {
-		font-size: 1.4rem;
+		font-size: var(--text-lg);
 		margin-bottom: 0;
 	}
 
 	.intro {
-		font-size: 1.2rem;
+		font-size: var(--text-md);
 		font-style: italic;
 		opacity: 0.9;
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--space-sm);
 		@media (max-width: 768px) {
 			flex-direction: column;
 		}
 		.service-icon {
 			border-radius: var(--curve-md);
-			margin-top: 1rem;
+			margin-top: var(--space-md);
 			@media (max-width: 768px) {
-				margin: 1rem auto 0 auto;
+				margin: var(--space-md) auto 0 auto;
 			}
 		}
 		ul {
-			padding-left: 1rem;
+			padding-left: var(--space-md);
 			list-style: circle;
 			font-style: normal;
-			font-size: 1rem;
+			font-size: var(--text-base);
 			margin-top: 0;
 			b {
-				font-size: 1rem;
+				font-size: var(--text-base);
 				font-weight: 400;
 				min-width: 100px;
 				display: inline-block;
@@ -692,93 +686,16 @@ const getApiEndpoint = () => {
 		}
 	}
 
-	.pagination-navigation {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem 0;
-		:global(.button) {
-			min-width: 120px;
-			width: fit-content;
-			padding: 0.25rem 1rem;
-			text-align: right;
-			&:first-child {
-				text-align: left;
-			}
-			p {
-				margin: 0;
-				font-weight: normal;
-				font-size: 1rem;
-			}
-			span {
-				font-size: 0.8rem;
-			}
-		}
-		.nothing {
-			width: 120px;
-		}
-		.go-to-category {
-			color: var(--foreground);
-			font-size: 0.8rem;
-			opacity: 0.5;
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
-	}
-
-	.further-info,
-	.notable-mentions,
-	.word-of-warning {
-		h3 {
-			font-size: 1.4rem;
-			margin: 1rem 0;
-		}
-		:global(p) {
-			font-size: 0.9rem;
-			opacity: 0.7;
-			:global(strong) {
-				font-weight: 500;
-			}
-			:global(a) {
-				color: var(--foreground);
-				transition: all 0.15s ease-in-out;
-				&:hover {
-					color: var(--accent);
-				}
-			}
-		}
-		:global(strong) {
-			font-weight: 500;
-		}
-		:global(h4) {
-			font-size: 1.2rem;
-			margin: 0.5rem 0 0 0;
-		}
-		:global(ul) {
-			list-style: circle;
-			padding-left: 1rem;
-			font-size: 0.9rem;
-			opacity: 0.7;
-			li {
-				margin-bottom: 0.25rem;
-				:global(p) {
-					display: inline;
-				}
-			}
-		}
-	}
-
 	pre {
 		a {
 			text-decoration: none;
 			color: var(--foreground);
 			code {
-				background: #acabb782;
+				background: var(--code-bg);
 				padding: 0.2rem 0.4rem;
 				border-radius: var(--curve-sm);
-				font-family: Courier New;
-				font-size: 0.9rem;
+				font-family: var(--font-code);
+				font-size: var(--text-sm);
 				@media (max-width: 768px) {
 					white-space: break-spaces;
 				}
@@ -788,14 +705,14 @@ const getApiEndpoint = () => {
 
 	.social-wrap {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-md);
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
 	.highlights {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-md);
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: end;
@@ -804,21 +721,20 @@ const getApiEndpoint = () => {
 		.warning {
 			display: flex;
 			align-items: center;
-			// justify-content: center;
-			gap: 0.25rem;
-			opacity: 0.6;
-			font-size: 0.9rem;
-			padding: 0.5rem 0;
+			gap: var(--space-xs);
+			opacity: var(--opacity-muted);
+			font-size: var(--text-sm);
+			padding: var(--space-sm) 0;
 			:global(svg) {
 				color: var(--foreground);
-				width: 1.2rem;
-				height: 1.2rem;
+				width: var(--text-md);
+				height: var(--text-md);
 			}
 			a {
 				text-decoration: none;
 				color: var(--foreground);
 				display: flex;
-				gap: 0.25rem;
+				gap: var(--space-xs);
 				&:hover {
 					color: var(--accent-3);
 					:global(svg) {
@@ -834,9 +750,9 @@ const getApiEndpoint = () => {
 			}
 		}
 		.great {
-			color: #007930; // var(--success);
+			color: var(--success-muted);
 			:global(svg) {
-				color: #007930; // var(--success);
+				color: var(--success-muted);
 			}
 		}
 	}

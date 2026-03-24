@@ -201,8 +201,9 @@ const {
 </section>
 
 <style lang="scss">
+	@use '../../styles/mixins' as *;
 	section {
-		padding: 1rem 0;
+		padding: var(--space-md) 0;
 		position: relative;
 		&:not(:last-child) {
 			border-bottom: 2px solid var(--accent-3);
@@ -210,62 +211,43 @@ const {
 	}
 
 	.nothing-yet {
-		font-size: 1.4rem;
-		opacity: 0.8;
+		font-size: var(--text-lg);
+		opacity: var(--opacity-subtle);
 		font-style: italic;
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: var(--space-xl);
 		.quick-submit {
-			margin-top: 1rem;
-			font-size: 0.8rem;
-			opacity: 0.8;
+			margin-top: var(--space-md);
+			font-size: var(--text-sm);
+			opacity: var(--opacity-subtle);
 		}
 	}
 
 	ul {
 		list-style: none;
 		padding: 0;
-		margin: 0 0 3rem 0;
+		margin: 0 0 var(--space-xl) 0;
 		li {
-			margin-bottom: 1rem;
+			margin-bottom: var(--space-md);
 			position: relative;
 			.save-listing {
 				position: absolute;
-				right: 1rem;
-				top: 1rem;
+				right: var(--space-md);
+				top: var(--space-md);
 			}
 			.service-head {
 				display: flex;
 				align-items: center;
-				gap: 0.5rem;
+				gap: var(--space-sm);
 				flex-wrap: wrap;
 				.service-title {
 					text-decoration: none;
 					color: var(--foreground);
+					@include underline-hover(var(--accent-3));
 					h3,
 					h4 {
 						margin: 0;
-						font-size: 1.6rem;
-					}
-
-					position: relative;
-					&:after {
-						background: none repeat scroll 0 0 transparent;
-						bottom: 0;
-						content: '';
-						display: block;
-						height: 3px;
-						left: 50%;
-						position: absolute;
-						background: var(--accent-3);
-						transition:
-							width 0.3s ease 0s,
-							left 0.3s ease 0s;
-						width: 0;
-					}
-					&:hover:after {
-						width: 100%;
-						left: 0;
+						font-size: var(--text-xl);
 					}
 				}
 
@@ -279,24 +261,22 @@ const {
 					color: var(--accent);
 				}
 				.follow-with {
-					opacity: 0.7;
+					opacity: var(--opacity-soft);
 					font-style: italic;
 					margin: 0;
 				}
 				.service-link {
 					max-width: 300px;
-					text-overflow: ellipsis;
-					overflow: hidden;
-					white-space: nowrap;
+					@include truncate;
 				}
 			}
 
 			.service-body {
-				margin: 0.5rem 0 2rem;
-				opacity: 0.8;
+				margin: var(--space-sm) 0 var(--space-lg);
+				opacity: var(--opacity-subtle);
 				:global(p) {
 					margin: 0;
-					font-size: 1.2rem;
+					font-size: var(--text-md);
 					:global(a) {
 						color: var(--foregorund);
 					}
@@ -304,24 +284,24 @@ const {
 				.service-stats {
 					.left {
 						display: flex;
-						gap: 1rem;
+						gap: var(--space-md);
 						flex-wrap: wrap;
 						align-items: center;
 					}
 					display: flex;
-					gap: 1rem;
+					gap: var(--space-md);
 					flex-wrap: wrap;
 					align-items: center;
 					justify-content: space-between;
 				}
 				.view-service {
-					transition: all 0.2s ease-in-out;
+					transition: var(--transition-normal);
 					opacity: 0.95;
 					a {
-						padding: 0.25rem 0.6rem;
+						padding: var(--space-xs) 0.6rem;
 						width: fit-content;
-						right: 1rem;
-						font-size: 0.9rem;
+						right: var(--space-md);
+						font-size: var(--text-sm);
 						background: var(--accent-3);
 						color: var(--accent-fg);
 						text-decoration: none;
@@ -337,11 +317,9 @@ const {
 				.warning {
 					display: flex;
 					align-items: center;
-					// justify-content: center;
-					gap: 0.25rem;
-					// opacity: 0.6;
-					font-size: 0.9rem;
-					padding: 0.5rem 0;
+					gap: var(--space-xs);
+					font-size: var(--text-sm);
+					padding: var(--space-sm) 0;
 					:global(svg) {
 						color: var(--foreground);
 						width: 1.2rem;
@@ -351,7 +329,7 @@ const {
 						text-decoration: none;
 						color: var(--foreground);
 						display: flex;
-						gap: 0.25rem;
+						gap: var(--space-xs);
 						&:hover {
 							color: var(--accent-3);
 							:global(svg) {
@@ -367,9 +345,9 @@ const {
 					}
 				}
 				.great {
-					color: #0fb953; // var(--success);
+					color: var(--success-muted);
 					:global(svg) {
-						color: #0fb953; // var(--success);
+						color: var(--success-muted);
 					}
 				}
 			}
@@ -379,13 +357,13 @@ const {
 	section :global(.view-all) {
 		width: fit-content;
 		position: absolute;
-		right: 1rem;
+		right: var(--space-md);
 		margin-top: -2.5rem;
 		background: var(--accent-3);
 	}
 
 	li:hover :global(.actions) {
-		opacity: 0.6;
+		opacity: var(--opacity-muted);
 		:global(a):hover {
 			opacity: 1;
 		}

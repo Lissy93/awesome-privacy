@@ -27,15 +27,15 @@ const changelog = await fetchChangelog();
 
 <style lang="scss">
 	h2 {
-		font-size: 2rem;
+		font-size: var(--text-3xl);
 		margin: 0;
 	}
 	p {
-		font-size: 1.2rem;
-		margin: 0 0 1rem 0;
+		font-size: var(--text-md);
+		margin: 0 0 var(--space-md) 0;
 	}
 	.fallback {
 		text-align: center;
-		opacity: 0.6;
+		opacity: var(--opacity-muted);
 	}
 </style>

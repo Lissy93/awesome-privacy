@@ -98,7 +98,7 @@ const removeDuplicates = () => {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-md);
   .left, .right {
     width: calc(50% - 1rem);
     @media screen and (max-width: 768px){
@@ -108,16 +108,16 @@ const removeDuplicates = () => {
 }
 
 h4 {
-    margin: 1rem 0 0 0;
-    font-size: 1.2rem;
+    margin: var(--space-md) 0 0 0;
+    font-size: var(--text-md);
   }
   p {
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: var(--space-xs);
     :global(svg) {
-      width: 1rem;
+      width: var(--text-base);
     }
     img {
       border-radius: var(--curve-sm);
@@ -125,17 +125,17 @@ h4 {
   }
   li {
     :global(svg) {
-      width: 1rem;
+      width: var(--text-base);
       margin-right: 0.2rem;
     }
     &.clasification {
-      &.good :global(svg) { color: #35b969; }
-      &.neutral :global(svg) { color: #ecd40f; }
-      &.bad :global(svg) { color: #e3154f; }
+      &.good :global(svg) { color: var(--rating-a); }
+      &.neutral :global(svg) { color: var(--rating-neutral); }
+      &.bad :global(svg) { color: var(--rating-g); }
     }
   }
   ul {
-    padding-left: 1rem;
+    padding-left: var(--space-md);
     list-style: circle;
     max-height: 700px;
     overflow-y: auto;
@@ -146,42 +146,42 @@ h4 {
     .list-item {
       display: flex;
       flex-direction: column;
-      margin-bottom: 0.5rem;
+      margin-bottom: var(--space-sm);
       .date-block {
-        
-        font-size: 0.8rem;
-        opacity: 0.7;
+
+        font-size: var(--text-sm);
+        opacity: var(--opacity-soft);
       }
     }
     &.no-point {
       list-style: none;
-      padding-left: 0.25rem;
+      padding-left: var(--space-xs);
     }
   }
 
   .rating {
     font-size: 4rem;
     width: fit-content;
-    padding: 0.5rem 1.5rem;
+    padding: var(--space-sm) 1.5rem;
     border-radius: var(--curve-lg);
     border: 4px solid;
     margin: 0 auto;
     font-weight: bold;
 
-    &.rating-A { --rating-color: #35b969; }
-    &.rating-B { --rating-color: #6bb935; }
-    &.rating-C { --rating-color: #c7cc22; }
-    &.rating-D { --rating-color: #e1bb23; }
-    &.rating-E { --rating-color: #df8b1e; }
-    &.rating-F { --rating-color: #df541e; }
-    &.rating-G { --rating-color: #df1e1e; }
+    &.rating-A { --rating-color: var(--rating-a); }
+    &.rating-B { --rating-color: var(--rating-b); }
+    &.rating-C { --rating-color: var(--rating-c); }
+    &.rating-D { --rating-color: var(--rating-d); }
+    &.rating-E { --rating-color: var(--rating-e); }
+    &.rating-F { --rating-color: var(--rating-f); }
+    &.rating-G { --rating-color: var(--rating-g); }
     color: var(--rating-color);
     border-color: var(--rating-color);
   }
 
   .about-tosdr {
     display: inline;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-soft);
   }
 </style>

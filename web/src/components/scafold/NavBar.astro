@@ -27,26 +27,26 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: var(--space-md);
 		border-bottom: 2px solid var(--accent-3);
 
 		.homepage {
 			text-decoration: none;
 			display: flex;
 			align-items: center;
-			padding: 0 0.5rem;
+			padding: 0 var(--space-sm);
 			h1 {
 				margin: 0;
 				font-size: 2.4rem;
-				padding: 0 1rem;
+				padding: 0 var(--space-md);
 				color: var(--foreground);
-				font-family: 'Lekton', sans-serif;
+				font-family: var(--font-subtitle);
 			}
 			:global(svg) {
 				width: 2.5rem;
 				height: 2.5rem;
 				color: var(--accent-3);
-				transition: all 0.2s ease-in-out;
+				transition: var(--transition-normal);
 			}
 			&:hover {
 				:global(svg) {
@@ -61,9 +61,9 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 			align-items: center;
 			height: 3rem;
 			a {
-				padding: 1rem;
-				font-size: 1.2rem;
-				font-family: 'Lekton', sans-serif;
+				padding: var(--space-md);
+				font-size: var(--text-md);
+				font-family: var(--font-subtitle);
 				font-weight: bold;
 				color: var(--foreground);
 				transition:

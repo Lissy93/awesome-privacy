@@ -79,45 +79,45 @@
 </section>
 
 <style lang="scss">
+  @use '../../styles/mixins' as *;
   h3 {
     width: 80vw;
     max-width: 900px;
-    margin: 1rem auto;
+    margin: var(--space-md) auto;
     color: var(--accent-3);
-    font-size: 1.6rem;
+    font-size: var(--text-xl);
   }
   section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: var(--space-md);
     width: 80vw;
     max-width: 900px;
     margin: 0 auto;
     .service-result {
       background: var(--accent-fg);
-      padding: 1rem;
+      padding: var(--space-md);
       border-radius: var(--curve-sm);
-      border: 1px solid var(--box-outline);
-      box-shadow: 3px 3px 0 var(--box-outline);
+      border: var(--border-light);
+      box-shadow: var(--shadow-sm);
       color: var(--foreground);
       text-decoration: none;
 
       .service-head {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: var(--space-sm);
         h4 {
           margin: 0;
-          font-size: 1.6rem;
+          font-size: var(--text-xl);
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: var(--space-sm);
           .follow-with {
-            opacity: 0.7;
+            opacity: var(--opacity-soft);
             font-style: italic;
             margin: 0;
-            font-size: 0.85rem;
-            font-weight: 400;
+            font-size: var(--text-sm);
             max-width: 100px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -137,9 +137,7 @@
 
         .service-link {
           max-width: 300px;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
+          @include truncate;
         }
       }
     }

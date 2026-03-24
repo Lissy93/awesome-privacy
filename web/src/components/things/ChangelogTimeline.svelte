@@ -1,5 +1,10 @@
 <script lang="ts">
-  import type { ChangelogEntry, ServiceChange, Rejection, ChangelogPr } from '../../utils/fetch-changelog';
+  import type {
+    ChangelogEntry,
+    ServiceChange,
+    Rejection,
+    ChangelogPr,
+  } from '../../utils/fetch-changelog';
   import { slugify } from '@utils/fetch-data';
 
   export let entries: ChangelogEntry[] = [];
@@ -14,18 +19,41 @@
     { key: 'rejected', label: 'Rejections', icon: '✕' },
   ];
 
-  let on: Record<Filter, boolean> = { added: true, removed: true, modified: true, rejected: true };
+  let on: Record<Filter, boolean> = {
+    added: true,
+    removed: true,
+    modified: true,
+    rejected: true,
+  };
   let searchQuery = '';
 
-  function toggle(key: Filter) { on = { ...on, [key]: !on[key] }; }
+  function toggle(key: Filter) {
+    on = { ...on, [key]: !on[key] };
+  }
 
   type TimelineItem =
-    | { kind: 'entry'; date: string; sha: string; pr?: ChangelogPr | null; data: ChangelogEntry }
-    | { kind: 'rejection'; date: string; sha: string; pr: ChangelogPr; data: Rejection };
+    | {
+        kind: 'entry';
+        date: string;
+        sha: string;
+        pr?: ChangelogPr | null;
+        data: ChangelogEntry;
+      }
+    | {
+        kind: 'rejection';
+        date: string;
+        sha: string;
+        pr: ChangelogPr;
+        data: Rejection;
+      };
 
   const svc = (e: ChangelogEntry) => {
     const s = e.changes?.services;
-    return { added: s?.added || [], removed: s?.removed || [], modified: s?.modified || [] };
+    return {
+      added: s?.added || [],
+      removed: s?.removed || [],
+      modified: s?.modified || [],
+    };
   };
   const sec = (e: ChangelogEntry) => {
     const s = e.changes?.sections;
@@ -36,31 +64,54 @@
     return { added: c?.added || [], removed: c?.removed || [] };
   };
 
-  function matchesFilters(item: TimelineItem, f: Record<Filter, boolean>): boolean {
+  function matchesFilters(
+    item: TimelineItem,
+    f: Record<Filter, boolean>,
+  ): boolean {
     if (item.kind === 'rejection') return f.rejected;
-    const s = svc(item.data), sc = sec(item.data), ct = cat(item.data);
-    return (f.added && (s.added.length > 0 || sc.added.length > 0 || ct.added.length > 0))
-        || (f.removed && (s.removed.length > 0 || sc.removed.length > 0 || ct.removed.length > 0))
-        || (f.modified && s.modified.length > 0);
+    const s = svc(item.data),
+      sc = sec(item.data),
+      ct = cat(item.data);
+    return (
+      (f.added &&
+        (s.added.length > 0 || sc.added.length > 0 || ct.added.length > 0)) ||
+      (f.removed &&
+        (s.removed.length > 0 ||
+          sc.removed.length > 0 ||
+          ct.removed.length > 0)) ||
+      (f.modified && s.modified.length > 0)
+    );
   }
 
   function matchesSearch(item: TimelineItem, query: string): boolean {
     if (!query) return true;
     const q = query.toLowerCase();
     if (item.kind === 'rejection') {
-      return item.data.title.toLowerCase().includes(q)
-          || (item.pr.author?.toLowerCase().includes(q) ?? false);
+      return (
+        item.data.title.toLowerCase().includes(q) ||
+        (item.pr.author?.toLowerCase().includes(q) ?? false)
+      );
     }
-    const all = [...svc(item.data).added, ...svc(item.data).removed, ...svc(item.data).modified];
-    return all.some(c => c.name.toLowerCase().includes(q)
-                      || `${c.category} ${c.section}`.toLowerCase().includes(q))
-        || (item.pr?.author?.toLowerCase().includes(q) ?? false);
+    const all = [
+      ...svc(item.data).added,
+      ...svc(item.data).removed,
+      ...svc(item.data).modified,
+    ];
+    return (
+      all.some(
+        (c) =>
+          c.name.toLowerCase().includes(q) ||
+          `${c.category} ${c.section}`.toLowerCase().includes(q),
+      ) ||
+      (item.pr?.author?.toLowerCase().includes(q) ?? false)
+    );
   }
 
   const pl = (n: number, word: string) => `${n} ${word}${n > 1 ? 's' : ''}`;
 
   function summarize(entry: ChangelogEntry): string {
-    const s = svc(entry), sc = sec(entry);
+    const s = svc(entry),
+      sc = sec(entry);
     const parts: string[] = [];
     if (s.added.length) parts.push(pl(s.added.length, 'addition'));
     if (s.removed.length) parts.push(pl(s.removed.length, 'removal'));
@@ -71,52 +122,136 @@
   }
 
   function serviceLink(s: ServiceChange, isRemoval: boolean): string {
-    const c = slugify(s.category), sc = slugify(s.section);
+    const c = slugify(s.category),
+      sc = slugify(s.section);
     return isRemoval ? `/${c}/${sc}` : `/${c}/${sc}/${slugify(s.name)}`;
   }
 
-  type ChangeRow = { badge: string; cls: string; name: string; href: string; path: string; fields?: string[] };
+  type ChangeRow = {
+    badge: string;
+    cls: string;
+    name: string;
+    href: string;
+    path: string;
+    fields?: string[];
+  };
 
   function changeRows(e: ChangelogEntry): ChangeRow[] {
-    const s = svc(e), sc = sec(e), ct = cat(e);
+    const s = svc(e),
+      sc = sec(e),
+      ct = cat(e);
     return [
-      ...s.added.map(v => ({ badge: 'Added', cls: 'add', name: v.name, href: serviceLink(v, false), path: `into ${v.category} › ${v.section}` })),
-      ...s.removed.map(v => ({ badge: 'Removed', cls: 'rem', name: v.name, href: serviceLink(v, true), path: `from ${v.category} › ${v.section}` })),
-      ...s.modified.map(v => ({ badge: 'Amended', cls: 'mod', name: v.name, href: serviceLink(v, false), path: `in ${v.category} › ${v.section}`, fields: v.fields })),
-      ...sc.added.map(v => ({ badge: 'New Section', cls: 'add', name: v.name, href: `/${slugify(v.category)}/${slugify(v.name)}` })),
-      ...sc.removed.map(v => ({ badge: 'Section Removed', cls: 'rem', name: v.name, href: '' })),
-      ...ct.added.map(v => ({ badge: 'New Category', cls: 'add', name: v, href: '' })),
-      ...ct.removed.map(v => ({ badge: 'Category Removed', cls: 'rem', name: v, href: '' })),
+      ...s.added.map((v) => ({
+        badge: 'Added',
+        cls: 'add',
+        name: v.name,
+        href: serviceLink(v, false),
+        path: `into ${v.category} › ${v.section}`,
+      })),
+      ...s.removed.map((v) => ({
+        badge: 'Removed',
+        cls: 'rem',
+        name: v.name,
+        href: serviceLink(v, true),
+        path: `from ${v.category} › ${v.section}`,
+      })),
+      ...s.modified.map((v) => ({
+        badge: 'Amended',
+        cls: 'mod',
+        name: v.name,
+        href: serviceLink(v, false),
+        path: `in ${v.category} › ${v.section}`,
+        fields: v.fields,
+      })),
+      ...sc.added.map((v) => ({
+        badge: 'New Section',
+        cls: 'add',
+        name: v.name,
+        href: `/${slugify(v.category)}/${slugify(v.name)}`,
+      })),
+      ...sc.removed.map((v) => ({
+        badge: 'Section Removed',
+        cls: 'rem',
+        name: v.name,
+        href: '',
+      })),
+      ...ct.added.map((v) => ({
+        badge: 'New Category',
+        cls: 'add',
+        name: v,
+        href: '',
+      })),
+      ...ct.removed.map((v) => ({
+        badge: 'Category Removed',
+        cls: 'rem',
+        name: v,
+        href: '',
+      })),
     ];
   }
 
   $: allItems = [
-    ...entries.map((e): TimelineItem => ({ kind: 'entry', date: e.date, sha: e.sha, pr: e.pr, data: e })),
-    ...rejections.map((r): TimelineItem => ({ kind: 'rejection', date: r.date, sha: `rej-${r.pr.number}`, pr: r.pr, data: r })),
+    ...entries.map(
+      (e): TimelineItem => ({
+        kind: 'entry',
+        date: e.date,
+        sha: e.sha,
+        pr: e.pr,
+        data: e,
+      }),
+    ),
+    ...rejections.map(
+      (r): TimelineItem => ({
+        kind: 'rejection',
+        date: r.date,
+        sha: `rej-${r.pr.number}`,
+        pr: r.pr,
+        data: r,
+      }),
+    ),
   ].sort((a, b) => b.date.localeCompare(a.date));
 
-  $: filtered = allItems.filter(item => matchesFilters(item, on) && matchesSearch(item, searchQuery));
+  $: filtered = allItems.filter(
+    (item) => matchesFilters(item, on) && matchesSearch(item, searchQuery),
+  );
 
   $: grouped = filtered.reduce<Record<string, TimelineItem[]>>((acc, item) => {
     const d = new Date(item.date + 'T00:00:00Z');
-    const key = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+    const key = d.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      timeZone: 'UTC',
+    });
     (acc[key] ??= []).push(item);
     return acc;
   }, {});
 
   function formatDate(dateStr: string): string {
-    return new Date(dateStr + 'T00:00:00Z')
-      .toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    return new Date(dateStr + 'T00:00:00Z').toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+      timeZone: 'UTC',
+    });
   }
 </script>
 
 <details class="controls">
   <summary>Search &amp; Filter</summary>
   <div class="controls-body">
-    <input class="search" type="text" placeholder="Search..." bind:value={searchQuery} />
+    <input
+      class="search"
+      type="text"
+      placeholder="Search..."
+      bind:value={searchQuery}
+    />
     <div class="filters">
       {#each filterDefs as f (f.key)}
-        <button class="pill {f.key}" class:active={on[f.key]} on:click={() => toggle(f.key)}>
+        <button
+          class="pill {f.key}"
+          class:active={on[f.key]}
+          on:click={() => toggle(f.key)}
+        >
           <span class="icon">{f.icon}</span>{f.label}
         </button>
       {/each}
@@ -136,18 +271,42 @@
       <div class="entry-body">
         <div class="summary">
           {#if item.pr?.authorAvatar}
-            <a href={`https://github.com/${item.pr.author}`} target="_blank" rel="noreferrer">
-              <img class="avatar" src={item.pr.authorAvatar} alt="" width="20" height="20" loading="lazy" />
+            <a
+              href={`https://github.com/${item.pr.author}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                class="avatar"
+                src={item.pr.authorAvatar}
+                alt=""
+                width="20"
+                height="20"
+                loading="lazy"
+              />
             </a>
           {/if}
           {#if item.pr?.author}
-            <span class="author"><a href={`https://github.com/${item.pr.author}`} target="_blank" rel="noreferrer">@{item.pr.author}</a></span>
+            <span class="author"
+              ><a
+                href={`https://github.com/${item.pr.author}`}
+                target="_blank"
+                rel="noreferrer">@{item.pr.author}</a
+              ></span
+            >
           {/if}
           <span class="summary-text">
-            {item.kind === 'rejection' ? 'Submission Reviewed' : summarize(item.data)}
+            {item.kind === 'rejection'
+              ? 'Submission Reviewed'
+              : summarize(item.data)}
           </span>
           {#if item.pr}
-            <a class="pr-link" href={item.pr.url} target="_blank" rel="noreferrer">#{item.pr.number}</a>
+            <a
+              class="pr-link"
+              href={item.pr.url}
+              target="_blank"
+              rel="noreferrer">#{item.pr.number}</a
+            >
           {/if}
         </div>
 
@@ -155,7 +314,12 @@
           {#if item.kind === 'rejection'}
             <div class="change">
               <span class="badge rej">Rejected</span>
-              <a class="svc-name" href={item.pr.url} target="_blank" rel="noreferrer">{item.data.title}</a>
+              <a
+                class="svc-name"
+                href={item.pr.url}
+                target="_blank"
+                rel="noreferrer">{item.data.title}</a
+              >
               <span class="path">Not merged</span>
             </div>
           {:else}
@@ -163,12 +327,19 @@
               <div class="change">
                 <span class="badge {row.cls}">{row.badge}</span>
                 {#if row.href}
-                  <a class="svc-name" class:removed={row.cls === 'rem'} href={row.href}>{row.name}</a>
+                  <a
+                    class="svc-name"
+                    class:removed={row.cls === 'rem'}
+                    href={row.href}>{row.name}</a
+                  >
                 {:else}
                   <strong>{row.name}</strong>
                 {/if}
-                {#if row.fields}<span class="fields">updated {row.fields.join(', ')}</span>{/if}
-                {#if row.path && !row.fields}<span class="path">{row.path}</span>{/if}
+                {#if row.fields}<span class="fields"
+                    >updated {row.fields.join(', ')}</span
+                  >{/if}
+                {#if row.path && !row.fields}<span class="path">{row.path}</span
+                  >{/if}
               </div>
             {/each}
           {/if}
@@ -179,14 +350,15 @@
 {/each}
 
 <style lang="scss">
+  @use '../../styles/mixins' as *;
   .controls {
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
 
     summary {
       cursor: pointer;
       width: fit-content;
-      font-family: 'Lekton', sans-serif;
-      opacity: 0.6;
+      font-family: var(--font-subtitle);
+      opacity: var(--opacity-muted);
       &:hover {
         opacity: 1;
       }
@@ -196,16 +368,16 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      gap: 1rem;
-      margin-top: 0.5rem;
+      gap: var(--space-md);
+      margin-top: var(--space-sm);
     }
 
     .search {
       width: 200px;
       padding: 0.35rem 0.75rem;
-      border: 2px solid var(--box-outline);
+      border: var(--border-heavy);
       border-radius: var(--curve-lg);
-      box-shadow: 2px 2px 0 var(--box-outline);
+      box-shadow: var(--shadow-xs);
       background: var(--accent-fg);
       color: var(--foreground);
       &:focus {
@@ -214,7 +386,7 @@
         box-shadow: 2px 2px 0 var(--accent);
       }
       &::placeholder {
-        opacity: 0.5;
+        opacity: var(--opacity-dim);
       }
     }
 
@@ -227,20 +399,20 @@
     .pill {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
-      padding: 0.15rem 0.5rem;
+      gap: var(--space-xs);
+      padding: 0.15rem var(--space-sm);
       border: 1px solid transparent;
       border-radius: var(--curve-md);
       background: var(--background);
       color: var(--foreground);
       cursor: pointer;
-      font-family: 'Lekton', sans-serif;
-      font-size: 0.75rem;
-      opacity: 0.5;
-      transition: opacity 0.2s ease-in-out;
+      font-family: var(--font-subtitle);
+      font-size: var(--text-xs);
+      opacity: var(--opacity-dim);
+      transition: var(--transition-normal);
 
       .icon {
-        font-size: 0.85rem;
+        font-size: var(--text-sm);
         line-height: 1;
       }
       &.active {
@@ -248,42 +420,58 @@
         border-color: currentColor;
       }
       &.added {
-        &.active { color: var(--changelog-add); }
-        &:hover { background: color-mix(in srgb, var(--changelog-add) 10%, transparent); }
+        &.active {
+          color: var(--changelog-add);
+        }
+        &:hover {
+          background: color-mix(in srgb, var(--changelog-add) 10%, transparent);
+        }
       }
       &.removed {
-        &.active { color: var(--changelog-rem); }
-        &:hover { background: color-mix(in srgb, var(--changelog-rem) 10%, transparent); }
+        &.active {
+          color: var(--changelog-rem);
+        }
+        &:hover {
+          background: color-mix(in srgb, var(--changelog-rem) 10%, transparent);
+        }
       }
       &.modified {
-        &.active { color: var(--changelog-mod); }
-        &:hover { background: color-mix(in srgb, var(--changelog-mod) 10%, transparent); }
+        &.active {
+          color: var(--changelog-mod);
+        }
+        &:hover {
+          background: color-mix(in srgb, var(--changelog-mod) 10%, transparent);
+        }
       }
       &.rejected {
-        &.active { color: var(--changelog-rej); }
-        &:hover { background: color-mix(in srgb, var(--changelog-rej) 10%, transparent); }
+        &.active {
+          color: var(--changelog-rej);
+        }
+        &:hover {
+          background: color-mix(in srgb, var(--changelog-rej) 10%, transparent);
+        }
       }
     }
   }
 
   .empty {
     text-align: center;
-    opacity: 0.6;
-    margin: 2rem 0;
+    opacity: var(--opacity-muted);
+    margin: var(--space-lg) 0;
   }
 
   .month-header {
-    font-size: 1.3rem;
-    margin: 1.5rem 0 0.5rem 0;
+    font-size: var(--text-lg);
+    margin: 1.5rem 0 var(--space-sm) 0;
     padding-bottom: 0.3rem;
     border-bottom: 1px solid var(--accent-3);
     color: var(--accent-3);
-    font-family: 'Lekton', sans-serif;
+    font-family: var(--font-subtitle);
   }
 
   .entry {
     display: flex;
-    gap: 1rem;
+    gap: var(--space-md);
     padding: 0.6rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     &:last-child {
@@ -294,7 +482,7 @@
       min-width: 7rem;
       opacity: 0.75;
       padding-top: 0.15rem;
-      font-family: 'Lekton', sans-serif;
+      font-family: var(--font-subtitle);
     }
 
     .entry-body {
@@ -309,8 +497,8 @@
     gap: 0.4rem;
     flex-wrap: wrap;
     margin-bottom: 0.3rem;
-    font-size: 0.85rem;
-    opacity: 0.8;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-subtle);
     .author a {
       color: var(--foreground);
       &:hover {
@@ -326,7 +514,7 @@
       background: var(--accent-3);
       color: var(--foreground);
       text-decoration: none;
-      font-family: 'Lekton', sans-serif;
+      font-family: var(--font-subtitle);
       &:hover {
         opacity: 0.85;
       }
@@ -346,12 +534,7 @@
   }
 
   .badge {
-    font-size: 0.8rem;
-    padding: 0.05rem 0.35rem;
-    border-radius: var(--curve-sm);
-    font-family: 'Lekton', sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
+    @include changelog-badge;
     &.add {
       background: color-mix(in srgb, var(--changelog-add) 33%, transparent);
       color: var(--changelog-add);
@@ -382,14 +565,14 @@
 
   .path,
   .fields {
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-muted);
   }
   .fields {
     font-style: italic;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .entry {
       flex-direction: column;
       gap: 0.2rem;

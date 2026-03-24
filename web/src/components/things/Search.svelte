@@ -136,28 +136,27 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 1rem auto;
     max-width: 900px;
     margin: 0 auto;
     width: 80vw;
     label {
-      margin: 0.5rem 0;
+      margin: var(--space-sm) 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       .enter-hint {
-        font-size: 0.8rem;
-        opacity: 0.7;
+        font-size: var(--text-sm);
+        opacity: var(--opacity-soft);
       }
     }
 
     input {
-      padding: 0.5rem 1rem;
-      font-size: 1.8rem;
-      border: 2px solid var(--box-outline);
+      padding: var(--space-sm) var(--space-md);
+      font-size: var(--text-2xl);
+      border: var(--border-heavy);
       border-radius: var(--curve-lg);
-      box-shadow: 3px 3px 0 var(--box-outline);
+      box-shadow: var(--shadow-sm);
       z-index: 4;
       background: var(--accent-fg);
       color: var(--foreground);
@@ -178,16 +177,16 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        border: 2px solid var(--box-outline);
+        border: var(--border-heavy);
         border-radius: 0 0 var(--curve-lg) var(--curve-lg);
-        box-shadow: 3px 3px 0 var(--box-outline);
+        box-shadow: var(--shadow-sm);
         transform: translateY(-0.5rem);
         max-height: 500px;
         overflow-y: scroll;
         background: var(--background-form);
         li.result-row {
-          padding: 0.5rem 1rem;
-          margin: 0.5rem 0;
+          padding: var(--space-sm) var(--space-md);
+          margin: var(--space-sm) 0;
           a {
             color: var(--foreground);
             text-decoration: none;
@@ -197,7 +196,7 @@
             .name {
               display: flex;
               align-items: center;
-              gap: 0.5rem;
+              gap: var(--space-sm);
               i {
                 color: var(--accent);
                 font-weight: bold;
@@ -210,13 +209,13 @@
                 font-size: 10px;
                 color: var(--accent);
                 overflow: hidden;
-                background: #f453974d;
+                background: var(--accent-translucent);
                 padding: 1px;
               }
             }
             .path {
-              font-size: 0.85rem;
-              opacity: 0.7;
+              font-size: var(--text-sm);
+              opacity: var(--opacity-soft);
             }
           }
           &:hover {

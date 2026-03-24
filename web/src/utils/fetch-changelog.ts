@@ -1,8 +1,8 @@
 import { error } from './logger';
 
 const changelogUrl =
-  'https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/.github/changelog.json';
-  // 'https://gist.githubusercontent.com/Lissy93/ddae176f3f21a0d3c0251f5f6cbd3b09/raw/0d5f8fbbb642be62af94fae8f83ed55b48ed355c/changelog.json';
+  // 'https://raw.githubusercontent.com/Lissy93/awesome-privacy/main/.github/changelog.json';
+  'https://gist.githubusercontent.com/Lissy93/ddae176f3f21a0d3c0251f5f6cbd3b09/raw/d0f897eae31bdccce58744d0dc8b444a45beba3b/changelog.json';
 
 export interface ChangelogPr {
   number: number;

@@ -136,51 +136,50 @@ const commits = ((await fetchGitHubStats('lissy93/awesome-privacy')) || {})
 
 <style lang="scss">
 	section {
-		margin: 2rem auto;
-		padding: 1rem;
-		width: 1000px;
-		max-width: calc(100% - 5rem);
+		margin: var(--space-lg) auto;
+		width: var(--width-container-narrow);
+		max-width: var(--width-container-max);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 0 2rem;
-		border: 2px solid var(--box-outline);
-		box-shadow: 6px 6px 0 var(--box-outline);
+		padding: 0 var(--space-lg);
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
 		background: var(--accent-fg);
 		border-radius: var(--curve-sm);
 		@media (max-width: 768px) {
 			max-width: 95%;
-			padding: 0.5rem;
+			padding: var(--space-sm);
 			margin: 0 auto;
 		}
 		p {
 			margin-top: 0;
 		}
 		h2 {
-			margin-bottom: 0.5rem;
+			margin-bottom: var(--space-sm);
 		}
 		ul {
 			margin-top: 0;
-			padding-left: 1rem;
+			padding-left: var(--space-md);
 			list-style: circle;
 		}
 		.about-data {
-			font-size: 1.2rem;
+			font-size: var(--text-md);
 		}
 
 		.commit-log {
 			column-width: 350px;
 			li {
 				small {
-					font-size: 0.8rem;
-					opacity: 0.7;
+					font-size: var(--text-sm);
+					opacity: var(--opacity-soft);
 					a {
 						text-transform: capitalize;
 					}
 				}
 				img {
 					border-radius: var(--curve-md);
-					margin-right: 0.5rem;
+					margin-right: var(--space-sm);
 				}
 			}
 		}

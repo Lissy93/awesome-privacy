@@ -50,53 +50,28 @@ const { discordData } = Astro.props;
 </div>
 
 <style lang="scss">
+	@use '../../styles/mixins' as *;
 	.discord-info-wrapper {
 		display: flex;
 		flex-direction: column;
 		max-width: 400px;
 	}
 
+	@include detail-info-base;
+
 	h3 {
 		margin: 0;
-		font-size: 1.6rem;
-	}
-
-	h4 {
-		margin: 1rem 0 0 0;
-		font-size: 1.2rem;
+		font-size: var(--text-xl);
 	}
 
 	ul {
-		padding-left: 0;
-		list-style: none;
-		max-height: 300px;
-		overflow-y: auto;
-		overflow-x: hidden;
-		img {
-			border-radius: var(--curve-sm);
-		}
-		.list-item {
-			display: flex;
-			flex-direction: column;
-			margin-bottom: 0.5rem;
-		}
-		&.list-table {
-			font-size: 0.9rem;
-			padding-left: 0;
-			li {
-				display: flex;
-				justify-content: space-between;
-				padding: 0.1rem 0;
-				.lbl {
-					font-weight: 400;
-				}
-				.val {
-					img {
-						margin-right: 0.5rem;
-					}
-				}
-				&:not(:last-child) {
-					border-bottom: 1px solid #5f53f440;
+		&.list-table li {
+			.lbl {
+				font-weight: 400;
+			}
+			.val {
+				img {
+					margin-right: var(--space-sm);
 				}
 			}
 		}
@@ -104,7 +79,7 @@ const { discordData } = Astro.props;
 
 	.banner {
 		width: 80%;
-		margin: 1rem auto 0 auto;
+		margin: var(--space-md) auto 0 auto;
 		display: flex;
 		border-radius: var(--curve-md);
 	}

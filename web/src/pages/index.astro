@@ -80,11 +80,12 @@ const description =
 </Layout>
 
 <style lang="scss">
+	@use '../styles/mixins' as *;
 	main {
 		margin: auto;
-		padding: 1rem;
-		width: 1100px;
-		max-width: calc(100% - 5rem);
+		padding: var(--space-md);
+		width: var(--width-container);
+		max-width: var(--width-container-max);
 		font-size: 20px;
 		line-height: 1.6;
 		@media (max-width: 768px) {
@@ -95,69 +96,50 @@ const description =
 			width: 16rem;
 			margin: 0 auto;
 			span {
-				opacity: 0.5;
-				font-size: 1rem;
+				opacity: var(--opacity-dim);
+				font-size: var(--text-base);
 			}
 		}
 	}
 	h2 {
-		font-size: 3rem;
+		font-size: var(--text-4xl);
 		color: var(--accent-3);
-		font-family: 'Lekton', sans-serif;
+		font-family: var(--font-subtitle);
 		text-align: center;
-		margin: 3rem 0 1rem 0;
+		margin: var(--space-xl) 0 var(--space-md) 0;
 		a {
 			text-decoration: none;
 			color: var(--accent-3);
-			font-family: 'Lekton', sans-serif;
-			position: relative;
-			&:after {
-				background: none repeat scroll 0 0 transparent;
-				bottom: 0;
-				content: '';
-				display: block;
-				height: 3px;
-				left: 50%;
-				position: absolute;
-				background: var(--accent);
-				transition:
-					width 0.3s ease 0s,
-					left 0.3s ease 0s;
-				width: 0;
-			}
-			&:hover:after {
-				width: 100%;
-				left: 0;
-			}
+			@include underline-hover(var(--accent));
 		}
 	}
 
 	.about-summary {
 		background: var(--accent-fg);
-		border: 2px solid var(--box-outline);
+		border: var(--border-heavy);
 		border-radius: var(--curve-sm);
-		box-shadow: 4px 4px 0 var(--box-outline);
-		padding: 1rem;
+		box-shadow: var(--shadow-md);
+		padding: var(--space-md);
 		width: 85%;
 		margin: 0 auto;
 	}
 
 	.categories {
 		columns: 6 300px;
-		column-gap: 1rem;
+		column-gap: var(--space-md);
 		padding: 0;
 		.category {
 			background: var(--accent-fg);
-			border: 2px solid var(--box-outline);
+			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
-			box-shadow: 4px 4px 0 var(--box-outline);
-			padding: 1rem;
+			box-shadow: var(--shadow-md);
+			padding: var(--space-md);
 			width: 85%;
 			display: inline-flex;
 			flex-direction: column;
-			margin: 1rem;
+			margin: var(--space-md);
 			@media (max-width: 768px) {
-				margin: 1rem 0;
+				margin: var(--space-md) 0;
 				width: 90%;
 			}
 			.category-title {
@@ -165,13 +147,13 @@ const description =
 				color: var(--foreground);
 			}
 			h3 {
-				font-family: 'Lekton', sans-serif;
+				font-family: var(--font-subtitle);
 				font-weight: bold;
 				margin: 0;
-				font-size: 1.8rem;
+				font-size: var(--text-2xl);
 			}
 			.sections {
-				padding-left: 1rem;
+				padding-left: var(--space-md);
 				.section {
 					a {
 						text-decoration: none;
