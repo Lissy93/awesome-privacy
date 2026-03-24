@@ -4311,12 +4311,6 @@ TikTok, and more.*
 		[![GitHub: FFmpeg/FFmpeg](https://img.shields.io/github/stars/FFmpeg/FFmpeg?style=flat&logo=github&label=FFmpeg&color=%235f53f4&cacheSeconds=3600)](https://github.com/FFmpeg/FFmpeg) [![FFmpeg on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=FFmpeg)](https://awesome-privacy.xyz/media/file-converters/ffmpeg) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/FFmpeg/FFmpeg)ㅤ 
 
 		</details>
-		
-- **[fileGOD](https://filegod.app)** - 37 browser-based tools for PDFs and images (compress, convert, merge, split, resize, OCR, QR codes). All processing runs client-side via WebAssembly. No files ever leave your device. 25 languages, works offline as PWA. Open source core.
-	- <details>
-		<summary>Stats</summary>
-		[![GitHub: fileGOD/file-tools](https://img.shields.io/github/stars/fileGOD/file-tools?style=flat&logo=github&label=file-tools&color=%235f53f4&cacheSeconds=3600)](https://github.com/fileGOD/file-tools) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/fileGOD/file-tools)ㅤ
-		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
