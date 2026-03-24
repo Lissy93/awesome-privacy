@@ -44,6 +44,15 @@ BOT_MSG = (
     "Submissions are only accepted from humans."
     " This PR appears to have been authored by a bot or AI assistant."
 )
+MISSING_TYPE_MSG = (
+    "Please specify the PR type (under the Type heading of the PR template),"
+    " for example 'Addition', 'Amendment' or 'Removal'"
+)
+
+_VALID_TYPES = re.compile(
+    r"addition|amendment|removal|spelling|grammar|website|lib|ci|api|misc|other",
+    re.IGNORECASE,
+)
 
 _BOT_AUTHOR_RE = re.compile(
     r"(?:noreply@anthropic\.com|devin-ai-integration|copilot-swe-agent|noreply@cursor\.com)",
@@ -86,17 +95,29 @@ def check_template(body):
     return None
 
 
-def check_checkboxes(body):
-    """Return a finding if any checklist checkboxes are unchecked."""
+def check_checkboxes(body, min_checkboxes=4):
+    """Return a finding if any checklist checkboxes are unchecked or missing."""
     section = extract_section(body, "Checklist")
     if section is None:
         return None
     checked = re.findall(r"- \[x\]", section, re.IGNORECASE)
     unchecked = re.findall(r"- \[ \]", section)
-    if not checked and not unchecked:
-        return None
+    total = len(checked) + len(unchecked)
+    if total < min_checkboxes:
+        return CHECKBOX_MSG
     if unchecked:
         return CHECKBOX_MSG
+    return None
+
+
+def check_type(body):
+    """Return a finding if the Type section doesn't contain a recognised PR type."""
+    content = extract_section(body, "Type")
+    if content is None:
+        return None  # missing section is already caught by check_template
+    text = strip_html_comments(content)
+    if text and not _VALID_TYPES.search(text):
+        return MISSING_TYPE_MSG
     return None
 
 
@@ -166,6 +187,9 @@ def main():
             if finding:
                 findings.append({"msg": finding, "level": "error"})
                 critical = True
+            finding = check_type(body)
+            if finding:
+                findings.append(finding)
 
         finding = check_readme(readme_failed)
         if finding:

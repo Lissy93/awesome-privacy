@@ -27,7 +27,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (7)
-	- [2-Factor Authentication](#2-factor-authentication) (12)
+	- [2-Factor Authentication](#2-factor-authentication) (11)
 	- [File Encryption](#file-encryption) (4)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (6)
@@ -219,13 +219,6 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![GitHub: mattrubin/Authenticator](https://img.shields.io/github/stars/mattrubin/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/mattrubin/Authenticator) [![Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator) [![Authenticator on App Store](https://img.shields.io/badge/-Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/authenticator/id766157276)ㅤ 
-
-		</details>
-- **[<img src='https://winauth.github.io/winauth/favicon.ico' width='16' height='16' alt='icon' /> WinAuth](https://winauth.github.io/winauth)** - Portable, encrypted desktop authenticator app for Microsoft Windows. With useful features, like hotkeys and some additional security tools, WinAuth is a great companion authenticator for desktop power[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/winauth "View full WinAuth report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: winauth/winauth](https://img.shields.io/github/stars/winauth/winauth?style=flat&logo=github&label=winauth&color=%235f53f4&cacheSeconds=3600)](https://github.com/winauth/winauth) [![WinAuth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=WinAuth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/winauth)ㅤ 
 
 		</details>
 - **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator GNOME](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator). 
