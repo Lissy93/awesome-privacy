@@ -3870,7 +3870,7 @@ Not all services are available in all countries.
 	- <details>
 		<summary>Stats</summary>
 
-		[![Privacy Policy](https://shields.tosdr.org/en_1351.svg)](https://tosdr.org/en/service/1351) [![MySudo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MySudo)](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo)ㅤ 
+		[![Privacy Policy](https://shields.tosdr.org/en_1352.svg)](https://tosdr.org/en/service/1352) [![MySudo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MySudo)](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo)ㅤ 
 
 		</details>
 
