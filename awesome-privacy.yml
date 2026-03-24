@@ -4954,6 +4954,16 @@ categories:
           video. It's the industry standard multimedia framework, handling a vast range
           of formats. As a command-line tool, it guarantees that all processing is done
           locally on your machine.
+      - name: fileGOD
+        url: https://filegod.app
+        icon: https://filegod.app/favicon.ico
+        description: >-
+          37 browser-based tools for PDFs and images (compress, convert, merge,
+          split, resize, OCR, QR codes). All processing runs client-side via
+          WebAssembly. No files ever leave your device. 25 languages, works
+          offline as PWA. Open source core.
+       github: fileGOD/file-tools
+       openSource: true
 
   - name: Creativity
     sections:
