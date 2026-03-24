@@ -30,6 +30,7 @@ import requests
 DIFF_PATH = "/tmp/pr-diff.json"
 OUTPUT_PATH = "/tmp/repo-stats.md"
 TIMEOUT = 10
+MAX_SUBMISSIONS = 5
 USER_AGENT = "awesome-privacy-ci/1.0"
 AI_BOT_AUTHORS = [
     "noreply@anthropic.com",
@@ -479,6 +480,9 @@ def grade_android_stats(data):
 
 def fetch_ios_data(app_url):
     """Fetch iOS app info."""
+    # The API requires a country code in the URL path — insert /us/ if missing
+    if app_url and "apps.apple.com/app/" in app_url:
+        app_url = app_url.replace("apps.apple.com/app/", "apps.apple.com/us/app/", 1)
     return _api_get(IOS_API_URL, params={"appStoreUrl": app_url})
 
 
@@ -528,7 +532,7 @@ def grade_tosdr_stats(data):
 
 
 def _resolve_args(argv):
-    """Return dict with keys: owner, repo, url, android, ios, tosdr. All optional."""
+    """Return list of dicts with keys: name, owner, repo, url, android, ios, tosdr."""
     parser = argparse.ArgumentParser(description="Generate submission info stats")
     parser.add_argument("--repo", default=None, help="owner/repo")
     parser.add_argument("--url", default=None, help="Website URL to check")
@@ -537,17 +541,16 @@ def _resolve_args(argv):
     parser.add_argument("--tosdr", default=None, help="ToS;DR service ID")
     args = parser.parse_args(argv[1:])
 
-    result = {"owner": None, "repo": None, "url": args.url,
-              "android": args.android, "ios": args.ios, "tosdr": args.tosdr}
-
     if any(vars(args).values()):
+        result = {"name": None, "owner": None, "repo": None, "url": args.url,
+                  "android": args.android, "ios": args.ios, "tosdr": args.tosdr}
         if args.repo:
             owner, repo = parse_github_field(args.repo)
             if not owner:
                 print(f"Invalid repo format: {args.repo}", file=sys.stderr)
                 sys.exit(1)
             result["owner"], result["repo"] = owner, repo
-        return result
+        return [result]
 
     # CI mode: extract from diff file
     try:
@@ -559,67 +562,98 @@ def _resolve_args(argv):
 
     field_map = {"github": "owner", "url": "url", "androidApp": "android",
                  "iosApp": "ios", "tosdrId": "tosdr"}
-    for svc in diff.get("services", {}).get("added", []):
+    services = []
+    for svc in diff.get("services", {}).get("added", [])[:MAX_SUBMISSIONS]:
+        result = {"name": svc.get("service"), "owner": None, "repo": None,
+                  "url": None, "android": None, "ios": None, "tosdr": None}
         fields = svc.get("fields", {})
         for yaml_key, result_key in field_map.items():
-            if not result.get(result_key) and fields.get(yaml_key):
+            if fields.get(yaml_key):
                 if yaml_key == "github":
                     result["owner"], result["repo"] = parse_github_field(fields[yaml_key])
                 else:
                     result[result_key] = str(fields[yaml_key])
-        break  # only first added service
+        if any(v for k, v in result.items() if k != "name"):
+            services.append(result)
 
-    if not any(result.values()):
+    if not services:
         print("No checkable fields found in diff", file=sys.stderr)
         sys.exit(0)
 
-    return result
+    return services
 
 
-def main():
-    try:
-        args = _resolve_args(sys.argv)
-        cli_mode = len(sys.argv) > 1
-        sections = []
+def _build_service_sections(args, token):
+    """Build (heading, body) section tuples for a single service."""
+    sections = []
 
-        if args["owner"] and args["repo"]:
-            token = os.environ.get("GITHUB_TOKEN", "")
-            data = fetch_all_data(args["owner"], args["repo"], token)
-            if data:
-                sections.append(("Repo Stats", format_markdown(grade_stats(data))))
-            else:
-                print(f"Failed to fetch repo data for {args['owner']}/{args['repo']}", file=sys.stderr)
+    if args["owner"] and args["repo"]:
+        data = fetch_all_data(args["owner"], args["repo"], token)
+        if data:
+            sections.append(("Repo Stats", format_markdown(grade_stats(data))))
+        else:
+            print(f"Failed to fetch repo data for {args['owner']}/{args['repo']}", file=sys.stderr)
 
-        if args["url"]:
+    if args["url"]:
+        parsed_url = urlparse(args["url"])
+        if parsed_url.hostname and parsed_url.hostname.rstrip(".").endswith("github.com"):
+            print(f"Skipped website checks, since github repo was specified: {args['url']}", file=sys.stderr)
+            sections.append(("Website Checks",
+                             f"- {ORANGE} **Skipped** web checks, since repo URL was submitted instead of a website"))
+        else:
             site_data = fetch_website_data(args["url"])
             has_sec_txt = check_security_txt(args["url"])
             if site_data or has_sec_txt is not None:
                 sections.append(("Website Checks",
                                  format_markdown(grade_website_stats(site_data, args["url"], has_sec_txt))))
 
-        if args["android"]:
-            data = fetch_android_data(args["android"])
-            if data:
-                sections.append(("Android App", format_markdown(grade_android_stats(data))))
+    if args["android"]:
+        data = fetch_android_data(args["android"])
+        if data:
+            sections.append(("Android App", format_markdown(grade_android_stats(data))))
+        else:
+            print(f"Failed to fetch Android data for {args['android']}", file=sys.stderr)
 
-        if args["ios"]:
-            data = fetch_ios_data(args["ios"])
-            if data:
-                sections.append(("iOS App", format_markdown(grade_ios_stats(data))))
+    if args["ios"]:
+        data = fetch_ios_data(args["ios"])
+        if data:
+            sections.append(("iOS App", format_markdown(grade_ios_stats(data))))
+        else:
+            print(f"Failed to fetch iOS data for {args['ios']}", file=sys.stderr)
 
-        if args["tosdr"]:
-            data = fetch_tosdr_data(args["tosdr"])
-            if data:
-                sections.append(("Privacy Policy", format_markdown(grade_tosdr_stats(data))))
+    if args["tosdr"]:
+        data = fetch_tosdr_data(args["tosdr"])
+        if data:
+            sections.append(("Privacy Policy", format_markdown(grade_tosdr_stats(data))))
+        else:
+            print(f"Failed to fetch ToS;DR data for {args['tosdr']}", file=sys.stderr)
 
-        if not sections:
+    return sections
+
+
+def main():
+    try:
+        all_services = _resolve_args(sys.argv)
+        cli_mode = len(sys.argv) > 1
+        multi = len(all_services) > 1
+        token = os.environ.get("GITHUB_TOKEN", "")
+        all_md_parts = []
+
+        for svc_args in all_services:
+            sections = _build_service_sections(svc_args, token)
+            if not sections:
+                continue
+            md_parts = []
+            if multi and svc_args.get("name"):
+                md_parts.append(f"### {svc_args['name']}")
+            for heading, body in sections:
+                md_parts.append(f"#### {heading}\n{body}")
+            all_md_parts.append("\n\n".join(md_parts))
+
+        if not all_md_parts:
             sys.exit(0)
 
-        md_parts = []
-        for heading, body in sections:
-            md_parts.append(f"#### {heading}\n{body}")
-        md = "\n\n".join(md_parts)
-
+        md = "\n\n---\n\n".join(all_md_parts)
         md += "\n\n<sup>The above data does not determine a submissions eligibility. Human review is still needed.</sup>\n"
         md += "<sup><b>Key:</b> 🟢 = good. 🟠 = warning. 🔴 = attention required. 🔵 = info. ⚪ = unknown. </sup>\n\n"
 
