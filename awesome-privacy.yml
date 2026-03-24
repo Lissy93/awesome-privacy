@@ -226,17 +226,6 @@ categories:
           Simple, native, open source 2-FA Client for iOS, which never connects to the
           internet - built by @mattrubin.me
 
-      - name: WinAuth
-        url: https://winauth.github.io/winauth
-        github: winauth/winauth
-        icon: https://winauth.github.io/winauth/favicon.ico
-        followWith: Windows
-        description: |
-          Portable, encrypted desktop authenticator app for Microsoft Windows. With
-          useful features, like hotkeys and some additional security tools, WinAuth is a
-          great companion authenticator for desktop power-users. It's open source and
-          well-established (since mid-2010)
-
       - name: Authenticator GNOME
         url: https://gitlab.gnome.org/World/Authenticator
         icon: https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48
