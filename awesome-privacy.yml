@@ -4962,8 +4962,8 @@ categories:
           split, resize, OCR, QR codes). All processing runs client-side via
           WebAssembly. No files ever leave your device. 25 languages, works
           offline as PWA. Open source core.
-       github: fileGOD/file-tools
-       openSource: true
+        github: fileGOD/file-tools
+        openSource: true
 
   - name: Creativity
     sections:
