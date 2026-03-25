@@ -69,7 +69,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [Secret Sharing](#secret-sharing) (1)
+	- [Secret Sharing](#secret-sharing) (2)
 	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (4)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
@@ -2614,6 +2614,13 @@ It is recommended to encrypt files on your client machine, before syncing to the
 		<summary>Stats</summary>
 
 		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/productivity/secret-sharing/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
+
+		</details>
+- **[<img src='https://www.crypt.fyi/logo.ico' width='16' height='16' alt='icon' /> crypt.fyi](https://crypt.fyi)** - crypt.fyi is an ephemeral zero-knowledge sensitive data sharing platform with web, cli, and chrome-extension clients. It offers a suite of configurations beyond the standard for comparable private pas[…](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi "View full crypt.fyi report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: osbytes/crypt.fyi](https://img.shields.io/github/stars/osbytes/crypt.fyi?style=flat&logo=github&label=crypt.fyi&color=%235f53f4&cacheSeconds=3600)](https://github.com/osbytes/crypt.fyi) [![crypt.fyi on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=crypt.fyi)](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/osbytes/crypt.fyi)ㅤ 
 
 		</details>
 
