@@ -1167,7 +1167,7 @@ categories:
         description: |
           Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
           email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
-          
+
       - name: PikaSim
         url: https://pikasim.com
         icon: https://pikasim.com/img/pika-transparent.png
@@ -1190,10 +1190,10 @@ categories:
         url: https://narayana.im
         icon: https://git.narayana.im/avatars/72d9e4a07b9e42917b7face86d544517
         description: |
-          Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features. 
-          Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror, 
+          Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features.
+          Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror,
           accepts crypto, doesn't KYC and you can delete your logs.
-        acceptsCrypto: true  
+        acceptsCrypto: true
 
     ################################
     ###### Team Collaboration ######
@@ -1953,15 +1953,6 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
-        - name: Hemmelig.app
-          url: https://hemmelig.app/
-          icon: https://hemmelig.app/icons/icon-512x512.png
-          openSource: true
-          github: HemmeligOrg/Hemmelig.app
-          description: |
-            Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
-            invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
-            Open source and self-hostable.
 
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
@@ -3363,6 +3354,23 @@ categories:
         You could also run a local server that you physically own at a secondary location,
         that would mitigate the need to trust a third party cloud provider.
         Note that some knowledge in securing networks is required.
+
+
+    ############################################
+    ###### Paste Bins and Secret Sharing ######
+    ###########################################
+    - name: Secret Sharing
+      alternativeTo: ['pastebin', 'hastebin', 'ghostbin', 'justpaste.it']
+      services:
+      - name: Hemmelig.app
+        url: https://hemmelig.app/
+        icon: https://hemmelig.app/icons/icon-512x512.png
+        openSource: true
+        github: HemmeligOrg/Hemmelig.app
+        description: |
+          Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
+          invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
+          Open source and self-hostable.
 
 
     ########################
