@@ -44,7 +44,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (24)
 	- [Mobile Apps](#mobile-apps) (25)
-	- [Online Tools](#online-tools) (18)
+	- [Online Tools](#online-tools) (17)
 - **Networking**
 	- [Virtual Private Networks](#virtual-private-networks) (7)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
@@ -69,6 +69,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
+	- [Secret Sharing](#secret-sharing) (1)
 	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (4)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
@@ -1422,13 +1423,6 @@ A selection of free online tools and utilities, to check, test and protect your 
 		[![Site Report on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Report)](https://awesome-privacy.xyz/security-tools/online-tools/site-report)ㅤ 
 
 		</details>
-- **[<img src='https://hemmelig.app/icons/icon-512x512.png' width='16' height='16' alt='icon' /> Hemmelig.app](https://hemmelig.app/)** - Share rich text and files securely with locally encrypted messages that automatically self-destruct, or invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and[…](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app "View full Hemmelig.app report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
-
-		</details>
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
@@ -2608,6 +2602,20 @@ It is recommended to encrypt files on your client machine, before syncing to the
 > that would mitigate the need to trust a third party cloud provider.
 > Note that some knowledge in securing networks is required.
 > </details>
+
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
+### Secret Sharing
+
+- **[<img src='https://hemmelig.app/icons/icon-512x512.png' width='16' height='16' alt='icon' /> Hemmelig.app](https://hemmelig.app/)** - Share rich text and files securely with locally encrypted messages that automatically self-destruct, or invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and[…](https://awesome-privacy.xyz/productivity/secret-sharing/hemmelig.app "View full Hemmelig.app report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/productivity/secret-sharing/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
+
+		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
