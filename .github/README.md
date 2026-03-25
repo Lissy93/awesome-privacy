@@ -39,7 +39,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (2)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (7)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (8)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (24)
@@ -824,6 +824,13 @@ Revealing your real email address online can put you at risk. Email aliasing all
 		<summary>Stats</summary>
 
 		[![nadanada on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nadanada)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/nadanada) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
+
+		</details>
+- **[<img src='https://git.narayana.im/avatars/72d9e4a07b9e42917b7face86d544517' width='16' height='16' alt='icon' /> Narayana](https://narayana.im)** - Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features. Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror, accepts crypto, doesn't KYC and you c[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/narayana "View full Narayana report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![Narayana on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Narayana)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/narayana) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
 
 		</details>
 

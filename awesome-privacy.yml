@@ -1167,7 +1167,7 @@ categories:
         description: |
           Anonymous SMS service able to activate accounts. Accessible over web, CLI, or
           email. Pricing starts at $3.60 / month. The service is in beta as of 2022.
-
+          
       - name: PikaSim
         url: https://pikasim.com
         icon: https://pikasim.com/img/pika-transparent.png
@@ -1185,6 +1185,15 @@ categories:
           anonymous SMS verification, plus anonymous eSIM data plans for 200+
           countries. No account, no email, no KYC. Pay with Bitcoin, Monero,
           stablecoins, other crypto, or credit card via Stripe.
+
+      - name: Narayana
+        url: https://narayana.im
+        icon: https://git.narayana.im/avatars/72d9e4a07b9e42917b7face86d544517
+        description: |
+          Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features. 
+          Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror, 
+          accepts crypto, doesn't KYC and you can delete your logs.
+        acceptsCrypto: true  
 
     ################################
     ###### Team Collaboration ######
