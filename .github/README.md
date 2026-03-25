@@ -39,7 +39,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (2)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (6)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (7)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (24)
@@ -817,6 +817,13 @@ Revealing your real email address online can put you at risk. Email aliasing all
 		<summary>Stats</summary>
 
 		[![PikaSim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PikaSim)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/pikasim) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
+
+		</details>
+- **[<img src='https://nadanada.me/favicon.ico' width='16' height='16' alt='icon' /> nadanada](https://nadanada.me)** - Disposable (20-min) and extendable rental (3-month) phone numbers for anonymous SMS verification, plus anonymous eSIM data plans for 200+ countries. No account, no email, no KYC. Pay with Bitcoin, Mon[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/nadanada "View full nadanada report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![nadanada on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nadanada)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/nadanada) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
 
 		</details>
 
