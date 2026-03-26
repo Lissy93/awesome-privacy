@@ -4379,6 +4379,9 @@ categories:
       alternativeTo: ['putty', 'iterm2', 'gnome terminal', 'hyper', 'powershell']
       services: []
 
+    - name: Developer Utilities
+      services: []
+
   - name: Smart Home & IoT
     sections:
     - name: Voice Assistants
