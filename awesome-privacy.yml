@@ -1953,7 +1953,17 @@ categories:
           description: |
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
-
+            
+        - name: Best Consent Management Platforms
+          url: https://github.com/JermainKroot/best-consent-management-platforms
+          github: JermainKroot/best-consent-management-platforms
+          icon: https://github.githubassets.com/favicons/favicon.svg
+          description: |
+            Hands-on comparison of 9 consent management platforms (CMPs) — including
+            OneTrust, Cookiebot, Iubenda, My Agile Privacy, and Didomi — tested across
+            25+ real websites over 3 months. Evaluates GDPR and ePrivacy compliance
+            accuracy, setup complexity, performance impact, and pricing.
+            No affiliate links or sponsored content.
 
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
