@@ -1954,6 +1954,14 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: Mouse Polling Rate Test
+          url: https://mousepollingratetest.com
+          icon: https://mousepollingratetest.com/favicon-32.png
+          description: |
+            Browser-based tool to measure your mouse and keyboard polling rate.
+            All processing runs entirely in the browser — no data is collected
+            or transmitted to any server.
+
 
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
