@@ -95,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Crypto Exchanges](#crypto-exchanges) (2)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
-	- [Secure Budgeting](#secure-budgeting) (4)
+	- [Secure Budgeting](#secure-budgeting) (5)
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
@@ -3991,6 +3991,13 @@ crypto currency or cash, since neither can be easily tied back to your identity.
 		<summary>Stats</summary>
 
 		[![GitHub: mayswind/ezbookkeeping](https://img.shields.io/github/stars/mayswind/ezbookkeeping?style=flat&logo=github&label=ezbookkeeping&color=%235f53f4&cacheSeconds=3600)](https://github.com/mayswind/ezbookkeeping) [![ezBookkeeping on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ezBookkeeping)](https://awesome-privacy.xyz/finance/secure-budgeting/ezbookkeeping) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/mayswind/ezbookkeeping)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/actualbudget/actual/a2267c480647bf01f1cae302292a8a237846124c/packages/desktop-electron/icons/icon.png' width='16' height='16' alt='icon' /> Actual](https://actualbudget.org/)** - A local-first personal finance app 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: actualbudget/actual](https://img.shields.io/github/stars/actualbudget/actual?style=flat&logo=github&label=actual&color=%235f53f4&cacheSeconds=3600)](https://github.com/actualbudget/actual) [![Actual on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Actual)](https://awesome-privacy.xyz/finance/secure-budgeting/actual) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/actualbudget/actual) [![Actual on Discord](https://img.shields.io/badge/-Actual-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/8JfAXSgfRf)ㅤ 
 
 		</details>
 
