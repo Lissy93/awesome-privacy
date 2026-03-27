@@ -95,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Crypto Exchanges](#crypto-exchanges) (2)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
-	- [Secure Budgeting](#secure-budgeting) (3)
+	- [Secure Budgeting](#secure-budgeting) (4)
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
@@ -3984,6 +3984,13 @@ crypto currency or cash, since neither can be easily tied back to your identity.
 		<summary>Stats</summary>
 
 		[![GitHub: plaintextaccounting/plaintextaccounting](https://img.shields.io/github/stars/plaintextaccounting/plaintextaccounting?style=flat&logo=github&label=plaintextaccounting&color=%235f53f4&cacheSeconds=3600)](https://github.com/plaintextaccounting/plaintextaccounting) [![Plain Text Accounting on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Plain_Text_Accounting)](https://awesome-privacy.xyz/finance/secure-budgeting/plain-text-accounting)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/public/img/ezbookkeeping-512.png' width='16' height='16' alt='icon' /> ezBookkeeping](https://ezbookkeeping.mayswind.net/)** - A lightweight, self-hosted personal finance app for recording daily transactions and analyzing spending patterns. Self-hosted, with all data staying on your own server. Supports 2FA and OICD. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: mayswind/ezbookkeeping](https://img.shields.io/github/stars/mayswind/ezbookkeeping?style=flat&logo=github&label=ezbookkeeping&color=%235f53f4&cacheSeconds=3600)](https://github.com/mayswind/ezbookkeeping) [![ezBookkeeping on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ezBookkeeping)](https://awesome-privacy.xyz/finance/secure-budgeting/ezbookkeeping) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/mayswind/ezbookkeeping)ㅤ 
 
 		</details>
 
