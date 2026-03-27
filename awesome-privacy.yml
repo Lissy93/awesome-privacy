@@ -4670,14 +4670,6 @@ categories:
     - name: Secure Budgeting
       alternativeTo: ['mint', 'you need a budget (ynab)', 'pocketguard', 'quicken', 'goodbudget']
       services:
-      - name: Actual
-        url: https://actualbudget.org/
-        discordInvite: 8JfAXSgfRf
-        icon: >-
-          https://raw.githubusercontent.com/actualbudget/actual/a2267c480647bf01f1cae302292a8a237846124c/packages/desktop-electron/icons/icon.png
-        description: 'A local-first personal finance app'
-        github: actualbudget/actual
-        openSource: true
 
       - name: Firefly III
         description: |
@@ -4719,6 +4711,15 @@ categories:
         icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/public/img/ezbookkeeping-512.png
         openSource: true
         followWith: Self-hosted
+
+      - name: Actual
+        url: https://actualbudget.org/
+        discordInvite: 8JfAXSgfRf
+        icon: >-
+          https://raw.githubusercontent.com/actualbudget/actual/a2267c480647bf01f1cae302292a8a237846124c/packages/desktop-electron/icons/icon.png
+        description: A local-first personal finance app
+        github: actualbudget/actual
+        openSource: true
 
       notableMentions: |
         Spreadsheets remain a popular choice for managing budgets and financial planning.
