@@ -4700,6 +4700,16 @@ categories:
           approach to accounting.
         url: https://plaintextaccounting.org
 
+      - name: ezBookkeeping
+        description: |
+          A lightweight, self-hosted personal finance app for recording daily transactions
+          and analyzing spending patterns.
+          Self-hosted, with all data staying on your own server. Supports 2FA and OICD.
+        url: https://ezbookkeeping.mayswind.net/
+        github: mayswind/ezbookkeeping
+        icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/public/img/ezbookkeeping-512.png
+        openSource: true
+        followWith: Self-hosted
 
       notableMentions: |
         Spreadsheets remain a popular choice for managing budgets and financial planning.
