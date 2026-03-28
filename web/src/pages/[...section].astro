@@ -88,13 +88,13 @@ const makeCarasolData = () => {
       services.map((service, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://awesomeprivacy.com/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`,
+        "url": `https://awesome-privacy.xyz/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`,
         "item": {
           "@type": "Service",
           "name": service.name,
           "description": service.description,
           "image": service.icon,
-          "url": `https://awesomeprivacy.com/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`
+          "url": `https://awesome-privacy.xyz/${slugify(categoryName)}/${slugify(title)}/${slugify(service.name)}`
         }
       })),
     ]

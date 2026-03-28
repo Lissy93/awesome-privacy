@@ -6,6 +6,7 @@
 	font-display: swap;
 	src:
 		local('Rubik'),
+		url('/fonts/Rubik/Rubik-Regular.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
 }
 @font-face {
@@ -15,6 +16,7 @@
 	font-display: swap;
 	src:
 		local('Rubik Italic'),
+		url('/fonts/Rubik/Rubik-Italic.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-Italic.ttf') format('truetype');
 }
 @font-face {
@@ -24,6 +26,7 @@
 	font-display: swap;
 	src:
 		local('Rubik Medium'),
+		url('/fonts/Rubik/Rubik-Medium.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
 }
 @font-face {
@@ -33,6 +36,7 @@
 	font-display: swap;
 	src:
 		local('Rubik Medium Italic'),
+		url('/fonts/Rubik/Rubik-MediumItalic.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-MediumItalic.ttf') format('truetype');
 }
 @font-face {
@@ -42,6 +46,7 @@
 	font-display: swap;
 	src:
 		local('Rubik SemiBold'),
+		url('/fonts/Rubik/Rubik-SemiBold.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-SemiBold.ttf') format('truetype');
 }
 @font-face {
@@ -51,6 +56,7 @@
 	font-display: swap;
 	src:
 		local('Rubik SemiBold Italic'),
+		url('/fonts/Rubik/Rubik-Italic-VariableFont_wght.woff2') format('woff2'),
 		url('/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
@@ -62,6 +68,8 @@
 	font-display: swap;
 	src:
 		local('Libre Franklin ExtraBold'),
+		url('/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.woff2')
+			format('woff2'),
 		url('/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf')
 			format('truetype');
 }
@@ -74,6 +82,7 @@
 	font-display: swap;
 	src:
 		local('Lekton Bold'),
+		url('/fonts/Lekton/Lekton-Bold.woff2') format('woff2'),
 		url('/fonts/Lekton/Lekton-Bold.ttf') format('truetype');
 }
 

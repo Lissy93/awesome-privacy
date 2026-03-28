@@ -75,8 +75,28 @@ const makeSearchLd = () => {
 		<!-- Page info, viewport, Astro credit -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
+		<meta name="generator" content={`Built by an actual human, in Astro. ${Astro.generator}`} />
 		<meta name="robots" content="index, follow" />
+		<link
+			rel="canonical"
+			href={`https://awesome-privacy.xyz${Astro.url.pathname}`}
+		/>
+
+		<!-- Preload critical fonts -->
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/Rubik/Rubik-Regular.woff2"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/Lekton/Lekton-Bold.woff2"
+			type="font/woff2"
+			crossorigin
+		/>
 
 		<!-- Icons and colors -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -86,14 +106,17 @@ const makeSearchLd = () => {
 		<!-- Social media meta tags (Open Graphh + Twitter) -->
 		<meta property="og:site_name" content="Awesome Privacy" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://awesome-privacy.xyz" />
+		<meta
+			property="og:url"
+			content={`https://awesome-privacy.xyz${Astro.url.pathname}`}
+		/>
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
 			content="https://awesome-privacy.xyz/banner.png"
 		/>
-		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content="https://awesome-privacy.xyz" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
@@ -139,7 +162,7 @@ const makeSearchLd = () => {
 		<script
 			is:inline
 			type="application/ld+json"
-			set:html={JSON.stringify(makeSearchLd)}
+			set:html={JSON.stringify(makeSearchLd())}
 		/>
 	</head>
 	<body>
