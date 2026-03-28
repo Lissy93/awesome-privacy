@@ -7,7 +7,10 @@ export const fetchTosdrPrivacy = async (
   try {
     const res = await fetch(endpoint);
     if (!res.ok) {
-      error('ToS;DR', `HTTP ${res.status} for service ${serviceId} (${endpoint})`);
+      error(
+        'ToS;DR',
+        `HTTP ${res.status} for service ${serviceId} (${endpoint})`,
+      );
       return null;
     }
     return await res.json();

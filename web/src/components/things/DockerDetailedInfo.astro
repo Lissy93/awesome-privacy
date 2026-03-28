@@ -136,28 +136,23 @@ const formatBigNumber = (num: number): string => {
 </div>
 
 <style lang="scss">
+  @use '../../styles/mixins' as *;
   .docker-info-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .left, .right {
-      width: 50%;
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    }
+    @include detail-info-layout;
   }
+
+  @include detail-info-base;
 
   .left {
     .dockerhub-title, .dockerhub-description {
-      font-size: 0.9rem;
-      opacity: 0.8;
+      font-size: var(--text-sm);
+      opacity: var(--opacity-subtle);
       display: -webkit-box;
       -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;  
+      -webkit-box-orient: vertical;
       overflow: hidden;
       border-left: 2px solid var(--accent-3);
-      padding-left: 0.5rem;
+      padding-left: var(--space-sm);
     }
     .dockerhub-title {
       font-weight: 500;
@@ -184,50 +179,31 @@ const formatBigNumber = (num: number): string => {
     }
   }
 
-  h4 {
-    margin: 1rem 0 0 0;
-    font-size: 1.2rem;
-  }
-  p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    :global(svg) {
-      width: 1rem;
-    }
-    img {
-      border-radius: var(--curve-sm);
-    }
-  }
   .tags {
     display: flex;
     flex-wrap: wrap;
     .tag {
       margin: 0.1rem;
-      background: #5f53f440;
+      background: var(--accent-3-translucent);
       border-radius: var(--curve-sm);
       padding: 0.05rem 0.2rem;
-      font-size: 0.8rem;
-      opacity: 0.8;
+      font-size: var(--text-sm);
+      opacity: var(--opacity-subtle);
     }
   }
   ul {
-    padding-left: 1rem;
+    padding-left: var(--space-md);
     list-style: circle;
     max-height: 400px;
     overflow: auto;
-    img {
-      border-radius: var(--curve-sm);
-    }
   }
 
   pre {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: var(--font-code);
       background: var(--background-form);
-      padding: 0.6rem 1rem;
+      padding: 0.6rem var(--space-md);
       border-radius: var(--curve-sm);
-      font-size: 0.8rem;
+      font-size: var(--text-sm);
       overflow-x: auto;
     }
 </style>

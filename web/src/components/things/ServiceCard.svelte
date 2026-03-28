@@ -50,11 +50,21 @@
   </div>
 
   <div class="service-links">
-    <a class="link" href={service.url}>
+    <a
+      class="link"
+      href={service.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FontAwesome iconName="website" /> <span>{formatLink(service.url)}</span>
     </a>
     {#if service.github}
-      <a class="link" href={`https://github.com/${service.github}`}>
+      <a
+        class="link"
+        href={`https://github.com/${service.github}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesome iconName="sourceCode" /> GitHub
       </a>
     {/if}

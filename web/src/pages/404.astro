@@ -49,21 +49,21 @@ import Buton from '@components/form/Button.astro';
 		.what-happened {
 			font-size: 4rem;
 			margin: 0;
-			opacity: 0.8;
+			opacity: var(--opacity-subtle);
 		}
 		.why-happened {
 			font-size: 1.5rem;
 			text-align: center;
-			margin-bottom: 2rem;
-			opacity: 0.6;
+			margin-bottom: var(--space-lg);
+			opacity: var(--opacity-muted);
 		}
 		.back-you-go-then :global(a) {
-			font-size: 2rem;
+			font-size: var(--text-3xl);
 		}
 
 		.other-places {
-			opacity: 0.8;
-			margin: 2rem auto 1rem auto;
+			opacity: var(--opacity-subtle);
+			margin: var(--space-lg) auto var(--space-md) auto;
 			text-align: center;
 			&:hover {
 				opacity: 1;
@@ -72,11 +72,11 @@ import Buton from '@components/form/Button.astro';
 				list-style: none;
 				display: flex;
 				padding: 0;
-				gap: 0.5rem;
+				gap: var(--space-sm);
 				li {
 					&:not(:last-child) {
 						border-right: 1px solid var(--accent);
-						padding-right: 0.5rem;
+						padding-right: var(--space-sm);
 					}
 				}
 				li a {

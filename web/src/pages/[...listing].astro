@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import ListingHero from '@components/things/ListingHero.astro';
 import ServiceList from '@components/things/ServiceList.astro';
 import Comments from '@components/things/Comments.svelte';
 import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
@@ -14,6 +15,7 @@ import SocialShare from '@components/form/Social.astro';
 import DataActions from '@components/things/DataActions.svelte';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
 import { fetchData, slugify } from '@utils/fetch-data';
+import { fetchChangelog } from '@utils/fetch-changelog';
 import { fetchGitHubStats } from '@utils/fetch-repo-info';
 import { fetchTosdrPrivacy } from '@utils/fetch-privacy-policy';
 import { fetchWebsiteInfo } from '@utils/fetch-website-info';
@@ -22,11 +24,8 @@ import { fetchIosInfo } from '@utils/fetch-ios-info';
 import { fetchAndroidInfo } from '@utils/fetch-android-info';
 import { fetchDiscordInfo } from '@utils/fetch-discord-info';
 import { fetchRedditInfo } from '@utils/fetch-reddit-info';
-import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import { site } from '@utils/config';
-import FontAwesome from '@components/form/FontAwesome.svelte';
 import Button from '@components/form/Button.astro';
-import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props extends Service {
 	slug: string;
@@ -36,7 +35,6 @@ interface Props extends Service {
 
 const {
 	name,
-	description,
 	url,
 	github,
 	tosdrId,
@@ -44,41 +42,28 @@ const {
 	subreddit,
 	iosApp,
 	androidApp,
-	icon,
-	followWith,
-	links,
-	securityAudited,
-	openSource,
-	acceptsCrypto,
 	parentSection,
 	categoryName,
 } = Astro.props;
 
-/**
- * Make a list of keywords, for the <meta keywords> tag
- */
 const makeKeyWordTag = () => {
-	const keywords: string[] = [];
-	keywords.push(`open source ${parentSection.name}`);
-	keywords.push(`${parentSection.name} comparison`);
-	(parentSection.alternativeTo || []).forEach((alt: string) => {
-		keywords.push(`${alt} alternative`);
-	});
-	(parentSection.services || []).forEach((serv: Service) => {
-		keywords.push(`${serv.name} vs`);
-	});
-	keywords.push('private');
-	keywords.push('ad free');
-	keywords.push('encrypted');
-	keywords.push('open source software');
-	keywords.push('privacy respecting apps');
-	keywords.push('free tools');
+	const keywords = [
+		`open source ${parentSection.name}`,
+		`${parentSection.name} comparison`,
+		...(parentSection.alternativeTo || []).map(
+			(alt: string) => `${alt} alternative`,
+		),
+		...(parentSection.services || []).map((serv: Service) => `${serv.name} vs`),
+		'private',
+		'ad free',
+		'encrypted',
+		'open source software',
+		'privacy respecting apps',
+		'free tools',
+	];
 	return keywords.join(', ');
 };
 
-/**
- * Make a page title
- */
 const makePageTitle = () => {
 	return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
 };
@@ -98,29 +83,20 @@ const makeBreadcrumbs = () => {
 	];
 };
 
-/**
- * Make a string page intro, for the description tag
- */
 const makeDescriptionTag = () => {
-	let description = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
+	let desc = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
 	if (parentSection.services) {
-		const serviceList = parentSection.services.map(
-			(serv: Service) => serv.name,
-		);
-		description += `Compare ${serviceList.join(' vs ')} more apps. `;
+		desc += `Compare ${parentSection.services.map((s: Service) => s.name).join(' vs ')} more apps. `;
 	}
 	if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
-		description += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')} in 2024. `;
+		desc += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')}. `;
 	}
-	description += 'All this, and many more free and awesome tools and software.';
-	return description;
+	desc += 'All this, and many more free and awesome tools and software.';
+	return desc;
 };
 
-// Return a list of Services, except for the currtent one
 const filterServices = () => {
-	return parentSection.services.filter(
-		(service: Service) => service.name !== name,
-	);
+	return parentSection.services.filter((s: Service) => s.name !== name);
 };
 
 export async function getStaticPaths() {
@@ -159,9 +135,8 @@ const makePaginationLinks = () => {
 
 const { previous, next } = makePaginationLinks();
 
-const ignoredSites = ['github.gom', 'wikipedia.'];
+const ignoredSites = ['github.com', 'wikipedia.'];
 
-// Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
@@ -172,24 +147,58 @@ const discordData = discordInvite
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData =
-	url && !ignoredSites.some((ignoredSite) => url.includes(ignoredSite))
+	url && !ignoredSites.some((s) => url.includes(s))
 		? await fetchWebsiteInfo(url)
 		: null;
 
+const serviceHistory = await fetchChangelog().then(({ entries }) => {
+	const isMatch = (c: { name: string; category: string; section: string }) =>
+		c.name === name &&
+		c.category === categoryName &&
+		c.section === parentSection.name;
+	const results: Array<{
+		date: string;
+		type: 'added' | 'removed' | 'modified';
+		fields?: string[];
+		pr?: import('@utils/fetch-changelog').ChangelogPr | null;
+	}> = [];
+	for (const e of entries) {
+		const s = e.changes?.services;
+		const added = (s?.added || []).find(isMatch);
+		const removed = (s?.removed || []).find(isMatch);
+		const modified = (s?.modified || []).find(isMatch);
+		if (added) results.push({ date: e.date, type: 'added', pr: e.pr });
+		else if (removed) results.push({ date: e.date, type: 'removed', pr: e.pr });
+		else if (modified)
+			results.push({
+				date: e.date,
+				type: 'modified',
+				fields: modified.fields,
+				pr: e.pr,
+			});
+	}
+	return results;
+});
+
 const findPrivacyPolicyLink = () => {
 	if (!privacyData) return null;
-	// const docs = privacyData?.parameters?.documents;
-	// if (docs) {
-	//   const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
-	//   if (privacyPolicy) return privacyPolicy.url;
-	// }
+	const docs = privacyData?.parameters?.documents;
+	if (docs) {
+		const pp = (docs || []).find((doc) =>
+			doc.name.toLowerCase().includes('privacy policy'),
+		);
+		if (pp) return pp.url;
+	}
 	return `https://tosdr.org/en/service/${tosdrId}`;
 };
 
 const privacyPolicyLink = findPrivacyPolicyLink();
 
+const catSlug = slugify(categoryName);
+const secSlug = slugify(parentSection.name);
+
 const getApiEndpoint = () => {
-	return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
+	return `https://api.awesome-privacy.xyz/${catSlug}/${secSlug}/${slugify(name)}`;
 };
 ---
 
@@ -200,187 +209,12 @@ const getApiEndpoint = () => {
 	breadcrumbs={makeBreadcrumbs()}
 >
 	<main>
-		<section>
-			<div class="service-head">
-				<h2>{name}</h2>
-				<span class="url-wrap">
-					<a class="service-url" href={url}>{formatLink(url)}</a>
-					<span class="follow-with">{followWith}</span>
-				</span>
-			</div>
-			<div class="breadcrumbs">
-				<span>
-					<a href="/">Awesome Privacy</a>
-					➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
-					➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
-						>{parentSection.name}</a
-					>
-					➔ <a
-						href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}
-						>{name}</a
-					>
-				</span>
-			</div>
-			<div class="save-listing">
-				<SaveListing
-					client:visible
-					categoryName={categoryName}
-					sectionName={parentSection.name}
-					serviceName={name}
-					showLabel={true}
-				/>
-			</div>
-			<div class="intro">
-				<img
-					width="60"
-					height="60"
-					loading="lazy"
-					decoding="async"
-					class="service-icon"
-					alt={`${name} Icon`}
-					data-service-url={formatLink(url)}
-					src={icon || `https://icon.horse/icon/${formatLink(url)}`}
-				/>
-				<div>
-					<p class="description" set:html={parseMarkdown(description)} />
-					<ul>
-						{
-							url && (
-								<li>
-									<b>Homepage:</b>
-									<a href={url}>{formatLink(url)}</a>
-								</li>
-							)
-						}
-						{
-							github && (
-								<li>
-									<b>GitHub:</b>
-									<a href={`https://github.com/${github}`}>
-										github.com/{github}
-									</a>
-								</li>
-							)
-						}
-						{
-							tosdrId && (
-								<li>
-									<b>Privacy:</b>
-									<a href={privacyPolicyLink}>
-										{formatLink(privacyPolicyLink || '')}
-									</a>
-								</li>
-							)
-						}
-						{
-							iosApp && (
-								<li>
-									<b>iOS App:</b>
-									<a href={iosApp}>{formatLink(iosApp)}</a>
-								</li>
-							)
-						}
-						{
-							androidApp && (
-								<li>
-									<b>Android App:</b>
-									<a
-										href={`https://play.google.com/store/apps/details?id=${androidApp}`}
-									>{`https://play.google.com/store/apps/details?id=${androidApp}`}</a>
-								</li>
-							)
-						}
-						{
-							discordInvite && (
-								<li>
-									<b>Discord Invite:</b>
-									<a href={`https://discord.com/invite/${discordInvite}`}>
-										{discordInvite}
-									</a>
-								</li>
-							)
-						}
-						{
-							subreddit && (
-								<li>
-									<b>Subreddit:</b>
-									<a href={`https://reddit.com/r/${subreddit}`}>
-										r/{subreddit}
-									</a>
-								</li>
-							)
-						}
-						{
-							url && (
-								<li>
-									<b>Web info:</b>
-									<a
-										href={`https://web-check.xyz/results/${formatLink(url)}`}
-									>{`web-check.xyz/results/${formatLink(url).split('/')[0]}`}</a>
-								</li>
-							)
-						}
-						{
-							links &&
-								links.length > 0 &&
-								links.map((link) => (
-									<li>
-										<b>{link.title}</b>
-										<a href={link.url}>{link.url}</a>
-									</li>
-								))
-						}
-					</ul>
-				</div>
-			</div>
-			<div class="highlights">
-				{
-					securityAudited && (
-						<span
-							class="meta-item great"
-							title={`${name} has been security audited by an accredited auditor, with results published publicly`}
-						>
-							<FontAwesome iconName="securityAudited" /> Security Audited
-						</span>
-					)
-				}
-				{
-					acceptsCrypto && (
-						<span
-							class="meta-item great"
-							title={`${name} accepts anonymous payment methods`}
-						>
-							<FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
-						</span>
-					)
-				}
-				{
-					securityAudited === false && (
-						<span
-							class="meta-item warning"
-							title={`${name} has not been audited`}
-						>
-							<FontAwesome iconName="notSecurityAudited" /> No Security Audit
-						</span>
-					)
-				}
-				{
-					openSource === false && (
-						<span class="warning">
-							<FontAwesome iconName="closedSource" />
-							Not Open Source
-						</span>
-					)
-				}
-				{
-					openSource || (github && openSource !== false) ? (
-						<span class="meta-item great" title={`${name} is open source`}>
-							<FontAwesome iconName="openSource" /> Open Source
-						</span>
-					) : null
-				}
-			</div>
-		</section>
+		<ListingHero
+			service={Astro.props}
+			parentSection={parentSection}
+			categoryName={categoryName}
+			privacyPolicyLink={privacyPolicyLink}
+		/>
 		{
 			privacyData && privacyData.parameters.points.length > 0 && (
 				<section>
@@ -454,7 +288,7 @@ const getApiEndpoint = () => {
 				services={filterServices()}
 				subHeading={true}
 				noGitHubMetrics={true}
-				buttonLink={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+				buttonLink={`/${catSlug}/${secSlug}`}
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 			/>
@@ -466,6 +300,7 @@ const getApiEndpoint = () => {
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 				serviceName={name}
+				history={serviceHistory}
 			/>
 			<h4>API</h4>
 			<p>
@@ -479,16 +314,6 @@ const getApiEndpoint = () => {
 					href="/api">Swagger Docs</a
 				> or read the <a href="/about#api">API Usage Guide</a>.
 			</p>
-
-			<h4>About the Data</h4>
-			<p>
-				Beyond the user-submitted YAML you see above, we also augment each
-				listing with additional data dynamically fetched from several sources.
-				To learn more about where the rest of data included in this page comes
-				from, and how it is computed, see the <a href="/about#our-data"
-					>About the Data</a
-				> section of our About page.
-			</p>
 		</section>
 
 		<section>
@@ -499,7 +324,7 @@ const getApiEndpoint = () => {
 				Share {name} and Awesome Privacy with your network!
 				<div>
 					<SocialShare
-						url={`${site}/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)} `}
+						url={`${site}/${catSlug}/${secSlug}/${slugify(name)} `}
 						title={`Checkout ${name}! \n`}
 						description={`Compare #${name} and other privacy-respecting ${parentSection.name} at ` +
 							`Awesome-Privacy.xyz, the free and open source list of private software alternatives. ` +
@@ -512,9 +337,7 @@ const getApiEndpoint = () => {
 		<div class="pagination-navigation">
 			{
 				previous ? (
-					<Button
-						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(previous)}`}
-					>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(previous)}`}>
 						<span>← Previous</span>
 						<p>{previous}</p>
 					</Button>
@@ -522,17 +345,12 @@ const getApiEndpoint = () => {
 					<p class="nothing" />
 				)
 			}
-			<a
-				href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
-				class="go-to-category"
-			>
+			<a href={`/${catSlug}/${secSlug}`} class="go-to-category">
 				View {parentSection.name} ({(parentSection.services || []).length})
 			</a>
 			{
 				next && (
-					<Button
-						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(next)}`}
-					>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(next)}`}>
 						<span>Next →</span>
 						<p>{next}</p>
 					</Button>
@@ -544,281 +362,69 @@ const getApiEndpoint = () => {
 
 <style lang="scss">
 	main {
-		margin: 2rem auto;
-		padding: 1rem;
-		width: 1200px;
-		max-width: calc(100% - 5rem);
+		margin: var(--space-lg) auto;
+		padding: var(--space-md);
+		width: var(--width-container);
+		max-width: var(--width-container-max);
 		position: relative;
 		@media (max-width: 768px) {
 			max-width: 95%;
-			padding: 0.5rem;
+			padding: var(--space-sm);
 			margin: 0 auto;
 		}
 	}
 
 	section {
-		margin: 1rem 0 4rem 0;
-		padding: 1rem;
+		margin: var(--space-md) 0 var(--space-2xl) 0;
+		padding: var(--space-md);
 		min-height: 8rem;
 		position: relative;
-		border: 2px solid var(--box-outline);
-		box-shadow: 6px 6px 0 var(--box-outline);
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
 		background: var(--accent-fg);
 	}
 
 	p {
-		margin: 0.25rem 0 0.5rem 0;
+		margin: var(--space-xs) 0 var(--space-sm) 0;
 	}
 
 	h3 {
-		font-size: 2rem;
-		margin: -2rem 0 1rem -2rem;
-		box-shadow: 6px 6px 0 var(--box-outline);
+		font-size: var(--text-3xl);
+		margin: -2rem 0 var(--space-md) -2rem;
+		box-shadow: var(--shadow-lg);
 		background: var(--accent);
 		color: var(--accent-fg);
 		width: fit-content;
-		padding: 0.25rem 0.5rem;
+		padding: var(--space-xs) var(--space-sm);
 		@media (max-width: 768px) {
-			margin: -2rem auto 2rem auto;
+			margin: -2rem auto var(--space-lg) auto;
 		}
-	}
-
-	.service-head {
-		h2 {
-			font-size: 3rem;
-			margin: 0;
-			@media (max-width: 768px) {
-				text-align: center;
-			}
-		}
-		.url-wrap {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-			a {
-				font-size: 1.2rem;
-			}
-			.follow-with {
-				font-style: italic;
-				opacity: 0.6;
-			}
-			@media (max-width: 768px) {
-				flex-direction: column;
-			}
-		}
-	}
-
-	.breadcrumbs {
-		opacity: 0.5;
-		font-size: 0.8rem;
-		position: absolute;
-		right: 1rem;
-		top: 1rem;
-		a {
-			color: var(--foreground);
-			transition: all 0.15s ease-in-out;
-
-			&:hover {
-				color: var(--accent);
-			}
-		}
-		@media (max-width: 768px) {
-			display: none;
-		}
-	}
-
-	.save-listing {
-		position: absolute;
-		top: 3rem;
-		right: 1rem;
 	}
 
 	h4 {
-		font-size: 1.4rem;
+		font-size: var(--text-lg);
 		margin-bottom: 0;
 	}
 
-	.intro {
-		font-size: 1.2rem;
-		font-style: italic;
-		opacity: 0.9;
-		display: flex;
-		gap: 0.5rem;
-		@media (max-width: 768px) {
-			flex-direction: column;
-		}
-		.service-icon {
-			border-radius: var(--curve-md);
-			margin-top: 1rem;
+	pre a {
+		text-decoration: none;
+		color: var(--foreground);
+		code {
+			background: var(--code-bg);
+			padding: 0.2rem 0.4rem;
+			border-radius: var(--curve-sm);
+			font-family: var(--font-code);
+			font-size: var(--text-sm);
 			@media (max-width: 768px) {
-				margin: 1rem auto 0 auto;
-			}
-		}
-		ul {
-			padding-left: 1rem;
-			list-style: circle;
-			font-style: normal;
-			font-size: 1rem;
-			margin-top: 0;
-			b {
-				font-size: 1rem;
-				font-weight: 400;
-				min-width: 100px;
-				display: inline-block;
-				@media (max-width: 768px) {
-					width: auto;
-					display: block;
-				}
-			}
-		}
-	}
-
-	.pagination-navigation {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem 0;
-		:global(.button) {
-			min-width: 120px;
-			width: fit-content;
-			padding: 0.25rem 1rem;
-			text-align: right;
-			&:first-child {
-				text-align: left;
-			}
-			p {
-				margin: 0;
-				font-weight: normal;
-				font-size: 1rem;
-			}
-			span {
-				font-size: 0.8rem;
-			}
-		}
-		.nothing {
-			width: 120px;
-		}
-		.go-to-category {
-			color: var(--foreground);
-			font-size: 0.8rem;
-			opacity: 0.5;
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
-	}
-
-	.further-info,
-	.notable-mentions,
-	.word-of-warning {
-		h3 {
-			font-size: 1.4rem;
-			margin: 1rem 0;
-		}
-		:global(p) {
-			font-size: 0.9rem;
-			opacity: 0.7;
-			:global(strong) {
-				font-weight: 500;
-			}
-			:global(a) {
-				color: var(--foreground);
-				transition: all 0.15s ease-in-out;
-				&:hover {
-					color: var(--accent);
-				}
-			}
-		}
-		:global(strong) {
-			font-weight: 500;
-		}
-		:global(h4) {
-			font-size: 1.2rem;
-			margin: 0.5rem 0 0 0;
-		}
-		:global(ul) {
-			list-style: circle;
-			padding-left: 1rem;
-			font-size: 0.9rem;
-			opacity: 0.7;
-			li {
-				margin-bottom: 0.25rem;
-				:global(p) {
-					display: inline;
-				}
-			}
-		}
-	}
-
-	pre {
-		a {
-			text-decoration: none;
-			color: var(--foreground);
-			code {
-				background: #acabb782;
-				padding: 0.2rem 0.4rem;
-				border-radius: var(--curve-sm);
-				font-family: Courier New;
-				font-size: 0.9rem;
-				@media (max-width: 768px) {
-					white-space: break-spaces;
-				}
+				white-space: break-spaces;
 			}
 		}
 	}
 
 	.social-wrap {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-md);
 		flex-wrap: wrap;
 		justify-content: space-between;
-	}
-
-	.highlights {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: end;
-
-		.meta-item,
-		.warning {
-			display: flex;
-			align-items: center;
-			// justify-content: center;
-			gap: 0.25rem;
-			opacity: 0.6;
-			font-size: 0.9rem;
-			padding: 0.5rem 0;
-			:global(svg) {
-				color: var(--foreground);
-				width: 1.2rem;
-				height: 1.2rem;
-			}
-			a {
-				text-decoration: none;
-				color: var(--foreground);
-				display: flex;
-				gap: 0.25rem;
-				&:hover {
-					color: var(--accent-3);
-					:global(svg) {
-						color: var(--accent-3);
-					}
-				}
-			}
-		}
-		.warning {
-			color: var(--danger);
-			:global(svg) {
-				color: var(--danger);
-			}
-		}
-		.great {
-			color: #007930; // var(--success);
-			:global(svg) {
-				color: #007930; // var(--success);
-			}
-		}
 	}
 </style>

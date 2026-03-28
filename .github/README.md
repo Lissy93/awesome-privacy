@@ -27,8 +27,8 @@ corporations, governments, and hackers from logging, storing or selling your per
 
 - **Essentials**
 	- [Password Managers](#password-managers) (7)
-	- [2-Factor Authentication](#2-factor-authentication) (12)
-	- [File Encryption](#file-encryption) (4)
+	- [2-Factor Authentication](#2-factor-authentication) (11)
+	- [File Encryption](#file-encryption) (3)
 	- [Browsers](#browsers) (5)
 	- [Search Engines](#search-engines) (6)
 - **Communication**
@@ -39,12 +39,12 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Mail Forwarding](#mail-forwarding) (6)
 	- [Email Security Tools](#email-security-tools) (2)
 	- [VOIP Clients](#voip-clients) (2)
-	- [Virtual Phone Numbers](#virtual-phone-numbers) (6)
+	- [Virtual Phone Numbers](#virtual-phone-numbers) (8)
 	- [Team Collaboration](#team-collaboration) (5)
 - **Security Tools**
 	- [Browser Extensions](#browser-extensions) (24)
 	- [Mobile Apps](#mobile-apps) (25)
-	- [Online Tools](#online-tools) (18)
+	- [Online Tools](#online-tools) (17)
 - **Networking**
 	- [Virtual Private Networks](#virtual-private-networks) (7)
 	- [Self-Hosted Network Security](#self-hosted-network-security) (8)
@@ -69,6 +69,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
+	- [Secret Sharing](#secret-sharing) (2)
 	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (4)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
@@ -94,7 +95,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Crypto Exchanges](#crypto-exchanges) (2)
 	- [Virtual Credit Cards](#virtual-credit-cards) (3)
 	- [Other Payment Methods](#other-payment-methods) (3)
-	- [Secure Budgeting](#secure-budgeting) (3)
+	- [Secure Budgeting](#secure-budgeting) (5)
 - **Social**
 	- [Social Networks](#social-networks) (4)
 	- [Video Platforms](#video-platforms) (3)
@@ -221,13 +222,6 @@ corporations, governments, and hackers from logging, storing or selling your per
 		[![GitHub: mattrubin/Authenticator](https://img.shields.io/github/stars/mattrubin/Authenticator?style=flat&logo=github&label=Authenticator&color=%235f53f4&cacheSeconds=3600)](https://github.com/mattrubin/Authenticator) [![Authenticator on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Authenticator)](https://awesome-privacy.xyz/essentials/2-factor-authentication/authenticator) [![Authenticator on App Store](https://img.shields.io/badge/-Authenticator-0D96F6?style=flat&logo=appstore&logoColor=white)](https://apps.apple.com/us/app/authenticator/id766157276)ㅤ 
 
 		</details>
-- **[<img src='https://winauth.github.io/winauth/favicon.ico' width='16' height='16' alt='icon' /> WinAuth](https://winauth.github.io/winauth)** - Portable, encrypted desktop authenticator app for Microsoft Windows. With useful features, like hotkeys and some additional security tools, WinAuth is a great companion authenticator for desktop power[…](https://awesome-privacy.xyz/essentials/2-factor-authentication/winauth "View full WinAuth report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: winauth/winauth](https://img.shields.io/github/stars/winauth/winauth?style=flat&logo=github&label=winauth&color=%235f53f4&cacheSeconds=3600)](https://github.com/winauth/winauth) [![WinAuth on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=WinAuth)](https://awesome-privacy.xyz/essentials/2-factor-authentication/winauth)ㅤ 
-
-		</details>
 - **[<img src='https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48' width='16' height='16' alt='icon' /> Authenticator GNOME](https://gitlab.gnome.org/World/Authenticator)** - Rust-based OTP authenticator. Has native With GNOME Shell integration. Also available through [flathub](https://flathub.org/apps/details/com.belmoussaoui.Authenticator). 
 	- <details>
 		<summary>Stats</summary>
@@ -308,13 +302,6 @@ corporations, governments, and hackers from logging, storing or selling your per
 		<summary>Stats</summary>
 
 		[![GitHub: FiloSottile/age](https://img.shields.io/github/stars/FiloSottile/age?style=flat&logo=github&label=age&color=%235f53f4&cacheSeconds=3600)](https://github.com/FiloSottile/age) [![age on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=age)](https://awesome-privacy.xyz/essentials/file-encryption/age)ㅤ 
-
-		</details>
-- **[<img src='https://avatars.githubusercontent.com/u/171401041' width='16' height='16' alt='icon' /> Picocrypt]()** - Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools that you can use to protect your files. It's designed to be the go-to tool for encryption, with a focus on securit[…](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt "View full Picocrypt report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: Picocrypt/Picocrypt](https://img.shields.io/github/stars/Picocrypt/Picocrypt?style=flat&logo=github&label=Picocrypt&color=%235f53f4&cacheSeconds=3600)](https://github.com/Picocrypt/Picocrypt) [![Picocrypt on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Picocrypt)](https://awesome-privacy.xyz/essentials/file-encryption/picocrypt)ㅤ 
 
 		</details>
 
@@ -831,6 +818,20 @@ Revealing your real email address online can put you at risk. Email aliasing all
 		<summary>Stats</summary>
 
 		[![PikaSim on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=PikaSim)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/pikasim) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
+
+		</details>
+- **[<img src='https://nadanada.me/favicon.ico' width='16' height='16' alt='icon' /> nadanada](https://nadanada.me)** - Disposable (20-min) and extendable rental (3-month) phone numbers for anonymous SMS verification, plus anonymous eSIM data plans for 200+ countries. No account, no email, no KYC. Pay with Bitcoin, Mon[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/nadanada "View full nadanada report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![nadanada on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=nadanada)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/nadanada) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
+
+		</details>
+- **[<img src='https://git.narayana.im/avatars/72d9e4a07b9e42917b7face86d544517' width='16' height='16' alt='icon' /> Narayana](https://narayana.im)** - Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features. Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror, accepts crypto, doesn't KYC and you c[…](https://awesome-privacy.xyz/communication/virtual-phone-numbers/narayana "View full Narayana report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![Narayana on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Narayana)](https://awesome-privacy.xyz/communication/virtual-phone-numbers/narayana) ![Accepts Anonymous Payment](https://img.shields.io/badge/-Anon_Payment_Accepted%EF%B8%8F-3DA639?style=flat&logo=bitcoincash&logoColor=white)ㅤ 
 
 		</details>
 
@@ -1422,13 +1423,6 @@ A selection of free online tools and utilities, to check, test and protect your 
 		[![Site Report on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Site_Report)](https://awesome-privacy.xyz/security-tools/online-tools/site-report)ㅤ 
 
 		</details>
-- **[<img src='https://hemmelig.app/icons/icon-512x512.png' width='16' height='16' alt='icon' /> Hemmelig.app](https://hemmelig.app/)** - Share rich text and files securely with locally encrypted messages that automatically self-destruct, or invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and[…](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app "View full Hemmelig.app report") 
-	- <details>
-		<summary>Stats</summary>
-
-		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/security-tools/online-tools/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
-
-		</details>
 
 <details>
 <summary>⚠️ <b>Word of Warning</b></summary>
@@ -1997,7 +1991,7 @@ detect certain content based on pattern matching
 		[![GitHub: celzero/rethink-app](https://img.shields.io/github/stars/celzero/rethink-app?style=flat&logo=github&label=rethink-app&color=%235f53f4&cacheSeconds=3600)](https://github.com/celzero/rethink-app) [![Privacy Policy](https://shields.tosdr.org/en_4691.svg)](https://tosdr.org/en/service/4691) [![RethinkDNS & Firewall on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=RethinkDNS_&_Firewall)](https://awesome-privacy.xyz/networking/ad-blockers/rethinkdns-and-firewall) [![RethinkDNS & Firewall on Google Play](https://img.shields.io/badge/-RethinkDNS_%26_Firewall-3bd47f?style=flat&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.celzero.bravedns)ㅤ 
 
 		</details>
-- **[<img src='https://raw.githubusercontent.com/hectorm/hblock/master/resources/logo/bitmaps/logo-shield-ffffff-h512.png' width='16' height='16' alt='icon' /> uBlock Origin](https://github.com/gorhill/uBlock)** - Light-weight, fast browser extension for Firefox and Chromium (Chrome, Edge, Brave Opera etc), that blocks tracking, ads and known malware. uBlock is easy-to-use out-of-the-box, but also has a highly[…](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin "View full uBlock Origin report") 
+- **[<img src='https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg' width='16' height='16' alt='icon' /> uBlock Origin](https://github.com/gorhill/uBlock)** - Light-weight, fast browser extension for Firefox and Chromium (Chrome, Edge, Brave Opera etc), that blocks tracking, ads and known malware. uBlock is easy-to-use out-of-the-box, but also has a highly[…](https://awesome-privacy.xyz/networking/ad-blockers/ublock-origin "View full uBlock Origin report") 
 	- <details>
 		<summary>Stats</summary>
 
@@ -2608,6 +2602,27 @@ It is recommended to encrypt files on your client machine, before syncing to the
 > that would mitigate the need to trust a third party cloud provider.
 > Note that some knowledge in securing networks is required.
 > </details>
+
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
+### Secret Sharing
+
+- **[<img src='https://hemmelig.app/icons/icon-512x512.png' width='16' height='16' alt='icon' /> Hemmelig.app](https://hemmelig.app/)** - Share rich text and files securely with locally encrypted messages that automatically self-destruct, or invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and[…](https://awesome-privacy.xyz/productivity/secret-sharing/hemmelig.app "View full Hemmelig.app report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: HemmeligOrg/Hemmelig.app](https://img.shields.io/github/stars/HemmeligOrg/Hemmelig.app?style=flat&logo=github&label=Hemmelig.app&color=%235f53f4&cacheSeconds=3600)](https://github.com/HemmeligOrg/Hemmelig.app) [![Hemmelig.app on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Hemmelig.app)](https://awesome-privacy.xyz/productivity/secret-sharing/hemmelig.app) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/HemmeligOrg/Hemmelig.app)ㅤ 
+
+		</details>
+- **[<img src='https://www.crypt.fyi/logo.ico' width='16' height='16' alt='icon' /> crypt.fyi](https://crypt.fyi)** - crypt.fyi is an ephemeral zero-knowledge sensitive data sharing platform with web, cli, and chrome-extension clients. It offers a suite of configurations beyond the standard for comparable private pas[…](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi "View full crypt.fyi report") 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: osbytes/crypt.fyi](https://img.shields.io/github/stars/osbytes/crypt.fyi?style=flat&logo=github&label=crypt.fyi&color=%235f53f4&cacheSeconds=3600)](https://github.com/osbytes/crypt.fyi) [![crypt.fyi on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=crypt.fyi)](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/osbytes/crypt.fyi)ㅤ 
+
+		</details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -3605,6 +3620,13 @@ so it is important to go with a trusted vendor, and monitor its activity closely
 
 ---
 
+### Developer Utilities
+
+<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
+<p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+---
+
 ## Smart Home & IoT
 
 ### Voice Assistants
@@ -3884,7 +3906,7 @@ Not all services are available in all countries.
 	- <details>
 		<summary>Stats</summary>
 
-		[![Privacy Policy](https://shields.tosdr.org/en_1351.svg)](https://tosdr.org/en/service/1351) [![MySudo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MySudo)](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo)ㅤ 
+		[![Privacy Policy](https://shields.tosdr.org/en_1352.svg)](https://tosdr.org/en/service/1352) [![MySudo on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=MySudo)](https://awesome-privacy.xyz/finance/virtual-credit-cards/mysudo)ㅤ 
 
 		</details>
 
@@ -3962,6 +3984,20 @@ crypto currency or cash, since neither can be easily tied back to your identity.
 		<summary>Stats</summary>
 
 		[![GitHub: plaintextaccounting/plaintextaccounting](https://img.shields.io/github/stars/plaintextaccounting/plaintextaccounting?style=flat&logo=github&label=plaintextaccounting&color=%235f53f4&cacheSeconds=3600)](https://github.com/plaintextaccounting/plaintextaccounting) [![Plain Text Accounting on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Plain_Text_Accounting)](https://awesome-privacy.xyz/finance/secure-budgeting/plain-text-accounting)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/public/img/ezbookkeeping-512.png' width='16' height='16' alt='icon' /> ezBookkeeping](https://ezbookkeeping.mayswind.net/)** - A lightweight, self-hosted personal finance app for recording daily transactions and analyzing spending patterns. Self-hosted, with all data staying on your own server. Supports 2FA and OICD. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: mayswind/ezbookkeeping](https://img.shields.io/github/stars/mayswind/ezbookkeeping?style=flat&logo=github&label=ezbookkeeping&color=%235f53f4&cacheSeconds=3600)](https://github.com/mayswind/ezbookkeeping) [![ezBookkeeping on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=ezBookkeeping)](https://awesome-privacy.xyz/finance/secure-budgeting/ezbookkeeping) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/mayswind/ezbookkeeping)ㅤ 
+
+		</details>
+- **[<img src='https://raw.githubusercontent.com/actualbudget/actual/a2267c480647bf01f1cae302292a8a237846124c/packages/desktop-electron/icons/icon.png' width='16' height='16' alt='icon' /> Actual](https://actualbudget.org/)** - A local-first personal finance app 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: actualbudget/actual](https://img.shields.io/github/stars/actualbudget/actual?style=flat&logo=github&label=actual&color=%235f53f4&cacheSeconds=3600)](https://github.com/actualbudget/actual) [![Actual on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Actual)](https://awesome-privacy.xyz/finance/secure-budgeting/actual) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/actualbudget/actual) [![Actual on Discord](https://img.shields.io/badge/-Actual-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/8JfAXSgfRf)ㅤ 
 
 		</details>
 

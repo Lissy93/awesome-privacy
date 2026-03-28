@@ -21,21 +21,30 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+      - name: Find merge base with ${{ github.event.pull_request.base.ref }}
+        id: mb
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          git fetch origin "$BASE_REF" || git fetch --depth=1 origin "$BASE_SHA" || true
+          MB=$(git merge-base "$BASE_SHA" HEAD 2>/dev/null || echo "")
+          git cat-file -e "${MB}^{commit}" 2>/dev/null || MB=""
+          echo "sha=${MB:-$BASE_SHA}" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Check README edits
         id: readme
         continue-on-error: true
-        run: python lib/checks/check-readme-edits.py --base-ref ${{ github.event.pull_request.base.sha }}
+        run: python lib/checks/check-readme-edits.py --base-ref ${{ steps.mb.outputs.sha }}
       - name: Check PR metadata
         id: meta
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_DRAFT: ${{ github.event.pull_request.draft }}
-          BASE_REF: ${{ github.event.pull_request.base.sha }}
+          BASE_REF: ${{ steps.mb.outputs.sha }}
           README_FAILED: ${{ steps.readme.outcome == 'failure' && 'true' || 'false' }}
         run: python lib/checks/check-pr-meta.py
       - name: Upload findings
@@ -56,13 +65,24 @@ jobs:
       yaml_changed: ${{ steps.changes.outputs.yaml_changed }}
     steps:
       - uses: actions/checkout@v5
-      - run: git fetch --depth=1 origin ${{ github.event.pull_request.base.sha }}
+        with:
+          fetch-depth: 0
+      - name: Find merge base with ${{ github.event.pull_request.base.ref }}
+        id: mb
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          git fetch origin "$BASE_REF" || git fetch --depth=1 origin "$BASE_SHA" || true
+          MB=$(git merge-base "$BASE_SHA" HEAD 2>/dev/null || echo "")
+          git cat-file -e "${MB}^{commit}" 2>/dev/null || MB=""
+          echo "sha=${MB:-$BASE_SHA}" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Detect changes
         id: changes
-        run: python lib/checks/detect-changes.py --base-ref ${{ github.event.pull_request.base.sha }}
+        run: python lib/checks/detect-changes.py --base-ref ${{ steps.mb.outputs.sha }}
       - name: Install dependencies
         if: steps.changes.outputs.yaml_changed == 'true'
         run: pip install -q -r lib/requirements.txt
@@ -75,7 +95,7 @@ jobs:
         if: steps.changes.outputs.yaml_changed == 'true'
         id: diff
         continue-on-error: true
-        run: python lib/checks/check-yaml-diff.py --base-ref ${{ github.event.pull_request.base.sha }}
+        run: python lib/checks/check-yaml-diff.py --base-ref ${{ steps.mb.outputs.sha }}
       - name: Check additions
         if: steps.changes.outputs.yaml_changed == 'true'
         id: additions

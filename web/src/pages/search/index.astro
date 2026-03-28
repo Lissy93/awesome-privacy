@@ -23,32 +23,31 @@ const categories = (await fetchData())?.categories;
 	section {
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
-		box-shadow: 4px 4px 0 var(--box-outline);
+		box-shadow: var(--shadow-md);
 		background: var(--accent-fg);
-		border: 2px solid var(--box-outline);
+		border: var(--border-heavy);
 		border-radius: var(--curve-sm);
-		margin: 2rem auto;
-		padding: 1rem;
-		width: calc(100% - 5rem);
-		max-width: 1100px;
+		margin: var(--space-lg) auto;
+		padding: var(--space-md);
+		width: var(--width-container-max);
+		max-width: var(--width-container);
 		min-height: 80vh;
 
 		h1 {
-			font-size: 3rem;
+			font-size: var(--text-4xl);
 			color: var(--accent-3);
-			font-family: 'Lekton', sans-serif;
+			font-family: var(--font-subtitle);
 			text-align: center;
-			margin: 1rem 0;
+			margin: var(--space-md) 0;
 		}
 		.sitemap-link {
-			opacity: 0.6;
+			opacity: var(--opacity-muted);
 			text-align: center;
-			font-size: 0.8rem;
-			margin: 2rem auto;
-			transition: all 0.2s ease-in-out;
+			font-size: var(--text-sm);
+			margin: var(--space-lg) auto;
+			transition: var(--transition-normal);
 			&:hover {
-				opacity: 0.8;
+				opacity: var(--opacity-subtle);
 			}
 		}
 	}

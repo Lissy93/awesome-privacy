@@ -75,8 +75,31 @@ const makeSearchLd = () => {
 		<!-- Page info, viewport, Astro credit -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="generator"
+			content={`Built by an actual human, in Astro. ${Astro.generator}`}
+		/>
 		<meta name="robots" content="index, follow" />
+		<link
+			rel="canonical"
+			href={`https://awesome-privacy.xyz${Astro.url.pathname}`}
+		/>
+
+		<!-- Preload critical fonts -->
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/Rubik/Rubik-Regular.woff2"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/Lekton/Lekton-Bold.woff2"
+			type="font/woff2"
+			crossorigin
+		/>
 
 		<!-- Icons and colors -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -86,14 +109,17 @@ const makeSearchLd = () => {
 		<!-- Social media meta tags (Open Graphh + Twitter) -->
 		<meta property="og:site_name" content="Awesome Privacy" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://awesome-privacy.xyz" />
+		<meta
+			property="og:url"
+			content={`https://awesome-privacy.xyz${Astro.url.pathname}`}
+		/>
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta
 			property="og:image"
 			content="https://awesome-privacy.xyz/banner.png"
 		/>
-		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content="https://awesome-privacy.xyz" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
@@ -139,7 +165,7 @@ const makeSearchLd = () => {
 		<script
 			is:inline
 			type="application/ld+json"
-			set:html={JSON.stringify(makeSearchLd)}
+			set:html={JSON.stringify(makeSearchLd())}
 		/>
 	</head>
 	<body>
@@ -154,7 +180,7 @@ const makeSearchLd = () => {
 	@import '../styles/typography.css';
 </style>
 
-<style is:global>
+<style is:global lang="scss">
 	html {
 		::selection {
 			background: var(--accent);
@@ -167,5 +193,120 @@ const makeSearchLd = () => {
 		min-height: 100vh;
 		color: var(--foreground);
 		background: var(--background);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+
+	.pagination-navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: var(--space-md) 0;
+		.button {
+			min-width: 120px;
+			width: fit-content;
+			padding: var(--space-xs) var(--space-md);
+			text-align: right;
+			&:first-child {
+				text-align: left;
+			}
+			p {
+				margin: 0;
+				font-weight: normal;
+				font-size: var(--text-base);
+			}
+			span {
+				font-size: var(--text-sm);
+			}
+		}
+		.nothing {
+			width: 120px;
+		}
+		.go-to-category {
+			color: var(--foreground);
+			font-size: var(--text-sm);
+			opacity: var(--opacity-dim);
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
+	.breadcrumbs {
+		opacity: var(--opacity-dim);
+		font-size: var(--text-sm);
+		position: absolute;
+		right: var(--space-md);
+		top: var(--space-md);
+		a {
+			color: var(--foreground);
+			transition: var(--transition-fast);
+			&:hover {
+				color: var(--accent);
+			}
+		}
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.accent-heading {
+		font-size: var(--text-3xl);
+		margin: calc(var(--space-lg) * -1) 0 var(--space-md)
+			calc(var(--space-lg) * -1);
+		box-shadow: var(--shadow-lg);
+		background: var(--accent);
+		color: var(--accent-fg);
+		width: fit-content;
+		padding: var(--space-xs) var(--space-sm);
+		@media (max-width: 768px) {
+			margin: calc(var(--space-lg) * -1) auto var(--space-lg) auto;
+		}
+	}
+
+	.further-info,
+	.notable-mentions,
+	.word-of-warning,
+	.submit-alternative {
+		h3 {
+			font-size: var(--text-lg);
+			margin: var(--space-md) 0;
+		}
+		p {
+			font-size: var(--text-sm);
+			opacity: var(--opacity-soft);
+			strong {
+				font-weight: 500;
+			}
+			a {
+				color: var(--foreground);
+				transition: var(--transition-fast);
+				&:hover {
+					color: var(--accent);
+				}
+			}
+		}
+		strong {
+			font-weight: 500;
+		}
+		h4 {
+			font-size: var(--text-md);
+			margin: var(--space-sm) 0 0 0;
+		}
+		ul {
+			list-style: circle;
+			padding-left: var(--space-md);
+			font-size: var(--text-sm);
+			opacity: var(--opacity-soft);
+			li {
+				margin-bottom: var(--space-xs);
+				p {
+					display: inline;
+				}
+			}
+		}
 	}
 </style>

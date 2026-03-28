@@ -10,7 +10,10 @@ export const fetchData = async (): Promise<AwesomePrivacy> => {
   try {
     const res = await fetch(awesomePrivacyData);
     if (!res.ok) {
-      error('Data', `HTTP ${res.status} fetching awesome-privacy.yml (${awesomePrivacyData})`);
+      error(
+        'Data',
+        `HTTP ${res.status} fetching awesome-privacy.yml (${awesomePrivacyData})`,
+      );
       return {} as AwesomePrivacy;
     }
     const text = await res.text();

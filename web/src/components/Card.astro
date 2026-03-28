@@ -23,14 +23,14 @@ const { href, title, body } = Astro.props;
 	.link-card {
 		color: var(--foreground);
 		background: var(--background);
-		border: 2px solid var(--box-outline);
-		box-shadow: 6px 6px 0 var(--box-outline);
-		font-family: 'Lekton', sans-serif;
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
+		font-family: var(--font-subtitle);
 		font-weight: 700;
-		transition: all ease-in-out 0.1s;
+		transition: var(--transition-fast);
 		list-style: none;
 		&:hover {
-			box-shadow: 8px 8px 0 var(--box-outline);
+			box-shadow: var(--shadow-lg-hover);
 			background: var(--accent);
 			color: var(--background);
 		}
@@ -38,7 +38,7 @@ const { href, title, body } = Astro.props;
 			box-sizing: border-box;
 			color: currentColor;
 			text-decoration: none;
-			transition: all ease-in-out 0.1s;
+			transition: var(--transition-fast);
 		}
 		h2 {
 			margin: 0;

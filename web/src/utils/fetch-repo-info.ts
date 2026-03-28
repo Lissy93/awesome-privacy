@@ -3,27 +3,33 @@ import { error } from './logger';
 const githubHeaders = (): Record<string, string> => {
   const headers: Record<string, string> = {
     'User-Agent': 'awesome-privacy',
-    'Accept': 'application/vnd.github.v3+json',
+    Accept: 'application/vnd.github.v3+json',
   };
   const token = import.meta.env.GITHUB_API_KEY;
   if (token) headers['Authorization'] = `token ${token}`;
   return headers;
 };
 
-const fetchFromGitHub = async (github: string): Promise<GitHubStatsResponse | null> => {
+const fetchFromGitHub = async (
+  github: string,
+): Promise<GitHubStatsResponse | null> => {
   const base = `https://api.github.com/repos/${github}`;
   const headers = githubHeaders();
 
-  const [infoRes, langsRes, tagsRes, contribRes, commitsRes] = await Promise.all([
-    fetch(base, { headers }),
-    fetch(`${base}/languages`, { headers }),
-    fetch(`${base}/tags`, { headers }),
-    fetch(`${base}/contributors`, { headers }),
-    fetch(`${base}/commits`, { headers }),
-  ]);
+  const [infoRes, langsRes, tagsRes, contribRes, commitsRes] =
+    await Promise.all([
+      fetch(base, { headers }),
+      fetch(`${base}/languages`, { headers }),
+      fetch(`${base}/tags`, { headers }),
+      fetch(`${base}/contributors`, { headers }),
+      fetch(`${base}/commits`, { headers }),
+    ]);
 
   if (!infoRes.ok) {
-    error('GitHub Stats', `GitHub API returned ${infoRes.status} for ${github}`);
+    error(
+      'GitHub Stats',
+      `GitHub API returned ${infoRes.status} for ${github}`,
+    );
     return null;
   }
 
@@ -76,7 +82,9 @@ const fetchFromGitHub = async (github: string): Promise<GitHubStatsResponse | nu
   };
 };
 
-const fetchFromWorker = async (github: string): Promise<GitHubStatsResponse | null> => {
+const fetchFromWorker = async (
+  github: string,
+): Promise<GitHubStatsResponse | null> => {
   const res = await fetch(`https://repo-info.as93.workers.dev/${github}`);
   if (!res.ok) return null;
   return res.json();

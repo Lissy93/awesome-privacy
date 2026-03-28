@@ -11,11 +11,16 @@ html {
 	--curve-sm: 4px;
 	--curve-md: 6px;
 	--curve-lg: 12px;
+	--curve-pill: 18px;
 
 	--danger: #ff0048;
 	--success: #00ff64;
+	--success-muted: #0fb953;
 
 	--transparent-accent: #5f53f482;
+	--accent-translucent: #f453974d;
+	--accent-3-translucent: #5f53f440;
+	--code-bg: #acabb782;
 
 	--background: #151517;
 	--bg-gradient-comp-1: #151517;
@@ -24,26 +29,73 @@ html {
 
 	--box-outline: #000;
 
+	--font-heading: 'Libre Franklin', sans-serif;
+	--font-subtitle: 'Lekton', sans-serif;
+	--font-body: 'Rubik', sans-serif;
+
+	--shadow-lg: 6px 6px 0 var(--box-outline);
+	--shadow-md: 4px 4px 0 var(--box-outline);
+	--shadow-sm: 3px 3px 0 var(--box-outline);
+	--shadow-xs: 2px 2px 0 var(--box-outline);
+
+	--shadow-lg-hover: 8px 8px 0 var(--box-outline);
+	--shadow-sm-hover: 4px 4px 0 var(--box-outline);
+	--shadow-xs-hover: 3px 3px 0 var(--box-outline);
+
+	--border-heavy: 2px solid var(--box-outline);
+	--border-light: 1px solid var(--box-outline);
+
+	--font-code: 'Courier New', Courier, monospace;
+
+	--text-xs: 0.75rem;
+	--text-sm: 0.85rem;
+	--text-base: 1rem;
+	--text-md: 1.2rem;
+	--text-lg: 1.4rem;
+	--text-xl: 1.6rem;
+	--text-2xl: 1.8rem;
+	--text-3xl: 2rem;
+	--text-4xl: 3rem;
+	--text-5xl: 5rem;
+
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 2rem;
+	--space-xl: 3rem;
+	--space-2xl: 4rem;
+
+	--opacity-dim: 0.5;
+	--opacity-muted: 0.6;
+	--opacity-soft: 0.7;
+	--opacity-subtle: 0.8;
+
+	--width-container: 1200px;
+	--width-container-narrow: 1000px;
+	--width-container-max: calc(100% - 5rem);
+
+	--transition-fast: all 0.15s ease-in-out;
+	--transition-normal: all 0.2s ease-in-out;
+
+	--rating-a: #35b969;
+	--rating-b: #6bb935;
+	--rating-c: #c7cc22;
+	--rating-d: #e1bb23;
+	--rating-e: #df8b1e;
+	--rating-f: #df541e;
+	--rating-g: #df1e1e;
+	--rating-neutral: #ecd40f;
+	--rating-unknown: grey;
+
+	--changelog-add: #6fdd8b;
+	--changelog-rem: #fdcc0b;
+	--changelog-mod: #42c1ff;
+	--changelog-rej: #ff2d55;
+
 	&[data-theme='light'] {
-		--accent: #f45397;
 		--accent-fg: #fff;
-
-		--accent-2: #ffdf60;
-		--accent-3: #5f53f4;
-		--accent-4: #28dffd;
-
 		--foreground: #13151a;
-
-		--curve-sm: 4px;
-		--curve-md: 6px;
-		--curve-lg: 12px;
-
-		--danger: #ff0048;
-		--success: #00ff64;
-
-		--transparent-accent: #5f53f482;
-
-		--background: #feecff;
+		--background: #f1ebf1;
 		--bg-gradient-comp-1: #feecff;
 		--bg-gradient-comp-2: #e1e4fb;
 		--background-form: #fff;
