@@ -42,11 +42,6 @@
     display: flex;
     align-items: center;
     gap: var(--space-sm);
-    img {
-      border-radius: var(--curve-sm);
-      font-size: 0.6rem;
-      color: var(--accent);
-    }
     :global(p) {
       @include line-clamp(3);
       margin: var(--space-sm) 0;

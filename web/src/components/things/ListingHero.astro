@@ -4,6 +4,7 @@ import { slugify } from '@utils/fetch-data';
 import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import SaveListing from '@components/things/SaveListing.svelte';
+import ServiceIcon from '@components/things/ServiceIcon.astro';
 
 interface Props {
 	service: Service;
@@ -143,16 +144,7 @@ const highlights = [
 		/>
 	</div>
 	<div class="intro">
-		<img
-			width="60"
-			height="60"
-			loading="lazy"
-			decoding="async"
-			class="service-icon"
-			alt={`${name} Icon`}
-			data-service-url={formatLink(url)}
-			src={icon || `https://icon.horse/icon/${formatLink(url)}`}
-		/>
+		<ServiceIcon name={name} url={url} icon={icon} size={60} />
 		<div>
 			<p class="description" set:html={parseMarkdown(description)} />
 			<ul>
@@ -267,7 +259,7 @@ const highlights = [
 		@media (max-width: 768px) {
 			flex-direction: column;
 		}
-		.service-icon {
+		:global(.service-icon-wrap) {
 			border-radius: var(--curve-md);
 			margin-top: var(--space-md);
 			@media (max-width: 768px) {

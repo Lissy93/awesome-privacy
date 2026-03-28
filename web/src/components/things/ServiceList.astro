@@ -4,6 +4,7 @@ import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import DeleteListing from '@components/things/DeleteListing.svelte';
+import ServiceIcon from '@components/things/ServiceIcon.astro';
 import { slugify } from '@utils/fetch-data';
 
 import GitHubMetrics from '@components/things/ItemGitHubMetrics.astro';
@@ -28,27 +29,6 @@ const {
 } = Astro.props;
 ---
 
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const serviceIcons =
-			document.querySelectorAll<HTMLImageElement>('.service-icon');
-		const broke = '/broken-image.png';
-
-		serviceIcons.forEach(function (icon) {
-			icon.onerror = function () {
-				const imgElement = this as HTMLImageElement;
-				const serviceUrl = imgElement.getAttribute('data-service-url');
-				const newSrcAttribute = imgElement.src.includes('on.ho')
-					? broke
-					: `https://icon.horse/icon/${serviceUrl}`;
-				imgElement.src =
-					imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
-				imgElement.onerror = null;
-			};
-		});
-	});
-</script>
-
 <section>
 	{
 		services && services.length > 0 ? (
@@ -70,18 +50,10 @@ const {
 							/>
 						</div>
 						<div class="service-head">
-							<img
-								width="40"
-								height="40"
-								loading="lazy"
-								decoding="async"
-								class="service-icon"
-								alt={`${service.name} Icon`}
-								data-service-url={formatLink(service.url)}
-								src={
-									service.icon ||
-									`https://icon.horse/icon/${formatLink(service.url)}`
-								}
+							<ServiceIcon
+								name={service.name}
+								url={service.url}
+								icon={service.icon}
 							/>
 
 							<a
@@ -251,12 +223,10 @@ const {
 					}
 				}
 
-				.service-icon {
+				:global(.service-icon-wrap) {
 					width: 2.5rem;
 					height: 2.5rem;
 					border-radius: var(--curve-sm);
-
-					font-size: 10px;
 					overflow: hidden;
 					color: var(--accent);
 				}

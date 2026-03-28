@@ -1,0 +1,128 @@
+---
+import { formatLink } from '@utils/parse-markdown';
+
+interface Props {
+	name: string;
+	url: string;
+	icon?: string;
+	size?: number;
+}
+
+const { name, url, icon, size = 40 } = Astro.props;
+const src = icon || `https://icon.horse/icon/${formatLink(url)}`;
+const horseSrc = `https://icon.horse/icon/${formatLink(url)}`;
+const iconSize = Math.round(size * 0.45);
+---
+
+<span class="service-icon-wrap" style={`width:${size}px;height:${size}px`}>
+	<svg
+		class="icon-state loading"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 640 640"
+	>
+		<path
+			d="M320.3 93.7C322.8 76.2 339 64.1 356.5 66.6C480.6 84.4 576 191 576 320C576 353.5 569.5 385.6 557.8 415.1C551.2 431.5 532.6 439.5 516.2 432.9C499.8 426.3 491.8 407.7 498.4 391.3C507.2 369.3 512.1 345.3 512.1 320C512.1 223.3 440.6 143.3 347.6 129.9C330.1 127.4 318 111.2 320.5 93.7z"
+		></path>
+	</svg>
+	<svg
+		class="icon-state broken"
+		xmlns="http://www.w3.org/2000/svg"
+		width={iconSize}
+		height={iconSize}
+		viewBox="0 0 320 512"
+	>
+		<path
+			fill="currentColor"
+			d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1A87.98 87.98 0 0 0 128 320v16c0 13.3 10.7 24 24 24s24-10.7 24-24v-16c0-17.4 8.8-33.7 23.5-43.1l42.2-27.1A111.97 111.97 0 0 0 288 163.6V160c0-61.9-50.1-112-112-112h-32C82.1 48 32 98.1 32 160c0 13.3 10.7 24 24 24s24-10.7 24-24zm80 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"
+		></path>
+	</svg>
+	<img
+		width={size}
+		height={size}
+		loading="lazy"
+		decoding="async"
+		class="service-icon"
+		alt={name}
+		data-horse={horseSrc}
+		src={src}
+		onload="this.parentNode.classList.add('loaded')"
+		onerror={`if(!this.src.includes('icon.horse')){this.src=this.dataset.horse}else{this.remove();this.parentNode?.classList.add('broken')}`}
+	/>
+</span>
+
+<script>
+	document.addEventListener('astro:page-load', () => {
+		const obs = new IntersectionObserver((entries) => {
+			entries.forEach((e) => {
+				if (!e.isIntersecting) return;
+				obs.unobserve(e.target);
+				setTimeout(() => {
+					const wrap = e.target as HTMLElement;
+					if (
+						wrap.classList.contains('loaded') ||
+						wrap.classList.contains('broken')
+					)
+						return;
+					const img = wrap.querySelector('img');
+					if (img) img.remove();
+					wrap.classList.add('broken');
+				}, 8000);
+			});
+		});
+		document
+			.querySelectorAll('.service-icon-wrap')
+			.forEach((el) => obs.observe(el));
+	});
+</script>
+
+<style is:global>
+	.service-icon-wrap {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		border-radius: var(--curve-sm);
+		position: relative;
+		&:not(.loaded) {
+			border: var(--border-heavy);
+			box-shadow: var(--shadow-xs);
+			background: var(--accent-3-translucent);
+		}
+		.icon-state {
+			color: var(--accent-3);
+		}
+		.icon-state.broken {
+			display: none;
+		}
+		.icon-state.loading {
+			animation: spin 1s linear infinite;
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 0);
+			fill: var(--accent-3);
+			opacity: 0.5;
+		}
+		.service-icon {
+			position: absolute;
+			inset: 0;
+			border-radius: var(--curve-sm);
+			font-size: 0;
+		}
+		&.loaded {
+			.icon-state {
+				display: none;
+			}
+		}
+		&.broken {
+			.icon-state.loading {
+				display: none;
+			}
+			.icon-state.broken {
+				display: block;
+			}
+		}
+	}
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+</style>
