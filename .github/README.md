@@ -63,7 +63,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Hosting](#dns-hosting) (1)
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
-	- [Digital Notes](#digital-notes) (8)
+	- [Digital Notes](#digital-notes) (9)
 	- [Calendar](#calendar) (1)
 	- [Task Management](#task-management) (1)
 	- [Backup and Sync](#backup-and-sync) (4)
@@ -2374,6 +2374,13 @@ be time consuming to setup and maintain and securing it correctly is critical
 		<summary>Stats</summary>
 
 		[![GitHub: cryptee/web-client](https://img.shields.io/github/stars/cryptee/web-client?style=flat&logo=github&label=web-client&color=%235f53f4&cacheSeconds=3600)](https://github.com/cryptee/web-client) [![Privacy Policy](https://shields.tosdr.org/en_5047.svg)](https://tosdr.org/en/service/5047) [![Cryptee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cryptee)](https://awesome-privacy.xyz/productivity/digital-notes/cryptee)ㅤ 
+
+		</details>
+- **[<img src='https://icon.horse/icon/app.vnote.fun' width='16' height='16' alt='icon' /> VNote](https://app.vnote.fun/en_us/)** - A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown editing experience. It manages notes directly as plain text files on your local system. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: vnotex/vnote](https://img.shields.io/github/stars/vnotex/vnote?style=flat&logo=github&label=vnote&color=%235f53f4&cacheSeconds=3600)](https://github.com/vnotex/vnote) [![VNote on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VNote)](https://awesome-privacy.xyz/productivity/digital-notes/vnote) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/vnotex/vnote)ㅤ 
 
 		</details>
 

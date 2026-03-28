@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T13:32:54Z",
+  "generatedAt": "2026-03-28T13:52:12Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -73,6 +73,7 @@
     "ccc7b43aa598acf709f8f5c77f987c2b95ec2921",
     "d027f6bf3eb4420f106b6778fa302f326a05f08c",
     "d397fc760983ced96c6d187305c0ea210ac6cece",
+    "d6d9ae19e959bd9f10d0d4aa1e326e55f0c05174",
     "dec42f0572b2f52fad5ccd5f52ae6f4ae0b18721",
     "e33ee115950f0d56c764e5d0581e1d697afbb63f",
     "e7474c579b7e33b3c47ed76492068d914e4566f1",
@@ -1080,6 +1081,24 @@
               "name": "nostr",
               "category": "Social",
               "section": "Social Networks"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2025-04-10",
+      "sha": "d6d9ae19e959bd9f10d0d4aa1e326e55f0c05174",
+      "pr": null,
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "VNote",
+              "category": "Productivity",
+              "section": "Digital Notes"
             }
           ]
         },
