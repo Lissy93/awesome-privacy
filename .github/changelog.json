@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T11:38:08Z",
+  "generatedAt": "2026-03-28T13:30:10Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -44,6 +44,7 @@
     "90d8ef9b928ed9abb25b3c2480717e6174451488",
     "9138eddcdec8ede666db70bc44d98b33c9f9653e",
     "99cf5f51acf1b8ac09558bf419abe18586233668",
+    "9bfe4992518d16b7877f13a4a3c6902b013670a1",
     "9ef9e90d30804239482c9a6e2903fd015b1224c4",
     "a2cef5cbf9e19acbf192c97b59bb82e06a7f3a2a",
     "a539b1dd64eba2d9f68f3a63c4f2b170fc31fcef",
@@ -82,6 +83,29 @@
     "fa1c504da13a0d2f8e75ef95566811e54750ff3d"
   ],
   "entries": [
+    {
+      "date": "2026-03-28",
+      "sha": "9bfe4992518d16b7877f13a4a3c6902b013670a1",
+      "pr": {
+        "number": 448,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/448",
+        "author": "shingrus",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/595292?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "1time.io",
+              "category": "Productivity",
+              "section": "Secret Sharing"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-03-27",
       "sha": "ca4702933d6234a50f654e034869ed66a1dfd043",

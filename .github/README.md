@@ -69,7 +69,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [Secret Sharing](#secret-sharing) (2)
+	- [Secret Sharing](#secret-sharing) (3)
 	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (4)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
@@ -2621,6 +2621,13 @@ It is recommended to encrypt files on your client machine, before syncing to the
 		<summary>Stats</summary>
 
 		[![GitHub: osbytes/crypt.fyi](https://img.shields.io/github/stars/osbytes/crypt.fyi?style=flat&logo=github&label=crypt.fyi&color=%235f53f4&cacheSeconds=3600)](https://github.com/osbytes/crypt.fyi) [![crypt.fyi on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=crypt.fyi)](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/osbytes/crypt.fyi)ㅤ 
+
+		</details>
+- **[<img src='https://1time.io/favicon.svg' width='16' height='16' alt='icon' /> 1time.io](https://1time.io/)** - 1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side encryption, HKDF key derivation, CLI tool, and Docker self-hosting. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: shingrus/1time.io](https://img.shields.io/github/stars/shingrus/1time.io?style=flat&logo=github&label=1time.io&color=%235f53f4&cacheSeconds=3600)](https://github.com/shingrus/1time.io) [![1time.io on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=1time.io)](https://awesome-privacy.xyz/productivity/secret-sharing/1time.io) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/shingrus/1time.io)ㅤ 
 
 		</details>
 
