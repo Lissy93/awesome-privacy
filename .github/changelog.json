@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-03-23T18:55:44Z",
+  "generatedAt": "2026-03-25T13:02:52Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
+    "0565145265ae63168dafcd48c5e13d8604691a10",
     "0720acdb7bc3f8b7f100cbbc7faea3fc476067df",
     "09c0116be9f371c94511c1f1ce7cb5d3c4bd7708",
     "0e78d9828cdec94f90d2bc7f8952c3a71211b4b3",
@@ -13,6 +14,7 @@
     "18638b8c99e173576f48a4296425b70277233794",
     "18d87f28c0cd393052d21fae15e9ca492b9a4243",
     "1be23415958275eb6c82c3e6ccb3f16ecbb62d15",
+    "1c36e4b8015e4c1152b1d51a36ba4991f3d64e10",
     "1f79ce2ce71e6ab3526fd0995b94df67252510f2",
     "2173bbfac987696ebd73a30b05bdb2ac836c7ab2",
     "2275c0696dde8ab183f83b048e0baab4fe64ef7d",
@@ -21,6 +23,7 @@
     "2b28a28b42b9606c83e43485be5f8c830167fdaa",
     "2db7dbd294780e8c49ea02f0b5daa735fd137809",
     "2e1e2f81063a2a87365058fb26f8db7cf28acf8a",
+    "30569aa9b85bc55905b08c00719ce3715df6c8e7",
     "335a2df16b0f7accf9a56cc22aa7030dbdac6f13",
     "374c14a68a4c3df451e718cdb6e0447b1b7a3c56",
     "376a2ebe1336c956ef0b8f14b829bb12ede3c589",
@@ -28,9 +31,12 @@
     "3a462d6d2f792b391753a9b66cffa5e42dd68c55",
     "3c768cfd34bb4a75c740815874dfb99b31233fa7",
     "4145b323ab2b8e93d05392ba12ace9ee815c27f9",
+    "474de7b56c37fb9bf8991fcc3e42df91acc74049",
+    "5b772f3ea6f2e480b07bb09a1b523553198fd386",
     "5ec99fe78361e422648aec2eff69375fcc3ca810",
     "639eb6794696341f32b582c50a0ecd7a91db52d1",
     "698e818f03fda883ec55a630bd9380d7cf214bb8",
+    "69f6a2755a08caaa814201be36c9a809961b7f78",
     "7177ba26e054a6f173ec451b420ee64d5fdef69b",
     "824f20bf68f046a9f9bdaaf41a36a4a7e46c2d9f",
     "874dbdacae9c71cea100c85dc2b05bd348d20173",
@@ -69,9 +75,198 @@
     "e9b1fee82705ca9b52a9db6e081d46bc4c417f01",
     "ec4cbec4affe6d6ddcb178504e137d552af3771f",
     "ec9119761c83aeafc5cf436dc2306280212c2470",
+    "f3d9d9a7950d13baaae2f973600499f0d7b12e15",
     "fa1c504da13a0d2f8e75ef95566811e54750ff3d"
   ],
   "entries": [
+    {
+      "date": "2026-03-25",
+      "sha": "0565145265ae63168dafcd48c5e13d8604691a10",
+      "pr": {
+        "number": 307,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/307",
+        "author": "dillonstreator",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/26043866?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "crypt.fyi",
+              "category": "Productivity",
+              "section": "Secret Sharing"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "sha": "5b772f3ea6f2e480b07bb09a1b523553198fd386",
+      "pr": {
+        "number": 456,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/456",
+        "author": "Lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Hemmelig.app",
+              "category": "Productivity",
+              "section": "Secret Sharing"
+            }
+          ],
+          "removed": [
+            {
+              "name": "Hemmelig.app",
+              "category": "Security Tools",
+              "section": "Online Tools"
+            }
+          ],
+          "modified": [
+            {
+              "name": "Narayana",
+              "category": "Communication",
+              "section": "Virtual Phone Numbers",
+              "fields": [
+                "description"
+              ]
+            }
+          ]
+        },
+        "sections": {
+          "added": [
+            {
+              "name": "Secret Sharing",
+              "category": "Productivity"
+            }
+          ]
+        },
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "sha": "1c36e4b8015e4c1152b1d51a36ba4991f3d64e10",
+      "pr": {
+        "number": 308,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/308",
+        "author": "agathakazar",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/34287035?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Narayana",
+              "category": "Communication",
+              "section": "Virtual Phone Numbers"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "sha": "69f6a2755a08caaa814201be36c9a809961b7f78",
+      "pr": {
+        "number": 418,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/418",
+        "author": "lnvpn",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/180184255?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "nadanada",
+              "category": "Communication",
+              "section": "Virtual Phone Numbers"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "sha": "f3d9d9a7950d13baaae2f973600499f0d7b12e15",
+      "pr": {
+        "number": 282,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/282",
+        "author": "catbash",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/88514774?v=4"
+      },
+      "changes": {
+        "services": {
+          "modified": [
+            {
+              "name": "MySudo",
+              "category": "Finance",
+              "section": "Virtual Credit Cards",
+              "fields": [
+                "tosdrId"
+              ]
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "sha": "474de7b56c37fb9bf8991fcc3e42df91acc74049",
+      "pr": {
+        "number": 363,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/363",
+        "author": "PythonGermany",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/97847597?v=4"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "Picocrypt",
+              "category": "Essentials",
+              "section": "File Encryption"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "sha": "30569aa9b85bc55905b08c00719ce3715df6c8e7",
+      "pr": {
+        "number": 453,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/453",
+        "author": "Lissy93",
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
+      },
+      "changes": {
+        "services": {
+          "removed": [
+            {
+              "name": "WinAuth",
+              "category": "Essentials",
+              "section": "2-Factor Authentication"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-03-23",
       "sha": "374c14a68a4c3df451e718cdb6e0447b1b7a3c56",
@@ -79,7 +274,7 @@
         "number": 451,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/451",
         "author": "Lissy93",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
       },
       "changes": {
         "services": {
@@ -105,7 +300,7 @@
         "number": 443,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/443",
         "author": "Lissy93",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
       },
       "changes": {
         "services": {
@@ -128,7 +323,7 @@
         "number": 434,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/434",
         "author": "Lissy93",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
       },
       "changes": {
         "services": {
@@ -256,7 +451,7 @@
         "number": 438,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/438",
         "author": "johannesjo",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1456265?v=4"
+        "authorAvatar": "https://github.com/johannesjo.png?size=40"
       },
       "changes": {
         "services": {
@@ -286,7 +481,7 @@
         "number": 433,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/433",
         "author": "Lissy93",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
       },
       "changes": {
         "services": {
@@ -309,7 +504,7 @@
         "number": 427,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/427",
         "author": "ltguillaume",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/4777345?v=4"
+        "authorAvatar": "https://github.com/ltguillaume.png?size=40"
       },
       "changes": {
         "services": {
@@ -335,7 +530,7 @@
         "number": 303,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/303",
         "author": "lanedirt",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/6917405?v=4"
+        "authorAvatar": "https://github.com/lanedirt.png?size=40"
       },
       "changes": {
         "services": {
@@ -373,7 +568,7 @@
         "number": 297,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/297",
         "author": "joeldavidw",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/4586209?v=4"
+        "authorAvatar": "https://github.com/joeldavidw.png?size=40"
       },
       "changes": {
         "services": {
@@ -396,7 +591,7 @@
         "number": 422,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/422",
         "author": "ltguillaume",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/4777345?v=4"
+        "authorAvatar": "https://github.com/ltguillaume.png?size=40"
       },
       "changes": {
         "services": {
@@ -419,7 +614,7 @@
         "number": 365,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/365",
         "author": "codebruinc",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/57265689?v=4"
+        "authorAvatar": "https://github.com/codebruinc.png?size=40"
       },
       "changes": {
         "services": {
@@ -442,7 +637,7 @@
         "number": 370,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/370",
         "author": "emilynomura1",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/49768143?v=4"
+        "authorAvatar": "https://github.com/emilynomura1.png?size=40"
       },
       "changes": {
         "services": {
@@ -465,7 +660,7 @@
         "number": 398,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/398",
         "author": "BrunoBernardino",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1239616?v=4"
+        "authorAvatar": "https://github.com/BrunoBernardino.png?size=40"
       },
       "changes": {
         "services": {
@@ -488,7 +683,7 @@
         "number": 393,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/393",
         "author": "BrunoBernardino",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1239616?v=4"
+        "authorAvatar": "https://github.com/BrunoBernardino.png?size=40"
       },
       "changes": {
         "services": {
@@ -531,7 +726,7 @@
         "number": 387,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/387",
         "author": "Lissy93",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+        "authorAvatar": "https://github.com/Lissy93.png?size=40"
       },
       "changes": {
         "services": {
@@ -654,7 +849,7 @@
         "number": 357,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/357",
         "author": "partyvpn",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/242552856?v=4"
+        "authorAvatar": "https://github.com/partyvpn.png?size=40"
       },
       "changes": {
         "services": {
@@ -676,8 +871,8 @@
       "pr": {
         "number": 359,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/359",
-        "author": "titanism",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/101466223?v=4"
+        "author": "forwardemail",
+        "authorAvatar": "https://github.com/forwardemail.png?size=40"
       },
       "changes": {
         "services": {
@@ -704,7 +899,7 @@
         "number": 332,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/332",
         "author": "taregon",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/113083219?v=4"
+        "authorAvatar": "https://github.com/taregon.png?size=40"
       },
       "changes": {
         "services": {
@@ -734,7 +929,7 @@
         "number": 334,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/334",
         "author": "vitonsky",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/86191922?v=4"
+        "authorAvatar": "https://github.com/vitonsky.png?size=40"
       },
       "changes": {
         "services": {
@@ -757,7 +952,7 @@
         "number": 329,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/329",
         "author": "marc3linho",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/130232436?v=4"
+        "authorAvatar": "https://github.com/marc3linho.png?size=40"
       },
       "changes": {
         "services": {
@@ -780,7 +975,7 @@
         "number": 330,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/330",
         "author": "marc3linho",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/130232436?v=4"
+        "authorAvatar": "https://github.com/marc3linho.png?size=40"
       },
       "changes": {
         "services": {
@@ -803,7 +998,7 @@
         "number": 296,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/296",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -826,7 +1021,7 @@
         "number": 295,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/295",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -852,7 +1047,7 @@
         "number": 290,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/290",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -880,7 +1075,7 @@
         "number": 278,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/278",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -903,7 +1098,7 @@
         "number": 283,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/283",
         "author": "catbash",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/88514774?v=4"
+        "authorAvatar": "https://github.com/catbash.png?size=40"
       },
       "changes": {
         "services": {
@@ -926,7 +1121,7 @@
         "number": 285,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/285",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -952,7 +1147,7 @@
         "number": 286,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/286",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -978,7 +1173,7 @@
         "number": 284,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/284",
         "author": "catbash",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/88514774?v=4"
+        "authorAvatar": "https://github.com/catbash.png?size=40"
       },
       "changes": {
         "services": {
@@ -1023,7 +1218,7 @@
         "number": 277,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/277",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1046,7 +1241,7 @@
         "number": 276,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/276",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1069,7 +1264,7 @@
         "number": 275,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/275",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1095,7 +1290,7 @@
         "number": 274,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/274",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1118,7 +1313,7 @@
         "number": 272,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/272",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1144,7 +1339,7 @@
         "number": 270,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/270",
         "author": "SadMadLad",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/74383721?v=4"
+        "authorAvatar": "https://github.com/SadMadLad.png?size=40"
       },
       "changes": {
         "services": {
@@ -1167,7 +1362,7 @@
         "number": 265,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/265",
         "author": "smspool",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/113311275?v=4"
+        "authorAvatar": "https://github.com/smspool.png?size=40"
       },
       "changes": {
         "services": {
@@ -1193,7 +1388,7 @@
         "number": 262,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/262",
         "author": "brnsuh",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/148950769?v=4"
+        "authorAvatar": "https://github.com/brnsuh.png?size=40"
       },
       "changes": {
         "services": {
@@ -1220,7 +1415,7 @@
         "number": 258,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/258",
         "author": "azzamsa",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/17734314?v=4"
+        "authorAvatar": "https://github.com/azzamsa.png?size=40"
       },
       "changes": {
         "services": {
@@ -1246,7 +1441,7 @@
         "number": 253,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/253",
         "author": "trucke",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/46195120?v=4"
+        "authorAvatar": "https://github.com/trucke.png?size=40"
       },
       "changes": {
         "services": {
@@ -1269,7 +1464,7 @@
         "number": 248,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/248",
         "author": "smspool",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/113311275?v=4"
+        "authorAvatar": "https://github.com/smspool.png?size=40"
       },
       "changes": {
         "services": {
@@ -1313,7 +1508,7 @@
         "number": 244,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/244",
         "author": "poegl",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/57896970?v=4"
+        "authorAvatar": "https://github.com/poegl.png?size=40"
       },
       "changes": {
         "services": {
@@ -1429,7 +1624,7 @@
         "number": 230,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/230",
         "author": "lamtrinhdev",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/49742151?v=4"
+        "authorAvatar": "https://github.com/lamtrinhdev.png?size=40"
       },
       "changes": {
         "services": {
@@ -2311,7 +2506,7 @@
         "number": 219,
         "url": "https://github.com/Lissy93/awesome-privacy/pull/219",
         "author": "maybeanerd",
-        "authorAvatar": "https://avatars.githubusercontent.com/u/18548570?v=4"
+        "authorAvatar": "https://github.com/maybeanerd.png?size=40"
       },
       "changes": {
         "services": {
@@ -2579,5 +2774,336 @@
       }
     }
   ],
-  "rejections": []
+  "rejections": [
+    {
+      "date": "2026-03-24",
+      "title": "Add fileGOD to File Converters",
+      "pr": {
+        "number": 455,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/455",
+        "author": "honzabroski",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/242466361?v=4"
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "title": "Add fileGOD to File Converters section",
+      "pr": {
+        "number": 454,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/454",
+        "author": "honzabroski",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/242466361?v=4"
+      }
+    },
+    {
+      "date": "2026-03-23",
+      "title": "Add MapAtlas to Maps & Navigation",
+      "pr": {
+        "number": 452,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/452",
+        "author": "MapMetrics",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/92952377?v=4"
+      }
+    },
+    {
+      "date": "2026-03-21",
+      "title": "Add Lockpaw to Mac OS Defences",
+      "pr": {
+        "number": 445,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/445",
+        "author": "sorkila",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/132499692?v=4"
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "title": "Add Lockpaw to Mac OS Defences",
+      "pr": {
+        "number": 444,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/444",
+        "author": "sorkila",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/132499692?v=4"
+      }
+    },
+    {
+      "date": "2026-03-16",
+      "title": "Add Text Expansion section to Productivity category",
+      "pr": {
+        "number": 435,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/435",
+        "author": "TechHQUSA",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/263943025?v=4"
+      }
+    },
+    {
+      "date": "2026-03-16",
+      "title": "Add Haven Card to Virtual Credit Cards",
+      "pr": {
+        "number": 432,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/432",
+        "author": "fspseva",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/90082229?v=4"
+      }
+    },
+    {
+      "date": "2026-03-16",
+      "title": "Add Haveno DEX to Crypto Exchanges",
+      "pr": {
+        "number": 431,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/431",
+        "author": "arnoldnakamura",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/268478227?v=4"
+      }
+    },
+    {
+      "date": "2026-03-15",
+      "title": "Add Nubo Email to Encrypted Email providers",
+      "pr": {
+        "number": 429,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/429",
+        "author": "koolninad",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/8643639?v=4"
+      }
+    },
+    {
+      "date": "2026-03-14",
+      "title": "Add HeyRobyn to Email Clients",
+      "pr": {
+        "number": 428,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/428",
+        "author": "nicolailuther",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/22956976?v=4"
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Adds Greywall to Linux Defenses",
+      "pr": {
+        "number": 423,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/423",
+        "author": "nikitalokhmachev-ai",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/40176838?v=4"
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Add CloakBin in Pastebins",
+      "pr": {
+        "number": 420,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/420",
+        "author": "Ishannaik",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/11766476?v=4"
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Add Captchainbox to Email Security Tools",
+      "pr": {
+        "number": 419,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/419",
+        "author": "Doerp",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/48098437?v=4"
+      }
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Add PolicyForge to Online Tools",
+      "pr": {
+        "number": 416,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/416",
+        "author": "ryuno2525",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/153051418?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Adds Tymeslot to Calendar",
+      "pr": {
+        "number": 412,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/412",
+        "author": "wahve3",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/24662784?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Adds SaneHosts to Host Block Lists",
+      "pr": {
+        "number": 411,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/411",
+        "author": "MrSaneApps",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/22772275?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Add ElectionDeflection to Communication",
+      "pr": {
+        "number": 410,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/410",
+        "author": "MillerMedia",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/7741082?v=4"
+      }
+    },
+    {
+      "date": "2026-03-05",
+      "title": "Add SaneHosts",
+      "pr": {
+        "number": 409,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/409",
+        "author": "MrSaneApps",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/22772275?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Adds Telegram Archive to Backup and Sync",
+      "pr": {
+        "number": 408,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/408",
+        "author": "GeiserX",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/9169332?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Add DNA Claude Analysis — privacy-first local genome analysis toolkit",
+      "pr": {
+        "number": 401,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/401",
+        "author": "shmlkv",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/9050229?v=4"
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "title": "Adds FCaptcha to Self-Hosted Network Security",
+      "pr": {
+        "number": 399,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/399",
+        "author": "cport1",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1678629?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Adds VerifySMS to Virtual Phone Numbers",
+      "pr": {
+        "number": 396,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/396",
+        "author": "serhat961",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/61142546?v=4"
+      }
+    },
+    {
+      "date": "2026-02-23",
+      "title": "Test",
+      "pr": {
+        "number": 390,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/390",
+        "author": "Lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      }
+    },
+    {
+      "date": "2026-02-22",
+      "title": "Adds FFmpeg to File Converters",
+      "pr": {
+        "number": 388,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/388",
+        "author": "Bd-Mutant7",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/182138871?v=4"
+      }
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Update awesome-privacy.yml",
+      "pr": {
+        "number": 386,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/386",
+        "author": "darkvpshosting",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/245390928?v=4"
+      }
+    },
+    {
+      "date": "2026-02-22",
+      "title": "Adds 5 file converters to Media section",
+      "pr": {
+        "number": 385,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/385",
+        "author": "Bd-Mutant7",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/182138871?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": " Added NSL.SH to the DNS Hosting section.",
+      "pr": {
+        "number": 383,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/383",
+        "author": "BookJJun-IJ",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/209771478?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": " Added Yundera to the Cloud Hosting section.",
+      "pr": {
+        "number": 382,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/382",
+        "author": "BookJJun-IJ",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/209771478?v=4"
+      }
+    },
+    {
+      "date": "2026-02-13",
+      "title": "Add Vault Password Generator to Password Managers",
+      "pr": {
+        "number": 381,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/381",
+        "author": "JarrydGordon",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/170898146?v=4"
+      }
+    },
+    {
+      "date": "2026-02-24",
+      "title": "Add Cookie Guardian to Browser Extensions",
+      "pr": {
+        "number": 379,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/379",
+        "author": "ethancarlton-cyber",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/239194555?v=4"
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "title": "Add Marshall Browser to Browsers section",
+      "pr": {
+        "number": 372,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/372",
+        "author": "bad-antics",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/160459796?v=4"
+      }
+    },
+    {
+      "date": "2026-01-26",
+      "title": "Add BulkPicTools to File/Media Tools",
+      "pr": {
+        "number": 371,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/371",
+        "author": "kbmjj123",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1559584?v=4"
+      }
+    },
+    {
+      "date": "2026-03-08",
+      "title": "Add new category (Analytics) add Vistrall",
+      "pr": {
+        "number": 367,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/367",
+        "author": "web-developer-lee",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/152392640?v=4"
+      }
+    }
+  ]
 }

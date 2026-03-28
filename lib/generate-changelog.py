@@ -23,10 +23,22 @@ FIRST_COMMIT = "0720acdb7bc3f8b7f100cbbc7faea3fc476067df"  # 2024-03-09, post-mi
 REJECTIONS_SINCE = "2026-01-01"
 
 
+def _main_ref():
+    """Resolve the most up-to-date main branch ref."""
+    for ref in ("refs/remotes/origin/main", "refs/heads/main"):
+        r = subprocess.run(
+            ["git", "rev-parse", "--verify", ref],
+            capture_output=True, text=True, cwd=PROJECT_ROOT,
+        )
+        if r.returncode == 0:
+            return ref
+    return "HEAD"
+
+
 def get_commits():
-    """Get first-parent commits touching awesome-privacy.yml, newest first."""
+    """Get first-parent commits on main touching awesome-privacy.yml, newest first."""
     result = subprocess.run(
-        ["git", "log", "--first-parent", "-z",
+        ["git", "log", _main_ref(), "--first-parent", "-z",
          "--format=%H%n%aI%n%an%n%s", "--", "awesome-privacy.yml"],
         capture_output=True, text=True, check=True, cwd=PROJECT_ROOT,
     )
