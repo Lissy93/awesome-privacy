@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T13:52:12Z",
+  "generatedAt": "2026-03-28T13:53:40Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -35,6 +35,7 @@
     "474de7b56c37fb9bf8991fcc3e42df91acc74049",
     "5b772f3ea6f2e480b07bb09a1b523553198fd386",
     "5ec99fe78361e422648aec2eff69375fcc3ca810",
+    "5f84c75e9a52780eca896e9cbce656698412a372",
     "639eb6794696341f32b582c50a0ecd7a91db52d1",
     "698e818f03fda883ec55a630bd9380d7cf214bb8",
     "69f6a2755a08caaa814201be36c9a809961b7f78",
@@ -85,6 +86,29 @@
     "fa1c504da13a0d2f8e75ef95566811e54750ff3d"
   ],
   "entries": [
+    {
+      "date": "2026-03-28",
+      "sha": "5f84c75e9a52780eca896e9cbce656698412a372",
+      "pr": {
+        "number": 317,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/317",
+        "author": "Shiina18",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/47315837?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "VNote",
+              "category": "Productivity",
+              "section": "Digital Notes"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-03-28",
       "sha": "9bfe4992518d16b7877f13a4a3c6902b013670a1",
