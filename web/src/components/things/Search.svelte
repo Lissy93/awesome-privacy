@@ -138,7 +138,7 @@
     position: relative;
     max-width: 900px;
     margin: 0 auto;
-    width: 80vw;
+    width: 100%;
     label {
       margin: var(--space-sm) 0;
       display: flex;
@@ -155,10 +155,9 @@
       padding: var(--space-sm) var(--space-md);
       font-size: var(--text-2xl);
       border: var(--border-heavy);
-      border-radius: var(--curve-lg);
       box-shadow: var(--shadow-sm);
       z-index: 4;
-      background: var(--accent-fg);
+      background: var(--background-form);
       color: var(--foreground);
       &:focus {
         outline: none;

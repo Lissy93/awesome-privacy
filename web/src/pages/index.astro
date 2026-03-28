@@ -19,14 +19,17 @@ const description =
 	'Awesome Privacy is a directory of alternative privacy-respecting software and services.';
 ---
 
-<Layout title="Home | Awesome Privacy" hideNav={true} description={description}>
+<Layout title="Home | Awesome Privacy" description={description}>
 	<Hero />
 	<main>
-		<h2>
-			<a href="/search">Search</a>
-		</h2>
-		<Search client:visible data={categories} />
-		<h2 class="browse-title"><a href="/browse">Browse</a></h2>
+		<div class="action-card">
+			<Search client:visible data={categories} />
+			<span class="action-divider">or</span>
+			<a href="/all" class="browse-cta">
+				Browse All Listings &rarr;
+			</a>
+		</div>
+		<h2 class="browse-title"><a href="/all">Categories</a></h2>
 		<ul class="categories">
 			{
 				categories.map((category) => (
@@ -101,6 +104,54 @@ const description =
 			}
 		}
 	}
+	.action-card {
+		display: flex;
+		align-items: end;
+		gap: var(--space-md);
+		background: var(--accent-fg);
+		border: var(--border-heavy);
+		border-radius: var(--curve-sm);
+		box-shadow: var(--shadow-lg);
+		padding: var(--space-md) var(--space-lg);
+		margin: var(--space-lg) auto;
+		width: 100%;
+  		box-sizing: border-box;
+		:global(.search-wrap) {
+			flex: 1;
+			:global(label) { font-size: var(--text-sm); }
+		}
+		.action-divider {
+			font-family: var(--font-subtitle);
+			opacity: var(--opacity-soft);
+			flex-shrink: 0;
+		}
+		.browse-cta {
+			flex-shrink: 0;
+			padding: var(--space-sm) var(--space-lg);
+			background: var(--accent-3);
+			color: var(--accent-fg);
+			font-family: var(--font-subtitle);
+			font-size: var(--text-md);
+			font-weight: bold;
+			text-decoration: none;
+			border: var(--border-heavy);
+			box-shadow: var(--shadow-sm);
+			white-space: nowrap;
+			box-sizing: border-box;
+			&:hover {
+				box-shadow: var(--shadow-sm-hover);
+				opacity: 0.95;
+			}
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+			width: 95%;
+			padding: var(--space-md);
+			.browse-cta { width: 100%; text-align: center; }
+		}
+	}
+
 	h2 {
 		font-size: var(--text-4xl);
 		color: var(--accent-3);
@@ -120,7 +171,8 @@ const description =
 		border-radius: var(--curve-sm);
 		box-shadow: var(--shadow-md);
 		padding: var(--space-md);
-		width: 85%;
+		width: 100%;
+  		box-sizing: border-box;
 		margin: 0 auto;
 	}
 

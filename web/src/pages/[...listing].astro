@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import ListingHero from '@components/things/ListingHero.astro';
 import ServiceList from '@components/things/ServiceList.astro';
 import Comments from '@components/things/Comments.svelte';
 import GitHubDetailedInfo from '@components/things/GitHubDetailedInfo.astro';
@@ -23,11 +24,8 @@ import { fetchIosInfo } from '@utils/fetch-ios-info';
 import { fetchAndroidInfo } from '@utils/fetch-android-info';
 import { fetchDiscordInfo } from '@utils/fetch-discord-info';
 import { fetchRedditInfo } from '@utils/fetch-reddit-info';
-import { parseMarkdown, formatLink } from '@utils/parse-markdown';
 import { site } from '@utils/config';
-import FontAwesome from '@components/form/FontAwesome.svelte';
 import Button from '@components/form/Button.astro';
-import SaveListing from '@components/things/SaveListing.svelte';
 
 interface Props extends Service {
 	slug: string;
@@ -37,7 +35,6 @@ interface Props extends Service {
 
 const {
 	name,
-	description,
 	url,
 	github,
 	tosdrId,
@@ -45,41 +42,22 @@ const {
 	subreddit,
 	iosApp,
 	androidApp,
-	icon,
-	followWith,
-	links,
-	securityAudited,
-	openSource,
-	acceptsCrypto,
 	parentSection,
 	categoryName,
 } = Astro.props;
 
-/**
- * Make a list of keywords, for the <meta keywords> tag
- */
 const makeKeyWordTag = () => {
-	const keywords: string[] = [];
-	keywords.push(`open source ${parentSection.name}`);
-	keywords.push(`${parentSection.name} comparison`);
-	(parentSection.alternativeTo || []).forEach((alt: string) => {
-		keywords.push(`${alt} alternative`);
-	});
-	(parentSection.services || []).forEach((serv: Service) => {
-		keywords.push(`${serv.name} vs`);
-	});
-	keywords.push('private');
-	keywords.push('ad free');
-	keywords.push('encrypted');
-	keywords.push('open source software');
-	keywords.push('privacy respecting apps');
-	keywords.push('free tools');
+	const keywords = [
+		`open source ${parentSection.name}`,
+		`${parentSection.name} comparison`,
+		...(parentSection.alternativeTo || []).map((alt: string) => `${alt} alternative`),
+		...(parentSection.services || []).map((serv: Service) => `${serv.name} vs`),
+		'private', 'ad free', 'encrypted', 'open source software',
+		'privacy respecting apps', 'free tools',
+	];
 	return keywords.join(', ');
 };
 
-/**
- * Make a page title
- */
 const makePageTitle = () => {
 	return `${name} | ${parentSection.name} | ${categoryName} | Awesome Privacy`;
 };
@@ -99,29 +77,20 @@ const makeBreadcrumbs = () => {
 	];
 };
 
-/**
- * Make a string page intro, for the description tag
- */
 const makeDescriptionTag = () => {
-	let description = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
+	let desc = `Analysis of ${name}, and other privacy-respecting ${parentSection.name} `;
 	if (parentSection.services) {
-		const serviceList = parentSection.services.map(
-			(serv: Service) => serv.name,
-		);
-		description += `Compare ${serviceList.join(' vs ')} more apps. `;
+		desc += `Compare ${parentSection.services.map((s: Service) => s.name).join(' vs ')} more apps. `;
 	}
 	if (parentSection.alternativeTo && parentSection.alternativeTo.length > 0) {
-		description += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')} in 2024. `;
+		desc += `The best secure encrypted alternatives to ${parentSection.alternativeTo.join(', ')}. `;
 	}
-	description += 'All this, and many more free and awesome tools and software.';
-	return description;
+	desc += 'All this, and many more free and awesome tools and software.';
+	return desc;
 };
 
-// Return a list of Services, except for the currtent one
 const filterServices = () => {
-	return parentSection.services.filter(
-		(service: Service) => service.name !== name,
-	);
+	return parentSection.services.filter((s: Service) => s.name !== name);
 };
 
 export async function getStaticPaths() {
@@ -160,24 +129,20 @@ const makePaginationLinks = () => {
 
 const { previous, next } = makePaginationLinks();
 
-const ignoredSites = ['github.gom', 'wikipedia.'];
+const ignoredSites = ['github.com', 'wikipedia.'];
 
-// Fetch detailed data about the services GitHub repo, privacy policy and website
 const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
 const androidData = androidApp ? await fetchAndroidInfo(androidApp) : null;
-const discordData = discordInvite
-	? await fetchDiscordInfo(discordInvite)
-	: null;
+const discordData = discordInvite ? await fetchDiscordInfo(discordInvite) : null;
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData =
-	url && !ignoredSites.some((ignoredSite) => url.includes(ignoredSite))
+	url && !ignoredSites.some((s) => url.includes(s))
 		? await fetchWebsiteInfo(url)
 		: null;
 
-// Filter changelog entries relevant to this service
 const serviceHistory = await fetchChangelog().then(({ entries }) => {
 	const isMatch = (c: { name: string; category: string; section: string }) =>
 		c.name === name &&
@@ -209,18 +174,21 @@ const serviceHistory = await fetchChangelog().then(({ entries }) => {
 
 const findPrivacyPolicyLink = () => {
 	if (!privacyData) return null;
-	// const docs = privacyData?.parameters?.documents;
-	// if (docs) {
-	//   const privacyPolicy = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
-	//   if (privacyPolicy) return privacyPolicy.url;
-	// }
+	const docs = privacyData?.parameters?.documents;
+	if (docs) {
+	  const pp = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
+	  if (pp) return pp.url;
+	}
 	return `https://tosdr.org/en/service/${tosdrId}`;
 };
 
 const privacyPolicyLink = findPrivacyPolicyLink();
 
+const catSlug = slugify(categoryName);
+const secSlug = slugify(parentSection.name);
+
 const getApiEndpoint = () => {
-	return `https://api.awesome-privacy.xyz/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`;
+	return `https://api.awesome-privacy.xyz/${catSlug}/${secSlug}/${slugify(name)}`;
 };
 ---
 
@@ -231,187 +199,12 @@ const getApiEndpoint = () => {
 	breadcrumbs={makeBreadcrumbs()}
 >
 	<main>
-		<section>
-			<div class="service-head">
-				<h2>{name}</h2>
-				<span class="url-wrap">
-					<a class="service-url" href={url}>{formatLink(url)}</a>
-					<span class="follow-with">{followWith}</span>
-				</span>
-			</div>
-			<div class="breadcrumbs">
-				<span>
-					<a href="/">Awesome Privacy</a>
-					➔ <a href={`/${slugify(categoryName)}`}>{categoryName}</a>
-					➔ <a href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
-						>{parentSection.name}</a
-					>
-					➔ <a
-						href={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)}`}
-						>{name}</a
-					>
-				</span>
-			</div>
-			<div class="save-listing">
-				<SaveListing
-					client:visible
-					categoryName={categoryName}
-					sectionName={parentSection.name}
-					serviceName={name}
-					showLabel={true}
-				/>
-			</div>
-			<div class="intro">
-				<img
-					width="60"
-					height="60"
-					loading="lazy"
-					decoding="async"
-					class="service-icon"
-					alt={`${name} Icon`}
-					data-service-url={formatLink(url)}
-					src={icon || `https://icon.horse/icon/${formatLink(url)}`}
-				/>
-				<div>
-					<p class="description" set:html={parseMarkdown(description)} />
-					<ul>
-						{
-							url && (
-								<li>
-									<b>Homepage:</b>
-									<a href={url}>{formatLink(url)}</a>
-								</li>
-							)
-						}
-						{
-							github && (
-								<li>
-									<b>GitHub:</b>
-									<a href={`https://github.com/${github}`}>
-										github.com/{github}
-									</a>
-								</li>
-							)
-						}
-						{
-							tosdrId && (
-								<li>
-									<b>Privacy:</b>
-									<a href={privacyPolicyLink}>
-										{formatLink(privacyPolicyLink || '')}
-									</a>
-								</li>
-							)
-						}
-						{
-							iosApp && (
-								<li>
-									<b>iOS App:</b>
-									<a href={iosApp}>{formatLink(iosApp)}</a>
-								</li>
-							)
-						}
-						{
-							androidApp && (
-								<li>
-									<b>Android App:</b>
-									<a
-										href={`https://play.google.com/store/apps/details?id=${androidApp}`}
-									>{`https://play.google.com/store/apps/details?id=${androidApp}`}</a>
-								</li>
-							)
-						}
-						{
-							discordInvite && (
-								<li>
-									<b>Discord Invite:</b>
-									<a href={`https://discord.com/invite/${discordInvite}`}>
-										{discordInvite}
-									</a>
-								</li>
-							)
-						}
-						{
-							subreddit && (
-								<li>
-									<b>Subreddit:</b>
-									<a href={`https://reddit.com/r/${subreddit}`}>
-										r/{subreddit}
-									</a>
-								</li>
-							)
-						}
-						{
-							url && (
-								<li>
-									<b>Web info:</b>
-									<a
-										href={`https://web-check.xyz/check/${formatLink(url)}`}
-									>{`web-check.xyz/check/${formatLink(url).split('/')[0]}`}</a>
-								</li>
-							)
-						}
-						{
-							links &&
-								links.length > 0 &&
-								links.map((link) => (
-									<li>
-										<b>{link.title}</b>
-										<a href={link.url}>{link.url}</a>
-									</li>
-								))
-						}
-					</ul>
-				</div>
-			</div>
-			<div class="highlights">
-				{
-					securityAudited && (
-						<span
-							class="meta-item great"
-							title={`${name} has been security audited by an accredited auditor, with results published publicly`}
-						>
-							<FontAwesome iconName="securityAudited" /> Security Audited
-						</span>
-					)
-				}
-				{
-					acceptsCrypto && (
-						<span
-							class="meta-item great"
-							title={`${name} accepts anonymous payment methods`}
-						>
-							<FontAwesome iconName="cryptoAccepted" /> Crypto Payments Accepted
-						</span>
-					)
-				}
-				{
-					securityAudited === false && (
-						<span
-							class="meta-item warning"
-							title={`${name} has not been audited`}
-						>
-							<FontAwesome iconName="notSecurityAudited" /> No Security Audit
-						</span>
-					)
-				}
-				{
-					openSource === false && (
-						<span class="warning">
-							<FontAwesome iconName="closedSource" />
-							Not Open Source
-						</span>
-					)
-				}
-				{
-					openSource || (github && openSource !== false) ? (
-						<span class="meta-item great" title={`${name} is open source`}>
-							<FontAwesome iconName="openSource" /> Open Source
-						</span>
-					) : null
-				}
-			</div>
-		</section>
+		<ListingHero
+			service={Astro.props}
+			parentSection={parentSection}
+			categoryName={categoryName}
+			privacyPolicyLink={privacyPolicyLink}
+		/>
 		{
 			privacyData && privacyData.parameters.points.length > 0 && (
 				<section>
@@ -485,7 +278,7 @@ const getApiEndpoint = () => {
 				services={filterServices()}
 				subHeading={true}
 				noGitHubMetrics={true}
-				buttonLink={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
+				buttonLink={`/${catSlug}/${secSlug}`}
 				categoryName={categoryName}
 				sectionName={parentSection.name}
 			/>
@@ -511,16 +304,6 @@ const getApiEndpoint = () => {
 					href="/api">Swagger Docs</a
 				> or read the <a href="/about#api">API Usage Guide</a>.
 			</p>
-
-			<h4>About the Data</h4>
-			<p>
-				Beyond the user-submitted YAML you see above, we also augment each
-				listing with additional data dynamically fetched from several sources.
-				To learn more about where the rest of data included in this page comes
-				from, and how it is computed, see the <a href="/about#our-data"
-					>About the Data</a
-				> section of our About page.
-			</p>
 		</section>
 
 		<section>
@@ -531,7 +314,7 @@ const getApiEndpoint = () => {
 				Share {name} and Awesome Privacy with your network!
 				<div>
 					<SocialShare
-						url={`${site}/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(name)} `}
+						url={`${site}/${catSlug}/${secSlug}/${slugify(name)} `}
 						title={`Checkout ${name}! \n`}
 						description={`Compare #${name} and other privacy-respecting ${parentSection.name} at ` +
 							`Awesome-Privacy.xyz, the free and open source list of private software alternatives. ` +
@@ -544,9 +327,7 @@ const getApiEndpoint = () => {
 		<div class="pagination-navigation">
 			{
 				previous ? (
-					<Button
-						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(previous)}`}
-					>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(previous)}`}>
 						<span>← Previous</span>
 						<p>{previous}</p>
 					</Button>
@@ -554,17 +335,12 @@ const getApiEndpoint = () => {
 					<p class="nothing" />
 				)
 			}
-			<a
-				href={`/${slugify(categoryName)}/${slugify(parentSection.name)}`}
-				class="go-to-category"
-			>
+			<a href={`/${catSlug}/${secSlug}`} class="go-to-category">
 				View {parentSection.name} ({(parentSection.services || []).length})
 			</a>
 			{
 				next && (
-					<Button
-						url={`/${slugify(categoryName)}/${slugify(parentSection.name)}/${slugify(next)}`}
-					>
+					<Button url={`/${catSlug}/${secSlug}/${slugify(next)}`}>
 						<span>Next →</span>
 						<p>{next}</p>
 					</Button>
@@ -598,9 +374,7 @@ const getApiEndpoint = () => {
 		background: var(--accent-fg);
 	}
 
-	p {
-		margin: var(--space-xs) 0 var(--space-sm) 0;
-	}
+	p { margin: var(--space-xs) 0 var(--space-sm) 0; }
 
 	h3 {
 		font-size: var(--text-3xl);
@@ -615,91 +389,21 @@ const getApiEndpoint = () => {
 		}
 	}
 
-	.service-head {
-		h2 {
-			font-size: var(--text-4xl);
-			margin: 0;
-			@media (max-width: 768px) {
-				text-align: center;
-			}
-		}
-		.url-wrap {
-			display: flex;
-			align-items: center;
-			gap: var(--space-sm);
-			a {
-				font-size: var(--text-md);
-			}
-			.follow-with {
-				font-style: italic;
-				opacity: var(--opacity-muted);
-			}
-			@media (max-width: 768px) {
-				flex-direction: column;
-			}
-		}
-	}
-
-	.save-listing {
-		position: absolute;
-		top: var(--space-xl);
-		right: var(--space-md);
-	}
-
 	h4 {
 		font-size: var(--text-lg);
 		margin-bottom: 0;
 	}
 
-	.intro {
-		font-size: var(--text-md);
-		font-style: italic;
-		opacity: 0.9;
-		display: flex;
-		gap: var(--space-sm);
-		@media (max-width: 768px) {
-			flex-direction: column;
-		}
-		.service-icon {
-			border-radius: var(--curve-md);
-			margin-top: var(--space-md);
-			@media (max-width: 768px) {
-				margin: var(--space-md) auto 0 auto;
-			}
-		}
-		ul {
-			padding-left: var(--space-md);
-			list-style: circle;
-			font-style: normal;
-			font-size: var(--text-base);
-			margin-top: 0;
-			b {
-				font-size: var(--text-base);
-				font-weight: 400;
-				min-width: 100px;
-				display: inline-block;
-				@media (max-width: 768px) {
-					width: auto;
-					display: block;
-				}
-			}
-		}
-	}
-
-	pre {
-		a {
-			text-decoration: none;
-			color: var(--foreground);
-			code {
-				background: var(--code-bg);
-				padding: 0.2rem 0.4rem;
-				border-radius: var(--curve-sm);
-				font-family: var(--font-code);
-				font-size: var(--text-sm);
-				@media (max-width: 768px) {
-					white-space: break-spaces;
-				}
-			}
+	pre a {
+		text-decoration: none;
+		color: var(--foreground);
+		code {
+			background: var(--code-bg);
+			padding: 0.2rem 0.4rem;
+			border-radius: var(--curve-sm);
+			font-family: var(--font-code);
+			font-size: var(--text-sm);
+			@media (max-width: 768px) { white-space: break-spaces; }
 		}
 	}
 
@@ -708,52 +412,5 @@ const getApiEndpoint = () => {
 		gap: var(--space-md);
 		flex-wrap: wrap;
 		justify-content: space-between;
-	}
-
-	.highlights {
-		display: flex;
-		gap: var(--space-md);
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: end;
-
-		.meta-item,
-		.warning {
-			display: flex;
-			align-items: center;
-			gap: var(--space-xs);
-			opacity: var(--opacity-muted);
-			font-size: var(--text-sm);
-			padding: var(--space-sm) 0;
-			:global(svg) {
-				color: var(--foreground);
-				width: var(--text-md);
-				height: var(--text-md);
-			}
-			a {
-				text-decoration: none;
-				color: var(--foreground);
-				display: flex;
-				gap: var(--space-xs);
-				&:hover {
-					color: var(--accent-3);
-					:global(svg) {
-						color: var(--accent-3);
-					}
-				}
-			}
-		}
-		.warning {
-			color: var(--danger);
-			:global(svg) {
-				color: var(--danger);
-			}
-		}
-		.great {
-			color: var(--success-muted);
-			:global(svg) {
-				color: var(--success-muted);
-			}
-		}
 	}
 </style>

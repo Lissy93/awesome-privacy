@@ -1,11 +1,6 @@
 ---
 import FontAwesome from '@components/form/FontAwesome.svelte';
-import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 ---
-
-<div class="theme-switcher">
-	<ThemeSwitcher client:load />
-</div>
 
 <div class="hero">
 	<h1>Awesome Privacy</h1>
@@ -14,35 +9,13 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 		popular software and services.
 	</p>
 	<div class="github-link-wrap">
-		<a href="https://github.com/lissy93/awesome-privacy">
+		<a href="https://github.com/lissy93/awesome-privacy" target="_blank" rel="noopener noreferrer">
 			<FontAwesome iconName="github" />
 			View on GitHub
 		</a>
 	</div>
 </div>
 
-<nav class="top-right">
-	<ul>
-		<li>
-			<a href="/">Home</a>
-		</li>
-		<li>
-			<a href="/search">Search</a>
-		</li>
-		<li>
-			<a href="/browse">Browse</a>
-		</li>
-		<li>
-			<a href="/about">About</a>
-		</li>
-		<li>
-			<a href="https://github.com/lissy93/awesome-privacy">Source</a>
-		</li>
-		<li>
-			<a href="https://as93.net">More Apps</a>
-		</li>
-	</ul>
-</nav>
 
 <style lang="scss">
 	.hero {
@@ -122,38 +95,4 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 		}
 	}
 
-	.theme-switcher {
-		position: absolute;
-		right: var(--space-md);
-		top: var(--space-md);
-	}
-
-	.top-right {
-		position: absolute;
-		top: 0;
-		right: var(--space-md);
-		opacity: var(--opacity-subtle);
-		display: none;
-		&:hover {
-			opacity: 1;
-		}
-		ul {
-			list-style: none;
-			display: flex;
-			padding: 0;
-			gap: var(--space-sm);
-			li {
-				&:not(:last-child) {
-					border-right: 1px solid var(--accent);
-					padding-right: var(--space-sm);
-				}
-			}
-			li a {
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
 </style>

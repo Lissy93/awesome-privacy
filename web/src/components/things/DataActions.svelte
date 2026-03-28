@@ -91,9 +91,9 @@
 {#if lineNumbers}
   <h4>Edit {serviceName} Data</h4>
   <p>
-    You can view or edit this {serviceName}'s entry in
-    <a href={getGitHubSrcFile()}> this section </a>
-    of <code>awesome-privacy.yml</code> in our GitHub repo.
+    You can edit {serviceName}'s entry in <a href={getGitHubSrcFile()}> this section </a> of <code>awesome-privacy.yml</code> by submitting a PR to our GitHub repo.<br>
+    Note that some of the information shown above has been aggregated from external sources,
+    a list of these can be found <a href="/about#our-data">data documentation</a>.
   </p>
 
   <h4>Origin Data</h4>

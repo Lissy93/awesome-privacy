@@ -1,6 +1,4 @@
 ---
-
-
 import Layout from '@layouts/Layout.astro';
 import ServiceCard from '@components/things/ServiceCard.astro';
 import type { AwesomePrivacy, Section, Service } from '../types/Service';
@@ -8,259 +6,297 @@ import { fetchData, slugify } from '@utils/fetch-data';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 
 const categories = (await fetchData() as AwesomePrivacy)?.categories || [];
-
 ---
 
-<script>
+<Layout
+	title="All Services | Awesome Privacy"
+	description="Browse every privacy-respecting service and app listed on Awesome Privacy, organised by category and section."
+>
+	<div class="page">
+		<aside class="sidebar" aria-label="Table of contents">
+			<button
+				class="toc-toggle"
+				type="button"
+				aria-expanded="false"
+				aria-controls="toc"
+			>Contents</button>
+			<nav id="toc" class="toc">
+				<div class="toc-inner">
+					{categories.map((category) => (
+						<details open>
+							<summary>{category.name}</summary>
+							<ul>
+								<li>
+									<a href={`#${slugify(category.name)}`}>{category.name} (all)</a>
+								</li>
+								{category.sections.map((section: Section) => (
+									<li>
+										<a href={`#${slugify(category.name)}-${slugify(section.name)}`}>
+											{section.name}
+										</a>
+									</li>
+								))}
+							</ul>
+						</details>
+					))}
+				</div>
+			</nav>
+		</aside>
 
-const toggleSidebar = () => {
-  const intro = document.querySelector('#welcome-to-all');
-  const sidebar = document.querySelector('.sidebar');
-  sidebar && sidebar.classList.toggle('hidden');
-  intro && intro.classList.toggle('hidden');
-  const button = document.querySelector('#toggle-sidebar');
-  if (button) {
-    button.textContent = (button.textContent === "Show Contents" ? "Hide Contents" : "Show Contents");
-  }
-};
-
-  const tgt = document.querySelector("#toggle-sidebar");
-  tgt && tgt.addEventListener("click", () => {
-    toggleSidebar();
-  });
-</script>
-
-<Layout title="Awesome Privacy">
-    <main>
-    <div id="content">
-    <button id="toggle-sidebar">Show Contents</button>
-    <div id="welcome-to-all" class="hidden">
-      <p>
-        Welcome to <a href="/">Awesome Privacy</a>!
-        Here you'll find a summerized collection of all verified services we have listed.
-        <br /><br />
-        Click a section or category heading, to view more listings and privacy tips in that group,
-        or a service title to view it's complete privacy report
-        <br /><br />
-        Looking for something specific? Try the <a href="/search">Search</a> page, or take a
-        scroll through the <a href="/sitemap">Sitemap</a>
-        <br /><br />
-        If you want to make an edit, removal or submit an addition, then either click
-        the Edit button within any sub-page, or visit our <a href="/about">About</a> page
-        <br /><br />
-        This project, all it's data as well as source code is freely availible
-        on <a href="https://github.com/lissy93/awesome-privacy">GitHub</a>,
-        licensed under MIT, (C) <a href="https://aliciasykes.com">Alicia Sykes</a> 2024
-      </p>
-    </div>
-    <div class="sidebar hidden">
-      <p class="sidebar-title">Contents</p>
-      <ul>
-        {categories.map((category) => (
-          <li class="top-level">
-            <a href={`#${slugify(category.name)}`}>{category.name}</a>  
-          </li>
-          <li>
-            <ul>
-              {category.sections.map((section: Section) => (
-                <li>
-                  <a href={`#${slugify(category.name)}-${slugify(section.name)}`}>{section.name}</a>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </div>
-    {categories.map((category) => (
-      <h2  id={`${slugify(category.name)}`}>
-        <FontAwesome iconName={slugify(category.name)} />
-        <a href={`/${slugify(category.name)}`}>{category.name}</a>
-      </h2>
-      
-        <article>
-          {category.sections.map((section: Section) => (
-            <h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
-              <a href={`/${slugify(category.name)}/${slugify(section.name)}`}>{section.name}</a>
-            </h3>
-            <section class="section">
-              { section.services.map((service: Service) => (
-                <ServiceCard service={service} sectionName={section.name} categoryName={category.name}/>
-              ))}
-            </section>
-            <div>
-              {!section || !section.services || section.services.length === 0 ? (
-                <div class="nothing-yet">
-                  <p>
-                    <strong>⚠️ This section is still a work in progress ⚠️</strong><br />
-                    Check back soon, or help us complete it by submiting a pull request on GitHub.
-                    <br />
-                    <span class="quick-submit">Or submit an entry <a href="/submit">here</a></span>
-                  </p>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </article>
-      
-    ))}
-    </div>
-  </main>
-  
+		<main>
+			{categories.map((category) => (
+				<Fragment>
+				<h2 id={slugify(category.name)}>
+					<FontAwesome iconName={slugify(category.name)} />
+					<a href={`/${slugify(category.name)}`}>{category.name}</a>
+				</h2>
+				<article>
+					{category.sections.map((section: Section) => (
+						<Fragment>
+							<h3 id={`${slugify(category.name)}-${slugify(section.name)}`}>
+								<a href={`/${slugify(category.name)}/${slugify(section.name)}`}>
+									{section.name}
+								</a>
+							</h3>
+							<section class="grid">
+								{section.services.map((service: Service) => (
+									<ServiceCard
+										service={service}
+										sectionName={section.name}
+										categoryName={category.name}
+									/>
+								))}
+							</section>
+							{section.services.length === 0 && (
+								<div class="nothing-yet">
+									<p>
+										<strong>This section is still a work in progress</strong><br />
+										Check back soon, or help us complete it by submitting a
+										<a href="https://github.com/lissy93/awesome-privacy">pull request</a>
+										or <a href="/submit">entry</a>.
+									</p>
+								</div>
+							)}
+						</Fragment>
+					))}
+				</article>
+				</Fragment>
+			))}
+		</main>
+	</div>
 </Layout>
 
+<script>
+	document.addEventListener('astro:page-load', () => {
+		const links = document.querySelectorAll<HTMLAnchorElement>('.toc a');
+		const headings = document.querySelectorAll<HTMLElement>('h2[id], h3[id]');
+		const toggle = document.querySelector('.toc-toggle');
+		const toc = document.querySelector('.toc');
+
+		// Scroll-spy: highlight active TOC link
+		const linkMap = new Map<string, HTMLAnchorElement>();
+		links.forEach((link) => {
+			const id = link.getAttribute('href')?.slice(1);
+			if (id) linkMap.set(id, link);
+		});
+
+		let active: HTMLAnchorElement | null = null;
+
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					active?.classList.remove('active');
+					const link = linkMap.get(entry.target.id);
+					if (link) {
+						link.classList.add('active');
+						link.closest('details')?.setAttribute('open', '');
+						active = link;
+					}
+				}
+			});
+		}, { rootMargin: '0px 0px -70% 0px' });
+
+		headings.forEach((h) => observer.observe(h));
+
+		// Mobile TOC toggle
+		const onToggle = () => {
+			const isOpen = toc?.classList.toggle('open');
+			toggle?.setAttribute('aria-expanded', String(!!isOpen));
+		};
+		toggle?.addEventListener('click', onToggle);
+
+		// Close mobile TOC on link click
+		const onLinkClick = () => {
+			toc?.classList.remove('open');
+			toggle?.setAttribute('aria-expanded', 'false');
+		};
+		links.forEach((link) => link.addEventListener('click', onLinkClick));
+
+		// Cleanup on page transition
+		document.addEventListener('astro:before-swap', () => {
+			observer.disconnect();
+			toggle?.removeEventListener('click', onToggle);
+			links.forEach((link) => link.removeEventListener('click', onLinkClick));
+		}, { once: true });
+	});
+</script>
+
 <style lang="scss">
+	.page {
+		display: flex;
+		gap: var(--space-lg);
+		max-width: calc(100vw - 4rem);
+		margin: 0 auto;
+		padding: var(--space-md);
+	}
 
-main {
-  margin: 0 auto var(--space-lg) auto;
-  padding: var(--space-md);
-  width: var(--width-container);
-  max-width: var(--width-container-max);
+	.sidebar {
+		position: sticky;
+		top: var(--space-md);
+		align-self: flex-start;
+		width: 260px;
+		flex-shrink: 0;
+		max-height: calc(100vh - var(--space-lg));
+		overflow-y: auto;
 
-  display: flex;
-  justify-content: space-between;
-}
+		.toc-toggle {
+			display: none;
+			width: 100%;
+			padding: var(--space-sm) var(--space-md);
+			background: var(--accent-3);
+			color: var(--accent-fg);
+			font-family: var(--font-subtitle);
+			font-size: var(--text-md);
+			font-weight: bold;
+			border: var(--border-heavy);
+			box-shadow: var(--shadow-sm);
+			cursor: pointer;
+			&:hover { box-shadow: var(--shadow-sm-hover); }
+		}
 
-.hidden {
-  display: none;
-}
+		.toc {
+			details {
+				summary {
+					display: flex;
+					align-items: center;
+					font-weight: bold;
+					font-family: var(--font-subtitle);
+					font-size: var(--text-base);
+					padding: var(--space-xs) 0;
+					cursor: pointer;
+					list-style: none;
+					color: var(--foreground);
+					opacity: var(--opacity-subtle);
+					&::marker, &::-webkit-details-marker { display: none; }
+					&::before {
+						content: '▸';
+						margin-right: var(--space-xs);
+						transition: var(--transition-fast);
+					}
+				}
+				&[open] > summary::before { transform: rotate(90deg); }
+			}
+			ul {
+				list-style: none;
+				padding-left: var(--space-md);
+				margin: 0 0 var(--space-xs) 0;
+			}
+			a {
+				color: var(--foreground);
+				text-decoration: none;
+				font-size: var(--text-sm);
+				opacity: var(--opacity-soft);
+				transition: var(--transition-fast);
+				display: block;
+				padding: var(--space-xs) 0;
+				&:hover { color: var(--accent); opacity: 1; }
+				&.active { color: var(--accent); opacity: 1; font-weight: bold; }
+			}
+		}
+	}
 
-#content {
-  margin: 0 auto;
-}
+	main {
+		flex: 1;
+		min-width: 0;
 
-#welcome-to-all {
-  text-align: justify;
-  width: 600px;
-  margin: 0 auto;
-  background: var(--background-form);
-  padding: var(--space-md);
-  border-radius: var(--curve-sm);
-}
+		h2, h3 { scroll-margin-top: var(--space-lg); }
 
-#toggle-sidebar {
-  background: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: var(--accent);
-  &:hover {
-    text-decoration: underline;
-  }
-}
+		h2 {
+			margin: var(--space-lg) auto 0 auto;
+			font-size: var(--text-4xl);
+			text-align: center;
+			opacity: var(--opacity-muted);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-md);
+			a { color: var(--accent-3); text-decoration: none; }
+			:global(svg) {
+				width: var(--text-4xl);
+				height: var(--text-4xl);
+				color: var(--accent-3);
+			}
+		}
 
+		h3 {
+			font-size: var(--text-3xl);
+			margin: var(--space-lg) 0 var(--space-md) 0;
+			box-shadow: var(--shadow-lg);
+			background: var(--accent);
+			color: var(--accent-fg);
+			width: fit-content;
+			padding: var(--space-xs) var(--space-sm);
+			a {
+				color: var(--accent-fg);
+				font-family: var(--font-subtitle);
+				text-decoration: none;
+			}
+		}
 
-.sidebar {
-  border-radius: var(--curve-md);
-  .sidebar-title {
-    font-size: var(--text-xl);
-    background: var(--accent-3);
-    color: var(--accent-fg);
-    border: var(--border-heavy);
-    box-shadow: var(--shadow-lg);
-    border-radius: var(--curve-sm);
-    margin: var(--space-md) auto;
-    text-align: center;
-  }
-  ul {
-    list-style: none;
-    padding-left: 1.6rem;
-    column-width: 16rem;
-    a {
-      text-decoration: none;
-      color: var(--foreground);
-      transition: var(--transition-fast);
-      &:hover {
-        color: var(--accent);
-        opacity: 1;
-      }
-    }
-    li ul {
-      list-style: circle;
-    }
-    .top-level {
-      font-weight: bold;
-      margin-top: var(--space-sm);
-      &:hover a {
-        color: var(--accent-3);
-      }
-    }
-  }
-}
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: var(--space-md);
+		}
 
-.section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-md);
-  width: 100%;
-  margin: 0 auto;
-}
+		.nothing-yet {
+			background: var(--accent-fg);
+			border: var(--border-heavy);
+			box-shadow: var(--shadow-lg);
+			border-radius: var(--curve-sm);
+			p {
+				font-size: var(--text-md);
+				opacity: var(--opacity-subtle);
+				font-style: italic;
+				text-align: center;
+				margin: var(--space-2xl) auto;
+				a { color: var(--accent); }
+			}
+		}
+	}
 
-.card {
-  margin: var(--space-lg) auto 5rem auto;
-  padding: 0 var(--space-lg);
-  border: var(--border-heavy);
-  box-shadow: var(--shadow-lg);
-  background: var(--accent-fg);
-}
+	@media (max-width: 768px) {
+		.page { flex-direction: column; }
+		.sidebar {
+			position: static;
+			width: 100%;
+			max-height: none;
+			overflow: visible;
+			border: var(--border-heavy);
+			box-shadow: var(--shadow-lg);
+			background: var(--accent-fg);
+			border-radius: var(--curve-sm);
 
-h2 {
-  margin: var(--space-lg) auto 0 auto;
-  font-size: var(--text-4xl);
-  text-align: center;
-  opacity: var(--opacity-muted);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-md);
-  a {
-    color: var(--accent-3);
-    text-decoration: none;
-  }
-  :global(svg) {
-    width: var(--text-4xl);
-    height: var(--text-4xl);
-    color: var(--accent-3);
-  }
-}
-
-h3 {
-    font-size: var(--text-3xl);
-    margin: var(--space-lg) 0 var(--space-md) 0;
-    box-shadow: var(--shadow-lg);
-    background: var(--accent);
-    color: var(--accent-fg);
-    width: fit-content;
-    padding: var(--space-xs) var(--space-sm);
-    a {
-      color: var(--accent-fg);
-      font-family: var(--font-subtitle);
-      text-decoration: none;
-    }
-  }
-
-  .nothing-yet {
-    width: 100%;
-    margin: 0 auto;
-    background: var(--accent-fg);
-    border: var(--border-heavy);
-    box-shadow: var(--shadow-lg);
-    border-radius: var(--curve-sm);
-    display: flex;
-
-    p {
-      font-size: var(--text-md);
-      opacity: var(--opacity-subtle);
-      font-style: italic;
-      text-align: center;
-      margin: var(--space-2xl) auto;
-    }
-    .quick-submit {
-      margin-top: var(--space-md);
-      font-size: var(--text-sm);
-      opacity: var(--opacity-subtle);
-    }
-  }
-
-
+			.toc-toggle { display: block; }
+			.toc {
+				display: grid;
+				grid-template-rows: 0fr;
+				transition: grid-template-rows 0.3s ease;
+				.toc-inner { overflow: hidden; padding: 0 var(--space-sm); }
+				&.open { grid-template-rows: 1fr; }
+			}
+		}
+		main h2 { font-size: var(--text-3xl); }
+		main h3 { font-size: var(--text-2xl); }
+	}
 </style>
