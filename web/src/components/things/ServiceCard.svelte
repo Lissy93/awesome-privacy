@@ -17,7 +17,10 @@
 
 <div class="service" id={serviceRef}>
   <div class="service-head">
-    <a class="service-title" href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}>
+    <a
+      class="service-title"
+      href={`/${categorySlug}/${sectionSlug}/${serviceRef}`}
+    >
       <h4>{service.name}</h4>
     </a>
     {#if service.followWith}
@@ -26,11 +29,7 @@
   </div>
 
   <div class="save-listing">
-    <SaveListing
-      categoryName={categoryName}
-      sectionName={sectionName}
-      serviceName={service.name}
-    />
+    <SaveListing {categoryName} {sectionName} serviceName={service.name} />
   </div>
 
   <div class="service-body">
@@ -45,16 +44,27 @@
       src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
     />
     <div class="service-body">
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- description is from curated YAML data, not user input -->
       <p>{@html service.description}</p>
     </div>
   </div>
 
   <div class="service-links">
-    <a class="link" href={service.url}>
+    <a
+      class="link"
+      href={service.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FontAwesome iconName="website" /> <span>{formatLink(service.url)}</span>
     </a>
     {#if service.github}
-      <a class="link" href={`https://github.com/${service.github}`}>
+      <a
+        class="link"
+        href={`https://github.com/${service.github}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FontAwesome iconName="sourceCode" /> GitHub
       </a>
     {/if}
@@ -65,5 +75,5 @@
 </div>
 
 <style lang="scss">
-  @import './service-card.scss';
+  @use './service-card.scss';
 </style>

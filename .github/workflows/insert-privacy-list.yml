@@ -12,16 +12,18 @@ jobs:
 
     steps:
       - name: Checkout repository 🛎️
-        uses: actions/checkout@v2
-        
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       # Get current date-time (used for commit message)
       - name: Get Date 📅
         id: date
-        run: echo "::set-output name=date::$(date +'%d-%b-%Y')"
-        
-      # Downloads + installs Python (used for running gen scripts)  
+        run: echo "date=$(date +'%d-%b-%Y')" >> "$GITHUB_OUTPUT"
+
+      # Downloads + installs Python (used for running gen scripts)
       - name: Set up Python 🐍
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           
@@ -32,16 +34,21 @@ jobs:
           cd lib && pip install -r requirements.txt
 
       # The make command triggers all the Python scripts, generates output
-      - name: Run make command 🔨
+      - name: Generate README 🔨
         run: python lib/awesome-privacy-readme-gen.py
 
-      # Commit and push the outputed readme
+      - name: Generate changelog 📋
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python lib/generate-changelog.py
+
+      # Commit and push the outputed readme and changelog
       - name: Commit and push generated files ⤴️
         run: |
           git config --global user.name "Liss-Bot"
           git config --global user.email "alicia-gh-bot@mail.as93.net"
           git pull origin main
-          git add .github/README.md
+          git add .github/README.md .github/changelog.json
           if git diff --staged --quiet; then
             echo "Nothin new added, so nothing to commit, exiting..."
           else

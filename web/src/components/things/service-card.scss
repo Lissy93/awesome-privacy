@@ -1,9 +1,11 @@
+@use '../../styles/mixins' as *;
+
 .service {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  border: 2px solid var(--box-outline);
-  box-shadow: 6px 6px 0 var(--box-outline);
+  padding: var(--space-md);
+  border: var(--border-heavy);
+  box-shadow: var(--shadow-lg);
   background: var(--accent-fg);
   border-radius: var(--curve-sm);
   position: relative;
@@ -12,84 +14,57 @@
   .service-head {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--space-sm);
     h4 {
       margin: 0;
-      font-size: 1.4rem;
+      font-size: var(--text-lg);
       color: var(--foreground);
+      text-decoration: none;
+      @include underline-hover(var(--accent-3), 3px, 100%, 0.2s);
     }
     p {
       margin: 0;
-      font-size: 1rem;
-      opacity: 0.7;
+      font-size: var(--text-base);
+      opacity: var(--opacity-soft);
     }
     a {
       text-decoration: none;
-    }
-    h4 {
-      text-decoration: none;
-      position: relative;
-      &:after {    
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 3px;
-        left: 50%;
-        position: absolute;
-        background: var(--accent-3);
-        transition: width 0.2s ease 0s, left 0.2s ease 0s;
-        width: 0;
-      }
-      &:hover:after { 
-        width: 100%; 
-        left: 0; 
-      }
     }
   }
 
   .save-listing {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: var(--space-sm);
+    right: var(--space-sm);
   }
 
   .service-body {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    img {
-      border-radius: var(--curve-sm);
-      font-size: 0.6rem;
-      color: var(--accent);
-    }
+    gap: var(--space-sm);
     :global(p) {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
-      margin: 0.5rem 0;
+      @include line-clamp(3);
+      margin: var(--space-sm) 0;
       width: calc(100% - 2rem);
-      overflow-x: hidden;
     }
   }
 
   .service-links {
     display: flex;
-    gap: 0.5rem;
+    gap: var(--space-sm);
     justify-content: space-between;
     a {
       color: var(--accent-3);
-      font-size: 0.8rem;
+      font-size: var(--text-sm);
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
-      opacity: 0.85;
+      gap: var(--space-xs);
+      opacity: var(--opacity-subtle);
       text-decoration: none;
       max-width: 50%;
       min-width: 25%;
       &:not(:last-child) {
-        margin-right: 0.5rem;
+        margin-right: var(--space-sm);
       }
       &:hover {
         text-decoration: underline;
@@ -101,9 +76,7 @@
       }
       span {
         max-width: calc(100% - 1rem);
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        @include truncate;
       }
     }
   }

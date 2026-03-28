@@ -1,5 +1,3 @@
-
-
 export interface ShortService {
   name: string;
   description: string;
@@ -41,7 +39,6 @@ export interface Category {
   name: string;
   sections: Section[];
 }
-
 
 export interface AwesomePrivacy {
   categories: Array<{
