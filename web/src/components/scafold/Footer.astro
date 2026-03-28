@@ -5,24 +5,26 @@ const year = new Date().getFullYear();
 <footer>
 	<a href="/about">Awesome Privacy</a> is licensed under <a
 		href="https://github.com/Lissy93/awesome-privacy/blob/main/LICENSE"
-		>CC0 1.0 Universal</a
+		target="_blank"
+		rel="noopener noreferrer">CC0 1.0 Universal</a
 	>
-	© <a href="https://aliciasykes.com">Alicia Sykes</a> 2018 - {
-		year || 'Present'
-	} | Source code available on <a
-		href="https://github.com/Lissy93/awesome-privacy">GitHub</a
+	© <a href="https://aliciasykes.com" target="_blank" rel="noopener noreferrer"
+		>Alicia Sykes</a
+	> 2018 - {year || 'Present'} | Source code available on <a
+		href="https://github.com/Lissy93/awesome-privacy"
+		target="_blank"
+		rel="noopener noreferrer">GitHub</a
 	>
 </footer>
 
 <style lang="scss">
 	footer {
-		font-family: 'Lekton', sans-serif;
+		font-family: var(--font-subtitle);
 		font-weight: bold;
 		text-align: center;
-		padding: 0.5rem 0;
+		padding: var(--space-sm) 0;
 		margin: 0 auto;
 		a {
-			font-family: 'Lekton', sans-serif;
 			color: var(--accent);
 		}
 	}

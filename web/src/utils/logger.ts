@@ -21,7 +21,10 @@ export const error = (source: string, message: string) => {
 export const printSummary = () => {
   if (entries.length === 0) return;
 
-  const grouped: Record<string, { errors: number; warnings: number; messages: string[] }> = {};
+  const grouped: Record<
+    string,
+    { errors: number; warnings: number; messages: string[] }
+  > = {};
   for (const entry of entries) {
     if (!grouped[entry.source]) {
       grouped[entry.source] = { errors: 0, warnings: 0, messages: [] };
@@ -33,7 +36,9 @@ export const printSummary = () => {
   }
 
   console.log('\n───────────── Build fetch summary ──────────────');
-  for (const [source, { errors, warnings, messages }] of Object.entries(grouped)) {
+  for (const [source, { errors, warnings, messages }] of Object.entries(
+    grouped,
+  )) {
     const parts = [];
     if (errors) parts.push(`${errors} error${errors > 1 ? 's' : ''}`);
     if (warnings) parts.push(`${warnings} warning${warnings > 1 ? 's' : ''}`);

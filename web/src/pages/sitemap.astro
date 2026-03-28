@@ -36,6 +36,9 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 				<a href="/all">View All</a>
 			</li>
 			<li>
+				<a href="/changelog">Changelog</a>
+			</li>
+			<li>
 				<a href="/inventory">My Inventory</a>
 			</li>
 			<li>
@@ -142,31 +145,30 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 
 <style lang="scss">
 	main {
-		padding: 1rem;
-		width: 1000px;
-		max-width: calc(100% - 5rem);
-		margin: 4rem auto 5rem auto;
-		padding: 0 2rem;
-		border: 2px solid var(--box-outline);
-		box-shadow: 6px 6px 0 var(--box-outline);
+		width: var(--width-container-narrow);
+		max-width: var(--width-container-max);
+		margin: var(--space-2xl) auto 5rem auto;
+		padding: 0 var(--space-lg);
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
 		background: var(--accent-fg);
 		position: relative;
 		p {
-			font-size: 1.3rem;
+			font-size: var(--text-lg);
 			margin: 0;
 			small {
-				font-size: 0.8rem;
-				opacity: 0.5;
-				transition: all 0.2s ease-in-out;
+				font-size: var(--text-sm);
+				opacity: var(--opacity-dim);
+				transition: var(--transition-normal);
 				&:hover {
-					opacity: 0.8;
+					opacity: var(--opacity-subtle);
 				}
 			}
 		}
 		ul {
 			padding-left: 1.2rem;
 			list-style: none;
-			border-left: 3px solid #5f53f482;
+			border-left: 3px solid var(--transparent-accent);
 			border-radius: 4px;
 			li {
 				font-weight: 600;
@@ -181,11 +183,11 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 				}
 				&::before {
 					content: '━ ';
-					color: #5f53f482;
+					color: var(--transparent-accent);
 					margin-left: -1.2rem;
 				}
 				a {
-					transition: all ease-in-out 0.2s;
+					transition: var(--transition-normal);
 					text-decoration: none;
 					&:hover {
 						text-decoration: underline;
@@ -196,24 +198,22 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 	}
 
 	h2 {
-		margin: 0;
-		gap: 1rem;
-		font-size: 2rem;
-		margin: -2rem 0 2rem -4rem;
-		box-shadow: 6px 6px 0 var(--box-outline);
+		font-size: var(--text-3xl);
+		margin: -2rem 0 var(--space-lg) -4rem;
+		box-shadow: var(--shadow-lg);
 		background: var(--accent);
 		color: var(--accent-fg);
 		width: fit-content;
-		padding: 0.25rem 0.5rem;
+		padding: var(--space-xs) var(--space-sm);
 		@media (max-width: 768px) {
-			margin: -2rem auto 1rem auto;
+			margin: -2rem auto var(--space-md) auto;
 		}
 	}
 
 	.search-controlls {
 		float: right;
-		top: 1rem;
-		right: 1rem;
+		top: var(--space-md);
+		right: var(--space-md);
 		position: absolute;
 		@media (max-width: 768px) {
 			position: relative;
@@ -222,22 +222,22 @@ const categories = ((await fetchData()) as AwesomePrivacy)?.categories || [];
 			right: 0;
 		}
 		.press-enter {
-			margin: 0.5rem 0 0 0;
-			opacity: 0.5;
+			margin: var(--space-sm) 0 0 0;
+			opacity: var(--opacity-dim);
 			visibility: hidden;
-			font-size: 1rem;
+			font-size: var(--text-base);
 		}
 		input {
-			padding: 0.25rem;
-			border: 2px solid var(--box-outline);
+			padding: var(--space-xs);
+			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
-			font-size: 1rem;
-			box-shadow: 3px 3px 0 var(--box-outline);
+			font-size: var(--text-base);
+			box-shadow: var(--shadow-sm);
 			color: var(--accent-3);
 			background: var(--background-form);
 			&:focus {
 				outline: none;
-				box-shadow: 4px 4px 0 var(--box-outline);
+				box-shadow: var(--shadow-sm-hover);
 			}
 		}
 	}

@@ -127,76 +127,27 @@ const putCommaInNumber = (num: number | string | undefined) => {
 
 
 <style lang="scss">
+@use '../../styles/mixins' as *;
 .website-info-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  .left, .right {
-    width: calc(50% - 1rem);
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-  }
+  @include detail-info-layout;
 }
 
-h4 {
-  margin: 1rem 0 0 0;
-  font-size: 1.2rem;
-}
-p {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  :global(svg) {
-    width: 1rem;
-  }
-  img {
-    border-radius: var(--curve-sm);
-  }
-}
+@include detail-info-base;
 
 ul {
-  padding-left: 0;
-  list-style: none;
-  max-height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  img {
-    border-radius: var(--curve-sm);
-  }
-  .list-item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
-  }
-  &.list-table {
-    font-size: 0.9rem;
-    padding-left: 0;
-    li {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.1rem 0;
-      .lbl {
-        font-weight: 400;
-      }
-      &:not(:last-child) {
-        border-bottom: 1px solid #5f53f440;
-      }
+  &.list-table li {
+    .lbl {
+      font-weight: 400;
     }
   }
 }
 
 .website-title, .website-description {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
+  font-size: var(--text-sm);
+  opacity: var(--opacity-subtle);
+  @include line-clamp(1);
   border-left: 2px solid var(--accent-3);
-  padding-left: 0.5rem;
+  padding-left: var(--space-sm);
 }
 .website-title {
   font-weight: 500;
@@ -206,17 +157,17 @@ ul {
   -webkit-line-clamp: 3;
 }
 .explainer {
-  font-size: 0.8rem;
-  opacity: 0.8;
+  font-size: var(--text-sm);
+  opacity: var(--opacity-subtle);
   font-style: italic;
 }
 
 .star-rating {
   position: relative;
   display: inline-block;
-  margin: 1rem 0;
+  margin: var(--space-md) 0;
   :global(svg) {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     gap: 0;
     margin: 0;
     padding: 0;
@@ -224,7 +175,7 @@ ul {
   .back-stars {
     display: flex;
     :global(svg) {
-      color: #ddddd8;
+      color: var(--foreground);
     }
     .front-stars {
       position: absolute;
@@ -235,21 +186,21 @@ ul {
       width: 0;
       display: flex;
       :global(svg) {
-        color: #e8e800;
+        color: var(--rating-neutral);
       }
     }
   }
 }
 
 .rating-description {
-  font-size: 0.8rem;
-  opacity: 0.8;
+  font-size: var(--text-sm);
+  opacity: var(--opacity-subtle);
   font-style: italic;
 }
 
 .screenshots {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-sm);
   overflow-x: auto;
 }
 

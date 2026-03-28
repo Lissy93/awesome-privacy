@@ -114,18 +114,17 @@ const beer = putResultsIntoGroups();
 	section {
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
-		margin: 2rem auto;
-		padding: 1rem;
+		margin: var(--space-lg) auto;
+		padding: var(--space-md);
 		width: calc(100% - 2rem);
-		max-width: 1100px;
+		max-width: var(--width-container);
 
 		h1 {
-			font-size: 3rem;
+			font-size: var(--text-4xl);
 			color: var(--accent-3);
-			font-family: 'Lekton', sans-serif;
+			font-family: var(--font-subtitle);
 			text-align: center;
-			margin: 1rem 0;
+			margin: var(--space-md) 0;
 		}
 	}
 
@@ -133,35 +132,35 @@ const beer = putResultsIntoGroups();
 		padding: 0;
 		width: 80vw;
 		max-width: 900px;
-		margin: 1rem auto 0 auto;
+		margin: var(--space-md) auto 0 auto;
 		h3 {
 			margin: 0;
 			color: var(--accent-3);
-			font-size: 1.6rem;
+			font-size: var(--text-xl);
 		}
 		p {
 			margin: 0;
-			opacity: 0.6;
+			opacity: var(--opacity-muted);
 		}
 	}
 
 	.results {
-		margin: 0 auto 2rem auto;
-		padding: 1rem;
+		margin: 0 auto var(--space-lg) auto;
+		padding: var(--space-md);
 		width: calc(100% - 2rem);
-		max-width: 1100px;
+		max-width: var(--width-container);
 		columns: 6 300px;
-		column-gap: 1rem;
+		column-gap: var(--space-md);
 		.category {
-			padding: 1rem;
-			box-shadow: 4px 4px 0 var(--box-outline);
+			padding: var(--space-md);
+			box-shadow: var(--shadow-md);
 			background: var(--accent-fg);
-			border: 2px solid var(--box-outline);
+			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
 			display: inline-flex;
 			flex-direction: column;
 			width: 85%;
-			margin: 1rem;
+			margin: var(--space-md);
 			position: relative;
 			.category-title {
 				text-decoration: none;
@@ -169,24 +168,24 @@ const beer = putResultsIntoGroups();
 				z-index: 2;
 				position: relative;
 				h3 {
-					font-family: 'Lekton', sans-serif;
+					font-family: var(--font-subtitle);
 					font-weight: bold;
 					margin: 0;
-					font-size: 1.8rem;
+					font-size: var(--text-2xl);
 				}
 			}
 			.section-icon {
 				position: absolute;
-				right: 0.5rem;
-				top: 0.5rem;
+				right: var(--space-sm);
+				top: var(--space-sm);
 				width: fit-content;
 				:global(svg) {
-					width: 2rem;
-					height: 2rem;
-					opacity: 0.5;
+					width: var(--text-3xl);
+					height: var(--text-3xl);
+					opacity: var(--opacity-dim);
 					text-shadow: 3px 3px 0 black;
 					color: var(--accent-3);
-					transition: all 0.2s ease-in-out;
+					transition: var(--transition-normal);
 				}
 			}
 			.section-list {
@@ -194,7 +193,7 @@ const beer = putResultsIntoGroups();
 				padding: 0;
 				margin: 0;
 				h4 {
-					margin: 1rem 0 0 0;
+					margin: var(--space-md) 0 0 0;
 				}
 				.service-list {
 					list-style: none;

@@ -8,22 +8,21 @@ const { text, url, className, title } = Astro.props;
 
 <style lang="scss">
 	.button {
-		font-family: 'Lekton', sans-serif;
+		font-family: var(--font-subtitle);
 		text-align: center;
-		border: 1px solid var(--box-outline);
-		box-shadow: 3px 3px 0 var(--box-outline);
+		border: var(--border-light);
+		box-shadow: var(--shadow-sm);
 		background: var(--accent);
-		border-radius: 18px;
-		padding: 0.5rem 1rem;
-		transition: all 0.2s ease-in-out;
+		border-radius: var(--curve-pill);
+		padding: var(--space-sm) var(--space-md);
+		transition: var(--transition-normal);
 		&:hover {
-			box-shadow: 4px 4px 0 var(--box-outline);
+			box-shadow: var(--shadow-sm-hover);
 		}
 		a {
 			text-decoration: none;
 			color: var(--accent-fg);
-			font-size: 1.2rem;
-			font-family: 'Lekton', sans-serif;
+			font-size: var(--text-md);
 			font-weight: bold;
 		}
 	}

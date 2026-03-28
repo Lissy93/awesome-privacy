@@ -75,8 +75,8 @@
   .saved-services {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
   }
 
   .nothing-yet {
@@ -85,14 +85,14 @@
       margin: 0;
     }
     small {
-      font-size: 0.8rem;
-      opacity: 0.6;
+      font-size: var(--text-sm);
+      opacity: var(--opacity-muted);
     }
     .nope {
       font-weight: bold;
-      margin: 2rem 0;
+      margin: var(--space-lg) 0;
       opacity: 0.2;
-      font-size: 1.6rem;
+      font-size: var(--text-xl);
     }
   }
 </style>

@@ -3,6 +3,7 @@ import { formatLink } from '@utils/parse-markdown';
 import type { Service } from 'src/types/Service';
 import FontAwesome from '@components/form/FontAwesome.svelte';
 import SaveListing from '@components/things/SaveListing.svelte';
+import ServiceIcon from '@components/things/ServiceIcon.astro';
 import { slugify } from '@utils/fetch-data';
 
 interface Props {
@@ -13,27 +14,6 @@ interface Props {
 
 const { service, sectionName, categoryName } = Astro.props;
 ---
-
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const serviceIcons =
-			document.querySelectorAll<HTMLImageElement>('.service-icon');
-		const broke = '/broken-image.png';
-
-		serviceIcons.forEach(function (icon) {
-			icon.onerror = function () {
-				const imgElement = this as HTMLImageElement;
-				const serviceUrl = imgElement.getAttribute('data-service-url');
-				const newSrcAttribute = imgElement.src.includes('on.ho')
-					? broke
-					: `https://icon.horse/icon/${serviceUrl}`;
-				imgElement.src =
-					imgElement.src !== newSrcAttribute ? newSrcAttribute : broke;
-				imgElement.onerror = null;
-			};
-		});
-	});
-</script>
 
 <div class="service" id={slugify(service.name)}>
 	<div class="service-head">
@@ -56,16 +36,7 @@ const { service, sectionName, categoryName } = Astro.props;
 	</div>
 
 	<div class="service-body">
-		<img
-			width="40"
-			height="40"
-			loading="lazy"
-			decoding="async"
-			class="service-icon"
-			alt={`${service.name} Icon`}
-			data-service-url={formatLink(service.url)}
-			src={service.icon || `https://icon.horse/icon/${formatLink(service.url)}`}
-		/>
+		<ServiceIcon name={service.name} url={service.url} icon={service.icon} />
 		<div class="service-body">
 			<p set:html={service.description} />
 		</div>

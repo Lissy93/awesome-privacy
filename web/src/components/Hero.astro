@@ -1,11 +1,6 @@
 ---
 import FontAwesome from '@components/form/FontAwesome.svelte';
-import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 ---
-
-<div class="theme-switcher">
-	<ThemeSwitcher client:load />
-</div>
 
 <div class="hero">
 	<h1>Awesome Privacy</h1>
@@ -14,46 +9,27 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 		popular software and services.
 	</p>
 	<div class="github-link-wrap">
-		<a href="https://github.com/lissy93/awesome-privacy">
+		<a
+			href="https://github.com/lissy93/awesome-privacy"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<FontAwesome iconName="github" />
 			View on GitHub
 		</a>
 	</div>
 </div>
 
-<nav class="top-right">
-	<ul>
-		<li>
-			<a href="/">Home</a>
-		</li>
-		<li>
-			<a href="/search">Search</a>
-		</li>
-		<li>
-			<a href="/browse">Browse</a>
-		</li>
-		<li>
-			<a href="/about">About</a>
-		</li>
-		<li>
-			<a href="https://github.com/lissy93/awesome-privacy">Source</a>
-		</li>
-		<li>
-			<a href="https://as93.net">More Apps</a>
-		</li>
-	</ul>
-</nav>
-
 <style lang="scss">
 	.hero {
 		color: var(--accent-fg);
 		border-radius: var(--curve-sm);
-		padding: 2rem 4rem;
+		padding: var(--space-lg) var(--space-2xl);
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: var(--space-lg);
 		@media (max-width: 768px) {
-			padding: 2rem 1rem;
+			padding: var(--space-lg) var(--space-md);
 		}
 	}
 	svg {
@@ -63,16 +39,16 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 		transform: translatex(-50%);
 		width: 220px;
 		height: auto;
-		opacity: 0.6;
+		opacity: var(--opacity-muted);
 		display: none;
 	}
 	h1 {
 		margin: 0;
-		font-size: 5rem;
+		font-size: var(--text-5xl);
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		font-family: 'Libre Franklin', sans-serif;
+		font-family: var(--font-heading);
 		color: var(--accent-3);
 		-webkit-text-fill-color: var(--accent-3);
 		-webkit-text-stroke-width: 2px;
@@ -84,33 +60,32 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 	}
 	.intro {
 		text-align: center;
-		font-size: 1.6rem;
-		padding: 0.5rem 1rem;
+		font-size: var(--text-xl);
+		padding: var(--space-sm) var(--space-md);
 		color: var(--accent-fg);
 		background: var(--accent-3);
-		border: 2px solid var(--box-outline);
+		border: var(--border-heavy);
 		border-radius: var(--curve-sm);
-		box-shadow: 6px 6px 0 var(--box-outline);
-		font-family: 'Lekton', sans-serif;
+		box-shadow: var(--shadow-lg);
+		font-family: var(--font-subtitle);
 		font-weight: 700;
 		max-width: 735px;
 		margin: 0 auto;
 	}
 	.github-link-wrap {
-		font-family: 'Lekton', sans-serif;
+		font-family: var(--font-subtitle);
 		max-width: 735px;
 		text-align: center;
 		margin: 0 auto;
-		border: 1px solid var(--box-outline);
-		box-shadow: 3px 3px 0 var(--box-outline);
+		border: var(--border-light);
+		box-shadow: var(--shadow-sm);
 		background: var(--accent);
-		border-radius: 18px;
-		padding: 0.5rem 1rem;
+		border-radius: var(--curve-pill);
+		padding: var(--space-sm) var(--space-md);
 		a {
 			text-decoration: none;
 			color: var(--accent-fg);
-			font-size: 1.2rem;
-			font-family: 'Lekton', sans-serif;
+			font-size: var(--text-md);
 			font-weight: bold;
 			display: flex;
 			align-items: center;
@@ -118,42 +93,7 @@ import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 				width: 1.5rem;
 				height: 1.5rem;
 				color: var(--accent-fg);
-				margin-right: 0.5rem;
-			}
-		}
-	}
-
-	.theme-switcher {
-		position: absolute;
-		right: 1rem;
-		top: 1rem;
-	}
-
-	.top-right {
-		position: absolute;
-		top: 0;
-		right: 1rem;
-		opacity: 0.8;
-		display: none;
-		&:hover {
-			opacity: 1;
-		}
-		ul {
-			list-style: none;
-			display: flex;
-			padding: 0;
-			gap: 0.5rem;
-			li {
-				&:not(:last-child) {
-					border-right: 1px solid var(--accent);
-					padding-right: 0.5rem;
-				}
-			}
-			li a {
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
+				margin-right: var(--space-sm);
 			}
 		}
 	}
