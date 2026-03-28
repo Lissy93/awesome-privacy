@@ -11,7 +11,10 @@ export const fetchAndroidInfo = async (
   try {
     const res = await fetch(endpoint);
     if (!res.ok) {
-      error('Android', `HTTP ${res.status} for ${androidPackage} (${endpoint})`);
+      error(
+        'Android',
+        `HTTP ${res.status} for ${androidPackage} (${endpoint})`,
+      );
       return null;
     }
     return await res.json();

@@ -25,9 +25,7 @@ const description =
 		<div class="action-card">
 			<Search client:visible data={categories} />
 			<span class="action-divider">or</span>
-			<a href="/all" class="browse-cta">
-				Browse All Listings &rarr;
-			</a>
+			<a href="/all" class="browse-cta"> Browse All Listings &rarr; </a>
 		</div>
 		<h2 class="browse-title"><a href="/all">Categories</a></h2>
 		<ul class="categories">
@@ -115,10 +113,12 @@ const description =
 		padding: var(--space-md) var(--space-lg);
 		margin: var(--space-lg) auto;
 		width: 100%;
-  		box-sizing: border-box;
+		box-sizing: border-box;
 		:global(.search-wrap) {
 			flex: 1;
-			:global(label) { font-size: var(--text-sm); }
+			:global(label) {
+				font-size: var(--text-sm);
+			}
 		}
 		.action-divider {
 			font-family: var(--font-subtitle);
@@ -148,7 +148,10 @@ const description =
 			align-items: center;
 			width: 95%;
 			padding: var(--space-md);
-			.browse-cta { width: 100%; text-align: center; }
+			.browse-cta {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	}
 
@@ -172,7 +175,7 @@ const description =
 		box-shadow: var(--shadow-md);
 		padding: var(--space-md);
 		width: 100%;
-  		box-sizing: border-box;
+		box-sizing: border-box;
 		margin: 0 auto;
 	}
 

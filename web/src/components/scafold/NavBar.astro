@@ -3,13 +3,17 @@ import FontAwesome from '@components/form/FontAwesome.svelte';
 import ThemeSwitcher from '@components/form/ThemeSwitcher.svelte';
 
 const navLinks = [
-	{ label: 'View All',    href: '/all' },
-	{ label: 'Search',    href: '/search' },
+	{ label: 'View All', href: '/all' },
+	{ label: 'Search', href: '/search' },
 	{ label: 'Changelog', href: '/changelog' },
-	{ label: 'API',       href: '/api' },
-	{ label: 'Saved',     href: '/inventory', id: 'saved-nav-link', hidden: true },
-	{ label: 'About',     href: '/about' },
-	{ label: 'GitHub',    href: 'https://github.com/lissy93/awesome-privacy', external: true },
+	{ label: 'API', href: '/api' },
+	{ label: 'Saved', href: '/inventory', id: 'saved-nav-link', hidden: true },
+	{ label: 'About', href: '/about' },
+	{
+		label: 'GitHub',
+		href: 'https://github.com/lissy93/awesome-privacy',
+		external: true,
+	},
 ];
 ---
 
@@ -25,22 +29,25 @@ const navLinks = [
 		aria-expanded="false"
 		aria-controls="nav-menu"
 	>
-		<span class="burger-line" /><span class="burger-line" /><span class="burger-line" />
+		<span class="burger-line"></span><span class="burger-line"></span><span
+			class="burger-line"></span>
 	</button>
 	<nav id="nav-menu" aria-label="Main navigation">
-		{navLinks.map((link) => (
-			<a
-				href={link.href}
-				class="nav-link"
-				id={link.id}
-				style={link.hidden ? 'display:none' : undefined}
-				target={link.external ? '_blank' : undefined}
-				rel={link.external ? 'noopener noreferrer' : undefined}
-			>
-				{link.label}
-				{link.external && <span class="sr-only">(opens in new tab)</span>}
-			</a>
-		))}
+		{
+			navLinks.map((link) => (
+				<a
+					href={link.href}
+					class="nav-link"
+					id={link.id}
+					style={link.hidden ? 'display:none' : undefined}
+					target={link.external ? '_blank' : undefined}
+					rel={link.external ? 'noopener noreferrer' : undefined}
+				>
+					{link.label}
+					{link.external && <span class="sr-only">(opens in new tab)</span>}
+				</a>
+			))
+		}
 		<div class="theme-switcher">
 			<ThemeSwitcher client:load />
 		</div>
@@ -81,7 +88,9 @@ const navLinks = [
 			const saved = JSON.parse(localStorage.getItem('savedServices') || '[]');
 			const el = document.getElementById('saved-nav-link');
 			if (el && saved.length > 0) el.style.display = '';
-		} catch { /* ignore parse errors */ }
+		} catch {
+			/* ignore parse errors */
+		}
 	});
 </script>
 
@@ -137,9 +146,15 @@ const navLinks = [
 				transition: var(--transition-fast);
 			}
 			&.is-active .burger-line {
-				&:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-				&:nth-child(2) { opacity: 0; }
-				&:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+				&:nth-child(1) {
+					transform: translateY(7px) rotate(45deg);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(3) {
+					transform: translateY(-7px) rotate(-45deg);
+				}
 			}
 		}
 
@@ -154,13 +169,25 @@ const navLinks = [
 				font-weight: bold;
 				color: var(--foreground);
 				text-decoration: none;
-				transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+				transition:
+					background 0.3s ease-in-out,
+					color 0.3s ease-in-out;
 				&:hover {
 					color: var(--accent-fg);
-					&:nth-child(4n+1) { background: var(--accent); }
-					&:nth-child(4n+2) { background: var(--accent-2); color: var(--foreground); }
-					&:nth-child(4n+3) { background: var(--accent-3); }
-					&:nth-child(4n+4) { background: var(--accent-4); color: var(--foreground); }
+					&:nth-child(4n + 1) {
+						background: var(--accent);
+					}
+					&:nth-child(4n + 2) {
+						background: var(--accent-2);
+						color: var(--foreground);
+					}
+					&:nth-child(4n + 3) {
+						background: var(--accent-3);
+					}
+					&:nth-child(4n + 4) {
+						background: var(--accent-4);
+						color: var(--foreground);
+					}
 				}
 			}
 			.theme-switcher {
@@ -175,7 +202,9 @@ const navLinks = [
 				font-size: var(--text-base);
 			}
 			.logo {
-				span { font-size: var(--text-3xl); }
+				span {
+					font-size: var(--text-3xl);
+				}
 			}
 		}
 
@@ -183,10 +212,20 @@ const navLinks = [
 			flex-wrap: wrap;
 			.logo {
 				margin: 0 auto;
-				:global(svg) { @media (max-width: 428px) { display: none; } }
-				span { @media (max-width: 428px) { font-size: var(--text-2xl); } }
+				:global(svg) {
+					@media (max-width: 428px) {
+						display: none;
+					}
+				}
+				span {
+					@media (max-width: 428px) {
+						font-size: var(--text-2xl);
+					}
+				}
 			}
-			.burger { display: flex; }
+			.burger {
+				display: flex;
+			}
 			nav {
 				display: none;
 				flex-direction: column;
@@ -198,14 +237,18 @@ const navLinks = [
 				border-bottom: 2px solid var(--accent-3);
 				z-index: 100;
 				height: auto;
-				&.open { display: flex; }
+				&.open {
+					display: flex;
+				}
 				.nav-link {
 					width: 100%;
 					text-align: center;
 					padding: var(--space-md) var(--space-lg);
 					border-bottom: 1px solid var(--accent-3-translucent);
 				}
-				.theme-switcher { display: none; }
+				.theme-switcher {
+					display: none;
+				}
 			}
 		}
 	}

@@ -7,21 +7,30 @@ import { fetchChangelog } from '@utils/fetch-changelog';
 const changelog = await fetchChangelog();
 ---
 
-<Layout title="Changelog | Awesome Privacy" description="A transparent log of all additions, removals, and amendments to the Awesome Privacy list.">
+<Layout
+	title="Changelog | Awesome Privacy"
+	description="A transparent log of all additions, removals, and amendments to the Awesome Privacy list."
+>
 	<div class="changelog-page">
 		<Main>
 			<h2>Changelog</h2>
 			<p>
-				All data in awesome-privacy is managed via Git,
-				so that we have a complete and transparent changelog
-				of exactly what was added when and by whom.
-				The corresponding PR for each change contains full details and justifications.
+				All data in awesome-privacy is managed via Git, so that we have a
+				complete and transparent changelog of exactly what was added when and by
+				whom. The corresponding PR for each change contains full details and
+				justifications.
 			</p>
-			{changelog.entries.length > 0 ? (
-				<ChangelogTimeline client:load entries={changelog.entries} rejections={changelog.rejections || []} />
-			) : (
-				<p class="fallback">Changelog data is currently unavailable.</p>
-			)}
+			{
+				changelog.entries.length > 0 ? (
+					<ChangelogTimeline
+						client:load
+						entries={changelog.entries}
+						rejections={changelog.rejections || []}
+					/>
+				) : (
+					<p class="fallback">Changelog data is currently unavailable.</p>
+				)
+			}
 		</Main>
 	</div>
 </Layout>

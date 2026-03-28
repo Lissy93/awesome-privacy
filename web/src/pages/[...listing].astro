@@ -50,10 +50,16 @@ const makeKeyWordTag = () => {
 	const keywords = [
 		`open source ${parentSection.name}`,
 		`${parentSection.name} comparison`,
-		...(parentSection.alternativeTo || []).map((alt: string) => `${alt} alternative`),
+		...(parentSection.alternativeTo || []).map(
+			(alt: string) => `${alt} alternative`,
+		),
 		...(parentSection.services || []).map((serv: Service) => `${serv.name} vs`),
-		'private', 'ad free', 'encrypted', 'open source software',
-		'privacy respecting apps', 'free tools',
+		'private',
+		'ad free',
+		'encrypted',
+		'open source software',
+		'privacy respecting apps',
+		'free tools',
 	];
 	return keywords.join(', ');
 };
@@ -135,7 +141,9 @@ const githubData = github ? await fetchGitHubStats(github) : null;
 const privacyData = tosdrId ? await fetchTosdrPrivacy(tosdrId) : null;
 const iosData = iosApp ? await fetchIosInfo(iosApp) : null;
 const androidData = androidApp ? await fetchAndroidInfo(androidApp) : null;
-const discordData = discordInvite ? await fetchDiscordInfo(discordInvite) : null;
+const discordData = discordInvite
+	? await fetchDiscordInfo(discordInvite)
+	: null;
 const redditData = subreddit ? await fetchRedditInfo(subreddit) : null;
 const dockerData = await fetchDockerData(name);
 const websiteData =
@@ -176,8 +184,10 @@ const findPrivacyPolicyLink = () => {
 	if (!privacyData) return null;
 	const docs = privacyData?.parameters?.documents;
 	if (docs) {
-	  const pp = (docs || []).find((doc) => doc.name.toLowerCase().includes('privacy policy'));
-	  if (pp) return pp.url;
+		const pp = (docs || []).find((doc) =>
+			doc.name.toLowerCase().includes('privacy policy'),
+		);
+		if (pp) return pp.url;
 	}
 	return `https://tosdr.org/en/service/${tosdrId}`;
 };
@@ -374,7 +384,9 @@ const getApiEndpoint = () => {
 		background: var(--accent-fg);
 	}
 
-	p { margin: var(--space-xs) 0 var(--space-sm) 0; }
+	p {
+		margin: var(--space-xs) 0 var(--space-sm) 0;
+	}
 
 	h3 {
 		font-size: var(--text-3xl);
@@ -403,7 +415,9 @@ const getApiEndpoint = () => {
 			border-radius: var(--curve-sm);
 			font-family: var(--font-code);
 			font-size: var(--text-sm);
-			@media (max-width: 768px) { white-space: break-spaces; }
+			@media (max-width: 768px) {
+				white-space: break-spaces;
+			}
 		}
 	}
 

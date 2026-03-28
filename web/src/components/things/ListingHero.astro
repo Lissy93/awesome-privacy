@@ -14,9 +14,21 @@ interface Props {
 
 const { service, parentSection, categoryName, privacyPolicyLink } = Astro.props;
 const {
-	name, description, url, github, tosdrId, iosApp, androidApp,
-	discordInvite, subreddit, icon, followWith, links,
-	securityAudited, openSource, acceptsCrypto,
+	name,
+	description,
+	url,
+	github,
+	tosdrId,
+	iosApp,
+	androidApp,
+	discordInvite,
+	subreddit,
+	icon,
+	followWith,
+	links,
+	securityAudited,
+	openSource,
+	acceptsCrypto,
 } = service;
 
 const catSlug = slugify(categoryName);
@@ -28,23 +40,81 @@ const otherServices = parentSection.services.filter(
 
 const infoLinks = [
 	url && { label: 'Homepage', href: url, text: formatLink(url) },
-	github && { label: 'GitHub', href: `https://github.com/${github}`, text: `github.com/${github}` },
-	tosdrId && { label: 'Privacy', href: privacyPolicyLink, text: formatLink(privacyPolicyLink || '') },
+	github && {
+		label: 'GitHub',
+		href: `https://github.com/${github}`,
+		text: `github.com/${github}`,
+	},
+	tosdrId && {
+		label: 'Privacy',
+		href: privacyPolicyLink,
+		text: formatLink(privacyPolicyLink || ''),
+	},
 	iosApp && { label: 'iOS App', href: iosApp, text: formatLink(iosApp) },
-	androidApp && { label: 'Android App', href: `https://play.google.com/store/apps/details?id=${androidApp}`, text: `play.google.com/.../${androidApp}` },
-	discordInvite && { label: 'Discord', href: `https://discord.com/invite/${discordInvite}`, text: discordInvite },
-	subreddit && { label: 'Subreddit', href: `https://reddit.com/r/${subreddit}`, text: `r/${subreddit}` },
-	url && { label: 'Web info', href: `https://web-check.xyz/check/${formatLink(url)}`, text: `web-check.xyz/check/${formatLink(url).split('/')[0]}` },
-	...(links || []).map((link) => ({ label: link.title, href: link.url, text: link.url })),
+	androidApp && {
+		label: 'Android App',
+		href: `https://play.google.com/store/apps/details?id=${androidApp}`,
+		text: `play.google.com/.../${androidApp}`,
+	},
+	discordInvite && {
+		label: 'Discord',
+		href: `https://discord.com/invite/${discordInvite}`,
+		text: discordInvite,
+	},
+	subreddit && {
+		label: 'Subreddit',
+		href: `https://reddit.com/r/${subreddit}`,
+		text: `r/${subreddit}`,
+	},
+	url && {
+		label: 'Web info',
+		href: `https://web-check.xyz/check/${formatLink(url)}`,
+		text: `web-check.xyz/check/${formatLink(url).split('/')[0]}`,
+	},
+	...(links || []).map((link) => ({
+		label: link.title,
+		href: link.url,
+		text: link.url,
+	})),
 ].filter(Boolean) as { label: string; href: string | null; text: string }[];
 
 const highlights = [
-	securityAudited && { icon: 'securityAudited', text: 'Security Audited', cls: 'great', title: `${name} has been security audited by an accredited auditor, with results published publicly` },
-	acceptsCrypto && { icon: 'cryptoAccepted', text: 'Crypto Payments Accepted', cls: 'great', title: `${name} accepts anonymous payment methods` },
-	securityAudited === false && { icon: 'notSecurityAudited', text: 'No Security Audit', cls: 'warning', title: `${name} has not been audited` },
-	openSource === false && { icon: 'closedSource', text: 'Not Open Source', cls: 'warning', title: `${name} is not open source` },
-	(openSource || (github && openSource !== false)) && { icon: 'openSource', text: 'Open Source', cls: 'great', title: `${name} is open source` },
-].filter(Boolean) as { icon: string; text: string; cls: string; title: string }[];
+	securityAudited && {
+		icon: 'securityAudited',
+		text: 'Security Audited',
+		cls: 'great',
+		title: `${name} has been security audited by an accredited auditor, with results published publicly`,
+	},
+	acceptsCrypto && {
+		icon: 'cryptoAccepted',
+		text: 'Crypto Payments Accepted',
+		cls: 'great',
+		title: `${name} accepts anonymous payment methods`,
+	},
+	securityAudited === false && {
+		icon: 'notSecurityAudited',
+		text: 'No Security Audit',
+		cls: 'warning',
+		title: `${name} has not been audited`,
+	},
+	openSource === false && {
+		icon: 'closedSource',
+		text: 'Not Open Source',
+		cls: 'warning',
+		title: `${name} is not open source`,
+	},
+	(openSource || (github && openSource !== false)) && {
+		icon: 'openSource',
+		text: 'Open Source',
+		cls: 'great',
+		title: `${name} is open source`,
+	},
+].filter(Boolean) as {
+	icon: string;
+	text: string;
+	cls: string;
+	title: string;
+}[];
 ---
 
 <section class="hero-section">
@@ -86,45 +156,63 @@ const highlights = [
 		<div>
 			<p class="description" set:html={parseMarkdown(description)} />
 			<ul>
-				{infoLinks.map((link) => (
-					<li>
-						<b>{link.label}:</b>
-						<a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
-					</li>
-				))}
+				{
+					infoLinks.map((link) => (
+						<li>
+							<b>{link.label}:</b>
+							<a href={link.href} target="_blank" rel="noopener noreferrer">
+								{link.text}
+							</a>
+						</li>
+					))
+				}
 			</ul>
 			<div class="related">
-				{(parentSection.alternativeTo || []).length > 0 && (
-					<div class="related-group">
-						<h4 class="avoid"><FontAwesome iconName="faceBad" /> Avoid</h4>
-						<ul>
-							{(parentSection.alternativeTo || []).map((alt: string) => (
-								<li><span>{alt}</span></li>
-							))}
-						</ul>
-					</div>
-				)}
-				{otherServices.length > 0 && (
-					<div class="related-group">
-						<h4 class="consider"><FontAwesome iconName="faceGood" /> Also Consider</h4>
-						<ul>
-							{otherServices.map((s: Service) => (
-								<li>
-									<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}`}>{s.name}</a>
-								</li>
-							))}
-						</ul>
-					</div>
-				)}
+				{
+					(parentSection.alternativeTo || []).length > 0 && (
+						<div class="related-group">
+							<h4 class="avoid">
+								<FontAwesome iconName="faceBad" /> Avoid
+							</h4>
+							<ul>
+								{(parentSection.alternativeTo || []).map((alt: string) => (
+									<li>
+										<span>{alt}</span>
+									</li>
+								))}
+							</ul>
+						</div>
+					)
+				}
+				{
+					otherServices.length > 0 && (
+						<div class="related-group">
+							<h4 class="consider">
+								<FontAwesome iconName="faceGood" /> Also Consider
+							</h4>
+							<ul>
+								{otherServices.map((s: Service) => (
+									<li>
+										<a href={`/${catSlug}/${secSlug}/${slugify(s.name)}`}>
+											{s.name}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					)
+				}
 			</div>
 		</div>
 	</div>
 	<div class="highlights">
-		{highlights.map((h) => (
-			<span class={`meta-item ${h.cls}`} title={h.title}>
-				<FontAwesome iconName={h.icon} /> {h.text}
-			</span>
-		))}
+		{
+			highlights.map((h) => (
+				<span class={`meta-item ${h.cls}`} title={h.title}>
+					<FontAwesome iconName={h.icon} /> {h.text}
+				</span>
+			))
+		}
 	</div>
 </section>
 
@@ -143,18 +231,24 @@ const highlights = [
 		h2 {
 			font-size: var(--text-4xl);
 			margin: 0;
-			@media (max-width: 768px) { text-align: center; }
+			@media (max-width: 768px) {
+				text-align: center;
+			}
 		}
 		.url-wrap {
 			display: flex;
 			align-items: center;
 			gap: var(--space-sm);
-			a { font-size: var(--text-md); }
+			a {
+				font-size: var(--text-md);
+			}
 			.follow-with {
 				font-style: italic;
 				opacity: var(--opacity-muted);
 			}
-			@media (max-width: 768px) { flex-direction: column; }
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -170,11 +264,15 @@ const highlights = [
 		opacity: 0.9;
 		display: flex;
 		gap: var(--space-sm);
-		@media (max-width: 768px) { flex-direction: column; }
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
 		.service-icon {
 			border-radius: var(--curve-md);
 			margin-top: var(--space-md);
-			@media (max-width: 768px) { margin: var(--space-md) auto 0 auto; }
+			@media (max-width: 768px) {
+				margin: var(--space-md) auto 0 auto;
+			}
 		}
 		ul {
 			padding-left: var(--space-md);
@@ -187,7 +285,10 @@ const highlights = [
 				font-weight: 400;
 				min-width: 100px;
 				display: inline-block;
-				@media (max-width: 768px) { width: auto; display: block; }
+				@media (max-width: 768px) {
+					width: auto;
+					display: block;
+				}
 			}
 		}
 	}
@@ -207,9 +308,16 @@ const highlights = [
 				display: flex;
 				align-items: center;
 				gap: var(--space-xs);
-				:global(svg) { width: var(--text-sm); height: var(--text-sm); }
-				&.avoid :global(svg) { color: var(--danger); }
-				&.consider :global(svg) { color: var(--success-muted); }
+				:global(svg) {
+					width: var(--text-sm);
+					height: var(--text-sm);
+				}
+				&.avoid :global(svg) {
+					color: var(--danger);
+				}
+				&.consider :global(svg) {
+					color: var(--success-muted);
+				}
 			}
 			ul {
 				list-style: none;
@@ -226,9 +334,13 @@ const highlights = [
 					a {
 						color: var(--foreground);
 						text-decoration: none;
-						&:hover { color: var(--accent); }
+						&:hover {
+							color: var(--accent);
+						}
 					}
-					span { opacity: var(--opacity-soft); }
+					span {
+						opacity: var(--opacity-soft);
+					}
 				}
 			}
 		}
@@ -254,11 +366,15 @@ const highlights = [
 		}
 		.warning {
 			color: var(--danger);
-			:global(svg) { color: var(--danger); }
+			:global(svg) {
+				color: var(--danger);
+			}
 		}
 		.great {
 			color: var(--success-muted);
-			:global(svg) { color: var(--success-muted); }
+			:global(svg) {
+				color: var(--success-muted);
+			}
 		}
 	}
 </style>

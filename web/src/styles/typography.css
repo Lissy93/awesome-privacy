@@ -62,7 +62,8 @@
 	font-display: swap;
 	src:
 		local('Libre Franklin ExtraBold'),
-		url('/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf') format('truetype');
+		url('/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf')
+			format('truetype');
 }
 
 /* Lekton Font Faces */
