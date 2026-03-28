@@ -1954,15 +1954,6 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
-        - name: 1time.io
-          url: https://1time.io/
-          icon: https://1time.io/favicon.svg
-          openSource: true
-          github: shingrus/1time.io
-          description: |
-            1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side
-            encryption, HKDF key derivation, CLI tool, and Docker self-hosting.
-
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
@@ -3391,6 +3382,15 @@ categories:
           cli, and chrome-extension clients. It offers a suite of configurations beyond the
           standard for comparable private pastebins, including max read count, IP/CIDR
           allow-listing, and webhooks.
+
+      - name: 1time.io
+        url: https://1time.io/
+        icon: https://1time.io/favicon.svg
+        openSource: true
+        github: shingrus/1time.io
+        description: |
+          1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side
+          encryption, HKDF key derivation, CLI tool, and Docker self-hosting.
 
     ########################
     ###### File Drop ######
