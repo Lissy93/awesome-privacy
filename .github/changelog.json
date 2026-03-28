@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T13:02:52Z",
+  "generatedAt": "2026-03-28T11:38:08Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -45,6 +45,7 @@
     "9138eddcdec8ede666db70bc44d98b33c9f9653e",
     "99cf5f51acf1b8ac09558bf419abe18586233668",
     "9ef9e90d30804239482c9a6e2903fd015b1224c4",
+    "a2cef5cbf9e19acbf192c97b59bb82e06a7f3a2a",
     "a539b1dd64eba2d9f68f3a63c4f2b170fc31fcef",
     "a6a8682af6500066d293b3390224fbdfdbe219c7",
     "a6bf3b89641bd9837f6613af3816b872ff2c2e6d",
@@ -64,6 +65,7 @@
     "c58dec4d6fc4226b3365df168b68baefc02e12ac",
     "c867fd7423f3e4b8e455b435018be8fc3bd6c99a",
     "c9c49f8cde13d978c4fbdefbb78bc4de45546492",
+    "ca4702933d6234a50f654e034869ed66a1dfd043",
     "ccac7d7e61218b60d2c74b497ff58f42f783e9fc",
     "ccbab9def79590fa9194fcb8ffb4e6ab193cba87",
     "ccc7b43aa598acf709f8f5c77f987c2b95ec2921",
@@ -75,10 +77,79 @@
     "e9b1fee82705ca9b52a9db6e081d46bc4c417f01",
     "ec4cbec4affe6d6ddcb178504e137d552af3771f",
     "ec9119761c83aeafc5cf436dc2306280212c2470",
+    "f3adf137b0415999e4625ddc7e4ba26c2c56d4a9",
     "f3d9d9a7950d13baaae2f973600499f0d7b12e15",
     "fa1c504da13a0d2f8e75ef95566811e54750ff3d"
   ],
   "entries": [
+    {
+      "date": "2026-03-27",
+      "sha": "ca4702933d6234a50f654e034869ed66a1dfd043",
+      "pr": {
+        "number": 364,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/364",
+        "author": "PythonGermany",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/97847597?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Actual",
+              "category": "Finance",
+              "section": "Secure Budgeting"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-27",
+      "sha": "f3adf137b0415999e4625ddc7e4ba26c2c56d4a9",
+      "pr": {
+        "number": 459,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/459",
+        "author": "Lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "ezBookkeeping",
+              "category": "Finance",
+              "section": "Secure Budgeting"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
+    {
+      "date": "2026-03-26",
+      "sha": "a2cef5cbf9e19acbf192c97b59bb82e06a7f3a2a",
+      "pr": {
+        "number": 458,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/458",
+        "author": "Lissy93",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/1862727?v=4"
+      },
+      "changes": {
+        "services": {},
+        "sections": {
+          "added": [
+            {
+              "name": "Developer Utilities",
+              "category": "Development"
+            }
+          ]
+        },
+        "categories": {}
+      }
+    },
     {
       "date": "2026-03-25",
       "sha": "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -2775,6 +2846,26 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-03-27",
+      "title": "Update awesome-privacy.yml Adds Mouse Polling Rate Test to online tools",
+      "pr": {
+        "number": 460,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/460",
+        "author": "windspoor",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/82887227?v=4"
+      }
+    },
+    {
+      "date": "2026-03-27",
+      "title": "Add CMP comparison resource to Online Tools section",
+      "pr": {
+        "number": 457,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/457",
+        "author": "JermainKroot",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/261894455?v=4"
+      }
+    },
     {
       "date": "2026-03-24",
       "title": "Add fileGOD to File Converters",
