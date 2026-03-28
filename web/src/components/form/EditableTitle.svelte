@@ -41,33 +41,35 @@
   }
 </script>
 
-<svelte:window on:click={handleClickOutside}/>
+<svelte:window on:click={handleClickOutside} />
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <div>
-<h2
-  contenteditable={true}
-  class:editable={editing}
-  on:click={() => editing = true}
-  on:keydown={handleKeydown}
-  on:blur={() => saveTitle(title)}
-  tabindex="0"
->{title}</h2>
+  <h2
+    contenteditable={true}
+    class:editable={editing}
+    on:click={() => (editing = true)}
+    on:keydown={handleKeydown}
+    on:blur={() => saveTitle(title)}
+    tabindex="0"
+  >
+    {title}
+  </h2>
 
-<small>Click the title, to edit your inventory name</small>
+  <small>Click the title, to edit your inventory name</small>
 </div>
 
 <style>
   h2 {
-    font-family: "Lekton", sans-serif;
+    font-family: var(--font-subtitle);
     font-weight: bold;
-    font-size: 3rem;
+    font-size: var(--text-4xl);
     margin: 0;
     color: var(--accent-3);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     outline: none;
-    padding: 0.25rem;
+    padding: var(--space-xs);
   }
   .editable {
     border-bottom: 2px solid var(--accent-3); /* Visual cue to show editable state */
@@ -76,7 +78,7 @@
     border-bottom: 2px solid var(--accent-3);
   }
   small {
-    font-size: 0.8rem;
-    opacity: 0.5;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-dim);
   }
 </style>

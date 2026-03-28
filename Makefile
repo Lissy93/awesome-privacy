@@ -22,7 +22,7 @@
 
 # Targets
 .PHONY: all \
-    install_lib_deps gen_readme validate lib \
+    install_lib_deps gen_readme gen_changelog validate lib \
     install_web_deps build_web start_web web
 
 # Get Python bin
@@ -34,7 +34,7 @@ WEB_DIR := web
 
 # Targets for lib/
 install_lib_deps:
-	$(PYTHON) -m pip install -r $(LIB_DIR)/requirements.txt
+	$(PYTHON) -m pip install -q -r $(LIB_DIR)/requirements.txt
 
 gen_readme: install_lib_deps
 	$(PYTHON) $(LIB_DIR)/awesome-privacy-readme-gen.py
@@ -42,7 +42,10 @@ gen_readme: install_lib_deps
 validate: install_lib_deps
 	$(PYTHON) $(LIB_DIR)/validate-awesome-privacy.py
 
-lib: install_lib_deps validate gen_readme
+gen_changelog: install_lib_deps
+	$(PYTHON) $(LIB_DIR)/generate-changelog.py
+
+lib: install_lib_deps validate gen_readme gen_changelog
 
 # Targets for web/
 install_web_deps:

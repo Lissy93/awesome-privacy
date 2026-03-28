@@ -1,18 +1,16 @@
-
-
 <main>
-  <slot />
+	<slot />
 </main>
 
 <style lang="scss">
 	main {
-		margin: 2rem auto;
-		padding: 1rem;
-		width: 1200px;
-		max-width: calc(100% - 5rem);
-		border: 2px solid var(--box-outline);
-    box-shadow: 6px 6px 0 var(--box-outline);
+		margin: var(--space-lg) auto;
+		padding: var(--space-md);
+		width: var(--width-container);
+		max-width: var(--width-container-max);
+		border: var(--border-heavy);
+		box-shadow: var(--shadow-lg);
 		background: var(--accent-fg);
 		position: relative;
-	}	
+	}
 </style>

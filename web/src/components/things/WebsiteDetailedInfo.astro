@@ -74,7 +74,7 @@ const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
           <li class="all-bad">
             <FontAwesome iconName="blacklistFound" /> {check}
           </li>
-        ))}  
+        ))}
       </ul>
       </>
     ) : (
@@ -113,7 +113,7 @@ const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
         <span class="val">{websiteInfo.server_details.asn}</span>
       </li>
     </ul>
-    
+
     {siteCategories.length > 0 && (
       <h4>Categories</h4>
       <p class="explainer">Some proxies may block this service, as it falls into the following categories</p>
@@ -132,7 +132,7 @@ const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
         </li>
       ))}
     </ul>
-    <h4>Saftey Score</h4>
+    <h4>Safety Score</h4>
     <p class="explainer">Website marked as {riskText}</p>
     <div class={`risk risk-${riskText.replaceAll(' ', '-').toLocaleLowerCase()}`}>
       <p>{100-risk}%</p>
@@ -144,7 +144,7 @@ const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
     <ul>
       {
         websiteInfo.domain_blacklist.engines
-        .sort((a, b) => Number(b.detected) - Number(a.detected)) 
+        .sort((a, b) => Number(b.detected) - Number(a.detected))
         .map((engine) => (
           engine.detected ? (
             <li class="blacklist-check blacklisted">
@@ -162,109 +162,64 @@ const screenshotUrl = `https://screenshot-cache.as93.workers.dev/${url}`;
     <h4>Website Preview</h4>
     <img class="preview-shot" src={screenshotUrl} width="300" height="50" />
     <div class="link-to-web-check">
-      <Button url={`https://web-check.xyz/results/${url}`}>
+      <Button url={`https://web-check.xyz/check/${url}`}>
         <span>View full report at</span><br /><b class="web-check-title">web-check.xyz</b>
       </Button>
     </div>
-    
+
   </div>
 </div>
 
 
 <style lang="scss">
+@use '../../styles/mixins' as *;
 .website-info-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  .left, .right {
-    width: calc(50% - 1rem);
-    @media screen and (max-width: 768px){
-      width: 100%;
-    }
-  }
+  @include detail-info-layout;
 }
 
-h4 {
-    margin: 1rem 0 0 0;
-    font-size: 1.2rem;
-  }
+@include detail-info-base;
+
   p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    :global(svg) {
-      width: 1rem;
-    }
-    img {
-      border-radius: var(--curve-sm);
-    }
     &.all-good {
       :global(svg) {
-        color: #35b969;
+        color: var(--rating-a);
       }
     }
     &.all-bad {
       :global(svg) {
-        color: #e3154f;
+        color: var(--rating-g);
       }
     }
   }
   li {
     :global(svg) {
-      width: 1rem;
+      width: var(--text-base);
     }
-    
-    &.not-blacklisted :global(svg) { color: #35b969; }
-    &.blacklisted :global(svg), &.all-bad :global(svg) { color: #e3154f; }
-    
+
+    &.not-blacklisted :global(svg) { color: var(--rating-a); }
+    &.blacklisted :global(svg), &.all-bad :global(svg) { color: var(--rating-g); }
+
   }
   ul {
-    padding-left: 0;
-    list-style: none;
-    max-height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    img {
-      border-radius: var(--curve-sm);
-    }
     .list-item {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 0.5rem;
       .date-block {
-        
-        font-size: 0.8rem;
-        opacity: 0.7;
+        font-size: var(--text-sm);
+        opacity: var(--opacity-soft);
       }
     }
-    &.list-table {
-      font-size: 0.9rem;
-      padding-left: 0;
-      li {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.1rem 0;
-        .lbl {
-          font-weight: 500;
-        }
-        &:not(:last-child) {
-          border-bottom: 1px solid #5f53f440;
-        }
+    &.list-table li {
+      .lbl {
+        font-weight: 500;
       }
     }
   }
 
   .website-title, .website-description {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-subtle);
+    @include line-clamp(1);
     border-left: 2px solid var(--accent-3);
-    padding-left: 0.5rem;
+    padding-left: var(--space-sm);
   }
   .website-title {
     font-weight: 500;
@@ -274,26 +229,26 @@ h4 {
     -webkit-line-clamp: 3;
   }
   .explainer {
-    font-size: 0.8rem;
-    opacity: 0.8;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-subtle);
     font-style: italic;
   }
 
   .risk {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
     width: fit-content;
-    padding: 0.5rem 0.5rem;
+    padding: var(--space-sm) var(--space-sm);
     border-radius: var(--curve-lg);
     border: 4px solid;
-    margin: 0.5rem 0;
+    margin: var(--space-sm) 0;
     font-weight: bold;
 
-    &.risk-unknown { --rating-color: grey; }
-    &.risk-safe { --rating-color: #35b969; }
-    &.risk-moderately-safe { --rating-color: #c7cc22; }
-    &.risk-risky { --rating-color: #df8b1e; }
-    &.risk-dangerous { --rating-color: #df541e; }
-    &.risk-very-dangerous { --rating-color: #df1e1e; }
+    &.risk-unknown { --rating-color: var(--rating-unknown); }
+    &.risk-safe { --rating-color: var(--rating-a); }
+    &.risk-moderately-safe { --rating-color: var(--rating-c); }
+    &.risk-risky { --rating-color: var(--rating-e); }
+    &.risk-dangerous { --rating-color: var(--rating-f); }
+    &.risk-very-dangerous { --rating-color: var(--rating-g); }
     color: var(--rating-color);
     border-color: var(--rating-color);
   }
@@ -303,26 +258,26 @@ h4 {
     height: auto;
     border-radius: var(--curve-sm);
     border: 2px solid var(--accent-3);
-    margin: 0.5rem auto;
+    margin: var(--space-sm) auto;
     display: flex;
   }
 
   .link-to-web-check {
     width: 180px;
     float: right;
-    font-size: 1rem;
+    font-size: var(--text-base);
     transform: scale(0.8);
-    opacity: 0.85;
-    transition: all 0.2s ease-in-out;
+    opacity: var(--opacity-subtle);
+    transition: var(--transition-normal);
     &:hover { transform: scale(0.85); opacity: 1; }
     :global(.button) {
       background: var(--accent-3);
     }
     span {
-      font-size: 0.8rem;
+      font-size: var(--text-sm);
     }
     .web-check-title {
-      font-size: 1.4rem;
+      font-size: var(--text-lg);
     }
   }
 

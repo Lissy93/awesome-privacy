@@ -1,0 +1,109 @@
+$bp-mobile: 768px;
+
+@mixin underline-hover(
+  $color: var(--accent),
+  $height: 3px,
+  $width: 100%,
+  $speed: 0.3s
+) {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: $height;
+    background: $color;
+    transition:
+      width $speed ease,
+      left $speed ease;
+  }
+  &:hover:after {
+    width: $width;
+    left: 0;
+  }
+}
+
+@mixin truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($lines: 3) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin detail-info-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-md);
+  .left,
+  .right {
+    width: calc(50% - 1rem);
+    @media screen and (max-width: $bp-mobile) {
+      width: 100%;
+    }
+  }
+}
+
+@mixin detail-info-base {
+  h4 {
+    margin: var(--space-md) 0 0 0;
+    font-size: var(--text-md);
+  }
+  p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    :global(svg) {
+      width: var(--text-base);
+    }
+    img {
+      border-radius: var(--curve-sm);
+    }
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    img {
+      border-radius: var(--curve-sm);
+    }
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: var(--space-sm);
+    }
+    &.list-table {
+      font-size: var(--text-sm);
+      padding-left: 0;
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--accent-3-translucent);
+        }
+      }
+    }
+  }
+}
+
+@mixin changelog-badge {
+  font-size: var(--text-sm);
+  padding: 0.05rem 0.35rem;
+  border-radius: var(--curve-sm);
+  font-family: var(--font-subtitle);
+  text-transform: uppercase;
+  font-weight: bold;
+}
