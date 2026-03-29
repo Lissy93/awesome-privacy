@@ -5264,4 +5264,16 @@ categories:
         github: https://github.com/aseprite/aseprite
         openSource: true
 
-
+  - name: AI Tools
+    sections:
+    - name: Local AI Assistants
+      services:
+      - name: Locally Uncensored
+        description: |
+          An all-in-one local AI desktop app for uncensored chat, image generation, and video
+          creation. Built with Tauri, it uses Ollama for LLM inference and ComfyUI for media
+          generation workflows. All processing runs entirely on your own hardware, ensuring
+          complete privacy with no data sent to external servers.
+        url: https://github.com/PurpleDoubleD/locally-uncensored
+        github: PurpleDoubleD/locally-uncensored
+        openSource: true
