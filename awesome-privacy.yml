@@ -5264,4 +5264,20 @@ categories:
         github: https://github.com/aseprite/aseprite
         openSource: true
 
-
+  - name: Health & Fitness
+    sections:
+    - name: Fitness Tracking
+      alternativeTo: ['strava', 'nike run club', 'alltrails', 'apple fitness+']
+      services:
+      - name: Pilgrim
+        followWith: iOS
+        url: https://pilgrimapp.org
+        icon: https://pilgrimapp.org/assets/pilgrim-logo.png
+        github: walktalkmeditate/pilgrim-ios
+        openSource: true
+        iosApp: https://apps.apple.com/app/pilgrim-mindful-walking/id6760921056
+        description: |
+          A privacy-first walking and meditation companion for iOS.
+          No accounts, no analytics, no telemetry, no cloud — all data
+          stays on device. Voice transcription runs entirely on-device
+          via WhisperKit. Free with no subscriptions or in-app purchases.
