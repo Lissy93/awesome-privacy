@@ -16,7 +16,15 @@ import index from '../public/index.html'
 const app = new Hono({ strict: false });
 
 /* Enable CORS for all routes */
-app.use('*', cors());
+app.use('*', cors({
+  origin: [
+    'https://awesome-privacy.xyz',
+    'https://api.awesome-privacy.xyz',
+    'https://api.awesomeprivacy.com',
+    'https://awesome-privacy.as93.workers.dev',
+    'http://localhost:9000',
+  ],
+}));
 
 /* Serve the index page (which contains the Swagger Docs) */
 app.get("/", async (ctx) => {
