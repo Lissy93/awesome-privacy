@@ -2638,6 +2638,8 @@ It is recommended to encrypt files on your client machine, before syncing to the
 
 		</details>
 
+- **[<img src='https://secretnotes.pro/favicon.ico' width='16' height='16' alt='icon' /> SecretNotes](https://secretnotes.pro)** - Zero-knowledge encrypted notes platform with burn-after-read, delayed self-destruct, end-to-end encrypted messenger, and secure request system. All encryption (AES-256-GCM) happens client-side — the server never sees decrypted content. Supports guest usage without registration, tiered access, and EU hosting (GDPR-compliant).
+
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
 ---
