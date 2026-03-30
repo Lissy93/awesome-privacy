@@ -3401,13 +3401,12 @@ categories:
           encryption, HKDF key derivation, CLI tool, and Docker self-hosting.
       
       - name: SecretNotes
-          url: https://secretnotes.pro
-          icon: https://secretnotes.pro/favicon.ico
-          openSource: false
-          description: |
-            Zero-knowledge encrypted notes platform with built-in encrypted messenger.
-            Uses AES-256-GCM client-side encryption, burn-after-read, expiry timers,
-            and secure request/response flows. Encryption keys never leave the browser.
+        url: https://secretnotes.pro
+        icon: https://secretnotes.pro/favicon.ico
+        description: |
+          Zero-knowledge encrypted notes platform with built-in encrypted messenger.
+          Uses AES-256-GCM client-side encryption, burn-after-read, expiry timers,
+          and secure request/response flows. Encryption keys never leave the browser.
 
 
     ########################
