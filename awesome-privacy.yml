@@ -1953,6 +1953,14 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: ConvertPrivately
+          url: https://convertprivately.com
+          icon: https://convertprivately.com/favicon.ico
+          description: |
+            Privacy-first file conversion and utility tools for PDFs, images, documents, and data. Almost all of
+            the 250+ tools run directly in the browser with no uploads or tracking (with a clear warning for the
+            few that require server-side processing).
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
