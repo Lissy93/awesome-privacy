@@ -4158,6 +4158,15 @@ categories:
           (It uses the Windows API to interact with key features of Local Group
           Police, Services, Tasks Scheduler, etc).
 
+      - name: oudenOS
+        url: https://ouden.cc
+        github: redpersongpt/oudenOS
+        openSource: true
+        description: |
+          Hardware-aware Windows optimizer that scans your system, profiles it into
+          one of eight hardware types, and removes bloatware with per-action rollback.
+          Blocks 70 telemetry endpoints, disables 220+ unnecessary services. 5MB, built with Rust.
+
       - name: GhostPress
         url: https://schiffer.tech/ghostpress.html
         icon: https://schiffer.tech/img/logos/gp.png
