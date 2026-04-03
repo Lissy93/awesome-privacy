@@ -3721,6 +3721,12 @@ categories:
         description: |
           Native MacOS app, with drag 'n drop image optimization and meta data removal.
 
+      - name: Fluranto Remove Image Metadata
+        url: https://www.fluranto.com/en/image/remove-image-metadata
+        description: |
+          Browser-based image metadata remover that strips EXIF data locally in your browser.
+          No signup required, privacy-first, and files are processed client-side.
+
       notableMentions: |
         It's possible (but slower) to do this without a third-party tool.
         For Windows, right click on a file, and go to: `Properties --> Details --> Remove Properties --> Remove from this File --> Select All --> OK`.
