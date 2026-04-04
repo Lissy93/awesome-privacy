@@ -63,13 +63,13 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Hosting](#dns-hosting) (1)
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
-	- [Digital Notes](#digital-notes) (8)
+	- [Digital Notes](#digital-notes) (9)
 	- [Calendar](#calendar) (1)
 	- [Task Management](#task-management) (1)
 	- [Backup and Sync](#backup-and-sync) (4)
 	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (7)
-	- [Secret Sharing](#secret-sharing) (2)
+	- [Secret Sharing](#secret-sharing) (3)
 	- [File Drop](#file-drop) (2)
 	- [Browser Sync](#browser-sync) (4)
 	- [Secure Conference Calls](#secure-conference-calls) (2)
@@ -376,7 +376,7 @@ that makes a good alternative to BitLocker.
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
 
-> **Mobile Browsers**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android), [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS), [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS), [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android), [Onion Browser](https://onionbrowser.com/) (iOS)<br><br> **Additional Desktop**: [Nyxt](https://nyxt.atlas.engineer/), [WaterFox](https://www.waterfox.net), [Epic Privacy Browser](https://www.epicbrowser.com), [PaleMoon](https://www.palemoon.org), [Iridium](https://iridiumbrowser.de/), [Sea Monkey](https://www.seamonkey-project.org/), [Ungoogled-Chromium](https://github.com/Eloston/ungoogled-chromium), [Basilisk Browser](https://www.basilisk-browser.org/) and [IceCat](https://www.gnu.org/software/gnuzilla/) 12Bytes also maintains a list privacy & security [extensions](https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks/)
+> **Mobile Browsers**: [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS), [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS), [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android), [Onion Browser](https://onionbrowser.com/) (iOS)<br><br> **Additional Desktop**: [Nyxt](https://nyxt.atlas.engineer/), [WaterFox](https://www.waterfox.net), [Epic Privacy Browser](https://www.epicbrowser.com), [PaleMoon](https://www.palemoon.org), [Iridium](https://iridiumbrowser.de/), [Sea Monkey](https://www.seamonkey-project.org/), [Ungoogled-Chromium](https://github.com/Eloston/ungoogled-chromium), [Basilisk Browser](https://www.basilisk-browser.org/) and [IceCat](https://www.gnu.org/software/gnuzilla/) 12Bytes also maintains a list privacy & security [extensions](https://12bytes.org/articles/tech/firefox/firefox-extensions-my-picks/)
 > </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
@@ -2376,6 +2376,13 @@ be time consuming to setup and maintain and securing it correctly is critical
 		[![GitHub: cryptee/web-client](https://img.shields.io/github/stars/cryptee/web-client?style=flat&logo=github&label=web-client&color=%235f53f4&cacheSeconds=3600)](https://github.com/cryptee/web-client) [![Privacy Policy](https://shields.tosdr.org/en_5047.svg)](https://tosdr.org/en/service/5047) [![Cryptee on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=Cryptee)](https://awesome-privacy.xyz/productivity/digital-notes/cryptee)ㅤ 
 
 		</details>
+- **[<img src='https://icon.horse/icon/app.vnote.fun' width='16' height='16' alt='icon' /> VNote](https://app.vnote.fun/en_us/)** - A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown editing experience. It manages notes directly as plain text files on your local system. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: vnotex/vnote](https://img.shields.io/github/stars/vnotex/vnote?style=flat&logo=github&label=vnote&color=%235f53f4&cacheSeconds=3600)](https://github.com/vnotex/vnote) [![VNote on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=VNote)](https://awesome-privacy.xyz/productivity/digital-notes/vnote) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/vnotex/vnote)ㅤ 
+
+		</details>
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
@@ -2621,6 +2628,13 @@ It is recommended to encrypt files on your client machine, before syncing to the
 		<summary>Stats</summary>
 
 		[![GitHub: osbytes/crypt.fyi](https://img.shields.io/github/stars/osbytes/crypt.fyi?style=flat&logo=github&label=crypt.fyi&color=%235f53f4&cacheSeconds=3600)](https://github.com/osbytes/crypt.fyi) [![crypt.fyi on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=crypt.fyi)](https://awesome-privacy.xyz/productivity/secret-sharing/crypt.fyi) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/osbytes/crypt.fyi)ㅤ 
+
+		</details>
+- **[<img src='https://1time.io/favicon.svg' width='16' height='16' alt='icon' /> 1time.io](https://1time.io/)** - 1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side encryption, HKDF key derivation, CLI tool, and Docker self-hosting. 
+	- <details>
+		<summary>Stats</summary>
+
+		[![GitHub: shingrus/1time.io](https://img.shields.io/github/stars/shingrus/1time.io?style=flat&logo=github&label=1time.io&color=%235f53f4&cacheSeconds=3600)](https://github.com/shingrus/1time.io) [![1time.io on Awesome Privacy](https://img.shields.io/badge/View%20Report-FC60A8?style=flat&logo=awesomelists&label=1time.io)](https://awesome-privacy.xyz/productivity/secret-sharing/1time.io) [![Open Source](https://img.shields.io/badge/-Open_Source-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)](https://github.com/shingrus/1time.io)ㅤ 
 
 		</details>
 
