@@ -1045,6 +1045,16 @@ categories:
           If you already have ProtonMail's Professional (€8/month) or Visionary (€30/month) package,
           then an implementation of this feature is available via the Catch-All Email feature.
 
+      - name: anon.li Alias
+        url: https://anon.li/alias
+        openSource: true
+        icon: https://anon.li/favicon.ico
+        github: anondotli/anon.li
+        description: |
+          Fully open source (view on [GitHub](https://github.com/anondotli/anon.li)) alias service
+          with PGP encryption & anonymous email replies. Can be self-hosted, the [hosted version](https://anon.li/alias) has a free
+          plan with 10 aliases, as well as Pro option ($2.99/ month) for using custom domains.
+
     ##################################
     ###### Mail Security Tools ######
     #################################
@@ -3423,6 +3433,14 @@ categories:
           require installing, but the benefit is that your files are transferred directly to the recipient, without needing to be
           hosted on an interim server. The host needs to remain connected for the duration of the transfer, but once it is complete,
           the process will be terminated.
+
+      - name: anon.li Drop
+        url: https://anon.li/drop
+        followWith: Web, Windows, Mac OS, Linux
+        description: |
+          End-to-end encrypted file sharing platform with a 250GB file size and 30 day retention limit. Files are encrypted with client-side
+          AES-256 encryption and no IP address or device info is logged. Files are permanently deleted after the download limit is reached
+          or after their time expires. Offers a free plan, CLI and a browser extension.
 
       notableMentions: |
         [Instant.io](https://github.com/webtorrent/instant.io), is another peer-to-peer based solution,
