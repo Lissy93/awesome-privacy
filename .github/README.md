@@ -3636,8 +3636,9 @@ so it is important to go with a trusted vendor, and monitor its activity closely
 
 ### Developer Utilities
 
-<p  align="center"><b>⚠️ This section is still a work in progress ⚠️</b><br /><i>Check back soon, or help us complete it by submitting a pull request</i></p>
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
+
+- **[AnonGit](https://github.com/radioactively/anon-git)** - Anonymize git history timestamps & authorship to mitigate leaking information inferred from metadata.
 
 ---
 
