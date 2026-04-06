@@ -749,6 +749,7 @@ Revealing your real email address online can put you at risk. Email aliasing all
 
 ---
 
+- [guardian-agent-prompts](https://github.com/milkomida77/guardian-agent-prompts) - 49 production-tested AI agent system prompts for privacy-focused development workflow orchestration, automated security management, and multi-agent coordination. MIT licensed.
 ### VOIP Clients
 
 - **[<img src='https://www.mumble.info/css/apple-touch-icon.png' width='16' height='16' alt='icon' /> Mumble](https://www.mumble.info/)** - Open source, low-latency, high quality voice chat software. You can host your own server, or use a hosted instance, there are client applications for Windows, MacOS and Linux as well as third-party ap[…](https://awesome-privacy.xyz/communication/voip-clients/mumble "View full Mumble report") 
