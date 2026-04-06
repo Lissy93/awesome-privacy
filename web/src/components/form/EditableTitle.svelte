@@ -61,15 +61,15 @@
 
 <style>
   h2 {
-    font-family: 'Lekton', sans-serif;
+    font-family: var(--font-subtitle);
     font-weight: bold;
-    font-size: 3rem;
+    font-size: var(--text-4xl);
     margin: 0;
     color: var(--accent-3);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     outline: none;
-    padding: 0.25rem;
+    padding: var(--space-xs);
   }
   .editable {
     border-bottom: 2px solid var(--accent-3); /* Visual cue to show editable state */
@@ -78,7 +78,7 @@
     border-bottom: 2px solid var(--accent-3);
   }
   small {
-    font-size: 0.8rem;
-    opacity: 0.5;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-dim);
   }
 </style>

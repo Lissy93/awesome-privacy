@@ -121,34 +121,34 @@ const categories: Category[] = (await fetchData())?.categories;
 
 <style lang="scss">
 	.head-wrap {
-		margin: 1rem auto 0 auto;
+		margin: var(--space-md) auto 0 auto;
 		width: 85vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		.press-enter {
-			margin: 0.5rem 0 0 0;
-			opacity: 0.5;
+			margin: var(--space-sm) 0 0 0;
+			opacity: var(--opacity-dim);
 			visibility: hidden;
 		}
 		input {
-			padding: 0.5rem;
-			border: 2px solid var(--box-outline);
+			padding: var(--space-sm);
+			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
-			font-size: 1.2rem;
-			box-shadow: 3px 3px 0 var(--box-outline);
+			font-size: var(--text-md);
+			box-shadow: var(--shadow-sm);
 			color: var(--accent-3);
 			background: var(--background-form);
 			&:focus {
 				outline: none;
-				box-shadow: 4px 4px 0 var(--box-outline);
+				box-shadow: var(--shadow-sm-hover);
 			}
 		}
 		h2 {
-			font-family: 'Lekton', sans-serif;
+			font-family: var(--font-subtitle);
 			font-weight: bold;
-			font-size: 3rem;
+			font-size: var(--text-4xl);
 			margin: 0;
 			color: var(--accent-3);
 		}
@@ -165,52 +165,52 @@ const categories: Category[] = (await fetchData())?.categories;
 	.no-results {
 		text-align: center;
 		width: 85vw;
-		margin: 2rem auto 4rem auto;
+		margin: var(--space-lg) auto var(--space-2xl) auto;
 		display: none;
 		.zilch {
-			font-size: 2rem;
+			font-size: var(--text-3xl);
 			color: var(--accent-3);
-			opacity: 0.5;
+			opacity: var(--opacity-dim);
 			font-weight: bold;
 		}
 		p {
-			margin: 0.25rem;
+			margin: var(--space-xs);
 		}
 	}
 
 	.categories {
 		columns: 6 300px;
-		column-gap: 1rem;
+		column-gap: var(--space-md);
 		margin: 0 auto;
 		width: 85vw;
 		max-width: 1800px;
-		padding: 1rem 0 2rem 0;
+		padding: var(--space-md) 0 var(--space-lg) 0;
 		@media (max-width: 768px) {
 			padding: 0;
 			width: 95%;
 		}
 		.category {
 			background: var(--accent-fg);
-			border: 2px solid var(--box-outline);
+			border: var(--border-heavy);
 			border-radius: var(--curve-sm);
-			box-shadow: 4px 4px 0 var(--box-outline);
-			padding: 1rem;
+			box-shadow: var(--shadow-md);
+			padding: var(--space-md);
 			width: 85%;
 			display: inline-flex;
 			flex-direction: column;
-			margin: 1rem;
+			margin: var(--space-md);
 			.category-title {
 				text-decoration: none;
 				color: var(--foreground);
 			}
 			h3 {
-				font-family: 'Lekton', sans-serif;
+				font-family: var(--font-subtitle);
 				font-weight: bold;
 				margin: 0;
-				font-size: 1.8rem;
+				font-size: var(--text-2xl);
 			}
 			.sections {
-				padding-left: 1rem;
+				padding-left: var(--space-md);
 				.section {
 					a {
 						text-decoration: none;

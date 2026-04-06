@@ -100,21 +100,21 @@ const socialMedias = {
 		list-style: none;
 		padding: 0;
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--space-sm);
 		flex-wrap: wrap;
 		li {
 			padding: 0;
 			margin: 0;
-			opacity: 0.8;
-			border: 1px solid var(--box-outline);
-			box-shadow: 2px 2px 0 var(--box-outline);
+			opacity: var(--opacity-subtle);
+			border: var(--border-light);
+			box-shadow: var(--shadow-xs);
 			border-radius: var(--curve-sm);
-			transition: all 0.2s ease-in-out;
+			transition: var(--transition-normal);
 			background: var(--background-form);
 			a {
 				display: flex;
 				color: var(--foreground);
-				transition: all 0.2s ease-in-out;
+				transition: var(--transition-normal);
 				padding: 4px;
 				:global(svg) {
 					width: 2rem;
@@ -122,7 +122,7 @@ const socialMedias = {
 				}
 			}
 			&:hover {
-				box-shadow: 3px 3px 0 var(--box-outline);
+				box-shadow: var(--shadow-xs-hover);
 				border-radius: var(--curve-md);
 				opacity: 1;
 				a {

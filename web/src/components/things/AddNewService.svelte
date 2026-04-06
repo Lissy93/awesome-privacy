@@ -418,31 +418,31 @@
   .form-row {
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
-    gap: 1rem;
-    padding: 0.5rem 0;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
     &:not(:last-child) {
       border-bottom: 1px solid var(--transparent-accent);
     }
     p {
       margin: 0;
-      font-size: 0.8rem;
-      opacity: 0.6;
+      font-size: var(--text-sm);
+      opacity: var(--opacity-muted);
     }
   }
 
   .final-info {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
-    gap: 1rem;
+    padding: var(--space-md) 0;
+    gap: var(--space-md);
     p {
-      margin: 0.5rem 0;
+      margin: var(--space-sm) 0;
     }
     ul {
-      padding-left: 0.25rem;
-      margin: 0 0 0.5rem 0;
-      font-size: 0.8rem;
-      opacity: 0.6;
+      padding-left: var(--space-xs);
+      margin: 0 0 var(--space-sm) 0;
+      font-size: var(--text-sm);
+      opacity: var(--opacity-muted);
       list-style: circle;
     }
   }
@@ -453,8 +453,8 @@
     width: 100%;
     border: 1px solid var(--accent-3);
     border-radius: var(--curve-md);
-    font-size: 1.2rem;
-    padding: 0.5rem 0.25rem;
+    font-size: var(--text-md);
+    padding: var(--space-sm) var(--space-xs);
     background: var(--background-form);
     color: var(--foreground);
     &:focus {
@@ -483,8 +483,8 @@
   }
   .open-in-gh {
     margin: 0 auto;
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-muted);
     display: block;
     text-align: center;
   }
@@ -493,15 +493,15 @@
     cursor: pointer;
     background: var(--accent-3);
     color: var(--accent-fg);
-    padding: 0.5rem 2rem;
-    border: 1px solid var(--box-outline);
-    box-shadow: 3px 3px 0 var(--box-outline);
+    padding: var(--space-sm) var(--space-lg);
+    border: var(--border-light);
+    box-shadow: var(--shadow-sm);
     border-radius: var(--curve-lg);
-    font-size: 1.8rem;
-    font-family: 'Lekton', sans-serif;
-    margin: 1rem auto;
+    font-size: var(--text-2xl);
+    font-family: var(--font-subtitle);
+    margin: var(--space-md) auto;
     display: flex;
-    transition: all 0.2s ease-in-out;
+    transition: var(--transition-normal);
     &:hover {
       background: var(--accent);
     }
@@ -509,17 +509,17 @@
 
   .sub-title-description {
     margin-top: 0;
-    font-size: 0.8rem;
-    opacity: 0.6;
+    font-size: var(--text-sm);
+    opacity: var(--opacity-muted);
   }
 
   .output-yaml {
     pre {
-      font-family: 'Courier New', Courier, monospace;
+      font-family: var(--font-code);
       background: var(--background-form);
       padding: 0.2rem 0.4rem;
       border-radius: var(--curve-sm);
-      font-size: 0.9rem;
+      font-size: var(--text-sm);
     }
   }
 </style>

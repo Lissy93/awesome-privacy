@@ -61,24 +61,24 @@
   }
   .save-button {
     background: var(--accent-3);
-    border: 1px solid var(--box-outline);
-    box-shadow: 3px 3px 0 var(--box-outline);
-    padding: 0.25rem 0.5rem;
+    border: var(--border-light);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-xs) var(--space-sm);
     border-radius: var(--curve-sm);
     color: var(--foreground);
-    font-family: Lekton;
-    font-size: 1.2rem;
+    font-family: var(--font-subtitle);
+    font-size: var(--text-md);
     cursor: pointer;
   }
   .success-msg {
-    font-size: 1rem;
+    font-size: var(--text-base);
     color: var(--success);
     a {
       color: var(--success);
     }
   }
   .error-msg {
-    font-size: 1rem;
+    font-size: var(--text-base);
     color: var(--danger);
   }
 </style>

@@ -5,10 +5,12 @@ Enforces the single-entry rule and outputs a JSON diff to /tmp/pr-diff.json.
 import argparse
 import json
 import os
-import subprocess
 import sys
 
 import yaml
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from yaml_diff import build_index, diff_index, load_yaml_at_ref
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
@@ -27,18 +29,11 @@ yellow = (lambda s: f"\033[33m{s}\033[0m") if _use_color else (lambda s: s)
 
 def load_base_yaml(base_ref):
     """Load the YAML from the base ref using git show."""
-    try:
-        result = subprocess.run(
-            ["git", "show", f"{base_ref}:awesome-privacy.yml"],
-            capture_output=True, text=True, check=True, cwd=PROJECT_ROOT,
-        )
-        return yaml.safe_load(result.stdout)
-    except subprocess.CalledProcessError:
+    data = load_yaml_at_ref(base_ref, PROJECT_ROOT)
+    if data is None:
         print(yellow("awesome-privacy.yml not found in base ref, treating as empty"), file=sys.stderr)
         return {"categories": []}
-    except yaml.YAMLError as e:
-        print(red(f"Failed to parse base YAML: {e}"), file=sys.stderr)
-        sys.exit(EXIT_RUNTIME_ERROR)
+    return data
 
 
 def load_head_yaml():
@@ -49,38 +44,6 @@ def load_head_yaml():
     except (FileNotFoundError, yaml.YAMLError) as e:
         print(red(f"Failed to load head YAML: {e}"), file=sys.stderr)
         sys.exit(EXIT_RUNTIME_ERROR)
-
-
-def build_index(data, depth):
-    """Build a keyed index at the given depth (3=services, 2=sections, 1=categories)."""
-    index = {}
-    for cat in data.get("categories", []):
-        cn = cat.get("name", "")
-        if depth == 1:
-            index[cn] = {k: v for k, v in cat.items() if k != "sections"}
-            continue
-        for sec in cat.get("sections", []):
-            sn = sec.get("name", "")
-            if depth == 2:
-                index[(cn, sn)] = {k: v for k, v in sec.items() if k != "services"}
-                continue
-            for svc in sec.get("services", []):
-                index[(cn, sn, svc.get("name", ""))] = svc
-    return index
-
-
-def diff_index(base_idx, head_idx):
-    """Return (added_keys, removed_keys, modified_keys_with_changed_fields)."""
-    base_keys, head_keys = set(base_idx), set(head_idx)
-    added = sorted(head_keys - base_keys)
-    removed = sorted(base_keys - head_keys)
-    modified = []
-    for key in sorted(base_keys & head_keys):
-        if base_idx[key] != head_idx[key]:
-            all_fields = set(base_idx[key]) | set(head_idx[key])
-            changed = sorted(f for f in all_fields if base_idx[key].get(f) != head_idx[key].get(f))
-            modified.append((key, changed))
-    return added, removed, modified
 
 
 def write_github_output(name, value):
@@ -156,22 +119,6 @@ def write_diff_summary(diff_result):
             f.write("\n".join(bullets) + "\n")
 
 
-def write_step_summary(diff_result):
-    """Write a bullet-point Markdown summary to $GITHUB_STEP_SUMMARY."""
-    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
-    if not summary_file:
-        return
-
-    bullets = format_diff_bullets(diff_result)
-    lines = ["## YAML Diff Analysis\n"]
-    if bullets:
-        lines.extend(bullets)
-    else:
-        lines.append("No changes detected in `awesome-privacy.yml`.")
-
-    with open(summary_file, "a") as f:
-        f.write("\n".join(lines) + "\n")
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -227,7 +174,6 @@ def main():
         json.dump(diff_result, f, indent=2)
 
     write_github_output("has_service_changes", str(bool(added or removed or modified)).lower())
-    write_step_summary(diff_result)
     write_diff_summary(diff_result)
 
     added_count = len(added)

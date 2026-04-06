@@ -1,11 +1,18 @@
+import { error } from './logger';
+
 export const fetchDockerData = async (
   serviceName: string,
 ): Promise<TemplateResponse | null> => {
   const endpoint = `https://docker-info.as93.workers.dev/${serviceName}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching docker data:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('Docker', `HTTP ${res.status} for ${serviceName} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('Docker', `Network error for ${serviceName}: ${err}`);
     return null;
   }
 };

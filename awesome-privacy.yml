@@ -104,6 +104,19 @@ categories:
         description: The Standard Unix Password Manager
         openSource: true
 
+      - name: AliasVault
+        url: https://www.aliasvault.net
+        icon: https://www.aliasvault.net/favicon.png
+        openSource: true
+        followWith: Self-Hosted
+        github: lanedirt/aliasvault
+        discordInvite: DsaXMTEtpF
+        description: |
+          End-to-end encrypted open source password and alias manager with built-in email server.
+          AliasVault protects your privacy by creating alternative identities, passwords
+          and email addresses for every website you use. Use the cloud version, or self-host and
+          deploy within minutes via Docker.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
@@ -213,17 +226,6 @@ categories:
           Simple, native, open source 2-FA Client for iOS, which never connects to the
           internet - built by @mattrubin.me
 
-      - name: WinAuth
-        url: https://winauth.github.io/winauth
-        github: winauth/winauth
-        icon: https://winauth.github.io/winauth/favicon.ico
-        followWith: Windows
-        description: |
-          Portable, encrypted desktop authenticator app for Microsoft Windows. With
-          useful features, like hotkeys and some additional security tools, WinAuth is a
-          great companion authenticator for desktop power-users. It's open source and
-          well-established (since mid-2010)
-
       - name: Authenticator GNOME
         url: https://gitlab.gnome.org/World/Authenticator
         icon: https://gitlab.gnome.org/World/Authenticator/-/avatar?width=48
@@ -271,6 +273,30 @@ categories:
           account to backup and sync your tokens across your  devices (and access them via
           a web interface) in a secure, end-to-end encrypted fashion. It can also be used
           offline on a single device with no account necessary.
+
+      - name: Proton Authenticator
+        url: https://proton.me/authenticator
+        icon: https://raw.githubusercontent.com/protonpass/android-pass/refs/heads/main/metadata/en-US/images/icon.png
+        openSource: true
+        github: protonpass/android-authenticator
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-authenticator/id6741758667
+        androidApp: proton.android.authenticator
+        description: |
+          Proton Authenticator is free, open source, and available for both iOS and Android.
+          A Proton account is required to use Proton Authenticator.
+          Existing 2FA codes can be imported from other popular apps such as Google Authenticator and LastPass.
+
+      - name: Chronos Authenticator
+        url: https://chronosauth.com
+        icon: https://github.com/joeldavidw/Chronos/raw/main/.github/assets/logo.png
+        openSource: true
+        github: joeldavidw/Chronos
+        iosApp: https://apps.apple.com/app/chronos-authenticator/id6503929490
+        followWith: iOS
+        description: >-
+          Chronos Authenticator is a free, open-source two-factor authentication app for iOS, designed to provide robust
+          security and reliable backup options.
 
       furtherInfo: >
         Check which websites support multi-factor authentication: [2fa.directory](https://2fa.directory/)
@@ -320,15 +346,6 @@ categories:
         description: |
           `age` is a simple, modern and secure CLI file encryption tool and Go library.
           It features small explicit keys, no config options, and UNIX-style composability
-
-      - name: Picocrypt
-        github: Picocrypt/Picocrypt
-        icon: https://avatars.githubusercontent.com/u/171401041
-        url: ''
-        description: |
-          Picocrypt is a very small (hence Pico), very simple, yet very secure encryption tools
-          that you can use to protect your files. It's designed to be the go-to tool for encryption,
-          with a focus on security, simplicity, and reliability.
 
       wordOfWarning: >
         Where possible, choose a cross-platform and well established encryption method,
@@ -442,8 +459,7 @@ categories:
           Cromite is a Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy.
 
       notableMentions: >
-        **Mobile Browsers**: [Mull](https://f-droid.org/en/packages/us.spotco.fennec_dos/) Hardened fork of FF-Fenix (Android),
-        [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
+        **Mobile Browsers**: [Firefox Focus](https://support.mozilla.org/en-US/kb/focus) (Android/ iOS),
         [DuckDuckGo Browser](https://help.duckduckgo.com/duckduckgo-help-pages/mobile/ios/) (Android/ iOS),
         [Orbot](https://guardianproject.info/apps/orbot/) + [Tor](https://www.torproject.org/download/#android) (Android),
         [Onion Browser](https://onionbrowser.com/) (iOS)<br><br>
@@ -527,6 +543,17 @@ categories:
         description: |
           British search engine providing independent and unbiased search results using
           its own crawler. Has a zero tracking policy (it is not open source)
+
+      - name: Uruky
+        url: https://uruky.com
+        icon: https://uruky.com/public/images/favicon.svg
+        iosApp: https://apps.apple.com/us/app/uruky-private-ad-free-search/id6758864380
+        description: |
+          Uruky is an ad-free, private search engine focused on personalization. It uses,
+          among other providers, Mojeek and Marginalia. It is EU-based and does not keep
+          or track any personal data (it is not 100% open source, but after 12 months as
+          a paying customer, you get a copy of the source code).
+
       notableMentions:
       - name: MetaGear
         url: https://metager.org
@@ -631,6 +658,7 @@ categories:
           an open specification and Simple pragmatic RESTful HTTP/JSON API it makes it easy
           to integrates with existing 3rd party IDs to authenticate and discover users, as
           well as to build apps on top of it.
+
       notableMentions:
         - name: Chat Secure
           url: https://chatsecure.org
@@ -677,18 +705,6 @@ categories:
         that are open source, E2E encrypted, routed through Tor services,
         totally anonymous and operate without the collection of metadata.
       services:
-      - name: Oxen
-        url: https://oxen.io/
-        github: oxen-io/lokinet
-        tosdrId: 6622
-        icon: https://oxen.io/favicon.ico
-        description: |
-          Oxen (previously Loki) is an open source set of tools that allow users to transact
-          and communicate anonymously and privately, through a decentralised, encrypted,
-          onion-based network.
-          Session is a desktop and mobile app that uses these private routing protocols to
-          secure messages, media and metadata.
-
       - name: Briar
         url: https://briarproject.org
         icon: https://briarproject.org/img/briar_logo_circle.png
@@ -1035,15 +1051,6 @@ categories:
     - name: Email Security Tools
       alternativeTo:  ['boomerang', 'mailtrack', 'grammarly for email', 'wisestamp', 'hubspot sales']
       services:
-      - name: Enigmail
-        url: https://www.enigmail.net
-        icon: https://upload.wikimedia.org/wikipedia/commons/5/50/Enigmail_logo_2018.svg
-        description: |
-          Mail client add-on, enabling the use of OpenPGP to easily encrypt, decrypt,
-          verify and sign emails. Free and open source, Enigmail is compatible with Interlink
-          Mail & News and Postbox. Their website contains thorough documentation and
-          quick-start guides, once set up it is extremely convenient to use.
-
       - name: Email Privacy Tester
         url: https://www.emailprivacytester.com/
         openSource: true
@@ -1169,6 +1176,33 @@ categories:
           Virtual phone numbers for SMS verification in 150+ countries. Features automatic
           refund if SMS is not received, instant number activation, and privacy-first design.
           Pricing starts at $0.20 per number. Based in the United Kingdom.
+
+      - name: PikaSim
+        url: https://pikasim.com
+        icon: https://pikasim.com/img/pika-transparent.png
+        acceptsCrypto: true
+        description: |
+          Privacy-focused eSIM provider for 170+ countries, with instant eSIM delivery.
+          No account, ID, email needed, and accepts crypto via a self-hosted BTCPay Server.
+
+      - name: nadanada
+        url: https://nadanada.me
+        icon: https://nadanada.me/favicon.ico
+        acceptsCrypto: true
+        description: >-
+          Disposable (20-min) and extendable rental (3-month) phone numbers for
+          anonymous SMS verification, plus anonymous eSIM data plans for 200+
+          countries. No account, no email, no KYC. Pay with Bitcoin, Monero,
+          stablecoins, other crypto, or credit card via Stripe.
+
+      - name: Narayana
+        url: https://narayana.im
+        icon: https://git.narayana.im/avatars/72d9e4a07b9e42917b7face86d544517
+        description: |
+          Anonymous physical SIMs, eSIMs, VoIP phone numbers, and other advanced features.
+          Inbound/outbound calls, SMS and roaming internet. Very private, has a Tor mirror,
+          accepts crypto, doesn't KYC and you can delete your logs.
+        acceptsCrypto: true
 
     ################################
     ###### Team Collaboration ######
@@ -1478,16 +1512,6 @@ categories:
           Click icon for more tools such as site safety checks, whois, validation etc **Download**:
           [Firefox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 
-      - name: Lightbeam
-        url: https://mozilla.github.io/lightbeam/
-        github: mozilla/lightbeam-we
-        icon: https://mozilla.github.io/lightbeam/img/lightbeam_logo-only_32x32.png
-        description: >
-          Visualize in detail the servers you are contacting when you are surfing on the Internet.
-          Created by Gary Kovacs (former CEO of Mozilla), presented in his [TED Talk](https://www.ted.com/talks/gary_kovacs_tracking_our_online_trackers).
-          **Download**: [Firefox](https://addons.mozilla.org/en-US/firefox/addon/lightbeam-3-0/)
-          - [Source](https://github.com/mozilla/lightbeam-we)
-
       - name: Track Me Not
         url: http://trackmenot.io
         github: vtoubiana/TrackMeNot
@@ -1519,18 +1543,6 @@ categories:
           \ [Firefox](https://addons.mozilla.org/en-us/firefox/addon/netcraft-toolbar?src=external-apps-hero)
           \ [Opera](https://addons.opera.com/en/extensions/details/netcraft-anti-phishing-extension/)
           \ [Edge](https://microsoftedge.microsoft.com/addons/detail/netcraft-extension/ngjhgbnmdjjnmejmpamalgnlnmopllkm)
-
-      - name: HTTPS Everywhere
-        url: https://eff.org/https-everywhere
-        github: EFForg/https-everywhere
-        tosdrId: 682
-        description: |
-          **NOTE** On modern browsers, this is [no longer needed](https://www.eff.org/deeplinks/2021/09/https-actually-everywhere)
-          Forces sites to load in HTTPS, in order to encrypt your communications with websites,
-          making your browsing more secure (Similar to [Smart HTTPS](https://mybrowseraddon.com/smart-https.html)).
-          Note this functionality is now included by default in most modern browsers. **Download**:
-          [Chrome](https://www.eff.org/https-everywhere) \
-          [Firefox](https://www.eff.org/files/https-everywhere-latest.xpi)
 
       - name: Linguist
         url: https://linguister.io
@@ -1943,14 +1955,6 @@ categories:
             Tool for analyzing email headers, useful for checking the authenticity of messages, as well as knowing what info
             you are revealing in your outbound messages.
 
-        - name: Am I FloCed?
-          url: https://amifloced.org/
-          icon: https://amifloced.org/favicon.ico
-          description: |
-            Google testing out a new tracking feature called Federated Learning of Cohorts (aka "FLoC"). It currently effects
-            0.5% of Chrome users, this tool developed by the EFF will detect if you are affected, and provide additional info
-            on how to stay protected.
-
         - name: Site Report
           url: https://sitereport.netcraft.com/
           icon: https://static.netcraft.com/images/favicon.ico
@@ -1971,7 +1975,7 @@ categories:
       alternativeTo: ['nordvpn', 'expressvpn', 'cyberghost', 'surfshark', 'ipvanish', 'hotspot shield']
       services:
       - name: Mullvad
-        url: http://mullvad.net/en
+        url: https://mullvad.net/en
         github: mullvad/mullvadvpn-app
         securityAudited: true
         icon: https://mullvad.net/apple-touch-icon.png
@@ -2044,6 +2048,20 @@ categories:
           Crypto-native VPN with pay-as-you-go pricing. Accepts cryptocurrency only, including Monero.
           WireGuard and AmneziaWG protocols, no-logs policy, REST API for developers. No
           subscriptions or credit cards.
+
+      - name: Windscribe
+        url: https://windscribe.com
+        github: Windscribe/Desktop-App
+        securityAudited: true
+        icon: https://avatars.githubusercontent.com/u/30499389
+        tosdrId: 2571
+        androidApp: com.windscribe.vpn
+        iosApp: https://apps.apple.com/us/app/windscribe-vpn/id1129435228
+        subreddit: Windscribe
+        description: |
+          An audited and court-proven VPN with a free 10GB plan, in-RAM servers, browser extensions
+          and open source WireGuard/IKEv2/OpenVPN clients. Supports split tunneling,
+          customizable DNS blocking, MAC spoofing, decoy traffic and censorship circumvention.
 
       wordOfWarning: |
         - *A VPN does not make you anonymous - it merely changes your public IP address to that of your VPN provider, instead of your ISP. Your browsing session can still be linked back to your real identity either through your system details (such as user agent, screen resolution even typing patterns), cookies / session storage, or by the identifiable data that you enter. [Read more about fingerprinting](https://pixelprivacy.com/resources/browser-fingerprinting/)*
@@ -2438,16 +2456,6 @@ categories:
           Provides simple and advanced ways to block access to the internet. Applications and addresses
           can individually be allowed or denied access to Wi-Fi and/or mobile connection.
 
-      - name: NoRoot Firewall
-        followWith: Android
-        openSource: false
-        url: https://play.google.com/store/apps/details?id=app.greyshirts.firewall
-        icon: https://play-lh.googleusercontent.com/Eo7y02OP6nsOqTx-MsYORxLsIXltk-_0DQUkNztdPUrr_2ZIoR_RgaDXt3y6qrcdIT4=w240-h480
-        description: |
-          Notifies you when an app is trying to access the Internet, so all you need to do is just Allow
-          or Deny. Allows you to create filter rules based on IP address, host name or domain name, and
-          you can allow or deny only specific connections of an app.
-
       - name: AFWall+
         url: https://xdaforums.com/t/5-0-root-3-6-0-afwall-iptables-firewall-28-aug-2023.1957231
         github: ukanth/afwall
@@ -2642,18 +2650,10 @@ categories:
         description: |
           Free and open source ad-blocker and a firewall for Android 6+ (no root required).
 
-      - name: Ad Block Radio
-        url: https://github.com/adblockradio/adblockradio
-        github: adblockradio/adblockradio
-        followWith: Sound
-        description: |
-          Python script that uses machine learning to block adverts in live audio streams, such as Radio, Podcasts,
-          Audio Books, and music platforms such as Spotify. See live demo.
-
       - name: uBlock Origin
         url: https://github.com/gorhill/uBlock
         github: gorhill/uBlock
-        icon: https://raw.githubusercontent.com/hectorm/hblock/master/resources/logo/bitmaps/logo-shield-ffffff-h512.png
+        icon: https://raw.githubusercontent.com/gorhill/uBlock/master/src/img/ublock.svg
         followWith: Browser
         description: |
           Light-weight, fast browser extension for Firefox and Chromium (Chrome, Edge, Brave Opera etc), that blocks
@@ -2783,14 +2783,6 @@ categories:
         followWith: Windows
         description: |
           Passive Deep Packet Inspection blocker and Active DPI circumvention utility, for Windows.
-
-      - name: DPITunnel
-        url: https://github.com/zhenyolka/DPITunnel
-        github: nomoresat/DPITunnel-android
-        icon: https://raw.githubusercontent.com/nomoresat/DPITunnel-android/main/assets/logo.webp
-        followWith: Android
-        description: |
-          An Android app to bypass deep packet inspection.
 
       - name: Proxy Checker
         url: https://ping.eu/proxy/
@@ -3104,6 +3096,15 @@ categories:
           The disadvantage is that only the frontend is open source. Pricing is free for starter plan, $3/
           month for 10GB, additional plans go up-to 2TB.
 
+      - name: VNote
+        url: https://app.vnote.fun/en_us/
+        github: vnotex/vnote
+        followWith: Windows, MacOS, Linux
+        openSource: true
+        description: |
+          A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown
+          editing experience. It manages notes directly as plain text files on your local system. 
+
       notableMentions: |
         If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com)
         is a utility that encrypts your entire notebook, before it is uploaded to the cloud.
@@ -3125,7 +3126,41 @@ categories:
     ######################
     - name: Calendar
       alternativeTo: ['google calendar', 'microsoft outlook calendar', 'apple calendar', 'yahoo calendar']
-      services: []
+      services:
+      - name: Proton Calendar
+        url: https://proton.me/calendar
+        github: ProtonMail/android-calendar
+        tosdrId: 491
+        iosApp: https://apps.apple.com/us/app/proton-calendar-secure-events/id1514709943
+        androidApp: me.proton.android.calendar
+        subreddit: ProtonCalendar
+        acceptsCrypto: true
+        securityAudited: true
+        icon: https://calendar.proton.me/assets/android-chrome-256x256.png
+        description: |
+          The calendar app from the Proton suite. End-to-end encrypted.
+          Supports ICS (not encrypted), colours, recurring events, mail integration,
+          notifications and multiple time zones.
+
+    ###############################
+    ###### Task Management ######
+    ##############################
+    - name: Task Management
+      alternativeTo: ['todoist', 'microsoft to do', 'ticktick', 'any.do', 'asana']
+      services:
+      - name: Super Productivity
+        url: https://super-productivity.com
+        github: johannesjo/super-productivity
+        openSource: true
+        icon: https://raw.githubusercontent.com/johannesjo/super-productivity/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+        androidApp: com.superproductivity.superproductivity
+        iosApp: https://apps.apple.com/us/app/super-productivity/id6587185806
+        description: |
+          Privacy-respecting, open-source task manager and time tracker.
+          All data is stored locally on your device - no account required, no
+          cloud dependency, and zero telemetry. Supports Jira, GitLab, GitHub,
+          Gitea, OpenProject and CalDAV integration. Features include time
+          tracking, Pomodoro timer, break reminders, and idle detection.
 
     ###########################
     ###### Backup & Sync ######
@@ -3165,6 +3200,17 @@ categories:
           selectively sync encrypted files and folders between 1 or more clients.
           A key benefit the wide range of plug-ins in the NextCloud App Store,
           maintained by the community. NextCloud was a hard fork off OwnCloud.
+
+      - name: bewCloud
+        url: https://bewcloud.com
+        icon: https://bewcloud.com/favicon.svg
+        followWith: Web
+        github: bewcloud/bewcloud
+        openSource: true
+        description: |
+          Modern and simpler alternative to Nextcloud/ownCloud crafted with TypeScript.
+          Unifies file management, sync, sharing, notes, RSS, expenses, calendars,
+          contacts, and photos, with MFA, WebDAV, CalDAV, CardDAV, SSO, and more.
 
       notableMentions: |
         Alternatively, consider a headless utility such as [Duplicacy](https://duplicacy.com)
@@ -3327,6 +3373,42 @@ categories:
         Note that some knowledge in securing networks is required.
 
 
+    ############################################
+    ###### Paste Bins and Secret Sharing ######
+    ###########################################
+    - name: Secret Sharing
+      alternativeTo: ['pastebin', 'hastebin', 'ghostbin', 'justpaste.it']
+      services:
+      - name: Hemmelig.app
+        url: https://hemmelig.app/
+        icon: https://hemmelig.app/icons/icon-512x512.png
+        openSource: true
+        github: HemmeligOrg/Hemmelig.app
+        description: |
+          Share rich text and files securely with locally encrypted messages that automatically self-destruct, or
+          invite others to send you a secret. Allows setting maximum views, webhooks, expiration times and IP restrictions.
+          Open source and self-hostable.
+
+      - name: crypt.fyi
+        url: https://crypt.fyi
+        icon: https://www.crypt.fyi/logo.ico
+        openSource: true
+        github: osbytes/crypt.fyi
+        description: |
+          crypt.fyi is an ephemeral zero-knowledge sensitive data sharing platform with web,
+          cli, and chrome-extension clients. It offers a suite of configurations beyond the
+          standard for comparable private pastebins, including max read count, IP/CIDR
+          allow-listing, and webhooks.
+
+      - name: 1time.io
+        url: https://1time.io/
+        icon: https://1time.io/favicon.svg
+        openSource: true
+        github: shingrus/1time.io
+        description: |
+          1time.io - Zero-knowledge one-time secret sharing with AES-256-GCM browser-side
+          encryption, HKDF key derivation, CLI tool, and Docker self-hosting.
+
     ########################
     ###### File Drop ######
     #######################
@@ -3388,15 +3470,6 @@ categories:
         description: |
           A web application which acts as a todo app for bookmarks. You can either self-host it, or use their managed
           service which has a free and paid-for tier.
-
-      - name: Reminiscence
-        url: https://github.com/kanishka-linux/reminiscence
-        github: kanishka-linux/reminiscence
-        description: |
-          A self-hosted bookmark and archive manager. Reminiscence is more geared towards archiving useful web pages
-          either for offline viewing or to preserve a copy. It is a web application, that can be installed with Docker
-          on either a local or remote server, although it has a comprehensive and well-documented REST API, there is
-          currently no browser extension.
 
       - name: Shiori
         url: https://github.com/go-shiori/shiori
@@ -3603,14 +3676,6 @@ categories:
           Browser extension for using PGP within Gmail, for Chrome and Firefox.
           Mobile version supported on Android and iOS.
 
-      - name: EnigMail
-        url: https://enigmail.net
-        followWith: Thunderbird
-        icon: https://enigmail.net/favicon.ico
-        openSource: true
-        description: |
-          OpenPGP extension for Thunderbird and PostBox, integrates natively within mail app.
-
       - name: Mailvelope
         url: https://www.mailvelope.com
         followWith: Email
@@ -3702,13 +3767,6 @@ categories:
         description: |
           Allows you to completely remove sensitive data from your hard drive by overwriting it several times with carefully
           selected patterns.
-
-      - name: Hard Disk Scrubber
-        url: http://www.summitcn.com/hdscrub.html
-        followWith: Windows
-        description: |
-          Easy to use, but with some advanced features, including custom wipe patterns. Data Sanitation Methods: AFSSI-5020,
-          DoD 5220.22-M, and Random Data.
 
       - name: SDelete
         url: https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete
@@ -3921,14 +3979,6 @@ categories:
           The Secure distribution includes its own sandbox system obtained with the combination of Firejail and AppArmor
           with custom security profiles. While the Forensics Edition is bundled with a comprehensive suite of security/
           pen-testing tools, similar to Kali and Black Arch.
-
-      - name: Discreete Linux
-        url: https://www.privacy-cd.org/
-        followWith: offline
-        description: |
-          Aimed at journalists, activists and whistle-blowers, Discreete Linux is similar to Tails, in that it is booted
-          live from external media, and leaves no/ minimal trace on the system. The aim of the project, was to provide
-          all required cryptographic tools offline, to protect against Trojan-based surveillance.
 
       - name: Alpine Linux
         url: https://www.alpinelinux.org/
@@ -4220,18 +4270,6 @@ categories:
         description: |
           Open source GUI app built upon PowerShell, allowing you to perform a quick and easy privacy check, on Windows 10 systems.
 
-      - name: SharpApp
-        url: https://github.com/mirinsoft/sharpapp
-        github: mirinsoft/sharpapp
-        description: |
-          Open source GUI app built upon PowerShell, for disabling telemetry functions in Windows 10, uninstalling preinstalled apps, installing software packages and automating Windows tasks with integrated PowerShell scripting.
-
-      - name: Debotnet
-        url: https://github.com/Mirinsoft/Debotnet
-        github: Mirinsoft/Debotnet
-        description: |
-          Light-weight, portable app for controlling the many privacy-related settings within Windows 10- with the aim of helping to keep private data, private.
-
       - name: PrivaZer
         url: https://privazer.com/
         description: |
@@ -4366,6 +4404,9 @@ categories:
       alternativeTo: ['putty', 'iterm2', 'gnome terminal', 'hyper', 'powershell']
       services: []
 
+    - name: Developer Utilities
+      services: []
+
   - name: Smart Home & IoT
     sections:
     - name: Voice Assistants
@@ -4379,27 +4420,11 @@ categories:
         For that reason it is recommended not to have these devices in your house.
         The following are open source AI voice assistants, that aim to provide a
         human voice interface while also protecting your privacy and security
-      services:
-      - name: Mycroft
-        tosdrId: 1824
-        description: |
-          An open source privacy-respecting AI platform, compatible with a wide range of
-          devices including Raspberry Pi, desktop computers, or dedicated Mycroft hardware.
-          Actively developed, with extensive documentation and a broad skill set. Facilitates
-          easy development of new skills.
-        url: https://mycroft-ai.gitbook.io/mark-ii
-        github: MycroftAI/mycroft-core
-        icon: https://avatars.githubusercontent.com/u/14171097?s=200&v=4
-
-      - name: Kalliope
-        description: |
-          A modular, always-on, voice-controlled personal assistant geared towards home automation.
-          Optimized for Raspberry Pi, Debian, or Ubuntu. Skills are easily programmable in YAML,
-          though the library of pre-built add-ons is not as extensive.
-        url: https://kalliope-project.github.io
-        github: kalliope-project/kalliope
+      services: []
 
       notableMentions: |
+        [Mycroft](https://github.com/MycroftAI/mycroft-core) and [Kalliope](https://github.com/kalliope-project/kalliope) removed, as no longer active.
+
         If you choose to continue using Google Home/ Alexa, then check out
         **[Project Alias](https://github.com/bjoernkarmann/project_alias)**.
         It's a small app that runs on a Pi, and gives you more control over your smart assistants, for both customisation and privacy.
@@ -4576,24 +4601,6 @@ categories:
           cryptocurrencies in exchange for national currencies. Fully decentralized,
           and no registration required.
 
-      - name: LocalBitcoins
-        url: https://localbitcoins.com/
-        tosdrId: 3645
-        description: |
-          Person-to-person exchange, find people local to your area, and trade
-          directly with them, to avoid going through any central organization.
-          Primarily focused on Bitcoin, Ethereum, Ripple, and LiteCoin,
-          as it gets harder to find people near you selling niche alt-coins.
-
-      - name: AtomicDEX
-        url: https://atomicdex.io/
-        description: |
-          Person-to-person cryptocurrency exchange with no KYC or registration
-          required and uses atomic swaps to perform trustless trades.
-          The orderbook uses a modified libp2p protocol to prevent censorship and maintain decentralization.
-          Fiat currencies are not supported, but hundreds of alt-coins and major cryptocurrencies are supported.
-        github: KomodoPlatform/atomicDEX-Pro
-
       - name: RoboSats
         url: https://learn.robosats.com
         github: RoboSats/robosats
@@ -4644,7 +4651,7 @@ categories:
 
       - name: MySudo
         url: https://mysudo.com
-        tosdrId: 1351
+        tosdrId: 1352
         description: |
           Much more than just virtual cards, MySudo is a platform for creating
           compartmentalised identities, each with their own virtual cards, virtual phone
@@ -4688,6 +4695,7 @@ categories:
     - name: Secure Budgeting
       alternativeTo: ['mint', 'you need a budget (ynab)', 'pocketguard', 'quicken', 'goodbudget']
       services:
+
       - name: Firefly III
         description: |
           A free and open source personal finance manager. Firefly III features a clean
@@ -4718,6 +4726,25 @@ categories:
           approach to accounting.
         url: https://plaintextaccounting.org
 
+      - name: ezBookkeeping
+        description: |
+          A lightweight, self-hosted personal finance app for recording daily transactions
+          and analyzing spending patterns.
+          Self-hosted, with all data staying on your own server. Supports 2FA and OICD.
+        url: https://ezbookkeeping.mayswind.net/
+        github: mayswind/ezbookkeeping
+        icon: https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/public/img/ezbookkeeping-512.png
+        openSource: true
+        followWith: Self-hosted
+
+      - name: Actual
+        url: https://actualbudget.org/
+        discordInvite: 8JfAXSgfRf
+        icon: >-
+          https://raw.githubusercontent.com/actualbudget/actual/a2267c480647bf01f1cae302292a8a237846124c/packages/desktop-electron/icons/icon.png
+        description: A local-first personal finance app
+        github: actualbudget/actual
+        openSource: true
 
       notableMentions: |
         Spreadsheets remain a popular choice for managing budgets and financial planning.
@@ -4749,14 +4776,6 @@ categories:
         should be able to choose with whom you share what, and that is what the
         following sites aim to do.
       services:
-      - name: Aether
-        description: |
-          Offers self-governing communities with auditable moderation, akin to Reddit but
-          prioritizing privacy, democracy, and transparency. Aether is peer-to-peer and open
-          source, available for Windows, Mac, and Linux.
-        url: https://getaether.net
-        github: getaether/aether-community-firmware
-
       - name: Discourse
         description: |
           A fully open-source, self-hostable discussion platform usable as a mailing list,
@@ -4923,20 +4942,6 @@ categories:
           and offers a customizable and self-hostable platform for managing your news feeds.
         url: https://tt-rss.org
 
-      - name: RSSOwl
-        description: |
-          A powerful, desktop-based RSS reader offering extensive organization features. It facilitates
-          managing and curating news feeds from various sources.
-        url: http://www.rssowl.org
-
-      - name: Feedly
-        description: |
-          Offers a premium news aggregation experience, presenting news from chosen sources in a clean,
-          modern interface. Beyond RSS, it integrates with various news outlets, ensuring a tailored
-          news feed without manipulated content. Parts of the service are open source.
-        url: https://feedly.com
-        tosdrId: 405
-
     - name: Proxy Sites
       intro: |
         These are websites that enable you to access existing social media platforms,
@@ -4962,19 +4967,20 @@ categories:
         followWith: YouTube
         tosdrId: 1471
 
-      - name: Libreddit
-        description: |
-          A private, fast Reddit frontend written in Rust. Excludes ads, trackers, and bloat, making it much faster
-          than the official site. Can be self-hosted via Docker or other methods. Implements most Reddit features
-          for anonymous browsing.
-        url: https://libreddit.spike.codes
-        followWith: Reddit
-
       - name: WebProxy
         description: |
           A free proxy service offering a Tor mode for evading censorship and accessing geo-restricted content.
           Claims to encrypt traffic, but caution is advised for personal information. Managed by DevroLabs.
         url: https://weboproxy.com
+
+      - name: Redlib
+        description: |
+          An alternative private front-end to Reddit, with its origins in [Libreddit](https://github.com/libreddit/libreddit).
+          Has workarounds to access data without relying upon the restrictive Reddit API.
+        github: redlib-org/redlib
+        icon: https://raw.githubusercontent.com/redlib-org/redlib/refs/heads/main/static/logo.png
+        url: https://github.com/redlib-org/redlib
+        followWith: Reddit
 
       notableMentions:
       - name: NewPipe
@@ -4990,7 +4996,10 @@ categories:
         # tosdrId: 3996
       wordOfWarning: |
         When proxies are involved - only use reputable services, and **never** enter any personal information
-
+      furtherInfo: |
+        *[alternative-front-ends](https://github.com/mendel5/alternative-front-ends) provides information on
+        dozens of alternative front-end options for popular platforms, such as YouTube, Twitter, Reddit,
+        TikTok, and more.*
 
   - name: Media
     sections:
@@ -5020,7 +5029,7 @@ categories:
       services: []
     - name: File Converters
       alternativeTo: ['format factory', 'handbrake', 'freemake video converter', 'any video converter', 'online-convert.com']
-      services: 
+      services:
       - name: FFmpeg
         url: https://ffmpeg.org/
         icon: https://ffmpeg.org/favicon.ico

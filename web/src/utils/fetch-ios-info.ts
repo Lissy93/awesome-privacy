@@ -1,11 +1,18 @@
+import { error } from './logger';
+
 export const fetchIosInfo = async (
   iosUrl: string,
 ): Promise<IoSApiResponse | null> => {
   const endpoint = `https://ios-app-info.as93.net?appStoreUrl=${iosUrl}`;
   try {
-    return await fetch(endpoint).then((res) => res.json());
-  } catch (error) {
-    console.error('Error fetching ios info:', error);
+    const res = await fetch(endpoint);
+    if (!res.ok) {
+      error('iOS', `HTTP ${res.status} for ${iosUrl} (${endpoint})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    error('iOS', `Network error for ${iosUrl}: ${err}`);
     return null;
   }
 };

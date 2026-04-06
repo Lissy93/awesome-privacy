@@ -208,13 +208,12 @@ const licenseContent = async () => {
 			<h2 id="author">Author</h2>
 			<article class="author">
 				<p>
-					This project was originally started by me, <a
-						href="https://aliciasykes.com">Alicia Sykes</a
-					>
+					This project was originally started by me,
+					<a href="https://aliciasykes.com">Alicia Sykes</a>
 					(with a lot of help from the community)
 				</p>
 				<br />
-				<p class="about">
+				<p>
 					I build apps which aim to help people escape big tech, secure their
 					data, and protect their privacy.
 				</p>
@@ -310,15 +309,16 @@ const licenseContent = async () => {
 </Layout>
 
 <style lang="scss">
+	@use '../styles/mixins' as *;
 	h2 {
-		font-size: 2rem;
-		margin: 1rem 0 0.5rem 0;
+		font-size: var(--text-3xl);
+		margin: var(--space-md) 0 var(--space-sm) 0;
 	}
 	p {
-		font-size: 1.2rem;
+		font-size: var(--text-md);
 	}
 	hr {
-		margin: 2rem 0;
+		margin: var(--space-lg) 0;
 		border: 0;
 		border-top: 2px solid var(--accent);
 		&:nth-child(6) {
@@ -330,59 +330,59 @@ const licenseContent = async () => {
 	}
 
 	h3 {
-		font-size: 1.6rem;
+		font-size: var(--text-xl);
 	}
 
 	.software-requirements,
 	.about-the-data {
 		:global(p) {
-			font-size: 1.2rem;
-			margin: 0 0 0.5rem 0;
+			font-size: var(--text-md);
+			margin: 0 0 var(--space-sm) 0;
 		}
 		:global(ul) {
-			padding-left: 0.5rem;
+			padding-left: var(--space-sm);
 			list-style: none;
-			font-size: 1.2rem;
+			font-size: var(--text-md);
 			:global(li ul) {
-				padding: 0 0 0.5rem 1rem;
+				padding: 0 0 var(--space-sm) var(--space-md);
 				list-style: circle;
 			}
 		}
 		:global(h3) {
-			font-size: 1.6rem;
+			font-size: var(--text-xl);
 			margin-bottom: 0;
 		}
 		:global(strong) {
 			font-weight: 500;
 		}
 		:global(small) {
-			font-size: 0.8rem;
-			opacity: 0.7;
+			font-size: var(--text-sm);
+			opacity: var(--opacity-soft);
 			:global(a) {
 				color: var(--accent-3);
 			}
 		}
 		:global(code) {
-			font-family: 'Courier New', Courier, monospace;
-			background: #acabb782;
+			font-family: var(--font-code);
+			background: var(--code-bg);
 			padding: 0.2rem 0.4rem;
 			border-radius: var(--curve-sm);
-			font-size: 0.9rem;
+			font-size: var(--text-sm);
 		}
 	}
 
 	.user-list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.25rem;
-		margin: 2rem 0;
+		gap: var(--space-xs);
+		margin: var(--space-lg) 0;
 		.user {
 			width: 6rem;
 			overflow: hidden;
 			text-align: center;
-			padding: 0.5rem;
+			padding: var(--space-sm);
 			border-radius: var(--curve-sm);
-			transition: background 0.2s ease-in-out;
+			transition: var(--transition-normal);
 			&:hover {
 				background: var(--background-form);
 			}
@@ -392,19 +392,16 @@ const licenseContent = async () => {
 				border-radius: var(--curve-md);
 			}
 			p {
-				margin: 0.5rem auto 0 auto;
-				font-size: 1rem;
-				display: -webkit-box;
-				-webkit-line-clamp: 1;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
+				margin: var(--space-sm) auto 0 auto;
+				font-size: var(--text-base);
+				@include line-clamp(1);
 			}
 		}
 	}
 
 	.fallback-img {
 		max-width: 100%;
-		margin: 2rem 0;
+		margin: var(--space-lg) 0;
 		border-radius: var(--curve-sm);
 	}
 
@@ -414,33 +411,33 @@ const licenseContent = async () => {
 		background: var(--background-form);
 		width: fit-content;
 		border-radius: var(--curve-sm);
-		padding: 0.5rem;
-		font-size: 0.7rem;
-		font-family: 'Lekton', monospace;
+		padding: var(--space-sm);
+		font-size: var(--text-xs);
+		font-family: var(--font-subtitle);
 		max-width: 100vw;
 		white-space: pre-line;
 	}
 
 	.help-list {
-		padding-left: 1rem;
+		padding-left: var(--space-md);
 		list-style: circle;
-		font-size: 1.1rem;
+		font-size: var(--text-md);
 	}
 
 	.author {
 		p {
-			margin: 1rem 0 0 0;
+			margin: var(--space-md) 0 0 0;
 		}
 		ul {
 			padding-left: 1.5rem;
 			list-style: circle;
 			margin-bottom: 0;
 			li {
-				font-size: 1.1rem;
+				font-size: var(--text-md);
 			}
 		}
 		.about {
-			font-size: 1.4rem;
+			font-size: var(--text-lg);
 			font-style: italic;
 			font-weight: 300;
 			color: var(--accent-3);
@@ -450,24 +447,24 @@ const licenseContent = async () => {
 		}
 
 		small {
-			font-size: 1rem;
-			margin: 1rem 0;
+			font-size: var(--text-base);
+			margin: var(--space-md) 0;
 		}
 		.pic-and-socials {
 			float: right;
 			img {
-				margin: 0.5rem 1rem;
+				margin: var(--space-sm) var(--space-md);
 				border-radius: var(--curve-md);
-				border: 2px solid var(--box-outline);
-				box-shadow: 4px 4px 0 var(--box-outline);
+				border: var(--border-heavy);
+				box-shadow: var(--shadow-md);
 			}
 			.socials {
 				display: flex;
-				margin: 0.5rem 1rem;
+				margin: var(--space-sm) var(--space-md);
 				justify-content: space-between;
 				:global(a svg) {
 					color: var(--foreground);
-					transition: color 0.2s ease-in-out;
+					transition: var(--transition-normal);
 					&:hover {
 						color: var(--color);
 					}

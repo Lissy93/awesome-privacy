@@ -54,14 +54,14 @@
     right: 3.5rem;
     top: 1rem;
     width: 2.8rem;
-    gap: 1rem;
+    gap: var(--space-md);
     opacity: 0;
     display: flex;
-    transition: all 0.2s ease-in-out;
+    transition: var(--transition-normal);
     a {
       color: var(--foreground);
       width: 1rem;
-      transition: all 0.2s ease-in-out;
+      transition: var(--transition-normal);
       &:hover {
         color: var(--accent-3);
         opacity: 1;

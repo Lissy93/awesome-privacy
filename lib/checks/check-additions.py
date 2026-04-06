@@ -1,10 +1,17 @@
 """Validates data quality for added/modified services using the diff JSON."""
 
 import json
+import logging
 import os
 import sys
 
 import yaml
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s [%(filename)s] %(message)s",
+    stream=sys.stderr,
+)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_PATH = os.path.join(PROJECT_ROOT, "awesome-privacy.yml")
@@ -237,9 +244,10 @@ def check_opensource_github(diff):
 
 def main():
     findings = []
+    critical = False
     try:
         if os.environ.get("SCHEMA_OUTCOME") == "failure":
-            findings.append(SCHEMA_MSG)
+            findings.append({"msg": SCHEMA_MSG, "level": "error"})
 
         diff = load_json(DIFF_PATH)
         head = load_yaml_data(DATA_PATH)
@@ -251,7 +259,8 @@ def main():
 
             finding = check_required_fields(diff, head)
             if finding:
-                findings.append(finding)
+                findings.append({"msg": finding, "level": "error"})
+                critical = True
 
             finding = check_position(diff, head)
             if finding:
@@ -279,12 +288,13 @@ def main():
             finding = check_opensource_github(diff)
             if finding:
                 findings.append(finding)
-    except Exception:
-        pass
+    except Exception as exc:
+        logging.error("Unhandled error in main: %s", exc, exc_info=True)
 
+    logging.info("Writing %d finding(s) to %s", len(findings), FINDINGS_PATH)
     with open(FINDINGS_PATH, "w") as f:
         json.dump(findings, f)
-    sys.exit(0)
+    sys.exit(1 if critical else 0)
 
 
 if __name__ == "__main__":

@@ -73,83 +73,36 @@ const { redditData } = Astro.props;
 </div>
 
 <style lang="scss">
+	@use '../../styles/mixins' as *;
 	.reddit-info-wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 1rem;
-		.left,
-		.right {
-			width: calc(50% - 1rem);
-			@media screen and (max-width: 768px) {
-				width: 100%;
-			}
-		}
+		@include detail-info-layout;
 	}
 
+	@include detail-info-base;
+
 	.banner {
-		margin: 0.5rem auto;
+		margin: var(--space-sm) auto;
 		border-radius: var(--curve-md);
 		width: 100%;
 	}
 
 	h3 {
-		margin: 0 0 1rem 0;
-		font-size: 1.6rem;
-	}
-
-	h4 {
-		margin: 1rem 0 0 0;
-		font-size: 1.2rem;
-	}
-	p {
-		margin: 0;
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
-		:global(svg) {
-			width: 1rem;
-		}
-		img {
-			border-radius: var(--curve-sm);
-		}
+		margin: 0 0 var(--space-md) 0;
+		font-size: var(--text-xl);
 	}
 
 	ul {
-		padding-left: 0;
-		list-style: none;
-		max-height: 300px;
-		overflow-y: auto;
-		overflow-x: hidden;
-		img {
-			border-radius: var(--curve-sm);
-		}
-		.list-item {
-			display: flex;
-			flex-direction: column;
-			margin-bottom: 0.5rem;
-		}
-		&.list-table {
-			font-size: 0.9rem;
-			padding-left: 0;
-			li {
-				display: flex;
-				justify-content: space-between;
-				padding: 0.1rem 0;
-				.lbl {
-					font-weight: 400;
-				}
-				&:not(:last-child) {
-					border-bottom: 1px solid #5f53f440;
-				}
+		&.list-table li {
+			.lbl {
+				font-weight: 400;
 			}
 		}
 	}
 
 	.posts {
 		list-style: circle;
-		padding-left: 1rem;
-		font-size: 0.9rem;
+		padding-left: var(--space-md);
+		font-size: var(--text-sm);
 		li {
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
@@ -159,22 +112,22 @@ const { redditData } = Astro.props;
 				max-width: 80%;
 			}
 			.votes {
-				font-size: 0.8rem;
-				opacity: 0.5;
+				font-size: var(--text-sm);
+				opacity: var(--opacity-dim);
 			}
 		}
 	}
 
 	.website-title,
 	.website-description {
-		font-size: 0.9rem;
-		opacity: 0.8;
+		font-size: var(--text-sm);
+		opacity: var(--opacity-subtle);
 		display: -webkit-box;
 		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		border-left: 2px solid var(--accent-3);
-		padding-left: 0.5rem;
+		padding-left: var(--space-sm);
 	}
 	.website-title {
 		font-weight: 500;
@@ -184,8 +137,8 @@ const { redditData } = Astro.props;
 		-webkit-line-clamp: 3;
 	}
 	.explainer {
-		font-size: 0.8rem;
-		opacity: 0.8;
+		font-size: var(--text-sm);
+		opacity: var(--opacity-subtle);
 		font-style: italic;
 	}
 </style>
