@@ -4613,7 +4613,7 @@ categories:
         [Cunicula](https://cunicula.com) is a curated directory of no-KYC and privacy-first services,
         including crypto exchanges, swap services, P2P markets, and non-custodial wallets. Each entry
         is tagged with its KYC level, jurisdiction, supported payment methods, and a trust score
-        reflecting warrant canaries, audit history, and known incidents.
+        reflecting audit history and known incidents.
 
     - name: Virtual Credit Cards
       alternativeTo: ['visa', 'mastercard', 'american express', 'discover', 'capital one']
