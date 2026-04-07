@@ -4398,6 +4398,13 @@ categories:
     - name: Developer Utilities
       services: []
 
+    - name: AI Marketplaces
+      services:
+      - name: RemoteOpenClaw
+        url: https://remoteopenclaw.com
+        description: |
+          Open marketplace for discovering, sharing, and distributing AI skills and personas built on OpenClaw.
+
   - name: Smart Home & IoT
     sections:
     - name: Voice Assistants
