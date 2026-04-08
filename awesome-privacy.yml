@@ -4311,6 +4311,16 @@ categories:
         description: |
           Kernel-level, OS-level, and client-level security for macOS. With a Firewall, Blackhole, and Privatizing Proxy for Trackers, Attackers, Malware, Adware, and Spammers; with On-Demand and On-Access Anti-Virus Scanning.
 
+      - name: PureMac
+        url: https://github.com/momenbasel/PureMac
+        icon: https://raw.githubusercontent.com/momenbasel/PureMac/main/PureMac/Assets.xcassets/AppIcon.appiconset/icon_128.png
+        github: momenbasel/PureMac
+        openSource: true
+        description: |
+          Privacy-respecting macOS system cleaner with zero telemetry, analytics, or network calls.
+          Cleans caches, Xcode junk, mail attachments, Homebrew cache, and finds large/old files.
+          A transparent alternative to CleanMyMac and similar tools that phone home.
+
 
     ##########################
     ###### Anti-Malware ######
