@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T13:53:40Z",
+  "generatedAt": "2026-04-09T12:54:28Z",
   "processedShas": [
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
     "0565145265ae63168dafcd48c5e13d8604691a10",
@@ -32,6 +32,7 @@
     "3c768cfd34bb4a75c740815874dfb99b31233fa7",
     "4145b323ab2b8e93d05392ba12ace9ee815c27f9",
     "4155d6bcfc0d01136a323bfb841452e478be1fa6",
+    "463d62190462ca5dfdf71fa72234a10e6dbcdd48",
     "474de7b56c37fb9bf8991fcc3e42df91acc74049",
     "5b772f3ea6f2e480b07bb09a1b523553198fd386",
     "5ec99fe78361e422648aec2eff69375fcc3ca810",
@@ -2914,6 +2915,86 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-04-08",
+      "title": "Add PureMac to Mac OS Defences",
+      "pr": {
+        "number": 488,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/488",
+        "author": "momenbasel",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/8724766?v=4"
+      }
+    },
+    {
+      "date": "2026-04-06",
+      "title": "Add VerifySMS to Virtual Phone Numbers",
+      "pr": {
+        "number": 479,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/479",
+        "author": "serhat961",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/61142546?v=4"
+      }
+    },
+    {
+      "date": "2026-04-05",
+      "title": "Add Fluranto Remove Image Metadata to Metadata Removal",
+      "pr": {
+        "number": 476,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/476",
+        "author": "medrunia",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/249454438?v=4"
+      }
+    },
+    {
+      "date": "2026-04-05",
+      "title": "Add oudenOS to Windows Defences",
+      "pr": {
+        "number": 475,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/475",
+        "author": "redpersongpt",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/195727128?v=4"
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "title": "Add ConvertPrivately to Online Tools section",
+      "pr": {
+        "number": 470,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/470",
+        "author": "ccascio",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/3979868?v=4"
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "title": "[Add] SecretNotes in Secret Sharing",
+      "pr": {
+        "number": 469,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/469",
+        "author": "BartekPoeta",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/82165902?v=4"
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "title": "Add Pilgrim to Health & Fitness",
+      "pr": {
+        "number": 464,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/464",
+        "author": "momentmaker",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/7048601?v=4"
+      }
+    },
+    {
+      "date": "2026-03-29",
+      "title": "Add Locally Uncensored to AI Tools section",
+      "pr": {
+        "number": 463,
+        "url": "https://github.com/Lissy93/awesome-privacy/pull/463",
+        "author": "PurpleDoubleD",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/224399100?v=4"
+      }
+    },
     {
       "date": "2026-03-27",
       "title": "Update awesome-privacy.yml Adds Mouse Polling Rate Test to online tools",

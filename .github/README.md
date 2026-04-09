@@ -3884,6 +3884,11 @@ properly - to keep it safe from theft, loss or damage.
 > 
 > For buying and selling alt-coins, [Binance](https://www.binance.com/en/register?ref=X2BHKID1) has a wide range of currencies,
 > ~and ID verification is not needed for small-value trades~ but ID verification is required in most countries.
+> 
+> [Cunicula](https://cunicula.com) is a curated directory of no-KYC and privacy-first services,
+> including crypto exchanges, swap services, P2P markets, and non-custodial wallets. Each entry
+> is tagged with its KYC level, jurisdiction, supported payment methods, and a trust score
+> reflecting audit history and known incidents.
 > </details>
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
