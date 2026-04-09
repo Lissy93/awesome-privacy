@@ -1953,6 +1953,14 @@ categories:
             A tool from Netcraft, for analysing what any given website is running, where it's located and information about its
             host, registrar, IP and SSL certificates.
 
+        - name: CookieBoss
+          url: https://cookieboss.io
+          icon: https://cookieboss.io/favicon.svg
+          description: |
+            Edge-compiled cookie consent management with Google Consent Mode v2 support.
+            Scripts are compiled per-site on Cloudflare edge for minimal performance impact,
+            giving users real control over tracking consent.
+
       wordOfWarning: >
         Browsers are inherently insecure, be careful when uploading, or entering personal details.
 
