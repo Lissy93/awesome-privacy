@@ -5036,6 +5036,15 @@ categories:
           video. It's the industry standard multimedia framework, handling a vast range
           of formats. As a command-line tool, it guarantees that all processing is done
           locally on your machine.
+      - name: VERT
+        url: https://vert.sh
+        icon: https://vert.sh/lettermark.jpg
+        openSource: true
+        github: VERT-sh/VERT
+        discordInvite: kqevGxYPak
+        description: |
+          Web-based file conversion utility, which runs locally on your device using WebAssembly.
+          Supports 250+ formats across images, audio, documents, and video.
 
   - name: Creativity
     sections:
