@@ -1,5 +1,5 @@
 <p align="center" id="top"><a href="https://github.com/Lissy93/awesome-privacy"><img src="https://pixelflare.cc/i/tuj62q" /></a></p>
-<p align="center"><i>A curated list of privacy-respecintg apps, software, and providers</i></p>
+<p align="center"><i>A curated list of privacy-respecting apps, software, and providers</i></p>
 <p align="center">🌐 <b><a href="https://awesome-privacy.xyz">awesome-privacy.xyz</a></b></p>
 
 <p align="center">
