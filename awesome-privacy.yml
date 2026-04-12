@@ -5091,6 +5091,18 @@ categories:
         github: Beep6581/RawTherapee
         icon: https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/rawtherapee-icon.png
         openSource: true
+      - name: SammaPix
+        followWith: Web
+        description: |
+          A free, privacy-first image toolkit with 27 browser-based tools including
+          compress, resize, convert (HEIC/WebP/AVIF/JXL), background removal, passport
+          photos, AI rename, and batch watermark. All processing runs entirely in the
+          browser via Canvas API and WebAssembly — images are never uploaded to any server.
+          No signup required.
+        url: https://www.sammapix.com
+        github: samma1997/sammapix
+        icon: https://www.sammapix.com/favicon.ico
+        openSource: false
       - name: PhotoPea
         followWith: Web
         description: |
