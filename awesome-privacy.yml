@@ -2877,6 +2877,14 @@ categories:
           crypto-currencies (Bitcoin, Monero, Ethereum etc..) and don't require any personal informations. They resell from
           reputable providers.
 
+       - name: DarkVPS
+        url: https://darkvps.pro
+        acceptsCrypto: true
+       
+        description: |
+          DarkVPS is located in Bulgaria with own private Infrastructure. The provider is focused on strictly privacy without keep any logs.
+          Accepting cryptocurrency for maximum anonymity.
+      
       notableMentions: |
         See also: [1984](https://www.1984.is) based in Iceland.
         [Shinjiru](http://shinjiru.com?a_aid=5e401db24a3a4), which offers off-shore dedicated servers.
@@ -2914,6 +2922,7 @@ categories:
           Anonymous domain registration, with low online censorship since they are based outside the
           14-eyes jurisdiction (in Iceland).
 
+        
 
     #########################
     ###### DNS Hosting ######
