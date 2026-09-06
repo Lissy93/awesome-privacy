@@ -5601,6 +5601,17 @@ categories:
           Takes screenshots and short screen recordings, with annotation, OCR, a colour picker, and configurable save/upload destinations.
           Note that (if configured) it can interop with non-private services for upload, like Imgur, Google, etc.
 
+      - name: HideMyShare
+        url: https://hidemyshare.site
+        icon: https://hidemyshare.site/assets/apple-touch-icon.png
+        openSource: false
+        description: |
+          Keeps selected app windows out of screen shares, recordings and live streams on
+          Windows 10/11. Works at the OS capture level (WDA_EXCLUDEFROMCAPTURE), so hidden
+          windows disappear entirely from Zoom, Microsoft Teams, Google Meet and OBS -
+          not blurred - while staying fully visible on your own display. No virtual camera,
+          no performance hit, no account and no telemetry. Free 7-day trial, one-time purchase.
+
     - name: 3D Graphics
       alternativeTo: ['blender', 'autodesk maya', 'cinema 4d', '3ds max', 'sketchup']
       services:
