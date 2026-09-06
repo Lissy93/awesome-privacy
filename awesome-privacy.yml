@@ -137,6 +137,20 @@ categories:
           Turn a recovery key, password, or other secret into 3 cards you can keep in
           different places. Open-source, client-side only, with an offline recovery page.
 
+
+      - name: VaultKeepR
+        url: https://vaultkeepr.xyz
+        github: VaultKeepR/vaultkeepr-public
+        openSource: true
+        description: |
+          Zero-knowledge password manager that never asks for your email or an
+          account. Credentials and metadata are encrypted client-side
+          (Argon2id + XChaCha20-Poly1305) before leaving the device. Vaults
+          sync as encrypted blobs over IPFS and identities live as on-chain
+          smart accounts, so no server ever holds a database of who you are.
+          Browser extension plus iOS and Android apps; fully open source and
+          auditable.
+
       notableMentions:
       - name: Password Safe
         url: https://www.pwsafe.org
