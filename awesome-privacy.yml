@@ -3139,6 +3139,20 @@ categories:
           A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown
           editing experience. It manages notes directly as plain text files on your local system.
 
+      - name: PrivacyNotes
+        url: https://privacynotes.app
+        github: LifetimeLabsDev/PrivacyNotes.app
+        followWith: Web, Windows, MacOS, Linux, Android, iOS
+        openSource: true
+        securityAudited: false
+        icon: https://privacynotes.app/icon-512.png
+        iosApp: https://apps.apple.com/app/id6785958812
+        subreddit: PrivacyNotes
+        description: |
+          Notes, tasks, files, passwords, journal and bookmarks in one app, encrypted on your device
+          under a 12-word BIP-39 phrase, synced from Swiss servers across desktop, mobile and the web.
+          The free tier includes 50 MB of encrypted storage.
+
       notableMentions: |
         If you are already tied into Evernote, One Note etc, then [SafeRoom](https://www.getsaferoom.com)
         is a utility that encrypts your entire notebook, before it is uploaded to the cloud.
