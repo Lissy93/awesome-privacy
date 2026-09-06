@@ -826,17 +826,17 @@ categories:
           code and multiple language bindings make it easy for developers to integrate with
           Tox.
 
-    - name: MindTheClub
+      - name: MindTheClub
         url: https://www.mindtheclub.com
         github: AndreaVagheggi/mindtheclub
         icon: https://www.mindtheclub.com/images/mtc_logo_icon.png
         androidApp: com.bolimot.mindtheclub
         openSource: true
         description: |
-          Peer-to-peer Android messenger. Message content travels device to device over
-          WebRTC and is never stored on a server. No phone number or email is needed to
-          register. Encrypted audio and video calls, plus offline messaging over Bluetooth.
-          
+           Peer-to-peer Android messenger. Message content travels device to device over
+           WebRTC and is never stored on a server. No phone number or email is needed to
+           register. Encrypted audio and video calls, plus offline messaging over Bluetooth.
+        
       notableMentions:
       - name: Cwtch
         url: https://cwtch.im
