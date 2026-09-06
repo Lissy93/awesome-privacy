@@ -826,7 +826,7 @@ categories:
           code and multiple language bindings make it easy for developers to integrate with
           Tox.
 
-        - name: MindTheClub
+    - name: MindTheClub
         url: https://www.mindtheclub.com
         github: AndreaVagheggi/mindtheclub
         icon: https://www.mindtheclub.com/images/mtc_logo_icon.png
