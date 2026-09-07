@@ -3139,6 +3139,20 @@ categories:
           A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown
           editing experience. It manages notes directly as plain text files on your local system.
 
+      - name: Poznote
+        url: https://poznote.com
+        github: timothepoznanski/poznote
+        followWith: Web (self-hosted, Docker)
+        openSource: true
+        securityAudited: false
+        icon: https://raw.githubusercontent.com/timothepoznanski/poznote/main/src/favicon.ico
+        discordInvite: AWhWWSEkJ
+        description: |
+          Self-hosted notes and tasks app with rich-text, Markdown and drawing editors,
+          tags, multi-user, OIDC login and a REST API. Docker-based (PHP + SQLite); the
+          only outbound call is a daily update check. No mobile apps (PWA), no end-to-end
+          encryption.
+
       - name: MindMapVault
         url: https://www.mindmapvault.com
         github: mindmapvault/mindmapvault-foss

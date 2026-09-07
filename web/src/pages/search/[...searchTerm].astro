@@ -1,116 +1,23 @@
 ---
-import Fuse from 'fuse.js';
-
 import Layout from '@layouts/Layout.astro';
-import { fetchData, slugify } from '@utils/fetch-data';
-import { prepareSearchItems, searchOptions } from '@utils/do-searchy-searchy';
-import type { SearchItem } from '@utils/do-searchy-searchy';
 import Search from '@components/things/Search.svelte';
-import SmartSuggestions from '@components/things/SmartSuggestions.svelte';
-import FontAwesome from '@components/form/FontAwesome.svelte';
+import SearchResults from '@components/things/SearchResults.svelte';
 
 export const prerender = false;
 
-let fuse: Fuse<SearchItem>;
-
-const categories = (await fetchData())?.categories;
-
-const items = prepareSearchItems(categories);
-
-fuse = new Fuse(items, searchOptions);
-
-const searchTerm = Astro.params.searchTerm;
-
-const searchResults = fuse
-	.search(searchTerm || '')
-	.map((result) => result.item);
-
-const services = searchResults.filter((result) => result.type === 'Service');
-
-interface GroupedSection {
-	sectionName: string;
-	items: SearchItem[];
-}
-
-interface GroupedCategory {
-	categoryName: string;
-	sections: Record<string, GroupedSection>;
-}
-
-const putResultsIntoGroups = () => {
-	const grouped: Record<string, GroupedCategory> = {};
-
-	for (const item of services) {
-		const categoryName = item.category;
-		const sectionName = item.sectionName || '';
-
-		if (!grouped[categoryName]) {
-			grouped[categoryName] = { categoryName, sections: {} };
-		}
-
-		if (!grouped[categoryName].sections[sectionName]) {
-			grouped[categoryName].sections[sectionName] = { sectionName, items: [] };
-		}
-
-		grouped[categoryName].sections[sectionName].items.push(item);
-	}
-
-	return Object.values(grouped).map((category) => ({
-		categoryName: category.categoryName,
-		sections: Object.values(category.sections),
-	}));
-};
-
-const beer = putResultsIntoGroups();
+const searchTerm = Astro.params.searchTerm || '';
 ---
 
 <Layout title={`Search: ${searchTerm} | Awesome Privacy`}>
-	<section>
+	<section class="search-box">
 		<h1>Search</h1>
 		<Search client:visible previousSearch={searchTerm} />
 	</section>
-	<SmartSuggestions client:visible searchTerm={searchTerm || ''} />
-	<section class="result-count">
-		<h3>Deep Search</h3>
-		<p>
-			Showing {services.length} results for "{searchTerm}" sorted by relevence
-		</p>
-	</section>
-	<div class="results">
-		{
-			beer.map((category) => (
-				<div class="category">
-					<a
-						class="category-title"
-						href={`/${slugify(category.categoryName)}/`}
-					>
-						<h3>{category.categoryName}</h3>
-					</a>
-					<span class="section-icon">
-						<FontAwesome iconName={slugify(category.categoryName)} />
-					</span>
-					<ul class="section-list">
-						{category.sections.map((section) => (
-							<li class="section-item">
-								<h4>{section.sectionName}</h4>
-								<ul class="service-list">
-									{section.items.map((item) => (
-										<li>
-											<a href={item.url}>{item.name}</a>
-										</li>
-									))}
-								</ul>
-							</li>
-						))}
-					</ul>
-				</div>
-			))
-		}
-	</div>
+	<SearchResults client:load searchTerm={searchTerm} />
 </Layout>
 
 <style lang="scss">
-	section {
+	.search-box {
 		display: flex;
 		flex-direction: column;
 		margin: var(--space-lg) auto;
@@ -124,81 +31,6 @@ const beer = putResultsIntoGroups();
 			font-family: var(--font-subtitle);
 			text-align: center;
 			margin: var(--space-md) 0;
-		}
-	}
-
-	.result-count {
-		padding: 0;
-		width: calc(100% - 2rem);
-		margin: var(--space-md) auto 0 auto;
-		h3 {
-			margin: 0;
-			color: var(--accent-3-text);
-			font-size: var(--text-xl);
-		}
-		p {
-			margin: 0;
-			opacity: var(--opacity-muted);
-		}
-	}
-
-	.results {
-		margin: 0 auto var(--space-lg) auto;
-		padding: var(--space-md);
-		width: calc(100% - 2rem);
-		max-width: var(--width-container);
-		columns: 6 300px;
-		column-gap: var(--space-md);
-		.category {
-			padding: var(--space-md);
-			box-shadow: var(--shadow-md);
-			background: var(--surface);
-			border: var(--border-heavy);
-			border-radius: var(--curve-sm);
-			display: inline-flex;
-			flex-direction: column;
-			width: 85%;
-			margin: var(--space-md);
-			position: relative;
-			.category-title {
-				text-decoration: none;
-				color: var(--foreground);
-				z-index: 2;
-				position: relative;
-				h3 {
-					font-family: var(--font-subtitle);
-					font-weight: bold;
-					margin: 0;
-					font-size: var(--text-2xl);
-				}
-			}
-			.section-icon {
-				position: absolute;
-				right: var(--space-sm);
-				top: var(--space-sm);
-				width: fit-content;
-				:global(svg) {
-					width: var(--text-3xl);
-					height: var(--text-3xl);
-					opacity: var(--opacity-dim);
-					text-shadow: 3px 3px 0 black;
-					color: var(--accent-3-text);
-					transition: var(--transition-normal);
-				}
-			}
-			.section-list {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				h4 {
-					margin: var(--space-md) 0 0 0;
-				}
-				.service-list {
-					list-style: none;
-					padding: 0;
-					margin: 0;
-				}
-			}
 		}
 	}
 </style>
