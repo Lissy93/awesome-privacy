@@ -834,6 +834,8 @@ categories:
         url: https://retroshare.cc
       - name: Xeres
         url: https://xeres.io
+      - name: toxee
+        url: https://github.com/agentx-icu/toxee
 
     #############################
     ###### Encrypted Email ######
