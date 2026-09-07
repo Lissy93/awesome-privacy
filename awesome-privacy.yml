@@ -825,6 +825,18 @@ categories:
           mobile - see [supported clients](https://tox.chat/clients.html). Clearly documented
           code and multiple language bindings make it easy for developers to integrate with
           Tox.
+
+      - name: Btwinus
+        url: https://btwinus.com
+        github: BTwinus/btwinus
+        icon: https://btwinus.com/android-icon-192x192.png
+        followWith: Web
+        openSource: true
+        description: |
+          Browser-only chat between two people with no account, app or server. The WebRTC
+          handshake is AES-256-GCM encrypted inside the invite link and unlocked by a passphrase
+          shared on a separate channel; messages then travel directly between the two browsers.
+
       notableMentions:
       - name: Cwtch
         url: https://cwtch.im
