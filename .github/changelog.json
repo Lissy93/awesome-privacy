@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T17:03:06Z",
+  "generatedAt": "2026-09-07T19:31:30Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -156,6 +156,7 @@
     "afc1bddb019a762fc3f2741547ffdc205c0bfe19",
     "b2113d1d8325447daf6cfa9c12a53f1fbcf33928",
     "b26fbcfeff3ef2cdd0394d6cb2df5711c4e7d31b",
+    "b47dac081ec156205cebc894d36d481c7513f788",
     "b5a69fc359c36a1bb7ea05c0e29947f73930e189",
     "b677c2f52c1f2606eddecca0ffc6524339aa0dbc",
     "b718d9cd6c2f4b9c6129d4c9d6b70c1968a137f8",
@@ -441,9 +442,39 @@
     787,
     788,
     789,
-    790
+    790,
+    792,
+    795,
+    796,
+    797,
+    799,
+    802,
+    803
   ],
   "entries": [
+    {
+      "date": "2026-09-07",
+      "sha": "b47dac081ec156205cebc894d36d481c7513f788",
+      "pr": {
+        "number": 801,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/801",
+        "author": "timothepoznanski",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/8541705?v=4"
+      },
+      "changes": {
+        "services": {
+          "added": [
+            {
+              "name": "Poznote",
+              "category": "Productivity",
+              "section": "Digital Notes"
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-09-03",
       "sha": "e0ba2687c748e6a31a9fd3dc4caa636dc02fae6e",
@@ -7205,6 +7236,76 @@
     }
   ],
   "rejections": [
+    {
+      "date": "2026-09-07",
+      "title": "Add toxee to P2P Messaging notable mentions",
+      "pr": {
+        "number": 803,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/803",
+        "author": "agentx-icu",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/31703786?v=4"
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Add Btwinus in P2P Messaging",
+      "pr": {
+        "number": 802,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/802",
+        "author": "gradikay",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/56418645?v=4"
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Add MindTheClub to P2P Messaging",
+      "pr": {
+        "number": 799,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/799",
+        "author": "AndreaVagheggi",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/289690512?v=4"
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "title": "[Add] rdp.monster in Cloud Hosting",
+      "pr": {
+        "number": 797,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/797",
+        "author": "HostingVerds",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/174010780?v=4"
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Add HideMyShare to Screenshot Tools (Creativity)",
+      "pr": {
+        "number": 796,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/796",
+        "author": "JLZhengkun",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/120313969?v=4"
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Add VaultKeepR to Password Managers",
+      "pr": {
+        "number": 795,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/795",
+        "author": "VaultKeepR",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/269961680?v=4"
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "title": "Add EkaanHub to Utilities > Metadata Removal",
+      "pr": {
+        "number": 792,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/792",
+        "author": "pkaur1130",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/264944076?v=4"
+      }
+    },
     {
       "date": "2026-09-03",
       "title": "Adds GO AI EXIF Tool to Online Tools",

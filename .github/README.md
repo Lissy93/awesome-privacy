@@ -63,7 +63,7 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [DNS Hosting](#dns-hosting) (1)
 	- [Mail Servers](#mail-servers) (3)
 - **Productivity**
-	- [Digital Notes](#digital-notes) (8)
+	- [Digital Notes](#digital-notes) (9)
 	- [Calendar](#calendar) (4)
 	- [Scheduling](#scheduling) (2)
 	- [Task Management](#task-management) (2)
@@ -1049,6 +1049,7 @@ providers that own and run their own infrastructure
 - **[<img src='https://obsidian.md/favicon.svg' width='14' alt='' /> Obsidian](https://obsidian.md/)** - A powerful knowledge base that works on top of local plain-text Markdown files. It has a strong community, and a lot of plugins and themes. Generally privacy-respecting, but no encryption out of the b[…](https://awesome-privacy.xyz/productivity/digital-notes/obsidian "View full Obsidian report") 
 - **[<img src='https://raw.githubusercontent.com/cryptee/web-client/v3/source/assets/logo-b.svg' width='14' alt='' /> Cryptee](https://crypt.ee/)** - Private & encrypted rich-text documents. Cryptee has encryption and anonymity at its core, it also has a beautiful and minimalistic UI. You can use Cryptee from the browser, or download native apps. C[…](https://awesome-privacy.xyz/productivity/digital-notes/cryptee "View full Cryptee report") 
 - **[<img src='https://icon.horse/icon/app.vnote.fun' width='14' alt='' /> VNote](https://app.vnote.fun/en_us/)** - A free, open-source note-taking application built with Qt, focused on providing a pleasant Markdown editing experience. It manages notes directly as plain text files on your local system. 
+- **[<img src='https://raw.githubusercontent.com/timothepoznanski/poznote/main/src/favicon.ico' width='14' alt='' /> Poznote](https://poznote.com)** - Self-hosted notes and tasks app with rich-text, Markdown and drawing editors, tags, multi-user, OIDC login and a REST API. Docker-based (PHP + SQLite); the only outbound call is a daily update check.[…](https://awesome-privacy.xyz/productivity/digital-notes/poznote "View full Poznote report") 
 
 <details>
 <summary>✳️ <b>Notable Mentions</b></summary>
