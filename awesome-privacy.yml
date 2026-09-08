@@ -3286,6 +3286,19 @@ categories:
           can sync via WebDAV/Dropbox/local file or self-hosted deployment.
           With a CLI, REST API and MCP for scripting, has optional BYOK AI.
 
+      - name: Vikunja
+        url: https://vikunja.io
+        github: go-vikunja/vikunja
+        openSource: true
+        icon: https://vikunja.io/favicon.ico
+        followWith: Web, Android Linux
+        description: |
+          Vikunja is an open-source to-do application. It is suitable for a wide
+          variety of projects, supporting List, Gantt, Table and Kanban views to
+          visualize all tasks in different contexts. For collaboration, it has
+          sharing support via private teams or public links. It can be self-hosted
+          or used as a managed service for a small fee.
+
     ###########################
     ###### Backup & Sync ######
     ###########################
@@ -3410,18 +3423,6 @@ categories:
           An open source platform for self-hosting web apps. Once you've set it up,
           you can install items from the Sandstorm App Market with -click,
           similar to NextCloud in terms of flexibility.
-
-      - name: Vikunja
-        url: https://vikunja.io
-        icon: https://vikunja.io/favicon.ico
-        github: go-vikunja/vikunja
-        followWith: Web, Android Linux
-        description: |
-          Vikunja is an open-source to-do application. It is suitable for a wide
-          variety of projects, supporting List, Gantt, Table and Kanban views to
-          visualize all tasks in different contexts. For collaboration, it has
-          sharing support via private teams or public links. It can be self-hosted
-          or used as a managed service for a small fee.
 
 
     ###########################
