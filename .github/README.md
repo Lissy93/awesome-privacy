@@ -66,9 +66,9 @@ corporations, governments, and hackers from logging, storing or selling your per
 	- [Digital Notes](#digital-notes) (9)
 	- [Calendar](#calendar) (4)
 	- [Scheduling](#scheduling) (2)
-	- [Task Management](#task-management) (2)
+	- [Task Management](#task-management) (3)
 	- [Backup and Sync](#backup-and-sync) (4)
-	- [Cloud Productivity Suites](#cloud-productivity-suites) (5)
+	- [Cloud Productivity Suites](#cloud-productivity-suites) (4)
 	- [Encrypted Cloud Storage](#encrypted-cloud-storage) (6)
 	- [Secret Sharing](#secret-sharing) (3)
 	- [File Drop](#file-drop) (2)
@@ -1100,6 +1100,7 @@ providers that own and run their own infrastructure
 
 - **[<img src='https://raw.githubusercontent.com/johannesjo/super-productivity/master/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png' width='14' alt='' /> Super Productivity](https://super-productivity.com)** - Privacy-respecting, open-source task manager and time tracker. All data is stored locally on your device - no account required, no cloud dependency, and zero telemetry. Supports Jira, GitLab, GitHub,[…](https://awesome-privacy.xyz/productivity/task-management/super-productivity "View full Super Productivity report") 
 - **[<img src='https://github.com/dongdongbh/Mindwtr/raw/main/apps/mobile/assets/images/icon.png' width='14' alt='' /> Mindwtr](https://mindwtr.app)** - A Getting Things Done + Pomodoro productivity system for desktop and mobile. Local-first, no account required, can sync via WebDAV/Dropbox/local file or self-hosted deployment. With a CLI, REST API an[…](https://awesome-privacy.xyz/productivity/task-management/mindwtr "View full Mindwtr report") 
+- **[<img src='https://vikunja.io/favicon.ico' width='14' alt='' /> Vikunja](https://vikunja.io)** - Vikunja is an open-source to-do application. It is suitable for a wide variety of projects, supporting List, Gantt, Table and Kanban views to visualize all tasks in different contexts. For collaborati[…](https://awesome-privacy.xyz/productivity/task-management/vikunja "View full Vikunja report") 
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 
@@ -1148,7 +1149,6 @@ providers that own and run their own infrastructure
 - **[<img src='https://nextcloud.com/c/uploads/2022/03/favicon.png' width='14' alt='' /> NextCloud](https://nextcloud.com)** - A complete self-hosted productivity platform, with a strong community and growing app store. NextCloud is similar to (but arguably more complete than) Google Drive, Office 365 and Dropbox. Clear UI an[…](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/nextcloud "View full NextCloud report") 
 - **[<img src='https://disroot.org/user/themes/disroot/images/favicon.png' width='14' alt='' /> Disroot](https://disroot.org)** - A platform providing online services based on principles of freedom, privacy, federation and decentralization. It is an implementation of NextCloud, with strong encryption configured - it is widely us[…](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/disroot "View full Disroot report") 
 - **[<img src='https://sandstorm.io/favicon.ico' width='14' alt='' /> Sandstorm](https://sandstorm.io)** - An open source platform for self-hosting web apps. Once you've set it up, you can install items from the Sandstorm App Market with -click, similar to NextCloud in terms of flexibility. 
-- **[<img src='https://vikunja.io/favicon.ico' width='14' alt='' /> Vikunja](https://vikunja.io)** - Vikunja is an open-source to-do application. It is suitable for a wide variety of projects, supporting List, Gantt, Table and Kanban views to visualize all tasks in different contexts. For collaborati[…](https://awesome-privacy.xyz/productivity/cloud-productivity-suites/vikunja "View full Vikunja report") 
 
 <p align="right"><sup><a href="#top">⬆️ [Back to Top]</a></sub></p>
 

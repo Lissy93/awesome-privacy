@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T19:31:30Z",
+  "generatedAt": "2026-09-08T18:18:58Z",
   "processedShas": [
     "02125ec429ec1ce9c5acdec1604703cb058a7887",
     "02231fb0a59ee43f93c6d0143640284cb7587d71",
@@ -47,6 +47,7 @@
     "303cc2f8a124db8a9d0a2b5562725811069ceaa5",
     "30569aa9b85bc55905b08c00719ce3715df6c8e7",
     "3196cfc9d503b8cfe9bab5de9c5c2e6b12dd59dd",
+    "330b4a9f95e44c4a553a4e982c7eb7d9d27f280c",
     "335a2df16b0f7accf9a56cc22aa7030dbdac6f13",
     "350dd06439fdba13c56d4138a86f1b759a221677",
     "374c14a68a4c3df451e718cdb6e0447b1b7a3c56",
@@ -444,14 +445,46 @@
     789,
     790,
     792,
+    794,
     795,
     796,
     797,
     799,
+    800,
     802,
-    803
+    803,
+    804
   ],
   "entries": [
+    {
+      "date": "2026-09-08",
+      "sha": "330b4a9f95e44c4a553a4e982c7eb7d9d27f280c",
+      "pr": {
+        "number": 805,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/805",
+        "author": "ltguillaume",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/4777345?v=4"
+      },
+      "changes": {
+        "services": {
+          "moved": [
+            {
+              "name": "Vikunja",
+              "from": {
+                "category": "Productivity",
+                "section": "Cloud Productivity Suites"
+              },
+              "to": {
+                "category": "Productivity",
+                "section": "Task Management"
+              }
+            }
+          ]
+        },
+        "sections": {},
+        "categories": {}
+      }
+    },
     {
       "date": "2026-09-07",
       "sha": "b47dac081ec156205cebc894d36d481c7513f788",
@@ -7237,6 +7270,16 @@
   ],
   "rejections": [
     {
+      "date": "2026-09-08",
+      "title": "Add SafeUnfollow in Social Networks",
+      "pr": {
+        "number": 804,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/804",
+        "author": "ignromanov",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/3179314?v=4"
+      }
+    },
+    {
       "date": "2026-09-07",
       "title": "Add toxee to P2P Messaging notable mentions",
       "pr": {
@@ -7254,6 +7297,16 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/802",
         "author": "gradikay",
         "authorAvatar": "https://avatars.githubusercontent.com/u/56418645?v=4"
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Adds PrivacyNotes to Digital Notes",
+      "pr": {
+        "number": 800,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/800",
+        "author": "LifetimeLabsDev",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/277476673?v=4"
       }
     },
     {
@@ -7294,6 +7347,16 @@
         "url": "https://github.com/lissy93/awesome-privacy/pull/795",
         "author": "VaultKeepR",
         "authorAvatar": "https://avatars.githubusercontent.com/u/269961680?v=4"
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "title": "Adds MindMapVault to Digital Notes",
+      "pr": {
+        "number": 794,
+        "url": "https://github.com/lissy93/awesome-privacy/pull/794",
+        "author": "kornelko2",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/17098815?v=4"
       }
     },
     {
