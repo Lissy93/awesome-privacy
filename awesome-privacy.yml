@@ -2692,10 +2692,9 @@ categories:
         openSource: true
         icon: https://raw.githubusercontent.com/duydanh9989/script-lean/main/icons/icon128.png
         description: |
-          Lightweight (~80 KB) Chromium extension that blocks ads and trackers via
-          declarativeNetRequest before they load, then collapses leftover ad slots. Adds offline
-          custom filter lists and an opt-in per-site JavaScript injector. First-party traffic and
-          bot checks pass untouched, so sites keep working. No telemetry, all local, MIT.
+          Lightweight (~80 KB) Chromium ad blocker. declarativeNetRequest rules stop ads and
+          trackers before they load, and leftover slots collapse. Includes 8 toggleable
+          modules, offline filter lists, opt-in userscript injector. New project; Chromium only.
 
       notableMentions: |
         Some VPNs have ad-tracking blocking features, such as
