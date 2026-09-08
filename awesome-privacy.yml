@@ -5096,6 +5096,8 @@ categories:
         - [diaspora\*](https://diasporafoundation.org), [Pleroma](https://pleroma.social), [Friendica](https://friendi.ca) and [Hubzilla ](https://hubzilla.org) - distributed, decentralized social networks, built on open protocols
         - [Tildes](https://tildes.net), [Lemmy](https://dev.lemmy.ml) and [notabug.io](https://notabug.io) - bulletin boards and news aggregators (similar to Reddit)
         - [Pixelfed](https://pixelfed.org) - A free, ethical, federated photo sharing platform (FOSS alternative to Instagram)
+        - [SafeUnfollow](https://safeunfollow.app) - shows who unfollowed you on Instagram by reading Meta's official data export in the browser, with no login and no upload (open source, MIT).
+          You have to request the export from Meta first and wait for it, and the site is ad-supported
       furtherInfo: |
         The content on many of these smaller sites tends to be more *niche*.
         To continue using Twitter, there are a couple of
