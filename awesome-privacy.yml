@@ -4882,6 +4882,10 @@ categories:
         is tagged with its KYC level, jurisdiction, supported payment methods, and a trust score
         reflecting audit history and known incidents.
 
+        [EIDEX](https://eidex.io) is a non-custodial route screener: it pulls live quotes from several
+        swap providers and ranks them by the amount you receive. No account is needed to compare, but it
+        is closed source, and the provider you pick applies its own KYC policy.
+
     - name: Virtual Credit Cards
       alternativeTo: ['visa', 'mastercard', 'american express', 'discover', 'capital one']
       intro: |
