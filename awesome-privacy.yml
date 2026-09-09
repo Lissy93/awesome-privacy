@@ -1813,6 +1813,15 @@ categories:
         description: |
           A radio frequency scanner app for Android with recon and offensive capabilities.
 
+      - name: Callro
+        url: https://getcallro.com
+        github: umustufa174-wq/callro-android-spam-blocker
+        icon: https://getcallro.com/logo-192.png
+        androidApp: com.vindication.callro
+        description: |
+          On-device spam and scam call blocker for Android that protects user privacy
+          with zero contact-book harvesting and zero cloud audio uploads.
+
       wordOfWarning: |
         Too many installed apps will increase your attack surface - only install applications that you need.
         Be sure to check the permissions, and what data an app has access to prior to installation.
